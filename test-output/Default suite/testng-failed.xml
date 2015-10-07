@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <parameter name="uiport" value="4444"/>
+  <parameter name="userPass" value="1234"/>
+  <parameter name="loin_ip" value="10.7.0.91"/>
+  <parameter name="Host" value="10.7.0.157"/>
+  <parameter name="id" value="test"/>
+  <parameter name="testduration" value="20"/>
+  <parameter name="userName" value="admin"/>
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStream">
+        <methods>
+          <include name="testInit"/>
+          <include name="broadcasterSingleInputStreamstatisticAnilyzer" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStream -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
