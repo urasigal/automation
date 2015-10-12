@@ -52,7 +52,7 @@ public class BroadcasterSinglePullInStreamCreationDriver extends BroadcasterLogg
 		+ params2 + rfec_adaptive + params4 + fec_adaptive + params2
 		+ rfec_force + params4 + fec_force + params2 + rcomplete
 		+ params4 + complete + params2  + ron + params4 + on
-		+ params2 + params5 + "&" + (responseCookieContainer[0].replaceAll("%3D", "=")).replaceAll("acsrf=", "")  , id ,  PULLMODE, responseCookieContainer, loin_ip, this);
+		+ params2 + params5  , id ,  PULLMODE, responseCookieContainer, loin_ip, this);
 	}
 
 	final private String rfunc = "func";

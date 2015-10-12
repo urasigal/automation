@@ -5,8 +5,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 import static com.zixi.globals.Macros.*;
 
 
@@ -28,8 +31,11 @@ public class StreamCreator {
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.setRequestProperty("Referer",
 					"http://"+ HOST +":4444/login.html");
-			con.setRequestProperty("Cookie", "settings_tab=snmp_settings_tab; settings_link=btn_snmp_settings; " + responseCookieContainer[1] + "; " +responseCookieContainer[0] + "; tab=inputs");
-			
+			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0],"=","%3Dacsrf"), 
+					   StringUtils.substringAfter(responseCookieContainer[0], "%3D")); 
+
+			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; " + responseCookieContainer[0] );
+
 			int responseCode = con.getResponseCode();
 			
 			// System.out.println("\nSending 'GET' request to URL : " + url);

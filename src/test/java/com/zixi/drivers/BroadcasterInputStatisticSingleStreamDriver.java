@@ -47,8 +47,7 @@ public class BroadcasterInputStatisticSingleStreamDriver extends BroadcasterLogg
 				e.printStackTrace();
 			}
 			statisitcJson = broadcasterInputStatisticHelper.sendGet(HTTP + loin_ip
-					+ ":" + uiport + FUNCTION + "id" + "=" + id + "&" +
-					(responseCookieContainer[0].replaceAll("%3D", "=")).replaceAll("acsrf=", ""),loin_ip,responseCookieContainer);
+					+ ":" + uiport + FUNCTION + "id" + "=" + id ,loin_ip,responseCookieContainer);
 			System.out.println(statisitcJson.toString());
 			int bitrate = streamStatisticAnalyzer.getStatBitrate(statisitcJson);
 			if (bitrate == 0)

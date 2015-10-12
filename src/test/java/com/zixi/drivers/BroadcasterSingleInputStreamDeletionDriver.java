@@ -19,6 +19,6 @@ public class BroadcasterSingleInputStreamDeletionDriver extends BroadcasterLogga
 	public String removeInput(String login_ip, String userName, String userPassword, String streamId, String uiport) 
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPassword, login_ip, uiport);
-		return removeInputHelper.sendGet(HTTP + login_ip + params1 + uiport +  params7 + "id" + params4 + streamId  + "&" + (responseCookieContainer[0].replaceAll("%3D", "=")).replaceAll("acsrf=", ""), login_ip, responseCookieContainer);
+		return removeInputHelper.sendGet(HTTP + login_ip + params1 + uiport +  params7 + "id" + params4 + streamId, login_ip, responseCookieContainer);
 	}
 }

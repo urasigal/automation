@@ -17,19 +17,19 @@
       <![CDATA[<p>Video codec is:h264</p>]]>
     </line>
     <line>
-      <![CDATA[<p>SAudio codec is:ACC</p>]]>
+      <![CDATA[<p>Audio codec is:ACC</p>]]>
     </line>
     <line>
-      <![CDATA[<p>SAudio bitrate is:48000</p>]]>
+      <![CDATA[<p>Audio bitrate is:48000</p>]]>
     </line>
     <line>
-      <![CDATA[<h4>Max bitrate is 2516179</h4>]]>
+      <![CDATA[<h4>Max bitrate is 2518545</h4>]]>
     </line>
     <line>
-      <![CDATA[<h4>Min bitrete is 1687424</h4>]]>
+      <![CDATA[<h4>Min bitrete is 1808815</h4>]]>
     </line>
     <line>
-      <![CDATA[<h4>Average bitrate is 2115115</h4>]]>
+      <![CDATA[<h4>Average bitrate is 2135046</h4>]]>
     </line>
     <line>
       <![CDATA[<h4>Stream test removed.</h4>]]>
@@ -50,34 +50,34 @@
       <![CDATA[<p>Video codec is:h264</p>]]>
     </line>
     <line>
-      <![CDATA[<p>SAudio codec is:ACC</p>]]>
+      <![CDATA[<p>Audio codec is:ACC</p>]]>
     </line>
     <line>
-      <![CDATA[<p>SAudio bitrate is:48000</p>]]>
+      <![CDATA[<p>Audio bitrate is:48000</p>]]>
     </line>
     <line>
-      <![CDATA[<h4>Max bitrate is 945664</h4>]]>
+      <![CDATA[<h4>Max bitrate is 979516</h4>]]>
     </line>
     <line>
-      <![CDATA[<h4>Min bitrete is 624656</h4>]]>
+      <![CDATA[<h4>Min bitrete is 845584</h4>]]>
     </line>
     <line>
-      <![CDATA[<h4>Average bitrate is 890451</h4>]]>
+      <![CDATA[<h4>Average bitrate is 911239</h4>]]>
     </line>
     <line>
       <![CDATA[<h4>Stream test2 removed.</h4>]]>
     </line>
   </reporter-output>
-  <suite name="Pull input test suite - Creation (WEB API), Statistic measurement (WEB API), Deletion (WEB API)" duration-ms="38188" started-at="2015-10-06T09:22:02Z" finished-at="2015-10-06T09:22:40Z">
+  <suite name="Pull input test suite - Creation (WEB API), Statistic measurement (WEB API), Deletion (WEB API)" duration-ms="38302" started-at="2015-10-12T10:21:35Z" finished-at="2015-10-12T10:22:14Z">
     <groups>
     </groups>
-    <test name="pull input, latency=6000," duration-ms="42" started-at="2015-10-06T09:22:02Z" finished-at="2015-10-06T09:22:02Z">
+    <test name="pull input, latency=6000," duration-ms="65" started-at="2015-10-12T10:21:35Z" finished-at="2015-10-12T10:21:35Z">
       <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@3ac3fd8b]" name="testInit" is-config="true" duration-ms="7" started-at="2015-10-06T12:22:02Z" finished-at="2015-10-06T12:22:02Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@511baa65]" name="testInit" is-config="true" duration-ms="7" started-at="2015-10-12T13:21:35Z" finished-at="2015-10-12T13:21:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@3ac3fd8b]" name="broadcasterPullInCreation" duration-ms="29" started-at="2015-10-06T12:22:02Z" finished-at="2015-10-06T12:22:02Z">
+        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@511baa65]" name="broadcasterPullInCreation" duration-ms="50" started-at="2015-10-12T13:21:35Z" finished-at="2015-10-12T13:21:35Z">
           <params>
             <param index="0">
               <value>
@@ -232,22 +232,22 @@
               <![CDATA[<p>Video codec is:h264</p>]]>
             </line>
             <line>
-              <![CDATA[<p>SAudio codec is:ACC</p>]]>
+              <![CDATA[<p>Audio codec is:ACC</p>]]>
             </line>
             <line>
-              <![CDATA[<p>SAudio bitrate is:48000</p>]]>
+              <![CDATA[<p>Audio bitrate is:48000</p>]]>
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterPullInCreation -->
       </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
     </test> <!-- pull input, latency=6000, -->
-    <test name="pull input statistic, this test is depends on a previous test." duration-ms="19021" started-at="2015-10-06T09:22:02Z" finished-at="2015-10-06T09:22:21Z">
+    <test name="pull input statistic, this test is depends on a previous test." duration-ms="19051" started-at="2015-10-12T10:21:35Z" finished-at="2015-10-12T10:21:54Z">
       <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@6108b2d7]" name="testInit" is-config="true" duration-ms="0" started-at="2015-10-06T12:22:02Z" finished-at="2015-10-06T12:22:02Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@6b2fad11]" name="testInit" is-config="true" duration-ms="1" started-at="2015-10-12T13:21:35Z" finished-at="2015-10-12T13:21:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@6108b2d7]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="19019" started-at="2015-10-06T12:22:02Z" finished-at="2015-10-06T12:22:21Z">
+        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@6b2fad11]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="19049" started-at="2015-10-12T13:21:35Z" finished-at="2015-10-12T13:21:54Z">
           <params>
             <param index="0">
               <value>
@@ -287,25 +287,25 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<h4>Max bitrate is 2516179</h4>]]>
+              <![CDATA[<h4>Max bitrate is 2518545</h4>]]>
             </line>
             <line>
-              <![CDATA[<h4>Min bitrete is 1687424</h4>]]>
+              <![CDATA[<h4>Min bitrete is 1808815</h4>]]>
             </line>
             <line>
-              <![CDATA[<h4>Average bitrate is 2115115</h4>]]>
+              <![CDATA[<h4>Average bitrate is 2135046</h4>]]>
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
       </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
     </test> <!-- pull input statistic, this test is depends on a previous test. -->
-    <test name="Input deletion." duration-ms="29" started-at="2015-10-06T09:22:21Z" finished-at="2015-10-06T09:22:21Z">
+    <test name="Input deletion." duration-ms="36" started-at="2015-10-12T10:21:54Z" finished-at="2015-10-12T10:21:55Z">
       <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@3498ed]" name="testInit" is-config="true" duration-ms="1" started-at="2015-10-06T12:22:21Z" finished-at="2015-10-06T12:22:21Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@26ba2a48]" name="testInit" is-config="true" duration-ms="3" started-at="2015-10-12T13:21:54Z" finished-at="2015-10-12T13:21:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@3498ed]" name="broadcasterInputStreamDeletion" duration-ms="28" started-at="2015-10-06T12:22:21Z" finished-at="2015-10-06T12:22:21Z">
+        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@26ba2a48]" name="broadcasterInputStreamDeletion" duration-ms="33" started-at="2015-10-12T13:21:55Z" finished-at="2015-10-12T13:21:55Z">
           <params>
             <param index="0">
               <value>
@@ -341,13 +341,13 @@
         </test-method> <!-- broadcasterInputStreamDeletion -->
       </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
     </test> <!-- Input deletion. -->
-    <test name="pull input stream creation API, test stream 2" duration-ms="34" started-at="2015-10-06T09:22:21Z" finished-at="2015-10-06T09:22:21Z">
+    <test name="pull input stream creation API, test stream 2" duration-ms="31" started-at="2015-10-12T10:21:55Z" finished-at="2015-10-12T10:21:55Z">
       <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@668bc3d5]" name="testInit" is-config="true" duration-ms="0" started-at="2015-10-06T12:22:21Z" finished-at="2015-10-06T12:22:21Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@783e6358]" name="testInit" is-config="true" duration-ms="0" started-at="2015-10-12T13:21:55Z" finished-at="2015-10-12T13:21:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@668bc3d5]" name="broadcasterPullInCreation" duration-ms="32" started-at="2015-10-06T12:22:21Z" finished-at="2015-10-06T12:22:21Z">
+        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@783e6358]" name="broadcasterPullInCreation" duration-ms="30" started-at="2015-10-12T13:21:55Z" finished-at="2015-10-12T13:21:55Z">
           <params>
             <param index="0">
               <value>
@@ -502,18 +502,22 @@
               <![CDATA[<p>Video codec is:h264</p>]]>
             </line>
             <line>
-              <![CDATA[<p>SAudio codec is:ACC</p>]]>
+              <![CDATA[<p>Audio codec is:ACC</p>]]>
             </line>
             <line>
-              <![CDATA[<p>SAudio bitrate is:48000</p>]]>
+              <![CDATA[<p>Audio bitrate is:48000</p>]]>
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterPullInCreation -->
       </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
     </test> <!-- pull input stream creation API, test stream 2 -->
-    <test name="pull input statistic 2, this test is depends on a previous test." duration-ms="19022" started-at="2015-10-06T09:22:21Z" finished-at="2015-10-06T09:22:40Z">
+    <test name="pull input statistic 2, this test is depends on a previous test." duration-ms="19043" started-at="2015-10-12T10:21:55Z" finished-at="2015-10-12T10:22:14Z">
       <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
-        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@79698539]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="19021" started-at="2015-10-06T12:22:21Z" finished-at="2015-10-06T12:22:40Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@246ae04d]" name="testInit" is-config="true" duration-ms="0" started-at="2015-10-12T13:21:55Z" finished-at="2015-10-12T13:21:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@246ae04d]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="19042" started-at="2015-10-12T13:21:55Z" finished-at="2015-10-12T13:22:14Z">
           <params>
             <param index="0">
               <value>
@@ -553,25 +557,25 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<h4>Max bitrate is 945664</h4>]]>
+              <![CDATA[<h4>Max bitrate is 979516</h4>]]>
             </line>
             <line>
-              <![CDATA[<h4>Min bitrete is 624656</h4>]]>
+              <![CDATA[<h4>Min bitrete is 845584</h4>]]>
             </line>
             <line>
-              <![CDATA[<h4>Average bitrate is 890451</h4>]]>
+              <![CDATA[<h4>Average bitrate is 911239</h4>]]>
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@79698539]" name="testInit" is-config="true" duration-ms="0" started-at="2015-10-06T12:22:21Z" finished-at="2015-10-06T12:22:21Z">
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
+    </test> <!-- pull input statistic 2, this test is depends on a previous test. -->
+    <test name="Input deletion 2." duration-ms="30" started-at="2015-10-12T10:22:14Z" finished-at="2015-10-12T10:22:14Z">
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@60addb54]" name="testInit" is-config="true" duration-ms="0" started-at="2015-10-12T13:22:14Z" finished-at="2015-10-12T13:22:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
-    </test> <!-- pull input statistic 2, this test is depends on a previous test. -->
-    <test name="Input deletion 2." duration-ms="11" started-at="2015-10-06T09:22:40Z" finished-at="2015-10-06T09:22:40Z">
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@26ba2a48]" name="broadcasterInputStreamDeletion" duration-ms="11" started-at="2015-10-06T12:22:40Z" finished-at="2015-10-06T12:22:40Z">
+        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@60addb54]" name="broadcasterInputStreamDeletion" duration-ms="28" started-at="2015-10-12T13:22:14Z" finished-at="2015-10-12T13:22:14Z">
           <params>
             <param index="0">
               <value>
@@ -605,10 +609,6 @@
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterInputStreamDeletion -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@26ba2a48]" name="testInit" is-config="true" duration-ms="0" started-at="2015-10-06T12:22:40Z" finished-at="2015-10-06T12:22:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
       </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
     </test> <!-- Input deletion 2. -->
   </suite> <!-- Pull input test suite - Creation (WEB API), Statistic measurement (WEB API), Deletion (WEB API) -->

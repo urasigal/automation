@@ -5,40 +5,34 @@
       <![CDATA[<h3>Stream parameters as follows:</h2>]]>
     </line>
     <line>
-      <![CDATA[<p>Resolution is: 1280*720</p>]]>
+      <![CDATA[<p>Resolution is: 640*480</p>]]>
     </line>
     <line>
       <![CDATA[<p>Interlacing type is:progressive</p>]]>
     </line>
     <line>
-      <![CDATA[<p>FPS is:24</p>]]>
+      <![CDATA[<p>FPS is:25</p>]]>
     </line>
     <line>
       <![CDATA[<p>Video codec is:h264</p>]]>
     </line>
     <line>
-      <![CDATA[<p>SAudio codec is:ACC</p>]]>
+      <![CDATA[<p>Audio codec is:ACC</p>]]>
     </line>
     <line>
-      <![CDATA[<p>SAudio bitrate is:48000</p>]]>
-    </line>
-    <line>
-      <![CDATA[<h4>Prepare to logging to </h>10.7.0.91]]>
-    </line>
-    <line>
-      <![CDATA[<h4>Logged to </h>10.7.0.91]]>
+      <![CDATA[<p>Audio bitrate is:48000</p>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54" started-at="2015-10-06T07:40:09Z" finished-at="2015-10-06T07:40:09Z">
+  <suite name="Default suite" duration-ms="136" started-at="2015-10-12T10:07:40Z" finished-at="2015-10-12T10:07:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="54" started-at="2015-10-06T07:40:09Z" finished-at="2015-10-06T07:40:09Z">
+    <test name="Default test" duration-ms="136" started-at="2015-10-12T10:07:40Z" finished-at="2015-10-12T10:07:40Z">
       <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@45c8e616]" name="testInit" is-config="true" duration-ms="7" started-at="2015-10-06T10:40:09Z" finished-at="2015-10-06T10:40:09Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@66d33a]" name="testInit" is-config="true" duration-ms="6" started-at="2015-10-12T13:07:40Z" finished-at="2015-10-12T13:07:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@45c8e616]" name="broadcasterPullInCreation" duration-ms="37" started-at="2015-10-06T10:40:09Z" finished-at="2015-10-06T10:40:09Z">
+        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@66d33a]" name="broadcasterPullInCreation" duration-ms="119" started-at="2015-10-12T13:07:40Z" finished-at="2015-10-12T13:07:40Z">
           <params>
             <param index="0">
               <value>
@@ -62,12 +56,12 @@
             </param>
             <param index="4">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[test2]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[test2]]>
               </value>
             </param>
             <param index="6">
@@ -170,34 +164,33 @@
                 <![CDATA[]]>
               </value>
             </param>
+            <param index="26">
+              <value>
+                <![CDATA[stream2.properties]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
             <line>
               <![CDATA[<h3>Stream parameters as follows:</h2>]]>
             </line>
             <line>
-              <![CDATA[<p>Resolution is: 1280*720</p>]]>
+              <![CDATA[<p>Resolution is: 640*480</p>]]>
             </line>
             <line>
               <![CDATA[<p>Interlacing type is:progressive</p>]]>
             </line>
             <line>
-              <![CDATA[<p>FPS is:24</p>]]>
+              <![CDATA[<p>FPS is:25</p>]]>
             </line>
             <line>
               <![CDATA[<p>Video codec is:h264</p>]]>
             </line>
             <line>
-              <![CDATA[<p>SAudio codec is:ACC</p>]]>
+              <![CDATA[<p>Audio codec is:ACC</p>]]>
             </line>
             <line>
-              <![CDATA[<p>SAudio bitrate is:48000</p>]]>
-            </line>
-            <line>
-              <![CDATA[<h4>Prepare to logging to </h>10.7.0.91]]>
-            </line>
-            <line>
-              <![CDATA[<h4>Logged to </h>10.7.0.91]]>
+              <![CDATA[<p>Audio bitrate is:48000</p>]]>
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterPullInCreation -->
