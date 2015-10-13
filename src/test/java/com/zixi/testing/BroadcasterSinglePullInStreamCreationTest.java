@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import org.openqa.selenium.support.PageFactory;
+
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
@@ -16,7 +16,6 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.BroadcasterSinglePullInStreamCreationDriver;
 import com.zixi.drivers.TestDriver;
 import com.zixi.entities.StreamEntity;
-import com.zixi.testing.pages.HomePage;
 
 public class BroadcasterSinglePullInStreamCreationTest {
 
@@ -64,13 +63,13 @@ public class BroadcasterSinglePullInStreamCreationTest {
 			e.printStackTrace();
 		}
 		// Test description that will be written to report HTML.
-		Reporter.log("<h3>Stream parameters as follows:</h2>");
-		Reporter.log("<p>Resolution is: " +streamEntity.getWidth() + "*" + streamEntity.getHight() +"</p>");
-		Reporter.log("<p>Interlacing type is:" + streamEntity.getProgressive()+ "</p>");
-		Reporter.log("<p>FPS is:"+streamEntity.getFps()+"</p>");
-		Reporter.log("<p>Video codec is:"+streamEntity.getVideoCodec()+"</p>");
-		Reporter.log("<p>Audio codec is:"+streamEntity.getAudioCodec()+"</p>");
-		Reporter.log("<p>Audio bitrate is:"+streamEntity.getAudioRate()+"</p>");
+		Reporter.log("Stream parameters as follows:");
+		Reporter.log("Resolution is: " +streamEntity.getWidth() + "*" + streamEntity.getHight() );
+		Reporter.log("Interlacing type is:" + streamEntity.getProgressive());
+		Reporter.log("FPS is:" + streamEntity.getFps());
+		Reporter.log("Video codec is:"+streamEntity.getVideoCodec());
+		Reporter.log("Audio codec is:"+streamEntity.getAudioCodec());
+		Reporter.log("Audio bitrate is:"+streamEntity.getAudioRate());
 		
 		Assert.assertNotNull(((BroadcasterSinglePullInStreamCreationDriver) testDriver).testIMPL(userName, userPass, Host, loin_ip, id,source, uiport, pull_port, latency, fec_latency, fec_overhead, mcast_force, time_shift, nic, max_outputs, type, password, mcast_port, complete, mcast_ip ,fec_adaptive, mcast_ttl, on, func, fec_force, mcast_out));
 	}

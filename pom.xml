@@ -7,6 +7,11 @@
   <packaging>jar</packaging>
 
   <dependencies>
+  <dependency>
+	<groupId>org.apache.commons</groupId>
+	<artifactId>commons-lang3</artifactId>
+	<version>3.0</version>
+</dependency>
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
@@ -18,20 +23,22 @@
       <version>4.12</version>
     </dependency>
     <dependency>
-      <groupId>ru.stqa.selenium</groupId>
-      <artifactId>webdriver-factory</artifactId>
-      <version>1.1.46</version>
-    </dependency>
-    <dependency>
     	<groupId>org.json</groupId>
     	<artifactId>json</artifactId>
     	<version>20141113</version>
     </dependency>
     <dependency>
-	<groupId>org.uncommons</groupId>
-	<artifactId>reportng</artifactId>
-	<version>1.1.4</version>
-</dependency>
+        <groupId>org.uncommons</groupId>
+        <artifactId>reportng</artifactId>
+        <version>1.1.2</version>
+        <scope>test</scope>
+        <exclusions>
+            <exclusion>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
 <dependency>
 	<groupId>com.google.inject</groupId>
 	<artifactId>guice</artifactId>
@@ -55,14 +62,27 @@
         </configuration>
       </plugin> 
       <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.16</version>
-        <configuration>
-          <suiteXmlFiles>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.5</version>
+            <configuration>
+            <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/adaptive.xml</suiteXmlFile>
           </suiteXmlFiles>
-        </configuration>
-      </plugin>
+                <properties>
+                    <property>
+                        <name>usedefaultlisteners</name>
+                        <value>false</value>
+                    </property>
+                    <property>
+                        <name>listener</name>
+                        <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
+                    </property>
+                </properties>
+               
+            </configuration>
+        </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
@@ -73,68 +93,4 @@
       </plugin>
     </plugins>
   </build>
-  <!-- profiles -->
-  <profiles>
-    <profile>
-      <id>local</id>
-      <properties>
-        <env>local</env>
-        <user.username></user.username>
-        <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url>http://localhost/</site.url>
-        <browser.name>firefox</browser.name>
-        <browser.version></browser.version>
-        <browser.platform></browser.platform>
-      </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-    </profile>
-    <profile>
-      <id>dev</id>
-      <properties>
-        <env>dev</env>
-        <user.username></user.username>
-        <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url>http://devhost/</site.url>
-        <browser.name>firefox</browser.name>
-        <browser.version></browser.version>
-        <browser.platform></browser.platform>
-      </properties>
-    </profile>
-    <profile>
-      <id>test</id>
-      <properties>
-        <env>test</env>
-        <user.username></user.username>
-        <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url>http://testhost/</site.url>
-        <browser.name>firefox</browser.name>
-        <browser.version></browser.version>
-        <browser.platform></browser.platform>
-      </properties>
-    </profile>
-    <profile>
-      <id>prod</id>
-      <properties>
-        <env>prod</env>
-        <user.username></user.username>
-        <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url>http://prodhost/</site.url>
-        <browser.name>firefox</browser.name>
-        <browser.version></browser.version>
-        <browser.platform></browser.platform>
-      </properties>
-    </profile>
-    <profile>
-      <id>force-local-driver</id>
-      <properties>
-        <grid2.hub></grid2.hub>
-      </properties>
-    </profile>
-  </profiles>
 </project>
