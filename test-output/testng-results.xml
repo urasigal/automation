@@ -1,200 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[<h3>Stream parameters as follows:</h2>]]>
-    </line>
-    <line>
-      <![CDATA[<p>Resolution is: 640*480</p>]]>
-    </line>
-    <line>
-      <![CDATA[<p>Interlacing type is:progressive</p>]]>
-    </line>
-    <line>
-      <![CDATA[<p>FPS is:25</p>]]>
-    </line>
-    <line>
-      <![CDATA[<p>Video codec is:h264</p>]]>
-    </line>
-    <line>
-      <![CDATA[<p>Audio codec is:ACC</p>]]>
-    </line>
-    <line>
-      <![CDATA[<p>Audio bitrate is:48000</p>]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="80" started-at="2015-10-12T12:10:15Z" finished-at="2015-10-12T12:10:15Z">
+  <suite name="Default suite" duration-ms="33" started-at="2015-10-18T11:11:00Z" finished-at="2015-10-18T11:11:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="80" started-at="2015-10-12T12:10:15Z" finished-at="2015-10-12T12:10:15Z">
-      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@73035e27]" name="testInit" is-config="true" duration-ms="8" started-at="2015-10-12T15:10:15Z" finished-at="2015-10-12T15:10:15Z">
+    <test name="Default test" duration-ms="33" started-at="2015-10-18T11:11:00Z" finished-at="2015-10-18T11:11:00Z">
+      <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@73035e27]" name="testInit" is-config="true" duration-ms="7" started-at="2015-10-18T14:11:00Z" finished-at="2015-10-18T14:11:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSinglePullInStreamCreationTest@73035e27]" name="broadcasterPullInCreation" duration-ms="64" started-at="2015-10-12T15:10:15Z" finished-at="2015-10-12T15:10:15Z">
+        <test-method status="FAIL" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@73035e27]" name="broadcasterSingleStreamRemoving" duration-ms="17" started-at="2015-10-18T14:11:00Z" finished-at="2015-10-18T14:11:00Z">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
               <value>
                 <![CDATA[10.7.0.157]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
             <param index="3">
               <value>
-                <![CDATA[10.7.0.91]]>
+                <![CDATA[test]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[test2]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[test2]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
                 <![CDATA[4444]]>
               </value>
             </param>
-            <param index="7">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[6000]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[300]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[30]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[-1]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[pull]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[load_live_inputs]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[stream2.properties]]>
-              </value>
-            </param>
           </params>
+          <exception class="org.json.JSONException">
+            <message>
+              <![CDATA[A JSONObject text must begin with '{' at 1 [character 2 line 1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:197)
+	at org.json.JSONObject.<init>(JSONObject.java:324)
+	at com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver.testIMPL(BroadcaserSingleOutputStreamDeletionDriver.java:35)
+	at com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(BroadcaserSingleOutputStreamDeletionTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.json.JSONException -->
           <reporter-output>
-            <line>
-              <![CDATA[<h3>Stream parameters as follows:</h2>]]>
-            </line>
-            <line>
-              <![CDATA[<p>Resolution is: 640*480</p>]]>
-            </line>
-            <line>
-              <![CDATA[<p>Interlacing type is:progressive</p>]]>
-            </line>
-            <line>
-              <![CDATA[<p>FPS is:25</p>]]>
-            </line>
-            <line>
-              <![CDATA[<p>Video codec is:h264</p>]]>
-            </line>
-            <line>
-              <![CDATA[<p>Audio codec is:ACC</p>]]>
-            </line>
-            <line>
-              <![CDATA[<p>Audio bitrate is:48000</p>]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- broadcasterPullInCreation -->
-      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Input streams creation: Pull, Push, UDP  " verbose="5" data-provider-thread-count="1">
+<suite name="Pull input suite" verbose="5" data-provider-thread-count="1">
 	<listeners>
 		<listener class-name="com.zixi.reports.CustomReporter" />
 	</listeners>
-	<test name="Pull input stream creation 1">
+	<test name="Pull input stream creation_1 ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -36,19 +36,19 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Stream statistics 1.">
+	<test name="Stream statistics_1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
 		<parameter name="loin_ip" value="10.7.0.91" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testduration" value="10" />
+		<parameter name="testduration" value="1" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Remove an input stream 1.">
+	<test name="Remove an input stream_1">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -59,7 +59,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-		<test name="Pull input stream creation 2">
+		<test name="Pull input stream creation_2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -91,19 +91,19 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Stream statistics 2">
+	<test name="Stream statistics_2 ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
 		<parameter name="loin_ip" value="10.7.0.91" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test2" />
-		<parameter name="testduration" value="10" />
+		<parameter name="testduration" value="1" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Remove an input stream 2.">
+	<test name="Remove an input stream_2 ">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

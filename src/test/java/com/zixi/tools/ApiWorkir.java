@@ -13,7 +13,7 @@ import org.json.JSONObject;
 import static com.zixi.globals.Macros.*;
 
 
-public class StreamCreator {
+public class ApiWorkir {
 	
 	protected JSONObject json = null;
 	protected final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";
@@ -21,6 +21,7 @@ public class StreamCreator {
 	// HTTP GET request
 	public String sendGet(String url, String id, int mode, String[] responseCookieContainer, String HOST, Object caller) {
 
+		StringBuffer response = new StringBuffer();
 		try {
 			URL obj = new URL(url);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -43,7 +44,6 @@ public class StreamCreator {
 
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					con.getInputStream()));
-			StringBuffer response = new StringBuffer();
 			String inputLine = "";
 			while ((inputLine = in.readLine()) != null) {
 				response.append(inputLine);
@@ -87,25 +87,30 @@ public class StreamCreator {
 			{
 				inputLine = response.toString();
 				int indx = inputLine.indexOf("(");
-				System.out.println("first index is -- " + indx);
 				inputLine = (inputLine.substring(indx + 1, inputLine.indexOf(");")));
 				json = new JSONObject(inputLine);
-				if (json.get("msg").toString()
-						.equals("Stream " + "'"+ id +"'"+ " added.")) {
-					tester = GOOD;
-					// Report to jsystem that the new stram was successfully
-					// added.					
-				} 
+				System.out.println("Debug printing   -- " + json.get("msg").toString());
+				return json.get("msg").toString();					
 			}
 			
-			if (mode == GENERALMODE)
+			if (mode == UDPMODE)
 			{
-				tester = GOOD;
+				inputLine = response.toString();
+				json = new JSONObject(inputLine);
+				System.out.println("Debug printing   -- " + json.get("msg").toString());
+				return json.get("msg").toString();	 
 			}
 			
-			if (mode == 6)
+			if (mode == UDPOUTMODE)
 			{
-				tester = GOOD;
+				inputLine = response.toString();
+				json = new JSONObject(inputLine);
+				tester = json.getString("msg");
+				System.out.println("Debug printing   -- " + tester);
+				if(tester.endsWith("Output " + id + " added."))
+				{
+        		 return tester = "good";
+				}
 			}
 			
 			if (mode == JSONMODE)
@@ -122,12 +127,17 @@ public class StreamCreator {
 				}
 				tester = "good";
 			}
+			if (mode == 77)
+			{	
+        		 return inputLine = response.toString();
+			}
+			
 			
 		} catch (Exception e) {
 
 			System.out.println("bug -------------" + e.getMessage());
 		}
-		return tester;
+		return  response.toString();
 	}
 
 }

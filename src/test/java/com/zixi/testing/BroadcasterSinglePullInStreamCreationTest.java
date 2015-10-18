@@ -20,9 +20,6 @@ import com.zixi.entities.StreamEntity;
 public class BroadcasterSinglePullInStreamCreationTest {
 
 	private TestDriver testDriver;
-	private StreamEntity streamEntity;
-	private Properties prop = null;
-	private InputStream input = null;
 	@BeforeClass
 	public void testInit() {
 		
@@ -44,33 +41,9 @@ public class BroadcasterSinglePullInStreamCreationTest {
 											String mcast_ip,String fec_adaptive, String mcast_ttl,
 											String on, String func, String fec_force, String mcast_out, String propertiesFile) throws InterruptedException 
 	{
-		try 
-		{
-			input = new FileInputStream(propertiesFile);
-			prop = new Properties();
-			prop.load(input);
-			streamEntity = new StreamEntity(prop.getProperty("width"),prop.getProperty("hight"),
-			prop.getProperty("progressivness"), prop.getProperty("fps"), 
-			prop.getProperty("audiobitrate"),prop.getProperty("videocodec"),
-			prop.getProperty("audiocodec"));
-		}
-		catch (FileNotFoundException e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		// Test description that will be written to report HTML.
-		Reporter.log("Stream parameters as follows:");
-		Reporter.log("Resolution is: " +streamEntity.getWidth() + "*" + streamEntity.getHight() );
-		Reporter.log("Interlacing type is:" + streamEntity.getProgressive());
-		Reporter.log("FPS is:" + streamEntity.getFps());
-		Reporter.log("Video codec is:"+streamEntity.getVideoCodec());
-		Reporter.log("Audio codec is:"+streamEntity.getAudioCodec());
-		Reporter.log("Audio bitrate is:"+streamEntity.getAudioRate());
-		
-		Assert.assertNotNull(((BroadcasterSinglePullInStreamCreationDriver) testDriver).testIMPL(userName, userPass, Host, loin_ip, id,source, uiport, pull_port, latency, fec_latency, fec_overhead, mcast_force, time_shift, nic, max_outputs, type, password, mcast_port, complete, mcast_ip ,fec_adaptive, mcast_ttl, on, func, fec_force, mcast_out));
+		Assert.assertEquals(((BroadcasterSinglePullInStreamCreationDriver) testDriver).testIMPL(userName, userPass, Host, loin_ip, id,source, 
+				uiport, pull_port, latency, fec_latency, fec_overhead, mcast_force, time_shift, 
+				nic, max_outputs, type, password, mcast_port, complete, mcast_ip ,fec_adaptive, 
+				mcast_ttl, on, func, fec_force, mcast_out, propertiesFile), "Stream " + "'"+ id +"'"+ " added.");
 	}
 }

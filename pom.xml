@@ -66,9 +66,9 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.5</version>
             <configuration>
-            <suiteXmlFiles>
+          <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-            <suiteXmlFile>src/test/resources/adaptive.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/udp.xml</suiteXmlFile>
           </suiteXmlFiles>
                 <properties>
                     <property>

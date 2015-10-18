@@ -8,6 +8,7 @@ public class Macros {
 		public static final int PULLMODE = 3;
 		public static final int UDPMODE = 0;
 		public static final int RTMPMODE = 0;
+		public static final int UDPOUTMODE = 6;
 		public static final int GENERALMODE = 5;
 		public static final int JSONMODE = 8;
 		//////////////////////////////////////////////////
