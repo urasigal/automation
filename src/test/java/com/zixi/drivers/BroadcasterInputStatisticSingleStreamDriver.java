@@ -31,7 +31,7 @@ public class BroadcasterInputStatisticSingleStreamDriver extends BroadcasterLogg
 		ArrayList<Integer> bitRateList = new ArrayList<Integer>();
 		
 		try {
-			Thread.sleep(9000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -59,9 +59,9 @@ public class BroadcasterInputStatisticSingleStreamDriver extends BroadcasterLogg
 		}
 		
 		int statResults[] = streamStatisticAnalyzer.getMaxMinAvg(bitRateList);
-		Reporter.log("<h4>Max bitrate is " + statResults[0] +"</h4>");
-		Reporter.log("<h4>Min bitrete is " + statResults[1] + "</h4>");
-		Reporter.log("<h4>Average bitrate is " + statResults[2] +"</h4>");
+		Reporter.log("Max bitrate is " + statResults[0] );
+		Reporter.log("Min bitrete is " + statResults[1] );
+		Reporter.log("Average bitrate is " + statResults[2]);
 		return "good";
 	}
 }

@@ -39,14 +39,14 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		String streamName = null;
 		for (int i = 0; i < outputStreamsArray.length(); i++) {
 			//System.out.println("before");
-			JSONObject stream = outputStreamsArray.getJSONObject(i);
+			JSONObject outputStream = outputStreamsArray.getJSONObject(i);
 		   
 		    //System.out.println("after");
 		    //id1 = stream.getString("id");
-		    streamName = stream.getString("name");
+		    streamName = outputStream.getString("name");
 		    if(streamName.equals(name))
 		    {
-		    	id1 = stream.getString("id");
+		    	id1 = outputStream.getString("id");
 		    }
 		  }
 		return streamDeletor.sendGet(HTTP + login_ip + ":" + uiport +  params7 + rid + params4 + id1 , streamName, UDPMODE, responseCookieContainer, login_ip, this);

@@ -1,86 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33" started-at="2015-10-18T11:11:00Z" finished-at="2015-10-18T11:11:00Z">
+  <suite name="Default suite" duration-ms="38" started-at="2015-10-21T09:04:17Z" finished-at="2015-10-21T09:04:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33" started-at="2015-10-18T11:11:00Z" finished-at="2015-10-18T11:11:00Z">
-      <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@73035e27]" name="testInit" is-config="true" duration-ms="7" started-at="2015-10-18T14:11:00Z" finished-at="2015-10-18T14:11:00Z">
+    <test name="Default test" duration-ms="38" started-at="2015-10-21T09:04:17Z" finished-at="2015-10-21T09:04:18Z">
+      <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@73035e27]" name="testInit" is-config="true" duration-ms="8" started-at="2015-10-21T12:04:17Z" finished-at="2015-10-21T12:04:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="FAIL" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@73035e27]" name="broadcasterSingleStreamRemoving" duration-ms="17" started-at="2015-10-18T14:11:00Z" finished-at="2015-10-18T14:11:00Z">
+        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@73035e27]" name="broadcasterPullInCreation" duration-ms="22" started-at="2015-10-21T12:04:17Z" finished-at="2015-10-21T12:04:18Z">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[10.7.0.157]]>
-              </value>
-            </param>
-            <param index="1">
               <value>
                 <![CDATA[admin]]>
               </value>
             </param>
-            <param index="2">
+            <param index="1">
               <value>
                 <![CDATA[1234]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.157]]>
+              </value>
+            </param>
             <param index="3">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[10.7.0.91]]>
               </value>
             </param>
             <param index="4">
               <value>
+                <![CDATA[6000]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[300]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[push]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[2088]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
                 <![CDATA[4444]]>
               </value>
             </param>
+            <param index="17">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
           </params>
-          <exception class="org.json.JSONException">
-            <message>
-              <![CDATA[A JSONObject text must begin with '{' at 1 [character 2 line 1]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
-	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
-	at org.json.JSONObject.<init>(JSONObject.java:197)
-	at org.json.JSONObject.<init>(JSONObject.java:324)
-	at com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver.testIMPL(BroadcaserSingleOutputStreamDeletionDriver.java:35)
-	at com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(BroadcaserSingleOutputStreamDeletionTest.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.json.JSONException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- broadcasterSingleStreamRemoving -->
-      </class> <!-- com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest -->
+        </test-method> <!-- broadcasterPullInCreation -->
+      </class> <!-- com.zixi.testing.BroadcasterPushOutStreamCreationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

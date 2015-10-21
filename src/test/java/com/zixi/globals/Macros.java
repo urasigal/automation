@@ -11,6 +11,7 @@ public class Macros {
 		public static final int UDPOUTMODE = 6;
 		public static final int GENERALMODE = 5;
 		public static final int JSONMODE = 8;
+		public static final int PUSHOUTMODE = 4;
 		//////////////////////////////////////////////////
 		
 		public static final String GOOD = "GOOD";

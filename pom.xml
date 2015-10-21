@@ -69,6 +69,7 @@
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
             <suiteXmlFile>src/test/resources/udp.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/push.xml</suiteXmlFile>
           </suiteXmlFiles>
                 <properties>
                     <property>
@@ -80,7 +81,6 @@
                         <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
                     </property>
                 </properties>
-               
             </configuration>
         </plugin>
       <plugin>

@@ -58,29 +58,14 @@ public class ApiWorkir {
 				int indx = inputLine.indexOf("(");
 				inputLine = (inputLine.substring(indx + 1, inputLine.indexOf(");")));
 				json = new JSONObject(inputLine);
-				
-				
-				if (json.get("msg").toString().equals("Output " + id + " added.")) 
-				{
-					tester = GOOD;
-					// Report to the Jsystem that the new stream was successfully added.
-				} 
+				return json.get("msg").toString();	
 			}
 			
 			if (mode == PUSHINMODE)
 			{
 				inputLine = response.toString();
-				int indx = inputLine.indexOf("(");
-				inputLine = (inputLine.substring(indx + 1, inputLine.indexOf(");")));
 				json = new JSONObject(inputLine);
-				
-				if (json.get("msg").toString().equals("Stream " + "'"+ id +"'"+ " added.")) 
-				{
-					tester = GOOD;
-					// Report to jsystem that the new stram was successfully
-					// added.
-					
-				} 
+				return json.get("msg").toString();	
 			}
 			
 			if (mode == PULLMODE)
@@ -132,6 +117,17 @@ public class ApiWorkir {
         		 return inputLine = response.toString();
 			}
 			
+			if (mode == PUSHOUTMODE)
+			{
+				String wholeResult; 
+				String [] splittedResults;
+				inputLine = response.toString();
+				json = new JSONObject(inputLine);
+				System.out.println("Debug printing   -- " + json.get("msg").toString());
+				wholeResult = json.get("msg").toString();
+				splittedResults = wholeResult.split(",");
+				return splittedResults[0];
+			}
 			
 		} catch (Exception e) {
 

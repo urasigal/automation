@@ -57,12 +57,6 @@ public class BroadcasterSinglePullInStreamCreationDriver extends BroadcasterLogg
 	final private String rnic = "nic";
 	final private String rhost0 = "host0";
 	
-	private SecureRandom random = new SecureRandom();
-	
-	public BroadcasterSinglePullInStreamCreationDriver()
-	{
-		
-	}
 	
 	public String  testIMPL(String userName, String userPass, String Host, String loin_ip, String id,String source, 
 			String uiport,String pull_port,String latency, String fec_latency,String fec_overhead,String mcast_force,
