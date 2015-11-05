@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="60" failures="0" name="TestSuite" time="302.818" errors="0" skipped="0">
+<testsuite tests="146" failures="0" name="TestSuite" time="1,801.397" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_40\jre\bin"/>
@@ -20,7 +20,7 @@
     <property name="basedir" value="C:\work\automationPrj\automation"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="surefire.real.class.path" value="C:\Users\yuri\AppData\Local\Temp\surefirebooter1472147610611643566.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\yuri\AppData\Local\Temp\surefirebooter784522005615643598.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\yuri\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_40\jre"/>
-    <property name="sun.java.command" value="C:\Users\yuri\AppData\Local\Temp\surefirebooter1472147610611643566.jar C:\Users\yuri\AppData\Local\Temp\surefire4649870424317252932tmp C:\Users\yuri\AppData\Local\Temp\surefire8689359673368407876tmp"/>
+    <property name="sun.java.command" value="C:\Users\yuri\AppData\Local\Temp\surefirebooter784522005615643598.jar C:\Users\yuri\AppData\Local\Temp\surefire6016386421106109996tmp C:\Users\yuri\AppData\Local\Temp\surefire870010838517084285tmp"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,64 +62,150 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest" name="broadcasterPullInCreation" time="0.039"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="20.069"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.02"/>
-  <testcase classname="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest" name="broadcasterPullInCreation" time="0.028"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="20.063"/>
+  <testcase classname="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest" name="broadcasterPullInCreation" time="0.029"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.075"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.017"/>
+  <testcase classname="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest" name="broadcasterPullInCreation" time="0.017"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.047"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.011"/>
+  <testcase classname="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest" name="broadcasterPullInCreation" time="0.324"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.044"/>
   <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.014"/>
   <testcase classname="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest" name="broadcasterPullInCreation" time="0.016"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="20.07"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.027"/>
-  <testcase classname="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest" name="broadcasterPullInCreation" time="0.036"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="20.069"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.042"/>
-  <testcase classname="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest" name="broadcasterPullInCreation" time="0.016"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="20.061"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.018"/>
-  <testcase classname="com.zixi.testing.BroadcasterUdpInStreamCreationTest" name="broadcasterUdpInCreation" time="0.056"/>
-  <testcase classname="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" name="broadcasterPullInCreation" time="0.019"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="15.035"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.023"/>
-  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.022"/>
-  <testcase classname="com.zixi.testing.BroadcasterUdpInStreamCreationTest" name="broadcasterUdpInCreation" time="0.014"/>
-  <testcase classname="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" name="broadcasterPullInCreation" time="0.014"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="30.115"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.02"/>
-  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.023"/>
-  <testcase classname="com.zixi.testing.BroadcasterUdpInStreamCreationTest" name="broadcasterUdpInCreation" time="0.036"/>
-  <testcase classname="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" name="broadcasterPullInCreation" time="0.012"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="30.115"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.033"/>
-  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.023"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.016"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.013"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="15.035"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.02"/>
-  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.021"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.02"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.015"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="40.183"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.019"/>
-  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.021"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.015"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.015"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="15.031"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.019"/>
-  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.022"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.029"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.014"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="15.032"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.021"/>
-  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.024"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.046"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.015"/>
+  <testcase classname="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest" name="broadcasterPullInCreation" time="0.008"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.039"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.015"/>
+  <testcase classname="com.zixi.testing.BroadcasterUdpInStreamCreationTest" name="broadcasterUdpInCreation" time="0.013"/>
+  <testcase classname="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" name="broadcasterPullInCreation" time="0.008"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="30.034"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.01"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.008"/>
+  <testcase classname="com.zixi.testing.BroadcasterUdpInStreamCreationTest" name="broadcasterUdpInCreation" time="0.025"/>
+  <testcase classname="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" name="broadcasterPullInCreation" time="0.006"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="45.127"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.011"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.009"/>
+  <testcase classname="com.zixi.testing.BroadcasterUdpInStreamCreationTest" name="broadcasterUdpInCreation" time="0.017"/>
+  <testcase classname="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" name="broadcasterPullInCreation" time="0.006"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="45.082"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.011"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.007"/>
+  <testcase classname="com.zixi.testing.BroadcasterUdpInStreamCreationTest" name="broadcasterUdpInCreation" time="0.018"/>
+  <testcase classname="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" name="broadcasterPullInCreation" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="45.089"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.006"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.004"/>
+  <testcase classname="com.zixi.testing.BroadcasterUdpInStreamCreationTest" name="broadcasterUdpInCreation" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" name="broadcasterPullInCreation" time="0.003"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="45.088"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.009"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.01"/>
   <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.026"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.013"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="20.065"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.007"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="30.022"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.014"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.012"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.014"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.004"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="55.113"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.014"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.017"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.013"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.006"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="30.036"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.018"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.008"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.015"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.009"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="30.016"/>
   <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.019"/>
-  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.021"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.023"/>
-  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.013"/>
-  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="20.062"/>
-  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.019"/>
-  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.021"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.015"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.015"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.01"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.045"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.012"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.007"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.027"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushOutStreamCreationTest" name="broadcasterPullInCreation" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.033"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.014"/>
+  <testcase classname="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" name="broadcasterSingleStreamRemoving" time="0.006"/>
+  <testcase classname="com.zixi.testing.BroadcasterRtmpInputTest" name="broadcasterRtmpPullTest" time="0.014"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="30.015"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.01"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.028"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.039"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.032"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.009"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.042"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.009"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="125.226"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.04"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.005"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.029"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.007"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="125.247"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.023"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.01"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.038"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="125.23"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.025"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.009"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.028"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.02"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="125.253"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.036"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.022"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.03"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="125.243"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.039"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.005"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.03"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="125.288"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.038"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.005"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.03"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="125.267"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.036"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.011"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.006"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.008"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.033"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="40.035"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.011"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="40.034"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.031"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.005"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.031"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.011"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.028"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.029"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.013"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.03"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.027"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.042"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.009"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.031"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.008"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.031"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.028"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.026"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.038"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.007"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.038"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.025"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.009"/>
+  <testcase classname="com.zixi.testing.FeederOutputPushToBxTest" name="feederOutputToBxTest" time="0.031"/>
+  <testcase classname="com.zixi.testing.BroadcasterPushInStreamCreationTest" name="broadcasterSingleStreamRemoving" time="0.005"/>
+  <testcase classname="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" name="broadcasterSingleInputStreamstatisticAnilyzer" time="35.025"/>
+  <testcase classname="com.zixi.testing.FeederOutputDeletioinTest" name="broadcasterSingleStreamRemoving" time="0.03"/>
+  <testcase classname="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" name="broadcasterInputStreamDeletion" time="0.018"/>
 </testsuite>

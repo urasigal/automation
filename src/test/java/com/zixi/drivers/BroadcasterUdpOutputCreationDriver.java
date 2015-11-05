@@ -2,6 +2,7 @@ package com.zixi.drivers;
 
 import static com.zixi.globals.Macros.*;
 
+import com.zixi.entities.TestParameters;
 import com.zixi.tools.BroadcasterLoggable;
 import com.zixi.tools.ApiWorkir;
 
@@ -18,6 +19,13 @@ public class BroadcasterUdpOutputCreationDriver extends BroadcasterLoggable
 			String remux_restampdts, String uiport, String remux_pcr,
 			String dec_type, String cols) 
 	{
+		testParameters = new TestParameters("userName:"+ userName, "userPass:"+ userPass, "loin_ip:"+ loin_ip,
+				"port:"+ port, "stream:"+ stream, "streamname:"+ streamname, "host:"+ host,
+				"id:"+ id, "rtp:"+ rtp, "fec:"+ fec, "smoothing:"+ smoothing, "ttl:"+ ttl,
+				"remux_bitrate:"+ remux_bitrate, "df:"+ df, "local_port:"+ local_port, "dec_key:"+ dec_key,
+				"type:"+ type, "rows:"+ rows, "remux_buff:"+ remux_buff, "local_ip:"+ local_ip,
+				"remux_restampdts:"+ remux_restampdts, "uiport:"+ uiport, "remux_pcr:"+ remux_pcr,
+				"dec_type:"+ dec_type, "cols:"+ cols);
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + loin_ip + ":" + uiport + "/login.htm", userName , userPass, loin_ip, uiport);
 		
 		return streamCreator.sendGet(HTTP + loin_ip + params1 + uiport + params7 + rtype + params4 + type+
@@ -27,7 +35,7 @@ public class BroadcasterUdpOutputCreationDriver extends BroadcasterLoggable
 		rlocal_ip + params4 + local_ip + params2 + rdec_type + params4 + dec_type + params2 + rrtp + params4 + rtp + params2 +
 		rfec + params4 + fec + params2 + rrows + params4 + rows + params2 + rcols + params4 + cols + params2 + rremux_bitrate + params4 + remux_bitrate + params2 +
 		rremux_pcr + params4 + remux_pcr + params2 + rremux_buff + params4 + remux_buff +  params2 + rremux_restampdts + params4 + remux_restampdts + params2 +
-		params5, id, UDPOUTMODE, responseCookieContainer, loin_ip, this);
+		params5, id, UDPOUTMODE, responseCookieContainer, loin_ip, this, uiport);
 	}
 	final private static String HTTP = "http://";
     final private static String params1 = ":";

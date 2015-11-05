@@ -1,17 +1,1337 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="25" passed="25">
   <reporter-output>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[name: feederoutputname]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[ostr: feederout]]>
+    </line>
+    <line>
+      <![CDATA[oses: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oetp: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oeky: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[obit: 8000000]]>
+    </line>
+    <line>
+      <![CDATA[olat: 6000]]>
+    </line>
+    <line>
+      <![CDATA[ofc: 0]]>
+    </line>
+    <line>
+      <![CDATA[ocmp: 1]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ofec: 30]]>
+    </line>
+    <line>
+      <![CDATA[ofecl: 150]]>
+    </line>
+    <line>
+      <![CDATA[stop_on_drop: 0]]>
+    </line>
+    <line>
+      <![CDATA[mmt: 0]]>
+    </line>
+    <line>
+      <![CDATA[smoothing: 200]]>
+    </line>
+    <line>
+      <![CDATA[limited: 0]]>
+    </line>
+    <line>
+      <![CDATA[minbps: 0]]>
+    </line>
+    <line>
+      <![CDATA[lim_enc_addr: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[pad_to_cbr: 1]]>
+    </line>
+    <line>
+      <![CDATA[rtmp_feedback0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ohst: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[oprt: 2088]]>
+    </line>
+    <line>
+      <![CDATA[onic: 0.0.0.0]]>
+    </line>
+    <line>
+      <![CDATA[oalt: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[analyze ]]>
+    </line>
+    <line>
+      <![CDATA[complete ]]>
+    </line>
+    <line>
+      <![CDATA[force_p2p 0]]>
+    </line>
+    <line>
+      <![CDATA[id feederout]]>
+    </line>
+    <line>
+      <![CDATA[latency -1]]>
+    </line>
+    <line>
+      <![CDATA[login_ip 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[max_outputs ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_force ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ip 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_out ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_port 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ttl ]]>
+    </line>
+    <line>
+      <![CDATA[on 1]]>
+    </line>
+    <line>
+      <![CDATA[password ]]>
+    </line>
+    <line>
+      <![CDATA[time_shift 0]]>
+    </line>
+    <line>
+      <![CDATA[type push]]>
+    </line>
+    <line>
+      <![CDATA[uiport 4444]]>
+    </line>
+    <line>
+      <![CDATA[userName admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass1234]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[loin_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[testduration: 10]]>
+    </line>
+    <line>
+      <![CDATA[Max bitrate is 948243]]>
+    </line>
+    <line>
+      <![CDATA[Min bitrete is 838809]]>
+    </line>
+    <line>
+      <![CDATA[Average bitrate is 903937]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4200]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPassword: 1234]]>
+    </line>
+    <line>
+      <![CDATA[streamId: feederout]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[<h4>Stream feederout removed.</h4>]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[name: feederoutputname]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[ostr: feederout]]>
+    </line>
+    <line>
+      <![CDATA[oses: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oetp: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oeky: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[obit: 8000000]]>
+    </line>
+    <line>
+      <![CDATA[olat: 6000]]>
+    </line>
+    <line>
+      <![CDATA[ofc: 0]]>
+    </line>
+    <line>
+      <![CDATA[ocmp: 1]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ofec: 30]]>
+    </line>
+    <line>
+      <![CDATA[ofecl: 150]]>
+    </line>
+    <line>
+      <![CDATA[stop_on_drop: 0]]>
+    </line>
+    <line>
+      <![CDATA[mmt: 0]]>
+    </line>
+    <line>
+      <![CDATA[smoothing: 400]]>
+    </line>
+    <line>
+      <![CDATA[limited: 0]]>
+    </line>
+    <line>
+      <![CDATA[minbps: 0]]>
+    </line>
+    <line>
+      <![CDATA[lim_enc_addr: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[pad_to_cbr: 1]]>
+    </line>
+    <line>
+      <![CDATA[rtmp_feedback0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ohst: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[oprt: 2088]]>
+    </line>
+    <line>
+      <![CDATA[onic: 0.0.0.0]]>
+    </line>
+    <line>
+      <![CDATA[oalt: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[analyze ]]>
+    </line>
+    <line>
+      <![CDATA[complete ]]>
+    </line>
+    <line>
+      <![CDATA[force_p2p 0]]>
+    </line>
+    <line>
+      <![CDATA[id feederout]]>
+    </line>
+    <line>
+      <![CDATA[latency -1]]>
+    </line>
+    <line>
+      <![CDATA[login_ip 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[max_outputs ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_force ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ip 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_out ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_port 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ttl ]]>
+    </line>
+    <line>
+      <![CDATA[on 1]]>
+    </line>
+    <line>
+      <![CDATA[password ]]>
+    </line>
+    <line>
+      <![CDATA[time_shift 0]]>
+    </line>
+    <line>
+      <![CDATA[type push]]>
+    </line>
+    <line>
+      <![CDATA[uiport 4444]]>
+    </line>
+    <line>
+      <![CDATA[userName admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass1234]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[loin_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[testduration: 10]]>
+    </line>
+    <line>
+      <![CDATA[Max bitrate is 954848]]>
+    </line>
+    <line>
+      <![CDATA[Min bitrete is 835900]]>
+    </line>
+    <line>
+      <![CDATA[Average bitrate is 910497]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4200]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPassword: 1234]]>
+    </line>
+    <line>
+      <![CDATA[streamId: feederout]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[<h4>Stream feederout removed.</h4>]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[name: feederoutputname]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[ostr: feederout]]>
+    </line>
+    <line>
+      <![CDATA[oses: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oetp: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oeky: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[obit: 8000000]]>
+    </line>
+    <line>
+      <![CDATA[olat: 6000]]>
+    </line>
+    <line>
+      <![CDATA[ofc: 0]]>
+    </line>
+    <line>
+      <![CDATA[ocmp: 1]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ofec: 30]]>
+    </line>
+    <line>
+      <![CDATA[ofecl: 150]]>
+    </line>
+    <line>
+      <![CDATA[stop_on_drop: 0]]>
+    </line>
+    <line>
+      <![CDATA[mmt: 0]]>
+    </line>
+    <line>
+      <![CDATA[smoothing: 600]]>
+    </line>
+    <line>
+      <![CDATA[limited: 0]]>
+    </line>
+    <line>
+      <![CDATA[minbps: 0]]>
+    </line>
+    <line>
+      <![CDATA[lim_enc_addr: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[pad_to_cbr: 1]]>
+    </line>
+    <line>
+      <![CDATA[rtmp_feedback0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ohst: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[oprt: 2088]]>
+    </line>
+    <line>
+      <![CDATA[onic: 0.0.0.0]]>
+    </line>
+    <line>
+      <![CDATA[oalt: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[analyze ]]>
+    </line>
+    <line>
+      <![CDATA[complete ]]>
+    </line>
+    <line>
+      <![CDATA[force_p2p 0]]>
+    </line>
+    <line>
+      <![CDATA[id feederout]]>
+    </line>
+    <line>
+      <![CDATA[latency -1]]>
+    </line>
+    <line>
+      <![CDATA[login_ip 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[max_outputs ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_force ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ip 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_out ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_port 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ttl ]]>
+    </line>
+    <line>
+      <![CDATA[on 1]]>
+    </line>
+    <line>
+      <![CDATA[password ]]>
+    </line>
+    <line>
+      <![CDATA[time_shift 0]]>
+    </line>
+    <line>
+      <![CDATA[type push]]>
+    </line>
+    <line>
+      <![CDATA[uiport 4444]]>
+    </line>
+    <line>
+      <![CDATA[userName admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass1234]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[loin_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[testduration: 10]]>
+    </line>
+    <line>
+      <![CDATA[Max bitrate is 953280]]>
+    </line>
+    <line>
+      <![CDATA[Min bitrete is 837170]]>
+    </line>
+    <line>
+      <![CDATA[Average bitrate is 906564]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4200]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPassword: 1234]]>
+    </line>
+    <line>
+      <![CDATA[streamId: feederout]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[<h4>Stream feederout removed.</h4>]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[name: feederoutputname]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[ostr: feederout]]>
+    </line>
+    <line>
+      <![CDATA[oses: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oetp: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oeky: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[obit: 8000000]]>
+    </line>
+    <line>
+      <![CDATA[olat: 6000]]>
+    </line>
+    <line>
+      <![CDATA[ofc: 0]]>
+    </line>
+    <line>
+      <![CDATA[ocmp: 1]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ofec: 30]]>
+    </line>
+    <line>
+      <![CDATA[ofecl: 150]]>
+    </line>
+    <line>
+      <![CDATA[stop_on_drop: 0]]>
+    </line>
+    <line>
+      <![CDATA[mmt: 0]]>
+    </line>
+    <line>
+      <![CDATA[smoothing: 800]]>
+    </line>
+    <line>
+      <![CDATA[limited: 0]]>
+    </line>
+    <line>
+      <![CDATA[minbps: 0]]>
+    </line>
+    <line>
+      <![CDATA[lim_enc_addr: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[pad_to_cbr: 1]]>
+    </line>
+    <line>
+      <![CDATA[rtmp_feedback0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ohst: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[oprt: 2088]]>
+    </line>
+    <line>
+      <![CDATA[onic: 0.0.0.0]]>
+    </line>
+    <line>
+      <![CDATA[oalt: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[analyze ]]>
+    </line>
+    <line>
+      <![CDATA[complete ]]>
+    </line>
+    <line>
+      <![CDATA[force_p2p 0]]>
+    </line>
+    <line>
+      <![CDATA[id feederout]]>
+    </line>
+    <line>
+      <![CDATA[latency -1]]>
+    </line>
+    <line>
+      <![CDATA[login_ip 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[max_outputs ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_force ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ip 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_out ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_port 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ttl ]]>
+    </line>
+    <line>
+      <![CDATA[on 1]]>
+    </line>
+    <line>
+      <![CDATA[password ]]>
+    </line>
+    <line>
+      <![CDATA[time_shift 0]]>
+    </line>
+    <line>
+      <![CDATA[type push]]>
+    </line>
+    <line>
+      <![CDATA[uiport 4444]]>
+    </line>
+    <line>
+      <![CDATA[userName admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass1234]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[loin_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[testduration: 10]]>
+    </line>
+    <line>
+      <![CDATA[Max bitrate is 943240]]>
+    </line>
+    <line>
+      <![CDATA[Min bitrete is 846681]]>
+    </line>
+    <line>
+      <![CDATA[Average bitrate is 906562]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4200]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPassword: 1234]]>
+    </line>
+    <line>
+      <![CDATA[streamId: feederout]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[<h4>Stream feederout removed.</h4>]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[name: feederoutputname]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[ostr: feederout]]>
+    </line>
+    <line>
+      <![CDATA[oses: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oetp: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[oeky: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[obit: 8000000]]>
+    </line>
+    <line>
+      <![CDATA[olat: 6000]]>
+    </line>
+    <line>
+      <![CDATA[ofc: 0]]>
+    </line>
+    <line>
+      <![CDATA[ocmp: 1]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[1: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ofec: 30]]>
+    </line>
+    <line>
+      <![CDATA[ofecl: 150]]>
+    </line>
+    <line>
+      <![CDATA[stop_on_drop: 0]]>
+    </line>
+    <line>
+      <![CDATA[mmt: 0]]>
+    </line>
+    <line>
+      <![CDATA[smoothing: 1000]]>
+    </line>
+    <line>
+      <![CDATA[limited: 0]]>
+    </line>
+    <line>
+      <![CDATA[minbps: 0]]>
+    </line>
+    <line>
+      <![CDATA[lim_enc_addr: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[pad_to_cbr: 1]]>
+    </line>
+    <line>
+      <![CDATA[rtmp_feedback0: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[ohst: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[oprt: 2088]]>
+    </line>
+    <line>
+      <![CDATA[onic: 0.0.0.0]]>
+    </line>
+    <line>
+      <![CDATA[oalt: -- not provided ]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[analyze ]]>
+    </line>
+    <line>
+      <![CDATA[complete ]]>
+    </line>
+    <line>
+      <![CDATA[force_p2p 0]]>
+    </line>
+    <line>
+      <![CDATA[id feederout]]>
+    </line>
+    <line>
+      <![CDATA[latency -1]]>
+    </line>
+    <line>
+      <![CDATA[login_ip 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[max_outputs ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_force ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ip 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_out ]]>
+    </line>
+    <line>
+      <![CDATA[mcast_port 0]]>
+    </line>
+    <line>
+      <![CDATA[mcast_ttl ]]>
+    </line>
+    <line>
+      <![CDATA[on 1]]>
+    </line>
+    <line>
+      <![CDATA[password ]]>
+    </line>
+    <line>
+      <![CDATA[time_shift 0]]>
+    </line>
+    <line>
+      <![CDATA[type push]]>
+    </line>
+    <line>
+      <![CDATA[uiport 4444]]>
+    </line>
+    <line>
+      <![CDATA[userName admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass1234]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[loin_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[testduration: 10]]>
+    </line>
+    <line>
+      <![CDATA[Max bitrate is 948587]]>
+    </line>
+    <line>
+      <![CDATA[Min bitrete is 846760]]>
+    </line>
+    <line>
+      <![CDATA[Average bitrate is 908645]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass: 1234]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.222]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4200]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[mip: /home/pi/live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[Test parameteres: ]]>
+    </line>
+    <line>
+      <![CDATA[login_ip: 10.7.0.91]]>
+    </line>
+    <line>
+      <![CDATA[userName: admin]]>
+    </line>
+    <line>
+      <![CDATA[userPassword: 1234]]>
+    </line>
+    <line>
+      <![CDATA[streamId: feederout]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4444]]>
+    </line>
+    <line>
+      <![CDATA[<h4>Stream feederout removed.</h4>]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38" started-at="2015-10-21T09:04:17Z" finished-at="2015-10-21T09:04:18Z">
+  <suite name="Feeder push to broadcaster suite. Smoothing" duration-ms="175851" started-at="2015-11-05T10:31:16Z" finished-at="2015-11-05T10:34:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38" started-at="2015-10-21T09:04:17Z" finished-at="2015-10-21T09:04:18Z">
-      <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@73035e27]" name="testInit" is-config="true" duration-ms="8" started-at="2015-10-21T12:04:17Z" finished-at="2015-10-21T12:04:17Z">
+    <test name="Feeder push to broadcaster test - Smoothing 200" duration-ms="65" started-at="2015-11-05T10:31:16Z" finished-at="2015-11-05T10:31:16Z">
+      <class name="com.zixi.testing.FeederOutputPushToBxTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@3ecf72fd]" name="testInit" is-config="true" duration-ms="7" started-at="2015-11-05T12:31:16Z" finished-at="2015-11-05T12:31:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@73035e27]" name="broadcasterPullInCreation" duration-ms="22" started-at="2015-10-21T12:04:17Z" finished-at="2015-10-21T12:04:18Z">
+        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@3ecf72fd]" name="feederOutputToBxTest" duration-ms="49" started-at="2015-11-05T12:31:16Z" finished-at="2015-11-05T12:31:16Z">
           <params>
             <param index="0">
               <value>
@@ -25,17 +1345,17 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[10.7.0.157]]>
+                <![CDATA[10.7.0.222]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[10.7.0.91]]>
+                <![CDATA[feederoutputname]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[6000]]>
+                <![CDATA[/home/pi/live_recording.ts]]>
               </value>
             </param>
             <param index="5">
@@ -45,7 +1365,7 @@
             </param>
             <param index="6">
               <value>
-                <![CDATA[]]>
+                <![CDATA[file]]>
               </value>
             </param>
             <param index="7">
@@ -55,64 +1375,3650 @@
             </param>
             <param index="8">
               <value>
-                <![CDATA[]]>
+                <![CDATA[-1]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[300]]>
+                <![CDATA[2]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[push]]>
+                <![CDATA[feederout]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[30]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[8000000]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[2088]]>
+                <![CDATA[6000]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[4444]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="18">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[150]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[2088]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[0.0.0.0]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[4200]]>
               </value>
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[name: feederoutputname]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[ostr: feederout]]>
+            </line>
+            <line>
+              <![CDATA[oses: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oetp: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oeky: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[obit: 8000000]]>
+            </line>
+            <line>
+              <![CDATA[olat: 6000]]>
+            </line>
+            <line>
+              <![CDATA[ofc: 0]]>
+            </line>
+            <line>
+              <![CDATA[ocmp: 1]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ofec: 30]]>
+            </line>
+            <line>
+              <![CDATA[ofecl: 150]]>
+            </line>
+            <line>
+              <![CDATA[stop_on_drop: 0]]>
+            </line>
+            <line>
+              <![CDATA[mmt: 0]]>
+            </line>
+            <line>
+              <![CDATA[smoothing: 200]]>
+            </line>
+            <line>
+              <![CDATA[limited: 0]]>
+            </line>
+            <line>
+              <![CDATA[minbps: 0]]>
+            </line>
+            <line>
+              <![CDATA[lim_enc_addr: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[pad_to_cbr: 1]]>
+            </line>
+            <line>
+              <![CDATA[rtmp_feedback0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ohst: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[oprt: 2088]]>
+            </line>
+            <line>
+              <![CDATA[onic: 0.0.0.0]]>
+            </line>
+            <line>
+              <![CDATA[oalt: -- not provided ]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- broadcasterPullInCreation -->
-      </class> <!-- com.zixi.testing.BroadcasterPushOutStreamCreationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- feederOutputToBxTest -->
+      </class> <!-- com.zixi.testing.FeederOutputPushToBxTest -->
+    </test> <!-- Feeder push to broadcaster test - Smoothing 200 -->
+    <test name="Push input stream creation test - Smoothing 200" duration-ms="31" started-at="2015-11-05T10:31:16Z" finished-at="2015-11-05T10:31:16Z">
+      <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@6adca536]" name="testInit" is-config="true" duration-ms="1" started-at="2015-11-05T12:31:16Z" finished-at="2015-11-05T12:31:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@6adca536]" name="broadcasterSingleStreamRemoving" duration-ms="29" started-at="2015-11-05T12:31:16Z" finished-at="2015-11-05T12:31:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[push]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[analyze ]]>
+            </line>
+            <line>
+              <![CDATA[complete ]]>
+            </line>
+            <line>
+              <![CDATA[force_p2p 0]]>
+            </line>
+            <line>
+              <![CDATA[id feederout]]>
+            </line>
+            <line>
+              <![CDATA[latency -1]]>
+            </line>
+            <line>
+              <![CDATA[login_ip 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[max_outputs ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_force ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ip 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_out ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_port 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ttl ]]>
+            </line>
+            <line>
+              <![CDATA[on 1]]>
+            </line>
+            <line>
+              <![CDATA[password ]]>
+            </line>
+            <line>
+              <![CDATA[time_shift 0]]>
+            </line>
+            <line>
+              <![CDATA[type push]]>
+            </line>
+            <line>
+              <![CDATA[uiport 4444]]>
+            </line>
+            <line>
+              <![CDATA[userName admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass1234]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.BroadcasterPushInStreamCreationTest -->
+    </test> <!-- Push input stream creation test - Smoothing 200 -->
+    <test name="Push from Feeder input stream statistics test - Smoothing 200" duration-ms="35057" started-at="2015-11-05T10:31:16Z" finished-at="2015-11-05T10:31:51Z">
+      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@4ec6a292]" name="testInit" is-config="true" duration-ms="1" started-at="2015-11-05T12:31:16Z" finished-at="2015-11-05T12:31:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@4ec6a292]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="35055" started-at="2015-11-05T12:31:16Z" finished-at="2015-11-05T12:31:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[loin_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[testduration: 10]]>
+            </line>
+            <line>
+              <![CDATA[Max bitrate is 948243]]>
+            </line>
+            <line>
+              <![CDATA[Min bitrete is 838809]]>
+            </line>
+            <line>
+              <![CDATA[Average bitrate is 903937]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
+    </test> <!-- Push from Feeder input stream statistics test - Smoothing 200 -->
+    <test name="Feeder output stream deletion test moothing 200" duration-ms="30" started-at="2015-11-05T10:31:51Z" finished-at="2015-11-05T10:31:51Z">
+      <class name="com.zixi.testing.FeederOutputDeletioinTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@4563e9ab]" name="testInit" is-config="true" duration-ms="1" started-at="2015-11-05T12:31:51Z" finished-at="2015-11-05T12:31:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@4563e9ab]" name="broadcasterSingleStreamRemoving" duration-ms="28" started-at="2015-11-05T12:31:51Z" finished-at="2015-11-05T12:31:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.222]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[/home/pi/live_recording.ts]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4200]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.FeederOutputDeletioinTest -->
+    </test> <!-- Feeder output stream deletion test moothing 200 -->
+    <test name="Remove Push input stream - Smoothing 200" duration-ms="8" started-at="2015-11-05T10:31:51Z" finished-at="2015-11-05T10:31:51Z">
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@7e0babb1]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:31:51Z" finished-at="2015-11-05T12:31:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@7e0babb1]" name="broadcasterInputStreamDeletion" duration-ms="6" started-at="2015-11-05T12:31:51Z" finished-at="2015-11-05T12:31:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPassword: 1234]]>
+            </line>
+            <line>
+              <![CDATA[streamId: feederout]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[<h4>Stream feederout removed.</h4>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterInputStreamDeletion -->
+      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
+    </test> <!-- Remove Push input stream - Smoothing 200 -->
+    <test name="Feeder push to broadcaster test - Smoothing 400" duration-ms="30" started-at="2015-11-05T10:31:51Z" finished-at="2015-11-05T10:31:52Z">
+      <class name="com.zixi.testing.FeederOutputPushToBxTest">
+        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@7d417077]" name="feederOutputToBxTest" duration-ms="29" started-at="2015-11-05T12:31:51Z" finished-at="2015-11-05T12:31:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.222]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[feederoutputname]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[/home/pi/live_recording.ts]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[8000000]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[6000]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[150]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[400]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[2088]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[0.0.0.0]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[name: feederoutputname]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[ostr: feederout]]>
+            </line>
+            <line>
+              <![CDATA[oses: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oetp: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oeky: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[obit: 8000000]]>
+            </line>
+            <line>
+              <![CDATA[olat: 6000]]>
+            </line>
+            <line>
+              <![CDATA[ofc: 0]]>
+            </line>
+            <line>
+              <![CDATA[ocmp: 1]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ofec: 30]]>
+            </line>
+            <line>
+              <![CDATA[ofecl: 150]]>
+            </line>
+            <line>
+              <![CDATA[stop_on_drop: 0]]>
+            </line>
+            <line>
+              <![CDATA[mmt: 0]]>
+            </line>
+            <line>
+              <![CDATA[smoothing: 400]]>
+            </line>
+            <line>
+              <![CDATA[limited: 0]]>
+            </line>
+            <line>
+              <![CDATA[minbps: 0]]>
+            </line>
+            <line>
+              <![CDATA[lim_enc_addr: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[pad_to_cbr: 1]]>
+            </line>
+            <line>
+              <![CDATA[rtmp_feedback0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ohst: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[oprt: 2088]]>
+            </line>
+            <line>
+              <![CDATA[onic: 0.0.0.0]]>
+            </line>
+            <line>
+              <![CDATA[oalt: -- not provided ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- feederOutputToBxTest -->
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@7d417077]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:31:51Z" finished-at="2015-11-05T12:31:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+      </class> <!-- com.zixi.testing.FeederOutputPushToBxTest -->
+    </test> <!-- Feeder push to broadcaster test - Smoothing 400 -->
+    <test name="Push input stream creation test - Smoothing 400" duration-ms="5" started-at="2015-11-05T10:31:52Z" finished-at="2015-11-05T10:31:52Z">
+      <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest">
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@1134affc]" name="broadcasterSingleStreamRemoving" duration-ms="5" started-at="2015-11-05T12:31:52Z" finished-at="2015-11-05T12:31:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[push]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[analyze ]]>
+            </line>
+            <line>
+              <![CDATA[complete ]]>
+            </line>
+            <line>
+              <![CDATA[force_p2p 0]]>
+            </line>
+            <line>
+              <![CDATA[id feederout]]>
+            </line>
+            <line>
+              <![CDATA[latency -1]]>
+            </line>
+            <line>
+              <![CDATA[login_ip 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[max_outputs ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_force ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ip 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_out ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_port 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ttl ]]>
+            </line>
+            <line>
+              <![CDATA[on 1]]>
+            </line>
+            <line>
+              <![CDATA[password ]]>
+            </line>
+            <line>
+              <![CDATA[time_shift 0]]>
+            </line>
+            <line>
+              <![CDATA[type push]]>
+            </line>
+            <line>
+              <![CDATA[uiport 4444]]>
+            </line>
+            <line>
+              <![CDATA[userName admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass1234]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@1134affc]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:31:52Z" finished-at="2015-11-05T12:31:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+      </class> <!-- com.zixi.testing.BroadcasterPushInStreamCreationTest -->
+    </test> <!-- Push input stream creation test - Smoothing 400 -->
+    <test name="Push from Feeder input stream statistics test - Smoothing 400" duration-ms="35046" started-at="2015-11-05T10:31:52Z" finished-at="2015-11-05T10:32:27Z">
+      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@6b71769e]" name="testInit" is-config="true" duration-ms="1" started-at="2015-11-05T12:31:52Z" finished-at="2015-11-05T12:31:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@6b71769e]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="35043" started-at="2015-11-05T12:31:52Z" finished-at="2015-11-05T12:32:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[loin_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[testduration: 10]]>
+            </line>
+            <line>
+              <![CDATA[Max bitrate is 954848]]>
+            </line>
+            <line>
+              <![CDATA[Min bitrete is 835900]]>
+            </line>
+            <line>
+              <![CDATA[Average bitrate is 910497]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
+    </test> <!-- Push from Feeder input stream statistics test - Smoothing 400 -->
+    <test name="Feeder output stream deletion testmoothing 400" duration-ms="34" started-at="2015-11-05T10:32:27Z" finished-at="2015-11-05T10:32:27Z">
+      <class name="com.zixi.testing.FeederOutputDeletioinTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@1d251891]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:32:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@1d251891]" name="broadcasterSingleStreamRemoving" duration-ms="32" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:32:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.222]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[/home/pi/live_recording.ts]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4200]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.FeederOutputDeletioinTest -->
+    </test> <!-- Feeder output stream deletion testmoothing 400 -->
+    <test name="Remove Push input stream - Smoothing 400" duration-ms="24" started-at="2015-11-05T10:32:27Z" finished-at="2015-11-05T10:32:27Z">
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@3ac3fd8b]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:32:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@3ac3fd8b]" name="broadcasterInputStreamDeletion" duration-ms="23" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:32:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPassword: 1234]]>
+            </line>
+            <line>
+              <![CDATA[streamId: feederout]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[<h4>Stream feederout removed.</h4>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterInputStreamDeletion -->
+      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
+    </test> <!-- Remove Push input stream - Smoothing 400 -->
+    <test name="Feeder push to broadcaster test - Smoothing 600" duration-ms="36" started-at="2015-11-05T10:32:27Z" finished-at="2015-11-05T10:32:27Z">
+      <class name="com.zixi.testing.FeederOutputPushToBxTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@34ce8af7]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:32:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@34ce8af7]" name="feederOutputToBxTest" duration-ms="35" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:32:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.222]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[feederoutputname]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[/home/pi/live_recording.ts]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[8000000]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[6000]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[150]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[600]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[2088]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[0.0.0.0]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[name: feederoutputname]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[ostr: feederout]]>
+            </line>
+            <line>
+              <![CDATA[oses: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oetp: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oeky: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[obit: 8000000]]>
+            </line>
+            <line>
+              <![CDATA[olat: 6000]]>
+            </line>
+            <line>
+              <![CDATA[ofc: 0]]>
+            </line>
+            <line>
+              <![CDATA[ocmp: 1]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ofec: 30]]>
+            </line>
+            <line>
+              <![CDATA[ofecl: 150]]>
+            </line>
+            <line>
+              <![CDATA[stop_on_drop: 0]]>
+            </line>
+            <line>
+              <![CDATA[mmt: 0]]>
+            </line>
+            <line>
+              <![CDATA[smoothing: 600]]>
+            </line>
+            <line>
+              <![CDATA[limited: 0]]>
+            </line>
+            <line>
+              <![CDATA[minbps: 0]]>
+            </line>
+            <line>
+              <![CDATA[lim_enc_addr: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[pad_to_cbr: 1]]>
+            </line>
+            <line>
+              <![CDATA[rtmp_feedback0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ohst: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[oprt: 2088]]>
+            </line>
+            <line>
+              <![CDATA[onic: 0.0.0.0]]>
+            </line>
+            <line>
+              <![CDATA[oalt: -- not provided ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- feederOutputToBxTest -->
+      </class> <!-- com.zixi.testing.FeederOutputPushToBxTest -->
+    </test> <!-- Feeder push to broadcaster test - Smoothing 600 -->
+    <test name="Push input stream creation test - Smoothing 600" duration-ms="6" started-at="2015-11-05T10:32:27Z" finished-at="2015-11-05T10:32:27Z">
+      <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@511baa65]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:32:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@511baa65]" name="broadcasterSingleStreamRemoving" duration-ms="5" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:32:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[push]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[analyze ]]>
+            </line>
+            <line>
+              <![CDATA[complete ]]>
+            </line>
+            <line>
+              <![CDATA[force_p2p 0]]>
+            </line>
+            <line>
+              <![CDATA[id feederout]]>
+            </line>
+            <line>
+              <![CDATA[latency -1]]>
+            </line>
+            <line>
+              <![CDATA[login_ip 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[max_outputs ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_force ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ip 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_out ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_port 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ttl ]]>
+            </line>
+            <line>
+              <![CDATA[on 1]]>
+            </line>
+            <line>
+              <![CDATA[password ]]>
+            </line>
+            <line>
+              <![CDATA[time_shift 0]]>
+            </line>
+            <line>
+              <![CDATA[type push]]>
+            </line>
+            <line>
+              <![CDATA[uiport 4444]]>
+            </line>
+            <line>
+              <![CDATA[userName admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass1234]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.BroadcasterPushInStreamCreationTest -->
+    </test> <!-- Push input stream creation test - Smoothing 600 -->
+    <test name="Push from Feeder input stream statistics test - Smoothing 600" duration-ms="35048" started-at="2015-11-05T10:32:27Z" finished-at="2015-11-05T10:33:02Z">
+      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
+        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@7e0ea639]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="35047" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:33:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[loin_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[testduration: 10]]>
+            </line>
+            <line>
+              <![CDATA[Max bitrate is 953280]]>
+            </line>
+            <line>
+              <![CDATA[Min bitrete is 837170]]>
+            </line>
+            <line>
+              <![CDATA[Average bitrate is 906564]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@7e0ea639]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:32:27Z" finished-at="2015-11-05T12:32:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
+    </test> <!-- Push from Feeder input stream statistics test - Smoothing 600 -->
+    <test name="Feeder output stream deletion test moothing 600" duration-ms="33" started-at="2015-11-05T10:33:02Z" finished-at="2015-11-05T10:33:02Z">
+      <class name="com.zixi.testing.FeederOutputDeletioinTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@2d6e8792]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@2d6e8792]" name="broadcasterSingleStreamRemoving" duration-ms="31" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.222]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[/home/pi/live_recording.ts]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4200]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.FeederOutputDeletioinTest -->
+    </test> <!-- Feeder output stream deletion test moothing 600 -->
+    <test name="Remove Push input stream - Smoothing 600" duration-ms="11" started-at="2015-11-05T10:33:02Z" finished-at="2015-11-05T10:33:02Z">
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@4411d970]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@4411d970]" name="broadcasterInputStreamDeletion" duration-ms="10" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPassword: 1234]]>
+            </line>
+            <line>
+              <![CDATA[streamId: feederout]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[<h4>Stream feederout removed.</h4>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterInputStreamDeletion -->
+      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
+    </test> <!-- Remove Push input stream - Smoothing 600 -->
+    <test name="Feeder push to broadcaster test - Smoothing 800" duration-ms="32" started-at="2015-11-05T10:33:02Z" finished-at="2015-11-05T10:33:02Z">
+      <class name="com.zixi.testing.FeederOutputPushToBxTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@566776ad]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@566776ad]" name="feederOutputToBxTest" duration-ms="31" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.222]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[feederoutputname]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[/home/pi/live_recording.ts]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[8000000]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[6000]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[150]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[800]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[2088]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[0.0.0.0]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[name: feederoutputname]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[ostr: feederout]]>
+            </line>
+            <line>
+              <![CDATA[oses: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oetp: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oeky: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[obit: 8000000]]>
+            </line>
+            <line>
+              <![CDATA[olat: 6000]]>
+            </line>
+            <line>
+              <![CDATA[ofc: 0]]>
+            </line>
+            <line>
+              <![CDATA[ocmp: 1]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ofec: 30]]>
+            </line>
+            <line>
+              <![CDATA[ofecl: 150]]>
+            </line>
+            <line>
+              <![CDATA[stop_on_drop: 0]]>
+            </line>
+            <line>
+              <![CDATA[mmt: 0]]>
+            </line>
+            <line>
+              <![CDATA[smoothing: 800]]>
+            </line>
+            <line>
+              <![CDATA[limited: 0]]>
+            </line>
+            <line>
+              <![CDATA[minbps: 0]]>
+            </line>
+            <line>
+              <![CDATA[lim_enc_addr: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[pad_to_cbr: 1]]>
+            </line>
+            <line>
+              <![CDATA[rtmp_feedback0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ohst: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[oprt: 2088]]>
+            </line>
+            <line>
+              <![CDATA[onic: 0.0.0.0]]>
+            </line>
+            <line>
+              <![CDATA[oalt: -- not provided ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- feederOutputToBxTest -->
+      </class> <!-- com.zixi.testing.FeederOutputPushToBxTest -->
+    </test> <!-- Feeder push to broadcaster test - Smoothing 800 -->
+    <test name="Push input stream creation test - Smoothing 800" duration-ms="8" started-at="2015-11-05T10:33:02Z" finished-at="2015-11-05T10:33:02Z">
+      <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@6aaa5eb0]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@6aaa5eb0]" name="broadcasterSingleStreamRemoving" duration-ms="6" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[push]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[analyze ]]>
+            </line>
+            <line>
+              <![CDATA[complete ]]>
+            </line>
+            <line>
+              <![CDATA[force_p2p 0]]>
+            </line>
+            <line>
+              <![CDATA[id feederout]]>
+            </line>
+            <line>
+              <![CDATA[latency -1]]>
+            </line>
+            <line>
+              <![CDATA[login_ip 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[max_outputs ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_force ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ip 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_out ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_port 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ttl ]]>
+            </line>
+            <line>
+              <![CDATA[on 1]]>
+            </line>
+            <line>
+              <![CDATA[password ]]>
+            </line>
+            <line>
+              <![CDATA[time_shift 0]]>
+            </line>
+            <line>
+              <![CDATA[type push]]>
+            </line>
+            <line>
+              <![CDATA[uiport 4444]]>
+            </line>
+            <line>
+              <![CDATA[userName admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass1234]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.BroadcasterPushInStreamCreationTest -->
+    </test> <!-- Push input stream creation test - Smoothing 800 -->
+    <test name="Push from Feeder input stream statistics test - Smoothing 800" duration-ms="35048" started-at="2015-11-05T10:33:02Z" finished-at="2015-11-05T10:33:37Z">
+      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
+        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@668bc3d5]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="35046" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[loin_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[testduration: 10]]>
+            </line>
+            <line>
+              <![CDATA[Max bitrate is 943240]]>
+            </line>
+            <line>
+              <![CDATA[Min bitrete is 846681]]>
+            </line>
+            <line>
+              <![CDATA[Average bitrate is 906562]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@668bc3d5]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:02Z" finished-at="2015-11-05T12:33:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
+    </test> <!-- Push from Feeder input stream statistics test - Smoothing 800 -->
+    <test name="Feeder output stream deletion test moothing 800" duration-ms="32" started-at="2015-11-05T10:33:37Z" finished-at="2015-11-05T10:33:37Z">
+      <class name="com.zixi.testing.FeederOutputDeletioinTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@73f792cf]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:33:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@73f792cf]" name="broadcasterSingleStreamRemoving" duration-ms="29" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:33:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.222]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[/home/pi/live_recording.ts]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4200]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.FeederOutputDeletioinTest -->
+    </test> <!-- Feeder output stream deletion test moothing 800 -->
+    <test name="Remove Push input stream - Smoothing 800" duration-ms="27" started-at="2015-11-05T10:33:37Z" finished-at="2015-11-05T10:33:37Z">
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@3b81a1bc]" name="broadcasterInputStreamDeletion" duration-ms="25" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:33:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPassword: 1234]]>
+            </line>
+            <line>
+              <![CDATA[streamId: feederout]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[<h4>Stream feederout removed.</h4>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterInputStreamDeletion -->
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@3b81a1bc]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:33:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
+    </test> <!-- Remove Push input stream - Smoothing 800 -->
+    <test name="Feeder push to broadcaster test - Smoothing 1000" duration-ms="26" started-at="2015-11-05T10:33:37Z" finished-at="2015-11-05T10:33:37Z">
+      <class name="com.zixi.testing.FeederOutputPushToBxTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@180bc464]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:33:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@180bc464]" name="feederOutputToBxTest" duration-ms="25" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:33:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.222]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[feederoutputname]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[/home/pi/live_recording.ts]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[8000000]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[6000]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[150]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[2088]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[0.0.0.0]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[name: feederoutputname]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[ostr: feederout]]>
+            </line>
+            <line>
+              <![CDATA[oses: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oetp: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oeky: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[obit: 8000000]]>
+            </line>
+            <line>
+              <![CDATA[olat: 6000]]>
+            </line>
+            <line>
+              <![CDATA[ofc: 0]]>
+            </line>
+            <line>
+              <![CDATA[ocmp: 1]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ofec: 30]]>
+            </line>
+            <line>
+              <![CDATA[ofecl: 150]]>
+            </line>
+            <line>
+              <![CDATA[stop_on_drop: 0]]>
+            </line>
+            <line>
+              <![CDATA[mmt: 0]]>
+            </line>
+            <line>
+              <![CDATA[smoothing: 1000]]>
+            </line>
+            <line>
+              <![CDATA[limited: 0]]>
+            </line>
+            <line>
+              <![CDATA[minbps: 0]]>
+            </line>
+            <line>
+              <![CDATA[lim_enc_addr: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[pad_to_cbr: 1]]>
+            </line>
+            <line>
+              <![CDATA[rtmp_feedback0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ohst: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[oprt: 2088]]>
+            </line>
+            <line>
+              <![CDATA[onic: 0.0.0.0]]>
+            </line>
+            <line>
+              <![CDATA[oalt: -- not provided ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- feederOutputToBxTest -->
+      </class> <!-- com.zixi.testing.FeederOutputPushToBxTest -->
+    </test> <!-- Feeder push to broadcaster test - Smoothing 1000 -->
+    <test name="Push input stream creation test - Smoothing 1000" duration-ms="9" started-at="2015-11-05T10:33:37Z" finished-at="2015-11-05T10:33:37Z">
+      <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@5d624da6]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:33:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@5d624da6]" name="broadcasterSingleStreamRemoving" duration-ms="7" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:33:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[push]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[analyze ]]>
+            </line>
+            <line>
+              <![CDATA[complete ]]>
+            </line>
+            <line>
+              <![CDATA[force_p2p 0]]>
+            </line>
+            <line>
+              <![CDATA[id feederout]]>
+            </line>
+            <line>
+              <![CDATA[latency -1]]>
+            </line>
+            <line>
+              <![CDATA[login_ip 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[max_outputs ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_force ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ip 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_out ]]>
+            </line>
+            <line>
+              <![CDATA[mcast_port 0]]>
+            </line>
+            <line>
+              <![CDATA[mcast_ttl ]]>
+            </line>
+            <line>
+              <![CDATA[on 1]]>
+            </line>
+            <line>
+              <![CDATA[password ]]>
+            </line>
+            <line>
+              <![CDATA[time_shift 0]]>
+            </line>
+            <line>
+              <![CDATA[type push]]>
+            </line>
+            <line>
+              <![CDATA[uiport 4444]]>
+            </line>
+            <line>
+              <![CDATA[userName admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass1234]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.BroadcasterPushInStreamCreationTest -->
+    </test> <!-- Push input stream creation test - Smoothing 1000 -->
+    <test name="Push from Feeder input stream statistics test - Smoothing 1000" duration-ms="35041" started-at="2015-11-05T10:33:37Z" finished-at="2015-11-05T10:34:12Z">
+      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@77b52d12]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:33:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@77b52d12]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="35039" started-at="2015-11-05T12:33:37Z" finished-at="2015-11-05T12:34:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[loin_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[testduration: 10]]>
+            </line>
+            <line>
+              <![CDATA[Max bitrate is 948587]]>
+            </line>
+            <line>
+              <![CDATA[Min bitrete is 846760]]>
+            </line>
+            <line>
+              <![CDATA[Average bitrate is 908645]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
+    </test> <!-- Push from Feeder input stream statistics test - Smoothing 1000 -->
+    <test name="Feeder output stream deletion test Smoothing 1000" duration-ms="36" started-at="2015-11-05T10:34:12Z" finished-at="2015-11-05T10:34:12Z">
+      <class name="com.zixi.testing.FeederOutputDeletioinTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@90f6bfd]" name="testInit" is-config="true" duration-ms="1" started-at="2015-11-05T12:34:12Z" finished-at="2015-11-05T12:34:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@90f6bfd]" name="broadcasterSingleStreamRemoving" duration-ms="35" started-at="2015-11-05T12:34:12Z" finished-at="2015-11-05T12:34:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.222]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[/home/pi/live_recording.ts]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.222]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4200]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[mip: /home/pi/live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.91]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+      </class> <!-- com.zixi.testing.FeederOutputDeletioinTest -->
+    </test> <!-- Feeder output stream deletion test Smoothing 1000 -->
+    <test name="Remove Push input stream - Smoothing 1000" duration-ms="11" started-at="2015-11-05T10:34:12Z" finished-at="2015-11-05T10:34:12Z">
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@3a03464]" name="broadcasterInputStreamDeletion" duration-ms="10" started-at="2015-11-05T12:34:12Z" finished-at="2015-11-05T12:34:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10.7.0.91]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[login_ip: 10.7.0.91]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPassword: 1234]]>
+            </line>
+            <line>
+              <![CDATA[streamId: feederout]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[<h4>Stream feederout removed.</h4>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- broadcasterInputStreamDeletion -->
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@3a03464]" name="testInit" is-config="true" duration-ms="0" started-at="2015-11-05T12:34:12Z" finished-at="2015-11-05T12:34:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
+    </test> <!-- Remove Push input stream - Smoothing 1000 -->
+  </suite> <!-- Feeder push to broadcaster suite. Smoothing -->
 </testng-results>

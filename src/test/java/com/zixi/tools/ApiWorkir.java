@@ -19,7 +19,7 @@ public class ApiWorkir {
 	protected final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";
 	private String tester = null;
 	// HTTP GET request
-	public String sendGet(String url, String id, int mode, String[] responseCookieContainer, String HOST, Object caller) {
+	public String sendGet(String url, String id, int mode, String[] responseCookieContainer, String HOST, Object caller, String uiport) {
 
 		StringBuffer response = new StringBuffer();
 		try {
@@ -28,10 +28,10 @@ public class ApiWorkir {
 			// optional, default is GET
 			con.setRequestMethod("GET");
 			// add request header
-			con.setRequestProperty("Host", HOST+":4444");
+			con.setRequestProperty("Host", HOST+":" + uiport);
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.setRequestProperty("Referer",
-					"http://"+ HOST +":4444/login.html");
+					"http://"+ HOST +":"+uiport+"/login.html");
 			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0],"=","%3Dacsrf"), 
 					   StringUtils.substringAfter(responseCookieContainer[0], "%3D")); 
 

@@ -24,6 +24,6 @@ public class BroadcasterInputStatisticSingleStreamTest {
 	@Test
 	public void broadcasterSingleInputStreamstatisticAnilyzer(String userName, String userPass, String Host, String loin_ip, String uiport,String id, String testduration) throws InterruptedException 
 	{
-		Assert.assertNotNull(((BroadcasterInputStatisticSingleStreamDriver) testDriver).testStatistic(userName, userPass, Host, loin_ip, uiport, id, testduration));
+		Assert.assertEquals(((BroadcasterInputStatisticSingleStreamDriver) testDriver).testStatistic(userName, userPass, Host, loin_ip, uiport, id, testduration), "good");
 	}
 }

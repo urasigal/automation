@@ -4,7 +4,7 @@
 	<listeners>
 		<listener class-name="com.zixi.reports.CustomReporter" />
 	</listeners>
-	<test name="Pull input stream creation_1 ">
+	<test name="Pull input stream creation test - default paremeters ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -36,7 +36,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Stream statistics_1">
+	<test name="Stream statistics test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -48,7 +48,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Remove an input stream_1">
+	<test name="Remove an input stream test - default paremeters">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -59,7 +59,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-		<test name="Pull input stream creation_2">
+		<test name="Pull input stream creation test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -91,7 +91,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Stream statistics_2 ">
+	<test name="Stream statistics_2 test - default paremeters ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -103,7 +103,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Remove an input stream_2 ">
+	<test name="Remove an input stream_2 test - default paremeters ">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

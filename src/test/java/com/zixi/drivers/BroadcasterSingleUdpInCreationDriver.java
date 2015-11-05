@@ -2,6 +2,7 @@ package com.zixi.drivers;
 
 import static com.zixi.globals.Macros.*;
 
+import com.zixi.entities.TestParameters;
 import com.zixi.tools.BroadcasterLoggable;
 import com.zixi.tools.ApiWorkir;
 
@@ -43,6 +44,10 @@ public class BroadcasterSingleUdpInCreationDriver extends BroadcasterLoggable im
 			String time_shift,String mcast_ip,String mcast_force, String mcast_port, String nic,String type,String multicast,
 			String enc_key, String kompression,
 			String uiport,String mcast_ttl,String enc_type,String mcast_out,String complete,String max_outputs,String on) {
+		testParameters = new TestParameters("userName:"+userName, "userPass:"+userPass, "loin_ip:"+loin_ip, "ts_port:"+ts_port, "id:"+id,
+				"rtp_type:"+rtp_type, "multi_src:"+multi_src, "max_bitrate:"+max_bitrate, "time_shift:"+time_shift, "mcast_ip:"+mcast_ip, 
+				"mcast_force:"+mcast_force, "mcast_port:"+mcast_port, "nic:"+nic, "type:"+type, "multicast:"+multicast, "enc_key:"+enc_key,"kompression:"+kompression);
+		
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + loin_ip + ":" + uiport + "/login.htm", userName , userPass, loin_ip, uiport);
 		
@@ -66,6 +71,6 @@ public class BroadcasterSingleUdpInCreationDriver extends BroadcasterLoggable im
 				+ kompression + params2 + renc_type + params4
 				+ enc_type + params2 + renc_key + params4 + enc_key
 				+ params2 + rrtp_type + params4 + rtp_type ,
-				id, UDPMODE, responseCookieContainer, loin_ip, this);
+				id, UDPMODE, responseCookieContainer, loin_ip, this, uiport);
 	}
 }

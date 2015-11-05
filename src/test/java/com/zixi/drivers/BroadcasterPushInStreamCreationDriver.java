@@ -5,16 +5,25 @@ import static com.zixi.globals.Macros.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.zixi.entities.StreamEntity;
+import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
 import com.zixi.tools.BroadcasterLoggable;
 
 public class BroadcasterPushInStreamCreationDriver extends BroadcasterLoggable implements TestDriver{
 	
 	private ApiWorkir streamCreator = new ApiWorkir();
+	private TestParameters testParameters;
 	
 	public String testIMPL(String userName,String userPass,String login_ip,String latency,String time_shift,String force_p2p,String mcast_ip,String mcast_force,String mcast_port,String type,
 			String uiport,String analyze,String mcast_ttl,String id,String mcast_out,String complete,String max_outputs,String on, String password)
 	{
+		testParameters = new TestParameters(userName,userPass,login_ip,latency,
+				time_shift,force_p2p,mcast_ip,mcast_force,mcast_port,type,uiport,analyze,mcast_ttl,id,mcast_out,complete,
+				max_outputs,on, password);
+		
+		// Print out to the HTML test report the test's parameters
+		testParameters.printParametersToHTML();
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPass, login_ip, uiport);
 		return streamCreator.sendGet(HTTP + login_ip + params1
 				+ uiport + params7 + rtype
@@ -28,7 +37,7 @@ public class BroadcasterPushInStreamCreationDriver extends BroadcasterLoggable i
 				+ params4 + mcast_force + params2 + rmcast_ip + params4
 				+ mcast_ip + params2 + rmcast_port + params4 + mcast_port
 				+ params2 + rmcast_ttl + params4 + mcast_port + params2
-				+ rtime_shift + params4 + time_shift + params2 + params5, id, PUSHINMODE, responseCookieContainer, login_ip, this); 
+				+ rtime_shift + params4 + time_shift + params2 + params5, id, PUSHINMODE, responseCookieContainer, login_ip, this, uiport); 
 	}
 	
 	final protected static String HTTP = "http://";

@@ -2,6 +2,7 @@ package com.zixi.drivers;
 
 import static com.zixi.globals.Macros.*;
 
+import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
 import com.zixi.tools.BroadcasterLoggable;
 
@@ -39,6 +40,12 @@ public class BroadcasterPushOutStreamCreationDriver extends BroadcasterLoggable
 			String snames, String fec_aware, String fec_overhead,
 			String stream, String port, String uiport, String alias, String id) {
 		
+		testParameters = new TestParameters("userName:"+ userName ,"userPass:"+ userPass ,"login_ip:"+ login_ip
+				,"host:"+ host ,"latency:"+ latency ,"fec_force:"+ fec_force ,"session:"+ session
+				,"fec_adaptive:"+ fec_adaptive ,"nic:"+ nic ,"fec_block:"+ fec_block ,"type:"+ type
+				,"snames:"+ snames ,"fec_aware:"+ fec_aware,"fec_overhead:"+ fec_overhead
+				,"stream:"+ stream,"port:"+ port,"uiport:"+ uiport ,"alias:"+ alias ,"id:"+ id);
+		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPass, login_ip, uiport);
 		return streamCreator.sendGet(HTTP + login_ip + params1 + uiport
 				+ params7 + rtype + params4 + type + params2 + rid + params4
@@ -52,6 +59,6 @@ public class BroadcasterPushOutStreamCreationDriver extends BroadcasterLoggable
 				+ params4 + fec_block + params2 + rfec_adaptive + params4
 				+ fec_adaptive + params2 + rfec_aware + params4 + fec_aware
 				+ params2 + params5, id, PUSHOUTMODE, responseCookieContainer,
-				login_ip, this);
+				login_ip, this, uiport);
 	}
 }

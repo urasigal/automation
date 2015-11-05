@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RTMP streaming suite" verbose="5" data-provider-thread-count="1">
+	<test name="RTMP Pull input stream creation - default paremeters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.157/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterRtmpInputTest"/>
+		</classes>
+	</test>
+	<test name="RTMP Pull input stream statistics test" >
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.157" />
+		<parameter name="loin_ip" value="10.7.0.91" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="test" />
+		<parameter name="testduration" value="5" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>     
+	<test name="Remove RTMP Pull input  stream">
+		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="test" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>                        
+</suite>

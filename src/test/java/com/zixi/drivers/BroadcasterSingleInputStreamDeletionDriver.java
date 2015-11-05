@@ -2,6 +2,7 @@ package com.zixi.drivers;
 
 import org.testng.Assert;
 
+import com.zixi.entities.TestParameters;
 import com.zixi.tools.BroadcasterLoggable;
 import com.zixi.tools.RemoveInputHelper;
 
@@ -18,6 +19,7 @@ public class BroadcasterSingleInputStreamDeletionDriver extends BroadcasterLogga
 	
 	public String removeInput(String login_ip, String userName, String userPassword, String streamId, String uiport) 
 	{
+		testParameters = new TestParameters("login_ip:"+login_ip, "userName:"+userName , "userPassword:"+userPassword, "streamId:"+streamId, "uiport:"+uiport);
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPassword, login_ip, uiport);
 		return removeInputHelper.sendGet(HTTP + login_ip + params1 + uiport +  params7 + "id" + params4 + streamId, login_ip, responseCookieContainer);
 	}

@@ -8,6 +8,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
 
+import com.zixi.entities.TestParameters;
 import com.zixi.tools.BroadcasterLoggable;
 import com.zixi.tools.RemoveInputHelper;
 import com.zixi.tools.ApiWorkir;
@@ -25,14 +26,14 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 	final private static String params5 = "ie_fooler=0.45086039789021015";
 	final private static String params7 = "/zixi/remove_output.json?";
 	private String id1 = null;
-
 	final private String rid = "id";
 	
 	public String testIMPL(String login_ip,String userName,String userPassword,String name,String uiport)
 	{
+		testParameters = new TestParameters("login_ip:"+login_ip,"userName:"+userName ,"userPassword:"+userPassword ,"name:"+name ,"uiport:"+uiport);
 		String response;
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPassword, login_ip, uiport);
-		response = streamDeletor.sendGet(HTTP + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this );
+		response = streamDeletor.sendGet(HTTP + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this, uiport );
 		JSONObject responseJson = new JSONObject(response.toString());
 		JSONArray outputStreamsArray = responseJson.getJSONArray("outputs");
 
@@ -49,7 +50,7 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		    	id1 = outputStream.getString("id");
 		    }
 		  }
-		return streamDeletor.sendGet(HTTP + login_ip + ":" + uiport +  params7 + rid + params4 + id1 , streamName, UDPMODE, responseCookieContainer, login_ip, this);
+		return streamDeletor.sendGet(HTTP + login_ip + ":" + uiport +  params7 + rid + params4 + id1 , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);
 	}
 	
 	public String getId1() {
