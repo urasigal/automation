@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="RTMP streaming suite" verbose="5" data-provider-thread-count="1">
-	<test name="RTMP Pull input stream creation - default paremeters">
+<suite name="Broadcaster: RTMP streaming suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.91" />
@@ -28,7 +28,7 @@
 		    <class name="com.zixi.testing.BroadcasterRtmpInputTest"/>
 		</classes>
 	</test>
-	<test name="RTMP Pull input stream statistics test" >
+	<test name="Broadcaster - RTMP Pull input stream statistics test" >
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -40,7 +40,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
-	<test name="Remove RTMP Pull input  stream">
+	<test name="Broadcaster - Remove RTMP Pull input  stream">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

@@ -12,6 +12,10 @@ public class Macros {
 		public static final int GENERALMODE = 5;
 		public static final int JSONMODE = 8;
 		public static final int PUSHOUTMODE = 4;
+		public static final int RECEIVERMODE = 7;
+		public static final int RECEIVERIDMODE = 9;
+		public static final int RECEIVERDELETIONMODE = 10;
+		public static final int RECEIVERSTATISTICMODE = 11;
 		//////////////////////////////////////////////////
 		
 		public static final String GOOD = "GOOD";

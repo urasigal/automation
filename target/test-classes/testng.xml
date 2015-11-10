@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Pull input suite" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: Pull input suite" verbose="5" data-provider-thread-count="1">
 	<listeners>
 		<listener class-name="com.zixi.reports.CustomReporter" />
 	</listeners>
-	<test name="Pull input stream creation test - default paremeters ">
+	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -36,7 +36,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Stream statistics test - default paremeters">
+	<test name="Broadcaster - Stream statistics test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -48,7 +48,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Remove an input stream test - default paremeters">
+	<test name="Broadcaster - Remove an input stream test - default paremeters">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -59,7 +59,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-		<test name="Pull input stream creation test - default paremeters">
+		<test name="Broadcaster - Pull input stream creation test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -91,7 +91,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Stream statistics_2 test - default paremeters ">
+	<test name="Broadcaster - Stream statistics_2 test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -103,7 +103,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Remove an input stream_2 test - default paremeters ">
+	<test name="Broadcaster - Remove an input stream_2 test - default paremeters ">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -114,7 +114,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-		<test name="Pull input stream creation zero latency">
+		<test name="Broadcaster - Pull input stream creation zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -146,7 +146,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Stream statistics test zero latency">
+	<test name="Broadcaster - Stream statistics test zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -158,7 +158,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Remove an input stream test zero latency">
+	<test name="Broadcaster - Remove an input stream test zero latency">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -169,7 +169,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-		<test name="Pull input stream creation low latency">
+		<test name="Broadcaster - Pull input stream creation low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -201,7 +201,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Stream statistics test low latency">
+	<test name="Broadcaster - Stream statistics test low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -213,7 +213,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Remove an input stream test low latency">
+	<test name="Broadcaster - Remove an input stream test low latency">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -224,7 +224,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-		<test name="Pull input stream creation test force FEC">
+		<test name="Broadcaster - Pull input stream creation test force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -256,7 +256,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Stream statistics test force FEC">
+	<test name="Broadcaster - Stream statistics test force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -268,7 +268,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Remove an input stream test force FEC">
+	<test name="Broadcaster - Remove an input stream test - force FEC">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

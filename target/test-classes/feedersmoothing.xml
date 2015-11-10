@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Feeder push to broadcaster suite. Smoothing" verbose="5" data-provider-thread-count="1">
-<test name="Feeder push to broadcaster test - Smoothing 200">
+<suite name="Feeder: outputs with smoothing: push to broadcaster suite." verbose="5" data-provider-thread-count="1">
+<test name="Feeder - push to broadcaster test - Smoothing 200">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.222" />
+		<parameter name="login_ip" value="10.7.0.174" />
 		<parameter name="name" value="feederoutputname" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -44,7 +44,7 @@
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
-	<test name="Push input stream creation test - Smoothing 200">
+	<test name="Broadcaster - Push input stream creation test - Smoothing 200">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.91" />
@@ -68,7 +68,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Push from Feeder input stream statistics test - Smoothing 200">
+	<test name="Broadcaster - Push from Feeder input stream statistics test - Smoothing 200">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.91" />
@@ -80,13 +80,13 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Feeder output stream deletion test Smoothing 200">
+	<test name="Feeder - output stream deletion test Smoothing 200">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="loin_ip" value="10.7.0.222" />
+		<parameter name="loin_ip" value="10.7.0.174" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -97,7 +97,7 @@
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
-	<test name="Remove Push input stream - Smoothing 200">
+	<test name="Broadcaster - Remove Push input stream - Smoothing 200">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -108,12 +108,12 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Feeder push to broadcaster test - Smoothing 400">
+	<test name="Feeder  - push to broadcaster test - Smoothing 400">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.222" />
+		<parameter name="login_ip" value="10.7.0.174" />
 		<parameter name="name" value="feederoutputname" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -151,7 +151,7 @@
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
-	<test name="Push input stream creation test - Smoothing 400">
+	<test name="Broadcaster - Push input stream creation test - Smoothing 400">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.91" />
@@ -175,7 +175,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Push from Feeder input stream statistics test - Smoothing 400">
+	<test name="Broadcaste - Push from Feeder input stream statistics test - Smoothing 400">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.91" />
@@ -187,13 +187,13 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Feeder output stream deletion test Smoothing 400">
+	<test name="Feeder - output stream deletion test Smoothing 400">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="loin_ip" value="10.7.0.222" />
+		<parameter name="loin_ip" value="10.7.0.174" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -204,7 +204,7 @@
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
-	<test name="Remove Push input stream - Smoothing 400">
+	<test name="Broadcaster - Remove Push input stream - Smoothing 400">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -215,12 +215,12 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Feeder push to broadcaster test - Smoothing 600">
+	<test name="Feeder - push to broadcaster test - Smoothing 600">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.222" />
+		<parameter name="login_ip" value="10.7.0.174" />
 		<parameter name="name" value="feederoutputname" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -258,7 +258,7 @@
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
-	<test name="Push input stream creation test - Smoothing 600">
+	<test name="Broadcaster - Push input stream creation test - Smoothing 600">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.91" />
@@ -282,7 +282,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Push from Feeder input stream statistics test - Smoothing 600">
+	<test name="Broadcaster - Push from Feeder input stream statistics test - Smoothing 600">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.91" />
@@ -294,13 +294,13 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Feeder output stream deletion test Smoothing 600">
+	<test name="Feeder - output stream deletion test Smoothing 600">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="loin_ip" value="10.7.0.222" />
+		<parameter name="loin_ip" value="10.7.0.174" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -311,7 +311,7 @@
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
-	<test name="Remove Push input stream - Smoothing 600">
+	<test name="Broadcaster - Remove Push input stream - Smoothing 600">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -322,12 +322,12 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Feeder push to broadcaster test - Smoothing 800">
+	<test name="Feeder - push to broadcaster test - Smoothing 800">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.222" />
+		<parameter name="login_ip" value="10.7.0.174" />
 		<parameter name="name" value="feederoutputname" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -365,7 +365,7 @@
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
-	<test name="Push input stream creation test - Smoothing 800">
+	<test name="Broadcaster - Push input stream creation test - Smoothing 800">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.91" />
@@ -389,7 +389,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Push from Feeder input stream statistics test - Smoothing 800">
+	<test name="Broadcaster - Push from Feeder input stream statistics test - Smoothing 800">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.91" />
@@ -401,13 +401,13 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Feeder output stream deletion test Smoothing 800">
+	<test name="Feeder - output stream deletion test Smoothing 800">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="loin_ip" value="10.7.0.222" />
+		<parameter name="loin_ip" value="10.7.0.174" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -418,7 +418,7 @@
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
-	<test name="Remove Push input stream - Smoothing 800">
+	<test name="Broadcaster - Remove Push input stream - Smoothing 800">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -429,12 +429,12 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Feeder push to broadcaster test - Smoothing 1000">
+	<test name="Feeder - push to broadcaster test - Smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.222" />
+		<parameter name="login_ip" value="10.7.0.174" />
 		<parameter name="name" value="feederoutputname" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -472,7 +472,7 @@
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
-	<test name="Push input stream creation test - Smoothing 1000">
+	<test name="Broadcaster - Push input stream creation test - Smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.91" />
@@ -496,7 +496,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Push from Feeder input stream statistics test - Smoothing 1000">
+	<test name="Broadcaster - Push from Feeder input stream statistics test - Smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.91" />
@@ -508,13 +508,13 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Feeder output stream deletion test Smoothing 1000">
+	<test name="Feeder - output stream deletion test Smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="loin_ip" value="10.7.0.222" />
+		<parameter name="loin_ip" value="10.7.0.174" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
-		<parameter name="mip" value="/home/pi/live_recording.ts" />
+		<parameter name="mip" value="/zixi9/live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -525,7 +525,7 @@
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
-	<test name="Remove Push input stream - Smoothing 1000">
+	<test name="Broadcaster - Remove Push input stream - Smoothing 1000">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

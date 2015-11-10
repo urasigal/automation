@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="UDP streaming suite" verbose="5" data-provider-thread-count="1">
-	<test name="UDP input stream creation ">
+<suite name="Broadcaster: UDP streaming suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - UDP input stream creation ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.91" />
@@ -30,7 +30,7 @@
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="UDP output stream creation">
+	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.157" />
@@ -60,7 +60,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="UDP input stream statistics test is: test">
+	<test name="Broadcaster - UDP input stream statistics test is: test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -72,7 +72,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
-	<test name="Remove udp input stream">
+	<test name="Broadcaster - Remove udp input stream">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -83,7 +83,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-	<test name="Remove udp output stream">
+	<test name="Broadcaster - Remove udp output stream">
 		<parameter name="login_ip" value="10.7.0.157" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -93,7 +93,7 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="UDP input stream creation test smoothing 1000">
+	<test name="Broadcaster - UDP input stream creation test smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.91" />
@@ -122,7 +122,7 @@
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="UDP output stream creation test smoothing 1000">
+	<test name="Broadcaster - UDP output stream creation test smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.157" />
@@ -152,7 +152,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="UDP input stream statistics test smoothing 1000">
+	<test name="Broadcaster - UDP input stream statistics test smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -164,7 +164,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
-	<test name="Remove udp input stream test smoothing 1000">
+	<test name="Broadcaster - Remove udp input stream test smoothing 1000">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -175,7 +175,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-	<test name="Remove udp output stream test smoothing 1000">
+	<test name="Broadcaster - Remove udp output stream test smoothing 1000">
 		<parameter name="login_ip" value="10.7.0.157" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -185,7 +185,7 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="UDP input stream creation test remux to 8000">
+	<test name="Broadcaster - UDP input stream creation test remux to 8000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.91" />
@@ -214,7 +214,7 @@
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="UDP output stream creation test remux to 8000">
+	<test name="Broadcaster - UDP output stream creation test remux to 8000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.157" />
@@ -244,7 +244,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="UDP input stream statistics test remux to 8000">
+	<test name="Broadcaster - UDP input stream statistics test remux to 8000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -256,7 +256,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
-	<test name="Remove udp input stream test remux to 8000">
+	<test name="Broadcaster - Remove udp input stream test remux to 8000">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -267,7 +267,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-	<test name="Remove udp output stream test remux to 8000">
+	<test name="Broadcaster - Remove udp output stream test remux to 8000">
 		<parameter name="login_ip" value="10.7.0.157" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -277,7 +277,7 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="UDP input stream creation test pro MPEG FEC 2D">
+	<test name="Broadcaster - UDP input stream creation test pro MPEG FEC 2D">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.91" />
@@ -306,7 +306,7 @@
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="UDP output stream creation test pro MPEG FEC 2D">
+	<test name="Broadcaster - UDP output stream creation test pro MPEG FEC 2D">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.157" />
@@ -336,7 +336,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="UDP input stream statistics test pro MPEG FEC 2D">
+	<test name="Broadcaster - UDP input stream statistics test pro MPEG FEC 2D">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -348,7 +348,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
-	<test name="Remove udp input stream test pro MPEG FEC 2D">
+	<test name="Broadcaster - Remove udp input stream test pro MPEG FEC 2D">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -359,7 +359,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-	<test name="Remove udp output stream test pro MPEG FEC 2D">
+	<test name="Broadcaster - Remove udp output stream test pro MPEG FEC 2D">
 		<parameter name="login_ip" value="10.7.0.157" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -369,7 +369,7 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="UDP input stream creation test specific IP">
+	<test name="Broadcaster - UDP input stream creation test specific IP">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.91" />
@@ -398,7 +398,7 @@
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="UDP output stream creation test specific IP">
+	<test name="Broadcaster - UDP output stream creation test specific IP">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="loin_ip" value="10.7.0.157" />
@@ -428,7 +428,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="UDP input stream statistics test specific IP">
+	<test name="Broadcaster - UDP input stream statistics test specific IP">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.157" />
@@ -440,7 +440,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
-	<test name="Remove udp input stream test specific IP">
+	<test name="Broadcaster - Remove udp input stream test specific IP">
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -451,7 +451,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-	<test name="Remove udp output stream test specific IP">
+	<test name="Broadcaster - Remove udp output stream test specific IP">
 		<parameter name="login_ip" value="10.7.0.157" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

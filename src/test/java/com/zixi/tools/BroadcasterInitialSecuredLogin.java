@@ -58,20 +58,20 @@ public class BroadcasterInitialSecuredLogin
 			for (Map.Entry<String, List<String>> entry : map.entrySet()) {
 				if (entry.getKey() != null) {
 					if (entry.getKey().equals("Set-Cookie")) {
-						System.out.println(entry.getValue().get(0));
+						//System.out.println(entry.getValue().get(0));
 						String sessioinIdCookie = StringUtils.substringBefore(entry
 								.getValue().get(1), ";"); 
-						System.out.println(sessioinIdCookie);
+						//System.out.println(sessioinIdCookie);
 						responseCookieContainer[0] = entry.getValue().get(0);
 					    responseCookieContainer[1] = sessioinIdCookie;
 					}
 					
 				}
-				System.out.println("Key : " + entry.getKey() + " ,Value : "
-						+ entry.getValue());	
+//				System.out.println("Key : " + entry.getKey() + " ,Value : "
+//						+ entry.getValue());	
 			}
 			sessionID = con.getHeaderField("Set-Cookie");
-			System.out.println(sessionID);
+			//System.out.println(sessionID);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
