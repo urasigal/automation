@@ -32,10 +32,13 @@ public class RemoveInputHelper
 			con.setRequestProperty("Referer",
 					"http://"+ "" +":4444/login.html");
 			//con.setRequestProperty("Authorization", Authorization);
-			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0],"=","%3Dacsrf"), 
-					   StringUtils.substringAfter(responseCookieContainer[0], "%3D")); 
+			con.setRequestProperty(StringUtils.substringBetween(
+					
+					responseCookieContainer[0], "=", "%"), StringUtils
+						.substringAfter(responseCookieContainer[0], "%3D"));
 
-			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; " + responseCookieContainer[0] );
+				con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "
+						+ responseCookieContainer[0] );
 
 	
 	        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));

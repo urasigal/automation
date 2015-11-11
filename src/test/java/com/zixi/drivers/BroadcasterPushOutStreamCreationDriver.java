@@ -47,6 +47,7 @@ public class BroadcasterPushOutStreamCreationDriver extends BroadcasterLoggable
 				,"stream:"+ stream,"port:"+ port,"uiport:"+ uiport ,"alias:"+ alias ,"id:"+ id);
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPass, login_ip, uiport);
+		
 		return streamCreator.sendGet(HTTP + login_ip + params1 + uiport
 				+ params7 + rtype + params4 + type + params2 + rid + params4
 				+ id + params2 + rname + params4 + snames + params2 + rstream

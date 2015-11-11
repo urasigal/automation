@@ -27,10 +27,14 @@ public class BroadcasterInputStatisticHelper {
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.setRequestProperty("Referer",
 					"http://"+ HOST +":4444/login.html");
-			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0],"=","%3Dacsrf"), 
-					   StringUtils.substringAfter(responseCookieContainer[0], "%3D")); 
+			
+			con.setRequestProperty(StringUtils.substringBetween(
+					
+					responseCookieContainer[0], "=", "%"), StringUtils
+						.substringAfter(responseCookieContainer[0], "%3D"));
 
-			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; " + responseCookieContainer[0] );
+				con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "
+						+ responseCookieContainer[0] );
 	//////////////////////////////////////////////////////////
 			int responseCode = con.getResponseCode();
 			BufferedReader in = new BufferedReader(new InputStreamReader(

@@ -33,17 +33,24 @@ public class ApiWorkir {
 			// optional, default is GET
 			con.setRequestMethod("GET");
 			// add request header
+			con.setRequestProperty("Accept", "application/json, text/javascript, */*; q=0.01");
+			con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
 			con.setRequestProperty("Host", HOST + ":" + uiport);
 			con.setRequestProperty("User-Agent", USER_AGENT);
+			con.setRequestProperty("Accept-Encoding", "gzip, deflate");
 			con.setRequestProperty("Referer", "http://" + HOST + ":" + uiport
-					+ "/login.html");
+					+ "/index.html");
+			
+			
 			con.setRequestProperty(StringUtils.substringBetween(
-					responseCookieContainer[0], "=", "%3Dacsrf"), StringUtils
+					
+				responseCookieContainer[0], "=", "%"), StringUtils
 					.substringAfter(responseCookieContainer[0], "%3D"));
 
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "
-					+ responseCookieContainer[0]);
+					+ responseCookieContainer[0] );
 
+			
 			int responseCode = con.getResponseCode();
 
 			// System.out.println("\nSending 'GET' request to URL : " + url);
