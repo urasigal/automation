@@ -24,6 +24,7 @@
 		<parameter name="complete" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="on" value="1" />
+		<parameter name="testid" value="124" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterRtmpInputTest"/>
 		</classes>
@@ -36,6 +37,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="5" />
+		<parameter name="testid" value="124" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -47,6 +49,7 @@
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
+		<parameter name="testid" value="124" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>

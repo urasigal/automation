@@ -6,9 +6,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
-import com.zixi.drivers.TestDriver;
 
-public class FeederOutputPushToBxTest {
+public class FeederOutputPushToBxTest extends BaseTest{
 	private TestDriver testDriver;
 
 	@BeforeClass
@@ -22,7 +21,7 @@ public class FeederOutputPushToBxTest {
 			"obit", "olat", "ofc", "ocmp", "oold", "onfec", "fec_force",
 			"fec_adaptive", "ofec", "ofecl", "stop_on_drop", "mmt",
 			"smoothing", "limited", "minbps", "lim_enc_addr", "pad_to_cbr",
-			"rtmp_feedback", "ohst", "oprt", "onic", "oalt","bonded","uiport" })
+			"rtmp_feedback", "ohst", "oprt", "onic", "oalt","bonded","uiport" ,"testid"})
 	@Test
 	public void feederOutputToBxTest(String userName,
 			String userPass, String login_ip, String name, String mip,
@@ -33,8 +32,8 @@ public class FeederOutputPushToBxTest {
 			String stop_on_drop, String mmt, String smoothing, String limited,
 			String minbps, String lim_enc_addr, String pad_to_cbr,
 			String rtmp_feedback, String ohst, String oprt, String onic,
-			String oalt,String bonded, String uiport) throws InterruptedException {
-		
+			String oalt,String bonded, String uiport,String testid) throws InterruptedException {
+		this.testid = testid;
 		Assert.assertEquals(((FeederOutputPushToBxDriver) testDriver)
 				.testIMPL(userName, userPass, login_ip, name, mip, port,
 						ip, prog, chan, type, ostr, oses, oetp, oeky, obit,
@@ -43,4 +42,5 @@ public class FeederOutputPushToBxTest {
 						minbps, lim_enc_addr, pad_to_cbr, rtmp_feedback, ohst,
 						oprt, onic, oalt,bonded, uiport),"Broadcaster output added.");
 	}
+	
 }

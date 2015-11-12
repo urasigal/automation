@@ -6,9 +6,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
-import com.zixi.drivers.TestDriver;
 
-public class ReceiverPullInputStreamDeletionTest {
+public class ReceiverPullInputStreamDeletionTest extends BaseTest{
 
 	private TestDriver testDriver;
 
@@ -18,11 +17,12 @@ public class ReceiverPullInputStreamDeletionTest {
 		testDriver = new ReceiverPullInputStreamDeletionDriver();
 	}
 
-	@Parameters({ "userName", "userPassword", "login_ip", "uiport", "id" })
+	@Parameters({ "userName", "userPassword", "login_ip", "uiport", "id" ,"testid"})
 	@Test
 	public void feederOutputToBxTest(String userName, String userPassword,
-			String login_ip, String uiport, String id)
+			String login_ip, String uiport, String id,String testid)
 			throws InterruptedException {
+		this.testid = testid;
 		String streamForDeletion = ((ReceiverPullInputStreamDeletionDriver) testDriver)
 				.testIMPL(userName, userPassword, login_ip, uiport, id);
 		Assert.assertEquals(streamForDeletion,
