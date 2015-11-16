@@ -54,7 +54,7 @@ public class RemoveInputHelper
 	        	json = new JSONObject(response.substring(0,response.length()));
 	        	
 	        	 ipIs = json.getString("msg");
-	     		 Reporter.log("<h4>" + ipIs + "</h4>");
+	     		 Reporter.log(ipIs);
 	        }    
     	}
         catch (Exception e)

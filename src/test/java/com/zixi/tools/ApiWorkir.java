@@ -33,24 +33,23 @@ public class ApiWorkir {
 			// optional, default is GET
 			con.setRequestMethod("GET");
 			// add request header
-			con.setRequestProperty("Accept", "application/json, text/javascript, */*; q=0.01");
+			con.setRequestProperty("Accept",
+					"application/json, text/javascript, */*; q=0.01");
 			con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
 			con.setRequestProperty("Host", HOST + ":" + uiport);
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.setRequestProperty("Accept-Encoding", "gzip, deflate");
 			con.setRequestProperty("Referer", "http://" + HOST + ":" + uiport
 					+ "/index.html");
-			
-			
+
 			con.setRequestProperty(StringUtils.substringBetween(
-					
-				responseCookieContainer[0], "=", "%"), StringUtils
-					.substringAfter(responseCookieContainer[0], "%3D"));
+
+			responseCookieContainer[0], "=", "%"), StringUtils.substringAfter(
+					responseCookieContainer[0], "%3D"));
 
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "
-					+ responseCookieContainer[0] );
+					+ responseCookieContainer[0]);
 
-			
 			int responseCode = con.getResponseCode();
 
 			// System.out.println("\nSending 'GET' request to URL : " + url);
@@ -82,7 +81,7 @@ public class ApiWorkir {
 				System.out.println("no such a stream to delete");
 				return "no such a stream to delete";
 			}
- 
+
 			if (mode == PUSHMODE) {
 				inputLine = response.toString();
 				int indx = inputLine.indexOf("(");
@@ -128,16 +127,14 @@ public class ApiWorkir {
 				json = new JSONObject(inputLine);
 				return json.get("message").toString();
 			}
-			
-			
-			// under construction 
+
+			// under construction
 			if (mode == RECEIVERSTATISTICMODE) {
 				inputLine = response.toString();
 				json = new JSONObject(inputLine);
 				return json.getJSONObject("data").get("bitrate").toString();
 			}
-			
-			
+
 			if (mode == UDPOUTMODE) {
 				inputLine = response.toString();
 				json = new JSONObject(inputLine);

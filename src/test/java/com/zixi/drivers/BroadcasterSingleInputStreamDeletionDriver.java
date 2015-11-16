@@ -14,7 +14,6 @@ public class BroadcasterSingleInputStreamDeletionDriver extends BroadcasterLogga
 	final private static String params1 = ":";
 	final private static String params2 = "&";
 	final private static String params4 = "=";
-	final private static String params5 = "ie_fooler=0.45086039789021015";
 	final private static String params7 = "/zixi/remove_stream.json?";
 	
 	public String removeInput(String login_ip, String userName, String userPassword, String streamId, String uiport) 

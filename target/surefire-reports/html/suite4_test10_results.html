@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Broadcaster - Pull input stream creation low latency</title>
+  <title>Test Results Report - Broadcaster - Pull input stream creation test force FEC</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Broadcaster - Pull input stream creation low latency</h1>
+<h1>Broadcaster - Pull input stream creation test force FEC</h1>
 <p>
-  Test duration: 0.011s
+  Test duration: 0.044s
 </p>
 
 
@@ -30,11 +30,11 @@
                   broadcasterPullInCreation
       </td>
   <td class="duration">
-    0.011s
+    0.008s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.157", "10.7.0.91", "test2", "test2", "4444", "", "300", "300", "30", "0", "0", "", "-1", "pull", "", "", "", "", "1", "", "1", "load_live_inputs", "", "", "stream2.properties"</span><br />
+          <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.157", "10.7.0.91", "test2", "test2", "4444", "", "600", "300", "30", "0", "0", "", "-1", "pull", "", "", "", "", "1", "", "1", "load_live_inputs", "1", "", "stream2.properties", "287"</span><br />
     
             <div class="testOutput">
                         Test parameteres: <br />
@@ -46,7 +46,7 @@
                                 source: test2<br />
                                 uiport: 4444<br />
                                 pull_port: -- not provided <br />
-                                latency: 300<br />
+                                latency: 600<br />
                                 fec_latency: 300<br />
                                 fec_overhead: 30<br />
                                 mcast_force: 0<br />
@@ -62,7 +62,7 @@
                                 mcast_ttl: -- not provided <br />
                                 on: 1<br />
                                 func: load_live_inputs<br />
-                                fec_force: -- not provided <br />
+                                fec_force: 1<br />
                                 mcast_out: -- not provided <br />
                                 propertiesFile: stream2.properties<br />
                   </div>
