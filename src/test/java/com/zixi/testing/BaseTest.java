@@ -8,9 +8,11 @@ import org.testng.annotations.AfterMethod;
 
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
+import com.zixi.drivers.TestDriver;
 import com.zixi.tools.TestlinkIntegration;
 
 public class BaseTest {
+	protected TestDriver testDriver;
 	String testid;
 	@AfterMethod
     public void afterTest(Method test, ITestResult result)

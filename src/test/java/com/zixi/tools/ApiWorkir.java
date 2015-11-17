@@ -103,16 +103,12 @@ public class ApiWorkir {
 				inputLine = (inputLine.substring(indx + 1,
 						inputLine.indexOf(");")));
 				json = new JSONObject(inputLine);
-				System.out.println("Debug printing   -- "
-						+ json.get("msg").toString());
 				return json.get("msg").toString();
 			}
 
 			if (mode == UDPMODE) {
 				inputLine = response.toString();
 				json = new JSONObject(inputLine);
-				System.out.println("Debug printing   -- "
-						+ json.get("msg").toString());
 				return json.get("msg").toString();
 			}
 
@@ -139,7 +135,6 @@ public class ApiWorkir {
 				inputLine = response.toString();
 				json = new JSONObject(inputLine);
 				tester = json.getString("msg");
-				System.out.println("Debug printing   -- " + tester);
 				if (tester.endsWith("Output " + id + " added.")) {
 					return tester = "good";
 				}

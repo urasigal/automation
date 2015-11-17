@@ -7,7 +7,6 @@ import com.zixi.tools.BroadcasterLoggable;
 
 public class BroadcasterRtmpPushInputStreamDriver extends BroadcasterLoggable
 		implements TestDriver {
-	private ApiWorkir streamDeletor = new ApiWorkir();
 
 	final private static String HTTP = "http://";
 	final private static String params1 = ":";
@@ -25,7 +24,7 @@ public class BroadcasterRtmpPushInputStreamDriver extends BroadcasterLoggable
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
 				userPass, login_ip, uiport);
 
-		return streamDeletor.sendGet(HTTP + login_ip + params1 + uiport + params7
+		return apiworker.sendGet(HTTP + login_ip + params1 + uiport + params7
 				+ rtype + "=" + type + "&" + rid + "=" + id + "&" + rmatrix
 				+ "=" + matrix + "&" + rmax_outputs + "=" + max_outputs
 				+ "&" + rmcast_out + "=" + mcast_out + "&" + rtime_shift

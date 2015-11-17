@@ -2,20 +2,36 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]">
   <parameter name="userPassword" value="1234"/>
-  <parameter name="streamId" value="test"/>
-  <parameter name="uiport" value="4444"/>
-  <parameter name="testid" value="502"/>
+  <parameter name="bandwidth" value="860"/>
+  <parameter name="latency" value="1000"/>
+  <parameter name="disconnect_low_br" value="0"/>
+  <parameter name="dec_key" value=""/>
+  <parameter name="sendfi" value=""/>
+  <parameter name="matrix" value="1"/>
+  <parameter name="type" value="rtmp_push"/>
   <parameter name="userName" value="admin"/>
   <parameter name="login_ip" value="10.7.0.91"/>
+  <parameter name="url" value="rtmp://10.7.0.91/live"/>
+  <parameter name="rtmp_stream" value="trmppush"/>
+  <parameter name="password" value=""/>
+  <parameter name="reconnect" value="5"/>
+  <parameter name="stream" value="test"/>
+  <parameter name="uiport" value="4444"/>
+  <parameter name="name" value="rtmpushout"/>
+  <parameter name="url_alt" value=""/>
+  <parameter name="testid" value="502"/>
+  <parameter name="dec_type" value=""/>
+  <parameter name="static_latency" value="0"/>
+  <parameter name="user" value=""/>
   <test name="Default test(failed)">
     <classes>
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+      <class name="com.zixi.testing.BroadcasterRtmpPushOutputCreationTest">
         <methods>
           <include name="testInit"/>
-          <include name="broadcasterInputStreamDeletion" invocation-numbers="0"/>
+          <include name="broadcasterSingleStreamRemoving" invocation-numbers="0"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
+      </class> <!-- com.zixi.testing.BroadcasterRtmpPushOutputCreationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
