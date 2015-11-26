@@ -24,16 +24,16 @@ public class FeederOutputDeletioinTest extends BaseTest{
 		testDriver = new FeederOutputDeletionDriver();
 	}
 
-	@Parameters({ "userName", "userPass", "loin_ip", "uiport", "id", "mip",
+	@Parameters({ "userName", "userPass", "login_ip", "uiport", "id", "mip",
 			"port", "ip", "prog", "chan", "type","host" ,"testid"})
 	@Test
 	public void broadcasterSingleStreamRemoving(String userName,
-			String userPass, String loin_ip, String uiport, String id,
+			String userPass, String login_ip, String uiport, String id,
 			String mip, String port, String ip, String prog, String chan,
 			String type, String host,String testid) throws InterruptedException {
 		this.testid = testid;
 		Assert.assertEquals(((FeederOutputDeletionDriver) testDriver).testIMPL(
-				userName, userPass, loin_ip, uiport, id, mip, port, ip, prog,
+				userName, userPass, login_ip, uiport, id, mip, port, ip, prog,
 				chan, type, host), "Output deleted.");
 	}
 	

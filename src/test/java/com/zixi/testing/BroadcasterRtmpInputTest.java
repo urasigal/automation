@@ -20,7 +20,6 @@ import com.zixi.tools.TestlinkIntegration;
 // The broadcaster RTMP Pull input connection is defined as an ability of a broadcaster server to establish a RTMP connection with 
 // an another broadcaster when the RTMP connection initiator will be the receiving broadcaster server.
 public class BroadcasterRtmpInputTest extends BaseTest {
-	private TestDriver testDriver;
 
 	@BeforeClass
 	public void testInit() {

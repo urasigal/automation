@@ -16,6 +16,7 @@ public class Macros {
 		public static final int RECEIVERIDMODE = 9;
 		public static final int RECEIVERDELETIONMODE = 10;
 		public static final int RECEIVERSTATISTICMODE = 11;
+		public static final int RECEIVER_UDP_OUT_MODE = 12;
 		//////////////////////////////////////////////////
 		
 		public static final String GOOD = "GOOD";

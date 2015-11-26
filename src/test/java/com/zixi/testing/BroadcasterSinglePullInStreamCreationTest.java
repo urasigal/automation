@@ -34,7 +34,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 
 	}
 
-	@Parameters({ "userName", "userPass", "Host", "loin_ip", "id", "source",
+	@Parameters({ "userName", "userPass", "Host", "login_ip", "id", "source",
 			"uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
 			"mcast_force", "time_shift", "nic", "max_outputs", "type",
 			"password", "mcast_port", "complete", "mcast_ip", "fec_adaptive",
@@ -42,7 +42,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 			"propertiesFile" ,"testid"})
 	@Test
 	public void broadcasterPullInCreation(String userName, String userPass,
-			String Host, String loin_ip, String id, String source,
+			String Host, String login_ip, String id, String source,
 			String uiport, String pull_port, String latency,
 			String fec_latency, String fec_overhead, String mcast_force,
 			String time_shift, String nic, String max_outputs, String type,
@@ -53,7 +53,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 		this.testid = testid;
 		Assert.assertEquals(
 				((BroadcasterSinglePullInStreamCreationDriver) testDriver)
-						.testIMPL(userName, userPass, Host, loin_ip, id,
+						.testIMPL(userName, userPass, Host, login_ip, id,
 								source, uiport, pull_port, latency,
 								fec_latency, fec_overhead, mcast_force,
 								time_shift, nic, max_outputs, type, password,

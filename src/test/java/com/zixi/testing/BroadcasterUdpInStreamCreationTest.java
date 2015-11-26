@@ -24,14 +24,14 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 		testDriver = new BroadcasterSingleUdpInCreationDriver();
 	}
 
-	@Parameters({ "userName", "userPass", "loin_ip", "ts_port", "id",
+	@Parameters({ "userName", "userPass", "login_ip", "ts_port", "id",
 			"rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
 			"mcast_force", "mcast_port", "nic", "type", "multicast", "enc_key",
 			"kompression", "uiport", "mcast_ttl", "enc_type", "mcast_out",
 			"complete", "max_outputs", "on" ,"testid"})
 	@Test
 	public void broadcasterUdpInCreation(String userName, String userPass,
-			String loin_ip, String ts_port, String id, String rtp_type,
+			String login_ip, String ts_port, String id, String rtp_type,
 			String multi_src, String max_bitrate, String time_shift,
 			String mcast_ip, String mcast_force, String mcast_port, String nic,
 			String type, String multicast, String enc_key, String kompression,
@@ -40,7 +40,7 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 			throws InterruptedException {
 		this.testid = testid;
 		Assert.assertEquals(((BroadcasterSingleUdpInCreationDriver) testDriver)
-				.testIMPL(userName, userPass, loin_ip, ts_port, id, rtp_type,
+				.testIMPL(userName, userPass, login_ip, ts_port, id, rtp_type,
 						multi_src, max_bitrate, time_shift, mcast_ip,
 						mcast_force, mcast_port, nic, type, multicast, enc_key,
 						kompression, uiport, mcast_ttl, enc_type, mcast_out,

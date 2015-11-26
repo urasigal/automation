@@ -96,6 +96,13 @@ public class ApiWorkir {
 				json = new JSONObject(inputLine);
 				return json.get("msg").toString();
 			}
+			
+			if (mode == RECEIVER_UDP_OUT_MODE) {
+				inputLine = response.toString();
+				json = new JSONObject(inputLine);
+				return json.get("message").toString();
+			}
+			
 
 			if (mode == PULLMODE) {
 				inputLine = response.toString();

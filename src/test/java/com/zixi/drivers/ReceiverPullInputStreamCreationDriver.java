@@ -52,7 +52,7 @@ public class ReceiverPullInputStreamCreationDriver extends BroadcasterLoggable
 				userPass, login_ip, uiport);
 
 		return streamCreator.sendGet(HTTP + login_ip + params1 + uiport
-				+ params7 + dec_key + "=" + rdec_key + "&" + rdec_type +"=" + dec_type +"&"+ rfec_adaptive + "="+ fec_adaptive + "&" + rfec_aware +"="+ fec_aware +"&"+
+				+ params7 + rdec_key + "=" + dec_key + "&" + rdec_type +"=" + dec_type +"&"+ rfec_adaptive + "="+ fec_adaptive + "&" + rfec_aware +"="+ fec_aware +"&"+
 				rfec_force +"="+ fec_force +"&"+ rfec_latency +"="+ fec_latency +"&"+ rfec_overhead +"="+ fec_overhead +"&"+ rhost +"="+ host +"&"+ 
 				rlatency +"="+ latency +"&"+ rmin_bit +"="+  min_bit +"&"+ rname +"="+ name +"&"+ rnic +"="+ nic +"&"+ rport +"="+ port +"&"+ rsession +"="+ session +
 				"&"+ rstream +"="+ stream , "", RECEIVERMODE,

@@ -14,7 +14,7 @@ import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
 
 public class TestlinkIntegration {
 	
-	private final static String url = "http://10.7.0.220/lib/api/xmlrpc/v1/xmlrpc.php";
+	private final static String url = "http://10.7.0.219/lib/api/xmlrpc/v1/xmlrpc.php";
     private final static String devKey = "c27ca0ef839a7086f4f16e2800e497f4";
  
     public TestlinkIntegration() {

@@ -20,8 +20,6 @@ import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
 
-	private TestDriver testDriver;
-
 	@BeforeClass
 	public void testInit() {
 
@@ -29,16 +27,16 @@ public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
 		testDriver = new BroadcasterInputStatisticSingleStreamDriver();
 	}
 
-	@Parameters({ "userName", "userPass", "Host", "loin_ip", "uiport", "id",
+	@Parameters({ "userName", "userPass", "Host", "login_ip", "uiport", "id",
 			"testduration" ,"testid"})
 	@Test
 	public void broadcasterSingleInputStreamstatisticAnilyzer(String userName,
-			String userPass, String Host, String loin_ip, String uiport,
+			String userPass, String Host, String login_ip, String uiport,
 			String id, String testduration,String testid) throws InterruptedException {
 		this.testid = testid;
 		Assert.assertEquals(
 				((BroadcasterInputStatisticSingleStreamDriver) testDriver)
-						.testStatistic(userName, userPass, Host, loin_ip,
+						.testStatistic(userName, userPass, Host, login_ip,
 								uiport, id, testduration), "good");
 	}
 
