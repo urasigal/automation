@@ -7,6 +7,8 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+import org.testng.Reporter;
+
 import com.zixi.tools.BroadcasterLoggable;
 
 public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggable
@@ -19,10 +21,12 @@ public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggable
 	private Socket kkSocket;
 	private PrintWriter out;
 	private BufferedReader in;
+	private int loopCnt;
 	public String testStatistic() 
 	{
 		// TODO Auto-generated method stub
 		long sum = 0;
+		loopCnt = 0;
 		try {
 
 			kkSocket = new Socket(hostName, portNumber);
@@ -35,7 +39,7 @@ public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggable
 			System.out.println("Expected is connected " + fromServer);
 			if (fromServer.equals("connected"))
 			{
-				for (int i = 0; i < attempts; i ++ )
+				for (loopCnt = 0; loopCnt < attempts; loopCnt ++ )
 				{
 					out.println(fromUser);
 					fromServer = in.readLine();
@@ -63,6 +67,7 @@ public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggable
 		}
 		finally{
 			try {
+				Reporter.log("FFMPEG success measurement relation: " + sum+ " / " + loopCnt);
 			if (kkSocket != null)
 				kkSocket.close();
 			if (out != null)
@@ -74,7 +79,7 @@ public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggable
 			}
 		}
 		
-		if ((sum / attempts) >= 0.98)
+		if ((sum / attempts) >= 0.9)
 		{
 			return "good";
 		}

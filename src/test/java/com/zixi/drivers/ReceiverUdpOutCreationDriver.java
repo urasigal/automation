@@ -17,7 +17,14 @@ public class ReceiverUdpOutCreationDriver extends BroadcasterLoggable implements
 	public String testIMPL(String userName, String userPass, String login_ip,
 			String uiport, String name, String target, String type, String nic,
 			String ttl, String smoothing, String rtp, String fec, String rows,
-			String cols, String remux_bitrate,String input_stream) {
+			String cols, String remux_bitrate,String input_stream) 
+	{
+		
+		testParameters = new TestParameters("userName:"+userName, "userPass:"+userPass, "login_ip:"+login_ip,
+				"uiport:"+uiport, "name:"+name, "target:"+target, "type:"+type, "nic:"+nic,
+				"ttl:"+ttl, "smoothing:"+smoothing, "rtp:"+rtp, "fec:"+fec, "rows:"+rows,
+				"cols:"+cols, "remux_bitrate:"+remux_bitrate,"input_stream:"+input_stream);
+		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
 				userPass, login_ip, uiport);
