@@ -11,10 +11,10 @@ import java.util.Properties;
 import com.zixi.entities.StreamEntity;
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
 public class BroadcasterSinglePullInStreamCreationDriver extends
-		BroadcasterLoggable implements TestDriver {
+		BroadcasterLoggableApiWorker implements TestDriver {
 	
 
 	private StreamEntity streamEntity;

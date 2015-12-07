@@ -5,10 +5,10 @@ import org.json.JSONObject;
 
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
 import static com.zixi.globals.Macros.*;
-public class ReceiverOutputStreamDeletionDriver extends BroadcasterLoggable
+public class ReceiverOutputStreamDeletionDriver extends BroadcasterLoggableApiWorker
 		implements TestDriver {
 
 	private ApiWorkir streamDeletor = new ApiWorkir();

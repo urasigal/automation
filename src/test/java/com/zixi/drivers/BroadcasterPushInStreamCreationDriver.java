@@ -8,9 +8,9 @@ import org.json.JSONObject;
 import com.zixi.entities.StreamEntity;
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class BroadcasterPushInStreamCreationDriver extends BroadcasterLoggable implements TestDriver{
+public class BroadcasterPushInStreamCreationDriver extends BroadcasterLoggableApiWorker implements TestDriver{
 	
 	private ApiWorkir streamCreator = new ApiWorkir();
 	private TestParameters testParameters;

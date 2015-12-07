@@ -5,6 +5,8 @@ import java.net.MalformedURLException;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
@@ -14,6 +16,17 @@ import com.zixi.tools.TestlinkIntegration;
 public class BaseTest {
 	protected TestDriver testDriver;
 	String testid;
+	
+	
+	@Parameters({"testid"})
+	@BeforeMethod
+	public void beforeTes(String testid) throws MalformedURLException
+	{
+		TestlinkIntegration tl = new TestlinkIntegration();
+		 tl.setResult(testid,
+                 ExecutionStatus.BLOCKED);
+	}
+	
 	@AfterMethod
     public void afterTest(Method test, ITestResult result)
             throws MalformedURLException {

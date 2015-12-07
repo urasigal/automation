@@ -3,10 +3,10 @@ package com.zixi.drivers;
 import static com.zixi.globals.Macros.PUSHINMODE;
 
 import com.zixi.entities.TestParameters;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
 public class BroadcasterRtmpPushOutputCreationDriver extends
-		BroadcasterLoggable implements TestDriver {
+		BroadcasterLoggableApiWorker implements TestDriver {
 
 	final private static String HTTP = "http://";
 	final private static String params1 = ":";

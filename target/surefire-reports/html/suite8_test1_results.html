@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Broadcaster - RTMP Push output stream creation - default parameters</title>
+  <title>Test Results Report - Broadcaster - UDP input stream creation </title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Broadcaster - RTMP Push output stream creation - default parameters</h1>
+<h1>Broadcaster - UDP input stream creation </h1>
 <p>
-  Test duration: 0.044s
+  Test duration: 0.080s
 </p>
 
 
@@ -22,42 +22,39 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.zixi.testing.BroadcasterRtmpPushOutputCreationTest</td>
+        <td colspan="3" class="group">com.zixi.testing.BroadcasterUdpInStreamCreationTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  broadcasterSingleStreamRemoving
+                  broadcasterUdpInCreation
       </td>
   <td class="duration">
-    0.006s
+    0.012s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"10.7.0.157", "admin", "1234", "4444", "RTMP", "rtmpushout", "test", "1", "rtmp://10.7.0.91/live", "", "rtmp_out", "", "860", "1000", "5", "", "0", "0", "", "", "", "504"</span><br />
+          <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.91", "14000", "test", "0", "", "160000000", "0", "", "", "", "0.0.0.0", "local-ts", "", "", "1", "4444", "", "", "0", "", "-1", "1", "294"</span><br />
     
             <div class="testOutput">
                         Test parameteres: <br />
-                                login_ip: 10.7.0.157<br />
                                 userName: admin<br />
-                                userPassword: 1234<br />
-                                uiport: 4444<br />
-                                type: RTMP<br />
-                                stream: test<br />
-                                matrix: 1<br />
-                                url: -- not provided <br />
-                                url_alt: -- not provided <br />
-                                rtmp_stream: rtmp_out<br />
-                                user: -- not provided <br />
-                                bandwidth: 860<br />
-                                latency: 1000<br />
-                                reconnect: 5<br />
-                                sendfi: -- not provided <br />
-                                disconnect_low_br: 0<br />
-                                static_latency: 0<br />
-                                dec_type: -- not provided <br />
-                                dec_key: -- not provided <br />
-                                password: -- not provided <br />
+                                userPass: 1234<br />
+                                loin_ip: 10.7.0.91<br />
+                                ts_port: 14000<br />
+                                id: test<br />
+                                rtp_type: 0<br />
+                                multi_src: -- not provided <br />
+                                max_bitrate: 160000000<br />
+                                time_shift: 0<br />
+                                mcast_ip: -- not provided <br />
+                                mcast_force: -- not provided <br />
+                                mcast_port: -- not provided <br />
+                                nic: 0.0.0.0<br />
+                                type: local-ts<br />
+                                multicast: -- not provided <br />
+                                enc_key: -- not provided <br />
+                                kompression: 1<br />
                   </div>
     
 

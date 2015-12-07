@@ -9,16 +9,16 @@ import java.net.UnknownHostException;
 
 import org.testng.Reporter;
 
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggable
+public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggableApiWorker
 		implements TestDriver {
 
 	private static final String hostName   = "10.7.0.150";
 	private static final int    portNumber = 4445;
 	private static final int    attempts   = 20;
 	private static final String fromUser = "get";
-	private Socket kkSocket;
+	private Socket clientSocket;
 	private PrintWriter out;
 	private BufferedReader in;
 	private int loopCnt;
@@ -29,11 +29,12 @@ public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggable
 		loopCnt = 0;
 		try {
 
-			kkSocket = new Socket(hostName, portNumber);
+			clientSocket = new Socket(hostName, portNumber);
+			clientSocket.setSoTimeout(120000);
 			 
-             out = new PrintWriter(kkSocket.getOutputStream(), true);
+             out = new PrintWriter(clientSocket.getOutputStream(), true);
 		 
-            in = new BufferedReader(new InputStreamReader(kkSocket.getInputStream()));
+            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
 			String fromServer = in.readLine();
 			System.out.println("Expected is connected " + fromServer);
@@ -68,8 +69,8 @@ public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggable
 		finally{
 			try {
 				Reporter.log("FFMPEG success measurement relation: " + sum+ " / " + loopCnt);
-			if (kkSocket != null)
-				kkSocket.close();
+			if (clientSocket != null)
+				clientSocket.close();
 			if (out != null)
 				out.close();
 			if (in!=null)

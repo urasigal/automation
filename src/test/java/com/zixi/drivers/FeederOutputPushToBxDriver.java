@@ -4,9 +4,9 @@ import static com.zixi.globals.Macros.PUSHINMODE;
 
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class FeederOutputPushToBxDriver extends BroadcasterLoggable implements
+public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker implements
 		TestDriver {
 
 	final private static String HTTP = "http://";

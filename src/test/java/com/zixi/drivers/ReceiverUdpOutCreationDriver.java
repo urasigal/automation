@@ -5,9 +5,9 @@ import static com.zixi.globals.Macros.RECEIVERIDMODE;
 
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class ReceiverUdpOutCreationDriver extends BroadcasterLoggable implements
+public class ReceiverUdpOutCreationDriver extends BroadcasterLoggableApiWorker implements
 		TestDriver {
 
 	private ApiWorkir streamCreator = new ApiWorkir();

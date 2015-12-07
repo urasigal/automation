@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import org.testng.Reporter;
 
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 import com.zixi.tools.StreamStatisticAnalyzer;
 
-public class ReceiverInputStatisticDriver extends BroadcasterLoggable implements
+public class ReceiverInputStatisticDriver extends BroadcasterLoggableApiWorker implements
 		TestDriver {
 
 	protected ApiWorkir streamManipulator = new ApiWorkir();

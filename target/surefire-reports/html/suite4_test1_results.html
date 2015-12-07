@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Broadcaster - Pull input stream creation test - default paremeters </title>
+  <title>Test Results Report - Feeder - push to broadcaster test - Smoothing 200</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Broadcaster - Pull input stream creation test - default paremeters </h1>
+<h1>Feeder - push to broadcaster test - Smoothing 200</h1>
 <p>
-  Test duration: 0.148s
+  Test duration: 0.069s
 </p>
 
 
@@ -22,49 +22,58 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.zixi.testing.BroadcasterSinglePullInStreamCreationTest</td>
+        <td colspan="3" class="group">com.zixi.testing.FeederOutputPushToBxTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  broadcasterPullInCreation
+                  feederOutputToBxTest
       </td>
   <td class="duration">
-    0.033s
+    0.007s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.157", "10.7.0.91", "test", "test", "4444", "", "6000", "300", "30", "0", "0", "", "-1", "pull", "", "", "", "", "1", "", "1", "load_live_inputs", "", "", "stream.properties", "124"</span><br />
+          <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.174", "feederoutputname", "live_recording.ts", "0", "file", "1", "-1", "2", "feederout", "", "", "", "8000000", "6000", "0", "1", "0", "1", "0", "1", "30", "150", "0", "0", "200", "0", "0", "", "1", "0", "10.7.0.91", "2088", "0.0.0.0", "", "0", "4200", "436"</span><br />
     
             <div class="testOutput">
                         Test parameteres: <br />
                                 userName: admin<br />
                                 userPass: 1234<br />
-                                Host: 10.7.0.157<br />
-                                loin_ip: 10.7.0.91<br />
-                                id: test<br />
-                                source: test<br />
-                                uiport: 4444<br />
-                                pull_port: -- not provided <br />
-                                latency: 6000<br />
-                                fec_latency: 300<br />
-                                fec_overhead: 30<br />
-                                mcast_force: 0<br />
-                                time_shift: 0<br />
-                                nic: -- not provided <br />
-                                max_outputs: -1<br />
-                                type: pull<br />
-                                password: -- not provided <br />
-                                mcast_port: -- not provided <br />
-                                complete: -- not provided <br />
-                                mcast_ip: -- not provided <br />
-                                fec_adaptive: 1<br />
-                                mcast_ttl: -- not provided <br />
-                                on: 1<br />
-                                func: load_live_inputs<br />
-                                fec_force: -- not provided <br />
-                                mcast_out: -- not provided <br />
-                                propertiesFile: stream.properties<br />
+                                login_ip: 10.7.0.174<br />
+                                name: feederoutputname<br />
+                                mip: live_recording.ts<br />
+                                port: 0<br />
+                                ip: file<br />
+                                prog: 1<br />
+                                chan: -1<br />
+                                type: 2<br />
+                                ostr: feederout<br />
+                                oses: -- not provided <br />
+                                oetp: -- not provided <br />
+                                oeky: -- not provided <br />
+                                obit: 8000000<br />
+                                olat: 6000<br />
+                                ofc: 0<br />
+                                ocmp: 1<br />
+                                0: -- not provided <br />
+                                1: -- not provided <br />
+                                0: -- not provided <br />
+                                1: -- not provided <br />
+                                ofec: 30<br />
+                                ofecl: 150<br />
+                                stop_on_drop: 0<br />
+                                mmt: 0<br />
+                                smoothing: 200<br />
+                                limited: 0<br />
+                                minbps: 0<br />
+                                lim_enc_addr: -- not provided <br />
+                                pad_to_cbr: 1<br />
+                                rtmp_feedback0: -- not provided <br />
+                                ohst: 10.7.0.91<br />
+                                oprt: 2088<br />
+                                onic: 0.0.0.0<br />
+                                oalt: -- not provided <br />
                   </div>
     
 

@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Broadcaster - Pull input stream creation low latency</title>
+  <title>Test Results Report - Broadcaster - Push input stream creation test - Smoothing 400</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Broadcaster - Pull input stream creation low latency</h1>
+<h1>Broadcaster - Push input stream creation test - Smoothing 400</h1>
 <p>
-  Test duration: 0.055s
+  Test duration: 0.067s
 </p>
 
 
@@ -22,49 +22,41 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.zixi.testing.BroadcasterSinglePullInStreamCreationTest</td>
+        <td colspan="3" class="group">com.zixi.testing.BroadcasterPushInStreamCreationTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  broadcasterPullInCreation
+                  broadcasterSingleStreamRemoving
       </td>
   <td class="duration">
-    0.010s
+    0.006s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.157", "10.7.0.91", "test2", "test2", "4444", "", "300", "300", "30", "0", "0", "", "-1", "pull", "", "", "", "", "1", "", "1", "load_live_inputs", "", "", "stream2.properties", "278"</span><br />
+          <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.91", "-1", "0", "0", "0", "", "0", "push", "4444", "", "", "feederout", "", "", "", "1", "", "449"</span><br />
     
             <div class="testOutput">
                         Test parameteres: <br />
-                                userName: admin<br />
-                                userPass: 1234<br />
-                                Host: 10.7.0.157<br />
-                                loin_ip: 10.7.0.91<br />
-                                id: test2<br />
-                                source: test2<br />
-                                uiport: 4444<br />
-                                pull_port: -- not provided <br />
-                                latency: 300<br />
-                                fec_latency: 300<br />
-                                fec_overhead: 30<br />
-                                mcast_force: 0<br />
-                                time_shift: 0<br />
-                                nic: -- not provided <br />
-                                max_outputs: -1<br />
-                                type: pull<br />
-                                password: -- not provided <br />
-                                mcast_port: -- not provided <br />
-                                complete: -- not provided <br />
-                                mcast_ip: -- not provided <br />
-                                fec_adaptive: 1<br />
-                                mcast_ttl: -- not provided <br />
-                                on: 1<br />
-                                func: load_live_inputs<br />
-                                fec_force: -- not provided <br />
-                                mcast_out: -- not provided <br />
-                                propertiesFile: stream2.properties<br />
+                                analyze <br />
+                                complete <br />
+                                force_p2p 0<br />
+                                id feederout<br />
+                                latency -1<br />
+                                login_ip 10.7.0.91<br />
+                                max_outputs <br />
+                                mcast_force <br />
+                                mcast_ip 0<br />
+                                mcast_out <br />
+                                mcast_port 0<br />
+                                mcast_ttl <br />
+                                on 1<br />
+                                password <br />
+                                time_shift 0<br />
+                                type push<br />
+                                uiport 4444<br />
+                                userName admin<br />
+                                userPass1234<br />
                   </div>
     
 

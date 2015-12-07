@@ -3,10 +3,10 @@ package com.zixi.drivers;
 import static com.zixi.globals.Macros.*;
 
 import com.zixi.entities.TestParameters;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 import com.zixi.tools.ApiWorkir;
 
-public class BroadcasterSingleUdpInCreationDriver extends BroadcasterLoggable implements TestDriver {
+public class BroadcasterSingleUdpInCreationDriver extends BroadcasterLoggableApiWorker implements TestDriver {
 
 	private ApiWorkir streamCreator = new ApiWorkir();
 	

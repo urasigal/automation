@@ -4,9 +4,9 @@ import static com.zixi.globals.Macros.RECEIVER_UDP_OUT_MODE;
 
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class BroadcasterCreateAddaptiveGroupDriver extends BroadcasterLoggable
+public class BroadcasterCreateAddaptiveGroupDriver extends BroadcasterLoggableApiWorker
 		implements TestDriver {
 
 	private ApiWorkir adaptiveGroupCreator = new ApiWorkir();

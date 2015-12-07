@@ -3,9 +3,9 @@ package com.zixi.drivers;
 import static com.zixi.globals.Macros.*;
 
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class ReceiverPullInputStreamDeletionDriver extends BroadcasterLoggable
+public class ReceiverPullInputStreamDeletionDriver extends BroadcasterLoggableApiWorker
 implements TestDriver{
 
 	protected ApiWorkir streamCreator = new ApiWorkir();

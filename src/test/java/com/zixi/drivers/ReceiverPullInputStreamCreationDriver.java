@@ -4,9 +4,9 @@ import static com.zixi.globals.Macros.*;
 
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class ReceiverPullInputStreamCreationDriver extends BroadcasterLoggable
+public class ReceiverPullInputStreamCreationDriver extends BroadcasterLoggableApiWorker
 		implements TestDriver {
 
 	final private static String HTTP = "http://";

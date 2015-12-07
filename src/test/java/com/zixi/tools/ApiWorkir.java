@@ -91,6 +91,13 @@ public class ApiWorkir {
 				return json.get("msg").toString();
 			}
 
+			
+			if (mode == ADD_TRANSCODER_PROFILE) {
+				inputLine = response.toString();
+				json = new JSONObject(inputLine);
+				return json.get("msg").toString();
+			}
+			
 			if (mode == PUSHINMODE) {
 				inputLine = response.toString();
 				json = new JSONObject(inputLine);

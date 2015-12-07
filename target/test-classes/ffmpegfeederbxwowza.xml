@@ -40,7 +40,7 @@
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="124" />
+		<parameter name="testid" value="806" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
@@ -65,7 +65,7 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="124" />  
+		<parameter name="testid" value="808" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
@@ -78,7 +78,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="20" />
-		<parameter name="testid" value="124" />
+		<parameter name="testid" value="810" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -105,13 +105,13 @@
 			<parameter name="dec_type" value="" />  
 			<parameter name="dec_key" value="" />  
 			<parameter name="password" value="" />  
-			<parameter name="testid" value="504" />  
+			<parameter name="testid" value="812" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterRtmpPushOutputCreationTest"/>
 		</classes>
 	</test>   
 	<test name="FFMPEG test default parameters Push input - RTMP to Wowza FFMPEG">
-		<parameter name="testid" value="554" />  
+		<parameter name="testid" value="814" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -122,7 +122,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="506" />  
+		<parameter name="testid" value="816" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -140,7 +140,7 @@
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
 		<parameter name="host" value="10.7.0.91" />
-		<parameter name="testid" value="124" />
+		<parameter name="testid" value="818" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
@@ -152,7 +152,7 @@
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="124" />
+		<parameter name="testid" value="820" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>

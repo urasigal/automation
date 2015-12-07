@@ -17,6 +17,7 @@ public class Macros {
 		public static final int RECEIVERDELETIONMODE = 10;
 		public static final int RECEIVERSTATISTICMODE = 11;
 		public static final int RECEIVER_UDP_OUT_MODE = 12;
+		public static final int ADD_TRANSCODER_PROFILE = 13;
 		//////////////////////////////////////////////////
 		
 		public static final String GOOD = "GOOD";

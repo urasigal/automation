@@ -2,9 +2,9 @@ package com.zixi.drivers;
 
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class BroadcasterAdaptiveGroupDeletionDriver extends BroadcasterLoggable
+public class BroadcasterAdaptiveGroupDeletionDriver extends BroadcasterLoggableApiWorker
 		implements TestDriver {
 
 	private ApiWorkir adaptiveGroupCreator = new ApiWorkir();

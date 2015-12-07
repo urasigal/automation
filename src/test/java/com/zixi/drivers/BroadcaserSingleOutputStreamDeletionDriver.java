@@ -9,11 +9,11 @@ import org.json.JSONObject;
 import org.testng.Assert;
 
 import com.zixi.entities.TestParameters;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 import com.zixi.tools.RemoveInputHelper;
 import com.zixi.tools.ApiWorkir;
 
-public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLoggable implements TestDriver{
+public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLoggableApiWorker implements TestDriver{
 	
 	private ApiWorkir streamDeletor = new ApiWorkir();
 	

@@ -4,9 +4,9 @@ import static com.zixi.globals.Macros.PUSHINMODE;
 
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggable;
+import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class BroadcasterRtmpInCreationDriver extends BroadcasterLoggable
+public class BroadcasterRtmpInCreationDriver extends BroadcasterLoggableApiWorker
 		implements TestDriver {
 
 	private ApiWorkir streamCreator = new ApiWorkir();

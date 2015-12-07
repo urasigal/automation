@@ -36,7 +36,8 @@ public class BroadcasterInputStatisticHelper {
 				con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "
 						+ responseCookieContainer[0] );
 	//////////////////////////////////////////////////////////
-			int responseCode = con.getResponseCode();
+			//int responseCode = con.getResponseCode();
+				
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					con.getInputStream()));
 			StringBuffer response = new StringBuffer();
