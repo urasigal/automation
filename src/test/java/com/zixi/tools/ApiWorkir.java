@@ -20,7 +20,7 @@ public class ApiWorkir {
 	protected JSONObject json = null;
 	protected final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";
 	private String tester = null;
-
+	protected HttpURLConnection con;
 	// HTTP GET request
 	public String sendGet(String url, String id, int mode,
 			String[] responseCookieContainer, String HOST, Object caller,
@@ -29,7 +29,7 @@ public class ApiWorkir {
 		StringBuffer response = new StringBuffer();
 		try {
 			URL obj = new URL(url);
-			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+			con = (HttpURLConnection) obj.openConnection();
 			// optional, default is GET
 			con.setRequestMethod("GET");
 			// add request header
@@ -42,15 +42,12 @@ public class ApiWorkir {
 			con.setRequestProperty("Referer", "http://" + HOST + ":" + uiport
 					+ "/index.html");
 
-			con.setRequestProperty(StringUtils.substringBetween(
-
-			responseCookieContainer[0], "=", "%"), StringUtils.substringAfter(
-					responseCookieContainer[0], "%3D"));
+			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0], "=", "%"), StringUtils.substringAfter(responseCookieContainer[0], "%3D"));
 
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "
 					+ responseCookieContainer[0]);
 
-			int responseCode = con.getResponseCode();
+			//int responseCode = con.getResponseCode();
 
 			// System.out.println("\nSending 'GET' request to URL : " + url);
 			// System.out.println("Response Code : " + responseCode);
@@ -187,6 +184,9 @@ public class ApiWorkir {
 		} catch (Exception e) {
 
 			System.out.println("bug -------------" + e.getMessage());
+		}
+		finally {
+			con.disconnect();
 		}
 		return response.toString();
 	}

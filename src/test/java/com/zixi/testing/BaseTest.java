@@ -22,6 +22,7 @@ public class BaseTest {
 	@BeforeMethod
 	public void beforeTes(String testid) throws MalformedURLException
 	{
+		System.out.println( this.getClass().getName());
 		TestlinkIntegration tl = new TestlinkIntegration();
 		 tl.setResult(testid,
                  ExecutionStatus.BLOCKED);
@@ -30,6 +31,7 @@ public class BaseTest {
 	@AfterMethod
     public void afterTest(Method test, ITestResult result)
             throws MalformedURLException {
+		
         TestlinkIntegration tl = new TestlinkIntegration();
         if (result.isSuccess()) {
  
