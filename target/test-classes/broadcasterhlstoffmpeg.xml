@@ -29,7 +29,7 @@
 		<parameter name="fec_force" value="" />
 		<parameter name="mcast_out" value="" />
 		<parameter name="propertiesFile" value="stream.properties" />
-		<parameter name="testid" value="680" />  
+		<parameter name="testid" value="943" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
@@ -62,7 +62,7 @@
 		<parameter name="fec_force" value="" />
 		<parameter name="mcast_out" value="" />
 		<parameter name="propertiesFile" value="stream.properties" />
-		<parameter name="testid" value="682" />  
+		<parameter name="testid" value="945" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
@@ -95,7 +95,7 @@
 		<parameter name="fec_force" value="" />
 		<parameter name="mcast_out" value="" />
 		<parameter name="propertiesFile" value="stream.properties" />
-		<parameter name="testid" value="684" />  
+		<parameter name="testid" value="947" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
@@ -117,14 +117,14 @@
 		<parameter name="streams" value="w1,w2,w3" />
 		<parameter name="bitrates" value="688000,2000000,5000000" />
 		<parameter name="max_time" value="0" />
-		<parameter name="testid" value="686" />
+		<parameter name="testid" value="949" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG test default parameters - FFMPEG analyser adaptive HLS">
 		<parameter name="mode" value="hls" /> 
-		<parameter name="testid" value="694" />  
+		<parameter name="testid" value="951" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticHlsTest"/>
 		</classes>
@@ -135,7 +135,7 @@
 		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="xxx" />
-		<parameter name="testid" value="700" />
+		<parameter name="testid" value="953" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest"/>
 		</classes>
@@ -147,7 +147,7 @@
 		<parameter name="streamId" value="w1" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="w1" />
-		<parameter name="testid" value="702" />  
+		<parameter name="testid" value="955" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -159,7 +159,7 @@
 		<parameter name="streamId" value="w2" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="w2" />
-		<parameter name="testid" value="704" />  
+		<parameter name="testid" value="957" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -171,7 +171,7 @@
 		<parameter name="streamId" value="w3" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="w3" />
-		<parameter name="testid" value="706" />  
+		<parameter name="testid" value="959" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
