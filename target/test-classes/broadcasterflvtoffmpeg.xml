@@ -40,7 +40,7 @@
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="657" />   
+		<parameter name="testid" value="986" />   
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
@@ -78,14 +78,14 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="663" />  
+		<parameter name="testid" value="990" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG test default parameters - FFMPEG analyser FLV test">
 		<parameter name="mode" value="flv" />  
-		<parameter name="testid" value="669" />  
+		<parameter name="testid" value="992" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticModeTest"/>
 		</classes>
@@ -103,7 +103,7 @@
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
 		<parameter name="host" value="10.7.0.91" />
-		<parameter name="testid" value="673" />  
+		<parameter name="testid" value="994" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
@@ -115,7 +115,7 @@
 		<parameter name="streamId" value="feederout" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
-		<parameter name="testid" value="675" />  
+		<parameter name="testid" value="996" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
