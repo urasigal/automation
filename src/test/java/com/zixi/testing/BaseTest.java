@@ -15,17 +15,20 @@ import com.zixi.tools.TestlinkIntegration;
 
 public class BaseTest {
 	protected TestDriver testDriver;
-	String testid;
-	
+	protected ClassLoader classLoader;
+	protected Object driverObj;
+	protected Method m;
+	protected String testid;
+	protected Class c;
+	protected Object params[];
 	
 	@Parameters({"testid"})
 	@BeforeMethod
 	public void beforeTes(String testid) throws MalformedURLException
 	{
-		System.out.println( this.getClass().getName());
+		System.out.println(this.getClass().getName());
 		TestlinkIntegration tl = new TestlinkIntegration();
-		 tl.setResult(testid,
-                 ExecutionStatus.BLOCKED);
+		tl.setResult(testid,ExecutionStatus.BLOCKED);
 	}
 	
 	@AfterMethod

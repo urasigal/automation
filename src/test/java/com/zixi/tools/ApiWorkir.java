@@ -165,6 +165,15 @@ public class ApiWorkir {
 				}
 				tester = "good";
 			}
+			
+			if(mode == SET_RTMMP_AUTO_REMOTE)
+			{
+				inputLine = response.toString();
+				json = new JSONObject(inputLine);
+				return json.getJSONObject("http_outs").getInt("rtmp_auto_out") + "";
+				
+			}
+			
 			if (mode == 77) {
 				return inputLine = response.toString();
 			}
