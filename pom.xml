@@ -48,6 +48,11 @@
 			<artifactId>guice</artifactId>
 			<version>3.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.53</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<resources>
@@ -91,6 +96,7 @@
 						<suiteXmlFile>src/test/resources/broadcasterhlstoffmpeg.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/broadcasterflvtoffmpeg.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feeder_to_broadcaser_remote_rtmp_output.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feederudpout.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<properties>
 						<property>

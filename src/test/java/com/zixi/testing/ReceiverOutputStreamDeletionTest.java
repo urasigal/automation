@@ -14,13 +14,13 @@ public class ReceiverOutputStreamDeletionTest extends BaseTest{
 		testDriver = new ReceiverOutputStreamDeletionDriver();
 	}
 
-	@Parameters({ "login_ip", "userName", "userPass", "uiport" ,"stream_name","testid"})
-	@Test
+	@Parameters({ "login_ip", "userName", "userPass", "uiport" ,"stream_name","destination","testid"})
+	@Test		
 	public void receiverDeleteOutputStreamTest(String login_ip, String userName, String userPass, String uiport 
-			,String stream_name,String testid) throws InterruptedException {
+			,String stream_name, String  destination, String testid) throws InterruptedException {
 		this.testid = testid;
 		Assert.assertEquals(((ReceiverOutputStreamDeletionDriver) testDriver).testIMPL(
 				 login_ip,  userName,  userPass,  uiport 
-				, stream_name, testid), "Stream '" + "10.7.0.150" +":"+ "5555" + "' removed.");
+				, stream_name, testid), "Stream '" + destination + "' removed.");
 	}
 }

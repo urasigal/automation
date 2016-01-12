@@ -16,7 +16,6 @@ import com.zixi.tools.BroadcasterLoggableApiWorker;
 public class BroadcasterSinglePullInStreamCreationDriver extends
 		BroadcasterLoggableApiWorker implements TestDriver {
 	
-
 	private StreamEntity streamEntity;
 	private InputStream input = null;
 	private Properties prop = null;
@@ -53,6 +52,8 @@ public class BroadcasterSinglePullInStreamCreationDriver extends
 	final private String rnic = "nic";
 	final private String rhost0 = "host0";
 
+	
+	// Perform a test.
 	public String testIMPL(String userName, String userPass, String Host,
 			String loin_ip, String id, String source, String uiport,
 			String pull_port, String latency, String fec_latency,

@@ -19,8 +19,13 @@ public class Macros {
 		public static final int RECEIVER_UDP_OUT_MODE = 12;
 		public static final int ADD_TRANSCODER_PROFILE = 13;
 		public static final int SET_RTMMP_AUTO_REMOTE = 14;
+		public static final int FIND_SOURCE_IP_BX = 15;
 		//////////////////////////////////////////////////
 		
 		public static final String GOOD = "GOOD";
+		
+		
+		
+		public static final String GET_ALL_INPUTS_DATA = "/zixi/streams.json";
 
 }

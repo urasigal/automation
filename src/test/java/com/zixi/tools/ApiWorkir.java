@@ -28,6 +28,7 @@ public class ApiWorkir {
 
 		StringBuffer response = new StringBuffer();
 		try {
+			
 			URL obj = new URL(url);
 			con = (HttpURLConnection) obj.openConnection();
 			// optional, default is GET
@@ -189,6 +190,24 @@ public class ApiWorkir {
 				splittedResults = wholeResult.split(",");
 				return splittedResults[0];
 			}
+			
+//			if (mode == FIND_SOURCE_IP_BX)
+//			{
+//				String tmp;
+//				inputLine = response.toString();
+//				json = new JSONObject(inputLine);
+//				JSONArray inputStreamsJsonArrayObj = json
+//						.getJSONArray("streams");
+//				int numberOfElementsInInputStreamsJsonArrayObj = inputStreamsJsonArrayObj
+//						.length();
+//				for (int i = 0; i < numberOfElementsInInputStreamsJsonArrayObj; i++) {
+//					json = inputStreamsJsonArrayObj.getJSONObject(i);
+//					
+//					tmp = json.get("id").toString();
+//					if(tmp.equals(anObject))
+//				}
+//				
+//			}
 
 		} catch (Exception e) {
 

@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]">
-  <parameter name="profile_name" value="480p"/>
-  <parameter name="uiport" value="4444"/>
+  <parameter name="ip" value="file"/>
   <parameter name="userPass" value="1234"/>
-  <parameter name="testid" value="124"/>
+  <parameter name="type" value="1"/>
   <parameter name="userName" value="admin"/>
-  <parameter name="login_ip" value="10.7.0.91"/>
+  <parameter name="login_ip" value="10.7.0.174"/>
+  <parameter name="prog" value="1"/>
+  <parameter name="mip" value="live_recording.ts"/>
+  <parameter name="port" value="0"/>
+  <parameter name="uiport" value="4200"/>
+  <parameter name="host" value="10.7.0.150"/>
+  <parameter name="testid" value="673"/>
+  <parameter name="id" value="test"/>
+  <parameter name="chan" value="-1"/>
+  <parameter name="udpport" value="5555"/>
   <test name="Default test(failed)">
     <classes>
-      <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest">
+      <class name="com.zixi.testing.FeederUdpOutputDeletioinTest">
         <methods>
-          <include name="broadcasterDeleteProfile" invocation-numbers="0"/>
-          <include name="beforeTes"/>
           <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="broadcasterSingleStreamRemoving" invocation-numbers="0"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- com.zixi.testing.BroadcasterTranscoderDeletProfileTest -->
+      </class> <!-- com.zixi.testing.FeederUdpOutputDeletioinTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

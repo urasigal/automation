@@ -50,7 +50,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 			String mcast_ip, String fec_adaptive, String mcast_ttl, String on,
 			String func, String fec_force, String mcast_out,
 			String propertiesFile,String testid) throws InterruptedException {
-		this.testid = testid;
+		
 		Assert.assertEquals(
 				((BroadcasterSinglePullInStreamCreationDriver) testDriver)
 						.testIMPL(userName, userPass, Host, login_ip, id,
@@ -62,5 +62,4 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 								propertiesFile), "Stream " + "'" + id + "'"
 						+ " added.");
 	}
-
 }

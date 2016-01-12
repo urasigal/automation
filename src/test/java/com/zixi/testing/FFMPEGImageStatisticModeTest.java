@@ -17,7 +17,7 @@ public class FFMPEGImageStatisticModeTest extends BaseTest{
 		testDriver = new FFMPEGImageStatisticTestDriver();
 	}
 
-	// The goal of the test is to measure quality of a Zixi delivered video by using FFMPEG.
+	// The goal of the test is to measure a quality of a Zixi delivered video by using FFMPEG.
 	// The quality is estimated by a number of a stream probing (FFMPEG) and then getting a ratio between a successful probing to failed attempts.
 	@Parameters({"mode", "testid"})
 	@Test

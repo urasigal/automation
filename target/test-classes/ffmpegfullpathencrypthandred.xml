@@ -797,4 +797,378 @@
 		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
 		</classes>
 	</test>
+	<test name="Feeder - push to broadcaster negative test - Encryption AES 128 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="name" value="feederoutputname" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="ostr" value="feederout" />
+		<parameter name="oses" value="" />
+		<parameter name="oetp" value="aes128" />
+		<parameter name="oeky" value="a69a8ba04520a8e0fa66fdb0af94cb34" />
+		<parameter name="obit" value="8000000" />
+		<parameter name="olat" value="6000" />
+		<parameter name="ofc" value="0" />
+		<parameter name="ocmp" value="1" />
+		<parameter name="oold" value="0" />
+		<parameter name="onfec" value="1" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="ofec" value="30" />
+		<parameter name="ofecl" value="150" />
+		<parameter name="stop_on_drop" value="0" />
+		<parameter name="mmt" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="limited" value="0" />
+		<parameter name="minbps" value="0" />
+		<parameter name="lim_enc_addr" value="" />
+		<parameter name="pad_to_cbr" value="1" />
+		<parameter name="rtmp_feedback" value="0" />
+		<parameter name="ohst" value="10.7.0.91" />
+		<parameter name="oprt" value="2088" />
+		<parameter name="onic" value="0.0.0.0" />
+		<parameter name="oalt" value="" />
+		<parameter name="bonded" value="0" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="1018" />   
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation negative test - Encryption AES 128 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="1020" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - pull input stream creation negative test - Encryption AES 128 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="dec_key" value="a69a8ba04520a8e0fa66fdb0af94cb33" />
+		<parameter name="dec_type" value="aes128" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_latency" value="150" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="host" value="10.7.0.91" />
+		<parameter name="latency" value="8000" />
+		<parameter name="min_bit" value="0" />
+		<parameter name="name" value="receivertest" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="port" value="2077" />
+		<parameter name="session" value="" />
+		<parameter name="stream" value="feederout" />
+		<parameter name="testid" value="1022" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics negative test - Encryption AES 128 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="1024" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Receiver: UDP out creation negative test - Encryption AES 128 FFMPEG analyser">
+		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="name" value="toffmpeg" />
+		<parameter name="target" value="10.7.0.150:5555" />
+		<parameter name="type" value="net" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="ttl" value="1" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="rows" value="10" />
+		<parameter name="cols" value="10" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="input_stream" value="receivertest" />
+		<parameter name="testid" value="1026" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
+		</classes>
+	</test>
+	<test name="FFMPEG test Encryption AES 128 FFMPEG analyser negative test">
+		<parameter name="testid" value="1028" />  
+		<classes>
+		    <class name="com.zixi.testing.FFMPEGImageStatisticNegativeTest"/>
+		</classes>
+	</test>
+	<test name="Receiver: UDP out deletion Encryption AES 128 FFMPEG analyser negative test">
+		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="stream_name" value="toffmpeg" />
+		<parameter name="testid" value="1030" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
+		</classes>
+	</test>
+	<test name="Feeder - output stream deletion negative test - Encryption AES 128 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="host" value="10.7.0.91" />
+		<parameter name="testid" value="1032" />  
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream negative test  - Encryption AES 128 FFMPEG analyser">
+		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="1034" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - Remove Pull input stream negative test - Encryption AES 128 FFMPEG analyser">
+		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="id" value="receivertest" />
+		<parameter name="testid" value="1036" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - push to broadcaster negative test - Encryption AES 192 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="name" value="feederoutputname" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="ostr" value="feederout" />
+		<parameter name="oses" value="" />
+		<parameter name="oetp" value="aes128" />
+		<parameter name="oeky" value="90fd47d973da182c5551a6932561a2e6408fa479bb3f5e8c" />
+		<parameter name="obit" value="8000000" />
+		<parameter name="olat" value="6000" />
+		<parameter name="ofc" value="0" />
+		<parameter name="ocmp" value="1" />
+		<parameter name="oold" value="0" />
+		<parameter name="onfec" value="1" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="ofec" value="30" />
+		<parameter name="ofecl" value="150" />
+		<parameter name="stop_on_drop" value="0" />
+		<parameter name="mmt" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="limited" value="0" />
+		<parameter name="minbps" value="0" />
+		<parameter name="lim_enc_addr" value="" />
+		<parameter name="pad_to_cbr" value="1" />
+		<parameter name="rtmp_feedback" value="0" />
+		<parameter name="ohst" value="10.7.0.91" />
+		<parameter name="oprt" value="2088" />
+		<parameter name="onic" value="0.0.0.0" />
+		<parameter name="oalt" value="" />
+		<parameter name="bonded" value="0" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="1039" />   
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation negative test - Encryption AES 192 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="1041" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - pull input stream creation negative test - Encryption AES 192 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="dec_key" value="90fd47d973da182c5551a6932561a2e6408fa479bb3f5e8a" />
+		<parameter name="dec_type" value="aes128" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_latency" value="150" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="host" value="10.7.0.91" />
+		<parameter name="latency" value="8000" />
+		<parameter name="min_bit" value="0" />
+		<parameter name="name" value="receivertest" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="port" value="2077" />
+		<parameter name="session" value="" />
+		<parameter name="stream" value="feederout" />
+		<parameter name="testid" value="1043" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics negative test - Encryption AES 192 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="1045" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Receiver: UDP out creation negative test - Encryption AES 192 FFMPEG analyser">
+		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="name" value="toffmpeg" />
+		<parameter name="target" value="10.7.0.150:5555" />
+		<parameter name="type" value="net" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="ttl" value="1" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="rows" value="10" />
+		<parameter name="cols" value="10" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="input_stream" value="receivertest" />
+		<parameter name="testid" value="1047" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
+		</classes>
+	</test>
+	<test name="FFMPEG test Encryption AES 128 FFMPEG analyser negative test">
+		<parameter name="testid" value="1049" />  
+		<classes>
+		    <class name="com.zixi.testing.FFMPEGImageStatisticNegativeTest"/>
+		</classes>
+	</test>
+	<test name="Receiver: UDP out deletion Encryption AES 192 FFMPEG analyser negative test ">
+		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="stream_name" value="toffmpeg" />
+		<parameter name="testid" value="1051" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
+		</classes>
+	</test>
+	<test name="Feeder - output stream deletion negative test - Encryption AES 192 FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="host" value="10.7.0.91" />
+		<parameter name="testid" value="1053" />  
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream negative test  - Encryption AES 192 FFMPEG analyser">
+		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="1055" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - Remove Pull input stream negative test - Encryption AES 192 FFMPEG analyser">
+		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="id" value="receivertest" />
+		<parameter name="testid" value="1057" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
+		</classes>
+	</test>
 </suite>

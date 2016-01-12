@@ -8,13 +8,10 @@ import org.json.JSONObject;
 
 public class StreamStatisticAnalyzer {
 	
-	
 	public int getStatBitrate(JSONObject statisticJson)
 	{
 		return statisticJson.getJSONObject("net").getInt("bitrate");
 	}
-	
-	
 	
 	public int[] getMaxMinAvg(ArrayList<Integer> stat)
 	{
@@ -28,6 +25,21 @@ public class StreamStatisticAnalyzer {
 		}
 		avg = avg / stat.size();
 		int[] statArray = {max,min,avg};
-		return statArray;
+		return statArray; // 
+	}
+	
+	public static long[] getMaxMinAvg(ArrayList<Long> stat)
+	{
+		int avg = 0;
+		Collections.sort(stat);
+		long max = stat.get(stat.size() - 1);
+		long min = stat.get(0);
+		for (int i = 0; i < stat.size(); i++)
+		{
+			avg += stat.get(i);
+		}
+		avg = avg / stat.size();
+		long[] statArray = {max,min,avg};
+		return statArray; // 
 	}
 }

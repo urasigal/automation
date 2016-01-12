@@ -19,6 +19,8 @@ public class BaseTest {
 	protected Object driverObj;
 	protected Method m;
 	protected String testid;
+	
+	// reflection stuff
 	protected Class c;
 	protected Object params[];
 	
@@ -26,6 +28,7 @@ public class BaseTest {
 	@BeforeMethod
 	public void beforeTes(String testid) throws MalformedURLException
 	{
+		this.testid = testid;
 		System.out.println(this.getClass().getName());
 		TestlinkIntegration tl = new TestlinkIntegration();
 		tl.setResult(testid,ExecutionStatus.BLOCKED);

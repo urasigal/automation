@@ -16,6 +16,7 @@ import com.zixi.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterPushInStreamCreationTest extends BaseTest {
+	
 	private TestDriver testDriver;
 
 	@BeforeClass
@@ -44,5 +45,4 @@ public class BroadcasterPushInStreamCreationTest extends BaseTest {
 						max_outputs, on, password), "Stream " + "'" + id + "'"
 						+ " added.");
 	}
-
 }
