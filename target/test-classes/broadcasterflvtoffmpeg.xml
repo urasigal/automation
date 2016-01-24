@@ -84,7 +84,7 @@
 		</classes>
 	</test>
 	<test name="FFMPEG test default parameters - FFMPEG analyser FLV test">
-		<parameter name="mode" value="flv" />  
+		<parameter name="mode" value="http://10.7.0.91:7777/test.flv" />  
 		<parameter name="testid" value="992" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticModeTest"/>

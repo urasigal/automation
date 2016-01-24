@@ -21,14 +21,14 @@ public class StreamStatisticAnalyzer {
 		int min = stat.get(0);
 		for (int i = 0; i < stat.size(); i++)
 		{
-			avg += stat.get(i);
+			avg += stat.get(i);  
 		}
 		avg = avg / stat.size();
 		int[] statArray = {max,min,avg};
 		return statArray; // 
 	}
 	
-	public static long[] getMaxMinAvg(ArrayList<Long> stat)
+	public static long[] getMaxMinAvgLong(ArrayList<Long> stat)
 	{
 		int avg = 0;
 		Collections.sort(stat);

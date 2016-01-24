@@ -154,6 +154,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="stream_name" value="toffmpeg" />
+		<parameter name="destination" value="10.7.0.150:5555" />
 		<parameter name="testid" value="577" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
@@ -353,6 +354,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="stream_name" value="toffmpeg" />
+		<parameter name="destination" value="10.7.0.150:5555" />
 		<parameter name="testid" value="600" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
@@ -552,6 +554,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="stream_name" value="toffmpeg" />
+		<parameter name="destination" value="10.7.0.150:5555" />
 		<parameter name="testid" value="623" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
@@ -751,6 +754,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="stream_name" value="toffmpeg" />
+		<parameter name="destination" value="10.7.0.150:5555" />
 		<parameter name="testid" value="648" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
@@ -938,6 +942,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="stream_name" value="toffmpeg" />
+		<parameter name="destination" value="10.7.0.150:5555" />
 		<parameter name="testid" value="1030" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
@@ -1113,7 +1118,7 @@
 			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
 		</classes>
 	</test>
-	<test name="FFMPEG test Encryption AES 128 FFMPEG analyser negative test">
+	<test name="FFMPEG test Encryption AES 192 FFMPEG analyser negative test">
 		<parameter name="testid" value="1049" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticNegativeTest"/>
@@ -1125,6 +1130,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="stream_name" value="toffmpeg" />
+		<parameter name="destination" value="10.7.0.150:5555" />
 		<parameter name="testid" value="1051" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />

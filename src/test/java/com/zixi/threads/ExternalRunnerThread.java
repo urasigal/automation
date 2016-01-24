@@ -13,6 +13,7 @@ public class ExternalRunnerThread extends Thread {
 
 	private long results;
 	
+	// Constructor of the class. Gets a RedundantFeederOneBxDriverobject as a parameter and a UDP port on which a UDP server will listen to.
 	public ExternalRunnerThread(RedundantFeederOneBxDriver redundantFeederOneBxDriver, String udp_port)
 	{
 		this.udp_port = udp_port;

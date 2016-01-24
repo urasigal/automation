@@ -10,6 +10,7 @@ import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionType;
 import br.eti.kinoshita.testlinkjavaapi.constants.TestCaseDetails;
 import br.eti.kinoshita.testlinkjavaapi.model.TestCase;
 import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
+
  
 
 public class TestlinkIntegration {
@@ -35,6 +36,8 @@ public class TestlinkIntegration {
             TestCase finalTestcase = testlinkAPIClient.getTestCase(
                     testCase.getId(), null, null);
             testcaseNames.add(finalTestcase.getId());
+            
+            // finalTestcase.setPreconditions(preconditions);
         }
         return testcaseNames;
     }
@@ -47,12 +50,13 @@ public class TestlinkIntegration {
                 projectName, null);
     }
  
-    public void setResult(String testcaseId, ExecutionStatus status)
+    public void setResult(String testcaseId, ExecutionStatus status, String className)
             throws TestLinkAPIException, MalformedURLException 
     {
         TestLinkAPI testlinkAPIClient = new TestLinkAPI(new URL(url), devKey);
         testlinkAPIClient.setTestCaseExecutionResult(
                 Integer.parseInt(testcaseId), null, 262, status, null, null,
-                null, true, null, null, null, null, false);
+                className, true, null, null, null, null, false);
     }
+
 }

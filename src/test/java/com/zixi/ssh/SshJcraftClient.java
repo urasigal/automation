@@ -74,11 +74,44 @@ public class SshJcraftClient {
 	          System.out.println("exit-status: "+channel.getExitStatus());
 	          break;
 	        }
-	        try{Thread.sleep(1000);}catch(Exception ee){}
+	        //try{Thread.sleep(1000);}catch(Exception ee){}
 	     }
 		// Close a connection both session and channel
 		channel.disconnect();
 		session.disconnect();
+	}
+	
+	public String callCommand(String command) throws InterruptedException, IOException, JSchException
+	{
+		((ChannelExec)channel).setCommand(command);
+		 InputStream in=channel.getInputStream();
+		((ChannelExec)channel).setErrStream(System.err);
+		byte[] tmp=new byte[1024];
+		channel.connect();
+		StringBuffer stringBuf = new StringBuffer();
+		
+		// Whait
+		while(true)
+		{
+	        while(in.available()>0)
+	        {
+	          int i=in.read(tmp, 0, 1024);
+	          if(i<0)break;
+	          stringBuf.append(new String(tmp, 0, i)); 
+	          System.out.print(stringBuf); 
+	        }
+	        if(channel.isClosed())
+	        {
+	          if(in.available()>0) continue; 
+	          System.out.println("exit-status: "+channel.getExitStatus());
+	          break;
+	        }
+	        //try{Thread.sleep(1000);}catch(Exception ee){}
+	     }
+		// Close a connection both session and channel
+		channel.disconnect();
+		session.disconnect();
+		return stringBuf.toString();
 	}
 	
 	public void performCommand(String sshUser, String sshPassword, String sshLoginIp, String sshPort, String command) throws InterruptedException, IOException, JSchException
@@ -89,11 +122,19 @@ public class SshJcraftClient {
 		performCommand(command);
 	}
 	
+	public String callCommand(String sshUser, String sshPassword, String sshLoginIp, String sshPort, String command) throws InterruptedException, IOException, JSchException
+	{
+		
+		setSession(sshUser, sshPassword, sshLoginIp, Integer.parseInt(sshPort));
+		openChannel();
+		return callCommand(command);
+	}
+	
 	public static void main(String[] args) throws InterruptedException, IOException, JSchException
 	{
 		SshJcraftClient sshJcraftClient = new SshJcraftClient();
 		sshJcraftClient.setSession("root", "zixiroot1234", "10.7.0.174", 22);
 		sshJcraftClient.openChannel();
-		sshJcraftClient.performCommand("service zixifeeder stop");
+		sshJcraftClient.performCommand("date");
 	}
 }

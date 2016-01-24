@@ -31,7 +31,7 @@ public class BaseTest {
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
 		TestlinkIntegration tl = new TestlinkIntegration();
-		tl.setResult(testid,ExecutionStatus.BLOCKED);
+		tl.setResult(testid,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName());
 	}
 	
 	@AfterMethod
@@ -39,13 +39,14 @@ public class BaseTest {
             throws MalformedURLException {
 		
         TestlinkIntegration tl = new TestlinkIntegration();
+
         if (result.isSuccess()) {
  
             tl.setResult(testid,
-                    ExecutionStatus.PASSED);
+                    ExecutionStatus.PASSED, this.getClass().getCanonicalName());
         } else {
             tl.setResult(testid,
-                    ExecutionStatus.FAILED);
+                    ExecutionStatus.FAILED, this.getClass().getCanonicalName());
         }
     }
 }

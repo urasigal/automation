@@ -16,7 +16,9 @@ import com.zixi.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
+	
 	private TestDriver testDriver;
+	
 	@BeforeClass
 	public void testInit() {
 		

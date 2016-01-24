@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Broadcaster: networking suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - verify ip corectness (linux only)">
+		<parameter name="sshuser" value="root" />
+		<parameter name="sshpass" value="zixiroot1234" />
+		<parameter name="sshaddress" value="10.7.0.78" />
+		<parameter name="sshport" value="22" />
+		<parameter name="command" value="hostname -I" />,
+		<parameter name="login_ip" value="10.7.0.78" />			
+		<parameter name="uiport" value="4444" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />			
+		<parameter name="testid" value="657" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterNetworkTest"/>
+		</classes>
+	</test>                       
+</suite>

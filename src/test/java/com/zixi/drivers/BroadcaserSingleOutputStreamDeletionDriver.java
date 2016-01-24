@@ -38,9 +38,10 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		response = streamDeletor.sendGet(HTTP + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this, uiport );
 		
 		JSONObject responseJson = new JSONObject(response.toString());
-		JSONArray outputStreamsArray = responseJson.getJSONArray("outputs");
+		JSONArray outputStreamsArray = responseJson.getJSONArray("msg");
 
 		String streamName = null;
+		
 		for (int i = 0; i < outputStreamsArray.length(); i++) {
 			//System.out.println("before");
 			JSONObject outputStream = outputStreamsArray.getJSONObject(i);

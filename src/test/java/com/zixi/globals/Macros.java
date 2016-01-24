@@ -27,5 +27,6 @@ public class Macros {
 		
 		
 		public static final String GET_ALL_INPUTS_DATA = "/zixi/streams.json";
+		public static final String GET_ALL_OUTPUTS_DATA = "/zixi/outputs.json";
 
 }

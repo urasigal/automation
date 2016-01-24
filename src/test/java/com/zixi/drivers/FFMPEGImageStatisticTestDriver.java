@@ -97,11 +97,11 @@ public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggableApiWorker
 		long sum = 0;
 		loopCnt = 0;
 		try {
-
+			// This class implements client sockets (also called just "sockets"). A socket is an endpoint for communication between two machines.
 			clientSocket = new Socket(hostName, portNumber);
 			clientSocket.setSoTimeout(120000);
 			 
-             out = new PrintWriter(clientSocket.getOutputStream(), true);
+            out = new PrintWriter(clientSocket.getOutputStream(), true);
 		 
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 

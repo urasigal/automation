@@ -26,6 +26,13 @@ implements TestDriver{
 				77, responseCookieContainer, login_ip, this, uiport), id);
 	}
 	
+	public String findSourceIpOfOutputStream(String id , String login_ip, String uiport, String userName, String userPass)
+	{
+		JsonParser jsonParser  = new JsonParser();
+		logIn(login_ip, uiport, userName, userPass);
+		return jsonParser.getSourceOutputIpById(apiWorker.sendGet("http://" + login_ip + ":" + uiport + GET_ALL_OUTPUTS_DATA, id,
+				77, responseCookieContainer, login_ip, this, uiport), id);
+	}
 	
 	
 	// Testing main function, coment it out if no needed - not in the testing mode.
