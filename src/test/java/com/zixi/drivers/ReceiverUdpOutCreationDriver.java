@@ -1,7 +1,6 @@
 package com.zixi.drivers;
 
 import static com.zixi.globals.Macros.*;
-import static com.zixi.globals.Macros.RECEIVERIDMODE;
 
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
@@ -56,4 +55,15 @@ public class ReceiverUdpOutCreationDriver extends BroadcasterLoggableApiWorker i
 	final private static String rremux_bitrate = "remux_bitrate";
 	final private static String rin_id = "in_id";
 
+	
+	public String addBackupToOut(String receiver_ip, String recever_uiport, String receiver_user_name, String receiver_password, String mainId, String backupId)
+	{
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
+				"http://" + receiver_ip + ":" + recever_uiport + "/login.htm", receiver_user_name,
+				receiver_password, receiver_ip, recever_uiport);
+		
+		return streamCreator.sendGet("http://" + receiver_ip +  ":" + recever_uiport + "/out_add_in.json?out_id=" + mainId + "&source=" + backupId + "&fallback=1",
+				"", RECEIVER_UDP_OUT_MODE , responseCookieContainer, receiver_ip, this, recever_uiport);
+	}
+	
 }

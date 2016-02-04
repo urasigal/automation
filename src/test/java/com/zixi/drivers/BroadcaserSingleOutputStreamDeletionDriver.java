@@ -25,7 +25,8 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 	final private static String params4 = "=";
 	final private static String params5 = "ie_fooler=0.45086039789021015";
 	final private static String params7 = "/zixi/remove_output.json?";
-	private String id1 = null;
+	private String internalStreamID = null;
+	private String internalStreamName = null;
 	final private String rid = "id";
 	
 	public String testIMPL(String login_ip,String userName,String userPassword,String name,String uiport)
@@ -38,26 +39,26 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		response = streamDeletor.sendGet(HTTP + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this, uiport );
 		
 		JSONObject responseJson = new JSONObject(response.toString());
-		JSONArray outputStreamsArray = responseJson.getJSONArray("msg");
+		JSONArray outputStreamsArray = responseJson.getJSONArray("outputs");
 
 		String streamName = null;
-		
 		for (int i = 0; i < outputStreamsArray.length(); i++) {
 			//System.out.println("before");
 			JSONObject outputStream = outputStreamsArray.getJSONObject(i);
 		   
 		    //System.out.println("after");
 		    //id1 = stream.getString("id");
-		    streamName = outputStream.getString("name");
+		    streamName = outputStream.getString("stream_id");
 		    if(streamName.equals(name))
 		    {
-		    	id1 = outputStream.getString("id");
+		    	internalStreamID = outputStream.getString("id");
+		    	internalStreamName = outputStream.getString("stream_id");
 		    }
 		  }
-		return streamDeletor.sendGet(HTTP + login_ip + ":" + uiport +  params7 + rid + params4 + id1 , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);
+		return streamDeletor.sendGet(HTTP + login_ip + ":" + uiport +  params7 + rid + params4 + internalStreamID , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);
 	}
 	
 	public String getId1() {
-		return id1;
+		return internalStreamName;
 	}
 }

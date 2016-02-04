@@ -210,8 +210,8 @@ public class ApiWorkir {
 //			}
 
 		} catch (Exception e) {
-
-			System.out.println("bug -------------" + e.getMessage());
+			String exceptionTest = e.getMessage();
+			System.out.println("bug -------------" + exceptionTest);
 		}
 		finally {
 			con.disconnect();

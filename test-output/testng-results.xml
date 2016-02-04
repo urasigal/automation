@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="16" passed="15">
+<testng-results skipped="0" failed="0" total="11" passed="11">
   <reporter-output>
     <line>
       <![CDATA[Test parameteres: ]]>
@@ -194,25 +194,25 @@
       <![CDATA[id: feederout]]>
     </line>
     <line>
-      <![CDATA[testduration: 10]]>
+      <![CDATA[testduration: 5]]>
     </line>
     <line>
-      <![CDATA[Max bitrate is 949122]]>
+      <![CDATA[Max bitrate is 932603]]>
     </line>
     <line>
-      <![CDATA[Min bitrete is 815336]]>
+      <![CDATA[Min bitrete is 832864]]>
     </line>
     <line>
-      <![CDATA[Average bitrate is 906523]]>
+      <![CDATA[Average bitrate is 882464]]>
     </line>
     <line>
-      <![CDATA[Max bitrate  is 994647]]>
+      <![CDATA[Max bitrate  is 994896]]>
     </line>
     <line>
-      <![CDATA[Min bitrate is 939624]]>
+      <![CDATA[Min bitrate is 973840]]>
     </line>
     <line>
-      <![CDATA[Average bitrate is 966370]]>
+      <![CDATA[Average bitrate is 986473]]>
     </line>
     <line>
       <![CDATA[Test parameteres: ]]>
@@ -225,57 +225,6 @@
     </line>
     <line>
       <![CDATA[login_ip: 10.7.0.173]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4300]]>
-    </line>
-    <line>
-      <![CDATA[name: toffmpeg]]>
-    </line>
-    <line>
-      <![CDATA[target: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[type: net]]>
-    </line>
-    <line>
-      <![CDATA[nic: 0.0.0.0]]>
-    </line>
-    <line>
-      <![CDATA[ttl: 1]]>
-    </line>
-    <line>
-      <![CDATA[smoothing: 0]]>
-    </line>
-    <line>
-      <![CDATA[rtp: 0]]>
-    </line>
-    <line>
-      <![CDATA[fec: 0]]>
-    </line>
-    <line>
-      <![CDATA[rows: 10]]>
-    </line>
-    <line>
-      <![CDATA[cols: 10]]>
-    </line>
-    <line>
-      <![CDATA[remux_bitrate: 0]]>
-    </line>
-    <line>
-      <![CDATA[input_stream: receivertest]]>
-    </line>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[userName: admin]]>
-    </line>
-    <line>
-      <![CDATA[userPass: 1234]]>
-    </line>
-    <line>
-      <![CDATA[login_ip: 10.7.0.150]]>
     </line>
     <line>
       <![CDATA[uiport: 4300]]>
@@ -377,16 +326,16 @@
       <![CDATA[Stream feederout removed.]]>
     </line>
   </reporter-output>
-  <suite name="Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser" duration-ms="771764" started-at="2016-01-21T15:43:17Z" finished-at="2016-01-21T15:56:09Z">
+  <suite name="Feeder: push output streaming suite" duration-ms="2954134" started-at="2016-01-26T10:14:08Z" finished-at="2016-01-26T11:03:22Z">
     <groups>
     </groups>
-    <test name="Feeder - Push to broadcaster test - default parameters FFMPEG analyser" duration-ms="203" started-at="2016-01-21T15:43:17Z" finished-at="2016-01-21T15:43:18Z">
+    <test name="Feeder - Push to broadcaster test - default parameters FFMPEG analyser" duration-ms="191" started-at="2016-01-26T10:14:08Z" finished-at="2016-01-26T10:14:08Z">
       <class name="com.zixi.testing.FeederOutputPushToBxTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@6e3c1e69]" name="testInit" is-config="true" duration-ms="10" started-at="2016-01-21T17:43:17Z" finished-at="2016-01-21T17:43:17Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@6e3c1e69]" name="testInit" is-config="true" duration-ms="8" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@6e3c1e69]" name="beforeTes" is-config="true" duration-ms="123" started-at="2016-01-21T17:43:17Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@6e3c1e69]" name="beforeTes" is-config="true" duration-ms="120" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -397,7 +346,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@6e3c1e69]" name="feederOutputToBxTest" duration-ms="26" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@6e3c1e69]" name="feederOutputToBxTest" duration-ms="22" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -709,7 +658,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- feederOutputToBxTest -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@6e3c1e69]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@6e3c1e69]" name="afterTest" is-config="true" duration-ms="33" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -727,13 +676,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.FeederOutputPushToBxTest -->
     </test> <!-- Feeder - Push to broadcaster test - default parameters FFMPEG analyser -->
-    <test name="Broadcaster - Push input stream creation test - default parameters FFMPEG analyser" duration-ms="68" started-at="2016-01-21T15:43:18Z" finished-at="2016-01-21T15:43:18Z">
+    <test name="Broadcaster - Push input stream creation test - default parameters FFMPEG analyser" duration-ms="81" started-at="2016-01-26T10:14:08Z" finished-at="2016-01-26T10:14:08Z">
       <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@2d209079]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@2d209079]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@2d209079]" name="beforeTes" is-config="true" duration-ms="32" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@2d209079]" name="beforeTes" is-config="true" duration-ms="38" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -744,7 +693,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@2d209079]" name="broadcasterSingleStreamRemoving" duration-ms="4" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@2d209079]" name="broadcasterSingleStreamRemoving" duration-ms="10" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -910,7 +859,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterSingleStreamRemoving -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@2d209079]" name="afterTest" is-config="true" duration-ms="30" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@2d209079]" name="afterTest" is-config="true" duration-ms="31" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -928,13 +877,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.BroadcasterPushInStreamCreationTest -->
     </test> <!-- Broadcaster - Push input stream creation test - default parameters FFMPEG analyser -->
-    <test name="Receiver1 - pull input stream creation - default parameters FFMPEG analyser" duration-ms="79" started-at="2016-01-21T15:43:18Z" finished-at="2016-01-21T15:43:18Z">
+    <test name="Receiver1 - pull input stream creation - default parameters FFMPEG analyser" duration-ms="74" started-at="2016-01-26T10:14:08Z" finished-at="2016-01-26T10:14:08Z">
       <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@27f674d]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@27f674d]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@27f674d]" name="beforeTes" is-config="true" duration-ms="32" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@27f674d]" name="beforeTes" is-config="true" duration-ms="30" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -945,7 +894,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@27f674d]" name="feederOutputToBxTest" duration-ms="11" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@27f674d]" name="feederOutputToBxTest" duration-ms="10" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -1009,7 +958,7 @@
             </param>
             <param index="12">
               <value>
-                <![CDATA[60000]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="13">
@@ -1051,7 +1000,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feederOutputToBxTest -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@27f674d]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@27f674d]" name="afterTest" is-config="true" duration-ms="32" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -1069,154 +1018,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
     </test> <!-- Receiver1 - pull input stream creation - default parameters FFMPEG analyser -->
-    <test name="Receiver2 - pull input stream creation - default parameters FFMPEG analyser" duration-ms="79" started-at="2016-01-21T15:43:18Z" finished-at="2016-01-21T15:43:18Z">
-      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@43a25848]" name="testInit" is-config="true" duration-ms="0" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@43a25848]" name="beforeTes" is-config="true" duration-ms="33" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[661]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@43a25848]" name="feederOutputToBxTest" duration-ms="13" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10.7.0.150]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[4300]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[150]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[30]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[10.7.0.91]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[60000]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[receivertest]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[0.0.0.0]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[2077]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[feederout]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[661]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feederOutputToBxTest -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@43a25848]" name="afterTest" is-config="true" duration-ms="32" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.ReceiverPullInputStreamCreationTest.feederOutputToBxTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=feederOutputToBxTest status=SUCCESS method=ReceiverPullInputStreamCreationTest.feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamCreationTest@43a25848] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
-    </test> <!-- Receiver2 - pull input stream creation - default parameters FFMPEG analyser -->
-    <test name="Broadcaster - Push from Feeder input stream statistics test - default paremeters" duration-ms="35156" started-at="2016-01-21T15:43:18Z" finished-at="2016-01-21T15:43:53Z">
+    <test name="Broadcaster - Push from Feeder input stream statistics test - default paremeters" duration-ms="30079" started-at="2016-01-26T10:14:08Z" finished-at="2016-01-26T10:14:38Z">
       <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@34ce8af7]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@3ac3fd8b]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@34ce8af7]" name="beforeTes" is-config="true" duration-ms="37" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:18Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@3ac3fd8b]" name="beforeTes" is-config="true" duration-ms="29" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:08Z">
           <params>
             <param index="0">
               <value>
@@ -1227,7 +1035,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@34ce8af7]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="35053" started-at="2016-01-21T17:43:18Z" finished-at="2016-01-21T17:43:53Z">
+        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@3ac3fd8b]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="30014" started-at="2016-01-26T12:14:08Z" finished-at="2016-01-26T12:14:38Z">
           <params>
             <param index="0">
               <value>
@@ -1261,7 +1069,7 @@
             </param>
             <param index="6">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="7">
@@ -1293,20 +1101,20 @@
               <![CDATA[id: feederout]]>
             </line>
             <line>
-              <![CDATA[testduration: 10]]>
+              <![CDATA[testduration: 5]]>
             </line>
             <line>
-              <![CDATA[Max bitrate is 949122]]>
+              <![CDATA[Max bitrate is 932603]]>
             </line>
             <line>
-              <![CDATA[Min bitrete is 815336]]>
+              <![CDATA[Min bitrete is 832864]]>
             </line>
             <line>
-              <![CDATA[Average bitrate is 906523]]>
+              <![CDATA[Average bitrate is 882464]]>
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@34ce8af7]" name="afterTest" is-config="true" duration-ms="63" started-at="2016-01-21T17:43:53Z" finished-at="2016-01-21T17:43:53Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@3ac3fd8b]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-01-26T12:14:38Z" finished-at="2016-01-26T12:14:38Z">
           <params>
             <param index="0">
               <value>
@@ -1315,7 +1123,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterSingleInputStreamstatisticAnilyzer status=SUCCESS method=BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@34ce8af7] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=broadcasterSingleInputStreamstatisticAnilyzer status=SUCCESS method=BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@3ac3fd8b] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
@@ -1324,13 +1132,9 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
     </test> <!-- Broadcaster - Push from Feeder input stream statistics test - default paremeters -->
-    <test name="Receiver1 - Pull input stream statistic - default parameters FFMPEG analyser" duration-ms="30116" started-at="2016-01-21T15:43:53Z" finished-at="2016-01-21T15:44:23Z">
+    <test name="Receiver1 - Pull input stream statistic - default parameters FFMPEG analyser" duration-ms="25106" started-at="2016-01-26T10:14:38Z" finished-at="2016-01-26T10:15:03Z">
       <class name="com.zixi.testing.ReceiverInputStatisticTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@340f438e]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-21T17:43:53Z" finished-at="2016-01-21T17:43:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@340f438e]" name="beforeTes" is-config="true" duration-ms="35" started-at="2016-01-21T17:43:53Z" finished-at="2016-01-21T17:43:53Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@b684286]" name="beforeTes" is-config="true" duration-ms="33" started-at="2016-01-26T12:14:38Z" finished-at="2016-01-26T12:14:38Z">
           <params>
             <param index="0">
               <value>
@@ -1341,7 +1145,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="receiverInputStatistic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@340f438e]" name="receiverInputStatistic" duration-ms="30029" started-at="2016-01-21T17:43:53Z" finished-at="2016-01-21T17:44:23Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@b684286]" name="testInit" is-config="true" duration-ms="0" started-at="2016-01-26T12:14:38Z" finished-at="2016-01-26T12:14:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="receiverInputStatistic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@b684286]" name="receiverInputStatistic" duration-ms="25013" started-at="2016-01-26T12:14:38Z" finished-at="2016-01-26T12:15:03Z">
           <params>
             <param index="0">
               <value>
@@ -1370,7 +1178,7 @@
             </param>
             <param index="5">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="6">
@@ -1381,17 +1189,17 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[Max bitrate  is 994647]]>
+              <![CDATA[Max bitrate  is 994896]]>
             </line>
             <line>
-              <![CDATA[Min bitrate is 939624]]>
+              <![CDATA[Min bitrate is 973840]]>
             </line>
             <line>
-              <![CDATA[Average bitrate is 966370]]>
+              <![CDATA[Average bitrate is 986473]]>
             </line>
           </reporter-output>
         </test-method> <!-- receiverInputStatistic -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@340f438e]" name="afterTest" is-config="true" duration-ms="49" started-at="2016-01-21T17:44:23Z" finished-at="2016-01-21T17:44:23Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@b684286]" name="afterTest" is-config="true" duration-ms="58" started-at="2016-01-26T12:15:03Z" finished-at="2016-01-26T12:15:03Z">
           <params>
             <param index="0">
               <value>
@@ -1400,7 +1208,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=receiverInputStatistic status=SUCCESS method=ReceiverInputStatisticTest.receiverInputStatistic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@340f438e] output=Max bitrate  is 994647]]]>
+                <![CDATA[[TestResult name=receiverInputStatistic status=SUCCESS method=ReceiverInputStatisticTest.receiverInputStatistic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@b684286] output=Max bitrate  is 994896]]]>
               </value>
             </param>
           </params>
@@ -1409,128 +1217,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
     </test> <!-- Receiver1 - Pull input stream statistic - default parameters FFMPEG analyser -->
-    <test name="Receiver2 - Pull input stream statistic - default parameters FFMPEG analyser" duration-ms="21111" started-at="2016-01-21T15:44:23Z" finished-at="2016-01-21T15:44:44Z">
-      <class name="com.zixi.testing.ReceiverInputStatisticTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@3d24753a]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-21T17:44:23Z" finished-at="2016-01-21T17:44:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@3d24753a]" name="beforeTes" is-config="true" duration-ms="34" started-at="2016-01-21T17:44:23Z" finished-at="2016-01-21T17:44:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[665]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="FAIL" signature="receiverInputStatistic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@3d24753a]" name="receiverInputStatistic" duration-ms="21011" started-at="2016-01-21T17:44:23Z" finished-at="2016-01-21T17:44:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10.7.0.150]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[4300]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[receivertest]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[665]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [tested] but found [zero bit rate is detected]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [tested] but found [zero bit rate is detected]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at com.zixi.testing.ReceiverInputStatisticTest.receiverInputStatistic(ReceiverInputStatisticTest.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- receiverInputStatistic -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@3d24753a]" name="afterTest" is-config="true" duration-ms="60" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.ReceiverInputStatisticTest.receiverInputStatistic(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=receiverInputStatistic status=FAILURE method=ReceiverInputStatisticTest.receiverInputStatistic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverInputStatisticTest@3d24753a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
-    </test> <!-- Receiver2 - Pull input stream statistic - default parameters FFMPEG analyser -->
-    <test name="Receiver1: UDP out creation - default parameters FFMPEG analyser" duration-ms="78" started-at="2016-01-21T15:44:44Z" finished-at="2016-01-21T15:44:44Z">
+    <test name="Receiver1: UDP out creation - default parameters FFMPEG analyser" duration-ms="84" started-at="2016-01-26T10:15:03Z" finished-at="2016-01-26T10:15:03Z">
       <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@2acf57e3]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@30c7da1e]" name="testInit" is-config="true" duration-ms="2" started-at="2016-01-26T12:15:03Z" finished-at="2016-01-26T12:15:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@2acf57e3]" name="beforeTes" is-config="true" duration-ms="36" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@30c7da1e]" name="beforeTes" is-config="true" duration-ms="36" started-at="2016-01-26T12:15:03Z" finished-at="2016-01-26T12:15:03Z">
           <params>
             <param index="0">
               <value>
@@ -1541,7 +1234,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="receiverOutputUdpTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@2acf57e3]" name="receiverOutputUdpTest" duration-ms="6" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
+        <test-method status="PASS" signature="receiverOutputUdpTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@30c7da1e]" name="receiverOutputUdpTest" duration-ms="8" started-at="2016-01-26T12:15:03Z" finished-at="2016-01-26T12:15:03Z">
           <params>
             <param index="0">
               <value>
@@ -1683,7 +1376,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- receiverOutputUdpTest -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@2acf57e3]" name="afterTest" is-config="true" duration-ms="33" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@30c7da1e]" name="afterTest" is-config="true" duration-ms="37" started-at="2016-01-26T12:15:03Z" finished-at="2016-01-26T12:15:03Z">
           <params>
             <param index="0">
               <value>
@@ -1692,7 +1385,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=receiverOutputUdpTest status=SUCCESS method=ReceiverUdpOutCreationTest.receiverOutputUdpTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@2acf57e3] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=receiverOutputUdpTest status=SUCCESS method=ReceiverUdpOutCreationTest.receiverOutputUdpTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@30c7da1e] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
@@ -1701,190 +1394,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
     </test> <!-- Receiver1: UDP out creation - default parameters FFMPEG analyser -->
-    <test name="Receiver2: UDP out creation - default parameters FFMPEG analyser" duration-ms="73" started-at="2016-01-21T15:44:44Z" finished-at="2016-01-21T15:44:44Z">
-      <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@60f82f98]" name="testInit" is-config="true" duration-ms="0" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@60f82f98]" name="beforeTes" is-config="true" duration-ms="33" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[667]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="receiverOutputUdpTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@60f82f98]" name="receiverOutputUdpTest" duration-ms="4" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10.7.0.150]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[4300]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[toffmpeg]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[10.7.0.42:9999]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[net]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[0.0.0.0]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[receivertest]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[667]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPass: 1234]]>
-            </line>
-            <line>
-              <![CDATA[login_ip: 10.7.0.150]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4300]]>
-            </line>
-            <line>
-              <![CDATA[name: toffmpeg]]>
-            </line>
-            <line>
-              <![CDATA[target: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[type: net]]>
-            </line>
-            <line>
-              <![CDATA[nic: 0.0.0.0]]>
-            </line>
-            <line>
-              <![CDATA[ttl: 1]]>
-            </line>
-            <line>
-              <![CDATA[smoothing: 0]]>
-            </line>
-            <line>
-              <![CDATA[rtp: 0]]>
-            </line>
-            <line>
-              <![CDATA[fec: 0]]>
-            </line>
-            <line>
-              <![CDATA[rows: 10]]>
-            </line>
-            <line>
-              <![CDATA[cols: 10]]>
-            </line>
-            <line>
-              <![CDATA[remux_bitrate: 0]]>
-            </line>
-            <line>
-              <![CDATA[input_stream: receivertest]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- receiverOutputUdpTest -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@60f82f98]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.ReceiverUdpOutCreationTest.receiverOutputUdpTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=receiverOutputUdpTest status=SUCCESS method=ReceiverUdpOutCreationTest.receiverOutputUdpTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverUdpOutCreationTest@60f82f98] output=Test parameteres: ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
-    </test> <!-- Receiver2: UDP out creation - default parameters FFMPEG analyser -->
-    <test name="Broadcaster - redundant RX - redundacy" duration-ms="684288" started-at="2016-01-21T15:44:44Z" finished-at="2016-01-21T15:56:09Z">
+    <test name="Broadcaster - redundant RX - redundacy" duration-ms="2898170" started-at="2016-01-26T10:15:03Z" finished-at="2016-01-26T11:03:22Z">
       <class name="com.zixi.testing.RedundantFeedersOneBxTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@3d8c7aca]" name="testInit" is-config="true" duration-ms="4" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:44Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@506e6d5e]" name="testInit" is-config="true" duration-ms="6" started-at="2016-01-26T12:15:03Z" finished-at="2016-01-26T12:15:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@3d8c7aca]" name="beforeTes" is-config="true" duration-ms="30" started-at="2016-01-21T17:44:44Z" finished-at="2016-01-21T17:44:45Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@506e6d5e]" name="beforeTes" is-config="true" duration-ms="31" started-at="2016-01-26T12:15:03Z" finished-at="2016-01-26T12:15:04Z">
           <params>
             <param index="0">
               <value>
@@ -1895,7 +1411,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="redundancyBxRxRx(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@3d8c7aca]" name="redundancyBxRxRx" duration-ms="684205" started-at="2016-01-21T17:44:45Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="redundancyReceiverBackUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@506e6d5e]" name="redundancyReceiverBackUp" duration-ms="2898089" started-at="2016-01-26T12:15:04Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -1944,10 +1460,40 @@
             </param>
             <param index="9">
               <value>
-                <![CDATA[service zixireceiver stop]]>
+                <![CDATA[service zixibc stop]]>
               </value>
             </param>
             <param index="10">
+              <value>
+                <![CDATA[10.7.0.173]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[4300]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[toffmpeg]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[best]]>
+              </value>
+            </param>
+            <param index="16">
               <value>
                 <![CDATA[1088]]>
               </value>
@@ -1955,17 +1501,17 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- redundancyBxRxRx -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@3d8c7aca]" name="afterTest" is-config="true" duration-ms="48" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        </test-method> <!-- redundancyReceiverBackUp -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@506e6d5e]" name="afterTest" is-config="true" duration-ms="44" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.RedundantFeedersOneBxTest.redundancyBxRxRx(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException,com.jcraft.jsch.JSchException]]>
+                <![CDATA[public void com.zixi.testing.RedundantFeedersOneBxTest.redundancyReceiverBackUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=redundancyBxRxRx status=SUCCESS method=RedundantFeedersOneBxTest.redundancyBxRxRx(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@3d8c7aca] output={null}]]]>
+                <![CDATA[[TestResult name=redundancyReceiverBackUp status=SUCCESS method=RedundantFeedersOneBxTest.redundancyReceiverBackUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.RedundantFeedersOneBxTest@506e6d5e] output={null}]]]>
               </value>
             </param>
           </params>
@@ -1974,13 +1520,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.RedundantFeedersOneBxTest -->
     </test> <!-- Broadcaster - redundant RX - redundacy -->
-    <test name="Receiver1: UDP out deletion - default parameters FFMPEG analyser" duration-ms="80" started-at="2016-01-21T15:56:09Z" finished-at="2016-01-21T15:56:09Z">
+    <test name="Receiver1: UDP out deletion - default parameters FFMPEG analyser" duration-ms="78" started-at="2016-01-26T11:03:22Z" finished-at="2016-01-26T11:03:22Z">
       <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@79b4d0f]" name="testInit" is-config="true" duration-ms="2" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@7f690630]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@79b4d0f]" name="beforeTes" is-config="true" duration-ms="37" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@7f690630]" name="beforeTes" is-config="true" duration-ms="36" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -1991,7 +1537,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="receiverDeleteOutputStreamTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@79b4d0f]" name="receiverDeleteOutputStreamTest" duration-ms="6" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="receiverDeleteOutputStreamTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@7f690630]" name="receiverDeleteOutputStreamTest" duration-ms="6" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2032,7 +1578,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- receiverDeleteOutputStreamTest -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@79b4d0f]" name="afterTest" is-config="true" duration-ms="33" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@7f690630]" name="afterTest" is-config="true" duration-ms="34" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2041,7 +1587,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=receiverDeleteOutputStreamTest status=SUCCESS method=ReceiverOutputStreamDeletionTest.receiverDeleteOutputStreamTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@79b4d0f] output={null}]]]>
+                <![CDATA[[TestResult name=receiverDeleteOutputStreamTest status=SUCCESS method=ReceiverOutputStreamDeletionTest.receiverDeleteOutputStreamTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@7f690630] output={null}]]]>
               </value>
             </param>
           </params>
@@ -2050,89 +1596,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
     </test> <!-- Receiver1: UDP out deletion - default parameters FFMPEG analyser -->
-    <test name="Receiver2: UDP out deletion - default parameters FFMPEG analyser" duration-ms="75" started-at="2016-01-21T15:56:09Z" finished-at="2016-01-21T15:56:09Z">
-      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@42d3bd8b]" name="beforeTes" is-config="true" duration-ms="35" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[671]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@42d3bd8b]" name="testInit" is-config="true" duration-ms="0" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="receiverDeleteOutputStreamTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@42d3bd8b]" name="receiverDeleteOutputStreamTest" duration-ms="6" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[10.7.0.150]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[4300]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[toffmpeg]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[10.7.0.42:9999]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[671]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- receiverDeleteOutputStreamTest -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@42d3bd8b]" name="afterTest" is-config="true" duration-ms="32" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.ReceiverOutputStreamDeletionTest.receiverDeleteOutputStreamTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=receiverDeleteOutputStreamTest status=SUCCESS method=ReceiverOutputStreamDeletionTest.receiverDeleteOutputStreamTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverOutputStreamDeletionTest@42d3bd8b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
-    </test> <!-- Receiver2: UDP out deletion - default parameters FFMPEG analyser -->
-    <test name="Feeder - output stream deletion test" duration-ms="75" started-at="2016-01-21T15:56:09Z" finished-at="2016-01-21T15:56:09Z">
+    <test name="Feeder - output stream deletion test" duration-ms="77" started-at="2016-01-26T11:03:22Z" finished-at="2016-01-26T11:03:22Z">
       <class name="com.zixi.testing.FeederOutputDeletioinTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@17550481]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@22f71333]" name="testInit" is-config="true" duration-ms="2" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@17550481]" name="beforeTes" is-config="true" duration-ms="35" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@22f71333]" name="beforeTes" is-config="true" duration-ms="34" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2143,7 +1613,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@17550481]" name="broadcasterSingleStreamRemoving" duration-ms="8" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@22f71333]" name="broadcasterSingleStreamRemoving" duration-ms="10" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2253,7 +1723,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterSingleStreamRemoving -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@17550481]" name="afterTest" is-config="true" duration-ms="31" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@22f71333]" name="afterTest" is-config="true" duration-ms="30" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2262,7 +1732,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterSingleStreamRemoving status=SUCCESS method=FeederOutputDeletioinTest.broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@17550481] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=broadcasterSingleStreamRemoving status=SUCCESS method=FeederOutputDeletioinTest.broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@22f71333] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
@@ -2271,13 +1741,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.FeederOutputDeletioinTest -->
     </test> <!-- Feeder - output stream deletion test -->
-    <test name="Broadcaster - Remove Push input stream - default parameters FFMPEG analyser" duration-ms="73" started-at="2016-01-21T15:56:09Z" finished-at="2016-01-21T15:56:09Z">
+    <test name="Broadcaster - Remove Push input stream - default parameters FFMPEG analyser" duration-ms="69" started-at="2016-01-26T11:03:22Z" finished-at="2016-01-26T11:03:22Z">
       <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2ef9b8bc]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@380fb434]" name="testInit" is-config="true" duration-ms="1" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2ef9b8bc]" name="beforeTes" is-config="true" duration-ms="37" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@380fb434]" name="beforeTes" is-config="true" duration-ms="31" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2288,7 +1758,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2ef9b8bc]" name="broadcasterInputStreamDeletion" duration-ms="4" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@380fb434]" name="broadcasterInputStreamDeletion" duration-ms="5" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2345,7 +1815,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterInputStreamDeletion -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2ef9b8bc]" name="afterTest" is-config="true" duration-ms="31" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@380fb434]" name="afterTest" is-config="true" duration-ms="32" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2354,7 +1824,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterInputStreamDeletion status=SUCCESS method=BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2ef9b8bc] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=broadcasterInputStreamDeletion status=SUCCESS method=BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@380fb434] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
@@ -2363,9 +1833,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
     </test> <!-- Broadcaster - Remove Push input stream - default parameters FFMPEG analyser -->
-    <test name="Receiver1 - Remove Pull input stream - default parameters FFMPEG analyser" duration-ms="72" started-at="2016-01-21T15:56:09Z" finished-at="2016-01-21T15:56:09Z">
+    <test name="Receiver1 - Remove Pull input stream - default parameters FFMPEG analyser" duration-ms="80" started-at="2016-01-26T11:03:22Z" finished-at="2016-01-26T11:03:22Z">
       <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@77b52d12]" name="beforeTes" is-config="true" duration-ms="31" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@73f792cf]" name="testInit" is-config="true" duration-ms="0" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@73f792cf]" name="beforeTes" is-config="true" duration-ms="36" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2376,11 +1850,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@77b52d12]" name="testInit" is-config="true" duration-ms="0" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@77b52d12]" name="feederOutputToBxTest" duration-ms="9" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@73f792cf]" name="feederOutputToBxTest" duration-ms="10" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2416,7 +1886,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feederOutputToBxTest -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@77b52d12]" name="afterTest" is-config="true" duration-ms="30" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@73f792cf]" name="afterTest" is-config="true" duration-ms="32" started-at="2016-01-26T13:03:22Z" finished-at="2016-01-26T13:03:22Z">
           <params>
             <param index="0">
               <value>
@@ -2425,7 +1895,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=feederOutputToBxTest status=SUCCESS method=ReceiverPullInputStreamDeletionTest.feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@77b52d12] output={null}]]]>
+                <![CDATA[[TestResult name=feederOutputToBxTest status=SUCCESS method=ReceiverPullInputStreamDeletionTest.feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@73f792cf] output={null}]]]>
               </value>
             </param>
           </params>
@@ -2434,76 +1904,5 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
     </test> <!-- Receiver1 - Remove Pull input stream - default parameters FFMPEG analyser -->
-    <test name="Receiver2 - Remove Pull input stream - default parameters FFMPEG analyser" duration-ms="72" started-at="2016-01-21T15:56:09Z" finished-at="2016-01-21T15:56:09Z">
-      <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@90f6bfd]" name="beforeTes" is-config="true" duration-ms="34" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[677]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@90f6bfd]" name="testInit" is-config="true" duration-ms="0" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@90f6bfd]" name="feederOutputToBxTest" duration-ms="5" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10.7.0.150]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[4300]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[receivertest]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[677]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feederOutputToBxTest -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@90f6bfd]" name="afterTest" is-config="true" duration-ms="32" started-at="2016-01-21T17:56:09Z" finished-at="2016-01-21T17:56:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.ReceiverPullInputStreamDeletionTest.feederOutputToBxTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=feederOutputToBxTest status=SUCCESS method=ReceiverPullInputStreamDeletionTest.feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.ReceiverPullInputStreamDeletionTest@90f6bfd] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
-    </test> <!-- Receiver2 - Remove Pull input stream - default parameters FFMPEG analyser -->
-  </suite> <!-- Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser -->
+  </suite> <!-- Feeder: push output streaming suite -->
 </testng-results>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="5" name="Failed suite [Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser]" data-provider-thread-count="1">
+<suite verbose="5" name="Failed suite [Feeder: push output streaming suite]" data-provider-thread-count="1">
   <parameter name="lim_enc_addr" value=""/>
   <parameter name="remux_bitrate" value="0"/>
   <parameter name="ofec" value="30"/>
@@ -15,6 +15,7 @@
   <parameter name="onic" value="0.0.0.0"/>
   <parameter name="password" value=""/>
   <parameter name="stream_name" value="toffmpeg"/>
+  <parameter name="receiver_user_name" value="admin"/>
   <parameter name="host" value="10.7.0.91"/>
   <parameter name="mcast_ttl" value=""/>
   <parameter name="testid" value="677"/>
@@ -31,7 +32,7 @@
   <parameter name="bonded" value="0"/>
   <parameter name="sshPassword" value="zixiroot1234"/>
   <parameter name="stop_on_drop" value="0"/>
-  <parameter name="login_ip" value="10.7.0.150"/>
+  <parameter name="login_ip" value="10.7.0.173"/>
   <parameter name="fec_aware" value="0"/>
   <parameter name="port" value="0"/>
   <parameter name="uiport" value="4300"/>
@@ -40,6 +41,7 @@
   <parameter name="middle_bx_userName" value="admin"/>
   <parameter name="name" value="toffmpeg"/>
   <parameter name="middle_bx_userPass" value="1234"/>
+  <parameter name="receiver_main_stream_name" value="receivertest"/>
   <parameter name="udp_port_server" value="9999"/>
   <parameter name="userPassword" value="1234"/>
   <parameter name="input_stream" value="receivertest"/>
@@ -52,18 +54,22 @@
   <parameter name="rtmp_feedback" value="0"/>
   <parameter name="ohst" value="10.7.0.91"/>
   <parameter name="min_bit" value="0"/>
+  <parameter name="recever_uiport" value="4300"/>
   <parameter name="mip" value="live_recording.ts"/>
   <parameter name="mmt" value="0"/>
   <parameter name="stream" value="feederout"/>
   <parameter name="ostr" value="feederout"/>
   <parameter name="oprt" value="2088"/>
-  <parameter name="testduration" value="10"/>
+  <parameter name="receiver_ip" value="10.7.0.173"/>
+  <parameter name="testduration" value="5"/>
   <parameter name="cols" value="10"/>
   <parameter name="max_outputs" value="1"/>
   <parameter name="on" value="1"/>
   <parameter name="middle_bx_uiport" value="4444"/>
   <parameter name="oetp" value=""/>
   <parameter name="fec_force" value="0"/>
+  <parameter name="receiver_password" value="1234"/>
+  <parameter name="receiver_back_up_name" value="best"/>
   <parameter name="mcast_ip" value="0"/>
   <parameter name="olat" value="6000"/>
   <parameter name="limited" value="0"/>
@@ -78,7 +84,7 @@
   <parameter name="ofc" value="0"/>
   <parameter name="ttl" value="1"/>
   <parameter name="prog" value="1"/>
-  <parameter name="command" value="service zixireceiver stop"/>
+  <parameter name="command" value="service zixibc stop"/>
   <parameter name="fec_overhead" value="30"/>
   <parameter name="target" value="10.7.0.42:9999"/>
   <parameter name="rtp" value="0"/>
@@ -88,35 +94,25 @@
   <parameter name="chan" value="-1"/>
   <parameter name="complete" value=""/>
   <parameter name="dec_type" value=""/>
-  <test name="Receiver2 - Pull input stream statistic - default parameters FFMPEG analyser(failed)">
-    <parameter name="userPassword" value="1234"/>
-    <parameter name="uiport" value="4300"/>
-    <parameter name="testid" value="665"/>
-    <parameter name="id" value="receivertest"/>
-    <parameter name="testduration" value="10"/>
-    <parameter name="userName" value="admin"/>
-    <parameter name="login_ip" value="10.7.0.150"/>
+  <test name="Broadcaster - redundant RX - redundacy(failed)">
+    <parameter name="udp_port_server" value="9999"/>
+    <parameter name="sshPort" value="22"/>
+    <parameter name="receiver_password" value="1234"/>
+    <parameter name="receiver_back_up_name" value="best"/>
+    <parameter name="middle_bx_login_ip" value="10.7.0.91"/>
+    <parameter name="sshPassword" value="zixiroot1234"/>
+    <parameter name="command" value="service zixibc stop"/>
+    <parameter name="recever_uiport" value="4300"/>
+    <parameter name="receiver_user_name" value="admin"/>
+    <parameter name="bx_stream_id" value="feederout"/>
+    <parameter name="middle_bx_userName" value="admin"/>
+    <parameter name="middle_bx_userPass" value="1234"/>
+    <parameter name="sshUser" value="root"/>
+    <parameter name="receiver_main_stream_name" value="receivertest"/>
+    <parameter name="receiver_ip" value="10.7.0.173"/>
+    <parameter name="testid" value="1088"/>
+    <parameter name="middle_bx_uiport" value="4444"/>
     <classes>
-      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <methods>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
-      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <methods>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
       <class name="com.zixi.testing.FeederOutputDeletioinTest">
         <methods>
           <include name="beforeTes"/>
@@ -124,6 +120,20 @@
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.zixi.testing.FeederOutputDeletioinTest -->
+      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
       <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest">
         <methods>
           <include name="testInit"/>
@@ -134,37 +144,10 @@
       <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
         <methods>
           <include name="testInit"/>
-          <include name="testInit"/>
           <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
-        <methods>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
-      <class name="com.zixi.testing.RedundantFeedersOneBxTest">
-        <methods>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.RedundantFeedersOneBxTest -->
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <methods>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
       <class name="com.zixi.testing.FeederOutputPushToBxTest">
         <methods>
           <include name="beforeTes"/>
@@ -172,24 +155,42 @@
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.zixi.testing.FeederOutputPushToBxTest -->
+      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
+      <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
+      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
+      <class name="com.zixi.testing.RedundantFeedersOneBxTest">
+        <methods>
+          <include name="redundancyReceiverBackUp" invocation-numbers="0"/>
+          <include name="beforeTes"/>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.RedundantFeedersOneBxTest -->
       <class name="com.zixi.testing.ReceiverInputStatisticTest">
         <methods>
           <include name="testInit"/>
-          <include name="testInit"/>
           <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="receiverInputStatistic" invocation-numbers="0"/>
-          <include name="afterTest"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
-      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
-        <methods>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
     </classes>
-  </test> <!-- Receiver2 - Pull input stream statistic - default parameters FFMPEG analyser(failed) -->
-</suite> <!-- Failed suite [Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser] -->
+  </test> <!-- Broadcaster - redundant RX - redundacy(failed) -->
+</suite> <!-- Failed suite [Feeder: push output streaming suite] -->

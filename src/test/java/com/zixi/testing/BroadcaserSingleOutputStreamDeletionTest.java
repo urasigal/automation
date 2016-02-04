@@ -32,7 +32,8 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 	public void broadcasterSingleStreamRemoving(String login_ip,String userName,String userPassword,String id,String uiport,String testid) throws InterruptedException 
 	{
 		this.testid = testid;
-		Assert.assertEquals(((BroadcaserSingleOutputStreamDeletionDriver) testDriver).testIMPL(login_ip, userName, userPassword, id, uiport), "Output " +  ((BroadcaserSingleOutputStreamDeletionDriver) testDriver).getId1() + " removed.");
+		Assert.assertEquals(((BroadcaserSingleOutputStreamDeletionDriver) testDriver).testIMPL(login_ip, userName, userPassword, id, uiport),
+				"Output " +  ((BroadcaserSingleOutputStreamDeletionDriver) testDriver).getId1() + " removed.");
 	}
 	
 }

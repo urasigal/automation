@@ -94,4 +94,45 @@ public class JsonParser {
 		
 		return auto_index + "&" + progressive ;
 	}
+	
+	public static String receiverInputGetStreamIdByname(String streamsJson, String streamName)
+	{
+		JSONObject json = null;
+		String id = null;
+		json = new JSONObject(streamsJson);
+		JSONArray inputStreams = json.getJSONArray("streams");
+		
+		int numOfStreams = inputStreams.length();
+		for (int i = 0; i < numOfStreams; i++) 
+		{
+			json = inputStreams.getJSONObject(i);
+			if(json.getString("name").equals(streamName))
+			{
+				id = json.getString("id");
+				break;
+			}
+		}
+		return id;
+	}
+	
+	
+	public static String receiverOutputGetStreamIdByname(String streamsJson, String streamName)
+	{
+		JSONObject json = null;
+		String id = null;
+		json = new JSONObject(streamsJson);
+		JSONArray inputStreams = json.getJSONArray("streams");
+		
+		int numOfStreams = inputStreams.length();
+		for (int i = 0; i < numOfStreams; i++) 
+		{
+			json = inputStreams.getJSONObject(i);
+			if(json.getString("name").equals(streamName))
+			{
+				id = json.getString("out_id");
+				break;
+			}
+		}
+		return id;
+	}
 }
