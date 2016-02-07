@@ -4,9 +4,11 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -22,13 +24,16 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 	@BeforeClass
 	public void testInit() {
 		testDriver = new BroadcasterSingleUdpInCreationDriver();
+		productAboutDriver = new ProductAboutDriver();
 	}
 
+	
 	@Parameters({ "userName", "userPass", "login_ip", "ts_port", "id",
 			"rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
 			"mcast_force", "mcast_port", "nic", "type", "multicast", "enc_key",
 			"kompression", "uiport", "mcast_ttl", "enc_type", "mcast_out",
 			"complete", "max_outputs", "on" ,"testid"})
+	
 	@Test
 	public void broadcasterUdpInCreation(String userName, String userPass,
 			String login_ip, String ts_port, String id, String rtp_type,
@@ -38,7 +43,9 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 			String uiport, String mcast_ttl, String enc_type, String mcast_out,
 			String complete, String max_outputs, String on,String testid)
 			throws InterruptedException {
-		this.testid = testid;
+		this.testid = testid; 
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
 		Assert.assertEquals(((BroadcasterSingleUdpInCreationDriver) testDriver)
 				.testIMPL(userName, userPass, login_ip, ts_port, id, rtp_type,
 						multi_src, max_bitrate, time_shift, mcast_ip,
@@ -47,5 +54,4 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 						complete, max_outputs, on), "Stream " + "'" + id + "'"
 				+ " added.");
 	}
-
 }

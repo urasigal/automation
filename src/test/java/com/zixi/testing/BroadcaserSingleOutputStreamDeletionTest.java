@@ -33,7 +33,7 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 	{
 		this.testid = testid;
 		Assert.assertEquals(((BroadcaserSingleOutputStreamDeletionDriver) testDriver).testIMPL(login_ip, userName, userPassword, id, uiport),
-				"Output " +  "id" + " removed.");
+				"Output " +  id + " removed.");
 	}
 	
 }

@@ -48,11 +48,6 @@ public class ApiWorkir {
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "
 					+ responseCookieContainer[0]);
 
-			//int responseCode = con.getResponseCode();
-
-			// System.out.println("\nSending 'GET' request to URL : " + url);
-			// System.out.println("Response Code : " + responseCode);
-
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					con.getInputStream()));
 			String inputLine = "";
@@ -60,8 +55,6 @@ public class ApiWorkir {
 				response.append(inputLine);
 			}
 			in.close();
-
-			// System.out.println("+*+" + inputLine + "+*+");
 
 			if (mode == RECEIVERIDMODE) {
 				inputLine = response.toString();
@@ -191,23 +184,6 @@ public class ApiWorkir {
 				return splittedResults[0];
 			}
 			
-//			if (mode == FIND_SOURCE_IP_BX)
-//			{
-//				String tmp;
-//				inputLine = response.toString();
-//				json = new JSONObject(inputLine);
-//				JSONArray inputStreamsJsonArrayObj = json
-//						.getJSONArray("streams");
-//				int numberOfElementsInInputStreamsJsonArrayObj = inputStreamsJsonArrayObj
-//						.length();
-//				for (int i = 0; i < numberOfElementsInInputStreamsJsonArrayObj; i++) {
-//					json = inputStreamsJsonArrayObj.getJSONObject(i);
-//					
-//					tmp = json.get("id").toString();
-//					if(tmp.equals(anObject))
-//				}
-//				
-//			}
 
 		} catch (Exception e) {
 			String exceptionTest = e.getMessage();
@@ -218,4 +194,5 @@ public class ApiWorkir {
 		}
 		return response.toString();
 	}
+
 }

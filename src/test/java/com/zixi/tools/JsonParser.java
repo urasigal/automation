@@ -135,4 +135,14 @@ public class JsonParser {
 		}
 		return id;
 	}
+
+	public static String getBroadcasterVersion(String streamsJson)
+	{
+		JSONObject json = null;
+		String id = null;
+		json = new JSONObject(streamsJson);
+		return json.getInt("version_major") + "." + json.getInt("version_minor") + "." + json.getInt("version_minor2") 
+				+ "." + json.getInt("version_build") + "." + json.getString("platform"); 
+	}
+
 }
