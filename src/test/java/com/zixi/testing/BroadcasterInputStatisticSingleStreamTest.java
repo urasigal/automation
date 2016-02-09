@@ -34,6 +34,16 @@ public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
 			String userPass, String Host, String login_ip, String uiport,
 			String id, String testduration,String testid) throws InterruptedException {
 		this.testid = testid;
+		
+		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+				this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+				
+				testParameters = buildTestParametersString(new String[] { "userName", "userPass", "Host", "login_ip", "uiport", "id",
+						"testduration" ,"testid"}, 
+						
+						new String[] { userName, userPass, Host, login_ip, uiport, id,
+						testduration ,testid });
+		
 		Assert.assertEquals(
 				((BroadcasterInputStatisticSingleStreamDriver) testDriver)
 						.testStatistic(userName, userPass, Host, login_ip,

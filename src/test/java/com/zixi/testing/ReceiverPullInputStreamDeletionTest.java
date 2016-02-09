@@ -23,6 +23,12 @@ public class ReceiverPullInputStreamDeletionTest extends BaseTest{
 			String login_ip, String uiport, String id,String testid)
 			throws InterruptedException {
 		this.testid = testid;
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id" ,"testid" }, 
+				
+				new String[] { userName, userPassword, login_ip, uiport, id ,testid });
+		
+		
 		String streamForDeletion = ((ReceiverPullInputStreamDeletionDriver) testDriver)
 				.testIMPL(userName, userPassword, login_ip, uiport, id);
 		Assert.assertEquals(streamForDeletion,

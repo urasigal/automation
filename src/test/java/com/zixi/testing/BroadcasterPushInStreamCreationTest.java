@@ -37,6 +37,20 @@ public class BroadcasterPushInStreamCreationTest extends BaseTest {
 			String complete, String max_outputs, String on, String password,
 			String testid) throws InterruptedException {
 		this.testid = testid;
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "latency", "time_shift",
+				"force_p2p", "mcast_ip", "mcast_force", "mcast_port", "type",
+				"uiport", "analyze", "mcast_ttl", "id", "mcast_out", "complete",
+				"max_outputs", "on", "password" ,"testid"}, 
+				
+				new String[] {userName, userPass, login_ip, latency, time_shift,
+				force_p2p, mcast_ip, mcast_force, mcast_port, type,
+				uiport, analyze, mcast_ttl, id, mcast_out, complete,
+				max_outputs, on, password ,testid });
+		
+		
 		Assert.assertEquals(
 				((BroadcasterPushInStreamCreationDriver) testDriver).testIMPL(
 						userName, userPass, login_ip, latency, time_shift,

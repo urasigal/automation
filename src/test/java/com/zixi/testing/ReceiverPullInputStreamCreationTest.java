@@ -30,6 +30,18 @@ public class ReceiverPullInputStreamCreationTest extends BaseTest{
 			String port, String session, String stream,String testid)
 			throws InterruptedException {
 		this.testid = testid;
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "dec_key",
+				"dec_type", "fec_adaptive", "fec_aware", "fec_force",
+				"fec_latency", "fec_overhead", "host", "latency", "min_bit",
+				"name", "nic", "port", "session", "stream" ,"testid"}, 
+				
+				new String[] { userName, userPass, login_ip, uiport, dec_key,
+				dec_type, fec_adaptive, fec_aware, fec_force,
+				fec_latency, fec_overhead, host, latency, min_bit,
+				name, nic, port, session, stream ,testid});
+		
+		
 		Assert.assertEquals(
 				((ReceiverPullInputStreamCreationDriver) testDriver).testIMPL(
 						userName, userPass, login_ip, uiport, dec_key,

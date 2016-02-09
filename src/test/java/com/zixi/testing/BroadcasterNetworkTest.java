@@ -26,6 +26,14 @@ public class BroadcasterNetworkTest extends BaseTest{
 							   String command, String login_ip, String uiport, String userName, String userPass, String testid)
 			throws InterruptedException, IOException, JSchException {
 		this.testid = testid;
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "sshuser", "sshpass", "sshaddress", "sshport", "command", "login_ip", "uiport",
+				"userName", "userPass","testid" }, 
+				new String[] { sshuser, sshpass, sshaddress, sshport, command, login_ip, uiport,
+				userName, userPass,testid});
+		
 		String ips[] = ((NetworkingDriver)testDriver).getServerInterfacesAddresses(sshuser, sshpass, 
 				sshaddress, sshport, command);
 		List<String> ipz = JsonParser.retriveIpAddresses(((NetworkingDriver)testDriver).getIpsFromApi(login_ip, uiport, userName, userPass));

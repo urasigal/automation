@@ -41,6 +41,22 @@ public class BroadcasterRtmpInputTest extends BaseTest {
 			String mcast_out, String complete, String max_outputs, String on,
 			String testid) throws InterruptedException {
 		this.testid = testid;
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "rtmp_nulls", "id",
+				"rtmp_url", "rtmp_name", "time_shift", "mcast_ip", "mcast_force",
+				"mcast_port", "type", "rtmp_user", "rtmp_bitrate", "rtmp_passwd",
+				"uiport", "mcast_ttl", "rtmp_latency", "mcast_out", "complete",
+				"max_outputs", "on" ,"testid"}, 
+				
+				new String[] {userName, userPass, login_ip, rtmp_nulls, id,
+				rtmp_url, rtmp_name, time_shift, mcast_ip, mcast_force,
+				mcast_port, type, rtmp_user, rtmp_bitrate, rtmp_passwd,
+				uiport, mcast_ttl, rtmp_latency, mcast_out, complete,
+				max_outputs, on ,testid});
+		
+		
 		Assert.assertEquals(((BroadcasterRtmpInCreationDriver) testDriver)
 				.testIMPL(userName, userPass, login_ip, rtmp_nulls, id,
 						rtmp_url, rtmp_name, time_shift, mcast_ip, mcast_force,

@@ -36,6 +36,19 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 			String rec_duration, String rtmp_url, String rtmp_name,
 			String rtmp_user, String testid) throws InterruptedException {
 		this.testid = testid;
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix",
+					"max_outputs", "mcast_out", "time_shift", "old", "fast_connect",
+					"kompression", "enc_type", "enc_key", "rec_history",
+					"rec_duration", "rtmp_url", "rtmp_name", "rtmp_user", "testid" }, 
+				new String[] { userName, userPass, login_ip, uiport, type, id, matrix,
+								max_outputs, mcast_out, time_shift, old, fast_connect,
+								kompression, enc_type, enc_key, rec_history,
+								rec_duration, rtmp_url, rtmp_name, rtmp_user, testid });
+		
+		
 		Assert.assertEquals(((BroadcasterRtmpPushInputStreamDriver) testDriver)
 				.testIMPL(userName, userPass, login_ip, uiport, type, id, matrix,
 						max_outputs, mcast_out, time_shift, old, fast_connect,

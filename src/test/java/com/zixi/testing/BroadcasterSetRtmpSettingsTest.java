@@ -6,7 +6,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
-import com.zixi.drivers.TestDriver;
 
 public class BroadcasterSetRtmpSettingsTest extends BaseTest {
 	private TestDriver testDriver;
@@ -26,6 +25,18 @@ public class BroadcasterSetRtmpSettingsTest extends BaseTest {
 			String rtmp_auto_out_latency, String testid)
 			throws InterruptedException {
 		this.testid = testid;
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "rtmp_on", "rtmp_port",
+				"rtmp_auto_out", "rtmp_auto_in", "rtmp_pcr_int",
+				"rtmp_auto_out_latency", "testid" }, 
+				
+				new String[] { userName, userPass, login_ip, uiport, rtmp_on, rtmp_port,
+				rtmp_auto_out, rtmp_auto_in, rtmp_pcr_int,
+				rtmp_auto_out_latency, testid });
+		
+		
 		Assert.assertEquals(((BroadcasterSetRtmpSettingsDriver) testDriver)
 				.testIMPL(userName,
 						 userPass,  login_ip, uiport, rtmp_on,  rtmp_port,

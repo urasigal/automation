@@ -6,7 +6,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
-import com.zixi.drivers.TestDriver;
 
 public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 
@@ -30,6 +29,22 @@ public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 			String dec_key, String password, String testid)
 			throws InterruptedException {
 		this.testid = testid;
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
+		
+		testParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "uiport", "type",
+				"name", "stream", "matrix", "url", "url_alt", "rtmp_stream",
+				"user", "bandwidth", "latency", "reconnect", "sendfi",
+				"disconnect_low_br", "static_latency", "dec_type", "dec_key",
+				"password", "testid" }, 
+				
+				new String[] { login_ip, userName, userPassword, uiport, type,
+				name, stream, matrix, url, url_alt, rtmp_stream,
+				user, bandwidth, latency, reconnect, sendfi,
+				disconnect_low_br, static_latency, dec_type, dec_key,
+				password, testid  });
+		
+		
 		Assert.assertEquals(
 				((BroadcasterRtmpPushOutputCreationDriver) testDriver)
 						.testIMPL(login_ip, userName, userPassword, uiport,

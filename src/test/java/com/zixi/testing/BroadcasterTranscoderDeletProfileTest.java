@@ -22,6 +22,16 @@ public class BroadcasterTranscoderDeletProfileTest extends BaseTest{
 			throws InterruptedException {
 
 		this.testid = testid;
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "profile_name",
+				"testid" }, 
+				
+				new String[] {userName,userPass, login_ip, uiport, profile_name,
+				testid });
+		
+		
 		Assert.assertEquals(((BroadcasterTranscoderDeletProfileDriver) testDriver)
 				.testIMPL(userName, userPass, login_ip, uiport, profile_name),
 				"Profile deleted");

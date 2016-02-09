@@ -6,7 +6,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
-import com.zixi.drivers.TestDriver;
 
 public class BxFileTransferAndVodSettingsTest extends BaseTest{
 	
@@ -62,6 +61,50 @@ private TestDriver testDriver;
 			String testid) throws InterruptedException 
 	{
 		this.testid = testid;
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "userName",
+				"userPass" ,
+				"login_ip",
+				"uiport",
+				"ft_download" ,
+				"ft_upload",
+				"ft_auto_index" ,
+				"ft_prog" ,
+				"ft_encrypt" ,
+				"ft_bitrate_cache" ,
+				"ft_aggr" ,
+				"ft_mtu" ,
+				"ft_init_speed" ,
+				"ft_cache" ,
+				"ft_proxy_http_port" ,
+				"ft_proxy_https_port" ,
+				"max_download_bitrate" ,
+				"max_upload_bitrate" ,
+				"testid" }, 
+				
+				new String[] { userName,
+				userPass ,
+				login_ip,
+				uiport,
+				ft_download ,
+				ft_upload,
+				ft_auto_index ,
+				ft_prog ,
+				ft_encrypt ,
+				ft_bitrate_cache ,
+				ft_aggr ,
+				ft_mtu ,
+				ft_init_speed ,
+				ft_cache ,
+				ft_proxy_http_port ,
+				ft_proxy_https_port ,
+				max_download_bitrate ,
+				max_upload_bitrate ,
+				testid});
+		
+		
 		Assert.assertEquals(((BxFileTransferAndVodSettingsDriver) testDriver).testIMPL( userName,
 				 userPass ,
 				 login_ip,

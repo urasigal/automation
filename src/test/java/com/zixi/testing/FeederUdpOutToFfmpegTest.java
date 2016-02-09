@@ -2,6 +2,7 @@ package com.zixi.testing;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
+
 import com.zixi.drivers.*;
 
 
@@ -22,6 +23,16 @@ public class FeederUdpOutToFfmpegTest extends BaseTest{
 			String port, String ip, String prog, String chan, String oh,
 			String op, String onic, String ottl, String osmooth,String testid) throws InterruptedException {
 		this.testid = testid;
+		
+		testParameters = buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "name", "mip",
+				"port", "ip", "prog", "chan", "oh",
+				"op", "onic", "ottl", "osmooth" ,"testid"}, 
+				
+				new String[] { userName, userPass, login_ip, uiport, name, mip,
+				port, ip, prog, chan, oh,
+				op, onic, ottl, osmooth ,testid });
+		
+		
 		Assert.assertEquals(
 				((FeederUdpOutToFfmpegDriver) testDriver).testIMPL(
 						 userName,  userPass,  login_ip,  uiport,  name,  mip,

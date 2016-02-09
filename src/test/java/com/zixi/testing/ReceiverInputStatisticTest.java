@@ -24,6 +24,14 @@ public class ReceiverInputStatisticTest extends BaseTest {
 			String login_ip, String uiport, String id, String testduration,
 			String testid) throws InterruptedException {
 		this.testid = testid;
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id",
+				"testduration" ,"testid" }, 
+				
+				new String[] {userName, userPassword, login_ip, uiport, id,
+				testduration ,testid });
+		
+		
 		String streamForDeletion = ((ReceiverInputStatisticDriver) testDriver)
 				.testIMPL(userName, userPassword, login_ip, uiport, id,
 						testduration);

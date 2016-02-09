@@ -32,6 +32,14 @@ public class FeederOutputDeletioinTest extends BaseTest{
 			String mip, String port, String ip, String prog, String chan,
 			String type, String host,String testid) throws InterruptedException {
 		this.testid = testid;
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip",
+				"port", "ip", "prog", "chan", "type","host" ,"testid" }, 
+				
+				new String[] { userName, userPass, login_ip, uiport, id, mip,
+				port, ip, prog, chan, type,host ,testid });
+		
+		
 		Assert.assertEquals(((FeederOutputDeletionDriver) testDriver).testIMPL(
 				userName, userPass, login_ip, uiport, id, mip, port, ip, prog,
 				chan, type, host), "Output deleted.");

@@ -25,6 +25,18 @@ public class BroadcasterCreateAddaptiveGroupTest extends BaseTest {
 			String bitrates, String max_time, String testid)
 			throws InterruptedException {
 		this.testid = testid;
+		
+		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+				this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+				
+				testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
+						"record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi",
+						"multicast", "streams", "bitrates", "max_time", "testid" }, 
+						
+						new String[] { "userName", "userPass", "login_ip", "uiport", "name",
+						"record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi",
+						"multicast", "streams", "bitrates", "max_time", "testid" });
+		
 		Assert.assertEquals(
 				((BroadcasterCreateAddaptiveGroupDriver) testDriver).testIMPL(
 						userName, userPass, login_ip, uiport, name, record,

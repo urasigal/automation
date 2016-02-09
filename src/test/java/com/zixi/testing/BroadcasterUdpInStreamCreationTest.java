@@ -43,8 +43,23 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 			String uiport, String mcast_ttl, String enc_type, String mcast_out,
 			String complete, String max_outputs, String on,String testid)
 			throws InterruptedException {
-		this.testid = testid; 
+		this.testid = testid;
+		
+		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "ts_port", "id",
+				"rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
+				"mcast_force", "mcast_port", "nic", "type", "multicast", "enc_key",
+				"kompression", "uiport", "mcast_ttl", "enc_type", "mcast_out",
+				"complete", "max_outputs", "on" ,"testid" }, 
+				
+				new String[] { userName, userPass, login_ip, ts_port, id,
+				rtp_type, multi_src, max_bitrate, time_shift, mcast_ip,
+				mcast_force, mcast_port, nic, type, multicast, enc_key,
+				kompression, uiport, mcast_ttl, enc_type, mcast_out,
+				complete, max_outputs, on ,testid });
+		
 		
 		Assert.assertEquals(((BroadcasterSingleUdpInCreationDriver) testDriver)
 				.testIMPL(userName, userPass, login_ip, ts_port, id, rtp_type,

@@ -51,6 +51,24 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 			String func, String fec_force, String mcast_out,
 			String propertiesFile,String testid) throws InterruptedException {
 		
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "Host", "login_ip", "id", "source",
+				"uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
+				"mcast_force", "time_shift", "nic", "max_outputs", "type",
+				"password", "mcast_port", "complete", "mcast_ip", "fec_adaptive",
+				"mcast_ttl", "on", "func", "fec_force", "mcast_out",
+				"propertiesFile" ,"testid"}, 
+				
+				new String[] {userName, userPass, Host, login_ip, id, source,
+				uiport, pull_port, latency, fec_latency, fec_overhead,
+				mcast_force, time_shift, nic, max_outputs, type,
+				password, mcast_port, complete, mcast_ip, fec_adaptive,
+				mcast_ttl, on, func, fec_force, mcast_out,
+				propertiesFile ,testid });
+		
+		
 		Assert.assertEquals(
 				((BroadcasterSinglePullInStreamCreationDriver) testDriver)
 						.testIMPL(userName, userPass, Host, login_ip, id,

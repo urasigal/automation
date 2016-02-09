@@ -35,6 +35,20 @@ public class BroadcasterPushOutStreamCreationTest extends BaseTest {
 			String stream, String port, String uiport, String alias, String id,
 			String testid) throws InterruptedException {
 		this.testid = testid;
+		
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "host", "latency",
+				"fec_force", "session", "fec_adaptive", "nic", "fec_block", "type",
+				"snames", "fec_aware", "fec_overhead", "stream", "port", "uiport",
+				"alias", "id" ,"testid"}, 
+				
+				new String[] { userName, userPass, login_ip, host, latency,
+				fec_force, session, fec_adaptive, nic, fec_block, type,
+				snames, fec_aware, fec_overhead, stream, port, uiport,
+				alias, id ,testid });
+		
+		
 		Assert.assertEquals(
 				((BroadcasterPushOutStreamCreationDriver) testDriver).testIMPL(
 						userName, userPass, login_ip, host, latency, fec_force,

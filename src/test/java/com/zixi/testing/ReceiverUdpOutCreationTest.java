@@ -24,6 +24,15 @@ public class ReceiverUdpOutCreationTest extends BaseTest {
 			String fec, String rows, String cols, String remux_bitrate, String input_stream,
 			String testid) throws InterruptedException {
 		this.testid = testid;
+		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
+				"target", "type", "nic", "ttl", "smoothing", "rtp", "fec", "rows",
+				"cols", "remux_bitrate", "input_stream", "testid"}, 
+				
+				new String[] { userName, userPass, login_ip, uiport, name,
+				target, type, nic, ttl, smoothing, rtp, fec, rows,
+				cols, remux_bitrate, input_stream, testid });
+		
 		Assert.assertEquals(((ReceiverUdpOutCreationDriver) testDriver).testIMPL(
 				userName, userPass, login_ip, uiport, name,
 				target, type, nic, ttl, smoothing, rtp, fec, rows,

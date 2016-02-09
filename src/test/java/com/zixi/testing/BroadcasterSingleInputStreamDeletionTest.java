@@ -34,6 +34,14 @@ public class BroadcasterSingleInputStreamDeletionTest extends BaseTest {
 			String userName, String userPassword, String streamId,
 			String uiport, String testid) throws InterruptedException {
 		this.testid = testid;
+		
+this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
+		
+		testParameters = buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "streamId", "uiport" ,"testid" }, 
+				
+				new String[] {login_ip, userName, userPassword, streamId, uiport ,testid });
+		
+		
 		Assert.assertNotNull(((BroadcasterSingleInputStreamDeletionDriver) testDriver)
 				.removeInput(login_ip, userName, userPassword, streamId, uiport));
 	}
