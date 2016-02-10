@@ -37,8 +37,8 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 				
 				testParameters = buildTestParametersString(new String[] { "login_ip","userName","userPassword","id","uiport", "testid" }, 
 								new String[] {login_ip,userName,userPassword,id,uiport, testid});
+				
 		Assert.assertEquals(((BroadcaserSingleOutputStreamDeletionDriver) testDriver).testIMPL(login_ip, userName, userPassword, id, uiport),
 				"Output " +  id + " removed.");
 	}
-	
 }

@@ -24,7 +24,6 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 	@BeforeClass
 	public void testInit() {
 		testDriver = new BroadcasterSingleUdpInCreationDriver();
-		productAboutDriver = new ProductAboutDriver();
 	}
 
 	

@@ -24,7 +24,6 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 	final private static String params2 = "&";
 	final private static String params4 = "=";
 	final private static String params5 = "ie_fooler=0.45086039789021015";
-	final private static String params7 = "/zixi/remove_output.json?";
 	private String internalStreamID = null;
 	private String internalStreamName = null;
 	final private String rid = "id";
@@ -45,17 +44,14 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		for (int i = 0; i < outputStreamsArray.length(); i++) {
 			//System.out.println("before");
 			JSONObject outputStream = outputStreamsArray.getJSONObject(i);
-		   
-		    //System.out.println("after");
-		    //id1 = stream.getString("id");
-		    streamName = outputStream.getString("stream_id");
+		    streamName = outputStream.getString("name");
 		    if(streamName.equals(name))
 		    {
 		    	internalStreamID = outputStream.getString("id");
 		    	internalStreamName = outputStream.getString("stream_id");
 		    }
 		  }
-		return streamDeletor.sendGet(HTTP + login_ip + ":" + uiport +  params7 + rid + params4 + internalStreamID , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);
+		return streamDeletor.sendGet(HTTP + login_ip + ":" + uiport +  "/zixi/remove_output.json?" + rid + "=" + internalStreamID +"&stream=" + internalStreamName , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);
 	}
 	
 	public String getId1() {

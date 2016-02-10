@@ -25,7 +25,7 @@ public class BaseTest {
 	protected String testid;
 	protected String version = "";
 	protected String automationTestIdentifiers = "";
-	protected ProductAboutDriver productAboutDriver;
+	protected ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 	
 	protected String testParameters =  "";
 	

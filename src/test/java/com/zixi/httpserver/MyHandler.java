@@ -51,12 +51,12 @@ public class MyHandler {
 	  }
 	
 	
-	public void handle(Socket socket) throws IOException
+	public void handle(Socket socket, String regime) throws IOException
 	{
 		function   = sroxyLocalDriver.getFunction();
 		source     = sroxyLocalDriver.getSource();
 		mode       = sroxyLocalDriver.getMode();
-		proxy_port = sroxyLocalDriver.getProxy_port();
+		proxy_port = sroxyLocalDriver.getProxy_port(); 
 		int connectionErrors = 0;
 		
 		InputStream in = socket.getInputStream();
@@ -77,15 +77,26 @@ public class MyHandler {
 	    		  String requestFromClient = new String(b);
 	    		  
 	    		  String streamName  = StringUtils.substringBetween(requestFromClient, "/", ".flv");
-	    		  System.out.println("Client request" + requestFromClient);
+	    		  System.out.println("Client request " + requestFromClient);
 	    		  System.out.println("Requsted stream name " + streamName); 
 	    		  synchronized(flvload1)
 	    		  {
-			  		String URL  = "GET "
-					+ "/" + function + "?url=zixi%3A%2F%2F" + source +"%2F"+ streamName +"&mode="+ mode
-					+ " HTTP/1.1\r\nUser-Agent: Mozilla/5.0\r\nHost:127.0.0.1" + ":" + proxy_port
-					+ "\r\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\r\nConnection: keep-alive\r\n\r\n";	
-			  		
+	    			  String URL = "";
+	    			  if (regime.equals("HLS"))
+	    			  {
+	    				  streamName = StringUtils.substringBetween(requestFromClient, "?bbb=" , ".m3u8");
+	    				  System.out.println("Requsted stream name " + streamName); 
+	    				  URL  = "GET /"
+	    							+ streamName + ".m3u8 HTTP/1.1" + "\r\nUser-Agent: Mozilla/5.0\r\nHost:127.0.0.1" + ":" + proxy_port
+	    							+ "\r\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\r\nConnection: keep-alive\r\n\r\n";	
+	    			  }
+	    			  else
+	    			  {
+				  		URL  = "GET "
+						+ "/" + function + "?url=zixi%3A%2F%2F" + source +"%2F"+ streamName +"&mode="+ mode
+						+ " HTTP/1.1\r\nUser-Agent: Mozilla/5.0\r\nHost:127.0.0.1" + ":" + proxy_port
+						+ "\r\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\r\nConnection: keep-alive\r\n\r\n";	
+	    			  }
 			  		flvload1.send(URL.getBytes(), queue, this);
 
 	    		  }

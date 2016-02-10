@@ -22,13 +22,14 @@ private TestDriver testDriver;
 				   ,"stream_name" 	// Source stream name.
 				   ,"mode" 			// Proxy functional mode.
 				   , "proxy_port"	// The port that proxy listen to 
+				   ,"regime"
 				   , "testid"
 			}) 
 	@Test
-	public void broadcasterSingleStreamRemoving(String function, String source, String stream_name, String mode, String proxy_port, String testid) throws InterruptedException 
+	public void broadcasterSingleStreamRemoving(String function, String source, String stream_name, String mode, String proxy_port, String regime, String testid) throws InterruptedException 
 	{
 		this.testid = testid;
-		Assert.assertEquals(((ProxyLocalDriver) testDriver).testIMPL(function, source, stream_name, mode, proxy_port),
+		Assert.assertEquals(((ProxyLocalDriver) testDriver).testIMPL(function, source, stream_name, mode, proxy_port, regime),
 				"Output ");
 	}
 }

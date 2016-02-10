@@ -34,7 +34,7 @@ implements TestDriver{
 	}
 
 	public String testIMPL(String function, String source, String stream_name,
-			String mode, String proxy_port) {
+			String mode, String proxy_port, String regime) { 
 		this.function = function;
 		this.source = source;
 		this.mode =  mode;
@@ -47,10 +47,8 @@ implements TestDriver{
 			t.start();	
 			zTcpServer = new ZTcpServer(flvload1 , this);
 			url = createURL(function,  source,  stream_name, mode,  proxy_port);		
-			zTcpServer.runServer();
+			zTcpServer.runServer(regime);
 			t.join();
-			
-			
 			
 		} catch ( IOException | InterruptedException e1 ) {
 			// TODO Auto-generated catch block

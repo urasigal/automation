@@ -18,11 +18,7 @@ public class ZTcpServer {
 		this.proxyLocalDriver = proxyLocalDriver;
 	}
 
-//	public void setMyHandler(MyHandler myHandler) {
-//		this.myHandler = myHandler;
-//	}
-
-	public void runServer() throws IOException 
+	public void runServer(String regime) throws IOException  
 	{
         int portNumber = 8087;
         boolean listening = true;
@@ -31,7 +27,7 @@ public class ZTcpServer {
         { 
             while (listening) 
             {
-            	ZServerThread zServerThread =   new ZServerThread(serverSocket.accept(), flvload1, proxyLocalDriver); // Blocking here.
+            	ZServerThread zServerThread =   new ZServerThread(serverSocket.accept(), flvload1, proxyLocalDriver, regime); // Blocking here.
             	//zServerThread.setMyHandler(myHandler);
             	zServerThread.start();
             }

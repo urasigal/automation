@@ -170,7 +170,6 @@ public class FLV implements Runnable {
 							this.write(key);
 						}
 					}
-					
 				}
 				
 			} catch (Exception e) {
@@ -212,7 +211,7 @@ public class FLV implements Runnable {
 						+ readBuffer.limit() + "; Position: "
 						+ readBuffer.position());
 			}
-		} catch (IOException e) {
+		} catch (IOException | NegativeArraySizeException e ) {
 			// The remote forcibly closed the connection, cancel
 			// the selection key and close the channel.
 			key.cancel();
@@ -240,10 +239,6 @@ public class FLV implements Runnable {
 		byte[] rspData = new byte[numRead];
 		//System.arraycopy(data, 0, rspData, 0, numRead);
 
-		if (debug == true) {
-			// System.out.println("Received data from the server (broadcaster) "
-			// + new String(data, "UTF-8"));
-		}
 	}
 
 	// Writes the request body to a buffer.

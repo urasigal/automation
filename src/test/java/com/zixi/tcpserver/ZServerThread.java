@@ -20,14 +20,14 @@ public class ZServerThread extends Thread{
 	 private FLV flvload1;
 	 private Socket socket = null;
 	 private ProxyLocalDriver proxyLocalDriver;
-
-	   
-    public ZServerThread(Socket socket, FLV flvload12, ProxyLocalDriver proxyLocalDriver) 
+	 private String regime;
+    public ZServerThread(Socket socket, FLV flvload12, ProxyLocalDriver proxyLocalDriver, String regime) 
     {
         super("ZServerThread");
         this.proxyLocalDriver = proxyLocalDriver;
         this.flvload1 = flvload12;
         this.socket = socket;
+        this.regime = regime;
         try {
 			socket.setSoTimeout(1000000);
 		} catch (SocketException e) {
@@ -40,7 +40,7 @@ public class ZServerThread extends Thread{
 	    try {
 	    	newMyHandler = new MyHandler(flvload1);
 	    	newMyHandler.setSroxyLocalDriver(proxyLocalDriver);
-	    	newMyHandler.handle(socket);
+	    	newMyHandler.handle(socket,regime);
 		} catch (IOException e) {
 			
 			
