@@ -49,11 +49,9 @@ public class BaseTest {
 	}
 	
 	@AfterMethod
-    public void afterTest(Method test, ITestResult result)
-            throws MalformedURLException {
-		
+    public void afterTest(Method test, ITestResult result) {
+     try{		
         TestlinkIntegration tl = new TestlinkIntegration();
-
         if (result.isSuccess()) {
  
             tl.setResult(testid,
@@ -64,6 +62,10 @@ public class BaseTest {
                     ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n"+  
                             automationTestIdentifiers + "\nTest Parameters: "+ testParameters);
         }
+     }catch(Exception e)
+     {
+    	 System.out.println("The error is" + e.getMessage()); 
+     }
     }
 	
 	protected String buildTestParametersString(String parametersNmes[], String[] paramertersValues)
