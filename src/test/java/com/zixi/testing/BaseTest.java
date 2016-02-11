@@ -29,7 +29,7 @@ public class BaseTest {
 	
 	protected String testParameters =  "";
 	
-	// Reflection stuff
+	// Reflection stuff.
 	protected Class c;
 	protected Object params[];
 	
