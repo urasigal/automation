@@ -26,7 +26,7 @@ public class BaseTest {
 	protected String version = "";
 	protected String automationTestIdentifiers = "";
 	protected ProductAboutDriver productAboutDriver = new ProductAboutDriver();
-	
+	protected TestBaseFunction testBaseFunction = new TestBaseFunction ();
 	protected String testParameters =  "";
 	
 	// Reflection stuff.
@@ -77,5 +77,19 @@ public class BaseTest {
 			sb.append("\n").append(parametersNmes[i]).append(" = ").append(paramertersValues[i]); 
 		}
 		return sb.toString();
+	}
+	
+	
+	protected class TestBaseFunction {
+		protected String buildTestParametersString(String parametersNmes[], String[] paramertersValues)
+		{
+			StringBuffer sb = new StringBuffer();
+			int length = parametersNmes.length;
+			for(int i = 0 ; i < length; i++ )
+			{
+				sb.append("\n").append(parametersNmes[i]).append(" = ").append(paramertersValues[i]); 
+			}
+			return sb.toString();
+		}
 	}
 }
