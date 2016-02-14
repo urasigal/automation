@@ -7,9 +7,7 @@ import com.zixi.tools.BroadcasterLoggableApiWorker;
 
 public class RedundantFeederOneBxDriver  extends BroadcasterLoggableApiWorker
 implements TestDriver{
-	
-	
-	
+
 	public long testIMPL(int udp_port)
 	{
 		DataGramZixiThread udpServer;

@@ -194,9 +194,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		long statistics[] = StreamStatisticAnalyzer.getMaxMinAvgLong(results);
 		System.out.println("Max is " + statistics[0] + "Min is " + statistics[1] + "Avg is " + statistics[2]);
 	}
-	
-	
-	
+
 	// Scenario: one BX, 1 receiver pull the stream from bx, then kill BX then stream from file backup.
 		@Parameters({ 
 			"udp_port_server",    // needed for UDP server, UDP server will be listen to this port. 
@@ -239,7 +237,6 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 			
 			// This class is used for getting an input stream meta data.
 			StreamsDriver inputStreams = new StreamsDriver();
-			
 			
 			// Get a main steam id by its name.
 			String mainId   = inputStreams.getOutputStreamIdByName(receiver_main_stream_name, receiver_ip, recever_uiport, receiver_user_name, receiver_password);
@@ -285,5 +282,4 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 			long statistics[] = StreamStatisticAnalyzer.getMaxMinAvgLong(results);
 			System.out.println("Max is " + statistics[0] + "Min is " + statistics[1] + "Avg is " + statistics[2]);
 		}
-	
 }
