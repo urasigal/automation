@@ -29,9 +29,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 
 	@BeforeClass
 	public void testInit() {
-
 		testDriver = new BroadcasterSinglePullInStreamCreationDriver();
-
 	}
 
 	@Parameters({ "userName", "userPass", "Host", "login_ip", "id", "source",
