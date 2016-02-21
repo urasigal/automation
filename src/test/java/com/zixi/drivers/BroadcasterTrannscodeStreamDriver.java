@@ -96,6 +96,11 @@ public class BroadcasterTrannscodeStreamDriver extends
 				outJson = apiworker.sendGet("http://" + login_ip + ":" + uiport
 					+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport);
 			}
+			if(mode.equals("h.265"))
+			{
+				outJson = apiworker.sendGet("http://" + login_ip + ":" + uiport
+					+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport);
+			}
 		
 			JSONObject responseJson = new JSONObject(outJson.toString());
 			JSONArray outputStreamsArray = responseJson.getJSONArray("profiles");

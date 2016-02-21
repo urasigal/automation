@@ -50,8 +50,6 @@ public class BroadcasterAddTranscoderProfileDriver extends
 		
 	}
 	
-	
-	
 	public String testIMPL(String userName, String userPass, String login_ip, String uiport,String mode, String profile_name,
 			String enc, String bitrate, String gop, String fixed_gop, String closed_gop, String performance,
 			String b_frames, String frame_type, String profile, String level, String bitrate_mode,
@@ -76,7 +74,7 @@ public class BroadcasterAddTranscoderProfileDriver extends
 				userPass, login_ip, uiport);
 
 		
-		if (mode.equals("h.264"))
+		if (mode.equals("h.264") || mode.equals("mpeg2") || mode.equals("h.265"))
 		{
 		return apiworker.sendGet("http://" + login_ip + ":"
 				+ uiport + "/zixi/add_h264_profile.json?" + rprofile_name
