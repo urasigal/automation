@@ -135,6 +135,20 @@ public class JsonParser {
 		}
 		return id;
 	}
+	
+	
+	public static int getInputStreamBitrate(String streamsJson, String streamName)
+	{
+		JSONObject json = null;
+		String id = null;
+		json = new JSONObject(streamsJson);
+		json = json.getJSONObject("net");
+		return json.getInt("bitrate");
+	}
+	
+	
+	
+	
 
 	public static String getBroadcasterVersion(String streamsJson)
 	{
