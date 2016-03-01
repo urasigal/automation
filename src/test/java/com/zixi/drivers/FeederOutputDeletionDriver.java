@@ -36,7 +36,7 @@ public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker imp
 				+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
 				login_ip, uiport);
 
-		return streamCreator.sendGet(HTTP + login_ip + params1 + uiport
+		return streamCreator.sendGet(HTTP + login_ip + ":" + uiport
 				+ params7 + rmip + "=" + mip + "&" + rport + "=" + port + "&"
 				+ rip + "=" + ip + "&" + rprog + "=" + prog + "&" + rchan + "="
 				+ chan + "&" + rtype + "=" + type + "&" + rid + "="

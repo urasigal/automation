@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Feeder: push output streaming suite" verbose="5" data-provider-thread-count="1">
+<!-- This test suite is intended to measure video drop time on the BX UDP output in a case when a two feeders are trying to establish a connection to this BX -->
 	<test name="Feeder - push to broadcaster test main feeder - redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -17,7 +18,7 @@
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
 		<parameter name="obit" value="8000000" />
-		<parameter name="olat" value="5000" />
+		<parameter name="olat" value="15000" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
 		<parameter name="oold" value="0" />
@@ -61,7 +62,7 @@
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
 		<parameter name="obit" value="8000000" />
-		<parameter name="olat" value="5000" />
+		<parameter name="olat" value="15000" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
 		<parameter name="oold" value="0" />

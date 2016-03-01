@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Feeder: push output streaming suite" verbose="5" data-provider-thread-count="1">
-	<test name="Feeder - Push to broadcaster test - default parameters FFMPEG analyser">
+<suite name="Redundancy: Broadcaster to Receiver scenario - restart a brodcaster" verbose="5" data-provider-thread-count="1">
+	<test name="Feeder - Push to broadcaster test - redundancy restart a broadcaster">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.174" />
@@ -17,7 +17,7 @@
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
 		<parameter name="obit" value="8000000" />
-		<parameter name="olat" value="6000" />
+		<parameter name="olat" value="15000" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
 		<parameter name="oold" value="0" />
@@ -45,7 +45,7 @@
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation test - default parameters FFMPEG analyser">
+	<test name="Broadcaster - Push input stream creation test - redundancy restart a broadcaster">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.91" />
@@ -70,7 +70,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Receiver1 - pull input stream creation - default parameters FFMPEG analyser">
+	<test name="Receiver1 - pull input stream creation - redundancy restart a broadcaster">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.173" />
@@ -83,7 +83,7 @@
 		<parameter name="fec_latency" value="150" />
 		<parameter name="fec_overhead" value="30" />
 		<parameter name="host" value="10.7.0.91" />
-		<parameter name="latency" value="1000" />
+		<parameter name="latency" value="15000" />
 		<parameter name="min_bit" value="0" />
 		<parameter name="name" value="receivertest" />
 		<parameter name="nic" value="0.0.0.0" />
@@ -95,7 +95,7 @@
 		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push from Feeder input stream statistics test - default paremeters">
+	<test name="Broadcaster - Push from Feeder input stream statistics test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.91" />
@@ -108,7 +108,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Receiver1 - Pull input stream statistic - default parameters FFMPEG analyser">
+	<test name="Receiver1 - Pull input stream statistic" >
 		<parameter name="login_ip" value="10.7.0.173" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -120,7 +120,7 @@
 		    <class name="com.zixi.testing.ReceiverInputStatisticTest"/>
 		</classes>
 	</test>
-	<test name="Receiver1: UDP out creation - default parameters FFMPEG analyser">
+	<test name="Receiver1: UDP out creation - redundaunt output">
 		<parameter name="login_ip" value="10.7.0.173" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -142,32 +142,22 @@
 			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
 		</classes>
 	</test>
-	<test name="Broadcaster - redundant RX - redundacy">
+	<test name="Broadcaster - redundant RX - redundancy restart a broadcaster">
 		<parameter name="udp_port_server" value="9999" />
-		<parameter name="bx_stream_id" value="feederout" />
 		<parameter name="middle_bx_login_ip" value="10.7.0.91" />
-		<parameter name="middle_bx_uiport" value="4444" />
-		<parameter name="middle_bx_userName" value="admin" />
-		<parameter name="middle_bx_userPass" value="1234" />
 		<parameter name="sshUser" value="root" />
 		<parameter name="sshPassword" value="zixiroot1234" />
 		<parameter name="sshPort" value="22" />
-		<parameter name="command" value="service zixibc stop" />
-		<parameter name="receiver_ip" value="10.7.0.173" />
-		<parameter name="recever_uiport" value="4300" />
-		<parameter name="receiver_user_name" value="admin" />
-		<parameter name="receiver_password" value="1234" />
-		<parameter name="receiver_main_stream_name" value="toffmpeg" />
-		<parameter name="receiver_back_up_name" value="best" />
+		<parameter name="command" value="service zixibc restart" /> 
 		<parameter name="testid" value="1088" />
 		<classes>
 		    <class name="com.zixi.testing.RedundantFeedersOneBxTest"/>
 		    <methods>
-        		<include name="redundancyReceiverBackUp" />
+        		<include name="redundancyReceiverBroadcaserRestart" />
      		 </methods>
 		</classes>
 	</test>
-	<test name="Receiver1: UDP out deletion - default parameters FFMPEG analyser">
+	<test name="Receiver1: UDP out deletion - redundant output">
 		<parameter name="login_ip" value="10.7.0.173" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />

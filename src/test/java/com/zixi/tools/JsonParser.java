@@ -2,7 +2,10 @@ package com.zixi.tools;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
+import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -148,7 +151,28 @@ public class JsonParser {
 	
 	
 	
-	
+	public static String getActiveIpOfReceiverInput(Supplier<String> supplier, String streamName)
+	{
+		JSONObject json = null;
+		String IP = null;
+		json = new JSONObject(supplier.get()); // Convert an accepted string to Json object. supplier -  it is an instance of the anonymous inner calss
+		JSONArray inputStreams = json.getJSONArray("streams"); // Get streams array
+		
+		int numOfStreams = inputStreams.length();
+		
+		for (int i = 0; i < numOfStreams; i++) 
+		{
+			json = inputStreams.getJSONObject(i);
+			if(json.getString("name").equals(streamName))
+			{
+				IP = json.getString("full_address");
+				IP =  StringUtils.substringBetween(IP, ": ", ":");
+				break;
+			}
+		}
+		
+		return IP;
+	}
 
 	public static String getBroadcasterVersion(String streamsJson)
 	{
