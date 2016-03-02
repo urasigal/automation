@@ -33,6 +33,7 @@ public class DataGramZixiThread extends Thread{
 		this.port = port;
 		try {
 			socket = new DatagramSocket(port);
+			socket.setSoTimeout(0);
 		} catch (SocketException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

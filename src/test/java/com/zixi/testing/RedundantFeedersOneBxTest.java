@@ -615,10 +615,9 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 						results.add(i, result);
 						sshJcraftClient.performCommand(sshUser, sshPassword, activeSourceIP, sshPort, "service zixibc start");
 						// General waitng - it is an approximation wait period used to enable the down BX server to up gracefully - avoiding setup miss configurations. 
-						Thread.sleep(40000);
+						Thread.sleep(50000);
 					}
 					long statistics[] = StreamStatisticAnalyzer.getMaxMinAvgLong(results);
 					System.out.println("Max is " + statistics[0] + "Min is " + statistics[1] + "Avg is " + statistics[2]);
 				}
-
 }

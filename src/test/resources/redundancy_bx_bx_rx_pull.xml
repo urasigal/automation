@@ -17,7 +17,7 @@
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
 		<parameter name="obit" value="8000000" />
-		<parameter name="olat" value="6000" />
+		<parameter name="olat" value="0" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
 		<parameter name="oold" value="0" />
@@ -40,7 +40,7 @@
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="827" />   
+		<parameter name="testid" value="1300" />   
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes> 
@@ -61,7 +61,7 @@
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
 		<parameter name="obit" value="8000000" />
-		<parameter name="olat" value="6000" />
+		<parameter name="olat" value="0" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
 		<parameter name="oold" value="0" />
@@ -84,7 +84,7 @@
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="827" />   
+		<parameter name="testid" value="1302" />   
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes> 
@@ -109,7 +109,7 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="823" />    
+		<parameter name="testid" value="1304" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
@@ -134,7 +134,7 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="825" />    
+		<parameter name="testid" value="1306" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
@@ -154,7 +154,7 @@
 		<parameter name="latency" value="-1" />
 		<parameter name="session_auth" value="1" />
 		<parameter name="stats_hist" value="1" />
-		<parameter name="testid" value="825" />
+		<parameter name="testid" value="1308" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPullOutputTest"/>
 		</classes>
@@ -174,7 +174,7 @@
 		<parameter name="latency" value="-1" />
 		<parameter name="session_auth" value="1" />
 		<parameter name="stats_hist" value="1" />
-		<parameter name="testid" value="825" />
+		<parameter name="testid" value="1310" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPullOutputTest"/>
 		</classes>
@@ -192,14 +192,14 @@
 		<parameter name="fec_latency" value="150" />
 		<parameter name="fec_overhead" value="30" />
 		<parameter name="host" value="10.7.0.91,10.7.0.157" />
-		<parameter name="latency" value="6000" />
+		<parameter name="latency" value="0" />
 		<parameter name="min_bit" value="0" />
 		<parameter name="name" value="receivertest" />
 		<parameter name="nic" value="0.0.0.0" />
 		<parameter name="port" value="2077" />
 		<parameter name="session" value="" />
 		<parameter name="stream" value="feederout" />
-		<parameter name="testid" value="1107" />  
+		<parameter name="testid" value="1312" />  
 		<classes>
 		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
 		</classes>
@@ -221,7 +221,7 @@
 		<parameter name="cols" value="10" />
 		<parameter name="remux_bitrate" value="0" />
 		<parameter name="input_stream" value="receivertest" />
-		<parameter name="testid" value="1111" />
+		<parameter name="testid" value="1314" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
 		</classes>
@@ -236,7 +236,7 @@
 		<parameter name="receiver_user_name" value="admin" />
 		<parameter name="receiver_uiport" value="4300" />
 		<parameter name="receiver_login_ip" value="10.7.0.173" />
-		<parameter name="testid" value="831" />
+		<parameter name="testid" value="1316" />
 		<classes>
 		    <class name="com.zixi.testing.RedundantFeedersOneBxTest"/>
 		    <methods>
@@ -251,7 +251,7 @@
 		<parameter name="streamId" value="feederout" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
-		<parameter name="testid" value="831" />  
+		<parameter name="testid" value="1318" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -263,7 +263,7 @@
 		<parameter name="streamId" value="feederout" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
-		<parameter name="testid" value="837" />  
+		<parameter name="testid" value="1320" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -281,7 +281,7 @@
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
 		<parameter name="host" value="10.7.0.157" />
-		<parameter name="testid" value="835" />  
+		<parameter name="testid" value="1322" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
@@ -299,7 +299,7 @@
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
 		<parameter name="host" value="10.7.0.91" />
-		<parameter name="testid" value="835" />  
+		<parameter name="testid" value="1324" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
@@ -310,7 +310,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pull_output_name" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="302" />  
+		<parameter name="testid" value="1326" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -321,7 +321,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pull_output_name" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="302" />  
+		<parameter name="testid" value="1328" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -333,7 +333,7 @@
 		<parameter name="uiport" value="4300" />
 		<parameter name="stream_name" value="toffmpeg" />
 		<parameter name="destination" value="10.7.0.42:9999" />
-		<parameter name="testid" value="1125" />
+		<parameter name="testid" value="1330" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
 		</classes>
@@ -344,7 +344,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="id" value="receivertest" />
-		<parameter name="testid" value="1123" />  
+		<parameter name="testid" value="1332" />  
 		<classes>
 		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
 		</classes>
