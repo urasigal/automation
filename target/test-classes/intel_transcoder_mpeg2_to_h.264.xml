@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- Test link sibling is MPEG2 1920*1080 30p to H.264 720*480 original FPS - default  -->
 <suite name="Broadcaster: Intel Transcoder MPEG2 to H.264" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Pull input creation test - 720*480">
 		<parameter name="userName" value="admin" />

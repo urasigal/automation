@@ -1,5 +1,7 @@
 package com.zixi.drivers;
 
+import java.util.function.Supplier;
+
 import com.zixi.tools.ApiWorkir;
 import com.zixi.tools.BroadcasterLoggableApiWorker;
 import com.zixi.tools.JsonParser;
@@ -27,5 +29,10 @@ BroadcasterLoggableApiWorker implements TestDriver{
 		
 		return JsonParser.receiverOutputGetStreamIdByname(apiWorker.sendGet("http://" + loin_ip +":"+ uiport + "/out_streams.json", "", 77, 
 				responseCookieContainer, loin_ip, this, uiport), name);
+	}
+	
+	public static String getTranscoderProfiles(Supplier<String> supplier)
+	{
+		return supplier.get();
 	}
 }

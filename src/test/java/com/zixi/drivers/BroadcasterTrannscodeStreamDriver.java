@@ -82,24 +82,26 @@ public class BroadcasterTrannscodeStreamDriver extends
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
 				userPass, login_ip, uiport);
+		
 		String outJson = null;
+		
 		if(mode !=null)
 		{
 			if(mode.equals("h.264"))
 			{
-				outJson = apiworker.sendGet("http://" + login_ip + ":" + uiport
-					+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport);
+				outJson = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
+						+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport) );
 			}
 			
 			if(mode.equals("mpeg2"))
 			{
-				outJson = apiworker.sendGet("http://" + login_ip + ":" + uiport
-					+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport);
+				outJson = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
+						+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport) );
 			}
 			if(mode.equals("h.265"))
 			{
-				outJson = apiworker.sendGet("http://" + login_ip + ":" + uiport
-					+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport);
+				outJson = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
+						+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport));
 			}
 		
 			JSONObject responseJson = new JSONObject(outJson.toString());

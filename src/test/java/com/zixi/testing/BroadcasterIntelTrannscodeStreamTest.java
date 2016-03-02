@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
 
+
 public class BroadcasterIntelTrannscodeStreamTest extends BaseTest {
 
 	@BeforeClass
@@ -19,7 +20,7 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTest {
 			"fast_connect", "kompression", "enc_type", "enc_key",
 			"rec_history", "rec_duration", "src", "ap", "ll", "all_pids",
 			"bit", "profile_name", "mode", "testid"})
-	@Test
+	@Test // This test is actually transcodes an input test.
 	public void broadcasterSingleInputStreamstatisticAnilyzer(String userName, String userPass, String login_ip, String uiport, String type,String id,
 			String matrix, String max_outputs, String mcast_out, String time_shift, String old,
 			String fast_connect, String kompression, String enc_type, String enc_key,
