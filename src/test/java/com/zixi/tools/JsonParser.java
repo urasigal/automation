@@ -145,4 +145,29 @@ public class JsonParser {
 				+ "." + json.getInt("version_build") + "." + json.getString("platform"); 
 	}
 
+
+	public static int getTranscoderProfiles(String outJson,
+			String profile_name) {
+		int pid = -8;
+		JSONObject responseJson = new JSONObject(outJson);
+		JSONArray outputStreamsArray = responseJson.getJSONArray("profiles");
+		String streamName = null;
+		
+		for (int i = 0; i < outputStreamsArray.length(); i++) 
+		{
+			//System.out.println("before");
+			JSONObject outputStream = outputStreamsArray.getJSONObject(i);
+		   
+		    //System.out.println("after");
+		    //id1 = stream.getString("id");
+		    streamName = outputStream.getString("profile_name");
+		    if(streamName.equals(profile_name))
+		    {
+		    	pid = outputStream.getInt("id");
+		    	//testID = profileID;
+		    }
+	  }
+		// TODO Auto-generated method stub
+		return pid;
+	}
 }

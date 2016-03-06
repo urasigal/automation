@@ -29,7 +29,7 @@
 		<parameter name="fec_force" value="" />
 		<parameter name="mcast_out" value="" />
 		<parameter name="propertiesFile" value="stream.properties" />
-		<parameter name="testid" value="1243" />  
+		<parameter name="testid" value="1357" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
@@ -64,7 +64,7 @@
 		<parameter name="crf" value="23" />
 		<parameter name="tune" value="zerolatency" />
 		<parameter name="max_bitrate" value="2500000" />  
-		<parameter name="testid" value="1245" />
+		<parameter name="testid" value="1359" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
@@ -77,7 +77,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoder" />
 		<parameter name="testduration" value="20" />
-		<parameter name="testid" value="1247" />  
+		<parameter name="testid" value="1361" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -107,7 +107,7 @@
 		<parameter name="bit" value="0" />
 		<parameter name="profile_name" value="480p" />
 		<parameter name="mode" value="mpeg2" />
-		<parameter name="testid" value="1249" />
+		<parameter name="testid" value="1363" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
@@ -138,13 +138,13 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="1251" />  
+		<parameter name="testid" value="1365" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
 	<test name="Transcoded stream - FFMPEG analyser - 720*480">
-		<parameter name="testid" value="1253" />  
+		<parameter name="testid" value="1367" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -155,7 +155,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="480p_trans" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="1255" />  
+		<parameter name="testid" value="1369" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -167,7 +167,7 @@
 		<parameter name="streamId" value="transcoder" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoder" />
-		<parameter name="testid" value="1257" />  
+		<parameter name="testid" value="1371" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -178,7 +178,7 @@
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="480p" />
-		<parameter name="testid" value="1259" />
+		<parameter name="testid" value="1373" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
 		</classes>

@@ -66,13 +66,17 @@ public class BroadcasterTrannscodeStreamDriver extends
 	}
 	
 	
-	// Itel transcoder stuff.
+	// Intel transcoder stuff.
 	public String testIMPL(String userName, String userPass, String login_ip, String uiport, String type,String id,
 			String matrix, String max_outputs, String mcast_out, String time_shift, String old,
 			String fast_connect, String kompression, String enc_type, String enc_key,
 			String rec_history, String rec_duration, String src, String ap, String ll, String all_pids,
 			String bit, String profile_name, String mode) {
+		
+		// Profile internal ID.
 		int pid = -8;
+		
+		// Add parameters to report.
 		testParameters = new TestParameters("userName:"+ userName , "userPass:"+ userPass , "login_ip:"+ login_ip , "uiport:"+ uiport, "type:"+ type, "id:"+ id,
 				"matrix:"+ matrix , "max_outputs:"+ max_outputs, "mcast_out:"+ mcast_out, "time_shift:"+ time_shift, "old:"+ old,
 				"fast_connect:"+ fast_connect, "kompression:"+ kompression, "enc_type:"+ enc_type, "enc_key:"+ enc_key,
@@ -83,47 +87,9 @@ public class BroadcasterTrannscodeStreamDriver extends
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
 				userPass, login_ip, uiport);
 		
-		String outJson = null;
-		
-		if(mode !=null)
-		{
-			if(mode.equals("h.264"))
-			{
-				outJson = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
-						+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport) );
-			}
-			
-			if(mode.equals("mpeg2"))
-			{
-				outJson = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
-						+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport) );
-			}
-			if(mode.equals("h.265"))
-			{
-				outJson = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
-						+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport));
-			}
-		
-			JSONObject responseJson = new JSONObject(outJson.toString());
-			JSONArray outputStreamsArray = responseJson.getJSONArray("profiles");
-			String streamName = null;
-			
-			for (int i = 0; i < outputStreamsArray.length(); i++) 
-			{
-				//System.out.println("before");
-				JSONObject outputStream = outputStreamsArray.getJSONObject(i);
-			   
-			    //System.out.println("after");
-			    //id1 = stream.getString("id");
-			    streamName = outputStream.getString("profile_name");
-			    if(streamName.equals(profile_name))
-			    {
-			    	pid = outputStream.getInt("id");
-			    	//testID = profileID;
-			    }
-		  }
-		}
-		
+		pid = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
+						+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport),  profile_name);
+
 		String url = "http://" + login_ip + ":" + uiport
 				+ "/zixi/add_stream.json?" + rtype + type + "&" + rid + id
 				+ "&" + rmatrix + matrix + "&" + rmax_outputs + max_outputs

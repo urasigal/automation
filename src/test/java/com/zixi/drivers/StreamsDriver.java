@@ -31,8 +31,8 @@ BroadcasterLoggableApiWorker implements TestDriver{
 				responseCookieContainer, loin_ip, this, uiport), name);
 	}
 	
-	public static String getTranscoderProfiles(Supplier<String> supplier)
+	public static int getTranscoderProfiles(Supplier<String> supplier, String profile_name)
 	{
-		return supplier.get();
+		return JsonParser.getTranscoderProfiles(supplier.get(), profile_name);
 	}
 }
