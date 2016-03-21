@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- Transcode the stream using a H.265 codec on output, input stream in the MPEG2 format -->
+<!-- Transcode the stream using a H.265 codec on output, input stream in the H.264 format -->
 <!-- The input resolution in this test must be 1920*1080, codec type have to be H.264 -->
 <suite name="Broadcaster: Intel Transcoder H.264 to H.265" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Pull input creation test - 720*480">
