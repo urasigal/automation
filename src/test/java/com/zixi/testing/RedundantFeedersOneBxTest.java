@@ -84,13 +84,11 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 	
 	@Parameters({ 
 		"udp_port_server", // needed for UDP server, UDP server will be listen to this port. 
-		
 		"bx_stream_id",
 		"middle_bx_login_ip", 
 		"middle_bx_uiport", 
 		"middle_bx_userName", 
 		"middle_bx_userPass",
-		
 		"sshUser", 
 		"sshPassword", 
 		"sshPort", 
@@ -120,7 +118,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		
 		for(int i = 0 ; i < 10; i++)
 		{
-			// Get IP address of the active feeder server. In this stage it have to be the Main feeder
+			// Get an IP address of the active source server. In this stage it have to be the Main feeder
 			sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
 					middle_bx_userName, middle_bx_userPass);
 			
@@ -143,7 +141,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 			
 			
 			// Wait the UDP server to get the data
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, "service zixifeeder start");
 			
 			
@@ -158,7 +156,79 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		System.out.println("Max is " + statistics[0] + "Min is " + statistics[1] + "Avg is " + statistics[2]);
 	}
 	
-	
+	@Parameters({ 
+		"udp_port_server", // needed for UDP server, UDP server will be listen to this port. 
+		"bx_stream_id",
+		"middle_bx_login_ip", 
+		"middle_bx_uiport", 
+		"middle_bx_userName", 
+		"middle_bx_userPass",
+		"sshUser", 
+		"sshPassword", 
+		"sshPort", 
+		"command",
+		
+		"testid"
+		})
+	@Test
+	public void redundancyFxFxBxBXMevatek(String udp_port, String bx_stream_id, String middle_bx_login_ip, 
+			String middle_bx_uiport, String middle_bx_userName, 
+			String middle_bx_userPass, String sshUser, String sshPassword, String sshPort, 
+			String command, String testid) throws InterruptedException, IOException, JSchException 
+	{
+		this.testid = testid;
+		
+//		
+//		
+//		// Stop the active feeder input.
+//		sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, command);
+//		
+//		((RedundantFeederOneBxDriver)redundantFeederOneBxDriver).testIMPL(Integer.parseInt(udp_port));
+//		
+//		sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, "service zixifeeder start");
+		
+		String sshLoginIp;
+		ArrayList<Long> results = new ArrayList<Long>(); 
+		
+		for(int i = 0 ; i < 10; i++)
+		{
+			// Get an IP address of the active source server. In this stage it have to be the Main feeder
+			sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
+					middle_bx_userName, middle_bx_userPass);
+			
+			ExternalRunnerThread externalRunnerThread = new ExternalRunnerThread(((RedundantFeederOneBxDriver)redundantFeederOneBxDriver), udp_port);
+			externalRunnerThread.start();
+			
+			// Waiting the UDP server to start - approximation.
+			Thread.sleep(2000);
+			
+			// Kill the active feeder.
+			sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, command);
+			
+			externalRunnerThread.join();
+			
+			long result = externalRunnerThread.getResults();
+			results.add(result);
+			
+			externalRunnerThread = new ExternalRunnerThread(((RedundantFeederOneBxDriver)redundantFeederOneBxDriver), udp_port);
+			externalRunnerThread.start();
+			
+			
+			// Wait the UDP server to get the data
+			Thread.sleep(3000);
+			sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, "service zixibc start");
+			
+			
+			externalRunnerThread.join();
+			result = externalRunnerThread.getResults();
+			results.add(result);
+			
+			
+			Thread.currentThread().sleep(20000);
+		}
+		long statistics[] = StreamStatisticAnalyzer.getMaxMinAvgLong(results);
+		System.out.println("Max is " + statistics[0] + "Min is " + statistics[1] + "Avg is " + statistics[2]);
+	}
 	
 	@Parameters({ 
 		"udp_port_server", // needed for UDP server, UDP server will be listen to this port. 

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Feeder: push output streaming suite" verbose="5" data-provider-thread-count="1">
-<!-- This test suite is intended to measure video drop time on the BX UDP output in a case when a two feeders are trying to establish a connection to this BX -->
-	<test name="Feeder - push to broadcaster test main feeder - redundancy">
+	<test name="Feeder - push to broadcaster test main feeder - full path redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.174" />
@@ -18,7 +17,7 @@
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
 		<parameter name="obit" value="8000000" />
-		<parameter name="olat" value="3000" />
+		<parameter name="olat" value="15000" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
 		<parameter name="oold" value="0" />
@@ -41,12 +40,12 @@
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="1076" />
+		<parameter name="testid" value="1099" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
-	<test name="Feeder - push to broadcaster test redundant feeder - redundancy">
+	<test name="Feeder - push to broadcaster test redundant feeder - full path redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.150" />
@@ -62,7 +61,7 @@
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
 		<parameter name="obit" value="8000000" />
-		<parameter name="olat" value="3000" />
+		<parameter name="olat" value="15000" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
 		<parameter name="oold" value="0" />
@@ -79,15 +78,40 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.91" />
+		<parameter name="ohst" value="10.7.0.157" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="1078" />
+		<parameter name="testid" value="1101" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation test - full path redundancy">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="1103" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - redundacy">
@@ -110,13 +134,38 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="priority_ids" value="virtual.linux" />
+		<parameter name="priority_ids" value="yrik.burik" />
 		<parameter name="testid" value="1080" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationWithHighPriorityTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push from Feeder input stream statistics test - redundancy">
+	<test name="Broadcaster - Push output stream creation test - default parameters Push input FFMPEG analyser">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="host" value="10.7.0.91" />
+		<parameter name="latency" value="0" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="session" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="nic" value="" />
+		<parameter name="fec_block" value="300" />
+		<parameter name="type" value="push" />
+		<parameter name="snames" value="feederout" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="stream" value="test" />
+		<parameter name="port" value="2088" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="alias" value="feederout" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="548" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
+		</classes>
+</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.91" />
@@ -124,7 +173,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="10" />
-		<parameter name="testid" value="1082" />
+		<parameter name="testid" value="1105" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -160,20 +209,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster - Push from Feeder input stream statistics redundant test - redundancy">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.91" />
-		<parameter name="login_ip" value="10.7.0.91" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="feederout" />
-		<parameter name="testduration" value="5" />
-		<parameter name="testid" value="1086" />
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - redundant bx - redundacy">
+<test name="Broadcaster - redundant bx - redundacy">
 		<parameter name="udp_port_server" value="9999" />
 		<parameter name="bx_stream_id" value="feederout" />
 		<parameter name="middle_bx_login_ip" value="10.7.0.91" />
@@ -183,16 +219,16 @@
 		<parameter name="sshUser" value="root" />
 		<parameter name="sshPassword" value="zixiroot1234" />
 		<parameter name="sshPort" value="22" />
-		<parameter name="command" value="service zixifeeder stop" />
+		<parameter name="command" value="service zixibc stop" />
 		<parameter name="testid" value="1088" />
 		<classes>
 		    <class name="com.zixi.testing.RedundantFeedersOneBxTest"/>
 		    <methods>
-        		<include name="redundancyFxFxBxMevatek" />
+        		<include name="redundancyFxFxBxBXMevatek" />
      		 </methods>
 		</classes>
 	</test>
-	<test name="Feeder1 - output stream deletion test redundancy">
+	<test name="Feeder1 - output stream deletion - full path redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.174" />
@@ -205,12 +241,12 @@
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
 		<parameter name="host" value="10.7.0.91" />
-		<parameter name="testid" value="1090" />  
+		<parameter name="testid" value="1117" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test>
-<test name="Feeder2 - output stream deletion test redundancy">
+	<test name="Feeder2 - output stream deletion - full path redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.150" />
@@ -222,14 +258,26 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.91" />
-		<parameter name="testid" value="1092" />  
+		<parameter name="host" value="10.7.0.157" />
+		<parameter name="testid" value="1119" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 	
-	<test name="Broadcaster - Remove Push input stream - redundancy">
+	<test name="Broadcaster1 - Remove Push input stream -  redundancy">
 		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="1121" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster2 - Remove Push input stream - redundancy">
+		<parameter name="login_ip" value="10.7.0.157" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -238,6 +286,17 @@
 		<parameter name="testid" value="1094" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove Push output stream - default paremeters">
+		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="359" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream test smoothing 1000">
