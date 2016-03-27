@@ -2,7 +2,9 @@ package com.zixi.drivers;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 import static com.zixi.globals.Macros.*;
+
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.BroadcasterLoggableApiWorker;
 
@@ -62,6 +64,44 @@ public class BroadcasterTrannscodeStreamDriver extends
 				+ "&" + rrec_duration + rec_duration + "&" + rsrc + src + "&"
 				+ rvp + pid + "&" + rap + ap + "&" + rbit + bit
 		, "", ADD_TRANSCODER_PROFILE, responseCookieContainer, login_ip, this, uiport);
+	}
+	
+	
+	// Intel transcoder stuff.
+	public String testIMPL(String userName, String userPass, String login_ip, String uiport, String type,String id,
+			String matrix, String max_outputs, String mcast_out, String time_shift, String old,
+			String fast_connect, String kompression, String enc_type, String enc_key,
+			String rec_history, String rec_duration, String src, String ap, String ll, String all_pids,
+			String bit, String profile_name, String mode) {
+		
+		// Profile internal ID.
+		int pid = -8;
+		
+		// Add parameters to report.
+		testParameters = new TestParameters("userName:"+ userName , "userPass:"+ userPass , "login_ip:"+ login_ip , "uiport:"+ uiport, "type:"+ type, "id:"+ id,
+				"matrix:"+ matrix , "max_outputs:"+ max_outputs, "mcast_out:"+ mcast_out, "time_shift:"+ time_shift, "old:"+ old,
+				"fast_connect:"+ fast_connect, "kompression:"+ kompression, "enc_type:"+ enc_type, "enc_key:"+ enc_key,
+				"rec_history:"+ rec_history, "rec_duration:"+ rec_duration, "src:"+ src, "ap:"+ ap, "ll:"+ ll, "all_pids:"+ all_pids,
+				"bit:"+ bit, "profile_name:" + profile_name, "mode:" + mode);
+
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
+				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
+				userPass, login_ip, uiport);
+		
+		pid = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
+						+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport),  profile_name);
+
+		String url = "http://" + login_ip + ":" + uiport
+				+ "/zixi/add_stream.json?" + rtype + type + "&" + rid + id
+				+ "&" + rmatrix + matrix + "&" + rmax_outputs + max_outputs
+				+ "&" + rmcast_out + mcast_out + "&" + rtime_shift + time_shift
+				+ "&" + rold + old + "&" + rfast_connect + fast_connect + "&"
+				+ rkompression + kompression + "&" + renc_type + enc_type
+				+ "&" + renc_key + enc_key + "&" + rrec_history + rec_history
+				+ "&" + rrec_duration + rec_duration + "&" + rsrc + src + "&"
+				+ rvp + pid + "&" + rap + ap + "&ll=" + ll+ "&all_pids=" + all_pids + "&" + rbit + bit;
+		
+		return apiworker.sendGet(url, "", ADD_TRANSCODER_PROFILE, responseCookieContainer, login_ip, this, uiport);
 	}
 
 	static private final String rtype = "type=";
