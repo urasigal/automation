@@ -46,7 +46,7 @@
   <parameter name="ocmp" value="1"/>
   <parameter name="middle_bx_login_ip" value="10.7.0.91"/>
   <parameter name="session" value=""/>
-  <parameter name="latency" value="6000"/>
+  <parameter name="latency" value="15000"/>
   <parameter name="destination" value="10.7.0.42:9999"/>
   <parameter name="dec_key" value=""/>
   <parameter name="rtmp_feedback" value="0"/>
@@ -65,7 +65,7 @@
   <parameter name="oetp" value=""/>
   <parameter name="fec_force" value="0"/>
   <parameter name="mcast_ip" value="0"/>
-  <parameter name="olat" value="6000"/>
+  <parameter name="olat" value="15000"/>
   <parameter name="limited" value="0"/>
   <parameter name="userPass" value="1234"/>
   <parameter name="mcast_port" value="0"/>
@@ -88,27 +88,15 @@
   <parameter name="chan" value="-1"/>
   <parameter name="complete" value=""/>
   <parameter name="dec_type" value=""/>
-  <test name="Receiver2 - Pull input stream statistic - default parameters FFMPEG analyser(failed)">
+  <test name="Receiver1 - Pull input stream statistic - default parameters FFMPEG analyser(failed)">
     <parameter name="userPassword" value="1234"/>
     <parameter name="uiport" value="4300"/>
     <parameter name="testid" value="665"/>
     <parameter name="id" value="receivertest"/>
     <parameter name="testduration" value="10"/>
     <parameter name="userName" value="admin"/>
-    <parameter name="login_ip" value="10.7.0.150"/>
+    <parameter name="login_ip" value="10.7.0.173"/>
     <classes>
-      <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
       <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
         <methods>
           <include name="startTest"/>
@@ -121,6 +109,18 @@
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
+      <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
       <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
         <methods>
           <include name="startTest"/>
@@ -207,5 +207,5 @@
         </methods>
       </class> <!-- com.zixi.testing.BroadcasterPushInStreamCreationTest -->
     </classes>
-  </test> <!-- Receiver2 - Pull input stream statistic - default parameters FFMPEG analyser(failed) -->
+  </test> <!-- Receiver1 - Pull input stream statistic - default parameters FFMPEG analyser(failed) -->
 </suite> <!-- Failed suite [Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser] -->

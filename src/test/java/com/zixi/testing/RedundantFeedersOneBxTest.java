@@ -431,7 +431,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 				long result = externalRunnerThread.getResults();
 				results.add(i, result);
 				sshJcraftClient.performCommand(sshUser, sshPassword, middle_bx_login_ip, sshPort, "service zixibc start");
-				Thread.currentThread().sleep(80000);
+				Thread.sleep(80000);
 			}
 			long statistics[] = StreamStatisticAnalyzer.getMaxMinAvgLong(results);
 			System.out.println("Max is " + statistics[0] + "Min is " + statistics[1] + "Avg is " + statistics[2]);
@@ -474,8 +474,9 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 				// Let to the UDP server to get a some data.
 				Thread.sleep(2000);
 				// Stop the main broadcaster server.
-				sshJcraftClient.performCommand(sshUser, sshPassword, middle_bx_login_ip, sshPort, command);
-				
+				sshJcraftClient.performCommand(sshUser, sshPassword, middle_bx_login_ip, sshPort, "ifdown eth0");
+				Thread.sleep(10000);
+				sshJcraftClient.performCommand(sshUser, sshPassword, middle_bx_login_ip, sshPort, "ifup eth0");
 				// Suspend the main thread (current thread) till the  UDP server will finish -- it waits at least 40 seconds or till the UDP packet will be received 
 				// on a wire on an UDP server side. 
 				externalRunnerThread.join();

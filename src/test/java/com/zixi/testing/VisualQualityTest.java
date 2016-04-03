@@ -25,6 +25,6 @@ public class VisualQualityTest extends BaseTest{
 		new String[] {testid});
 		
 		Assert.assertEquals(((VisualQualityDriver) testDriver)
-				.testVideo(), "added");
+				.testVideo(), "pass");
 	}
 }

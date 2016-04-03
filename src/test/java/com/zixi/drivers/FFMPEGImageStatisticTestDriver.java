@@ -14,9 +14,9 @@ import com.zixi.tools.BroadcasterLoggableApiWorker;
 public class FFMPEGImageStatisticTestDriver extends BroadcasterLoggableApiWorker
 		implements TestDriver {
 
-	private static final String hostName   = "10.7.0.150";
-	private static final int    portNumber = 4445;
-	private static final int    attempts   = 20;
+	private static final String hostName      = "10.7.0.150";
+	private static final int    portNumber    = 4445;
+	private static final int    attempts      = 10;
 	private static final int    hlsAttempts   = 200;
 	private static final String fromUser = "get";
 	private static final int    negativeAttempts   = 5;

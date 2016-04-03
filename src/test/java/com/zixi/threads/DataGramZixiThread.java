@@ -73,7 +73,7 @@ public class DataGramZixiThread extends Thread{
 						 }
 				     }
 				 );
-		 System.out.println("Max is " + diff.get(0)) ;
+		 System.out.println("Delay is " + diff.get(0)) ;
 		 result = diff.get(0);
 		 socket.close();
 	 }
