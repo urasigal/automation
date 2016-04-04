@@ -24,7 +24,7 @@
   <parameter name="password" value=""/>
   <parameter name="host" value="10.7.0.111"/>
   <parameter name="mcast_ttl" value=""/>
-  <parameter name="testid" value="2056"/>
+  <parameter name="testid" value="1665"/>
   <parameter name="id" value="transcoder"/>
   <parameter name="fec_latency" value="300"/>
   <parameter name="smoothing" value="0"/>
@@ -49,7 +49,7 @@
   <parameter name="latency" value="6000"/>
   <parameter name="dec_key" value=""/>
   <parameter name="matrix" value="1"/>
-  <parameter name="bitrate_mode" value="0"/>
+  <parameter name="bitrate_mode" value="1"/>
   <parameter name="tune" value="zerolatency"/>
   <parameter name="enc_key" value=""/>
   <parameter name="stream" value="480p_trans"/>
@@ -89,7 +89,7 @@
   <parameter name="complete" value=""/>
   <parameter name="dec_type" value=""/>
   <test name="VLC test visual test 720*480(failed)">
-    <parameter name="testid" value="2490"/>
+    <parameter name="testid" value="2502"/>
     <classes>
       <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest">
         <methods>
@@ -267,7 +267,7 @@
     </classes>
   </test> <!-- VLC test visual test 720*480(failed) -->
   <test name="VLC test visual test 720*480 all pids(failed)">
-    <parameter name="testid" value="2496"/>
+    <parameter name="testid" value="2508"/>
     <classes>
       <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest">
         <methods>
