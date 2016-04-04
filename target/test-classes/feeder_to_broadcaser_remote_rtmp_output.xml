@@ -99,50 +99,12 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - RTMP Push output stream creation - feeder automatic RTMP output" >
-			<parameter name="login_ip" value="10.7.0.62" /> 
-			<parameter name="userName" value="admin" />  
-			<parameter name="userPassword" value="1234" />  
-			<parameter name="uiport" value="4444" />  
-			<parameter name="type" value="RTMP" />  
-			<parameter name="name" value="test" />  
-			<parameter name="stream" value="feederout" />  
-			<parameter name="matrix" value="1" />  
-			<parameter name="url" value="rtmp://10.7.0.175/live" />  
-			<parameter name="url_alt" value="" />  
-			<parameter name="rtmp_stream" value="test" />  
-			<parameter name="user" value="" />  
-			<parameter name="bandwidth" value="860" />  
-			<parameter name="latency" value="1000" />  
-			<parameter name="reconnect" value="5" />  
-			<parameter name="sendfi" value="" />  
-			<parameter name="disconnect_low_br" value="0" />  
-			<parameter name="static_latency" value="0" />  
-			<parameter name="dec_type" value="" />  
-			<parameter name="dec_key" value="" />  
-			<parameter name="password" value="" />  
-			<parameter name="testid" value="1007" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterRtmpPushOutputCreationTest"/>
-		</classes>
-	</test>   
 	<test name="FFMPEG test default parameters Push input - feeder automatic RTMP output">
 		<parameter name="testid" value="1009" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>  
-	<test name="Broadcaster - Remove RTMP push output stream - feeder automatic RTMP output">
-		<parameter name="login_ip" value="10.7.0.62" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="test" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="1011" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
 	<test name="Feeder - output stream deletion test - feeder automatic RTMP output">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
