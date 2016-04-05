@@ -168,7 +168,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="2068" />  
+		<parameter name="testid" value="2608" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -180,7 +180,7 @@
 		</classes>
 	</test>
 	<test name="VLC test visual test 720*480">
-		<parameter name="testid" value="2478" />  
+		<parameter name="testid" value="2610" />  
 		<classes>
 		    <class name="com.zixi.testing.VisualQualityTest"/>
 		</classes>
@@ -202,7 +202,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="480p_transs" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="2072" />  
+		<parameter name="testid" value="2612" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -371,7 +371,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP output all pids - 720*480 all_pids">
+	<test name="Broadcaster - UDP output visual test - 720*480 all_pids">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -397,7 +397,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="2397" />  
+		<parameter name="testid" value="2614" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -409,7 +409,7 @@
 		</classes>
 	</test>
 	<test name="VLC test visual test 720*480 all pids">
-		<parameter name="testid" value="2478" />  
+		<parameter name="testid" value="2616" />  
 		<classes>
 		    <class name="com.zixi.testing.VisualQualityTest"/>
 		</classes>
@@ -425,13 +425,13 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove udp output visual test - 720*480 all_pids">
+	<test name="Broadcaster - Remove udp visual test - 720*480 all_pids">
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="480p_transs" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="2401" />  
+		<parameter name="testid" value="2618" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -626,7 +626,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="2087" />  
+		<parameter name="testid" value="2620" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -638,7 +638,7 @@
 		</classes>
 	</test>
 	<test name="VLC test visual test 1280x720p30">
-		<parameter name="testid" value="2478" />  
+		<parameter name="testid" value="2622" />  
 		<classes>
 		    <class name="com.zixi.testing.VisualQualityTest"/>
 		</classes>
@@ -660,7 +660,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="1280x720p30_transs" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="2091" />  
+		<parameter name="testid" value="2624" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -855,7 +855,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="2106" />  
+		<parameter name="testid" value="2626" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -867,7 +867,7 @@
 		</classes>
 	</test>
 	<test name="VLC test visual test 1280x720p30 all pids">
-		<parameter name="testid" value="2478" />  
+		<parameter name="testid" value="2628" />  
 		<classes>
 		    <class name="com.zixi.testing.VisualQualityTest"/>
 		</classes>
@@ -879,6 +879,17 @@
 		<parameter name="id" value="1280x720p30_trans" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="2110" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove udp visual test - 1280x720p30 all_pids">
+		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="1280x720p30_transs" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="2630" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>

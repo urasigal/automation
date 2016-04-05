@@ -53,6 +53,7 @@ public class BroadcasterTrannscodeStreamDriver extends
 		    }
 		  }
 		
+		// Transcode a stream zhopa
 		return apiworker.sendGet("http://" + login_ip + ":" + uiport
 				+ "/zixi/add_stream.json?" + rtype + type + "&" + rid + id
 				+ "&" + rmatrix + matrix + "&" + rmax_outputs + max_outputs

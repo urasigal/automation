@@ -24,7 +24,9 @@ public class VisualQualityTest extends BaseTest{
 		testParameters = buildTestParametersString(new String[] {"testid"}, 
 		new String[] {testid});
 		
-		Assert.assertEquals(((VisualQualityDriver) testDriver)
-				.testVideo(), "added");
+		String testResult = ((VisualQualityDriver) testDriver).testVideo();
+		String segments[] = testResult.split("@");
+		manulDescription = 	segments[1];
+		Assert.assertEquals(segments[0], "pass");
 	}
 }

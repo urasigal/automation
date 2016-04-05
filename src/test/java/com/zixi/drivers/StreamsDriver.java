@@ -35,4 +35,25 @@ BroadcasterLoggableApiWorker implements TestDriver{
 	{
 		return JsonParser.getTranscoderProfiles(supplier.get(), profile_name);
 	}
+	
+	public int getInputStreamBitrate(String name, String loin_ip, String uiport, String userName, String  userPass)
+	{
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://"
+				+ loin_ip + ":" + uiport + "/login.htm", userName, userPass,
+				loin_ip, uiport);
+		
+		return JsonParser.getInputStreamBitrate(apiWorker.sendGet("http://" + loin_ip +":"+ uiport + "/input_stream_stats.json?id=" + name, "", 77, 
+				responseCookieContainer, loin_ip, this, uiport), name);
+	}
+	
+	// This function is using to get the source of a receiver's input stream.
+	public String getIpAddressOfActiveInputStreamOnReceiver(String name, String loin_ip, String uiport, String userName, String  userPass)
+	{
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://"
+				+ loin_ip + ":" + uiport + "/login.htm", userName, userPass,
+				loin_ip, uiport);
+		
+		return JsonParser.getActiveIpOfReceiverInput( () -> apiWorker.sendGet("http://" + loin_ip +":"+ uiport + "/in_streams.json?complete=1", "", 77, 
+				responseCookieContainer, loin_ip, this, uiport), name);
+	}
 }

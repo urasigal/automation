@@ -199,7 +199,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-		<test name="Broadcaster - redundant bx - full path redundancy">
+	<test name="Broadcaster - redundant bx - full path redundancy">
 		<parameter name="udp_port_server" value="9999" />
 		<parameter name="bx_stream_id" value="feederout" />
 		<parameter name="middle_bx_login_ip" value="10.7.0.62" />
@@ -218,7 +218,7 @@
      		 </methods>
 		</classes>
 	</test>
-		<test name="Feeder1 - output stream deletion - full path redundancy">
+	<test name="Feeder1 - output stream deletion - full path redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.174" />

@@ -30,10 +30,12 @@ public class VisualQualityDriver extends BroadcasterLoggableApiWorker implements
 		// TODO Auto-generated method stub
 		long sum = 0;
 		loopCnt = 0;
+		String resultToTest = null;
+		
 		try {
 
 		clientSocket = new Socket(hostName, portNumber);
-		clientSocket.setSoTimeout(160000);
+		clientSocket.setSoTimeout(0);
         out = new PrintWriter(clientSocket.getOutputStream(), true);
 		in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 		String fromServer = in.readLine();
@@ -47,10 +49,14 @@ public class VisualQualityDriver extends BroadcasterLoggableApiWorker implements
 			if(fromServer.equals("output"))
 			{
 				fromServer = in.readLine();
-				if(fromServer.equals("accepted"))
-				{
-					out.println("Bye");   
-				}
+				String segments[] = fromServer.split("@");
+				
+				if(segments.length > 1)		
+					if(segments[0].equals("pass") || segments[0].equals("fail"))
+					{
+						resultToTest = fromServer;
+						out.println("Bye");   
+					}
 			}
 		}
 		} catch (UnknownHostException e) {
@@ -72,6 +78,6 @@ public class VisualQualityDriver extends BroadcasterLoggableApiWorker implements
 				e.printStackTrace();
 			}
 		}
-		return "added";
+		return resultToTest;
 	}
 }
