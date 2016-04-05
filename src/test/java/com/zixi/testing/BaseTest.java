@@ -32,6 +32,7 @@ public class BaseTest {
 	// Reflection stuff.
 	protected Class c;
 	protected Object params[];
+	protected String manulDescription = "";
 	
 	@BeforeTest
 	public void startTest(final ITestContext testContext) {
@@ -56,11 +57,11 @@ public class BaseTest {
  
             tl.setResult(testid,
                     ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters);
+            automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + "Manul description " + manulDescription); // pass data to a testLink notes in test execution.
         } else {
             tl.setResult(testid,
                     ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-                            automationTestIdentifiers + "\nTest Parameters: "+ testParameters);
+                            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription );
         }
      }catch(Exception e)
      {

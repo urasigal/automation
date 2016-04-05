@@ -49,11 +49,14 @@ public class VisualQualityDriver extends BroadcasterLoggableApiWorker implements
 			if(fromServer.equals("output"))
 			{
 				fromServer = in.readLine();
-				if(fromServer.equals("pass") || fromServer.equals("fail"))
-				{
-					resultToTest = fromServer;
-					out.println("Bye");   
-				}
+				String segments[] = fromServer.split("@");
+				
+				if(segments.length > 1)		
+					if(segments[0].equals("pass") || segments[0].equals("fail"))
+					{
+						resultToTest = fromServer;
+						out.println("Bye");   
+					}
 			}
 		}
 		} catch (UnknownHostException e) {
