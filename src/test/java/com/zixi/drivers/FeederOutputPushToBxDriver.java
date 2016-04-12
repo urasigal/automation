@@ -2,6 +2,14 @@ package com.zixi.drivers;
 
 import static com.zixi.globals.Macros.PUSHINMODE;
 
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
+import javax.swing.text.SimpleAttributeSet;
+
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
 import com.zixi.tools.BroadcasterLoggableApiWorker;
@@ -55,6 +63,29 @@ public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker imp
 	final private static String rbonded = "bonded"; 
 	private ApiWorkir streamOutCreator = new ApiWorkir();
 
+	private static  Logger LOGGER = Logger.getLogger("com.zixi.drivers");
+	private static  FileHandler  filehandler ;
+	
+	private void getFileHandler()
+	{
+		FileHandler fh = null;
+		if (FeederOutputPushToBxDriver.filehandler == null)
+		{
+		  try {
+				fh = new FileHandler("src/main/resources/log");
+				fh.setFormatter(new SimpleFormatter());
+				FeederOutputPushToBxDriver.filehandler = fh;
+				FeederOutputPushToBxDriver.LOGGER.addHandler(FeederOutputPushToBxDriver.filehandler);
+			} catch (SecurityException e) {
+				// TODO Auto-generated catch block
+				System.out.println(" ------------------------------------------- Cant to open a file");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println(" -------------------------------------------- Cant to open a file");
+			}
+		}
+	}
+	
 	public String testIMPL(String userName, String userPass, String login_ip,
 			String name, String mip, String port, String ip, String prog,
 			String chan, String type, String ostr, String oses, String oetp,
@@ -81,7 +112,7 @@ public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker imp
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
 				userPass, login_ip, uiport);
 
-		return streamOutCreator.sendGet(HTTP + login_ip + params1 + uiport
+		String request = HTTP + login_ip + params1 + uiport
 				+ params7 + rname + "=" + name + "&" + rmip + "=" + mip + "&"
 				+ rport + "=" + port + "&" + rip + "=" + ip + "&" + rprog + "="
 				+ prog + "&" + rchan + "=" + chan + "&" + rtype + "=" + type
@@ -98,7 +129,13 @@ public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker imp
 				+ "=" + lim_enc_addr + "&" + rpad_to_cbr + "=" + pad_to_cbr
 				+ "&" + rrtmp_feedback + "=" + rtmp_feedback + "&" + rohst
 				+ "=" + ohst + "&" + roprt + "=" + oprt + "&" + ronic + "="
-				+ onic + "&" + roalt + "=" + oalt +"&"+ rbonded +"="+bonded, name, PUSHINMODE,
+				+ onic + "&" + roalt + "=" + oalt +"&"+ rbonded +"="+bonded;
+		
+		
+			getFileHandler();
+			LOGGER.info(request);
+			
+		return streamOutCreator.sendGet(request, name, PUSHINMODE,
 				responseCookieContainer, login_ip, this, uiport);
 		// TODO Auto-generated method stub
 	}

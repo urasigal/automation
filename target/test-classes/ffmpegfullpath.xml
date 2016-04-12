@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite: "Streaming/ FFMPEG-testing/ Full path default parameters/"  -->
 <suite name="Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser" verbose="5" data-provider-thread-count="1">
 	<test name="Feeder - Push to broadcaster test - default parameters FFMPEG analyser">
 		<parameter name="userName" value="admin" />
@@ -265,7 +266,7 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="659" />    
+		<parameter name="testid" value="964" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite "Streaming/ FFMPEG-testing/ BX RTMP push out to Wowza then FFMPEG analyzing./" -->
 <suite name="Feeder BX RTMP to Wowza FFMPEG suite" verbose="5" data-provider-thread-count="1">
 	<test name="Feeder - push to broadcaster test - RTMP to Wowza FFMPEG">
 		<parameter name="userName" value="admin" />

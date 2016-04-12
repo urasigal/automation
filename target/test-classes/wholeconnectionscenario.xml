@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- Testlink suite: " Streaming/ Streams/ Full streaming flow: Feeder -> Broadcaster -> Receiver/ Full flow - Default parameters./" -->
 <suite name="Full path streaming Feeder -> Broadcaster -> Receiver" verbose="5" data-provider-thread-count="1">
 <test name="Feeder - push to broadcaster test - default parameteres">
 		<parameter name="userName" value="admin" />

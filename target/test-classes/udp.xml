@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite: "Streaming/ Streams/ Broadcaster UDP streaming/XXX" -->
 <suite name="Broadcaster: UDP streaming suite" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - UDP input stream creation ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
-		<parameter name="ts_port" value="14000" />
+		<parameter name="ts_port" value="9999" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="0" />
 		<parameter name="multi_src" value="" />

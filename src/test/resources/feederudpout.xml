@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLInk Suite "Streaming/ FFMPEG-testing/ Feeder UDP output to FFMPEG/" -->
 <suite name="Feeder: UDP output streaming suite" verbose="5" data-provider-thread-count="1">
 	<test name="Feeder - UDP out to FFMPEG default parameters">
 		<parameter name="userName" value="admin" />

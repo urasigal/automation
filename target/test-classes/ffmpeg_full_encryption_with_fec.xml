@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite: "Streaming/ FFMPEG-testing/ Full path test encryption 128 with FEC/" -->
+<!-- TestLink suite: "Streaming/ FFMPEG-testing/ Full encryption test 256 FEC/" -->
+<!-- TestLink suite: "Streaming/ FFMPEG-testing/ Full encryption test 256 FEC/" -->
 <suite name="Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser FEC encryption 128" verbose="5" data-provider-thread-count="1">
 	<test name="Feeder - push to broadcaster test - Encryption AES 128 FFMPEG analyser FEC">
 		<parameter name="userName" value="admin" />

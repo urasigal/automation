@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite "Streaming/ FFMPEG-testing/ Automatic RTMP from broadcaster while configuration is done on Feeder input/" -->
 <suite name="Automatic RTMP from broadcaster while Feeder input" verbose="5" data-provider-thread-count="1">
 <test name="Feeder - push to broadcaster test - feeder automatic RTMP output">
 		<parameter name="userName" value="admin" />

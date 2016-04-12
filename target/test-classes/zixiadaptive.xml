@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite: "Streaming/ FFMPEG-testing/ Zixi BX adaptive to RX server/" -->
 <suite name="Zixi adaptive streaming" verbose="5" data-provider-thread-count="1">
 <test name="Broadcaster - Pull input stream creation test - adaptive group test first stream">
 		<parameter name="userName" value="admin" />
@@ -154,7 +155,7 @@
 		<parameter name="uiport" value="4300" />
 		<parameter name="id" value="receivertest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="690" />  
+		<parameter name="testid" value="2849" />  
 		<classes>
 		    <class name="com.zixi.testing.ReceiverInputStatisticTest"/>
 		</classes>

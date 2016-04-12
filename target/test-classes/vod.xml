@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
 <suite name="Broadcaster: VOD outputs" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - enable vod test - VOD WEB API">
 		<parameter name="userName" value="admin" />
