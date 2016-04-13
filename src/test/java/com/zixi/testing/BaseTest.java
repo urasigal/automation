@@ -1,9 +1,13 @@
 package com.zixi.testing;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -17,6 +21,11 @@ import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import com.zixi.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
+/*
+ * This is a most high hierarchy test class in all automation test project. All test case classes must to inherit from this class.
+ */
+
+
 public class BaseTest {
 	protected TestDriver testDriver;
 	protected ClassLoader classLoader;
@@ -28,6 +37,10 @@ public class BaseTest {
 	protected ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 	protected TestBaseFunction testBaseFunction = new TestBaseFunction ();
 	protected String testParameters =  "";
+	
+	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developer staff.
+	protected static  Logger       LOGGER      = null;
+	protected static  FileHandler  FILEHANDLER = null ;
 	
 	// Reflection stuff.
 	protected Class c;
@@ -92,5 +105,25 @@ public class BaseTest {
 			}
 			return sb.toString();
 		}
+	}
+	
+	protected Logger getLoggerInstance()
+	{
+		if(BaseTest.LOGGER == null)
+		{
+		  try {
+			    BaseTest.FILEHANDLER = new FileHandler("src/main/resources/log");
+			    BaseTest.FILEHANDLER.setFormatter(new SimpleFormatter());
+				BaseTest.LOGGER.addHandler(BaseTest.FILEHANDLER);
+			} catch (SecurityException e) {
+				// TODO Auto-generated catch block
+				System.out.println(" ------------------------------------------- Cant to open a file");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println(" -------------------------------------------- Cant to open a file");
+			}
+		  return BaseTest.LOGGER;
+		}
+		return BaseTest.LOGGER;
 	}
 }

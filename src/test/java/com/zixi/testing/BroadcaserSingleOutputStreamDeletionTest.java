@@ -20,7 +20,7 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 	private TestDriver testDriver;
 	
 	@BeforeClass
-	public void testInit() {
+	public void testInit() { 
 		
 			
 			testDriver = new BroadcaserSingleOutputStreamDeletionDriver();
@@ -31,6 +31,8 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 	@Test
 	public void broadcasterSingleStreamRemoving(String login_ip,String userName,String userPassword,String id,String uiport,String testid) throws InterruptedException 
 	{
+		getLoggerInstance().info(getClass().getName());
+		
 		this.testid = testid;
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 				this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);

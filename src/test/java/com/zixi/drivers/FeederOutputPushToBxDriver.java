@@ -62,29 +62,6 @@ public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker imp
 	final private static String roalt = "oalt";
 	final private static String rbonded = "bonded"; 
 	private ApiWorkir streamOutCreator = new ApiWorkir();
-
-	private static  Logger LOGGER = Logger.getLogger("com.zixi.drivers");
-	private static  FileHandler  filehandler ;
-	
-	private void getFileHandler()
-	{
-		FileHandler fh = null;
-		if (FeederOutputPushToBxDriver.filehandler == null)
-		{
-		  try {
-				fh = new FileHandler("src/main/resources/log");
-				fh.setFormatter(new SimpleFormatter());
-				FeederOutputPushToBxDriver.filehandler = fh;
-				FeederOutputPushToBxDriver.LOGGER.addHandler(FeederOutputPushToBxDriver.filehandler);
-			} catch (SecurityException e) {
-				// TODO Auto-generated catch block
-				System.out.println(" ------------------------------------------- Cant to open a file");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				System.out.println(" -------------------------------------------- Cant to open a file");
-			}
-		}
-	}
 	
 	public String testIMPL(String userName, String userPass, String login_ip,
 			String name, String mip, String port, String ip, String prog,
@@ -130,10 +107,6 @@ public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker imp
 				+ "&" + rrtmp_feedback + "=" + rtmp_feedback + "&" + rohst
 				+ "=" + ohst + "&" + roprt + "=" + oprt + "&" + ronic + "="
 				+ onic + "&" + roalt + "=" + oalt +"&"+ rbonded +"="+bonded;
-		
-		
-			getFileHandler();
-			LOGGER.info(request);
 			
 		return streamOutCreator.sendGet(request, name, PUSHINMODE,
 				responseCookieContainer, login_ip, this, uiport);
