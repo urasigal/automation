@@ -25,7 +25,6 @@ import com.zixi.tools.TestlinkIntegration;
  * This is a most high hierarchy test class in all automation test project. All test case classes must to inherit from this class.
  */
 
-
 public class BaseTest {
 	protected TestDriver testDriver;
 	protected ClassLoader classLoader;
@@ -56,6 +55,8 @@ public class BaseTest {
 	@BeforeMethod
 	public void beforeTes(String testid) throws MalformedURLException
 	{
+		LOGGER = getLoggerInstance();
+		LOGGER.info(getClass().getName()); 
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
 		TestlinkIntegration tl = new TestlinkIntegration();
@@ -113,6 +114,7 @@ public class BaseTest {
 		{
 		  try {
 			    BaseTest.FILEHANDLER = new FileHandler("src/main/resources/log");
+			    BaseTest.LOGGER = Logger.getLogger("com");
 			    BaseTest.FILEHANDLER.setFormatter(new SimpleFormatter());
 				BaseTest.LOGGER.addHandler(BaseTest.FILEHANDLER);
 			} catch (SecurityException e) {
