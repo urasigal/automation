@@ -1,42 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]">
-  <parameter name="ll" value="0"/>
-  <parameter name="rec_duration" value="7200"/>
-  <parameter name="all_pids" value="0"/>
-  <parameter name="bit" value="0"/>
-  <parameter name="matrix" value="1"/>
-  <parameter name="type" value="TS"/>
-  <parameter name="enc_key" value=""/>
-  <parameter name="kompression" value="1"/>
-  <parameter name="profile_name" value="480p"/>
-  <parameter name="enc_type" value=""/>
-  <parameter name="testid" value="857"/>
-  <parameter name="id" value="transcoder"/>
-  <parameter name="max_outputs" value="-1"/>
+  <parameter name="rtmp_nulls" value=""/>
   <parameter name="time_shift" value="0"/>
-  <parameter name="src" value="transcoder"/>
-  <parameter name="old" value="0"/>
+  <parameter name="mcast_ip" value=""/>
+  <parameter name="mcast_force" value=""/>
+  <parameter name="rtmp_url" value="rtmp://10.7.0.64/live"/>
   <parameter name="userPass" value="1234"/>
+  <parameter name="mcast_port" value=""/>
+  <parameter name="type" value="rtmp_pull"/>
   <parameter name="userName" value="admin"/>
   <parameter name="login_ip" value="10.7.0.62"/>
-  <parameter name="ap" value="-1"/>
-  <parameter name="rec_history" value="0"/>
-  <parameter name="fast_connect" value="0"/>
+  <parameter name="rtmp_name" value="test"/>
   <parameter name="uiport" value="4444"/>
-  <parameter name="vp" value="1"/>
+  <parameter name="mcast_ttl" value=""/>
+  <parameter name="rtmp_passwd" value=""/>
+  <parameter name="testid" value="491"/>
+  <parameter name="rtmp_bitrate" value=""/>
+  <parameter name="id" value="test"/>
   <parameter name="mcast_out" value="0"/>
+  <parameter name="complete" value=""/>
+  <parameter name="rtmp_user" value=""/>
+  <parameter name="max_outputs" value="-1"/>
+  <parameter name="on" value="1"/>
+  <parameter name="rtmp_latency" value=""/>
   <test name="Default test(failed)">
     <classes>
-      <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest">
+      <class name="com.zixi.testing.BroadcasterRtmpInputTest">
         <methods>
           <include name="startTest"/>
-          <include name="broadcasterSingleInputStreamstatisticAnilyzer" invocation-numbers="0"/>
-          <include name="beforeTes"/>
+          <include name="broadcasterRtmpPullTest" invocation-numbers="0"/>
           <include name="testInit"/>
+          <include name="beforeTes"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- com.zixi.testing.BroadcasterIntelTrannscodeStreamTest -->
+      </class> <!-- com.zixi.testing.BroadcasterRtmpInputTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

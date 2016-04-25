@@ -40,10 +40,19 @@
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
+		<parameter name="rtmp_stream" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.175/live" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_pass" value="" />
+		<parameter name="rtmp_url2" value="" />
+		<parameter name="rtmp_hot" value="0" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="999" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederOutputToBxTestAutomaticRtmp" />
+     		 </methods>
 		</classes>
 	</test>
 	<test name="Set broadcaster RTMP settings - feeder automatic RTMP output">

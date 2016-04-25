@@ -112,4 +112,58 @@ public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker imp
 				responseCookieContainer, login_ip, this, uiport);
 		// TODO Auto-generated method stub
 	}
+
+	public String testIMPL(String userName, String userPass, String login_ip,
+			String name, String mip, String port, String ip, String prog,
+			String chan, String type, String ostr, String oses, String oetp,
+			String oeky, String obit, String olat, String ofc, String ocmp,
+			String oold, String onfec, String fec_force, String fec_adaptive,
+			String ofec, String ofecl, String stop_on_drop, String mmt,
+			String smoothing, String limited, String minbps,
+			String lim_enc_addr, String pad_to_cbr, String rtmp_feedback,
+			String ohst, String oprt, String onic, String oalt, String bonded,
+			String rtmp_stream, String rtmp_url, String rtmp_user,
+			String rtmp_pass, String rtmp_url2, String rtmp_hot, String uiport) {
+		
+		
+		testParameters = new TestParameters( "userName"+userName,  "userPass"+userPass,  "login_ip"+login_ip,
+				 "name"+name,  "mip"+mip,  "port"+port,  "ip"+ip,  "prog"+prog,
+				 "chan"+chan,  "type"+type,  "ostr"+ostr,  "oses"+oses,  "oetp"+oetp,
+				 "oeky"+oeky,  "obit"+obit,  "olat"+olat,  "ofc"+ofc, "ocmp"+ocmp,
+				 "oold"+oold,  "onfec"+onfec,  "fec_force"+fec_force,  "fec_adaptive"+fec_adaptive,
+				 "ofec"+ofec,  "ofecl"+ofecl,  "stop_on_drop"+stop_on_drop,  "mmt"+mmt,
+				 ""+smoothing,  ""+limited,  ""+minbps,
+				 "lim_enc_addr"+lim_enc_addr, "pad_to_cbr" +pad_to_cbr,  "rtmp_feedback"+rtmp_feedback,
+				 "ohst"+ohst,  "oprt"+oprt,  "onic"+onic,  "oalt"+oalt,  "bonded"+bonded,
+				 "rtmp_stream"+rtmp_stream,  "rtmp_url"+rtmp_url, "rtmp_user" +rtmp_user,
+				 "rtmp_pass"+rtmp_pass,  "rtmp_url2" + rtmp_url2,  "rtmp_hot" + rtmp_hot,  "uiport" +uiport);
+
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
+				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
+				userPass, login_ip, uiport);
+
+		String request = HTTP + login_ip + params1 + uiport
+				+ params7 + rname + "=" + name + "&" + rmip + "=" + mip + "&"
+				+ rport + "=" + port + "&" + rip + "=" + ip + "&" + rprog + "="
+				+ prog + "&" + rchan + "=" + chan + "&" + rtype + "=" + type
+				+ "&" + rostr + "=" + ostr + "&" + roses + "=" + oses + "&"
+				+ roetp + "=" + oetp + "&" + roeky + "=" + oeky + "&" + robit
+				+ "=" + obit + "&" + rolat + "=" + olat + "&" + rofc + "="
+				+ ofc + "&" + rocmp + "=" + ocmp + "&" + roold + "=" + oold
+				+ "&" + ronfec + "=" + onfec + "&" + rfec_force + "="
+				+ fec_force + "&" + rfec_adaptive + "=" + fec_adaptive + "&"
+				+ rofec + "=" + ofec + "&" + rofecl + "=" + ofecl + "&"
+				+ rstop_on_drop + "=" + stop_on_drop + "&" + rmmt + "=" + mmt
+				+ "&" + rsmoothing + "=" + smoothing + "&" + rlimited + "="
+				+ limited + "&" + rminbps + "=" + minbps + "&" + rlim_enc_addr
+				+ "=" + lim_enc_addr + "&" + rpad_to_cbr + "=" + pad_to_cbr
+				+ "&" + rrtmp_feedback + "=" + rtmp_feedback + "&" + rohst
+				+ "=" + ohst + "&" + roprt + "=" + oprt + "&" + ronic + "="
+				+ onic + "&" + roalt + "=" + oalt +"&"+ rbonded +"="+bonded +
+				 "&rtmp_stream=" + rtmp_stream +  "&rtmp_url=" + rtmp_url + "&rtmp_user=" + rtmp_user +
+			 "&rtmp_pass=" + rtmp_pass + "&rtmp_url2=" + rtmp_url2 +  "&rtmp_hot=" + rtmp_hot;
+			
+		return streamOutCreator.sendGet(request, name, PUSHINMODE,
+				responseCookieContainer, login_ip, this, uiport);
+	}
 }

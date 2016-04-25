@@ -30,12 +30,17 @@ BroadcasterLoggableApiWorker implements TestDriver
 	String line = null;
 	
 	while ((line = br.readLine()) != null) {
-		tl.setResult(line,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName());
+		System.out.println(line);
+		try {
+			tl.setResult(line,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName());
+		}catch(Exception e){
+			System.out.println("The error is:--------------------------------------> " + e.getMessage()); 
+		}
 	}
 	br.close();
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
-		e.printStackTrace();
+		System.out.println("The error is:--------------------------------------> " + e.getMessage());
 	}
 		return "success";
 	}

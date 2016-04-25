@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 15 18:45:24 IST 2016</td>
+<td>Started on:</td><td>Mon Apr 25 14:58:38 IDT 2016</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (194 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2632 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,45 +75,43 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.zixi.testing.BroadcasterIntelTrannscodeStreamTest.broadcasterSingleInputStreamstatisticAnilyzer()'><b>broadcasterSingleInputStreamstatisticAnilyzer</b><br>Test class: com.zixi.testing.BroadcasterIntelTrannscodeStreamTest<br>Parameters: admin, 1234, 10.7.0.62, 4444, TS, transcoder, 1, -1, 0, 0, 0, 0, 1, , , 0, 7200, transcoder, 1, -1, 0, 0, 0, 480p, 857<br/>
-<a href="#Output-1039949752" onClick='toggleBox("Output-1039949752", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.zixi.testing.BroadcasterRtmpInputTest.broadcasterRtmpPullTest()'><b>broadcasterRtmpPullTest</b><br>Test class: com.zixi.testing.BroadcasterRtmpInputTest<br>Parameters: admin, 1234, 10.7.0.62, , test, rtmp://10.7.0.64/live, test, 0, , , , rtmp_pull, , , , 4444, , , 0, , -1, 1, 491<br/>
+<a href="#Output-2116908859" onClick='toggleBox("Output-2116908859", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1039949752" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1039949752">
+<a href="#Output-2116908859" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2116908859">
 Test parameteres: <br/>
 userName: admin<br/>
 userPass: 1234<br/>
 login_ip: 10.7.0.62<br/>
-uiport: 4444<br/>
-type: TS<br/>
-id: transcoder<br/>
-matrix: 1<br/>
-max_outputs: -1<br/>
-mcast_out: 0<br/>
+rtmp_nulls: -- not provided <br/>
+id: test<br/>
+rtmp_url: -- not provided <br/>
+rtmp_name: test<br/>
 time_shift: 0<br/>
-old: 0<br/>
-fast_connect: 0<br/>
-kompression: 1<br/>
-enc_type: -- not provided <br/>
-enc_key: -- not provided <br/>
-rec_history: 0<br/>
-rec_duration: 7200<br/>
-src: transcoder<br/>
-vp: 1<br/>
-ap: -1<br/>
-ll: 0<br/>
-all_pids: 0<br/>
-bit: 0<br/>
-profile_name: 480p<br/>
+mcast_ip: -- not provided <br/>
+mcast_force: -- not provided <br/>
+mcast_port: -- not provided <br/>
+type: rtmp_pull<br/>
+rtmp_user: -- not provided <br/>
+: rtmp_bitrate<br/>
+rtmp_passwd: -- not provided <br/>
+uiport: 4444<br/>
+mcast_ttl: -- not provided <br/>
+rtmp_latency: -- not provided <br/>
+mcast_out: 0<br/>
+complete: -- not provided <br/>
+max_outputs: -1<br/>
+on: 1<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [Stream &apos;transcoder&apos; added.] but found []
+<td><div><pre>java.lang.AssertionError: expected [Stream &apos;test&apos; added.] but found []
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:178)
 	at org.testng.Assert.assertEquals(Assert.java:188)
-	at com.zixi.testing.BroadcasterIntelTrannscodeStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(BroadcasterIntelTrannscodeStreamTest.java:47)
+	at com.zixi.testing.BroadcasterRtmpInputTest.broadcasterRtmpPullTest(BroadcasterRtmpInputTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -138,14 +136,14 @@ profile_name: 480p<br/>
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1039949752", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1039949752'><pre>java.lang.AssertionError: expected [Stream &apos;transcoder&apos; added.] but found []
+</pre></div><a href='#' onClick='toggleBox("stack-trace2116908859", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2116908859'><pre>java.lang.AssertionError: expected [Stream &apos;test&apos; added.] but found []
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:178)
 	at org.testng.Assert.assertEquals(Assert.java:188)
-	at com.zixi.testing.BroadcasterIntelTrannscodeStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(BroadcasterIntelTrannscodeStreamTest.java:47)
+	at com.zixi.testing.BroadcasterRtmpInputTest.broadcasterRtmpPullTest(BroadcasterRtmpInputTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -171,8 +169,8 @@ profile_name: 480p<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>0</td>
-<td>com.zixi.testing.BroadcasterIntelTrannscodeStreamTest@6ea6d14e</td></tr>
+<td>2</td>
+<td>com.zixi.testing.BroadcasterRtmpInputTest@2aaf7cc2</td></tr>
 </table><p>
 </body>
 </html>
