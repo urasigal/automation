@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite">
-              <span class="suite-name border-passed">Broadcaster: RTMP streaming suite</span>
+              <span class="suite-name border-failed">Broadcaster: RTMP streaming suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Broadcaster:_RTMP_streaming_suite">
-                    <span class="test-stats">4 tests</span>
+                    <span class="test-stats">18 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">18 methods, 1 failed,   17 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Broadcaster:_RTMP_streaming_suite" class="hide-methods failed suite-Broadcaster:_RTMP_streaming_suite"> (hide)</a> <!-- hide-methods failed suite-Broadcaster:_RTMP_streaming_suite -->
+                      <a href="#" panel-name="suite-Broadcaster:_RTMP_streaming_suite" class="show-methods failed suite-Broadcaster:_RTMP_streaming_suite"> (show)</a> <!-- show-methods failed suite-Broadcaster:_RTMP_streaming_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Broadcaster:_RTMP_streaming_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.FFMPEGImageStatisticTest" hash-for-method="broadcasterSingleInputStreamStatisticAnilyzer(2868)">broadcasterSingleInputStreamStatisticAnilyzer(2868)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Broadcaster:_RTMP_streaming_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -106,6 +120,36 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" hash-for-method="broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2861)">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2861)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" hash-for-method="broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest" hash-for-method="broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" hash-for-method="broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 3103478f03ef8c090bf8...)">broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 3103478f03ef8c090bf8...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" hash-for-method="broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 6de65743a033c5536c5a...)">broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 6de65743a033c5536c5a...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest" hash-for-method="broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 8f052cfce08c4655f4b4...)">broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 8f052cfce08c4655f4b4...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterRtmpInputTest" hash-for-method="broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, , test, rtmp://10.7.0.64/live, test, 0, , , , rtmp_pull, , , , 4444, , , 0, ...)">broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, , test, rtmp://10.7.0.64/live, test, 0, , , , rtmp_pull, , , , 4444, , , 0, ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -116,7 +160,42 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterRtmpInputEncryptedTest" hash-for-method="broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes192, 6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb, 0, , test, rtmp://...)">broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes192, 6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb, 0, , test, rtmp://...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterRtmpInputEncryptedTest" hash-for-method="broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes256, 8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230, 0,...)">broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes256, 8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230, 0,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.FFMPEGImageStatisticTest" hash-for-method="broadcasterSingleInputStreamStatisticAnilyzer(2857)">broadcasterSingleInputStreamStatisticAnilyzer(2857)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.FFMPEGImageStatisticTest" hash-for-method="broadcasterSingleInputStreamStatisticAnilyzer(2868)">broadcasterSingleInputStreamStatisticAnilyzer(2868)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest" hash-for-method="broadcasterSingleInputStreamstatisticAnilyzer(admin, 1234, 10.7.0.64, 10.7.0.62, 4444, test, 120, 493)">broadcasterSingleInputStreamstatisticAnilyzer(admin, 1234, 10.7.0.64, 10.7.0.62, 4444, test, 120, 493)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" hash-for-method="broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2859)">broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2859)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" hash-for-method="broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)">broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Broadcaster:_RTMP_streaming_suite" title="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest" hash-for-method="broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)">broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Broadcaster:_RTMP_streaming_suite -->
@@ -131,6 +210,55 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Broadcaster:_RTMP_streaming_suite" class="panel Broadcaster:_RTMP_streaming_suite">
+          <div class="suite-Broadcaster:_RTMP_streaming_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.zixi.testing.FFMPEGImageStatisticTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterSingleInputStreamStatisticAnilyzer(2868)">
+                  </a> <!-- broadcasterSingleInputStreamStatisticAnilyzer(2868) -->
+                  <span class="method-name">broadcasterSingleInputStreamStatisticAnilyzer</span>
+                  <span class="parameters">(2868)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Broadcaster:_RTMP_streaming_suite-class-failed -->
           <div class="suite-Broadcaster:_RTMP_streaming_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -142,7 +270,55 @@
                   <a name="broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes128, 3103478f03ef8c090bf8f2ea09b684d8, 0, , test, rtmp://10.7.0.64/live, ...)">
                   </a> <!-- broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes128, 3103478f03ef8c090bf8f2ea09b684d8, 0, , test, rtmp://10.7.0.64/live, ...) -->
                   <span class="method-name">broadcasterRtmpPullTest</span>
-                  <span class="parameters">(admin, 1234, 10.7.0.62, aes128, 3103478f03ef8c090bf8f2ea09b684d8, 0, , test, rtmp://10.7.0.64/live, test, 0, , , , rtmp_pull, , , , 4444, , , 0, , -1, 1, 491)</span>
+                  <span class="parameters">(admin, 1234, 10.7.0.62, aes128, 3103478f03ef8c090bf8f2ea09b684d8, 0, , test, rtmp://10.7.0.64/live, test, 0, , , , rtmp_pull, , , , 4444, , , 0, , -1, 1, 2853)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes192, 6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb, 0, , test, rtmp://...)">
+                  </a> <!-- broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes192, 6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb, 0, , test, rtmp://...) -->
+                  <span class="method-name">broadcasterRtmpPullTest</span>
+                  <span class="parameters">(admin, 1234, 10.7.0.62, aes192, 6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb, 0, , test, rtmp://10.7.0.64/live, test, 0, , , , rtmp_pull, , , , 4444, , , 0, , -1, 1, 2864)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes256, 8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230, 0,...)">
+                  </a> <!-- broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes256, 8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230, 0,...) -->
+                  <span class="method-name">broadcasterRtmpPullTest</span>
+                  <span class="parameters">(admin, 1234, 10.7.0.62, aes256, 8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230, 0, , test, rtmp://10.7.0.64/live, test, 0, , , , rtmp_pull, , , , 4444, , , 0, , -1, 1, 2864)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Broadcaster:_RTMP_streaming_suite-class-passed -->
+          <div class="suite-Broadcaster:_RTMP_streaming_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.zixi.testing.BroadcasterUDPOutputStreamCreationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 3103478f03ef8c090bf8...)">
+                  </a> <!-- broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 3103478f03ef8c090bf8...) -->
+                  <span class="method-name">broadcasterPullInCreation</span>
+                  <span class="parameters">(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 3103478f03ef8c090bf8f2ea09b684d8, TS, 10, 1000, 0.0.0.0, 0, 4444, 90, aes128, 10, 2855)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 6de65743a033c5536c5a...)">
+                  </a> <!-- broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 6de65743a033c5536c5a...) -->
+                  <span class="method-name">broadcasterPullInCreation</span>
+                  <span class="parameters">(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb, TS, 10, 1000, 0.0.0.0, 0, 4444, 90, aes192, 10, 2866)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 8f052cfce08c4655f4b4...)">
+                  </a> <!-- broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 8f052cfce08c4655f4b4...) -->
+                  <span class="method-name">broadcasterPullInCreation</span>
+                  <span class="parameters">(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230, TS, 10, 1000, 0.0.0.0, 0, 4444, 90, aes256, 10, 2866)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -182,6 +358,38 @@
           <div class="suite-Broadcaster:_RTMP_streaming_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2859)">
+                  </a> <!-- broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2859) -->
+                  <span class="method-name">broadcasterSingleStreamRemoving</span>
+                  <span class="parameters">(10.7.0.62, admin, 1234, test, 4444, 2859)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)">
+                  </a> <!-- broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870) -->
+                  <span class="method-name">broadcasterSingleStreamRemoving</span>
+                  <span class="parameters">(10.7.0.62, admin, 1234, test, 4444, 2870)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)">
+                  </a> <!-- broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870) -->
+                  <span class="method-name">broadcasterSingleStreamRemoving</span>
+                  <span class="parameters">(10.7.0.62, admin, 1234, test, 4444, 2870)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Broadcaster:_RTMP_streaming_suite-class-passed -->
+          <div class="suite-Broadcaster:_RTMP_streaming_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.zixi.testing.BroadcasterSingleInputStreamDeletionTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -191,6 +399,54 @@
                   </a> <!-- broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 495) -->
                   <span class="method-name">broadcasterInputStreamDeletion</span>
                   <span class="parameters">(10.7.0.62, admin, 1234, test, 4444, 495)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2861)">
+                  </a> <!-- broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2861) -->
+                  <span class="method-name">broadcasterInputStreamDeletion</span>
+                  <span class="parameters">(10.7.0.62, admin, 1234, test, 4444, 2861)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)">
+                  </a> <!-- broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872) -->
+                  <span class="method-name">broadcasterInputStreamDeletion</span>
+                  <span class="parameters">(10.7.0.62, admin, 1234, test, 4444, 2872)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)">
+                  </a> <!-- broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872) -->
+                  <span class="method-name">broadcasterInputStreamDeletion</span>
+                  <span class="parameters">(10.7.0.62, admin, 1234, test, 4444, 2872)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Broadcaster:_RTMP_streaming_suite-class-passed -->
+          <div class="suite-Broadcaster:_RTMP_streaming_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.zixi.testing.FFMPEGImageStatisticTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterSingleInputStreamStatisticAnilyzer(2857)">
+                  </a> <!-- broadcasterSingleInputStreamStatisticAnilyzer(2857) -->
+                  <span class="method-name">broadcasterSingleInputStreamStatisticAnilyzer</span>
+                  <span class="parameters">(2857)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="broadcasterSingleInputStreamStatisticAnilyzer(2868)">
+                  </a> <!-- broadcasterSingleInputStreamStatisticAnilyzer(2868) -->
+                  <span class="method-name">broadcasterSingleInputStreamStatisticAnilyzer</span>
+                  <span class="parameters">(2868)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -266,7 +522,7 @@
     &lt;parameter name=&quot;rtmp_passwd&quot; value=&quot;&quot;/&gt;
     &lt;parameter name=&quot;mcast_ttl&quot; value=&quot;&quot;/&gt;
     &lt;parameter name=&quot;enc_type&quot; value=&quot;aes128&quot;/&gt;
-    &lt;parameter name=&quot;testid&quot; value=&quot;491&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2853&quot;/&gt;
     &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
     &lt;parameter name=&quot;max_outputs&quot; value=&quot;-1&quot;/&gt;
     &lt;parameter name=&quot;rtmp_latency&quot; value=&quot;&quot;/&gt;
@@ -289,6 +545,248 @@
       &lt;class name=&quot;com.zixi.testing.BroadcasterRtmpInputEncryptedTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Broadcaster - Create RTMP Pull input stream with encryption 128 --&gt;
+  &lt;test name=&quot;Broadcaster - Create UDP out input stream with encryption 128&quot;&gt;
+    &lt;parameter name=&quot;remux_bitrate&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;df&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;fec&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;dec_key&quot; value=&quot;3103478f03ef8c090bf8f2ea09b684d8&quot;/&gt;
+    &lt;parameter name=&quot;type&quot; value=&quot;TS&quot;/&gt;
+    &lt;parameter name=&quot;stream&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;remux_restampdts&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;host&quot; value=&quot;10.7.0.150&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2855&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;smoothing&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;remux_pcr&quot; value=&quot;90&quot;/&gt;
+    &lt;parameter name=&quot;cols&quot; value=&quot;10&quot;/&gt;
+    &lt;parameter name=&quot;streamname&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;local_port&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;userPass&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;rows&quot; value=&quot;10&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;parameter name=&quot;ttl&quot; value=&quot;5&quot;/&gt;
+    &lt;parameter name=&quot;remux_buff&quot; value=&quot;1000&quot;/&gt;
+    &lt;parameter name=&quot;rtp&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;local_ip&quot; value=&quot;0.0.0.0&quot;/&gt;
+    &lt;parameter name=&quot;port&quot; value=&quot;5555&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;dec_type&quot; value=&quot;aes128&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcasterUDPOutputStreamCreationTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Create UDP out input stream with encryption 128 --&gt;
+  &lt;test name=&quot;FFMPEG test encryption 128&quot;&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2857&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.FFMPEGImageStatisticTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FFMPEG test encryption 128 --&gt;
+  &lt;test name=&quot;Broadcaster - Remove udp output stream ryption 128 &quot;&gt;
+    &lt;parameter name=&quot;userPassword&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2859&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Remove udp output stream ryption 128  --&gt;
+  &lt;test name=&quot;Broadcaster - Remove RTMP Pull input stream encryption 128&quot;&gt;
+    &lt;parameter name=&quot;userPassword&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;streamId&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2861&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcasterSingleInputStreamDeletionTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Remove RTMP Pull input stream encryption 128 --&gt;
+  &lt;test name=&quot;Broadcaster - Create RTMP Pull input stream with encryption 192&quot;&gt;
+    &lt;parameter name=&quot;rtmp_nulls&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;mcast_force&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;type&quot; value=&quot;rtmp_pull&quot;/&gt;
+    &lt;parameter name=&quot;enc_key&quot; value=&quot;6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_passwd&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;mcast_ttl&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;enc_type&quot; value=&quot;aes192&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2864&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;max_outputs&quot; value=&quot;-1&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_latency&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;on&quot; value=&quot;1&quot;/&gt;
+    &lt;parameter name=&quot;time_shift&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;mcast_ip&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_url&quot; value=&quot;rtmp://10.7.0.64/live&quot;/&gt;
+    &lt;parameter name=&quot;userPass&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;disconnect_low_br&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;mcast_port&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_name&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_bitrate&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;mcast_out&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_user&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;complete&quot; value=&quot;&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcasterRtmpInputEncryptedTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Create RTMP Pull input stream with encryption 192 --&gt;
+  &lt;test name=&quot;Broadcaster - Create UDP out input stream with encryption 192&quot;&gt;
+    &lt;parameter name=&quot;remux_bitrate&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;df&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;fec&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;dec_key&quot; value=&quot;6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb&quot;/&gt;
+    &lt;parameter name=&quot;type&quot; value=&quot;TS&quot;/&gt;
+    &lt;parameter name=&quot;stream&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;remux_restampdts&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;host&quot; value=&quot;10.7.0.150&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2866&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;smoothing&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;remux_pcr&quot; value=&quot;90&quot;/&gt;
+    &lt;parameter name=&quot;cols&quot; value=&quot;10&quot;/&gt;
+    &lt;parameter name=&quot;streamname&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;local_port&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;userPass&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;rows&quot; value=&quot;10&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;parameter name=&quot;ttl&quot; value=&quot;5&quot;/&gt;
+    &lt;parameter name=&quot;remux_buff&quot; value=&quot;1000&quot;/&gt;
+    &lt;parameter name=&quot;rtp&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;local_ip&quot; value=&quot;0.0.0.0&quot;/&gt;
+    &lt;parameter name=&quot;port&quot; value=&quot;5555&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;dec_type&quot; value=&quot;aes192&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcasterUDPOutputStreamCreationTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Create UDP out input stream with encryption 192 --&gt;
+  &lt;test name=&quot;FFMPEG test encryption 192&quot;&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2868&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.FFMPEGImageStatisticTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FFMPEG test encryption 192 --&gt;
+  &lt;test name=&quot;Broadcaster - Remove udp output stream ryption 192 &quot;&gt;
+    &lt;parameter name=&quot;userPassword&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2870&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Remove udp output stream ryption 192  --&gt;
+  &lt;test name=&quot;Broadcaster - Remove RTMP Pull input stream encryption 192&quot;&gt;
+    &lt;parameter name=&quot;userPassword&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;streamId&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2872&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcasterSingleInputStreamDeletionTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Remove RTMP Pull input stream encryption 192 --&gt;
+  &lt;test name=&quot;Broadcaster - Create RTMP Pull input stream with encryption 256&quot;&gt;
+    &lt;parameter name=&quot;rtmp_nulls&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;mcast_force&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;type&quot; value=&quot;rtmp_pull&quot;/&gt;
+    &lt;parameter name=&quot;enc_key&quot; value=&quot;8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_passwd&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;mcast_ttl&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;enc_type&quot; value=&quot;aes256&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2864&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;max_outputs&quot; value=&quot;-1&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_latency&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;on&quot; value=&quot;1&quot;/&gt;
+    &lt;parameter name=&quot;time_shift&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;mcast_ip&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_url&quot; value=&quot;rtmp://10.7.0.64/live&quot;/&gt;
+    &lt;parameter name=&quot;userPass&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;disconnect_low_br&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;mcast_port&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_name&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_bitrate&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;mcast_out&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;rtmp_user&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;complete&quot; value=&quot;&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcasterRtmpInputEncryptedTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Create RTMP Pull input stream with encryption 256 --&gt;
+  &lt;test name=&quot;Broadcaster - Create UDP out input stream with encryption 256&quot;&gt;
+    &lt;parameter name=&quot;remux_bitrate&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;df&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;fec&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;dec_key&quot; value=&quot;8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230&quot;/&gt;
+    &lt;parameter name=&quot;type&quot; value=&quot;TS&quot;/&gt;
+    &lt;parameter name=&quot;stream&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;remux_restampdts&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;host&quot; value=&quot;10.7.0.150&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2866&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;smoothing&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;remux_pcr&quot; value=&quot;90&quot;/&gt;
+    &lt;parameter name=&quot;cols&quot; value=&quot;10&quot;/&gt;
+    &lt;parameter name=&quot;streamname&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;local_port&quot; value=&quot;&quot;/&gt;
+    &lt;parameter name=&quot;userPass&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;rows&quot; value=&quot;10&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;parameter name=&quot;ttl&quot; value=&quot;5&quot;/&gt;
+    &lt;parameter name=&quot;remux_buff&quot; value=&quot;1000&quot;/&gt;
+    &lt;parameter name=&quot;rtp&quot; value=&quot;0&quot;/&gt;
+    &lt;parameter name=&quot;local_ip&quot; value=&quot;0.0.0.0&quot;/&gt;
+    &lt;parameter name=&quot;port&quot; value=&quot;5555&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;dec_type&quot; value=&quot;aes256&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcasterUDPOutputStreamCreationTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Create UDP out input stream with encryption 256 --&gt;
+  &lt;test name=&quot;FFMPEG test encryption 256&quot;&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2868&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.FFMPEGImageStatisticTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FFMPEG test encryption 256 --&gt;
+  &lt;test name=&quot;Broadcaster - Remove udp output stream ryption 256 &quot;&gt;
+    &lt;parameter name=&quot;userPassword&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2870&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Remove udp output stream ryption 256  --&gt;
+  &lt;test name=&quot;Broadcaster - Remove RTMP Pull input stream encryption 256&quot;&gt;
+    &lt;parameter name=&quot;userPassword&quot; value=&quot;1234&quot;/&gt;
+    &lt;parameter name=&quot;streamId&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;uiport&quot; value=&quot;4444&quot;/&gt;
+    &lt;parameter name=&quot;testid&quot; value=&quot;2872&quot;/&gt;
+    &lt;parameter name=&quot;id&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;userName&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;login_ip&quot; value=&quot;10.7.0.62&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.zixi.testing.BroadcasterSingleInputStreamDeletionTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broadcaster - Remove RTMP Pull input stream encryption 256 --&gt;
 &lt;/suite&gt; &lt;!-- Broadcaster: RTMP streaming suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -310,6 +808,48 @@
               </li>
               <li>
                 <span class="test-name">Broadcaster - Create RTMP Pull input stream with encryption 128 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Create UDP out input stream with encryption 128 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FFMPEG test encryption 128 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Remove udp output stream ryption 128  (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Remove RTMP Pull input stream encryption 128 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Create RTMP Pull input stream with encryption 192 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Create UDP out input stream with encryption 192 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FFMPEG test encryption 192 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Remove udp output stream ryption 192  (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Remove RTMP Pull input stream encryption 192 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Create RTMP Pull input stream with encryption 256 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Create UDP out input stream with encryption 256 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FFMPEG test encryption 256 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Remove udp output stream ryption 256  (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broadcaster - Remove RTMP Pull input stream encryption 256 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -335,28 +875,84 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(18);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'broadcasterSingleInputStreamstatisticAnilyzer')
 data.setCell(0, 2, 'com.zixi.testing.BroadcasterInputStatisticSingleStreamTest')
-data.setCell(0, 3, 145668);
+data.setCell(0, 3, 145395);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'broadcasterRtmpPullTest')
-data.setCell(1, 2, 'com.zixi.testing.BroadcasterRtmpInputTest')
-data.setCell(1, 3, 24);
+data.setCell(1, 1, 'broadcasterSingleInputStreamStatisticAnilyzer')
+data.setCell(1, 2, 'com.zixi.testing.FFMPEGImageStatisticTest')
+data.setCell(1, 3, 131480);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'broadcasterRtmpPullTest')
-data.setCell(2, 2, 'com.zixi.testing.BroadcasterRtmpInputEncryptedTest')
-data.setCell(2, 3, 11);
+data.setCell(2, 1, 'broadcasterSingleInputStreamStatisticAnilyzer')
+data.setCell(2, 2, 'com.zixi.testing.FFMPEGImageStatisticTest')
+data.setCell(2, 3, 62368);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'broadcasterInputStreamDeletion')
-data.setCell(3, 2, 'com.zixi.testing.BroadcasterSingleInputStreamDeletionTest')
-data.setCell(3, 3, 8);
+data.setCell(3, 1, 'broadcasterSingleInputStreamStatisticAnilyzer')
+data.setCell(3, 2, 'com.zixi.testing.FFMPEGImageStatisticTest')
+data.setCell(3, 3, 61060);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'broadcasterRtmpPullTest')
+data.setCell(4, 2, 'com.zixi.testing.BroadcasterRtmpInputTest')
+data.setCell(4, 3, 31);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'broadcasterInputStreamDeletion')
+data.setCell(5, 2, 'com.zixi.testing.BroadcasterSingleInputStreamDeletionTest')
+data.setCell(5, 3, 20);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'broadcasterPullInCreation')
+data.setCell(6, 2, 'com.zixi.testing.BroadcasterUDPOutputStreamCreationTest')
+data.setCell(6, 3, 16);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'broadcasterSingleStreamRemoving')
+data.setCell(7, 2, 'com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest')
+data.setCell(7, 3, 14);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'broadcasterRtmpPullTest')
+data.setCell(8, 2, 'com.zixi.testing.BroadcasterRtmpInputEncryptedTest')
+data.setCell(8, 3, 10);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'broadcasterSingleStreamRemoving')
+data.setCell(9, 2, 'com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest')
+data.setCell(9, 3, 10);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'broadcasterSingleStreamRemoving')
+data.setCell(10, 2, 'com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest')
+data.setCell(10, 3, 9);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'broadcasterRtmpPullTest')
+data.setCell(11, 2, 'com.zixi.testing.BroadcasterRtmpInputEncryptedTest')
+data.setCell(11, 3, 8);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'broadcasterPullInCreation')
+data.setCell(12, 2, 'com.zixi.testing.BroadcasterUDPOutputStreamCreationTest')
+data.setCell(12, 3, 8);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'broadcasterInputStreamDeletion')
+data.setCell(13, 2, 'com.zixi.testing.BroadcasterSingleInputStreamDeletionTest')
+data.setCell(13, 3, 7);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'broadcasterPullInCreation')
+data.setCell(14, 2, 'com.zixi.testing.BroadcasterUDPOutputStreamCreationTest')
+data.setCell(14, 3, 7);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'broadcasterRtmpPullTest')
+data.setCell(15, 2, 'com.zixi.testing.BroadcasterRtmpInputEncryptedTest')
+data.setCell(15, 3, 7);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'broadcasterInputStreamDeletion')
+data.setCell(16, 2, 'com.zixi.testing.BroadcasterSingleInputStreamDeletionTest')
+data.setCell(16, 3, 7);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'broadcasterInputStreamDeletion')
+data.setCell(17, 2, 'com.zixi.testing.BroadcasterSingleInputStreamDeletionTest')
+data.setCell(17, 3, 6);
 window.suiteTableData['Broadcaster:_RTMP_streaming_suite']= { tableData: data, tableDiv: 'times-div-Broadcaster:_RTMP_streaming_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Broadcaster:_RTMP_streaming_suite">
               </div> <!-- times-div-Broadcaster:_RTMP_streaming_suite -->
             </div> <!-- times-div -->
@@ -406,9 +1002,9 @@ return data;
                 <span class="reporter-method-output">uiport: 4444</span>
                 <span class="reporter-method-output">id: test</span>
                 <span class="reporter-method-output">testduration: 120</span>
-                <span class="reporter-method-output">Max bitrate is 1024312</span>
-                <span class="reporter-method-output">Min bitrete is 814000</span>
-                <span class="reporter-method-output">Average bitrate is 944439</span>
+                <span class="reporter-method-output">Max bitrate is 1006944</span>
+                <span class="reporter-method-output">Min bitrete is 861920</span>
+                <span class="reporter-method-output">Average bitrate is 943762</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -454,6 +1050,248 @@ return data;
                 <span class="reporter-method-output">on: 1</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 3103478f03ef8c090bf8...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPass: 1234</span>
+                <span class="reporter-method-output">loin_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">port: 5555</span>
+                <span class="reporter-method-output">stream: test</span>
+                <span class="reporter-method-output">streamname: test</span>
+                <span class="reporter-method-output">host: 10.7.0.150</span>
+                <span class="reporter-method-output">id: test</span>
+                <span class="reporter-method-output">rtp: 0</span>
+                <span class="reporter-method-output">fec: 0</span>
+                <span class="reporter-method-output">smoothing: 0</span>
+                <span class="reporter-method-output">ttl: 5</span>
+                <span class="reporter-method-output">remux_bitrate: 0</span>
+                <span class="reporter-method-output">df: 0</span>
+                <span class="reporter-method-output">local_port: -- not provided </span>
+                <span class="reporter-method-output">dec_key: 3103478f03ef8c090bf8f2ea09b684d8</span>
+                <span class="reporter-method-output">type: TS</span>
+                <span class="reporter-method-output">rows: 10</span>
+                <span class="reporter-method-output">remux_buff: 1000</span>
+                <span class="reporter-method-output">local_ip: 0.0.0.0</span>
+                <span class="reporter-method-output">remux_restampdts: 0</span>
+                <span class="reporter-method-output">uiport: 4444</span>
+                <span class="reporter-method-output">remux_pcr: 90</span>
+                <span class="reporter-method-output">dec_type: aes128</span>
+                <span class="reporter-method-output">cols: 10</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterSingleInputStreamStatisticAnilyzer(2857)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">FFMPEG success measurement relation: 10 / 10</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2859)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">login_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPassword: 1234</span>
+                <span class="reporter-method-output">name: test</span>
+                <span class="reporter-method-output">uiport: 4444</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2861)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">login_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPassword: 1234</span>
+                <span class="reporter-method-output">streamId: test</span>
+                <span class="reporter-method-output">uiport: 4444</span>
+                <span class="reporter-method-output">Stream test removed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes192, 6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb, 0, , test, rtmp://...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPass: 1234</span>
+                <span class="reporter-method-output">login_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">enc_typeaes192: -- not provided </span>
+                <span class="reporter-method-output">enc-key6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb: -- not provided </span>
+                <span class="reporter-method-output">rtmp_nulls: -- not provided </span>
+                <span class="reporter-method-output">disconnect_low_br0: -- not provided </span>
+                <span class="reporter-method-output">id: test</span>
+                <span class="reporter-method-output">rtmp_url: -- not provided </span>
+                <span class="reporter-method-output">rtmp_name: test</span>
+                <span class="reporter-method-output">time_shift: 0</span>
+                <span class="reporter-method-output">mcast_ip: -- not provided </span>
+                <span class="reporter-method-output">mcast_force: -- not provided </span>
+                <span class="reporter-method-output">mcast_port: -- not provided </span>
+                <span class="reporter-method-output">type: rtmp_pull</span>
+                <span class="reporter-method-output">rtmp_user: -- not provided </span>
+                <span class="reporter-method-output">: rtmp_bitrate</span>
+                <span class="reporter-method-output">rtmp_passwd: -- not provided </span>
+                <span class="reporter-method-output">uiport: 4444</span>
+                <span class="reporter-method-output">mcast_ttl: -- not provided </span>
+                <span class="reporter-method-output">rtmp_latency: -- not provided </span>
+                <span class="reporter-method-output">mcast_out: 0</span>
+                <span class="reporter-method-output">complete: -- not provided </span>
+                <span class="reporter-method-output">max_outputs: -1</span>
+                <span class="reporter-method-output">on: 1</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 6de65743a033c5536c5a...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPass: 1234</span>
+                <span class="reporter-method-output">loin_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">port: 5555</span>
+                <span class="reporter-method-output">stream: test</span>
+                <span class="reporter-method-output">streamname: test</span>
+                <span class="reporter-method-output">host: 10.7.0.150</span>
+                <span class="reporter-method-output">id: test</span>
+                <span class="reporter-method-output">rtp: 0</span>
+                <span class="reporter-method-output">fec: 0</span>
+                <span class="reporter-method-output">smoothing: 0</span>
+                <span class="reporter-method-output">ttl: 5</span>
+                <span class="reporter-method-output">remux_bitrate: 0</span>
+                <span class="reporter-method-output">df: 0</span>
+                <span class="reporter-method-output">local_port: -- not provided </span>
+                <span class="reporter-method-output">dec_key: 6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb</span>
+                <span class="reporter-method-output">type: TS</span>
+                <span class="reporter-method-output">rows: 10</span>
+                <span class="reporter-method-output">remux_buff: 1000</span>
+                <span class="reporter-method-output">local_ip: 0.0.0.0</span>
+                <span class="reporter-method-output">remux_restampdts: 0</span>
+                <span class="reporter-method-output">uiport: 4444</span>
+                <span class="reporter-method-output">remux_pcr: 90</span>
+                <span class="reporter-method-output">dec_type: aes192</span>
+                <span class="reporter-method-output">cols: 10</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterSingleInputStreamStatisticAnilyzer(2868)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">FFMPEG success measurement relation: 10 / 10</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">login_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPassword: 1234</span>
+                <span class="reporter-method-output">name: test</span>
+                <span class="reporter-method-output">uiport: 4444</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">login_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPassword: 1234</span>
+                <span class="reporter-method-output">streamId: test</span>
+                <span class="reporter-method-output">uiport: 4444</span>
+                <span class="reporter-method-output">Stream test removed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes256, 8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230, 0,...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPass: 1234</span>
+                <span class="reporter-method-output">login_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">enc_typeaes256: -- not provided </span>
+                <span class="reporter-method-output">enc-key8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230: -- not provided </span>
+                <span class="reporter-method-output">rtmp_nulls: -- not provided </span>
+                <span class="reporter-method-output">disconnect_low_br0: -- not provided </span>
+                <span class="reporter-method-output">id: test</span>
+                <span class="reporter-method-output">rtmp_url: -- not provided </span>
+                <span class="reporter-method-output">rtmp_name: test</span>
+                <span class="reporter-method-output">time_shift: 0</span>
+                <span class="reporter-method-output">mcast_ip: -- not provided </span>
+                <span class="reporter-method-output">mcast_force: -- not provided </span>
+                <span class="reporter-method-output">mcast_port: -- not provided </span>
+                <span class="reporter-method-output">type: rtmp_pull</span>
+                <span class="reporter-method-output">rtmp_user: -- not provided </span>
+                <span class="reporter-method-output">: rtmp_bitrate</span>
+                <span class="reporter-method-output">rtmp_passwd: -- not provided </span>
+                <span class="reporter-method-output">uiport: 4444</span>
+                <span class="reporter-method-output">mcast_ttl: -- not provided </span>
+                <span class="reporter-method-output">rtmp_latency: -- not provided </span>
+                <span class="reporter-method-output">mcast_out: 0</span>
+                <span class="reporter-method-output">complete: -- not provided </span>
+                <span class="reporter-method-output">max_outputs: -1</span>
+                <span class="reporter-method-output">on: 1</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 8f052cfce08c4655f4b4...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPass: 1234</span>
+                <span class="reporter-method-output">loin_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">port: 5555</span>
+                <span class="reporter-method-output">stream: test</span>
+                <span class="reporter-method-output">streamname: test</span>
+                <span class="reporter-method-output">host: 10.7.0.150</span>
+                <span class="reporter-method-output">id: test</span>
+                <span class="reporter-method-output">rtp: 0</span>
+                <span class="reporter-method-output">fec: 0</span>
+                <span class="reporter-method-output">smoothing: 0</span>
+                <span class="reporter-method-output">ttl: 5</span>
+                <span class="reporter-method-output">remux_bitrate: 0</span>
+                <span class="reporter-method-output">df: 0</span>
+                <span class="reporter-method-output">local_port: -- not provided </span>
+                <span class="reporter-method-output">dec_key: 8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230</span>
+                <span class="reporter-method-output">type: TS</span>
+                <span class="reporter-method-output">rows: 10</span>
+                <span class="reporter-method-output">remux_buff: 1000</span>
+                <span class="reporter-method-output">local_ip: 0.0.0.0</span>
+                <span class="reporter-method-output">remux_restampdts: 0</span>
+                <span class="reporter-method-output">uiport: 4444</span>
+                <span class="reporter-method-output">remux_pcr: 90</span>
+                <span class="reporter-method-output">dec_type: aes256</span>
+                <span class="reporter-method-output">cols: 10</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterSingleInputStreamStatisticAnilyzer(2868)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">FFMPEG success measurement relation: 7 / 10</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">login_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPassword: 1234</span>
+                <span class="reporter-method-output">name: test</span>
+                <span class="reporter-method-output">uiport: 4444</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test parameteres: </span>
+                <span class="reporter-method-output">login_ip: 10.7.0.62</span>
+                <span class="reporter-method-output">userName: admin</span>
+                <span class="reporter-method-output">userPassword: 1234</span>
+                <span class="reporter-method-output">streamId: test</span>
+                <span class="reporter-method-output">uiport: 4444</span>
+                <span class="reporter-method-output">Stream test removed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Broadcaster:_RTMP_streaming_suite" class="panel">
@@ -471,93 +1309,417 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.zixi.testing.BroadcasterRtmpInputTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@7113b13f)</span>
+                <span class="method-name">startTest(org.testng.TestRunner@782663d3)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">testInit</span>
-                <span class="method-start">9 ms</span>
+                <span class="method-start">12 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTes(491)</span>
-                <span class="method-start">11 ms</span>
+                <span class="method-start">14 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, , test, rtmp://10.7.0.64/live, test, 0, , , , rtmp_pull, , , , 4444, , , 0, ...)</span>
-                <span class="method-start">142 ms</span>
+                <span class="method-start">158 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterRtmpInputTest.broadcasterRtmpPullTest(java.lang.String,java....)</span>
-                <span class="method-start">167 ms</span>
+                <span class="method-start">190 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.zixi.testing.BroadcasterInputStatisticSingleStreamTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@757942a1)</span>
-                <span class="method-start">211 ms</span>
+                <span class="method-name">startTest(org.testng.TestRunner@5579bb86)</span>
+                <span class="method-start">246 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">testInit</span>
-                <span class="method-start">211 ms</span>
+                <span class="method-start">247 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTes(493)</span>
-                <span class="method-start">212 ms</span>
+                <span class="method-start">248 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">broadcasterSingleInputStreamstatisticAnilyzer(admin, 1234, 10.7.0.64, 10.7.0.62, 4444, test, 120, 493)</span>
-                <span class="method-start">247 ms</span>
+                <span class="method-start">282 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreams...)</span>
-                <span class="method-start">145916 ms</span>
+                <span class="method-start">145679 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.zixi.testing.BroadcasterSingleInputStreamDeletionTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@4e718207)</span>
-                <span class="method-start">145975 ms</span>
+                <span class="method-name">startTest(org.testng.TestRunner@6d3af739)</span>
+                <span class="method-start">145755 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">testInit</span>
-                <span class="method-start">145976 ms</span>
+                <span class="method-start">145756 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTes(495)</span>
-                <span class="method-start">145977 ms</span>
+                <span class="method-start">145759 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 495)</span>
-                <span class="method-start">146012 ms</span>
+                <span class="method-start">145806 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion...)</span>
-                <span class="method-start">146021 ms</span>
+                <span class="method-start">145827 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.zixi.testing.BroadcasterRtmpInputEncryptedTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@401e7803)</span>
-                <span class="method-start">146058 ms</span>
+                <span class="method-name">startTest(org.testng.TestRunner@69379752)</span>
+                <span class="method-start">145889 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">testInit</span>
-                <span class="method-start">146058 ms</span>
+                <span class="method-start">145889 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeTes(491)</span>
-                <span class="method-start">146059 ms</span>
+                <span class="method-name">beforeTes(2853)</span>
+                <span class="method-start">145889 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes128, 3103478f03ef8c090bf8f2ea09b684d8, 0, , test, rtmp://10.7.0.64/live, ...)</span>
-                <span class="method-start">146094 ms</span>
+                <span class="method-start">145924 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterRtmpInputEncryptedTest.broadcasterRtmpPullTest(java.lang.Str...)</span>
-                <span class="method-start">146105 ms</span>
+                <span class="method-start">145932 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcasterUDPOutputStreamCreationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@77a57272)</span>
+                <span class="method-start">145967 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">145967 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2855)</span>
+                <span class="method-start">145968 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 3103478f03ef8c090bf8...)</span>
+                <span class="method-start">146001 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(java.l...)</span>
+                <span class="method-start">146010 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.FFMPEGImageStatisticTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@69a10787)</span>
+                <span class="method-start">146060 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">146060 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2857)</span>
+                <span class="method-start">146062 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterSingleInputStreamStatisticAnilyzer(2857)</span>
+                <span class="method-start">146093 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(...)</span>
+                <span class="method-start">207154 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@120d6fe6)</span>
+                <span class="method-start">207203 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">207203 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2859)</span>
+                <span class="method-start">207206 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2859)</span>
+                <span class="method-start">207244 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemovin...)</span>
+                <span class="method-start">207258 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcasterSingleInputStreamDeletionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@6b0c2d26)</span>
+                <span class="method-start">207295 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">207295 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2861)</span>
+                <span class="method-start">207295 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2861)</span>
+                <span class="method-start">207326 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion...)</span>
+                <span class="method-start">207333 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcasterRtmpInputEncryptedTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@709ba3fb)</span>
+                <span class="method-start">207367 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">207367 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2864)</span>
+                <span class="method-start">207367 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes192, 6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb, 0, , test, rtmp://...)</span>
+                <span class="method-start">207398 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterRtmpInputEncryptedTest.broadcasterRtmpPullTest(java.lang.Str...)</span>
+                <span class="method-start">207408 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcasterUDPOutputStreamCreationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@c8e4bb0)</span>
+                <span class="method-start">207458 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">207459 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2866)</span>
+                <span class="method-start">207461 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 6de65743a033c5536c5a...)</span>
+                <span class="method-start">207499 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(java.l...)</span>
+                <span class="method-start">207506 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.FFMPEGImageStatisticTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@145eaa29)</span>
+                <span class="method-start">207541 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">207541 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2868)</span>
+                <span class="method-start">207542 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterSingleInputStreamStatisticAnilyzer(2868)</span>
+                <span class="method-start">207578 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(...)</span>
+                <span class="method-start">269947 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@3bbc39f8)</span>
+                <span class="method-start">270016 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">270017 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2870)</span>
+                <span class="method-start">270017 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)</span>
+                <span class="method-start">270050 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemovin...)</span>
+                <span class="method-start">270059 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcasterSingleInputStreamDeletionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@75c072cb)</span>
+                <span class="method-start">270092 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">270093 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2872)</span>
+                <span class="method-start">270093 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)</span>
+                <span class="method-start">270126 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion...)</span>
+                <span class="method-start">270132 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcasterRtmpInputEncryptedTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@53ca01a2)</span>
+                <span class="method-start">270167 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">270167 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2864)</span>
+                <span class="method-start">270167 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterRtmpPullTest(admin, 1234, 10.7.0.62, aes256, 8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230, 0,...)</span>
+                <span class="method-start">270219 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterRtmpInputEncryptedTest.broadcasterRtmpPullTest(java.lang.Str...)</span>
+                <span class="method-start">270226 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcasterUDPOutputStreamCreationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@45dd4eda)</span>
+                <span class="method-start">270264 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">270264 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2866)</span>
+                <span class="method-start">270265 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterPullInCreation(admin, 1234, 10.7.0.62, 5555, test, test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , 8f052cfce08c4655f4b4...)</span>
+                <span class="method-start">270299 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(java.l...)</span>
+                <span class="method-start">270315 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.FFMPEGImageStatisticTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@7ea37dbf)</span>
+                <span class="method-start">270350 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">270351 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2868)</span>
+                <span class="method-start">270351 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">broadcasterSingleInputStreamStatisticAnilyzer(2868)</span>
+                <span class="method-start">270385 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(...)</span>
+                <span class="method-start">401868 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@4c15e7fd)</span>
+                <span class="method-start">401916 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">401917 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2870)</span>
+                <span class="method-start">401917 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterSingleStreamRemoving(10.7.0.62, admin, 1234, test, 4444, 2870)</span>
+                <span class="method-start">401955 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemovin...)</span>
+                <span class="method-start">401965 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.zixi.testing.BroadcasterSingleInputStreamDeletionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@233fe9b6)</span>
+                <span class="method-start">402001 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">testInit</span>
+                <span class="method-start">402002 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeTes(2872)</span>
+                <span class="method-start">402002 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">broadcasterInputStreamDeletion(10.7.0.62, admin, 1234, test, 4444, 2872)</span>
+                <span class="method-start">402051 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest(public void com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion...)</span>
+                <span class="method-start">402059 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
