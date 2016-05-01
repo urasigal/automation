@@ -35,6 +35,8 @@ public class BaseTest {
 	protected String automationTestIdentifiers = "";
 	protected ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 	protected TestBaseFunction testBaseFunction = new TestBaseFunction ();
+	
+	// Writes test results to the TestLink.
 	protected String testParameters =  "";
 	
 	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developer staff.

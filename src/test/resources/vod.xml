@@ -110,7 +110,7 @@
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-<test name="Broadcaster - Remove udp output stream test - VOD WEB API">
+	<test name="Broadcaster - Remove udp output stream test - VOD WEB API">
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -185,14 +185,14 @@
 		<parameter name="ft_proxy_https_port" value="4501" />
 		<parameter name="max_download_bitrate" value="100000" />
 		<parameter name="max_upload_bitrate" value="100000" />
-		<parameter name="testid" value="1144" />  
+		<parameter name="testid" value="2875" />  
 		<classes>
 		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG test default parameters - VOD WEB API FLV">
 		<parameter name="mode" value="http://10.7.0.64:7777/iphone.ts.flv" /> 
-		<parameter name="testid" value="1146" />  
+		<parameter name="testid" value="2877" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticModeTest"/>
 		</classes>
