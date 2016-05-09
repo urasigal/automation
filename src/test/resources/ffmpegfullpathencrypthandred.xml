@@ -4,7 +4,7 @@
 	<test name="Feeder - push to broadcaster test - Encryption AES 128 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -73,7 +73,7 @@
 	<test name="Receiver - pull input stream creation - Encryption AES 128 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="dec_key" value="a69a8ba04520a8e0fa66fdb0af94cb33" />
 		<parameter name="dec_type" value="aes128" />
@@ -109,7 +109,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Pull input stream statistic - Encryption AES 128 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -121,7 +121,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out creation - Encryption AES 128 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -149,7 +149,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out deletion Encryption AES 128 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -163,7 +163,7 @@
 	<test name="Feeder - output stream deletion test - Encryption AES 128 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -191,7 +191,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Remove Pull input stream - Encryption AES 128 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -204,7 +204,7 @@
 	<test name="Feeder - push to broadcaster test - Encryption AES 192 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -273,7 +273,7 @@
 	<test name="Receiver - pull input stream creation - Encryption AES 192 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="dec_key" value="90fd47d973da182c5551a6932561a2e6408fa479bb3f5e8c" />
 		<parameter name="dec_type" value="aes192" />
@@ -309,7 +309,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Pull input stream statistic - Encryption AES 192 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -321,7 +321,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out creation - Encryption AES 192 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -349,7 +349,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out deletion Encryption AES 192 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -363,7 +363,7 @@
 	<test name="Feeder - output stream deletion test - Encryption AES 192 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -391,7 +391,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Remove Pull input stream - Encryption AES 192 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -404,7 +404,7 @@
 	<test name="Feeder - push to broadcaster test - Encryption AES 256 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -473,7 +473,7 @@
 	<test name="Receiver - pull input stream creation - Encryption AES 256 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="dec_key" value="58982a91fb4f9c76eb45d801420111caf152167705e0e8e522f0c01886a3a754" />
 		<parameter name="dec_type" value="aes256" />
@@ -509,7 +509,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Pull input stream statistic - Encryption AES 256 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -521,7 +521,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out creation - Encryption AES 256 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -549,7 +549,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out deletion Encryption AES 256 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -563,7 +563,7 @@
 	<test name="Feeder - output stream deletion test - Encryption AES 256 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -591,7 +591,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Remove Pull input stream - Encryption AES 256 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -604,7 +604,7 @@
 	<test name="Feeder - push to broadcaster test - Encryption auto FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -673,7 +673,7 @@
 	<test name="Receiver - pull input stream creation - Encryption auto FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="dec_key" value="" />
 		<parameter name="dec_type" value="" />
@@ -709,7 +709,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Pull input stream statistic - Encryption auto FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -721,7 +721,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out creation - Encryption auto FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -749,7 +749,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out deletion Encryption auto FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -763,7 +763,7 @@
 	<test name="Feeder - output stream deletion test - Encryption auto FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -791,7 +791,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Remove Pull input stream - auto FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -804,7 +804,7 @@
 	<test name="Feeder - push to broadcaster negative test - Encryption AES 128 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -873,7 +873,7 @@
 	<test name="Receiver - pull input stream creation negative test - Encryption AES 128 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="dec_key" value="a69a8ba04520a8e0fa66fdb0af94cb33" />
 		<parameter name="dec_type" value="aes128" />
@@ -909,7 +909,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out creation negative test - Encryption AES 128 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -937,7 +937,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out deletion Encryption AES 128 FFMPEG analyser negative test">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -951,7 +951,7 @@
 	<test name="Feeder - output stream deletion negative test - Encryption AES 128 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -979,7 +979,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Remove Pull input stream negative test - Encryption AES 128 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -992,7 +992,7 @@
 	<test name="Feeder - push to broadcaster negative test - Encryption AES 192 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -1061,7 +1061,7 @@
 	<test name="Receiver - pull input stream creation negative test - Encryption AES 192 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="dec_key" value="90fd47d973da182c5551a6932561a2e6408fa479bb3f5e8a" />
 		<parameter name="dec_type" value="aes128" />
@@ -1097,7 +1097,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out creation negative test - Encryption AES 192 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -1125,7 +1125,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out deletion Encryption AES 192 FFMPEG analyser negative test ">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -1139,7 +1139,7 @@
 	<test name="Feeder - output stream deletion negative test - Encryption AES 192 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -1167,7 +1167,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Remove Pull input stream negative test - Encryption AES 192 FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />

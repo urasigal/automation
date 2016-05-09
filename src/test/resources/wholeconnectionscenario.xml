@@ -5,7 +5,7 @@
 <test name="Feeder - push to broadcaster test - default parameteres">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -74,7 +74,7 @@
 	<test name="Receiver - pull input stream creation - default parameters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="dec_key" value="" />
 		<parameter name="dec_type" value="" />
@@ -110,7 +110,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Pull input stream statistic - default paremeters">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -124,7 +124,7 @@
 	<test name="Feeder - output stream deletion test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -152,7 +152,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Remove Pull input stream - default paremeters">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
