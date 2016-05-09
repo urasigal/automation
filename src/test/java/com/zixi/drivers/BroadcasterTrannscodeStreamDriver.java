@@ -55,7 +55,7 @@ public class BroadcasterTrannscodeStreamDriver extends
 		
 		// Transcode a stream zhopa
 		return apiworker.sendGet("http://" + login_ip + ":" + uiport
-				+ "/zixi/add_stream.json?" + rtype + type + "&" + rid + id
+				+ "/zixi/add_stream.json?" + "type=" + type + "&" + rid + id
 				+ "&" + rmatrix + matrix + "&" + rmax_outputs + max_outputs
 				+ "&" + rmcast_out + mcast_out + "&" + rtime_shift + time_shift
 				+ "&" + rold + old + "&" + rfast_connect + fast_connect + "&"
@@ -91,20 +91,24 @@ public class BroadcasterTrannscodeStreamDriver extends
 		pid = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
 						+ "/zixi/h264_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport),  profile_name);
 
+		int audioProfile = StreamsDriver.getTranscoderProfiles(() -> apiworker.sendGet("http://" + login_ip + ":" + uiport
+				+ "/zixi/aac_profiles.json" , "", 77, responseCookieContainer, login_ip, this, uiport),  ap);
+
+		
 		String url = "http://" + login_ip + ":" + uiport
-				+ "/zixi/add_stream.json?" + rtype + type + "&" + rid + id
+				+ "/zixi/add_stream.json?" + "type=" + type + "&" + rid + id
 				+ "&" + rmatrix + matrix + "&" + rmax_outputs + max_outputs
 				+ "&" + rmcast_out + mcast_out + "&" + rtime_shift + time_shift
 				+ "&" + rold + old + "&" + rfast_connect + fast_connect + "&"
 				+ rkompression + kompression + "&" + renc_type + enc_type
 				+ "&" + renc_key + enc_key + "&" + rrec_history + rec_history
 				+ "&" + rrec_duration + rec_duration + "&" + rsrc + src + "&"
-				+ rvp + pid + "&" + rap + ap + "&ll=" + ll+ "&all_pids=" + all_pids + "&" + rbit + bit;
+				+ rvp + pid + "&" + rap + audioProfile + "&ll=" + ll+ "&all_pids=" + all_pids + "&" + rbit + bit;
 		
 		return apiworker.sendGet(url, "", ADD_TRANSCODER_PROFILE, responseCookieContainer, login_ip, this, uiport);
 	}
 
-	static private final String rtype = "type=";
+	//static private final String rtype = "type=";
 	static private final String rid = "id=";
 	static private final String rmatrix = "matrix=";
 	static private final String rmax_outputs = "max_outputs=";

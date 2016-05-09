@@ -186,7 +186,7 @@ public class JsonParser {
 
 	public static int getTranscoderProfiles(String outJson,
 			String profile_name) {
-		int pid = -8;
+		int pid = -1;
 		JSONObject responseJson = new JSONObject(outJson);
 		JSONArray outputStreamsArray = responseJson.getJSONArray("profiles");
 		String streamName = null;
