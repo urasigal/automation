@@ -11,7 +11,7 @@ public class BroadcasterRtmpPushOutputCreationDriver extends
 	final private static String HTTP = "http://";
 	final private static String params1 = ":";
 	final private static String params2 = "&";
-	final private static String params7 = "/zixi/add_output.json?";
+	
 
 	public String testIMPL(String login_ip, String userName,
 			String userPassword, String uiport, String type, String name,
@@ -37,7 +37,7 @@ public class BroadcasterRtmpPushOutputCreationDriver extends
 				userPassword, login_ip, uiport);
 
 		return apiworker.sendGet(
-				HTTP + login_ip + params1 + uiport + params7 + "type" + "="
+				HTTP + login_ip + params1 + uiport + "/zixi/add_output.json?" + "type" + "="
 						+ type + "&" + "name" + "=" + name + "&" + "stream"
 						+ "=" + stream + "&" + "matrix" + "=" + matrix + "&"
 						+ "url" + "=" + url + "&" + "url-alt" + "=" + url_alt

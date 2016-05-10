@@ -26,6 +26,8 @@ import com.zixi.tools.TestlinkIntegration;
  */
 
 public class BaseTest {
+	
+	// It is an interface all test drivers have to implement this interface.
 	protected TestDriver testDriver;
 	protected ClassLoader classLoader;
 	protected Object driverObj;

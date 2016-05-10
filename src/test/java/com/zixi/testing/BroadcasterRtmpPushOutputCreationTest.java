@@ -14,6 +14,7 @@ public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 		testDriver = new BroadcasterRtmpPushOutputCreationDriver();
 	}
 
+	// It is a test parameters from suite xml file.
 	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "type",
 			"name", "stream", "matrix", "url", "url_alt", "rtmp_stream",
 			"user", "bandwidth", "latency", "reconnect", "sendfi",
@@ -32,6 +33,8 @@ public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
+		
+		// This is data structure to store a test parameters then provide it to TestLink integration.
 		testParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "uiport", "type",
 				"name", "stream", "matrix", "url", "url_alt", "rtmp_stream",
 				"user", "bandwidth", "latency", "reconnect", "sendfi",

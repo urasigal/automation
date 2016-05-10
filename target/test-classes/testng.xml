@@ -8,8 +8,8 @@
 	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="source" value="test" />
 		<parameter name="uiport" value="4444" />
@@ -41,8 +41,8 @@
 	<test name="Broadcaster - Stream statistics test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
@@ -52,7 +52,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test - default paremeters">
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -66,8 +66,8 @@
 		<test name="Broadcaster - Pull input stream creation zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test2" />
 		<parameter name="source" value="test2" />
 		<parameter name="uiport" value="4444" />
@@ -99,8 +99,8 @@
 	<test name="Broadcaster - Stream statistics test zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test2" />
 		<parameter name="testduration" value="120" />
@@ -110,7 +110,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test zero latency">
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test2" />
@@ -124,8 +124,8 @@
 		<test name="Broadcaster - Pull input stream creation low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test2" />
 		<parameter name="source" value="test2" />
 		<parameter name="uiport" value="4444" />
@@ -157,8 +157,8 @@
 	<test name="Broadcaster - Stream statistics test low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test2" />
 		<parameter name="testduration" value="120" />
@@ -168,7 +168,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test low latency">
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test2" />
@@ -182,8 +182,8 @@
 		<test name="Broadcaster - Pull input stream creation test force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test2" />
 		<parameter name="source" value="test2" />
 		<parameter name="uiport" value="4444" />
@@ -215,8 +215,8 @@
 	<test name="Broadcaster - Stream statistics test force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test2" />
 		<parameter name="testduration" value="120" />
@@ -226,7 +226,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test - force FEC">
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test2" />
