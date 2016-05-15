@@ -25,13 +25,14 @@ import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 
-	private TestDriver testDriver;
-
+	
+	//The method will be run before the first test method in the current class is invoked.
 	@BeforeClass
 	public void testInit() {
 		testDriver = new BroadcasterSinglePullInStreamCreationDriver();
 	}
 
+	
 	@Parameters({ "userName", "userPass", "Host", "login_ip", "id", "source",
 			"uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
 			"mcast_force", "time_shift", "nic", "max_outputs", "type",
@@ -52,6 +53,8 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
+		
+		// Gather the test parameters in order to pass them to the TestLink
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "Host", "login_ip", "id", "source",
 				"uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
 				"mcast_force", "time_shift", "nic", "max_outputs", "type",
@@ -66,7 +69,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 				mcast_ttl, on, func, fec_force, mcast_out,
 				propertiesFile ,testid });
 		
-		
+		// The actual test method.
 		Assert.assertEquals(
 				((BroadcasterSinglePullInStreamCreationDriver) testDriver)
 						.testIMPL(userName, userPass, Host, login_ip, id,
