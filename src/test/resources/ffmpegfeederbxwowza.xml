@@ -44,6 +44,9 @@
 		<parameter name="testid" value="806" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederOutputToBxTest" />
+     		 </methods>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - RTMP to Wowza FFMPEG">
