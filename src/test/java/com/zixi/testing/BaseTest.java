@@ -41,7 +41,7 @@ public class BaseTest {
 	// Writes test results to the TestLink.
 	protected String testParameters =  "";
 	
-	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developer staff.
+	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developers.
 	protected static  Logger       LOGGER      = null;
 	protected static  FileHandler  FILEHANDLER = null ;
 	
