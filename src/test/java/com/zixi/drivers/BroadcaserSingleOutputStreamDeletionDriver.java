@@ -35,6 +35,7 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		testParameters = new TestParameters("login_ip:"+login_ip,"userName:"+userName ,"userPassword:"+userPassword ,"name:"+name ,"uiport:"+uiport);
 		String response;
 		
+		// Super class member (BroadcasterLoggableApiWorker) 
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPassword, login_ip, uiport);
 		
 		response = apiworker.sendGet(HTTP + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this, uiport );
