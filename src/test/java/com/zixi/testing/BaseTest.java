@@ -112,6 +112,7 @@ public class BaseTest {
 		}
 	}
 	
+	// Singleton manner of definition.
 	protected Logger getLoggerInstance()
 	{
 		if(BaseTest.LOGGER == null)

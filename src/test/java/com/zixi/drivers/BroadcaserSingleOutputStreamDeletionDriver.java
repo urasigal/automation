@@ -13,9 +13,11 @@ import com.zixi.tools.BroadcasterLoggableApiWorker;
 import com.zixi.tools.RemoveInputHelper;
 import com.zixi.tools.ApiWorkir;
 
+
+// This test driver is used in purpose of output stream deletion on a broadcaster server.
 public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLoggableApiWorker implements TestDriver{
 	
-	private ApiWorkir streamDeletor = new ApiWorkir();
+	//private ApiWorkir streamDeletor = new ApiWorkir();
 	
 	public  ArrayList<String> list = new ArrayList<String>();
 	
@@ -35,7 +37,7 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPassword, login_ip, uiport);
 		
-		response = streamDeletor.sendGet(HTTP + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this, uiport );
+		response = apiworker.sendGet(HTTP + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this, uiport );
 		
 		JSONObject responseJson = new JSONObject(response.toString());
 		JSONArray outputStreamsArray = responseJson.getJSONArray("outputs");
@@ -51,7 +53,7 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		    	internalStreamName = outputStream.getString("stream_id");
 		    }
 		  }
-		return streamDeletor.sendGet(HTTP + login_ip + ":" + uiport +  "/zixi/remove_output.json?" + rid + "=" + internalStreamID +"&stream=" + internalStreamName , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);
+		return apiworker.sendGet(HTTP + login_ip + ":" + uiport +  "/zixi/remove_output.json?" + rid + "=" + internalStreamID +"&stream=" + internalStreamName , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);
 	}
 	
 	public String getId1() {

@@ -15,22 +15,25 @@ import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import com.zixi.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
+
+// This class is used in general purpose of deletion of output stream on a zixi broadcaster server.
 public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 	
-	private TestDriver testDriver;
 	
 	@BeforeClass
 	public void testInit() { 
 		
-			
+			// Super class element
 			testDriver = new BroadcaserSingleOutputStreamDeletionDriver();
 		
 	}
 
+	// Test parameters.
 	@Parameters({ "login_ip","userName","userPassword","id","uiport", "testid"})
 	@Test
 	public void broadcasterSingleStreamRemoving(String login_ip,String userName,String userPassword,String id,String uiport,String testid) throws InterruptedException 
 	{
+		//print this class name to the log file.
 		getLoggerInstance().info(getClass().getName());
 		
 		this.testid = testid;
