@@ -46,6 +46,9 @@
 		<parameter name="testid" value="1149" />   
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederOutputToBxTest" />
+     		 </methods>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 128 FFMPEG analyser FEC">
@@ -246,6 +249,9 @@
 		<parameter name="testid" value="1194" />   
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederOutputToBxTest" />
+     		 </methods>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 192 FFMPEG analyser FEC">
@@ -446,6 +452,9 @@
 		<parameter name="testid" value="1217" />   
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederOutputToBxTest" />
+     		 </methods>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 256 FFMPEG analyser FEC">
