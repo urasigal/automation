@@ -43,10 +43,10 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="436" />   
 		<classes>
+		<class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 			<methods>
         		<include name="feederOutputToBxTest" />
      		 </methods>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Smoothing 200">
@@ -270,10 +270,10 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="458" />   
 		<classes>
+		<class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		<methods>
         		<include name="feederOutputToBxTest" />
      		 </methods>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Smoothing 600">
@@ -385,10 +385,10 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="469" />   
 		<classes>
+		 <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		<methods>
         		<include name="feederOutputToBxTest" />
      		 </methods>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Smoothing 800">
@@ -500,10 +500,10 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="480" />   
 		<classes>
+		 <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		<methods>
         		<include name="feederOutputToBxTest" />
      		 </methods>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Smoothing 1000">
