@@ -29,6 +29,8 @@ public class BroadcasterTrannscodeStreamTest extends BaseTest {
 			String bit, String profile_name, String testid)
 			throws InterruptedException {
 
+		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		
 		this.testid = testid;
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
@@ -52,6 +54,9 @@ public class BroadcasterTrannscodeStreamTest extends BaseTest {
 						fast_connect, kompression, enc_type, enc_key,
 						rec_history, rec_duration, src, ap, bit, profile_name),
 				"Stream " + "'" + id + "'" + " added.");
+		// Checking if broadcaster has crashes while execution of the test.
+		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+				
 	}
 
 }

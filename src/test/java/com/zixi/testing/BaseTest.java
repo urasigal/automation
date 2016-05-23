@@ -29,6 +29,7 @@ public class BaseTest {
 	
 	// It is an interface all test drivers have to implement this interface.
 	protected TestDriver testDriver;
+	
 	protected ClassLoader classLoader;
 	protected Object driverObj;
 	protected Method m;
@@ -37,6 +38,8 @@ public class BaseTest {
 	protected String automationTestIdentifiers = "";
 	protected ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 	protected TestBaseFunction testBaseFunction = new TestBaseFunction ();
+	
+	protected String pid;
 	
 	// Writes test results to the TestLink.
 	protected String testParameters =  "";
@@ -72,7 +75,6 @@ public class BaseTest {
      try{		
         TestlinkIntegration tl = new TestlinkIntegration();
         if (result.isSuccess()) {
- 
             tl.setResult(testid,
                     ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
             automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + " Manul description: " + manulDescription); // pass data to a testLink notes in test execution.

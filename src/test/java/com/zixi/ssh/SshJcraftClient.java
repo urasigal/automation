@@ -98,12 +98,12 @@ public class SshJcraftClient {
 	          int i=in.read(tmp, 0, 1024);
 	          if(i<0)break;
 	          stringBuf.append(new String(tmp, 0, i)); 
-	          System.out.print(stringBuf); 
+	          //System.out.print(stringBuf); 
 	        }
 	        if(channel.isClosed())
 	        {
 	          if(in.available()>0) continue; 
-	          System.out.println("exit-status: "+channel.getExitStatus());
+	          //System.out.println("exit-status: "+channel.getExitStatus());
 	          break;
 	        }
 	        //try{Thread.sleep(1000);}catch(Exception ee){}
@@ -133,8 +133,8 @@ public class SshJcraftClient {
 	public static void main(String[] args) throws InterruptedException, IOException, JSchException
 	{
 		SshJcraftClient sshJcraftClient = new SshJcraftClient();
-		sshJcraftClient.setSession("root", "zixiroot1234", "10.7.0.174", 22);
+		sshJcraftClient.setSession("root", "zixiroot1234", "10.7.0.63", 22);
 		sshJcraftClient.openChannel();
-		sshJcraftClient.performCommand("date");
+		System.out.println(sshJcraftClient.callCommand("pidof zixi_broadcaster"));
 	}
 }
