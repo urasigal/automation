@@ -6,8 +6,8 @@
 	<test name="Broadcaster - Pull input creation test - 720*480">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.64" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="id" value="transcoder" />
 		<parameter name="source" value="mpeg2" />
 		<parameter name="uiport" value="4444" />
@@ -39,7 +39,7 @@
 	<test name="Broadcaster: add profile H.265 - 720*480">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.265" />
 		<parameter name="profile_name" value="480p" />
@@ -75,8 +75,8 @@
 	<test name="Broadcaster - Stream statistics test - 720*480">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.64" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoder" />
 		<parameter name="testduration" value="5" />
@@ -88,7 +88,7 @@
 	<test name="Broadcaster: transcode a stream 720*480">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
 		<parameter name="id" value="480p_trans" />
@@ -118,7 +118,7 @@
 	<test name="Broadcaster - UDP output stream creation - 720*480">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="480p_trans" />
 		<parameter name="streamname" value="480p_trans" />
@@ -149,7 +149,7 @@
 	<test name="Broadcaster - UDP output visual stream - 720*480">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="9999" />
 		<parameter name="stream" value="480p_trans" />
 		<parameter name="streamname" value="480p_transs" />
@@ -190,7 +190,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream - 720*480">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="480p_trans" />
@@ -201,7 +201,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp visual test - 720*480">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="480p_transs" />
@@ -212,7 +212,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Pull input test - 720*480">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="transcoder" />
@@ -226,7 +226,7 @@
 	<test name="Broadcaster: transcode delete a profile - 720*480">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="480p" />
 		<parameter name="testid" value="1960" />
@@ -237,8 +237,8 @@
 	<test name="Broadcaster Pull input creation test 720*480 ll" >
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.64" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="id" value="transcoder" />
 		<parameter name="source" value="mpeg2" />
 		<parameter name="uiport" value="4444" />
@@ -270,7 +270,7 @@
 	<test name="Broadcaster: add profile H.265 720*480 ll">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.265" />
 		<parameter name="profile_name" value="480p" />
@@ -306,8 +306,8 @@
 	<test name="Broadcaster - Stream statistics test - 720*480 ll">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.64" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoder" />
 		<parameter name="testduration" value="5" />
@@ -319,7 +319,7 @@
 	<test name="Broadcaster: transcode a stream - 720*480 ll">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
 		<parameter name="id" value="480p_trans" />
@@ -349,7 +349,7 @@
 	<test name="Broadcaster - UDP output stream creation - 720*480 ll">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="480p_trans" />
 		<parameter name="streamname" value="480p_trans" />
@@ -384,7 +384,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream - 720*480 ll">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="480p_trans" />
@@ -395,7 +395,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Pull input test - 720*480 ll">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="transcoder" />
@@ -409,7 +409,7 @@
 	<test name="Broadcaster: transcode delete a profile - 720*480 ll">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="480p" />
 		<parameter name="testid" value="1979" />
@@ -420,8 +420,8 @@
 		<test name="Broadcaster Pull input creation test 720*480 all_pids" >
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.64" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="id" value="transcoder" />
 		<parameter name="source" value="mpeg2" />
 		<parameter name="uiport" value="4444" />
@@ -453,7 +453,7 @@
 	<test name="Broadcaster: add profile H.265 - 720*480 all_pids">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.265" />
 		<parameter name="profile_name" value="480p" />
@@ -489,8 +489,8 @@
 	<test name="Broadcaster - Stream statistics test - 720*480 all_pids">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.64" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoder" />
 		<parameter name="testduration" value="5" />
@@ -502,7 +502,7 @@
 	<test name="Broadcaster: transcode a stream - 720*480 all_pids">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
 		<parameter name="id" value="480p_trans" />
@@ -532,7 +532,7 @@
 	<test name="Broadcaster - UDP output stream creation - 720*480 all_pids">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="480p_trans" />
 		<parameter name="streamname" value="480p_trans" />
@@ -563,7 +563,7 @@
 	<test name="Broadcaster - UDP output visual test - 720*480 all_pids">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="9999" />
 		<parameter name="stream" value="480p_trans" />
 		<parameter name="streamname" value="480p_transs" />
@@ -604,7 +604,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream - 720*480 all_pids">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="480p_trans" />
@@ -615,7 +615,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp visual test - 720*480 all_pids">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="480p_transs" />
@@ -626,7 +626,7 @@
 		</classes>
 	</test>  
 	<test name="Broadcaster - Remove Pull input test - 720*480 all_pids">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="transcoder" />
@@ -640,7 +640,7 @@
 	<test name="Broadcaster: transcode delete a profile - 720*480 all_pids">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="480p" />
 		<parameter name="testid" value="1998" />

@@ -4,7 +4,7 @@
 <test name="Broadcaster Push input stream creation (main broadcaster) test - with redundant host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -29,7 +29,7 @@
 <test name="Broadcaster - Push input stream creation (redundant broadcaster) test - with redundant host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.64" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -98,7 +98,7 @@
 	<test name="Main broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="9999" />
 		<parameter name="stream" value="feederout" />
 		<parameter name="streamname" value="feederout" />
@@ -129,7 +129,7 @@
 	<test name="Second broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.64" />
 		<parameter name="port" value="9999" />
 		<parameter name="stream" value="feederout" />
 		<parameter name="streamname" value="feederout" />
@@ -163,11 +163,11 @@
 		<parameter name="sshPassword" value="zixiroot1234" /> 		 	   
 		<parameter name="sshPort" value="22" /> 				   	
 		<parameter name="inputStreamName" value="feederout" /> 	   
-		<parameter name="main_bx_ip" value="10.7.0.66" />     		   
+		<parameter name="main_bx_ip" value="10.7.0.62" />     		   
 		<parameter name="main_bx_uiport" value="4444" /> 		   
 		<parameter name="main_bx_user_name" value="admin" />	    
 		<parameter name="main_bx_user_password" value="1234" />  
-		<parameter name="second_bx_ip" value="10.7.0.63" /> 		   
+		<parameter name="second_bx_ip" value="10.7.0.64" /> 		   
 		<parameter name="second_bx_uiport" value="4444" />	   
 		<parameter name="second_bx_user_name" value="admin" />	   
 		<parameter name="second_bx_user_password" value="1234" />
@@ -180,7 +180,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster (Mian) - Remove udp output stream">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="feederout" />
@@ -191,7 +191,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster (Second) - Remove udp output stream">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.64" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="feederout" />
@@ -202,7 +202,7 @@
 		</classes>
 	</test>
 	<test name="Remove Push input stream (main broadcaster) test - with redundant host">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -214,7 +214,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Push input stream (redundant broadcaster) test - with redundant host">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.64" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
