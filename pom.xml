@@ -76,6 +76,7 @@
 				<version>2.5</version>
 				<configuration>
 					<suiteXmlFiles>
+					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/udp.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/push.xml</suiteXmlFile>
@@ -91,8 +92,6 @@
 						<suiteXmlFile>src/test/resources/ffmpegfullpath.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/ffmpegfullpathencrypthandred.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/zixiadaptive.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/ffmpegfeederbxwowza.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/transcoder.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/broadcasterhlstoffmpeg.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/broadcasterflvtoffmpeg.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feeder_to_broadcaser_remote_rtmp_output.xml</suiteXmlFile>

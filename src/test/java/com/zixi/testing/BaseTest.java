@@ -1,9 +1,13 @@
 package com.zixi.testing;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -17,8 +21,15 @@ import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import com.zixi.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
+/*
+ * This is a most high hierarchy test class in all automation test project. All test case classes must to inherit from this class.
+ */
+
 public class BaseTest {
+	
+	// It is an interface all test drivers have to implement this interface.
 	protected TestDriver testDriver;
+	
 	protected ClassLoader classLoader;
 	protected Object driverObj;
 	protected Method m;
@@ -27,11 +38,20 @@ public class BaseTest {
 	protected String automationTestIdentifiers = "";
 	protected ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 	protected TestBaseFunction testBaseFunction = new TestBaseFunction ();
+	
+	protected String pid;
+	
+	// Writes test results to the TestLink.
 	protected String testParameters =  "";
+	
+	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developers.
+	protected static  Logger       LOGGER      = null;
+	protected static  FileHandler  FILEHANDLER = null ;
 	
 	// Reflection stuff.
 	protected Class c;
 	protected Object params[];
+	protected String manulDescription = "";
 	
 	@BeforeTest
 	public void startTest(final ITestContext testContext) {
@@ -42,6 +62,8 @@ public class BaseTest {
 	@BeforeMethod
 	public void beforeTes(String testid) throws MalformedURLException
 	{
+		LOGGER = getLoggerInstance();
+		LOGGER.info(getClass().getName()); 
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
 		TestlinkIntegration tl = new TestlinkIntegration();
@@ -53,14 +75,13 @@ public class BaseTest {
      try{		
         TestlinkIntegration tl = new TestlinkIntegration();
         if (result.isSuccess()) {
- 
             tl.setResult(testid,
                     ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters);
+            automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + " Manul description: " + manulDescription); // pass data to a testLink notes in test execution.
         } else {
             tl.setResult(testid,
                     ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-                            automationTestIdentifiers + "\nTest Parameters: "+ testParameters);
+                            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription );
         }
      }catch(Exception e)
      {
@@ -91,5 +112,27 @@ public class BaseTest {
 			}
 			return sb.toString();
 		}
+	}
+	
+	// Singleton manner of definition.
+	protected Logger getLoggerInstance()
+	{
+		if(BaseTest.LOGGER == null)
+		{
+		  try {
+			    BaseTest.FILEHANDLER = new FileHandler("src/main/resources/log");
+			    BaseTest.LOGGER = Logger.getLogger("com");
+			    BaseTest.FILEHANDLER.setFormatter(new SimpleFormatter());
+				BaseTest.LOGGER.addHandler(BaseTest.FILEHANDLER);
+			} catch (SecurityException e) {
+				// TODO Auto-generated catch block
+				System.out.println(" ------------------------------------------- Cant to open a file");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println(" -------------------------------------------- Cant to open a file");
+			}
+		  return BaseTest.LOGGER;
+		}
+		return BaseTest.LOGGER;
 	}
 }

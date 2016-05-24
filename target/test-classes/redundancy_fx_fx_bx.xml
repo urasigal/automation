@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Feeder: push output streaming suite" verbose="5" data-provider-thread-count="1">
+<!-- This test suite is intended to measure video drop time on the BX UDP output in a case when a two feeders are trying to establish a connection to this BX -->
 	<test name="Feeder - push to broadcaster test main feeder - redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -17,7 +18,7 @@
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
 		<parameter name="obit" value="8000000" />
-		<parameter name="olat" value="5000" />
+		<parameter name="olat" value="0" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
 		<parameter name="oold" value="0" />
@@ -34,7 +35,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.91" />
+		<parameter name="ohst" value="10.7.0.66" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -61,7 +62,7 @@
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
 		<parameter name="obit" value="8000000" />
-		<parameter name="olat" value="5000" />
+		<parameter name="olat" value="0" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
 		<parameter name="oold" value="0" />
@@ -78,7 +79,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.91" />
+		<parameter name="ohst" value="10.7.0.66" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -92,7 +93,7 @@
 	<test name="Broadcaster - Push input stream creation test - redundacy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -117,8 +118,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.91" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="10" />
@@ -130,7 +131,7 @@
 	<test name="Broadcaster - UDP output stream creation - redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="port" value="9999" />
 		<parameter name="stream" value="feederout" />
 		<parameter name="streamname" value="feederout" />
@@ -143,7 +144,7 @@
 		<parameter name="remux_bitrate" value="0" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.91" />
+		<parameter name="dec_key" value="10.7.0.66" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -161,8 +162,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics redundant test - redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.91" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="5" />
@@ -174,7 +175,7 @@
 		<test name="Broadcaster - redundant bx - redundacy">
 		<parameter name="udp_port_server" value="9999" />
 		<parameter name="bx_stream_id" value="feederout" />
-		<parameter name="middle_bx_login_ip" value="10.7.0.91" />
+		<parameter name="middle_bx_login_ip" value="10.7.0.66" />
 		<parameter name="middle_bx_uiport" value="4444" />
 		<parameter name="middle_bx_userName" value="admin" />
 		<parameter name="middle_bx_userPass" value="1234" />
@@ -193,7 +194,7 @@
 	<test name="Feeder1 - output stream deletion test redundancy">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -202,7 +203,7 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="testid" value="1090" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
@@ -220,14 +221,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="testid" value="1092" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 	
 	<test name="Broadcaster - Remove Push input stream - redundancy">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -239,7 +240,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream test smoothing 1000">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="feederout" />

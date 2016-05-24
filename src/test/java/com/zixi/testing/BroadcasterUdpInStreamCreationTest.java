@@ -15,12 +15,13 @@ import org.testng.annotations.Test;
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
 import com.zixi.drivers.*;
+import com.zixi.tools.Prerequisitor;
 import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 
 	private TestDriver testDriver;
-
+	private Prerequisitor prerequisitor;
 	@BeforeClass
 	public void testInit() {
 		testDriver = new BroadcasterSingleUdpInCreationDriver();
@@ -44,22 +45,27 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 			throws InterruptedException {
 		this.testid = testid;
 		
+		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		String[] params = new String[] { userName, userPass, login_ip, ts_port, id,
+									rtp_type, multi_src, max_bitrate, time_shift, mcast_ip,
+									mcast_force, mcast_port, nic, type, multicast, 
+									enc_key, kompression, uiport, mcast_ttl, enc_type, 
+									mcast_out, complete, max_outputs, on ,testid };
 		
 		testParameters = testBaseFunction.buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "ts_port", "id",
 				"rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
 				"mcast_force", "mcast_port", "nic", "type", "multicast", "enc_key",
 				"kompression", "uiport", "mcast_ttl", "enc_type", "mcast_out",
-				"complete", "max_outputs", "on" ,"testid" }, 
-				
-				new String[] { userName, userPass, login_ip, ts_port, id,
-				rtp_type, multi_src, max_bitrate, time_shift, mcast_ip,
-				mcast_force, mcast_port, nic, type, multicast, enc_key,
-				kompression, uiport, mcast_ttl, enc_type, mcast_out,
-				complete, max_outputs, on ,testid });
+				"complete", "max_outputs", "on" ,"testid" }, params);
 		
 		
+		 prerequisitor  = (param) -> {BroadcasterSingleInputStreamDeletionDriver testDriver = new BroadcasterSingleInputStreamDeletionDriver();
+		 							 testDriver.removeInput( param[2], param[0], param[1], param[4], param[17]);};
+		 prerequisitor.setToExecutionLevel(params);
 		Assert.assertEquals(((BroadcasterSingleUdpInCreationDriver) testDriver)
 				.testIMPL(userName, userPass, login_ip, ts_port, id, rtp_type,
 						multi_src, max_bitrate, time_shift, mcast_ip,
@@ -67,5 +73,7 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 						kompression, uiport, mcast_ttl, enc_type, mcast_out,
 						complete, max_outputs, on), "Stream " + "'" + id + "'"
 				+ " added.");
+		// Checking if broadcaster has crashes while execution of the test.
+		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 }

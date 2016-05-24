@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite: "Streaming/ FFMPEG-testing/ Broadcaster FLV to FFMPEG/ FLV to FFMPEG/" -->
 <suite name="FLV streaming" verbose="5" data-provider-thread-count="1">
 <test name="Feeder - Push to broadcaster test - FFMPEG analyser FLV test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -34,7 +35,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.91" />
+		<parameter name="ohst" value="10.7.0.66" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -43,12 +44,15 @@
 		<parameter name="testid" value="986" />   
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederOutputToBxTest" />
+     		 </methods>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - FFMPEG analyser FLV test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -65,7 +69,7 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="659" />    
+		<parameter name="testid" value="988" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
@@ -73,8 +77,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - FFMPEG analyser FLV test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.91" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
@@ -84,7 +88,7 @@
 		</classes>
 	</test>
 	<test name="FFMPEG test default parameters - FFMPEG analyser FLV test">
-		<parameter name="mode" value="http://10.7.0.91:7777/test.flv" />  
+		<parameter name="mode" value="http://10.7.0.66:7777/test.flv" />  
 		<parameter name="testid" value="992" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticModeTest"/>
@@ -93,7 +97,7 @@
 	<test name="Feeder - output stream deletion test - FFMPEG analyser FLV test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -102,14 +106,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="testid" value="994" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - FFMPEG analyser FLV test">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />

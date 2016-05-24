@@ -33,6 +33,7 @@ public class DataGramZixiThread extends Thread{
 		this.port = port;
 		try {
 			socket = new DatagramSocket(port);
+			socket.setSoTimeout(0);
 		} catch (SocketException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -72,7 +73,7 @@ public class DataGramZixiThread extends Thread{
 						 }
 				     }
 				 );
-		 System.out.println("Max is " + diff.get(0)) ;
+		 System.out.println("Delay is " + diff.get(0)) ;
 		 result = diff.get(0);
 		 socket.close();
 	 }

@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
+import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.BroadcasterSinglePullInStreamCreationDriver;
 import com.zixi.drivers.TestDriver;
 import com.zixi.entities.StreamEntity;
@@ -25,15 +26,14 @@ import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 
-	private TestDriver testDriver;
-
+	
+	//The method will be run before the first test method in the current class is invoked.
 	@BeforeClass
 	public void testInit() {
-
 		testDriver = new BroadcasterSinglePullInStreamCreationDriver();
-
 	}
 
+	
 	@Parameters({ "userName", "userPass", "Host", "login_ip", "id", "source",
 			"uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
 			"mcast_force", "time_shift", "nic", "max_outputs", "type",
@@ -53,7 +53,9 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 		
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
+		// Gather the test parameters in order to pass them to the TestLink
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "Host", "login_ip", "id", "source",
 				"uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
 				"mcast_force", "time_shift", "nic", "max_outputs", "type",
@@ -68,7 +70,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 				mcast_ttl, on, func, fec_force, mcast_out,
 				propertiesFile ,testid });
 		
-		
+		// The actual test method.
 		Assert.assertEquals(
 				((BroadcasterSinglePullInStreamCreationDriver) testDriver)
 						.testIMPL(userName, userPass, Host, login_ip, id,
@@ -79,5 +81,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 								mcast_ttl, on, func, fec_force, mcast_out,
 								propertiesFile), "Stream " + "'" + id + "'"
 						+ " added.");
+		// Checking if broadcaster has crashes while execution of the test.
+		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 }

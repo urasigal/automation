@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite: "Streaming/ FFMPEG-testing/ Zixi BX adaptive to RX server/" -->
 <suite name="Zixi adaptive streaming" verbose="5" data-provider-thread-count="1">
 <test name="Broadcaster - Pull input stream creation test - adaptive group test first stream">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="w1" />
 		<parameter name="source" value="test" />
 		<parameter name="uiport" value="4444" />
@@ -37,8 +38,8 @@
 	<test name="Broadcaster - Pull input stream creation test - adaptive group test second stream">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="w2" />
 		<parameter name="source" value="test" />
 		<parameter name="uiport" value="4444" />
@@ -70,8 +71,8 @@
 	<test name="Broadcaster - Pull input stream creation test - adaptive group test third stream ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="w3" />
 		<parameter name="source" value="test" />
 		<parameter name="uiport" value="4444" />
@@ -103,7 +104,7 @@
 	<test name="Broadcaster: create an adaptive group test">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="xxx" />
 		<parameter name="record" value="false" />
@@ -125,7 +126,7 @@
 	<test name="Receiver - pull input stream creation - adaptive group test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="dec_key" value="" />
 		<parameter name="dec_type" value="" />
@@ -134,7 +135,7 @@
 		<parameter name="fec_force" value="0" />
 		<parameter name="fec_latency" value="150" />
 		<parameter name="fec_overhead" value="30" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="latency" value="8000" />
 		<parameter name="min_bit" value="0" />
 		<parameter name="name" value="receivertest" />
@@ -148,19 +149,19 @@
 		</classes>
 	</test>
 	<test name="Receiver - Pull input stream statistic - adaptive group test">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="id" value="receivertest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="690" />  
+		<parameter name="testid" value="2849" />  
 		<classes>
 		    <class name="com.zixi.testing.ReceiverInputStatisticTest"/>
 		</classes>
 	</test>
 	<test name="Receiver: UDP out creation - adaptive group test FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -188,7 +189,7 @@
 		</classes>
 	</test>
 	<test name="Receiver: UDP out deletion - default parameters FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -200,7 +201,7 @@
 		</classes>
 	</test>
 	<test name="Receiver - Remove Pull input stream - default paremeters">
-		<parameter name="login_ip" value="10.7.0.173" />
+		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
@@ -213,7 +214,7 @@
 	<test name="Broadcaster: delete an adaptive group test">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="xxx" />
 		<parameter name="testid" value="700" />
@@ -222,7 +223,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test - adaptive group test first stream">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="w1" />
@@ -234,7 +235,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test - adaptive group test second stream">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="w2" />
@@ -246,7 +247,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test - adaptive group test third stream">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="w3" />

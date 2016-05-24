@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite "Streaming/ Streams/ Feeder to BX redundancy./" -->
 <suite name="Feeder: outputs: redundancy suite. Alternative host" verbose="5" data-provider-thread-count="1">
 <test name="Push input stream creation (main broadcaster) test - with redundant host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -29,7 +30,7 @@
 <test name="Broadcaster - Push input stream creation (redundant broadcaster) test - with redundant host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -54,7 +55,7 @@
 <test name="Feeder - push to broadcaster creation test - with redundant host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -84,10 +85,10 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.91" />
+		<parameter name="ohst" value="10.7.0.66" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
-		<parameter name="oalt" value="10.7.0.157" />
+		<parameter name="oalt" value="10.7.0.63" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="827" />   
@@ -98,8 +99,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics (main broadcaster test) - with redundant host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.91" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="15" />
@@ -109,7 +110,7 @@
 		</classes>
 	</test>
 	<test name="Remove Push input stream (main broadcaster) test - with redundant host">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -123,8 +124,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics (redundant broadcaster) test - with redundant host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="15" />
@@ -136,7 +137,7 @@
 	<test name="Feeder - output stream deletion test - with redundant host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.174" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -145,14 +146,14 @@
 		<parameter name="prog" value="-1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="testid" value="835" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Push input stream (redundant broadcaster) test - with redundant host">
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />

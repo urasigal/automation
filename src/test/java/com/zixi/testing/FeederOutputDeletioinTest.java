@@ -33,6 +33,7 @@ public class FeederOutputDeletioinTest extends BaseTest{
 			String type, String host,String testid) throws InterruptedException {
 		this.testid = testid;
 		
+		// Writes test results to the TestLink.
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip",
 				"port", "ip", "prog", "chan", "type","host" ,"testid" }, 
 				

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink suite: ""Streaming/ FFMPEG-testing/ Broadcaster Push/ Broadcaster: Push suite with FFMPEG analyser/ -->
 <suite name="Broadcaster: Push suite with FFMPEG analyser default" verbose="5" data-provider-thread-count="1">
 <test name="Broadcaster - Push input stream creation test default parameters Push input FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -29,8 +30,8 @@
 	<test name="Broadcaster - Push output stream creation test - default parameters Push input FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="latency" value="6000" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="session" value="" />
@@ -54,8 +55,8 @@
 <test name="Broadcaster - Push input stream statistics test - default parameters Push input FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
@@ -67,7 +68,7 @@
 <test name="Broadcaster - UDP output stream creation default parameters Push input FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="pushtest" />
 		<parameter name="streamname" value="pushtest" />
@@ -102,7 +103,7 @@
 		</classes>
 	</test>
 <test name="Broadcaster - Remove udp output stream default parameters push input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
@@ -113,7 +114,7 @@
 		</classes>
 	</test>		
 <test name="Broadcaster - Remove Push input stream - default parameters Push input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
@@ -125,7 +126,7 @@
 		</classes>
 	</test> 
 <test name="Broadcaster - Remove Push output stream - default parameters Push input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />

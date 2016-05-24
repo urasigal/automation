@@ -62,22 +62,67 @@ public class BroadcasterRtmpInCreationDriver extends BroadcasterLoggableApiWorke
 				+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
 				login_ip, uiport);
 
-		return streamCreator.sendGet(HTTP + login_ip + params1 + uiport
-				+ params7 + rtype + params4 + type + params2 + rid + params4
-				+ id + params2 + rmax_outputs + params4 + max_outputs + params2
-				+ rmcast_out + params4 + mcast_out + params2 + rmcast_force
-				+ params4 + mcast_force + params2 + rmcast_ip + params4
-				+ mcast_ip + params2 + rmcast_port + params4 + mcast_port
-				+ params2 + rmcast_ttl + params4 + mcast_ttl + params2
-				+ rtime_shift + params4 + time_shift + params2 + rcomplete
-				+ params4 + complete + params2 + ron + params4 + on + params2
-				+ rrtmp_bitrate + params4 + rtmp_bitrate + params2
-				+ rrtmp_nulls + params4 + rtmp_nulls + params2 + rrtmp_name
-				+ params4 + rtmp_name + params2 + rrtmp_latency + params4
-				+ rtmp_latency + params2 + rrtmp_url + params4 + rtmp_url
-				+ params2 + rrtmp_user + params4 + rtmp_user + params2
-				+ rrtmp_passwd + params4 + rtmp_passwd, id, PUSHINMODE,
+		return streamCreator.sendGet(HTTP + login_ip + ":" + uiport
+				+ params7 + rtype + "=" + type + "&" + rid + "="
+				+ id + "&" + rmax_outputs + "=" + max_outputs + "&"
+				+ rmcast_out + "=" + mcast_out + "&" + rmcast_force
+				+ "=" + mcast_force + "&" + rmcast_ip + "="
+				+ mcast_ip + "&" + rmcast_port + "=" + mcast_port
+				+ "&" + rmcast_ttl + "=" + mcast_ttl + "&"
+				+ rtime_shift + "=" + time_shift + "&" + rcomplete
+				+ "=" + complete + "&" + ron + "=" + on + "&"
+				+ rrtmp_bitrate + "=" + rtmp_bitrate + "&"
+				+ rrtmp_nulls + "=" + rtmp_nulls + "&" + rrtmp_name
+				+ "=" + rtmp_name + "&" + rrtmp_latency + "="
+				+ rtmp_latency + "&" + rrtmp_url + "=" + rtmp_url
+				+ "&" + rrtmp_user + "=" + rtmp_user + "&"
+				+ rrtmp_passwd + "=" + rtmp_passwd, id, PUSHINMODE,
 				responseCookieContainer, login_ip, this, uiport);
 		// TODO Auto-generated method stub
+	}
+
+	public String testIMPL(String userName, String userPass, String login_ip,
+			String enc_type, String enc_key, String disconnect_low_br,
+			String rtmp_nulls, String id, String rtmp_url, String rtmp_name,
+			String time_shift, String mcast_ip, String mcast_force,
+			String mcast_port, String type, String rtmp_user,
+			String rtmp_bitrate, String rtmp_passwd, String uiport,
+			String mcast_ttl, String rtmp_latency, String mcast_out,
+			String complete, String max_outputs, String on) {
+		
+		
+		
+		testParameters = new TestParameters("userName:" + userName, "userPass:"
+				+ userPass, "login_ip:" + login_ip, "enc_type" + enc_type, "enc-key" + enc_key, "rtmp_nulls:" + rtmp_nulls,
+				"disconnect_low_br" + disconnect_low_br ,"id:" + id, "rtmp_url:" + rtmp_url, "rtmp_name:" + rtmp_name,
+				"time_shift:" + time_shift, "mcast_ip:" + mcast_ip,
+				"mcast_force:" + mcast_force, "mcast_port:" + mcast_port,
+				"type:" + type, "rtmp_user:" + rtmp_user, ":rtmp_bitrate"
+						+ rtmp_bitrate, "rtmp_passwd:" + rtmp_passwd, "uiport:"
+						+ uiport, "mcast_ttl:" + mcast_ttl, "rtmp_latency:"
+						+ rtmp_latency, "mcast_out:" + mcast_out, "complete:"
+						+ complete, "max_outputs:" + max_outputs, "on:" + on);
+
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP
+				+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
+				login_ip, uiport);
+
+		return streamCreator.sendGet(HTTP + login_ip + ":" + uiport
+				+ params7 + rtype + "=" + type + "&" + rid + "="
+				+ id + "&enc-type="+ enc_type + "&enc-key="+ enc_key +"&disconnect_low_br=" +
+				disconnect_low_br + "&rmax_outputs=" + max_outputs + "&"
+				+ rmcast_out + "=" + mcast_out + "&" + rmcast_force
+				+ "=" + mcast_force + "&" + rmcast_ip + "="
+				+ mcast_ip + "&" + rmcast_port + "=" + mcast_port
+				+ "&" + rmcast_ttl + "=" + mcast_ttl + "&"
+				+ rtime_shift + "=" + time_shift + "&" + rcomplete
+				+ "=" + complete + "&" + ron + "=" + on + "&"
+				+ rrtmp_bitrate + "=" + rtmp_bitrate + "&"
+				+ rrtmp_nulls + "=" + rtmp_nulls + "&" + rrtmp_name
+				+ "=" + rtmp_name + "&" + rrtmp_latency + "="
+				+ rtmp_latency + "&" + rrtmp_url + "=" + rtmp_url
+				+ "&" + rrtmp_user + "=" + rtmp_user + "&"
+				+ rrtmp_passwd + "=" + rtmp_passwd, id, PUSHINMODE,
+				responseCookieContainer, login_ip, this, uiport);
 	}
 }

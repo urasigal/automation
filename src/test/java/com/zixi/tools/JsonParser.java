@@ -2,7 +2,10 @@ package com.zixi.tools;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
+import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -135,6 +138,41 @@ public class JsonParser {
 		}
 		return id;
 	}
+	
+	
+	public static int getInputStreamBitrate(String streamsJson, String streamName)
+	{
+		JSONObject json = null;
+		String id = null;
+		json = new JSONObject(streamsJson);
+		json = json.getJSONObject("net");
+		return json.getInt("bitrate");
+	}
+	
+	
+	
+	public static String getActiveIpOfReceiverInput(Supplier<String> supplier, String streamName)
+	{
+		JSONObject json = null;
+		String IP = null;
+		json = new JSONObject(supplier.get()); // Convert an accepted string to Json object. supplier -  it is an instance of the anonymous inner calss
+		JSONArray inputStreams = json.getJSONArray("streams"); // Get streams array
+		
+		int numOfStreams = inputStreams.length();
+		
+		for (int i = 0; i < numOfStreams; i++) 
+		{
+			json = inputStreams.getJSONObject(i);
+			if(json.getString("name").equals(streamName))
+			{
+				IP = json.getString("full_address");
+				IP =  StringUtils.substringBetween(IP, ": ", ":");
+				break;
+			}
+		}
+		
+		return IP;
+	}
 
 	public static String getBroadcasterVersion(String streamsJson)
 	{
@@ -145,4 +183,29 @@ public class JsonParser {
 				+ "." + json.getInt("version_build") + "." + json.getString("platform"); 
 	}
 
+
+	public static int getTranscoderProfiles(String outJson,
+			String profile_name) {
+		int pid = -1;
+		JSONObject responseJson = new JSONObject(outJson);
+		JSONArray outputStreamsArray = responseJson.getJSONArray("profiles");
+		String streamName = null;
+		
+		for (int i = 0; i < outputStreamsArray.length(); i++) 
+		{
+			//System.out.println("before");
+			JSONObject outputStream = outputStreamsArray.getJSONObject(i);
+		   
+		    //System.out.println("after");
+		    //id1 = stream.getString("id");
+		    streamName = outputStream.getString("profile_name");
+		    if(streamName.equals(profile_name))
+		    {
+		    	pid = outputStream.getInt("id");
+		    	//testID = profileID;
+		    }
+	  }
+		// TODO Auto-generated method stub
+		return pid;
+	}
 }

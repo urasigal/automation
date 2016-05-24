@@ -21,11 +21,14 @@ public class ApiWorkir {
 	protected final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";
 	private String tester = null;
 	protected HttpURLConnection con;
+	protected String URL = null;
 	// HTTP GET request
+	
+	
 	public String sendGet(String url, String id, int mode,
 			String[] responseCookieContainer, String HOST, Object caller,
 			String uiport) {
-
+		URL = url;
 		StringBuffer response = new StringBuffer();
 		try {
 			
@@ -187,7 +190,7 @@ public class ApiWorkir {
 
 		} catch (Exception e) {
 			String exceptionTest = e.getMessage();
-			System.out.println("bug -------------" + exceptionTest);
+			System.out.println("bug ------------- " + exceptionTest + "Request is "   + URL );
 		}
 		finally {
 			con.disconnect();

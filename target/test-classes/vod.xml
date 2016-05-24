@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
 <suite name="Broadcaster: VOD outputs" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - enable vod test - VOD WEB API">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="ft_download" value="1" />
 		<parameter name="ft_upload" value="1" />
@@ -29,8 +30,8 @@
 	<test name="Broadcaster - Pull input stream creation test - VOD WEB API">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="source" value="iphone.ts" />
 		<parameter name="uiport" value="4444" />
@@ -62,7 +63,7 @@
 	<test name="Broadcaster - UDP output stream creation test - VOD WEB API">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
@@ -93,8 +94,8 @@
 	<test name="Broadcaster - Stream statistics test - VOD WEB API">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="60" />
@@ -109,8 +110,8 @@
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-<test name="Broadcaster - Remove udp output stream test - VOD WEB API">
-		<parameter name="login_ip" value="10.7.0.91" />
+	<test name="Broadcaster - Remove udp output stream test - VOD WEB API">
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -121,7 +122,7 @@
 		</classes>
 	</test>	
 	<test name="Broadcaster - Remove input stream test - VOD WEB API">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -135,7 +136,7 @@
 	<test name="Broadcaster - enable vod test - VOD WEB API HLS">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="ft_download" value="1" />
 		<parameter name="ft_upload" value="1" />
@@ -158,7 +159,7 @@
 		</classes>
 	</test>
 	<test name="FFMPEG test default parameters - VOD WEB API HLS">
-		<parameter name="mode" value="http://10.7.0.157:7777/iphone.ts.m3u8" /> 
+		<parameter name="mode" value="http://10.7.0.63:7777/iphone.ts.m3u8" /> 
 		<parameter name="testid" value="1146" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticModeTest"/>
@@ -167,7 +168,7 @@
 	<test name="Broadcaster - enable vod test - VOD WEB API FLV">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="ft_download" value="1" />
 		<parameter name="ft_upload" value="1" />
@@ -184,14 +185,14 @@
 		<parameter name="ft_proxy_https_port" value="4501" />
 		<parameter name="max_download_bitrate" value="100000" />
 		<parameter name="max_upload_bitrate" value="100000" />
-		<parameter name="testid" value="1144" />  
+		<parameter name="testid" value="2875" />  
 		<classes>
 		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG test default parameters - VOD WEB API FLV">
-		<parameter name="mode" value="http://10.7.0.157:7777/iphone.ts.flv" /> 
-		<parameter name="testid" value="1146" />  
+		<parameter name="mode" value="http://10.7.0.63:7777/iphone.ts.flv" /> 
+		<parameter name="testid" value="2877" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticModeTest"/>
 		</classes>

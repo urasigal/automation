@@ -37,6 +37,8 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 			String rtmp_user, String testid) throws InterruptedException {
 		this.testid = testid;
 		
+		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix",
@@ -55,6 +57,9 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 						kompression, enc_type, enc_key, rec_history,
 						rec_duration, rtmp_url, rtmp_name, rtmp_user),
 				"Stream " + "'" + id + "'" + " added.");
+		
+		// Checking if broadcaster has crashes while execution of the test.
+		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 
 }

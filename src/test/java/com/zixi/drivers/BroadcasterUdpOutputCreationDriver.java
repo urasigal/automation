@@ -28,14 +28,13 @@ public class BroadcasterUdpOutputCreationDriver extends BroadcasterLoggableApiWo
 				"dec_type:"+ dec_type, "cols:"+ cols);
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + loin_ip + ":" + uiport + "/login.htm", userName , userPass, loin_ip, uiport);
 		
-		return streamCreator.sendGet(HTTP + loin_ip + params1 + uiport + params7 + rtype + params4 + type+
-		params2 + rid + params4 + id  + params2 + rname + params4 + streamname + params2 + rstream + params4 + stream + params2 +
-		rhost + params4 + host + params2 + rport + params4 + port + params2 + rsmoothing + params4 + smoothing + params2 +
-		rttl + params4 + ttl + params2 + rdf +  params4 + df + params2 + rlocal_port + params4 + local_port + params2 +
-		rlocal_ip + params4 + local_ip + params2 + rdec_type + params4 + dec_type + params2 + rrtp + params4 + rtp + params2 +
-		rfec + params4 + fec + params2 + rrows + params4 + rows + params2 + rcols + params4 + cols + params2 + rremux_bitrate + params4 + remux_bitrate + params2 +
-		rremux_pcr + params4 + remux_pcr + params2 + rremux_buff + params4 + remux_buff +  params2 + rremux_restampdts + params4 + remux_restampdts + params2 +
-		params5, id, UDPOUTMODE, responseCookieContainer, loin_ip, this, uiport);
+		return streamCreator.sendGet(HTTP + loin_ip + ":" + uiport + params7 + rtype + "=" + type+
+				"&" + rid + "=" + id  + "&" + rname + "=" + streamname + "&" + rstream + "=" + stream + "&" +
+		rhost + "=" + host + "&" + rport + "=" + port + "&" + rsmoothing + "=" + smoothing + "&" +
+		rttl + "=" + ttl + "&" + rdf +  "=" + df + "&" + rlocal_port + "=" + local_port + "&" +
+		rlocal_ip + "=" + local_ip + "&" + rdec_type + "=" + dec_type + "&" + rdec_key + "=" + dec_key + "&" + rrtp + "=" + rtp + "&" +
+		rfec + "=" + fec + "&" + rrows + "=" + rows + "&" + rcols + "=" + cols + "&" + rremux_bitrate + "=" + remux_bitrate + "&" +
+		rremux_pcr + "=" + remux_pcr + "&" + rremux_buff + "=" + remux_buff +  "&" + rremux_restampdts + "=" + remux_restampdts, id, UDPOUTMODE, responseCookieContainer, loin_ip, this, uiport);
 	}
 	final private static String HTTP = "http://";
     final private static String params1 = ":";
