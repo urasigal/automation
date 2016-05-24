@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite verbose="5" name="Failed suite [Broadcaster: Intel Transcoder H.264 to H.264]" data-provider-thread-count="1">
   <parameter name="ll" value="0"/>
   <parameter name="remux_bitrate" value="0"/>
@@ -9847,3 +9848,18 @@
     </classes>
   </test> <!-- Broadcaster: transcode delete a profile - 1280x720p30 all_pids(failed) -->
 </suite> <!-- Failed suite [Broadcaster: Intel Transcoder H.264 to H.264] -->
+=======
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="broadcasterSingleStreamRemoving"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> centos7_new_setup

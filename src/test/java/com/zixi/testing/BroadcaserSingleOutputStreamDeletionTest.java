@@ -15,23 +15,28 @@ import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import com.zixi.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
+
+// This class is used in general purpose of deletion of output stream on a zixi broadcaster server.
 public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 	
-	private TestDriver testDriver;
 	
 	@BeforeClass
 	public void testInit() { 
 		
-			
+			// Super class element
 			testDriver = new BroadcaserSingleOutputStreamDeletionDriver();
 		
 	}
 
+	// Test parameters.
 	@Parameters({ "login_ip","userName","userPassword","id","uiport", "testid"})
 	@Test
 	public void broadcasterSingleStreamRemoving(String login_ip,String userName,String userPassword,String id,String uiport,String testid) throws InterruptedException 
 	{
+		//Print this class name to the log file.
 		getLoggerInstance().info(getClass().getName());
+		
+		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		this.testid = testid;
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
@@ -39,8 +44,11 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 				
 				testParameters = buildTestParametersString(new String[] { "login_ip","userName","userPassword","id","uiport", "testid" }, 
 								new String[] {login_ip,userName,userPassword,id,uiport, testid});
-				
+		
 		Assert.assertEquals(((BroadcaserSingleOutputStreamDeletionDriver) testDriver).testIMPL(login_ip, userName, userPassword, id, uiport),
 				"Output " +  id + " removed.");
+		// Checking if broadcaster has crashes while execution of the test.
+		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		
 	}
 }

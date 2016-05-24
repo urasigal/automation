@@ -23,6 +23,8 @@ public class ApiWorkir {
 	protected HttpURLConnection con;
 	protected String URL = null;
 	// HTTP GET request
+	
+	
 	public String sendGet(String url, String id, int mode,
 			String[] responseCookieContainer, String HOST, Object caller,
 			String uiport) {

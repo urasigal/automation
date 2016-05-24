@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="48" passed="48">
+<testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
     <line>
       <![CDATA[Test parameteres: ]]>
@@ -11,18 +11,19 @@
       <![CDATA[userPass: 1234]]>
     </line>
     <line>
-      <![CDATA[Host: 10.7.0.64]]>
+      <![CDATA[login_ip: 10.7.0.65]]>
     </line>
     <line>
-      <![CDATA[loin_ip: 10.7.0.62]]>
+      <![CDATA[name: feederoutputname]]>
     </line>
     <line>
-      <![CDATA[id: transcoder]]>
+      <![CDATA[mip: live_recording.ts]]>
     </line>
     <line>
-      <![CDATA[source: h.264]]>
+      <![CDATA[port: 0]]>
     </line>
     <line>
+<<<<<<< HEAD
       <![CDATA[uiport: 4444]]>
     </line>
     <line>
@@ -252,249 +253,156 @@
     </line>
     <line>
       <![CDATA[rec_history: 0]]>
+=======
+      <![CDATA[ip: file]]>
+>>>>>>> centos7_new_setup
     </line>
     <line>
-      <![CDATA[rec_duration: 7200]]>
+      <![CDATA[prog: 1]]>
     </line>
     <line>
-      <![CDATA[src: transcoder]]>
+      <![CDATA[chan: -1]]>
     </line>
     <line>
-      <![CDATA[ap: -1]]>
+      <![CDATA[type: 2]]>
     </line>
     <line>
-      <![CDATA[ll: 0]]>
+      <![CDATA[ostr: feederout]]>
     </line>
     <line>
-      <![CDATA[all_pids: 0]]>
+      <![CDATA[oses: -- not provided ]]>
     </line>
     <line>
-      <![CDATA[bit: 0]]>
+      <![CDATA[oetp: -- not provided ]]>
     </line>
     <line>
-      <![CDATA[profile_name: 480p]]>
+      <![CDATA[oeky: -- not provided ]]>
     </line>
     <line>
-      <![CDATA[mode: h.264]]>
+      <![CDATA[obit: 8000000]]>
     </line>
     <line>
-      <![CDATA[Test parameteres: ]]>
+      <![CDATA[olat: 6000]]>
     </line>
     <line>
-      <![CDATA[userName: admin]]>
+      <![CDATA[ofc: 0]]>
     </line>
     <line>
-      <![CDATA[userPass: 1234]]>
+      <![CDATA[ocmp: 1]]>
     </line>
     <line>
-      <![CDATA[loin_ip: 10.7.0.62]]>
+      <![CDATA[0: -- not provided ]]>
     </line>
     <line>
-      <![CDATA[port: 5555]]>
+      <![CDATA[1: -- not provided ]]>
     </line>
     <line>
-      <![CDATA[stream: 480p_trans]]>
+      <![CDATA[0: -- not provided ]]>
     </line>
     <line>
-      <![CDATA[streamname: 480p_trans]]>
+      <![CDATA[1: -- not provided ]]>
     </line>
     <line>
-      <![CDATA[host: 10.7.0.150]]>
+      <![CDATA[ofec: 30]]>
     </line>
     <line>
-      <![CDATA[id: 480p_trans]]>
+      <![CDATA[ofecl: 150]]>
     </line>
     <line>
-      <![CDATA[rtp: 0]]>
+      <![CDATA[stop_on_drop: 0]]>
     </line>
     <line>
-      <![CDATA[fec: 0]]>
-    </line>
-    <line>
-      <![CDATA[smoothing: 0]]>
-    </line>
-    <line>
-      <![CDATA[ttl: 5]]>
-    </line>
-    <line>
-      <![CDATA[remux_bitrate: 0]]>
-    </line>
-    <line>
-      <![CDATA[df: 0]]>
-    </line>
-    <line>
-      <![CDATA[local_port: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[dec_key: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[type: TS]]>
-    </line>
-    <line>
-      <![CDATA[rows: 10]]>
-    </line>
-    <line>
-      <![CDATA[remux_buff: 1000]]>
-    </line>
-    <line>
-      <![CDATA[local_ip: 0.0.0.0]]>
-    </line>
-    <line>
-      <![CDATA[remux_restampdts: 0]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4444]]>
-    </line>
-    <line>
-      <![CDATA[remux_pcr: 90]]>
-    </line>
-    <line>
-      <![CDATA[dec_type: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[cols: 10]]>
-    </line>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[userName: admin]]>
-    </line>
-    <line>
-      <![CDATA[userPass: 1234]]>
-    </line>
-    <line>
-      <![CDATA[loin_ip: 10.7.0.62]]>
-    </line>
-    <line>
-      <![CDATA[port: 9999]]>
-    </line>
-    <line>
-      <![CDATA[stream: 480p_trans]]>
-    </line>
-    <line>
-      <![CDATA[streamname: 480p_transs]]>
-    </line>
-    <line>
-      <![CDATA[host: 10.7.0.111]]>
-    </line>
-    <line>
-      <![CDATA[id: 480p_transs]]>
-    </line>
-    <line>
-      <![CDATA[rtp: 0]]>
-    </line>
-    <line>
-      <![CDATA[fec: 0]]>
+      <![CDATA[mmt: 0]]>
     </line>
     <line>
       <![CDATA[smoothing: 0]]>
     </line>
     <line>
-      <![CDATA[ttl: 5]]>
+      <![CDATA[limited: 0]]>
     </line>
     <line>
-      <![CDATA[remux_bitrate: 0]]>
+      <![CDATA[minbps: 0]]>
     </line>
     <line>
-      <![CDATA[df: 0]]>
+      <![CDATA[lim_enc_addr: -- not provided ]]>
     </line>
     <line>
-      <![CDATA[local_port: -- not provided ]]>
+      <![CDATA[pad_to_cbr: 1]]>
     </line>
     <line>
-      <![CDATA[dec_key: -- not provided ]]>
+      <![CDATA[rtmp_feedback0: -- not provided ]]>
     </line>
     <line>
-      <![CDATA[type: TS]]>
+      <![CDATA[ohst: 10.7.0.66]]>
     </line>
     <line>
-      <![CDATA[rows: 10]]>
+      <![CDATA[oprt: 2088]]>
     </line>
     <line>
-      <![CDATA[remux_buff: 1000]]>
+      <![CDATA[onic: 0.0.0.0]]>
     </line>
     <line>
-      <![CDATA[local_ip: 0.0.0.0]]>
-    </line>
-    <line>
-      <![CDATA[remux_restampdts: 0]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4444]]>
-    </line>
-    <line>
-      <![CDATA[remux_pcr: 90]]>
-    </line>
-    <line>
-      <![CDATA[dec_type: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[cols: 10]]>
-    </line>
-    <line>
-      <![CDATA[FFMPEG success measurement relation: 10 / 10]]>
-    </line>
-    <line>
-      <![CDATA[FFMPEG success measurement relation: 0 / 0]]>
+      <![CDATA[oalt: -- not provided ]]>
     </line>
     <line>
       <![CDATA[Test parameteres: ]]>
     </line>
     <line>
-      <![CDATA[login_ip: 10.7.0.62]]>
+      <![CDATA[analyze ]]>
     </line>
     <line>
-      <![CDATA[userName: admin]]>
+      <![CDATA[complete ]]>
     </line>
     <line>
-      <![CDATA[userPassword: 1234]]>
+      <![CDATA[force_p2p 0]]>
     </line>
     <line>
-      <![CDATA[name: 480p_trans]]>
+      <![CDATA[id feederout]]>
     </line>
     <line>
-      <![CDATA[uiport: 4444]]>
+      <![CDATA[latency -1]]>
     </line>
     <line>
-      <![CDATA[Test parameteres: ]]>
+      <![CDATA[login_ip 10.7.0.66]]>
     </line>
     <line>
-      <![CDATA[login_ip: 10.7.0.62]]>
+      <![CDATA[max_outputs ]]>
     </line>
     <line>
-      <![CDATA[userName: admin]]>
+      <![CDATA[mcast_force ]]>
     </line>
     <line>
-      <![CDATA[userPassword: 1234]]>
+      <![CDATA[mcast_ip 0]]>
     </line>
     <line>
-      <![CDATA[name: 480p_transs]]>
+      <![CDATA[mcast_out ]]>
     </line>
     <line>
-      <![CDATA[uiport: 4444]]>
+      <![CDATA[mcast_port 0]]>
     </line>
     <line>
-      <![CDATA[Test parameteres: ]]>
+      <![CDATA[mcast_ttl ]]>
     </line>
     <line>
-      <![CDATA[login_ip: 10.7.0.62]]>
+      <![CDATA[on 1]]>
     </line>
     <line>
-      <![CDATA[userName: admin]]>
+      <![CDATA[password ]]>
     </line>
     <line>
-      <![CDATA[userPassword: 1234]]>
+      <![CDATA[time_shift 0]]>
     </line>
     <line>
-      <![CDATA[streamId: transcoder]]>
+      <![CDATA[type push]]>
     </line>
     <line>
-      <![CDATA[uiport: 4444]]>
+      <![CDATA[uiport 4444]]>
     </line>
     <line>
-      <![CDATA[Stream transcoder removed.]]>
+      <![CDATA[userName admin]]>
+    </line>
+    <line>
+      <![CDATA[userPass1234]]>
     </line>
     <line>
       <![CDATA[Test parameteres: ]]>
@@ -506,21 +414,16 @@
       <![CDATA[userPass: 1234]]>
     </line>
     <line>
-      <![CDATA[Host: 10.7.0.64]]>
+      <![CDATA[host: 10.7.0.66]]>
     </line>
     <line>
-      <![CDATA[loin_ip: 10.7.0.62]]>
-    </line>
-    <line>
-      <![CDATA[id: transcoder]]>
-    </line>
-    <line>
-      <![CDATA[source: h.264]]>
+      <![CDATA[loin_ip: 10.7.0.66]]>
     </line>
     <line>
       <![CDATA[uiport: 4444]]>
     </line>
     <line>
+<<<<<<< HEAD
       <![CDATA[pull_port: -- not provided ]]>
     </line>
     <line>
@@ -1839,6 +1742,24 @@
     </line>
     <line>
       <![CDATA[cols: 10]]>
+=======
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[testduration: 120]]>
+    </line>
+    <line>
+      <![CDATA[Max bitrate is 949568]]>
+    </line>
+    <line>
+      <![CDATA[Min bitrete is 486152]]>
+    </line>
+    <line>
+      <![CDATA[Average bitrate is 889594]]>
+    </line>
+    <line>
+      <![CDATA[FFMPEG success measurement relation: 200 / 200]]>
+>>>>>>> centos7_new_setup
     </line>
     <line>
       <![CDATA[Test parameteres: ]]>
@@ -1850,6 +1771,7 @@
       <![CDATA[userPass: 1234]]>
     </line>
     <line>
+<<<<<<< HEAD
       <![CDATA[loin_ip: 10.7.0.62]]>
     </line>
     <line>
@@ -1959,12 +1881,46 @@
     </line>
     <line>
       <![CDATA[uiport: 4444]]>
+=======
+      <![CDATA[login_ip: 10.7.0.65]]>
+    </line>
+    <line>
+      <![CDATA[uiport: 4200]]>
+    </line>
+    <line>
+      <![CDATA[id: feederout]]>
+    </line>
+    <line>
+      <![CDATA[mip: live_recording.ts]]>
+    </line>
+    <line>
+      <![CDATA[port: 0]]>
+    </line>
+    <line>
+      <![CDATA[ip: file]]>
+    </line>
+    <line>
+      <![CDATA[prog: 1]]>
+    </line>
+    <line>
+      <![CDATA[chan: -1]]>
+    </line>
+    <line>
+      <![CDATA[type: 2]]>
+    </line>
+    <line>
+      <![CDATA[host: 10.7.0.66]]>
+>>>>>>> centos7_new_setup
     </line>
     <line>
       <![CDATA[Test parameteres: ]]>
     </line>
     <line>
+<<<<<<< HEAD
       <![CDATA[login_ip: 10.7.0.62]]>
+=======
+      <![CDATA[login_ip: 10.7.0.66]]>
+>>>>>>> centos7_new_setup
     </line>
     <line>
       <![CDATA[userName: admin]]>
@@ -1973,12 +1929,17 @@
       <![CDATA[userPassword: 1234]]>
     </line>
     <line>
+<<<<<<< HEAD
       <![CDATA[streamId: transcoder]]>
+=======
+      <![CDATA[streamId: feederout]]>
+>>>>>>> centos7_new_setup
     </line>
     <line>
       <![CDATA[uiport: 4444]]>
     </line>
     <line>
+<<<<<<< HEAD
       <![CDATA[Stream transcoder removed.]]>
     </line>
   </reporter-output>
@@ -8819,20 +8780,27 @@
           </reporter-output>
         </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
         <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterIntelTrannscodeStreamTest@68c4039c]" name="afterTest" is-config="true" duration-ms="31" started-at="2016-05-10T23:11:40Z" finished-at="2016-05-10T23:11:40Z">
+=======
+      <![CDATA[Stream feederout removed.]]>
+    </line>
+  </reporter-output>
+  <suite name="FLV streaming" duration-ms="189580" started-at="2016-05-23T11:29:58Z" finished-at="2016-05-23T11:33:08Z">
+    <groups>
+    </groups>
+    <test name="Feeder - Push to broadcaster test - FFMPEG analyser FLV test" duration-ms="216" started-at="2016-05-23T11:29:58Z" finished-at="2016-05-23T11:29:58Z">
+      <class name="com.zixi.testing.FeederOutputPushToBxTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@2a18f23c]" name="startTest" is-config="true" duration-ms="7" started-at="2016-05-23T14:29:58Z" finished-at="2016-05-23T14:29:58Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterIntelTrannscodeStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=broadcasterSingleInputStreamstatisticAnilyzer status=SUCCESS method=BroadcasterIntelTrannscodeStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterIntelTrannscodeStreamTest@68c4039c] output=Test parameteres: ]]]>
+                <![CDATA[org.testng.TestRunner@4671e53b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.BroadcasterIntelTrannscodeStreamTest -->
     </test> <!-- Broadcaster: transcode a stream - 1280x720p30 all_pids -->
@@ -8858,13 +8826,29 @@
             <param index="0">
               <value>
                 <![CDATA[3872]]>
+=======
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@2a18f23c]" name="testInit" is-config="true" duration-ms="0" started-at="2016-05-23T14:29:58Z" finished-at="2016-05-23T14:29:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@2a18f23c]" name="beforeTes" is-config="true" duration-ms="137" started-at="2016-05-23T14:29:58Z" finished-at="2016-05-23T14:29:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[986]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@66a3ffec]" name="broadcasterPullInCreation" duration-ms="5" started-at="2016-05-10T23:11:40Z" finished-at="2016-05-10T23:11:40Z">
+=======
+        <test-method status="PASS" signature="feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@2a18f23c]" name="feederOutputToBxTest" duration-ms="24" started-at="2016-05-23T14:29:58Z" finished-at="2016-05-23T14:29:58Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
@@ -8878,92 +8862,92 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[10.7.0.62]]>
+                <![CDATA[10.7.0.65]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[5555]]>
+                <![CDATA[feederoutputname]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[1280x720p30_trans]]>
+                <![CDATA[live_recording.ts]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[1280x720p30_trans]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[10.7.0.150]]>
+                <![CDATA[file]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[1280x720p30_trans]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[-1]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[2]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[feederout]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[5]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[]]>
+                <![CDATA[8000000]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[]]>
+                <![CDATA[6000]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[TS]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="18">
               <value>
-                <![CDATA[1000]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="19">
               <value>
-                <![CDATA[0.0.0.0]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="20">
@@ -8973,27 +8957,96 @@
             </param>
             <param index="21">
               <value>
-                <![CDATA[4444]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[90]]>
+                <![CDATA[30]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[]]>
+                <![CDATA[150]]>
               </value>
             </param>
             <param index="24">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="25">
               <value>
+<<<<<<< HEAD
                 <![CDATA[3872]]>
+=======
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[10.7.0.66]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[2088]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[0.0.0.0]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+            <param index="38">
+              <value>
+                <![CDATA[986]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
@@ -9008,92 +9061,131 @@
               <![CDATA[userPass: 1234]]>
             </line>
             <line>
-              <![CDATA[loin_ip: 10.7.0.62]]>
+              <![CDATA[login_ip: 10.7.0.65]]>
             </line>
             <line>
-              <![CDATA[port: 5555]]>
+              <![CDATA[name: feederoutputname]]>
             </line>
             <line>
-              <![CDATA[stream: 1280x720p30_trans]]>
+              <![CDATA[mip: live_recording.ts]]>
             </line>
             <line>
-              <![CDATA[streamname: 1280x720p30_trans]]>
+              <![CDATA[port: 0]]>
             </line>
             <line>
-              <![CDATA[host: 10.7.0.150]]>
+              <![CDATA[ip: file]]>
             </line>
             <line>
-              <![CDATA[id: 1280x720p30_trans]]>
+              <![CDATA[prog: 1]]>
             </line>
             <line>
-              <![CDATA[rtp: 0]]>
+              <![CDATA[chan: -1]]>
             </line>
             <line>
-              <![CDATA[fec: 0]]>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[ostr: feederout]]>
+            </line>
+            <line>
+              <![CDATA[oses: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oetp: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[oeky: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[obit: 8000000]]>
+            </line>
+            <line>
+              <![CDATA[olat: 6000]]>
+            </line>
+            <line>
+              <![CDATA[ofc: 0]]>
+            </line>
+            <line>
+              <![CDATA[ocmp: 1]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[0: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[1: -- not provided ]]>
+            </line>
+            <line>
+              <![CDATA[ofec: 30]]>
+            </line>
+            <line>
+              <![CDATA[ofecl: 150]]>
+            </line>
+            <line>
+              <![CDATA[stop_on_drop: 0]]>
+            </line>
+            <line>
+              <![CDATA[mmt: 0]]>
             </line>
             <line>
               <![CDATA[smoothing: 0]]>
             </line>
             <line>
-              <![CDATA[ttl: 5]]>
+              <![CDATA[limited: 0]]>
             </line>
             <line>
-              <![CDATA[remux_bitrate: 0]]>
+              <![CDATA[minbps: 0]]>
             </line>
             <line>
-              <![CDATA[df: 0]]>
+              <![CDATA[lim_enc_addr: -- not provided ]]>
             </line>
             <line>
-              <![CDATA[local_port: -- not provided ]]>
+              <![CDATA[pad_to_cbr: 1]]>
             </line>
             <line>
-              <![CDATA[dec_key: -- not provided ]]>
+              <![CDATA[rtmp_feedback0: -- not provided ]]>
             </line>
             <line>
-              <![CDATA[type: TS]]>
+              <![CDATA[ohst: 10.7.0.66]]>
             </line>
             <line>
-              <![CDATA[rows: 10]]>
+              <![CDATA[oprt: 2088]]>
             </line>
             <line>
-              <![CDATA[remux_buff: 1000]]>
+              <![CDATA[onic: 0.0.0.0]]>
             </line>
             <line>
-              <![CDATA[local_ip: 0.0.0.0]]>
-            </line>
-            <line>
-              <![CDATA[remux_restampdts: 0]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
-            </line>
-            <line>
-              <![CDATA[remux_pcr: 90]]>
-            </line>
-            <line>
-              <![CDATA[dec_type: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[cols: 10]]>
+              <![CDATA[oalt: -- not provided ]]>
             </line>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- broadcasterPullInCreation -->
         <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@66a3ffec]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-05-10T23:11:40Z" finished-at="2016-05-10T23:11:40Z">
+=======
+        </test-method> <!-- feederOutputToBxTest -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@2a18f23c]" name="afterTest" is-config="true" duration-ms="36" started-at="2016-05-23T14:29:58Z" finished-at="2016-05-23T14:29:58Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.zixi.testing.FeederOutputPushToBxTest.feederOutputToBxTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterPullInCreation status=SUCCESS method=BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@66a3ffec] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=feederOutputToBxTest status=SUCCESS method=FeederOutputPushToBxTest.feederOutputToBxTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputPushToBxTest@2a18f23c] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
+<<<<<<< HEAD
       </class> <!-- com.zixi.testing.BroadcasterUDPOutputStreamCreationTest -->
     </test> <!-- Broadcaster - UDP output stream creation - 1280x720p30 all_pids -->
     <test name="Broadcaster - UDP output - 1280x720p30 all_pids visual test" duration-ms="71" started-at="2016-05-10T20:11:40Z" finished-at="2016-05-10T20:11:40Z">
@@ -9103,12 +9195,24 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@66d3eec0]]>
+=======
+      </class> <!-- com.zixi.testing.FeederOutputPushToBxTest -->
+    </test> <!-- Feeder - Push to broadcaster test - FFMPEG analyser FLV test -->
+    <test name="Broadcaster - Push input stream creation test - FFMPEG analyser FLV test" duration-ms="1063" started-at="2016-05-23T11:29:58Z" finished-at="2016-05-23T11:29:59Z">
+      <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@1d251891]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-23T14:29:58Z" finished-at="2016-05-23T14:29:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@65e98b1c]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@5c3bd550]" name="testInit" is-config="true" duration-ms="0" started-at="2016-05-10T23:11:40Z" finished-at="2016-05-10T23:11:40Z">
           <reporter-output>
           </reporter-output>
@@ -9118,13 +9222,28 @@
             <param index="0">
               <value>
                 <![CDATA[3874]]>
+=======
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@1d251891]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-23T14:29:58Z" finished-at="2016-05-23T14:29:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@1d251891]" name="beforeTes" is-config="true" duration-ms="35" started-at="2016-05-23T14:29:58Z" finished-at="2016-05-23T14:29:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[988]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@5c3bd550]" name="broadcasterPullInCreation" duration-ms="6" started-at="2016-05-10T23:11:40Z" finished-at="2016-05-10T23:11:40Z">
+=======
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@1d251891]" name="broadcasterSingleStreamRemoving" duration-ms="991" started-at="2016-05-23T14:29:58Z" finished-at="2016-05-23T14:29:59Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
@@ -9138,32 +9257,32 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[10.7.0.62]]>
+                <![CDATA[10.7.0.66]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[9999]]>
+                <![CDATA[-1]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[1280x720p30_trans]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[1280x720p30_transs]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[10.7.0.111]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[1280x720p30_transs]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="8">
@@ -9173,27 +9292,27 @@
             </param>
             <param index="9">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[push]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[4444]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[5]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[feederout]]>
               </value>
             </param>
             <param index="14">
@@ -9208,16 +9327,17 @@
             </param>
             <param index="16">
               <value>
-                <![CDATA[TS]]>
+                <![CDATA[]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="18">
               <value>
+<<<<<<< HEAD
                 <![CDATA[1000]]>
               </value>
             </param>
@@ -9254,10 +9374,19 @@
             <param index="25">
               <value>
                 <![CDATA[3874]]>
+=======
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[988]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
+<<<<<<< HEAD
             <line>
               <![CDATA[Test parameteres: ]]>
             </line>
@@ -9276,99 +9405,115 @@
             <line>
               <![CDATA[stream: 1280x720p30_trans]]>
             </line>
+=======
+>>>>>>> centos7_new_setup
             <line>
-              <![CDATA[streamname: 1280x720p30_transs]]>
+              <![CDATA[Test parameteres: ]]>
             </line>
             <line>
-              <![CDATA[host: 10.7.0.111]]>
+              <![CDATA[analyze ]]>
             </line>
             <line>
-              <![CDATA[id: 1280x720p30_transs]]>
+              <![CDATA[complete ]]>
             </line>
             <line>
-              <![CDATA[rtp: 0]]>
+              <![CDATA[force_p2p 0]]>
             </line>
             <line>
-              <![CDATA[fec: 0]]>
+              <![CDATA[id feederout]]>
             </line>
             <line>
-              <![CDATA[smoothing: 0]]>
+              <![CDATA[latency -1]]>
             </line>
             <line>
-              <![CDATA[ttl: 5]]>
+              <![CDATA[login_ip 10.7.0.66]]>
             </line>
             <line>
-              <![CDATA[remux_bitrate: 0]]>
+              <![CDATA[max_outputs ]]>
             </line>
             <line>
-              <![CDATA[df: 0]]>
+              <![CDATA[mcast_force ]]>
             </line>
             <line>
-              <![CDATA[local_port: -- not provided ]]>
+              <![CDATA[mcast_ip 0]]>
             </line>
             <line>
-              <![CDATA[dec_key: -- not provided ]]>
+              <![CDATA[mcast_out ]]>
             </line>
             <line>
-              <![CDATA[type: TS]]>
+              <![CDATA[mcast_port 0]]>
             </line>
             <line>
-              <![CDATA[rows: 10]]>
+              <![CDATA[mcast_ttl ]]>
             </line>
             <line>
-              <![CDATA[remux_buff: 1000]]>
+              <![CDATA[on 1]]>
             </line>
             <line>
-              <![CDATA[local_ip: 0.0.0.0]]>
+              <![CDATA[password ]]>
             </line>
             <line>
-              <![CDATA[remux_restampdts: 0]]>
+              <![CDATA[time_shift 0]]>
             </line>
             <line>
-              <![CDATA[uiport: 4444]]>
+              <![CDATA[type push]]>
             </line>
             <line>
-              <![CDATA[remux_pcr: 90]]>
+              <![CDATA[uiport 4444]]>
             </line>
             <line>
-              <![CDATA[dec_type: -- not provided ]]>
+              <![CDATA[userName admin]]>
             </line>
             <line>
-              <![CDATA[cols: 10]]>
+              <![CDATA[userPass1234]]>
             </line>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- broadcasterPullInCreation -->
         <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@5c3bd550]" name="afterTest" is-config="true" duration-ms="31" started-at="2016-05-10T23:11:40Z" finished-at="2016-05-10T23:11:40Z">
+=======
+        </test-method> <!-- broadcasterSingleStreamRemoving -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@1d251891]" name="afterTest" is-config="true" duration-ms="34" started-at="2016-05-23T14:29:59Z" finished-at="2016-05-23T14:29:59Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.zixi.testing.BroadcasterPushInStreamCreationTest.broadcasterSingleStreamRemoving(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterPullInCreation status=SUCCESS method=BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@5c3bd550] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=broadcasterSingleStreamRemoving status=SUCCESS method=BroadcasterPushInStreamCreationTest.broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@1d251891] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
+<<<<<<< HEAD
       </class> <!-- com.zixi.testing.BroadcasterUDPOutputStreamCreationTest -->
     </test> <!-- Broadcaster - UDP output - 1280x720p30 all_pids visual test -->
     <test name="FFMPEG analyser transcoded stream 1280x720p30 all_pids" duration-ms="92950" started-at="2016-05-10T20:11:40Z" finished-at="2016-05-10T20:13:13Z">
       <class name="com.zixi.testing.FFMPEGImageStatisticTest">
         <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticTest@6d4b1c02]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-10T23:11:40Z" finished-at="2016-05-10T23:11:40Z">
+=======
+      </class> <!-- com.zixi.testing.BroadcasterPushInStreamCreationTest -->
+    </test> <!-- Broadcaster - Push input stream creation test - FFMPEG analyser FLV test -->
+    <test name="Broadcaster - Push from Feeder input stream statistics test - FFMPEG analyser FLV test" duration-ms="146709" started-at="2016-05-23T11:29:59Z" finished-at="2016-05-23T11:32:26Z">
+      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@5594a1b5]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-23T14:29:59Z" finished-at="2016-05-23T14:29:59Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@306e95ec]]>
+                <![CDATA[org.testng.TestRunner@2002fc1d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticTest@6d4b1c02]" name="beforeTes" is-config="true" duration-ms="30" started-at="2016-05-10T23:11:40Z" finished-at="2016-05-10T23:11:40Z">
           <params>
             <param index="0">
@@ -9389,27 +9534,41 @@
             <param index="0">
               <value>
                 <![CDATA[3876]]>
+=======
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@5594a1b5]" name="testInit" is-config="true" duration-ms="2" started-at="2016-05-23T14:29:59Z" finished-at="2016-05-23T14:29:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@5594a1b5]" name="beforeTes" is-config="true" duration-ms="37" started-at="2016-05-23T14:29:59Z" finished-at="2016-05-23T14:30:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[990]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
-            <line>
-              <![CDATA[FFMPEG success measurement relation: 10 / 10]]>
-            </line>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- broadcasterSingleInputStreamStatisticAnilyzer -->
         <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticTest@6d4b1c02]" name="afterTest" is-config="true" duration-ms="46" started-at="2016-05-10T23:13:13Z" finished-at="2016-05-10T23:13:13Z">
+=======
+        </test-method> <!-- beforeTes -->
+        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@5594a1b5]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="146633" started-at="2016-05-23T14:30:00Z" finished-at="2016-05-23T14:32:26Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[admin]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterSingleInputStreamStatisticAnilyzer status=SUCCESS method=FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(java.lang.String)[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticTest@6d4b1c02] output=FFMPEG success measurement relation: 10 / 10]]]>
+                <![CDATA[1234]]>
               </value>
             </param>
+<<<<<<< HEAD
           </params>
           <reporter-output>
           </reporter-output>
@@ -9449,46 +9608,120 @@
             <param index="0">
               <value>
                 <![CDATA[3878]]>
+=======
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.66]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10.7.0.66]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4444]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[feederout]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[120]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[990]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[FFMPEG success measurement relation: 0 / 0]]>
+              <![CDATA[Test parameteres: ]]>
+            </line>
+            <line>
+              <![CDATA[userName: admin]]>
+            </line>
+            <line>
+              <![CDATA[userPass: 1234]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.66]]>
+            </line>
+            <line>
+              <![CDATA[loin_ip: 10.7.0.66]]>
+            </line>
+            <line>
+              <![CDATA[uiport: 4444]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[testduration: 120]]>
+            </line>
+            <line>
+              <![CDATA[Max bitrate is 949568]]>
+            </line>
+            <line>
+              <![CDATA[Min bitrete is 486152]]>
+            </line>
+            <line>
+              <![CDATA[Average bitrate is 889594]]>
             </line>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- broadcasterRtmpPullTest -->
         <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.VisualQualityTest@42e26948]" name="afterTest" is-config="true" duration-ms="44" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+        </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@5594a1b5]" name="afterTest" is-config="true" duration-ms="37" started-at="2016-05-23T14:32:26Z" finished-at="2016-05-23T14:32:26Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.VisualQualityTest.broadcasterRtmpPullTest(java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterRtmpPullTest status=SUCCESS method=VisualQualityTest.broadcasterRtmpPullTest(java.lang.String)[pri:0, instance:com.zixi.testing.VisualQualityTest@42e26948] output=FFMPEG success measurement relation: 0 / 0]]]>
+                <![CDATA[[TestResult name=broadcasterSingleInputStreamstatisticAnilyzer status=SUCCESS method=BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@5594a1b5] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
+<<<<<<< HEAD
       </class> <!-- com.zixi.testing.VisualQualityTest -->
     </test> <!-- VLC test all pids - 1280x720p30 all_pids -->
     <test name="Broadcaster - Remove udp output stream - 1280x720p30 all_pids" duration-ms="86" started-at="2016-05-15T08:53:53Z" finished-at="2016-05-15T08:53:53Z">
       <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest">
         <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@4667ae56]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
+    </test> <!-- Broadcaster - Push from Feeder input stream statistics test - FFMPEG analyser FLV test -->
+    <test name="FFMPEG test default parameters - FFMPEG analyser FLV test" duration-ms="40557" started-at="2016-05-23T11:32:26Z" finished-at="2016-05-23T11:33:07Z">
+      <class name="com.zixi.testing.FFMPEGImageStatisticModeTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticModeTest@880ec60]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-23T14:32:26Z" finished-at="2016-05-23T14:32:26Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@957e06]]>
+                <![CDATA[org.testng.TestRunner@7d8704ef]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@4667ae56]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
           <reporter-output>
           </reporter-output>
@@ -9498,21 +9731,37 @@
             <param index="0">
               <value>
                 <![CDATA[3880]]>
+=======
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticModeTest@880ec60]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-23T14:32:26Z" finished-at="2016-05-23T14:32:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticModeTest@880ec60]" name="beforeTes" is-config="true" duration-ms="35" started-at="2016-05-23T14:32:26Z" finished-at="2016-05-23T14:32:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[992]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@4667ae56]" name="broadcasterSingleStreamRemoving" duration-ms="14" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+        <test-method status="PASS" signature="broadcasterSingleInputStreamStatisticAnilyzer(java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticModeTest@880ec60]" name="broadcasterSingleInputStreamStatisticAnilyzer" duration-ms="40479" started-at="2016-05-23T14:32:26Z" finished-at="2016-05-23T14:33:07Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[10.7.0.62]]>
+                <![CDATA[http://10.7.0.66:7777/test.flv]]>
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA[admin]]>
               </value>
             </param>
@@ -9534,61 +9783,63 @@
             <param index="5">
               <value>
                 <![CDATA[3880]]>
+=======
+                <![CDATA[992]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[login_ip: 10.7.0.62]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPassword: 1234]]>
-            </line>
-            <line>
-              <![CDATA[name: 1280x720p30_trans]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
+              <![CDATA[FFMPEG success measurement relation: 200 / 200]]>
             </line>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- broadcasterSingleStreamRemoving -->
         <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@4667ae56]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+        </test-method> <!-- broadcasterSingleInputStreamStatisticAnilyzer -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticModeTest@880ec60]" name="afterTest" is-config="true" duration-ms="39" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:07Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.zixi.testing.FFMPEGImageStatisticModeTest.broadcasterSingleInputStreamStatisticAnilyzer(java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterSingleStreamRemoving status=SUCCESS method=BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@4667ae56] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=broadcasterSingleInputStreamStatisticAnilyzer status=SUCCESS method=FFMPEGImageStatisticModeTest.broadcasterSingleInputStreamStatisticAnilyzer(java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FFMPEGImageStatisticModeTest@880ec60] output=FFMPEG success measurement relation: 200 / 200]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
+<<<<<<< HEAD
       </class> <!-- com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest -->
     </test> <!-- Broadcaster - Remove udp output stream - 1280x720p30 all_pids -->
     <test name="Broadcaster - Remove udp output - 1280x720p30 all_pids visual test" duration-ms="96" started-at="2016-05-15T08:53:53Z" finished-at="2016-05-15T08:53:53Z">
       <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest">
         <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@6eebc39e]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+      </class> <!-- com.zixi.testing.FFMPEGImageStatisticModeTest -->
+    </test> <!-- FFMPEG test default parameters - FFMPEG analyser FLV test -->
+    <test name="Feeder - output stream deletion test - FFMPEG analyser FLV test" duration-ms="75" started-at="2016-05-23T11:33:07Z" finished-at="2016-05-23T11:33:07Z">
+      <class name="com.zixi.testing.FeederOutputDeletioinTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@5b464ce8]" name="startTest" is-config="true" duration-ms="1" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:07Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@201a4587]]>
+                <![CDATA[org.testng.TestRunner@1e178745]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@6eebc39e]" name="testInit" is-config="true" duration-ms="0" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
           <reporter-output>
           </reporter-output>
@@ -9598,42 +9849,96 @@
             <param index="0">
               <value>
                 <![CDATA[3882]]>
+=======
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@5b464ce8]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@5b464ce8]" name="beforeTes" is-config="true" duration-ms="35" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[994]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@6eebc39e]" name="broadcasterSingleStreamRemoving" duration-ms="6" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@5b464ce8]" name="broadcasterSingleStreamRemoving" duration-ms="8" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:07Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
-              <value>
-                <![CDATA[10.7.0.62]]>
-              </value>
-            </param>
-            <param index="1">
               <value>
                 <![CDATA[admin]]>
               </value>
             </param>
-            <param index="2">
+            <param index="1">
               <value>
                 <![CDATA[1234]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.65]]>
+              </value>
+            </param>
             <param index="3">
               <value>
-                <![CDATA[1280x720p30_transs]]>
+                <![CDATA[4200]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[4444]]>
+                <![CDATA[feederout]]>
               </value>
             </param>
             <param index="5">
               <value>
+<<<<<<< HEAD
                 <![CDATA[3882]]>
+=======
+                <![CDATA[live_recording.ts]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[file]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[-1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[10.7.0.66]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[994]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
@@ -9642,53 +9947,91 @@
               <![CDATA[Test parameteres: ]]>
             </line>
             <line>
-              <![CDATA[login_ip: 10.7.0.62]]>
-            </line>
-            <line>
               <![CDATA[userName: admin]]>
             </line>
             <line>
-              <![CDATA[userPassword: 1234]]>
+              <![CDATA[userPass: 1234]]>
             </line>
             <line>
-              <![CDATA[name: 1280x720p30_transs]]>
+              <![CDATA[login_ip: 10.7.0.65]]>
             </line>
             <line>
-              <![CDATA[uiport: 4444]]>
+              <![CDATA[uiport: 4200]]>
+            </line>
+            <line>
+              <![CDATA[id: feederout]]>
+            </line>
+            <line>
+              <![CDATA[mip: live_recording.ts]]>
+            </line>
+            <line>
+              <![CDATA[port: 0]]>
+            </line>
+            <line>
+              <![CDATA[ip: file]]>
+            </line>
+            <line>
+              <![CDATA[prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[chan: -1]]>
+            </line>
+            <line>
+              <![CDATA[type: 2]]>
+            </line>
+            <line>
+              <![CDATA[host: 10.7.0.66]]>
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterSingleStreamRemoving -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@6eebc39e]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@5b464ce8]" name="afterTest" is-config="true" duration-ms="30" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:07Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.zixi.testing.FeederOutputDeletioinTest.broadcasterSingleStreamRemoving(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterSingleStreamRemoving status=SUCCESS method=BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@6eebc39e] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=broadcasterSingleStreamRemoving status=SUCCESS method=FeederOutputDeletioinTest.broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederOutputDeletioinTest@5b464ce8] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
+<<<<<<< HEAD
       </class> <!-- com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest -->
     </test> <!-- Broadcaster - Remove udp output - 1280x720p30 all_pids visual test -->
     <test name="Broadcaster - Remove Pull input test - 1280x720p30 all_pids" duration-ms="65" started-at="2016-05-15T08:53:53Z" finished-at="2016-05-15T08:53:53Z">
       <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
         <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@31ef45e3]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+      </class> <!-- com.zixi.testing.FeederOutputDeletioinTest -->
+    </test> <!-- Feeder - output stream deletion test - FFMPEG analyser FLV test -->
+    <test name="Broadcaster - Remove Push input stream - FFMPEG analyser FLV test" duration-ms="928" started-at="2016-05-23T11:33:07Z" finished-at="2016-05-23T11:33:08Z">
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@71be98f5]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@71be98f5]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:07Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@b9b00e0]]>
+                <![CDATA[org.testng.TestRunner@63070bab]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@31ef45e3]" name="testInit" is-config="true" duration-ms="0" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
           <reporter-output>
           </reporter-output>
@@ -9698,17 +10041,28 @@
             <param index="0">
               <value>
                 <![CDATA[3884]]>
+=======
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@71be98f5]" name="beforeTes" is-config="true" duration-ms="32" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[996]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@31ef45e3]" name="broadcasterInputStreamDeletion" duration-ms="5" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@71be98f5]" name="broadcasterInputStreamDeletion" duration-ms="833" started-at="2016-05-23T14:33:07Z" finished-at="2016-05-23T14:33:08Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
-                <![CDATA[10.7.0.62]]>
+                <![CDATA[10.7.0.66]]>
               </value>
             </param>
             <param index="1">
@@ -9723,7 +10077,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[transcoder]]>
+                <![CDATA[feederout]]>
               </value>
             </param>
             <param index="4">
@@ -9733,7 +10087,11 @@
             </param>
             <param index="5">
               <value>
+<<<<<<< HEAD
                 <![CDATA[3884]]>
+=======
+                <![CDATA[996]]>
+>>>>>>> centos7_new_setup
               </value>
             </param>
           </params>
@@ -9742,7 +10100,7 @@
               <![CDATA[Test parameteres: ]]>
             </line>
             <line>
-              <![CDATA[login_ip: 10.7.0.62]]>
+              <![CDATA[login_ip: 10.7.0.66]]>
             </line>
             <line>
               <![CDATA[userName: admin]]>
@@ -9751,17 +10109,21 @@
               <![CDATA[userPassword: 1234]]>
             </line>
             <line>
-              <![CDATA[streamId: transcoder]]>
+              <![CDATA[streamId: feederout]]>
             </line>
             <line>
               <![CDATA[uiport: 4444]]>
             </line>
             <line>
-              <![CDATA[Stream transcoder removed.]]>
+              <![CDATA[Stream feederout removed.]]>
             </line>
           </reporter-output>
         </test-method> <!-- broadcasterInputStreamDeletion -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@31ef45e3]" name="afterTest" is-config="true" duration-ms="30" started-at="2016-05-15T11:53:53Z" finished-at="2016-05-15T11:53:53Z">
+=======
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@71be98f5]" name="afterTest" is-config="true" duration-ms="61" started-at="2016-05-23T14:33:08Z" finished-at="2016-05-23T14:33:08Z">
+>>>>>>> centos7_new_setup
           <params>
             <param index="0">
               <value>
@@ -9770,7 +10132,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterInputStreamDeletion status=SUCCESS method=BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@31ef45e3] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=broadcasterInputStreamDeletion status=SUCCESS method=BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@71be98f5] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
@@ -9778,6 +10140,7 @@
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
+<<<<<<< HEAD
     </test> <!-- Broadcaster - Remove Pull input test - 1280x720p30 all_pids -->
     <test name="Broadcaster: transcode delete a profile - 1280x720p30 all_pids" duration-ms="69" started-at="2016-05-15T08:53:53Z" finished-at="2016-05-15T08:53:53Z">
       <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest">
@@ -9862,4 +10225,8 @@
       </class> <!-- com.zixi.testing.BroadcasterTranscoderDeletProfileTest -->
     </test> <!-- Broadcaster: transcode delete a profile - 1280x720p30 all_pids -->
   </suite> <!-- Broadcaster: Intel Transcoder H.264 to H.264 -->
+=======
+    </test> <!-- Broadcaster - Remove Push input stream - FFMPEG analyser FLV test -->
+  </suite> <!-- FLV streaming -->
+>>>>>>> centos7_new_setup
 </testng-results>

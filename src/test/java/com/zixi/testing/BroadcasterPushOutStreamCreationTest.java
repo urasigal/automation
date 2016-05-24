@@ -38,6 +38,8 @@ public class BroadcasterPushOutStreamCreationTest extends BaseTest {
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
+		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "host", "latency",
 				"fec_force", "session", "fec_adaptive", "nic", "fec_block", "type",
 				"snames", "fec_aware", "fec_overhead", "stream", "port", "uiport",
@@ -55,6 +57,8 @@ public class BroadcasterPushOutStreamCreationTest extends BaseTest {
 						session, fec_adaptive, nic, fec_block, type, snames,
 						fec_aware, fec_overhead, stream, port, uiport, alias,
 						id), "Output " + id + " added.");
+		// Checking if broadcaster has crashes while execution of the test.
+		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 
 }

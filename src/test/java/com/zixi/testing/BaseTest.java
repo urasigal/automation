@@ -26,7 +26,10 @@ import com.zixi.tools.TestlinkIntegration;
  */
 
 public class BaseTest {
+	
+	// It is an interface all test drivers have to implement this interface.
 	protected TestDriver testDriver;
+	
 	protected ClassLoader classLoader;
 	protected Object driverObj;
 	protected Method m;
@@ -36,10 +39,12 @@ public class BaseTest {
 	protected ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 	protected TestBaseFunction testBaseFunction = new TestBaseFunction ();
 	
+	protected String pid;
+	
 	// Writes test results to the TestLink.
 	protected String testParameters =  "";
 	
-	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developer staff.
+	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developers.
 	protected static  Logger       LOGGER      = null;
 	protected static  FileHandler  FILEHANDLER = null ;
 	
@@ -70,7 +75,6 @@ public class BaseTest {
      try{		
         TestlinkIntegration tl = new TestlinkIntegration();
         if (result.isSuccess()) {
- 
             tl.setResult(testid,
                     ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
             automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + " Manul description: " + manulDescription); // pass data to a testLink notes in test execution.
@@ -110,6 +114,7 @@ public class BaseTest {
 		}
 	}
 	
+	// Singleton manner of definition.
 	protected Logger getLoggerInstance()
 	{
 		if(BaseTest.LOGGER == null)

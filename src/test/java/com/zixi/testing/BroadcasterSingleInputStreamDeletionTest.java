@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
+import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.BroadcasterSingleInputStreamDeletionDriver;
 import com.zixi.drivers.BroadcasterSinglePullInStreamCreationDriver;
 import com.zixi.drivers.TestDriver;
@@ -34,8 +35,8 @@ public class BroadcasterSingleInputStreamDeletionTest extends BaseTest {
 			String userName, String userPassword, String streamId,
 			String uiport, String testid) throws InterruptedException {
 		this.testid = testid;
-		
-this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
+		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
 		testParameters = buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "streamId", "uiport" ,"testid" }, 
 				
@@ -44,6 +45,9 @@ this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userNa
 		
 		Assert.assertNotNull(((BroadcasterSingleInputStreamDeletionDriver) testDriver)
 				.removeInput(login_ip, userName, userPassword, streamId, uiport));
+		// Checking if broadcaster has crashes while execution of the test.
+		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		
 	}
 
 }

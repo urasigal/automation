@@ -13,9 +13,11 @@ import com.zixi.tools.BroadcasterLoggableApiWorker;
 import com.zixi.tools.RemoveInputHelper;
 import com.zixi.tools.ApiWorkir;
 
+
+// This test driver is used in purpose of output stream deletion on a broadcaster server.
 public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLoggableApiWorker implements TestDriver{
 	
-	private ApiWorkir streamDeletor = new ApiWorkir();
+	//private ApiWorkir streamDeletor = new ApiWorkir();
 	
 	public  ArrayList<String> list = new ArrayList<String>();
 	
@@ -33,14 +35,17 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		testParameters = new TestParameters("login_ip:"+login_ip,"userName:"+userName ,"userPassword:"+userPassword ,"name:"+name ,"uiport:"+uiport);
 		String response;
 		
+		// Super class member (BroadcasterLoggableApiWorker) -- get session parameters - broadcaster credentials.
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPassword, login_ip, uiport);
 		
-		response = streamDeletor.sendGet(HTTP + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this, uiport );
+		// get all outputs Json from broadcaster
+		response = apiworker.sendGet(HTTP + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this, uiport );
 		
 		JSONObject responseJson = new JSONObject(response.toString());
 		JSONArray outputStreamsArray = responseJson.getJSONArray("outputs");
 
 		String streamName = null;
+		// Walk through all outputs and find an id by an output name.
 		for (int i = 0; i < outputStreamsArray.length(); i++) {
 			//System.out.println("before");
 			JSONObject outputStream = outputStreamsArray.getJSONObject(i);
@@ -51,7 +56,8 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		    	internalStreamName = outputStream.getString("stream_id");
 		    }
 		  }
-		return streamDeletor.sendGet(HTTP + login_ip + ":" + uiport +  "/zixi/remove_output.json?" + rid + "=" + internalStreamID +"&stream=" + internalStreamName , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);
+		// Send a broadcaster WEB API request to delete an output stream by its ID.
+		return apiworker.sendGet(HTTP + login_ip + ":" + uiport +  "/zixi/remove_output.json?" + rid + "=" + internalStreamID +"&stream=" + internalStreamName , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);
 	}
 	
 	public String getId1() {

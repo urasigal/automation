@@ -21,7 +21,7 @@ public class BroadcasterAdaptiveGroupDeletionTest extends BaseTest{
 			String login_ip, String uiport, String name, String testid)
 			throws InterruptedException {
 		this.testid = testid;
-		
+		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 				
@@ -34,6 +34,8 @@ public class BroadcasterAdaptiveGroupDeletionTest extends BaseTest{
 		Assert.assertEquals(
 				((BroadcasterAdaptiveGroupDeletionDriver) testDriver).testIMPL(
 						userName, userPass, login_ip, uiport, name), "{\"success\":1}");
+		// Checking if broadcaster has crashes while execution of the test.
+		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 
 }

@@ -76,23 +76,23 @@ public class BroadcasterSinglePullInStreamCreationDriver extends
 				"func:" + func, "fec_force:" + fec_force, "mcast_out:"
 						+ mcast_out, "propertiesFile:" + propertiesFile);
 
-		try {
-			input = new FileInputStream(propertiesFile);
-			prop = new Properties();
-			prop.load(input);
-			streamEntity = new StreamEntity(prop.getProperty("width"),
-					prop.getProperty("hight"),
-					prop.getProperty("progressivness"),
-					prop.getProperty("fps"), prop.getProperty("audiobitrate"),
-					prop.getProperty("videocodec"),
-					prop.getProperty("audiocodec"));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			input = new FileInputStream(propertiesFile);
+//			prop = new Properties();
+//			prop.load(input);
+//			streamEntity = new StreamEntity(prop.getProperty("width"),
+//					prop.getProperty("hight"),
+//					prop.getProperty("progressivness"),
+//					prop.getProperty("fps"), prop.getProperty("audiobitrate"),
+//					prop.getProperty("videocodec"),
+//					prop.getProperty("audiocodec"));
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + loin_ip + ":" + uiport + "/login.htm", userName,
@@ -113,7 +113,7 @@ public class BroadcasterSinglePullInStreamCreationDriver extends
 			String password, String mcast_port, String complete,
 			String mcast_ip, String fec_adaptive, String mcast_ttl, String on,
 			String func, String fec_force, String mcast_out) {
-		return streamCreator.sendGet(HTTP + loin_ip + params1 + uiport
+		String request = HTTP + loin_ip + params1 + uiport
 				+ params7 + rfunc + params4 + func + params2 + rtype + params4
 				+ type + params2 + rid + params4 + id + params2 + rmax_outputs
 				+ params4 + max_outputs + params2 + rmcast_out + params4
@@ -130,7 +130,9 @@ public class BroadcasterSinglePullInStreamCreationDriver extends
 				+ params2 + rfec_aware + params4 + "" + params2 + rfec_adaptive
 				+ params4 + fec_adaptive + params2 + rfec_force + params4
 				+ fec_force + params2 + rcomplete + params4 + complete
-				+ params2 + ron + params4 + on + params2 + params5, id,
+				+ params2 + ron + params4 + on + params2 + params5;
+		System.out.println(request);
+		return streamCreator.sendGet(request, id,
 				PULLMODE, responseCookieContainer, loin_ip, this, uiport);
 	}
 }
