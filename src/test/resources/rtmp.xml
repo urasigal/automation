@@ -4,10 +4,10 @@
 	<test name="Broadcaster - RTMP Pull input stream creation - default parameters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="rtmp_nulls" value="" />
 		<parameter name="id" value="test" />
-		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.64/live" />
 		<parameter name="rtmp_name" value="test" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="mcast_ip" value="" />
@@ -32,8 +32,8 @@
 	<test name="Broadcaster - RTMP Pull input stream statistics test" >
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.64" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
@@ -43,7 +43,7 @@
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove RTMP Pull input stream">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -57,13 +57,13 @@
 <test name="Broadcaster - Create RTMP Pull input stream with encryption 128">
 	<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="enc_type" value="aes128" />
 		<parameter name="enc_key" value="3103478f03ef8c090bf8f2ea09b684d8" />
 		<parameter name="disconnect_low_br" value="0" />
 		<parameter name="rtmp_nulls" value="" />
 		<parameter name="id" value="test" />
-		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.64/live" />
 		<parameter name="rtmp_name" value="test" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="mcast_ip" value="" />
@@ -88,7 +88,7 @@
 		<test name="Broadcaster - Create UDP out input stream with encryption 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
@@ -123,7 +123,7 @@
 		</classes>
 	</test>
    <test name="Broadcaster - Remove udp output stream ryption 128 ">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -134,7 +134,7 @@
 		</classes>
 	</test>	
 	<test name="Broadcaster - Remove RTMP Pull input stream encryption 128">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -148,13 +148,13 @@
 	<test name="Broadcaster - Create RTMP Pull input stream with encryption 192">
 	<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="enc_type" value="aes192" />
 		<parameter name="enc_key" value="6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb" />
 		<parameter name="disconnect_low_br" value="0" />
 		<parameter name="rtmp_nulls" value="" />
 		<parameter name="id" value="test" />
-		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.64/live" />
 		<parameter name="rtmp_name" value="test" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="mcast_ip" value="" />
@@ -179,7 +179,7 @@
 		<test name="Broadcaster - Create UDP out input stream with encryption 192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
@@ -214,7 +214,7 @@
 		</classes>
 	</test>
    <test name="Broadcaster - Remove udp output stream ryption 192 ">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -225,7 +225,7 @@
 		</classes>
 	</test>	
 	<test name="Broadcaster - Remove RTMP Pull input stream encryption 192">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -239,13 +239,13 @@
 	<test name="Broadcaster - Create RTMP Pull input stream with encryption 256">
 	<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="enc_type" value="aes256" />
 		<parameter name="enc_key" value="8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230" />
 		<parameter name="disconnect_low_br" value="0" />
 		<parameter name="rtmp_nulls" value="" />
 		<parameter name="id" value="test" />
-		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.64/live" />
 		<parameter name="rtmp_name" value="test" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="mcast_ip" value="" />
@@ -270,7 +270,7 @@
 		<test name="Broadcaster - Create UDP out input stream with encryption 256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
@@ -305,7 +305,7 @@
 		</classes>
 	</test>
    <test name="Broadcaster - Remove udp output stream ryption 256 ">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -316,7 +316,7 @@
 		</classes>
 	</test>	
 	<test name="Broadcaster - Remove RTMP Pull input stream encryption 256">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />

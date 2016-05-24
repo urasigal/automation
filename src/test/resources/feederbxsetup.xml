@@ -35,7 +35,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.66" />
+		<parameter name="ohst" value="10.7.0.62" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -52,7 +52,7 @@
 	<test name="Broadcaster - Push input stream creation test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -77,8 +77,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
@@ -99,14 +99,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="10.7.0.62" />
 		<parameter name="testid" value="722" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - default paremeters">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -150,7 +150,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.66" />
+		<parameter name="ohst" value="10.7.0.62" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -167,7 +167,7 @@
 	<test name="Broadcaster - Push input stream creation test - using password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -192,8 +192,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - using password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
@@ -214,14 +214,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="10.7.0.62" />
 		<parameter name="testid" value="733" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - using password">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -265,7 +265,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.66" />
+		<parameter name="ohst" value="10.7.0.62" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -282,7 +282,7 @@
 	<test name="Broadcaster - Push input stream creation test - zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -307,8 +307,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
@@ -329,14 +329,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="10.7.0.62" />
 		<parameter name="testid" value="744" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - zero latency">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -380,7 +380,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.66" />
+		<parameter name="ohst" value="10.7.0.62" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -397,7 +397,7 @@
 	<test name="Broadcaster - Push input stream creation test - low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -422,8 +422,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="60" />
@@ -444,14 +444,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="10.7.0.62" />
 		<parameter name="testid" value="755" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - low latency">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -495,7 +495,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.66" />
+		<parameter name="ohst" value="10.7.0.62" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="10.7.0.65" />
 		<parameter name="oalt" value="" />
@@ -512,7 +512,7 @@
 	<test name="Broadcaster - Push input stream creation test - specific NIC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -537,8 +537,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - specific NIC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
@@ -559,14 +559,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="10.7.0.62" />
 		<parameter name="testid" value="768" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - specific NIC">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -610,7 +610,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.66" />
+		<parameter name="ohst" value="10.7.0.62" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -627,7 +627,7 @@
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -652,8 +652,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
@@ -674,14 +674,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="10.7.0.62" />
 		<parameter name="testid" value="779" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -725,7 +725,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.66" />
+		<parameter name="ohst" value="10.7.0.62" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -742,7 +742,7 @@
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -767,8 +767,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
@@ -789,14 +789,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="10.7.0.62" />
 		<parameter name="testid" value="790" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - Encryption AES 192">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -840,7 +840,7 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.66" />
+		<parameter name="ohst" value="10.7.0.62" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
@@ -857,7 +857,7 @@
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -882,8 +882,8 @@
 	<test name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
@@ -904,14 +904,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="10.7.0.62" />
 		<parameter name="testid" value="801" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - Encryption AES 256">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
