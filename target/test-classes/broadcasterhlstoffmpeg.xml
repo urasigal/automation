@@ -5,8 +5,8 @@
 <test name="Broadcaster - Pull input stream creation test - adaptive group test first stream adaptive HLS">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="id" value="w1" />
 		<parameter name="source" value="test" />
 		<parameter name="uiport" value="4444" />
@@ -38,8 +38,8 @@
 	<test name="Broadcaster - Pull input stream creation test - adaptive group test second stream adaptive HLS">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="id" value="w2" />
 		<parameter name="source" value="test" />
 		<parameter name="uiport" value="4444" />
@@ -71,8 +71,8 @@
 	<test name="Broadcaster - Pull input stream creation test - adaptive group test third stream adaptive HLS">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="id" value="w3" />
 		<parameter name="source" value="test" />
 		<parameter name="uiport" value="4444" />
@@ -104,7 +104,7 @@
 	<test name="Broadcaster: create an adaptive group test adaptive HLS">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="xxx" />
 		<parameter name="record" value="false" />
@@ -124,7 +124,7 @@
 		</classes>
 	</test>
 	<test name="FFMPEG test default parameters - FFMPEG analyser adaptive HLS">
-		<parameter name="mode" value="http://10.7.0.62:7777/xxx.m3u8" /> 
+		<parameter name="mode" value="http://10.7.0.91:7777/xxx.m3u8" /> 
 		<parameter name="testid" value="951" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticModeTest"/>
@@ -133,7 +133,7 @@
 	<test name="Broadcaster: delete an adaptive group test">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="xxx" />
 		<parameter name="testid" value="953" />
@@ -142,7 +142,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test - adaptive group test first stream adaptive HLS">
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="w1" />
@@ -154,7 +154,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test - adaptive group test second stream adaptive HLS">
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="w2" />
@@ -166,7 +166,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove an input stream test - adaptive group test third stream adaptive HLS">
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="w3" />

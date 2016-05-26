@@ -5,8 +5,8 @@
 <test name="Broadcaster - Pull input stream creation test - default parameters FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="id" value="test" />
 		<parameter name="source" value="test" />
 		<parameter name="uiport" value="4444" />
@@ -38,7 +38,7 @@
 	<test name="Broadcaster - UDP output stream creation Pull input FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
@@ -69,8 +69,8 @@
 	<test name="Broadcaster - Stream statistics test - default parameters Pull input FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.64" />
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="Host" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
@@ -86,7 +86,7 @@
 		</classes>
 	</test>
 <test name="Broadcaster - Remove udp output stream default parameters Pull input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -97,7 +97,7 @@
 		</classes>
 	</test>	
 	<test name="Broadcaster - Remove input stream test default parameters Pull input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.62" />
+		<parameter name="login_ip" value="10.7.0.91" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />

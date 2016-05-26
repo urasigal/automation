@@ -20,6 +20,7 @@ public class Macros {
 		public static final int ADD_TRANSCODER_PROFILE = 13;
 		public static final int SET_RTMMP_AUTO_REMOTE = 14;
 		public static final int FIND_SOURCE_IP_BX = 15;
+		public static final int FEEDER_SSH_KEY_STATUS = 16;
 		//////////////////////////////////////////////////
 		
 		public static final String GOOD = "GOOD";
