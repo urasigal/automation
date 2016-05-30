@@ -124,7 +124,6 @@ public class SshJcraftClient {
 	
 	public String callCommand(String sshUser, String sshPassword, String sshLoginIp, String sshPort, String command) throws InterruptedException, IOException, JSchException
 	{
-		
 		setSession(sshUser, sshPassword, sshLoginIp, Integer.parseInt(sshPort));
 		openChannel();
 		return callCommand(command);

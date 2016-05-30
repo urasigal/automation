@@ -1,0 +1,36 @@
+package com.zixi.testing;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import com.jcraft.jsch.JSchException;
+import com.zixi.drivers.*;
+
+public class FeederReverseTunnelTest extends BaseTest{
+	
+	@BeforeClass
+	public void testInit() {
+
+		// Load the page in the browser
+		testDriver = new FeederReverseTunnelDriver();
+	}
+	
+	// Test parameters - these parameters will be provided through an appropriate suite's XML file.
+	@Parameters({ "userName", "sshPass", "login_ip", "ssh_port", "ssh_user", "reverse_port", "testid"})
+	@Test
+	public void uploadPrivateKeyToFeeder(String userName, String sshPass, String login_ip, String ssh_port, String ssh_user, String reverse_port, String testid) throws InterruptedException, IOException, JSchException {
+		
+		this.testid = testid;
+		
+		// Provide parameters to a TestLink.
+		testParameters = buildTestParametersString(new String[] { "userName", "sshPass", "login_ip", "ssh_port", "ssh_user", "reverse_port", "testid"}, 
+		new String[] { userName, sshPass, login_ip, ssh_port, ssh_user, reverse_port, testid });
+		
+		Assert.assertEquals(( (FeederReverseTunnelDriver) testDriver).testIMPL(userName, sshPass, login_ip, ssh_port, ssh_user, reverse_port), "sshd");
+	}
+
+}

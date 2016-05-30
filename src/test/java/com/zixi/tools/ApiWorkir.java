@@ -30,7 +30,7 @@ public class ApiWorkir {
 	
 	
 	// It is very specific function is used to upload a server private key to a SPECIFIC feeder server - Such strong and disturbing rule comes from a Feeder server UI implementation.
-	public String inserKeyToSpecificFeeder(String url, String id, int mode,String[] responseCookieContainer, String HOST, Object caller, String uiport, byte[] keyByteArray)
+	public String inserKeyToSpecificFeeder(String url, String id, String[] responseCookieContainer, String HOST, Object caller, String uiport, byte[] keyByteArray)
 	{
 		List<Byte>    bytesList = new ArrayList<>(); ;
 //		StringBuilder mime = new StringBuilder(); 
@@ -97,7 +97,6 @@ public class ApiWorkir {
 			wr.write( c );
 			wr.flush();
 			
-			
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					con.getInputStream()));
 			String inputLine = "";
@@ -107,9 +106,7 @@ public class ApiWorkir {
 			}
 			in.close();
 			wr.close();
-			if (mode == 77) {
-				return inputLine = response.toString();
-			}
+			
 		} catch (Exception e) {
 			String exceptionTest = e.getMessage();
 			System.out.println("bug ------------- " + exceptionTest + "Request is "   + url );
@@ -171,6 +168,12 @@ public class ApiWorkir {
 				return "no such a stream to delete";
 			}
 			
+			
+			if (mode == FEEDER_SSH_SERVER_STATUS) {
+				inputLine = response.toString();
+				json = new JSONObject(inputLine);
+				return json.getString("host");
+			}
 			
 			if (mode == FEEDER_SSH_KEY_STATUS) {
 				inputLine = response.toString();
