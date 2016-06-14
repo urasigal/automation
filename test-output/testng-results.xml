@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Feeder - SHH functionality suite" duration-ms="11177" started-at="2016-05-30T14:51:50Z" finished-at="2016-05-30T14:52:02Z">
+  <suite name="Feeder - SHH functionality suite" duration-ms="11139" started-at="2016-05-31T08:40:20Z" finished-at="2016-05-31T08:40:31Z">
     <groups>
     </groups>
-    <test name="Feeder - upload a private key test" duration-ms="219" started-at="2016-05-30T14:51:50Z" finished-at="2016-05-30T14:51:51Z">
+    <test name="Feeder - upload a private key test" duration-ms="211" started-at="2016-05-31T08:40:20Z" finished-at="2016-05-31T08:40:20Z">
       <class name="com.zixi.testing.FeederPostKeyTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="startTest" is-config="true" duration-ms="7" started-at="2016-05-30T17:51:50Z" finished-at="2016-05-30T17:51:50Z">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="startTest" is-config="true" duration-ms="7" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-30T17:51:50Z" finished-at="2016-05-30T17:51:50Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="testInit" is-config="true" duration-ms="0" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="beforeTes" is-config="true" duration-ms="140" started-at="2016-05-30T17:51:50Z" finished-at="2016-05-30T17:51:50Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="beforeTes" is-config="true" duration-ms="136" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[351]]>
+                <![CDATA[3904]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="uploadPrivateKeyToFeeder" duration-ms="30" started-at="2016-05-30T17:51:50Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="uploadPrivateKeyToFeeder" duration-ms="22" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
@@ -57,14 +57,14 @@
             </param>
             <param index="4">
               <value>
-                <![CDATA[351]]>
+                <![CDATA[3904]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uploadPrivateKeyToFeeder -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="afterTest" is-config="true" duration-ms="37" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
@@ -82,9 +82,9 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.FeederPostKeyTest -->
     </test> <!-- Feeder - upload a private key test -->
-    <test name="Feeder - set SSH server parameters" duration-ms="77" started-at="2016-05-30T14:51:51Z" finished-at="2016-05-30T14:51:51Z">
+    <test name="Feeder - set SSH server parameters" duration-ms="71" started-at="2016-05-31T08:40:20Z" finished-at="2016-05-31T08:40:20Z">
       <class name="com.zixi.testing.FeederSettingsTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
@@ -95,22 +95,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="beforeTes" is-config="true" duration-ms="41" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="beforeTes" is-config="true" duration-ms="34" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[351]]>
+                <![CDATA[3906]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="uploadPrivateKeyToFeeder" duration-ms="3" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="uploadPrivateKeyToFeeder" duration-ms="3" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
@@ -149,14 +149,14 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[351]]>
+                <![CDATA[3906]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uploadPrivateKeyToFeeder -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="afterTest" is-config="true" duration-ms="31" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="afterTest" is-config="true" duration-ms="32" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
@@ -174,9 +174,13 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.FeederSettingsTest -->
     </test> <!-- Feeder - set SSH server parameters -->
-    <test name="Feeder - set SSH reverse tunnel parameters" duration-ms="69" started-at="2016-05-30T14:51:51Z" finished-at="2016-05-30T14:51:51Z">
+    <test name="Feeder - set SSH reverse tunnel parameters" duration-ms="84" started-at="2016-05-31T08:40:20Z" finished-at="2016-05-31T08:40:20Z">
       <class name="com.zixi.testing.FeederReverseTunnelParametersTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="startTest" is-config="true" duration-ms="1" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
@@ -187,22 +191,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="testInit" is-config="true" duration-ms="0" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="beforeTes" is-config="true" duration-ms="32" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="beforeTes" is-config="true" duration-ms="32" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[351]]>
+                <![CDATA[3909]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="uploadPrivateKeyToFeeder" duration-ms="3" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="uploadPrivateKeyToFeeder" duration-ms="9" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
@@ -246,14 +246,14 @@
             </param>
             <param index="8">
               <value>
-                <![CDATA[351]]>
+                <![CDATA[3909]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uploadPrivateKeyToFeeder -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="afterTest" is-config="true" duration-ms="31" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="afterTest" is-config="true" duration-ms="42" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
@@ -271,35 +271,35 @@
         </test-method> <!-- afterTest -->
       </class> <!-- com.zixi.testing.FeederReverseTunnelParametersTest -->
     </test> <!-- Feeder - set SSH reverse tunnel parameters -->
-    <test name="Feeder - test reverse tunnel remote socket" duration-ms="10791" started-at="2016-05-30T14:51:51Z" finished-at="2016-05-30T14:52:02Z">
+    <test name="Feeder - test reverse tunnel remote socket" duration-ms="10756" started-at="2016-05-31T08:40:20Z" finished-at="2016-05-31T08:40:31Z">
       <class name="com.zixi.testing.FeederReverseTunnelTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="startTest" is-config="true" duration-ms="0" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5dda768f]]>
+                <![CDATA[org.testng.TestRunner@7a8c8dcf]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="beforeTes" is-config="true" duration-ms="32" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="testInit" is-config="true" duration-ms="1" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="beforeTes" is-config="true" duration-ms="34" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[351]]>
+                <![CDATA[3911]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="testInit" is-config="true" duration-ms="0" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:51:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="uploadPrivateKeyToFeeder" duration-ms="10676" started-at="2016-05-30T17:51:51Z" finished-at="2016-05-30T17:52:01Z">
+        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="uploadPrivateKeyToFeeder" duration-ms="10687" started-at="2016-05-31T11:40:20Z" finished-at="2016-05-31T11:40:31Z">
           <params>
             <param index="0">
               <value>
@@ -333,14 +333,14 @@
             </param>
             <param index="6">
               <value>
-                <![CDATA[351]]>
+                <![CDATA[3911]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uploadPrivateKeyToFeeder -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="afterTest" is-config="true" duration-ms="82" started-at="2016-05-30T17:52:01Z" finished-at="2016-05-30T17:52:02Z">
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="afterTest" is-config="true" duration-ms="33" started-at="2016-05-31T11:40:31Z" finished-at="2016-05-31T11:40:31Z">
           <params>
             <param index="0">
               <value>

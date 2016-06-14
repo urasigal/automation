@@ -5,7 +5,7 @@
 	<test name="Broadcaster - UDP input stream creation ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="ts_port" value="9999" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="0" />
@@ -35,11 +35,11 @@
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="port" value="9999" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
@@ -48,7 +48,7 @@
 		<parameter name="remux_bitrate" value="0" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.91" />
+		<parameter name="dec_key" value="10.7.0.66" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -66,8 +66,8 @@
 	<test name="Broadcaster - UDP input stream statistics test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
@@ -77,7 +77,7 @@
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove udp input stream">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -89,7 +89,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream">
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -102,7 +102,7 @@
 	<test name="Broadcaster - UDP input stream creation test smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="ts_port" value="14000" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="0" />
@@ -132,11 +132,11 @@
 	<test name="Broadcaster - UDP output stream creation test smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="port" value="14000" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
@@ -145,7 +145,7 @@
 		<parameter name="remux_bitrate" value="0" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.91" />
+		<parameter name="dec_key" value="10.7.0.66" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -163,8 +163,8 @@
 	<test name="Broadcaster - UDP input stream statistics test smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
@@ -174,7 +174,7 @@
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove udp input stream test smoothing 1000">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -186,7 +186,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream test smoothing 1000">
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -199,7 +199,7 @@
 	<test name="Broadcaster - UDP input stream creation test remux to 8000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="ts_port" value="14000" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="0" />
@@ -229,11 +229,11 @@
 	<test name="Broadcaster - UDP output stream creation test remux to 8000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="port" value="14000" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
@@ -242,7 +242,7 @@
 		<parameter name="remux_bitrate" value="8000000" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.91" />
+		<parameter name="dec_key" value="10.7.0.66" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -260,8 +260,8 @@
 	<test name="Broadcaster - UDP input stream statistics test remux to 8000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
@@ -271,7 +271,7 @@
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove udp input stream test remux to 8000">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -283,7 +283,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream test remux to 8000">
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -296,7 +296,7 @@
 	<test name="Broadcaster - UDP input stream creation test PRO MPEG FEC 2D">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="ts_port" value="14000" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="2" />
@@ -326,11 +326,11 @@
 	<test name="Broadcaster - UDP output stream creation test pro MPEG FEC 2D">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="port" value="14000" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="1" />
 		<parameter name="fec" value="2" />
@@ -339,7 +339,7 @@
 		<parameter name="remux_bitrate" value="" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.91" />
+		<parameter name="dec_key" value="10.7.0.66" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -357,8 +357,8 @@
 	<test name="Broadcaster - UDP input stream statistics test pro MPEG FEC 2D">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
@@ -370,7 +370,7 @@
 <test name="Broadcaster - UDP output stream creation  pro MPEG FEC 2D">
 	<parameter name="userName" value="admin" />
 	<parameter name="userPass" value="1234" />
-	<parameter name="login_ip" value="10.7.0.91" />
+	<parameter name="login_ip" value="10.7.0.66" />
 	<parameter name="port" value="5555" />
 	<parameter name="stream" value="test" />
 	<parameter name="streamname" value="test" />
@@ -405,7 +405,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream PRO MPEG FEC 2D">
-	<parameter name="login_ip" value="10.7.0.91" />
+	<parameter name="login_ip" value="10.7.0.66" />
 	<parameter name="userName" value="admin" />
 	<parameter name="userPassword" value="1234" />
 	<parameter name="id" value="test" />
@@ -416,7 +416,7 @@
 	</classes>
 </test>      
 	<test name="Broadcaster - Remove udp input stream test pro MPEG FEC 2D">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -428,7 +428,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream test pro MPEG FEC 2D">
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -441,7 +441,7 @@
 	<test name="Broadcaster - UDP input stream creation test specific IP">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="ts_port" value="14000" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="2" />
@@ -451,7 +451,7 @@
 		<parameter name="mcast_ip" value="" />
 		<parameter name="mcast_force" value="" />
 		<parameter name="mcast_port" value="" />
-		<parameter name="nic" value="10.7.0.91" />
+		<parameter name="nic" value="10.7.0.66" />
 		<parameter name="type" value="local-ts" />
 		<parameter name="multicast" value="" />
 		<parameter name="enc_key" value="" />
@@ -471,11 +471,11 @@
 	<test name="Broadcaster - UDP output stream creation test specific IP">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="port" value="14000" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.91" />
+		<parameter name="host" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="1" />
 		<parameter name="fec" value="2" />
@@ -484,7 +484,7 @@
 		<parameter name="remux_bitrate" value="8000000" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.91" />
+		<parameter name="dec_key" value="10.7.0.66" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -502,8 +502,8 @@
 	<test name="Broadcaster - UDP input stream statistics test specific IP">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.157" />
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
@@ -513,7 +513,7 @@
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove udp input stream test specific IP">
-		<parameter name="login_ip" value="10.7.0.91" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
@@ -525,7 +525,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream test specific IP">
-		<parameter name="login_ip" value="10.7.0.157" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
