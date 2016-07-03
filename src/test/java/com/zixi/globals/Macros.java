@@ -22,6 +22,9 @@ public class Macros {
 		public static final int FIND_SOURCE_IP_BX = 15;
 		public static final int FEEDER_SSH_KEY_STATUS = 16;
 		public static final int FEEDER_SSH_SERVER_STATUS = 17;
+		public static final String FILE_UPLOAD_MODE = "2";
+		
+		
 		//////////////////////////////////////////////////
 		
 		public static final String GOOD = "GOOD";

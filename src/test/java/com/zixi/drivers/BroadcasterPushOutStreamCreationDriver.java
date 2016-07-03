@@ -9,8 +9,6 @@ import com.zixi.tools.BroadcasterLoggableApiWorker;
 public class BroadcasterPushOutStreamCreationDriver extends BroadcasterLoggableApiWorker
 		implements TestDriver {
 
-	private ApiWorkir streamCreator = new ApiWorkir();
-
 	final private static String HTTP = "http://";
 	final private static String params1 = ":";
 	final private static String params2 = "&";
@@ -48,7 +46,7 @@ public class BroadcasterPushOutStreamCreationDriver extends BroadcasterLoggableA
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPass, login_ip, uiport);
 		
-		return streamCreator.sendGet(HTTP + login_ip + params1 + uiport
+		return apiworker.sendGet(HTTP + login_ip + params1 + uiport
 				+ params7 + rtype + params4 + type + params2 + rid + params4
 				+ id + params2 + rname + params4 + snames + params2 + rstream
 				+ params4 + stream + params2 + ralias + params4 + alias
