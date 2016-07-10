@@ -16,8 +16,9 @@ import com.zixi.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
-	private TestDriver testDriver;
+	//private TestDriver testDriver;
 
+	
 	@BeforeClass
 	public void testInit() {
 		testDriver = new BroadcasterRtmpPushInputStreamDriver();
@@ -35,7 +36,8 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 			String enc_type, String enc_key, String rec_history,
 			String rec_duration, String rtmp_url, String rtmp_name,
 			String rtmp_user, String testid) throws InterruptedException {
-		this.testid = testid;
+		
+		//this.testid = testid;
 		
 		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		

@@ -1,96 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[userName: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[userPass: 1234]]>
-    </line>
-    <line>
-      <![CDATA[login_ip: 10.7.0.66]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4444]]>
-    </line>
-    <line>
-      <![CDATA[ft_download: 1]]>
-    </line>
-    <line>
-      <![CDATA[ft_upload: 1]]>
-    </line>
-    <line>
-      <![CDATA[ft_auto_index: 1]]>
-    </line>
-    <line>
-      <![CDATA[ft_prog: 1]]>
-    </line>
-    <line>
-      <![CDATA[ft_encrypt: 0]]>
-    </line>
-    <line>
-      <![CDATA[ft_bitrate_cache: 0]]>
-    </line>
-    <line>
-      <![CDATA[ft_aggr: 80]]>
-    </line>
-    <line>
-      <![CDATA[ft_mtu: 1462]]>
-    </line>
-    <line>
-      <![CDATA[ft_init_speed: 15000]]>
-    </line>
-    <line>
-      <![CDATA[ft_cache: 0]]>
-    </line>
-    <line>
-      <![CDATA[ft_proxy_http_port: 4500]]>
-    </line>
-    <line>
-      <![CDATA[ft_proxy_https_port: 4501]]>
-    </line>
-    <line>
-      <![CDATA[max_download_bitrate: 10000]]>
-    </line>
-    <line>
-      <![CDATA[max_upload_bitrate: 10000]]>
-    </line>
   </reporter-output>
-  <suite name="File transfer suite through poxy" duration-ms="1394" started-at="2016-07-03T10:06:31Z" finished-at="2016-07-03T10:06:32Z">
+  <suite name="Feeder - SHH functionality suite" duration-ms="11077" started-at="2016-07-10T11:09:23Z" finished-at="2016-07-10T11:09:34Z">
     <groups>
     </groups>
-    <test name="Broadcaster - enable file transfer" duration-ms="1203" started-at="2016-07-03T10:06:31Z" finished-at="2016-07-03T10:06:32Z">
-      <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="startTest" is-config="true" duration-ms="7" started-at="2016-07-03T13:06:31Z" finished-at="2016-07-03T13:06:31Z">
+    <test name="Feeder - upload a private key test" duration-ms="219" started-at="2016-07-10T11:09:23Z" finished-at="2016-07-10T11:09:23Z">
+      <class name="com.zixi.testing.FeederPostKeyTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="startTest" is-config="true" duration-ms="8" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@22555ebf]]>
+                <![CDATA[org.testng.TestRunner@29b5cd00]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="testInit" is-config="true" duration-ms="0" started-at="2016-07-03T13:06:31Z" finished-at="2016-07-03T13:06:31Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="testInit" is-config="true" duration-ms="1" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="beforeTes" is-config="true" duration-ms="178" started-at="2016-07-03T13:06:31Z" finished-at="2016-07-03T13:06:31Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="beforeTes" is-config="true" duration-ms="143" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[3919]]>
+                <![CDATA[3904]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterSetBxFileTransferVodSettings(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="broadcasterSetBxFileTransferVodSettings" duration-ms="950" started-at="2016-07-03T13:06:31Z" finished-at="2016-07-03T13:06:32Z">
+        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="uploadPrivateKeyToFeeder" duration-ms="23" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
           <params>
             <param index="0">
               <value>
@@ -104,12 +47,181 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[10.7.0.66]]>
+                <![CDATA[10.7.0.65]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[4444]]>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[3904]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadPrivateKeyToFeeder -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536]" name="afterTest" is-config="true" duration-ms="36" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.zixi.testing.FeederPostKeyTest.uploadPrivateKeyToFeeder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=uploadPrivateKeyToFeeder status=SUCCESS method=FeederPostKeyTest.uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederPostKeyTest@6adca536] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.zixi.testing.FeederPostKeyTest -->
+    </test> <!-- Feeder - upload a private key test -->
+    <test name="Feeder - set SSH server parameters" duration-ms="90" started-at="2016-07-10T11:09:23Z" finished-at="2016-07-10T11:09:23Z">
+      <class name="com.zixi.testing.FeederSettingsTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="startTest" is-config="true" duration-ms="1" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@491cc5c9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="testInit" is-config="true" duration-ms="0" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="beforeTes" is-config="true" duration-ms="37" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3906]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTes -->
+        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="uploadPrivateKeyToFeeder" duration-ms="3" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.65]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[4200]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[10.7.0.66]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[22]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[root]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[3906]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadPrivateKeyToFeeder -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9]" name="afterTest" is-config="true" duration-ms="47" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.zixi.testing.FeederSettingsTest.uploadPrivateKeyToFeeder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=uploadPrivateKeyToFeeder status=SUCCESS method=FeederSettingsTest.uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederSettingsTest@1cd072a9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.zixi.testing.FeederSettingsTest -->
+    </test> <!-- Feeder - set SSH server parameters -->
+    <test name="Feeder - set SSH reverse tunnel parameters" duration-ms="72" started-at="2016-07-10T11:09:23Z" finished-at="2016-07-10T11:09:24Z">
+      <class name="com.zixi.testing.FeederReverseTunnelParametersTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="testInit" is-config="true" duration-ms="2" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="startTest" is-config="true" duration-ms="0" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@8e24743]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="beforeTes" is-config="true" duration-ms="34" started-at="2016-07-10T14:09:23Z" finished-at="2016-07-10T14:09:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3909]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTes -->
+        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="uploadPrivateKeyToFeeder" duration-ms="3" started-at="2016-07-10T14:09:24Z" finished-at="2016-07-10T14:09:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.7.0.65]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[4200]]>
               </value>
             </param>
             <param index="4">
@@ -119,296 +231,132 @@
             </param>
             <param index="5">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[127.0.0.1]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[9933]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[80]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[1462]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[15000]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[4500]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[4501]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[10000]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[10000]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[3919]]>
+                <![CDATA[3909]]>
               </value>
             </param>
           </params>
           <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[userName: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[userPass: 1234]]>
-            </line>
-            <line>
-              <![CDATA[login_ip: 10.7.0.66]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
-            </line>
-            <line>
-              <![CDATA[ft_download: 1]]>
-            </line>
-            <line>
-              <![CDATA[ft_upload: 1]]>
-            </line>
-            <line>
-              <![CDATA[ft_auto_index: 1]]>
-            </line>
-            <line>
-              <![CDATA[ft_prog: 1]]>
-            </line>
-            <line>
-              <![CDATA[ft_encrypt: 0]]>
-            </line>
-            <line>
-              <![CDATA[ft_bitrate_cache: 0]]>
-            </line>
-            <line>
-              <![CDATA[ft_aggr: 80]]>
-            </line>
-            <line>
-              <![CDATA[ft_mtu: 1462]]>
-            </line>
-            <line>
-              <![CDATA[ft_init_speed: 15000]]>
-            </line>
-            <line>
-              <![CDATA[ft_cache: 0]]>
-            </line>
-            <line>
-              <![CDATA[ft_proxy_http_port: 4500]]>
-            </line>
-            <line>
-              <![CDATA[ft_proxy_https_port: 4501]]>
-            </line>
-            <line>
-              <![CDATA[max_download_bitrate: 10000]]>
-            </line>
-            <line>
-              <![CDATA[max_upload_bitrate: 10000]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- broadcasterSetBxFileTransferVodSettings -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="afterTest" is-config="true" duration-ms="57" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
+        </test-method> <!-- uploadPrivateKeyToFeeder -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85]" name="afterTest" is-config="true" duration-ms="32" started-at="2016-07-10T14:09:24Z" finished-at="2016-07-10T14:09:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.BxFileTransferAndVodSettingsTest.broadcasterSetBxFileTransferVodSettings(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.zixi.testing.FeederReverseTunnelParametersTest.uploadPrivateKeyToFeeder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException,com.jcraft.jsch.JSchException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterSetBxFileTransferVodSettings status=SUCCESS method=BxFileTransferAndVodSettingsTest.broadcasterSetBxFileTransferVodSettings(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=uploadPrivateKeyToFeeder status=SUCCESS method=FeederReverseTunnelParametersTest.uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelParametersTest@49e4cb85] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BxFileTransferAndVodSettingsTest -->
-    </test> <!-- Broadcaster - enable file transfer -->
-    <test name="Proxy - file upload test" duration-ms="105" started-at="2016-07-03T10:06:32Z" finished-at="2016-07-03T10:06:32Z">
-      <class name="com.zixi.testing.FileTransferTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="startTest" is-config="true" duration-ms="0" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
+      </class> <!-- com.zixi.testing.FeederReverseTunnelParametersTest -->
+    </test> <!-- Feeder - set SSH reverse tunnel parameters -->
+    <test name="Feeder - test reverse tunnel remote socket" duration-ms="10678" started-at="2016-07-10T11:09:24Z" finished-at="2016-07-10T11:09:34Z">
+      <class name="com.zixi.testing.FeederReverseTunnelTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="startTest" is-config="true" duration-ms="0" started-at="2016-07-10T14:09:24Z" finished-at="2016-07-10T14:09:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@477b4cdf]]>
+                <![CDATA[org.testng.TestRunner@5dda768f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="testInit" is-config="true" duration-ms="0" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="beforeTes" is-config="true" duration-ms="34" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="beforeTes" is-config="true" duration-ms="35" started-at="2016-07-10T14:09:24Z" finished-at="2016-07-10T14:09:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[3921]]>
+                <![CDATA[3911]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="fileTransfer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="fileTransfer" duration-ms="37" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[10.7.0.63]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[9999]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[3921]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fileTransfer -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="afterTest" is-config="true" duration-ms="32" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.FileTransferTest.fileTransfer(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=fileTransfer status=SUCCESS method=FileTransferTest.fileTransfer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.FileTransferTest -->
-    </test> <!-- Proxy - file upload test -->
-    <test name="Proxy - file download test" duration-ms="66" started-at="2016-07-03T10:06:32Z" finished-at="2016-07-03T10:06:32Z">
-      <class name="com.zixi.testing.FileTransferTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="startTest" is-config="true" duration-ms="0" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@489115ef]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="testInit" is-config="true" duration-ms="0" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="testInit" is-config="true" duration-ms="0" started-at="2016-07-10T14:09:24Z" finished-at="2016-07-10T14:09:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="beforeTes" is-config="true" duration-ms="32" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
+        <test-method status="PASS" signature="uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="uploadPrivateKeyToFeeder" duration-ms="10603" started-at="2016-07-10T14:09:24Z" finished-at="2016-07-10T14:09:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[3921]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="fileTransfer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="fileTransfer" duration-ms="4" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[10.7.0.63]]>
+                <![CDATA[root]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[9999]]>
+                <![CDATA[zixiroot1234]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[10.7.0.66]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[3921]]>
+                <![CDATA[22]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[root]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[9933]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[3911]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fileTransfer -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="afterTest" is-config="true" duration-ms="29" started-at="2016-07-03T13:06:32Z" finished-at="2016-07-03T13:06:32Z">
+        </test-method> <!-- uploadPrivateKeyToFeeder -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf]" name="afterTest" is-config="true" duration-ms="39" started-at="2016-07-10T14:09:34Z" finished-at="2016-07-10T14:09:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.FileTransferTest.fileTransfer(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
+                <![CDATA[public void com.zixi.testing.FeederReverseTunnelTest.uploadPrivateKeyToFeeder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException,com.jcraft.jsch.JSchException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=fileTransfer status=SUCCESS method=FileTransferTest.fileTransfer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502] output={null}]]]>
+                <![CDATA[[TestResult name=uploadPrivateKeyToFeeder status=SUCCESS method=FeederReverseTunnelTest.uploadPrivateKeyToFeeder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FeederReverseTunnelTest@6e8dacdf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.FileTransferTest -->
-    </test> <!-- Proxy - file download test -->
-  </suite> <!-- File transfer suite through poxy -->
+      </class> <!-- com.zixi.testing.FeederReverseTunnelTest -->
+    </test> <!-- Feeder - test reverse tunnel remote socket -->
+  </suite> <!-- Feeder - SHH functionality suite -->
 </testng-results>

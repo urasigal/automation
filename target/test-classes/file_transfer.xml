@@ -44,4 +44,649 @@
 		    <class name="com.zixi.testing.FileTransferTest"/>
 		</classes>
     </test>
+    <test name="Broadcaster - enable file transfer1">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test1">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test1">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer2">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test2">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test2">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer3">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test3">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test3">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer4">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test4">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test4">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer5">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test5">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test5">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer6">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test6">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test6">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer7">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test7">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test7">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer8">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test8">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test8">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer9">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test9">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test9">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer0">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test10">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test10">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer11">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test11">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test11">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer22">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test12">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test12">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer33">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test13">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test13">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer44">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test14">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test14">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
+    <test name="Broadcaster - enable file transfer55">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="ft_download" value="1" />
+		<parameter name="ft_upload" value="1" />
+		<parameter name="ft_auto_index" value="1" />
+		<parameter name="ft_http" value="1" />
+		<parameter name="ft_prog" value="1" />
+		<parameter name="ft_encrypt" value="0" />
+		<parameter name="ft_bitrate_cache" value="0" />
+		<parameter name="ft_aggr" value="80" />
+		<parameter name="ft_mtu" value="1462" />
+		<parameter name="ft_init_speed" value="15000" />
+		<parameter name="ft_cache" value="0" />
+		<parameter name="ft_proxy_http_port" value="4500" />
+		<parameter name="ft_proxy_https_port" value="4501" />
+		<parameter name="max_download_bitrate" value="10000" />
+		<parameter name="max_upload_bitrate" value="10000" />
+		<parameter name="testid" value="3919" />  
+		<classes>
+		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
+		</classes>
+	</test>
+	  <test name="Proxy - file upload test15">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="testid" value="3921" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+	</test>
+    <test name="Proxy - file download test15">
+		<parameter name="destinationServerIP" value="10.7.0.63" /> 
+		<parameter name="destinationServerPort" value="9999" />
+		<parameter name="fiel_upload_mode" value="1" />
+		<parameter name="testid" value="3925" />
+		<classes>
+		    <class name="com.zixi.testing.FileTransferTest"/>
+		</classes>
+    </test>
 </suite>

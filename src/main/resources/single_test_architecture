@@ -1,0 +1,19 @@
+
+Single test architecture:
+
+1 Test class name convention:
+	Each test class has to end with a "Test" suffix.
+	Each test class has to begin with a prefix that point to a test object's host product - feeder, broadcaster, receiver ...
+	The second part of the test's name has to describe the object of the test.
+	
+	Test hierarchy:
+	
+	Each test case class has to inherit from the "BaseTest" class.
+	
+	Test flow:
+	
+	Each test has a testNG's @BeforeClass testInit method - instantiates a test driver class. 
+	Each test has at least a test @Test method.
+	Each test has a @BeforeMethod beforeTes(String testid) method - provides a logger class.
+	Each test has @AfterMethod public void afterTest(Method test, ITestResult result) method.
+	 

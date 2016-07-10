@@ -27,7 +27,7 @@ import com.zixi.tools.TestlinkIntegration;
 
 public class BaseTest {
 	
-	// It is an interface all test drivers have to implement this interface.
+	// It is an interface, all test drivers have to implement this interface.
 	protected TestDriver testDriver;
 	
 	protected ClassLoader classLoader;
@@ -58,12 +58,14 @@ public class BaseTest {
 		automationTestIdentifiers = "Test name is: " + testContext.getName() + "\nSuite name is: " + testContext.getSuite().getName() ;
 	}
 	
+	//@BeforeMethod: The annotated method will be run before each test method. 
 	@Parameters({"testid"})
 	@BeforeMethod
 	public void beforeTes(String testid) throws MalformedURLException
 	{
 		LOGGER = getLoggerInstance();
 		LOGGER.info(getClass().getName()); 
+		
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
 		TestlinkIntegration tl = new TestlinkIntegration();
