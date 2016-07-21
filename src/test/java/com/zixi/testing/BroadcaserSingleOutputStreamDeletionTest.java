@@ -36,7 +36,7 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 		//Print this class name to the log file.
 		getLoggerInstance().info(getClass().getName());
 		
-		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		this.testid = testid;
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
@@ -48,7 +48,7 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 		Assert.assertEquals(((BroadcaserSingleOutputStreamDeletionDriver) testDriver).testIMPL(login_ip, userName, userPassword, id, uiport),
 				"Output " +  id + " removed.");
 		// Checking if broadcaster has crashes while execution of the test.
-		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 		
 	}
 }

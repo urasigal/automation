@@ -44,7 +44,7 @@ public class BroadcasterRtmpInputTest extends BaseTest {
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "rtmp_nulls", "id",
 				"rtmp_url", "rtmp_name", "time_shift", "mcast_ip", "mcast_force",
@@ -67,7 +67,7 @@ public class BroadcasterRtmpInputTest extends BaseTest {
 						max_outputs, on), "Stream " + "'" + id + "'"
 				+ " added.");
 		// Checking if broadcaster has crashes while execution of the test.
-		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 
 }

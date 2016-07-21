@@ -31,7 +31,7 @@ public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 			throws InterruptedException {
 		this.testid = testid;
 		
-		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
@@ -59,6 +59,6 @@ public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 								static_latency, dec_type, dec_key, password),
 				"Output " +name+ " added.");
 		// Checking if broadcaster has crashes while execution of the test.
-		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 }

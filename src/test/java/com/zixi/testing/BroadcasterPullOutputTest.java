@@ -21,7 +21,7 @@ public class BroadcasterPullOutputTest extends BaseTest{
 			throws InterruptedException {
 		this.testid = testid;
 		
-		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
@@ -34,6 +34,6 @@ public class BroadcasterPullOutputTest extends BaseTest{
 				.testIMPL(userName, userPass,  login_ip,  uiport, type, name, stream, matrix,alt_stream, remote_id, session, latency, session_auth,stats_hist));
 		
 		// Checking if broadcaster has crashes while execution of the test.
-		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 }

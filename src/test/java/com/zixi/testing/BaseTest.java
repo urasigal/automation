@@ -29,7 +29,7 @@ public class BaseTest {
 	
 	// It is an interface, all test drivers have to implement this interface.
 	protected TestDriver testDriver;
-	
+	protected com.zixi.drivers.tools.TestDriver newTestDriver;
 	protected ClassLoader classLoader;
 	protected Object driverObj;
 	protected Method m;
@@ -39,7 +39,7 @@ public class BaseTest {
 	protected ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 	protected TestBaseFunction testBaseFunction = new TestBaseFunction ();
 	
-	protected String pid;
+	protected String sutProcessId;
 	
 	// Writes test results to the TestLink.
 	protected String testParameters =  "";
@@ -73,7 +73,9 @@ public class BaseTest {
 	}
 	
 	@AfterMethod
-    public void afterTest(Method test, ITestResult result) {
+    public void afterTest(Method test, ITestResult result) 
+	{
+	 LOGGER.entering(getClass().getName(), "afterTest");
      try{		
         TestlinkIntegration tl = new TestlinkIntegration();
         if (result.isSuccess()) {
@@ -89,6 +91,7 @@ public class BaseTest {
      {
     	 System.out.println("The error is" + e.getMessage()); 
      }
+     LOGGER.exiting(getClass().getName(), "afterTest");
     }
 	
 	protected String buildTestParametersString(String parametersNmes[], String[] paramertersValues)

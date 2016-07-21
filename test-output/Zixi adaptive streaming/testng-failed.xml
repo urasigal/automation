@@ -12,7 +12,7 @@
   <parameter name="password" value=""/>
   <parameter name="stream_name" value="toffmpeg"/>
   <parameter name="record" value="false"/>
-  <parameter name="host" value="10.7.0.62"/>
+  <parameter name="host" value="10.7.0.66"/>
   <parameter name="mcast_ttl" value=""/>
   <parameter name="testid" value="706"/>
   <parameter name="id" value="w3"/>
@@ -24,7 +24,7 @@
   <parameter name="bitrates" value="688000,2000000,5000000"/>
   <parameter name="fec_adaptive" value="1"/>
   <parameter name="streams" value="w1,w2,w3"/>
-  <parameter name="login_ip" value="10.7.0.62"/>
+  <parameter name="login_ip" value="10.7.0.66"/>
   <parameter name="fec_aware" value="0"/>
   <parameter name="port" value="2077"/>
   <parameter name="uiport" value="4444"/>
@@ -49,7 +49,7 @@
   <parameter name="mcast_ip" value=""/>
   <parameter name="userPass" value="1234"/>
   <parameter name="mcast_port" value=""/>
-  <parameter name="Host" value="10.7.0.64"/>
+  <parameter name="Host" value="10.7.0.63"/>
   <parameter name="userName" value="admin"/>
   <parameter name="rows" value="10"/>
   <parameter name="ttl" value="1"/>
@@ -63,275 +63,9 @@
   <parameter name="mcast_out" value=""/>
   <parameter name="complete" value=""/>
   <parameter name="dec_type" value=""/>
-  <test name="Broadcaster: create an adaptive group test(failed)">
-    <parameter name="mpd" value="0"/>
-    <parameter name="bitrates" value="688000,2000000,5000000"/>
-    <parameter name="userPass" value="1234"/>
-    <parameter name="streams" value="w1,w2,w3"/>
-    <parameter name="userName" value="admin"/>
-    <parameter name="login_ip" value="10.7.0.62"/>
-    <parameter name="hls" value="1"/>
-    <parameter name="multicast" value="0"/>
-    <parameter name="mmt" value="0"/>
-    <parameter name="uiport" value="4444"/>
-    <parameter name="hds" value="1"/>
-    <parameter name="record" value="false"/>
-    <parameter name="name" value="xxx"/>
-    <parameter name="zixi" value="1"/>
-    <parameter name="testid" value="686"/>
-    <parameter name="max_time" value="0"/>
-    <parameter name="compress_zixi" value="1"/>
-    <classes>
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
-      <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest -->
-      <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
-      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
-      <class name="com.zixi.testing.ReceiverInputStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
-      <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="receiverOutputUdpTest" invocation-numbers="0"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterCreateAddaptiveGroupTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
-      <class name="com.zixi.testing.FFMPEGImageStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.FFMPEGImageStatisticTest -->
-    </classes>
-  </test> <!-- Broadcaster: create an adaptive group test(failed) -->
-  <test name="Receiver - Pull input stream statistic - adaptive group test(failed)">
-    <parameter name="userPassword" value="1234"/>
-    <parameter name="uiport" value="4300"/>
-    <parameter name="testid" value="2849"/>
-    <parameter name="id" value="receivertest"/>
-    <parameter name="testduration" value="120"/>
-    <parameter name="userName" value="admin"/>
-    <parameter name="login_ip" value="10.7.0.173"/>
-    <classes>
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
-      <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest -->
-      <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
-      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
-      <class name="com.zixi.testing.ReceiverInputStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="receiverInputStatistic" invocation-numbers="0"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
-      <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterCreateAddaptiveGroupTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
-      <class name="com.zixi.testing.FFMPEGImageStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.FFMPEGImageStatisticTest -->
-    </classes>
-  </test> <!-- Receiver - Pull input stream statistic - adaptive group test(failed) -->
   <test name="FFMPEG test default parameters - FFMPEG analyser(failed)">
     <parameter name="testid" value="694"/>
     <classes>
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
-      <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest -->
       <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
         <methods>
           <include name="startTest"/>
@@ -340,38 +74,22 @@
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
-      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
-      <class name="com.zixi.testing.ReceiverInputStatisticTest">
+      <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest">
         <methods>
           <include name="startTest"/>
           <include name="testInit"/>
           <include name="beforeTes"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
-      <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest">
+      </class> <!-- com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest -->
+      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
         <methods>
           <include name="startTest"/>
           <include name="beforeTes"/>
           <include name="testInit"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- com.zixi.testing.BroadcasterCreateAddaptiveGroupTest -->
+      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
       <class name="com.zixi.testing.FFMPEGImageStatisticTest">
         <methods>
           <include name="startTest"/>
@@ -381,6 +99,38 @@
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.zixi.testing.FFMPEGImageStatisticTest -->
+      <class name="com.zixi.testing.ReceiverInputStatisticTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
+      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
+      <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="beforeTes"/>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterCreateAddaptiveGroupTest -->
       <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
         <methods>
           <include name="startTest"/>
@@ -389,437 +139,30 @@
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
+      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="beforeTes"/>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
     </classes>
   </test> <!-- FFMPEG test default parameters - FFMPEG analyser(failed) -->
-  <test name="Broadcaster: delete an adaptive group test(failed)">
-    <parameter name="uiport" value="4444"/>
-    <parameter name="userPass" value="1234"/>
-    <parameter name="name" value="xxx"/>
-    <parameter name="testid" value="700"/>
-    <parameter name="userName" value="admin"/>
-    <parameter name="login_ip" value="10.7.0.62"/>
-    <classes>
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
-      <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="receiverOutputUdpTest" invocation-numbers="0"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest -->
-      <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
-      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
-      <class name="com.zixi.testing.ReceiverInputStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
-      <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterCreateAddaptiveGroupTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
-      <class name="com.zixi.testing.FFMPEGImageStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.FFMPEGImageStatisticTest -->
-    </classes>
-  </test> <!-- Broadcaster: delete an adaptive group test(failed) -->
-  <test name="Broadcaster - Remove an input stream test - adaptive group test first stream(failed)">
-    <parameter name="userPassword" value="1234"/>
-    <parameter name="streamId" value="w1"/>
-    <parameter name="uiport" value="4444"/>
-    <parameter name="testid" value="702"/>
-    <parameter name="id" value="w1"/>
-    <parameter name="userName" value="admin"/>
-    <parameter name="login_ip" value="10.7.0.62"/>
-    <classes>
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="broadcasterInputStreamDeletion" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
-      <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest -->
-      <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
-      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
-      <class name="com.zixi.testing.ReceiverInputStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
-      <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterCreateAddaptiveGroupTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
-      <class name="com.zixi.testing.FFMPEGImageStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.FFMPEGImageStatisticTest -->
-    </classes>
-  </test> <!-- Broadcaster - Remove an input stream test - adaptive group test first stream(failed) -->
-  <test name="Broadcaster - Remove an input stream test - adaptive group test second stream(failed)">
-    <parameter name="userPassword" value="1234"/>
-    <parameter name="streamId" value="w2"/>
-    <parameter name="uiport" value="4444"/>
-    <parameter name="testid" value="704"/>
-    <parameter name="id" value="w2"/>
-    <parameter name="userName" value="admin"/>
-    <parameter name="login_ip" value="10.7.0.62"/>
-    <classes>
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="broadcasterInputStreamDeletion" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
-      <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest -->
-      <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
-      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
-      <class name="com.zixi.testing.ReceiverInputStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
-      <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterCreateAddaptiveGroupTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
-      <class name="com.zixi.testing.FFMPEGImageStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.FFMPEGImageStatisticTest -->
-    </classes>
-  </test> <!-- Broadcaster - Remove an input stream test - adaptive group test second stream(failed) -->
-  <test name="Broadcaster - Remove an input stream test - adaptive group test third stream(failed)">
-    <parameter name="userPassword" value="1234"/>
-    <parameter name="streamId" value="w3"/>
-    <parameter name="uiport" value="4444"/>
-    <parameter name="testid" value="706"/>
-    <parameter name="id" value="w3"/>
-    <parameter name="userName" value="admin"/>
-    <parameter name="login_ip" value="10.7.0.62"/>
-    <classes>
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="broadcasterInputStreamDeletion" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverOutputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverOutputStreamDeletionTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamCreationTest -->
-      <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest -->
-      <class name="com.zixi.testing.ReceiverUdpOutCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverUdpOutCreationTest -->
-      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
-      <class name="com.zixi.testing.ReceiverInputStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverInputStatisticTest -->
-      <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.BroadcasterCreateAddaptiveGroupTest -->
-      <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.ReceiverPullInputStreamDeletionTest -->
-      <class name="com.zixi.testing.FFMPEGImageStatisticTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.FFMPEGImageStatisticTest -->
-    </classes>
-  </test> <!-- Broadcaster - Remove an input stream test - adaptive group test third stream(failed) -->
 </suite> <!-- Failed suite [Zixi adaptive streaming] -->

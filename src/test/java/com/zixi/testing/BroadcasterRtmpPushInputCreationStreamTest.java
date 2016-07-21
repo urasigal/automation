@@ -16,18 +16,19 @@ import com.zixi.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
-	//private TestDriver testDriver;
 
-	
 	@BeforeClass
 	public void testInit() {
 		testDriver = new BroadcasterRtmpPushInputStreamDriver();
 	}
 
+	
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix",
 			"max_outputs", "mcast_out", "time_shift", "old", "fast_connect",
 			"kompression", "enc_type", "enc_key", "rec_history",
 			"rec_duration", "rtmp_url", "rtmp_name", "rtmp_user", "testid" })
+	
+	// The goal of the test is to verify adding of a RTMP push input stream.
 	@Test
 	public void broadcasterRtmpPushTest(String userName, String userPass,
 			String login_ip, String uiport,String type, String id, String matrix,
@@ -35,11 +36,12 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 			String old, String fast_connect, String kompression,
 			String enc_type, String enc_key, String rec_history,
 			String rec_duration, String rtmp_url, String rtmp_name,
-			String rtmp_user, String testid) throws InterruptedException {
+			String rtmp_user, String testid) throws InterruptedException 
+	{
 		
-		//this.testid = testid;
+		LOGGER.entering(getClass().getName(), "broadcasterRtmpPushTest");
 		
-		pid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
@@ -61,7 +63,7 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 				"Stream " + "'" + id + "'" + " added.");
 		
 		// Checking if broadcaster has crashes while execution of the test.
-		Assert.assertEquals(pid, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		LOGGER.exiting(getClass().getName(), "broadcasterRtmpPushTest");
 	}
-
 }
