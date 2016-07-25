@@ -24,7 +24,6 @@ public class BroadcasterMultipePullCreationDriver extends BroadcasterLoggableApi
 			String fec_adaptive, String mcast_ttl, String on, String func,
 			String fec_force, String mcast_out, String propertiesFile, String number_of_streams) throws InterruptedException, ExecutionException
 	{	
-		TestDriver driver = new BroadcasterSinglePullInStreamCreationDriver();
 		ArrayList<String> parameters = new ArrayList<>();
 		parameters.add(userName);
 		parameters.add(userPass);
@@ -54,8 +53,7 @@ public class BroadcasterMultipePullCreationDriver extends BroadcasterLoggableApi
 		parameters.add(mcast_out);
 		parameters.add(propertiesFile);
 		parameters.add(number_of_streams);
-		ZthreadPool zthreadPool =  new ZthreadPool(5, parameters, driver);
-		zthreadPool.zexecute();
-		return number_of_streams;
+		ZthreadPool zthreadPool =  new ZthreadPool(5, parameters);
+		return zthreadPool.zexecute();
 	}
 }

@@ -64,7 +64,7 @@ public class BroadcasterMultipePullCreationTest  extends BaseTest
 								time_shift, nic, max_outputs, type, password,
 								mcast_port, complete, mcast_ip, fec_adaptive,
 								mcast_ttl, on, func, fec_force, mcast_out,
-								propertiesFile, number_of_streams), "Stream " + "'" + id + "'" + " added.");
+								propertiesFile, number_of_streams), "pass");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));

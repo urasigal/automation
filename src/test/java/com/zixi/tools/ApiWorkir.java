@@ -27,12 +27,13 @@ public class ApiWorkir {
 	protected final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";
 	private String tester = null;
 	protected HttpURLConnection con;
-	
+	protected int debugLineNumber = 0;
 	
 	// It is very specific function is used to upload a server private key to a SPECIFIC feeder server - Such strong and disturbing rule comes from a Feeder server UI implementation.
 	public String inserKeyToSpecificFeeder(String url, String id, String[] responseCookieContainer, String HOST, Object caller, String uiport, byte[] keyByteArray)
 	{
-		List<Byte>    bytesList = new ArrayList<>(); ;
+		List<Byte>   bytesList = new ArrayList<>();
+		debugLineNumber = 36;
 //		StringBuilder mime = new StringBuilder(); 
 //		StringBuilder endmime = new StringBuilder();
 		
@@ -64,6 +65,7 @@ public class ApiWorkir {
 		
 		try {
 			
+			debugLineNumber = 68;
 			URL destUrl = new URL(url);  
 			con = (HttpURLConnection) destUrl.openConnection();
 			con	.setDoOutput( true );
@@ -84,10 +86,11 @@ public class ApiWorkir {
 			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0], "=", "%"), StringUtils.substringAfter(responseCookieContainer[0], "%3D"));
 	
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "+ responseCookieContainer[0]);
-			
+			debugLineNumber = 89;
 			DataOutputStream wr = new DataOutputStream( con.getOutputStream()); 
+			debugLineNumber = 91;
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream( );
-			
+			debugLineNumber = 93;
 			// Temporary buffer.
 			outputStream.write( keyByteArray );
 
@@ -109,7 +112,7 @@ public class ApiWorkir {
 			
 		} catch (Exception e) {
 			String exceptionTest = e.getMessage();
-			System.out.println("bug ------------- " + exceptionTest + "Request is "   + url );
+			System.out.println("bug ------------->>> " + exceptionTest + "Request is "   + url );
 		}
 		finally {
 			con.disconnect();
@@ -121,36 +124,36 @@ public class ApiWorkir {
 	public String sendGet(String url, String id, int mode,
 			String[] responseCookieContainer, String HOST, Object caller,
 			String uiport) {
+		debugLineNumber = 127;
 		StringBuffer response = new StringBuffer();
 		try {
 			
 			URL destUrl = new URL(url);
+			debugLineNumber = 132;
 			con = (HttpURLConnection) destUrl.openConnection();
+			debugLineNumber = 134;
 			// optional, default is GET
 			con.setRequestMethod("GET");
 			// add request header
-			con.setRequestProperty("Accept",
-					"application/json, text/javascript, */*; q=0.01");
+			con.setRequestProperty("Accept", "application/json, text/javascript, */*; q=0.01");
 			con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
 			con.setRequestProperty("Host", HOST + ":" + uiport);
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.setRequestProperty("Accept-Encoding", "gzip, deflate");
-			con.setRequestProperty("Referer", "http://" + HOST + ":" + uiport
-					+ "/index.html");
+			con.setRequestProperty("Referer", "http://" + HOST + ":" + uiport + "/index.html");
 
 			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0], "=", "%"), StringUtils.substringAfter(responseCookieContainer[0], "%3D"));
 
-			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "
-					+ responseCookieContainer[0]);
-
-			BufferedReader in = new BufferedReader(new InputStreamReader(
-					con.getInputStream()));
+			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; " + responseCookieContainer[0]);
+			debugLineNumber = 148;
+			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			debugLineNumber = 150;
 			String inputLine = "";
-			while ((inputLine = in.readLine()) != null) {
+			while ((inputLine = in.readLine()) != null)
+			{
 				response.append(inputLine);
 			}
 			in.close();
-
 			if (mode == RECEIVERIDMODE) {
 				inputLine = response.toString();
 				json = new JSONObject(inputLine);
@@ -296,7 +299,8 @@ public class ApiWorkir {
 
 		} catch (Exception e) {
 			String exceptionTest = e.getMessage();
-			System.out.println("bug ------------- " + exceptionTest + "Request is "   + url );
+			System.out.println("bug ------------->>> " + exceptionTest + " Request is "   + url + " \nLine Number is " +  debugLineNumber);
+			System.out.println("Exception type is " + e.getClass());
 		}
 		finally {
 			con.disconnect();

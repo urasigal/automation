@@ -75,7 +75,7 @@ public class BroadcasterSinglePullInStreamCreationDriver extends
 				+ "=" + fec_adaptive + "&" + "fec_force" + "="
 				+ fec_force + "&" + "complete" + "=" + complete
 				+ "&" + "on" + "=" + on;
-		System.out.println(request);
+		//System.out.println(request);
 		return apiworker.sendGet(request, id, PULLMODE, responseCookieContainer, loin_ip, this, uiport);
 	}
 }

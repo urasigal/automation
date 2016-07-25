@@ -1,0 +1,552 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 433, Failures: 37, Errors: 0, Skipped: 5, Time elapsed: 366,827.228 sec <<< FAILURE!
+broadcasterSingleInputStreamstatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 25.95 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [On of the bit rate API probing showed zero bit rete]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:50)
+
+broadcasterPullInCreation(com.zixi.testing.BroadcasterSinglePullInStreamCreationTest)  Time elapsed: 0.379 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Stream 'w1' added.] but found [load_live_inputs({"error":"Stream already exists."});]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterSinglePullInStreamCreationTest.broadcasterPullInCreation(BroadcasterSinglePullInStreamCreationTest.java:74)
+
+broadcasterPullInCreation(com.zixi.testing.BroadcasterSinglePullInStreamCreationTest)  Time elapsed: 0.408 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Stream 'w2' added.] but found [load_live_inputs({"error":"Stream already exists."});]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterSinglePullInStreamCreationTest.broadcasterPullInCreation(BroadcasterSinglePullInStreamCreationTest.java:74)
+
+broadcasterPullInCreation(com.zixi.testing.BroadcasterSinglePullInStreamCreationTest)  Time elapsed: 0.382 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Stream 'w3' added.] but found [load_live_inputs({"error":"Stream already exists."});]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterSinglePullInStreamCreationTest.broadcasterPullInCreation(BroadcasterSinglePullInStreamCreationTest.java:74)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.FFMPEGImageStatisticTest)  Time elapsed: 69.182 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 9,152.59 sec  <<< FAILURE!
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:38)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 345,972.441 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [null]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.003 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.003 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.012 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.006 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.007 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 0.999 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.011 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.01 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.005 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:31)
+
