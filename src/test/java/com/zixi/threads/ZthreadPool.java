@@ -31,7 +31,7 @@ public class ZthreadPool
 	}
 	
 	
-	public String executeDeleteAll() throws InterruptedException 
+	public String executeDeleteAll() throws InterruptedException, ExecutionException 
 	{
 		// Container for the callable tasks.
 		ArrayList<Callable<String>> callablesZtasks = new ArrayList<Callable<String>>();
@@ -64,7 +64,18 @@ public class ZthreadPool
 		
 		List<Future<String>> futuresOutPutStreamDeletion = executorService.invokeAll(callablesZtasks);
 		
-		return "";
+		ArrayList<String> splittedResults = new ArrayList<>();
+		
+		for(Future<String> response : futuresOutPutStreamDeletion)
+		{
+			splittedResults.add(response.get().split(" ")[0]);
+		}
+		
+		if(splittedResults.size() == outputIds.size())
+		{
+			return "good";
+		}
+		return "bad";
 	}
 	
 	public String executeRtmpPush() throws InterruptedException, ExecutionException {  

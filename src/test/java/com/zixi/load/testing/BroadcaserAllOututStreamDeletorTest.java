@@ -37,6 +37,7 @@ public class BroadcaserAllOututStreamDeletorTest extends BaseTest{
 												   new String[] { login_ip, userName, userPassword, uiport, testid });
 		
 		Assert.assertEquals(((BroadcaserAllOutputStreamDeletorDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport), "good");
+		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 }

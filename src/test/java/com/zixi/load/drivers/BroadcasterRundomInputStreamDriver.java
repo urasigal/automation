@@ -12,9 +12,10 @@ import com.zixi.drivers.drivers.BroadcasterInputStreamDriver;
 import com.zixi.drivers.tools.DriverStuff;
 import com.zixi.drivers.tools.TestDriver;
 
+import java.util.ArrayList;
 import java.util.Random;
 
-public class BroadcasterRundomInputStreamDriver  extends DriverStuff implements TestDriver{
+public class BroadcasterRundomInputStreamDriver extends DriverStuff implements TestDriver{
 	
 	protected BroadcasterInputStreamDriver broadcasterInputStreamDriver = new BroadcasterInputStreamDriver();
 	
@@ -35,6 +36,7 @@ public class BroadcasterRundomInputStreamDriver  extends DriverStuff implements 
 		String internalStreamID = null;
 		String internalStreamName = null;
 		String streamName = null;
+		
 		// Walk through all outputs and find an id by an output name.
 		for (int i = 0; i < outputStreamsArray.length(); i++) 
 		{
@@ -51,16 +53,19 @@ public class BroadcasterRundomInputStreamDriver  extends DriverStuff implements 
 		Random rand = new Random();
 		FFMPEGImageStatisticTestDriver fFMPEGImageStatisticTestDriver = new FFMPEGImageStatisticTestDriver();
 		String testResult;
+		
+		ArrayList<String> ffmpegResults = new ArrayList<>();
+		
 		for(int i = 0 ; i < 25 ; i++)
 		{
 			int randNumIndex = rand.nextInt((inputStreamNumbers));
-			apiworker.sendGet("http://" + login_ip + ":" + uiport + "/zixi/redirect_client.json?id=" + internalStreamID + "&stream=" + streamsNames[randNumIndex] + "&update-remote=1","", RECEIVERMODE, 
-					    	  responseCookieContainer, login_ip, this, uiport);
-			testResult = fFMPEGImageStatisticTestDriver.testStatistic();
-			if(testResult.equals("good"))
-				return "bad";
+			apiworker.sendGet("http://" + login_ip + ":" + uiport + "/zixi/redirect_client.json?id=" + internalStreamID + "&stream=" + streamsNames[randNumIndex] + 
+			"&update-remote=1","", RECEIVERMODE, responseCookieContainer, login_ip, this, uiport);
+			
+			ffmpegResults.add(fFMPEGImageStatisticTestDriver.testStatistic());
 		}
-		
+		if (ffmpegResults.contains("bad"))
+			return "bad";
 		return "good";
 	} 
 	

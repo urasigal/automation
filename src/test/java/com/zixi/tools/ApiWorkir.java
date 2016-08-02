@@ -129,167 +129,105 @@ public class ApiWorkir {
 			
 			switch(mode)
 			{
-			case RECEIVERIDMODE: inputLine = response.toString();
-								json = new JSONObject(inputLine);
-								JSONArray streams = json.getJSONArray("streams");
-								for (int i = 0; i < streams.length(); i++) 
-								{
-									json = streams.getJSONObject(i);
+			  case RECEIVERIDMODE:		 		json = new JSONObject(inputLine);
+												JSONArray streams = json.getJSONArray("streams");
+												for (int i = 0; i < streams.length(); i++) 
+												{
+													json = streams.getJSONObject(i);
+								
+													if (json.get("name").toString().equals(id)) 
+													{
+														System.out.println(json.get("name").toString());
+														return json.get("id").toString();
+													}
+												}
+												System.out.println("no such a stream to delete");
+												return "no such a stream to delete";
+									
+				case FEEDER_SSH_SERVER_STATUS:  inputLine = response.toString();
+				   							    json = new JSONObject(inputLine);
+				   							    return json.getString("host");
+				   							   
+				case FEEDER_SSH_KEY_STATUS:     json = new JSONObject(inputLine);
+											    json = json.getJSONObject("server");
+											    return json.getInt("key_present") + "";
 				
-									if (json.get("name").toString().equals(id)) 
-									{
-										System.out.println(json.get("name").toString());
-										return json.get("id").toString();
-									}
-								}
-								System.out.println("no such a stream to delete");
-								return "no such a stream to delete";
-								}
-			
-			if (mode == RECEIVERIDMODE) 
-			
-			{
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				JSONArray streams = json.getJSONArray("streams");
-
-				for (int i = 0; i < streams.length(); i++) {
-					json = streams.getJSONObject(i);
-
-					if (json.get("name").toString().equals(id)) {
-						System.out.println(json.get("name").toString());
-						return json.get("id").toString();
-					}
-				}
-				System.out.println("no such a stream to delete");
-				return "no such a stream to delete";
-			}
-			
-			
-			if (mode == FEEDER_SSH_SERVER_STATUS) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				return json.getString("host");
-			}
-			
-			if (mode == FEEDER_SSH_KEY_STATUS) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				json = json.getJSONObject("server");
-				return json.getInt("key_present") + "";
-			}
-			
-			if (mode == PUSHMODE) {
-				inputLine = response.toString();
-				int indx = inputLine.indexOf("(");
-				inputLine = (inputLine.substring(indx + 1,
-						inputLine.indexOf(");")));
-				json = new JSONObject(inputLine);
-				return json.get("msg").toString();
-			}
-
-			
-			if (mode == ADD_TRANSCODER_PROFILE) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				return json.get("msg").toString();
-			}
-			
-			if (mode == PUSHINMODE) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				return json.get("msg").toString();
-			}
-			
-			if (mode == RECEIVER_UDP_OUT_MODE) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				return json.get("message").toString();
-			}
-			
-
-			if (mode == PULLMODE) {
-				inputLine = response.toString();
-				int indx = inputLine.indexOf("(");
-				inputLine = (inputLine.substring(indx + 1,
-						inputLine.indexOf(");")));
-				json = new JSONObject(inputLine);
-				return json.get("msg").toString();
-			}
-
-			if (mode == UDPMODE) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				return json.get("msg").toString();
-			}
-
-			if (mode == RECEIVERMODE) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				return json.get("message").toString();
-			}
-
-			if (mode == RECEIVERDELETIONMODE) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				return json.get("message").toString();
-			}
-
-			// under construction
-			if (mode == RECEIVERSTATISTICMODE) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				return json.getJSONObject("data").get("bitrate").toString();
-			}
-
-			if (mode == UDPOUTMODE) {
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				tester = json.getString("msg");
-				if (tester.endsWith("Output " + id + " added.")) {
-					return tester = "good";
-				}
-			}
-
-			if (mode == JSONMODE) {
-				ArrayList<String> inputsStreamNames = new ArrayList();
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				JSONArray inputStreamsJsonArrayObj = json
-						.getJSONArray("streams");
-				int numberOfElementsInInputStreamsJsonArrayObj = inputStreamsJsonArrayObj
-						.length();
-				for (int i = 0; i < numberOfElementsInInputStreamsJsonArrayObj; i++) {
-					json = inputStreamsJsonArrayObj.getJSONObject(i);
-					inputsStreamNames.add(json.get("id").toString());
-				}
-				tester = "good";
-			}
-			
-			if(mode == SET_RTMMP_AUTO_REMOTE)
-			{
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				return json.getJSONObject("http_outs").getInt("rtmp_auto_out") + "";
+				case PUSHMODE:					inputLine = response.toString();
+												int indx = inputLine.indexOf("(");
+												inputLine = (inputLine.substring(indx + 1,inputLine.indexOf(");")));
+												json = new JSONObject(inputLine);
+												return json.get("msg").toString();
 				
+				case ADD_TRANSCODER_PROFILE: 	inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												return json.get("msg").toString();
+				
+				case PUSHINMODE:				inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												return json.get("msg").toString();
+				
+				case RECEIVER_UDP_OUT_MODE: 	inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												return json.get("message").toString();
+				
+				case PULLMODE: 					inputLine = response.toString();
+												int ind = inputLine.indexOf("(");
+												inputLine = (inputLine.substring(ind + 1,
+														inputLine.indexOf(");")));
+												json = new JSONObject(inputLine);
+												return json.get("msg").toString();
+				
+				case UDPMODE: 					inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												return json.get("msg").toString();
+				
+				case RECEIVERMODE: 				inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												return json.get("message").toString();
+				
+				case RECEIVERDELETIONMODE:		inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												return json.get("message").toString();
+												
+				case RECEIVERSTATISTICMODE: 	inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												return json.getJSONObject("data").get("bitrate").toString();						
+				
+				case UDPOUTMODE:				inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												tester = json.getString("msg");
+												if (tester.endsWith("Output " + id + " added."))
+												{
+													return tester = "good";
+												}
+				
+				case JSONMODE:					ArrayList<String> inputsStreamNames = new ArrayList();
+												inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												JSONArray inputStreamsJsonArrayObj = json.getJSONArray("streams");
+												int numberOfElementsInInputStreamsJsonArrayObj = inputStreamsJsonArrayObj.length();
+												for (int i = 0; i < numberOfElementsInInputStreamsJsonArrayObj; i++) {
+													json = inputStreamsJsonArrayObj.getJSONObject(i);
+													inputsStreamNames.add(json.get("id").toString());
+												}
+												tester = "good";
+				
+				case SET_RTMMP_AUTO_REMOTE: 	inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												return json.getJSONObject("http_outs").getInt("rtmp_auto_out") + "";
+				
+				case 77: 						return inputLine = response.toString();
+				
+				case PUSHOUTMODE: 			    String wholeResult;
+												String[] splittedResults;
+												inputLine = response.toString();
+												json = new JSONObject(inputLine);
+												System.out.println("Debug printing   -- "
+														+ json.get("msg").toString());
+												wholeResult = json.get("msg").toString();
+												splittedResults = wholeResult.split(",");
+												return splittedResults[0];
 			}
-			
-			if (mode == 77) {
-				return inputLine = response.toString();
-			}
-
-			if (mode == PUSHOUTMODE) {
-				String wholeResult;
-				String[] splittedResults;
-				inputLine = response.toString();
-				json = new JSONObject(inputLine);
-				System.out.println("Debug printing   -- "
-						+ json.get("msg").toString());
-				wholeResult = json.get("msg").toString();
-				splittedResults = wholeResult.split(",");
-				return splittedResults[0];
-			}
-			
 
 		} catch (Exception e) {
 			String exceptionTest = e.getMessage();

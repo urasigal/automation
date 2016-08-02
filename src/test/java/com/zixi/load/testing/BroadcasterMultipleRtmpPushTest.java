@@ -52,11 +52,12 @@ public class BroadcasterMultipleRtmpPushTest extends BaseTest{
 				dec_key, password, typeBX2, sutProcessIdBX2, matrixBX2, max_outputs, mcast_out, time_shift, old, fast_connect, kompression, enc_type, 
 				enc_key, rec_history, rec_duration, rtmp_url, rtmp_name, rtmp_user, number_of_streams, testid);
 		
-		// Test logic: The test case checks if the number of created output streams is equal to the number of created input streams and in turn it equal to the number of desired test.
+		// Test logic: The test case checks if the number of created output streams is equal to the number of created input 
+		// streams and in turn it equal to the number of desired test.
 		Assert.assertEquals(((BroadcasterMultipleRtmpPushDriver) testDriver).testIMPL(login_ipBX1,  login_ipBX2,  userNameBX1, userNameBX2,  userPasswordBX1,  userPasswordBX2,  uiportBX1, 
 				 uiportBX2,  typeBX1,  name,  stream,  matrixBX1,  url, url_alt,  rtmp_stream,  user,  bandwidth,  latency,  reconnect,  sendfi, disconnect_low_br, 
 				 static_latency,  dec_type,  dec_key,  password,  typeBX2,  id,  matrixBX2, max_outputs,  mcast_out,  time_shift, old,
-				 fast_connect,  kompression, enc_type,  enc_key,  rec_history,  rec_duration,  rtmp_url, rtmp_name,  rtmp_user, number_of_streams), "good");
+				 fast_connect,  kompression, enc_type,  enc_key,  rec_history,  rec_duration,  rtmp_url, rtmp_name,  rtmp_user, number_of_streams), "pass");
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX1,  "22",  "pidof zixi_broadcaster"));
 		Assert.assertEquals(sutProcessIdBX2, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX2,  "22",  "pidof zixi_broadcaster"));

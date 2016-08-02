@@ -35,6 +35,7 @@ public class BroadcasterRundomInputStreamTest extends BaseTest
 												   new String[] { login_ip, userName, userPassword, uiport, name, testid });
 		
 		Assert.assertEquals(((BroadcasterRundomInputStreamDriver) newTestDriver).testIMPL(login_ip, userName, userPassword, uiport, name), "good");
+		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 }
