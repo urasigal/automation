@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Broadcaster: RTMP load streaming suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters1">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams1">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters2">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams2">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test> 
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters3">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams3">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters4">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams4">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters7">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams7">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters5">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams5">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters6">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams6">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters8">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams8">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters9">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams9">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters10">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams10">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test> 
+	<test name="Broadcaster - RTMP Pull input stream creation - default parameters11">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
+		<parameter name="rtmp_name" value="test" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all input streams11">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="491" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>                    
+</suite>

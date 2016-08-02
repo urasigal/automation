@@ -34,38 +34,12 @@ public class ApiWorkir {
 	{
 		List<Byte>   bytesList = new ArrayList<>();
 		debugLineNumber = 36;
-//		StringBuilder mime = new StringBuilder(); 
-//		StringBuilder endmime = new StringBuilder();
-		
-//		mime.append("------WebKitFormBoundaryKRWLCVBtxzUWnrpy\n");
-//		mime.append("Content-Disposition: form-data; name=\"ssh_key_file\"; filename=\"private_ssh_key_to-localhost.localdomain.key\"\n");
-//		mime.append("Content-Type: application/octet-stream\n");
-//		mime.append("\nPOST /upload_ssh_key.htm HTTP/1.1\n");
-//		mime.append("Host:" + HOST + ":" + uiport +"\n");
-//		mime.append("Connection: keep-alive\n");
-//		mime.append("Content-Length: 1919\n");
-//		mime.append("Accept: */*\n");
-//		mime.append("acsrf_d7421b18: ED6B19A376AC8929007B3F90DEBB203F\n");
-//		mime.append("Origin: http://10.7.0.65:4200\n");
-//		mime.append("X-Requested-With: XMLHttpRequest\n");
-//		mime.append("User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36\n");
-//		mime.append("Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryo6y5J7AvAOjL7qPY\n");
-//		mime.append("Referer: http://"+ HOST + ":" + uiport +"/index.html\n");
-//		mime.append("Accept-Encoding: gzip, deflate\n");
-//		mime.append("Accept-Language: en-US,en;q=0.8,he;q=0.6,ru;q=0.4\n");
-//		mime.append("Cookie: outputs_table_grouping_index=2; session-feeder-localhost.localdomain=6186CDF4DA1E57606AF28FB2DA05AA29; acsrf-feeder=acsrf_d7421b18%3DED6B19A376AC8929007B3F90DEBB203F;\n");
-//
-//		byte [] preambul =  mime.toString().getBytes();
-	
-//		for(byte b : preambul) {
-//			bytesList.add(b);
-//		}
 	
 		StringBuffer response = new StringBuffer();
 		
 		try {
 			
-			debugLineNumber = 68;
+			debugLineNumber = 42;
 			URL destUrl = new URL(url);  
 			con = (HttpURLConnection) destUrl.openConnection();
 			con	.setDoOutput( true );
@@ -121,9 +95,7 @@ public class ApiWorkir {
 		return response.toString();
 	}
 
-	public String sendGet(String url, String id, int mode,
-			String[] responseCookieContainer, String HOST, Object caller,
-			String uiport) {
+	public String sendGet(String url, String id, int mode,String[] responseCookieContainer, String HOST, Object caller, String uiport) {
 		debugLineNumber = 127;
 		StringBuffer response = new StringBuffer();
 		try {
@@ -131,7 +103,7 @@ public class ApiWorkir {
 			URL destUrl = new URL(url);
 			debugLineNumber = 132;
 			con = (HttpURLConnection) destUrl.openConnection();
-			debugLineNumber = 134;
+			debugLineNumber = 132;
 			// optional, default is GET
 			con.setRequestMethod("GET");
 			// add request header
@@ -141,9 +113,9 @@ public class ApiWorkir {
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.setRequestProperty("Accept-Encoding", "gzip, deflate");
 			con.setRequestProperty("Referer", "http://" + HOST + ":" + uiport + "/index.html");
-
+			debugLineNumber = 142;
 			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0], "=", "%"), StringUtils.substringAfter(responseCookieContainer[0], "%3D"));
-
+			debugLineNumber = 144;
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; " + responseCookieContainer[0]);
 			debugLineNumber = 148;
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
@@ -154,7 +126,29 @@ public class ApiWorkir {
 				response.append(inputLine);
 			}
 			in.close();
-			if (mode == RECEIVERIDMODE) {
+			
+			switch(mode)
+			{
+			case RECEIVERIDMODE: inputLine = response.toString();
+								json = new JSONObject(inputLine);
+								JSONArray streams = json.getJSONArray("streams");
+								for (int i = 0; i < streams.length(); i++) 
+								{
+									json = streams.getJSONObject(i);
+				
+									if (json.get("name").toString().equals(id)) 
+									{
+										System.out.println(json.get("name").toString());
+										return json.get("id").toString();
+									}
+								}
+								System.out.println("no such a stream to delete");
+								return "no such a stream to delete";
+								}
+			
+			if (mode == RECEIVERIDMODE) 
+			
+			{
 				inputLine = response.toString();
 				json = new JSONObject(inputLine);
 				JSONArray streams = json.getJSONArray("streams");

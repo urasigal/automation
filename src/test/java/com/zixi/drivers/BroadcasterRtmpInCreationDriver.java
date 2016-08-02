@@ -9,7 +9,7 @@ import com.zixi.tools.BroadcasterLoggableApiWorker;
 public class BroadcasterRtmpInCreationDriver extends BroadcasterLoggableApiWorker
 		implements TestDriver {
 
-	private ApiWorkir streamCreator = new ApiWorkir();
+	//private ApiWorkir streamCreator = new ApiWorkir();
 
 	final private static String HTTP = "http://";
 	final private static String params1 = ":";
@@ -46,7 +46,7 @@ public class BroadcasterRtmpInCreationDriver extends BroadcasterLoggableApiWorke
 			String rtmp_bitrate, String rtmp_passwd, String uiport,
 			String mcast_ttl, String rtmp_latency, String mcast_out,
 			String complete, String max_outputs, String on) {
-
+		ApiWorkir streamCreator = new ApiWorkir();
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "login_ip:" + login_ip, "rtmp_nulls:" + rtmp_nulls,
 				"id:" + id, "rtmp_url:" + rtmp_url, "rtmp_name:" + rtmp_name,
@@ -88,10 +88,9 @@ public class BroadcasterRtmpInCreationDriver extends BroadcasterLoggableApiWorke
 			String mcast_port, String type, String rtmp_user,
 			String rtmp_bitrate, String rtmp_passwd, String uiport,
 			String mcast_ttl, String rtmp_latency, String mcast_out,
-			String complete, String max_outputs, String on) {
-		
-		
-		
+			String complete, String max_outputs, String on) 
+	{
+		ApiWorkir streamCreator = new ApiWorkir();
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "login_ip:" + login_ip, "enc_type" + enc_type, "enc-key" + enc_key, "rtmp_nulls:" + rtmp_nulls,
 				"disconnect_low_br" + disconnect_low_br ,"id:" + id, "rtmp_url:" + rtmp_url, "rtmp_name:" + rtmp_name,

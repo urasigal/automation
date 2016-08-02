@@ -22,7 +22,6 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 		testDriver = new BroadcasterRtmpPushInputStreamDriver();
 	}
 
-	
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix",
 			"max_outputs", "mcast_out", "time_shift", "old", "fast_connect",
 			"kompression", "enc_type", "enc_key", "rec_history",

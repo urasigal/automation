@@ -21,8 +21,7 @@ public class BroadcasterRtmpPushOutputCreationDriver extends
 			String static_latency, String dec_type, String dec_key,
 			String password) {
 
-		testParameters = new TestParameters("login_ip:" + login_ip, "userName:"
-				+ userName, "userPassword:" + userPassword, "uiport:" + uiport,
+		testParameters = new TestParameters("login_ip:" + login_ip, "userName" + userName, "userPassword:" + userPassword, "uiport:" + uiport,
 				"type:" + type, "stream:" + stream, "matrix:" + matrix, "url:"
 						+ url, "url_alt:" + url_alt, "rtmp_stream:"
 						+ rtmp_stream, "user:" + user,

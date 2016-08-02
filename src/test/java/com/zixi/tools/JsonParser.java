@@ -140,6 +140,23 @@ public class JsonParser {
 	}
 	
 	
+	public static ArrayList<String> broadcasterOutputGetStreamIdByname(String streamsJson)
+	{
+		ArrayList<String> outputIds = new ArrayList<>();
+		JSONObject json = null;
+		String id = null;
+		json = new JSONObject(streamsJson);
+		JSONArray outpoutStreams = json.getJSONArray("outputs");
+		
+		int numOfStreams = outpoutStreams.length();
+		for (int i = 0; i < numOfStreams; i++) 
+		{
+			json = outpoutStreams.getJSONObject(i);
+			outputIds.add(json.getString("id"));
+		}
+		return outputIds;
+	}
+	
 	public static int getInputStreamBitrate(String streamsJson, String streamName)
 	{
 		JSONObject json = null;

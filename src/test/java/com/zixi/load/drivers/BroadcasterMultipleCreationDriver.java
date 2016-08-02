@@ -2,6 +2,7 @@ package com.zixi.load.drivers;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
 
 import org.testng.internal.junit.ArrayAsserts;
@@ -13,7 +14,7 @@ import com.zixi.drivers.TestDriver;
 import com.zixi.threads.ZthreadPool;
 import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class BroadcasterMultipePullCreationDriver extends BroadcasterLoggableApiWorker implements TestDriver
+public class BroadcasterMultipleCreationDriver extends BroadcasterLoggableApiWorker implements TestDriver
 {
 	public String testIMPL(String userName, String userPass, String Host,
 			String loin_ip, String id, String source, String uiport,
@@ -55,5 +56,14 @@ public class BroadcasterMultipePullCreationDriver extends BroadcasterLoggableApi
 		parameters.add(number_of_streams);
 		ZthreadPool zthreadPool =  new ZthreadPool(5, parameters);
 		return zthreadPool.zexecute();
+	}
+
+	public String testIMPL(String... args) throws InterruptedException, ExecutionException
+	{	
+		// Pass parameters to arrayList in order to provide them to ZthreadPool.
+		ArrayList<String> parameters = new ArrayList<String>(Arrays.asList(args));
+		
+		ZthreadPool zthreadPool =  new ZthreadPool(10, parameters);
+		return zthreadPool.zexecutetRtmpPull();
 	}
 }

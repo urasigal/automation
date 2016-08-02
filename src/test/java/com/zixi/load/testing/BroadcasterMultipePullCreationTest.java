@@ -8,16 +8,17 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
-import com.zixi.load.drivers.BroadcasterMultipePullCreationDriver;
+import com.zixi.load.drivers.BroadcasterMultipleCreationDriver;
 import com.zixi.testing.BaseTest;
 
-public class BroadcasterMultipePullCreationTest  extends BaseTest
+public class BroadcasterMultipePullCreationTest extends BaseTest
 {
 	//The method will be run before the first test's method invocation in the current class.
 	@BeforeClass
 	public void testInit() {
-		testDriver = new BroadcasterMultipePullCreationDriver();
+		testDriver = new BroadcasterMultipleCreationDriver();
 	}
+	
 	
 	@Parameters({ "userName", "userPass", "Host", "login_ip", "id", "source",
 		"uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
@@ -57,7 +58,7 @@ public class BroadcasterMultipePullCreationTest  extends BaseTest
 				propertiesFile, number_of_streams, testid });
 		
 		// The actual test method.
-		Assert.assertEquals(((BroadcasterMultipePullCreationDriver) testDriver).testIMPL
+		Assert.assertEquals(((BroadcasterMultipleCreationDriver) testDriver).testIMPL
 								(userName, userPass, Host, login_ip, id,
 								source, uiport, pull_port, latency,
 								fec_latency, fec_overhead, mcast_force,

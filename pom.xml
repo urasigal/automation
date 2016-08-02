@@ -82,10 +82,10 @@
 				<configuration>
 					<suiteXmlFiles>
 					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/pull/pull.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/udp.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/push.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/rtmp.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/rtmp/rtmp.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feederbxsetup.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feederredundency.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feedersmoothing.xml</suiteXmlFile>
@@ -104,7 +104,9 @@
 						<suiteXmlFile>src/test/resources/vod.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/ffmpeg_full_encryption_with_fec.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feeder_ssh.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/file_transfer.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/file_transfer/file_transfer.xml</suiteXmlFile>   
+						<suiteXmlFile>src/test/resources/pull/broadcaster_pull_load.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/rtmp/rtmp_pull_load_test.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<properties>
 						<property>

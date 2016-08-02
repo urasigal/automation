@@ -14,10 +14,7 @@ private TestDriver testDriver;
 	
 	@BeforeClass
 	public void testInit() {
-		
-			
-			testDriver = new BxFileTransferAndVodSettingsDriver();
-		
+		testDriver = new BxFileTransferAndVodSettingsDriver();
 	}
 
 	@Parameters({ "userName","userPass" ,"login_ip","uiport", "ft_download" , "ft_upload","ft_auto_index" ,"ft_prog" ,"ft_encrypt" ,"ft_bitrate_cache" ,"ft_aggr" ,

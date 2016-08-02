@@ -1,5 +1,6 @@
 package com.zixi.drivers;
 
+import java.util.ArrayList;
 import java.util.function.Supplier;
 
 import com.zixi.tools.ApiWorkir;
@@ -29,6 +30,15 @@ BroadcasterLoggableApiWorker implements TestDriver{
 		
 		return JsonParser.receiverOutputGetStreamIdByname(apiWorker.sendGet("http://" + loin_ip +":"+ uiport + "/out_streams.json", "", 77, 
 				responseCookieContainer, loin_ip, this, uiport), name);
+	}
+	
+	public ArrayList<String> broadcasterGetOutputStreamsIds(String login_ip, String uiport, String userName, String  userPass)
+	{
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://"
+				+ login_ip + ":" + uiport + "/login.htm", userName, userPass, login_ip, uiport);
+		
+		return JsonParser.broadcasterOutputGetStreamIdByname(apiWorker.sendGet("http://" + login_ip +":"+ uiport + "/zixi/outputs.json", "", 77, 
+				responseCookieContainer, login_ip, this, uiport));
 	}
 	
 	public static int getTranscoderProfiles(Supplier<String> supplier, String profile_name)
