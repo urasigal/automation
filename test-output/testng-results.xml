@@ -1,393 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
     <line>
       <![CDATA[Test parameteres: ]]>
     </line>
     <line>
-      <![CDATA[userName: admin]]>
+      <![CDATA[userName: -- not provided ]]>
     </line>
     <line>
       <![CDATA[userPass: 1234]]>
     </line>
     <line>
-      <![CDATA[loin_ip: 192.168.5.10]]>
-    </line>
-    <line>
-      <![CDATA[port: 5000]]>
-    </line>
-    <line>
-      <![CDATA[stream: test]]>
-    </line>
-    <line>
-      <![CDATA[streamname: test]]>
-    </line>
-    <line>
-      <![CDATA[host: 239.7.0.100]]>
-    </line>
-    <line>
-      <![CDATA[id: test]]>
-    </line>
-    <line>
-      <![CDATA[rtp: 0]]>
-    </line>
-    <line>
-      <![CDATA[fec: 0]]>
-    </line>
-    <line>
-      <![CDATA[smoothing: 0]]>
-    </line>
-    <line>
-      <![CDATA[ttl: 5]]>
-    </line>
-    <line>
-      <![CDATA[remux_bitrate: 0]]>
-    </line>
-    <line>
-      <![CDATA[df: 0]]>
-    </line>
-    <line>
-      <![CDATA[local_port: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[dec_key: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[type: TS]]>
-    </line>
-    <line>
-      <![CDATA[rows: 10]]>
-    </line>
-    <line>
-      <![CDATA[remux_buff: 1000]]>
-    </line>
-    <line>
-      <![CDATA[local_ip: 192.168.5.10]]>
-    </line>
-    <line>
-      <![CDATA[remux_restampdts: 0]]>
+      <![CDATA[login_ip: 10.7.0.62]]>
     </line>
     <line>
       <![CDATA[uiport: 4444]]>
     </line>
     <line>
-      <![CDATA[remux_pcr: 90]]>
+      <![CDATA[ft_download: 1]]>
     </line>
     <line>
-      <![CDATA[dec_type: -- not provided ]]>
+      <![CDATA[ft_upload: 1]]>
     </line>
     <line>
-      <![CDATA[cols: 10]]>
+      <![CDATA[ft_auto_index: 1]]>
     </line>
     <line>
-      <![CDATA[Test parameteres: ]]>
+      <![CDATA[ft_prog: 1]]>
     </line>
     <line>
-      <![CDATA[login_ip: 10.7.0.66]]>
+      <![CDATA[ft_encrypt: 0]]>
     </line>
     <line>
-      <![CDATA[userName: admin]]>
+      <![CDATA[ft_bitrate_cache: 0]]>
     </line>
     <line>
-      <![CDATA[userPassword: 1234]]>
+      <![CDATA[ft_aggr: 80]]>
     </line>
     <line>
-      <![CDATA[streamId: test]]>
+      <![CDATA[ft_mtu: 1462]]>
     </line>
     <line>
-      <![CDATA[uiport: 4444]]>
+      <![CDATA[ft_init_speed: 15000]]>
     </line>
     <line>
-      <![CDATA[Test parameteres: ]]>
+      <![CDATA[ft_cache: 0]]>
     </line>
     <line>
-      <![CDATA[userName: admin]]>
+      <![CDATA[ft_proxy_http_port: 4500]]>
     </line>
     <line>
-      <![CDATA[userPass: 1234]]>
+      <![CDATA[ft_proxy_https_port: 4501]]>
     </line>
     <line>
-      <![CDATA[loin_ip: 10.7.0.66]]>
+      <![CDATA[max_download_bitrate: 50000]]>
     </line>
     <line>
-      <![CDATA[ts_port: 5000]]>
-    </line>
-    <line>
-      <![CDATA[id: test]]>
-    </line>
-    <line>
-      <![CDATA[rtp_type: 0]]>
-    </line>
-    <line>
-      <![CDATA[multi_src: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[max_bitrate: 160000000]]>
-    </line>
-    <line>
-      <![CDATA[time_shift: 0]]>
-    </line>
-    <line>
-      <![CDATA[mcast_ip: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[mcast_force: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[mcast_port: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[nic: 0.0.0.0]]>
-    </line>
-    <line>
-      <![CDATA[type: local-ts]]>
-    </line>
-    <line>
-      <![CDATA[multicast: 239.7.0.100]]>
-    </line>
-    <line>
-      <![CDATA[enc_key: -- not provided ]]>
-    </line>
-    <line>
-      <![CDATA[kompression: 1]]>
-    </line>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[userName: admin]]>
-    </line>
-    <line>
-      <![CDATA[userPass: 1234]]>
-    </line>
-    <line>
-      <![CDATA[host: 192.168.5.10]]>
-    </line>
-    <line>
-      <![CDATA[loin_ip: 10.7.0.66]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4444]]>
-    </line>
-    <line>
-      <![CDATA[id: test]]>
-    </line>
-    <line>
-      <![CDATA[testduration: 120]]>
-    </line>
-    <line>
-      <![CDATA[Max bitrate is 20220694]]>
-    </line>
-    <line>
-      <![CDATA[Min bitrete is 20183920]]>
-    </line>
-    <line>
-      <![CDATA[Average bitrate is 2304058]]>
-    </line>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[analyze ]]>
-    </line>
-    <line>
-      <![CDATA[complete ]]>
-    </line>
-    <line>
-      <![CDATA[force_p2p 0]]>
-    </line>
-    <line>
-      <![CDATA[id pushtest]]>
-    </line>
-    <line>
-      <![CDATA[latency -1]]>
-    </line>
-    <line>
-      <![CDATA[login_ip 10.7.0.63]]>
-    </line>
-    <line>
-      <![CDATA[max_outputs ]]>
-    </line>
-    <line>
-      <![CDATA[mcast_force ]]>
-    </line>
-    <line>
-      <![CDATA[mcast_ip 0]]>
-    </line>
-    <line>
-      <![CDATA[mcast_out ]]>
-    </line>
-    <line>
-      <![CDATA[mcast_port 0]]>
-    </line>
-    <line>
-      <![CDATA[mcast_ttl ]]>
-    </line>
-    <line>
-      <![CDATA[on 1]]>
-    </line>
-    <line>
-      <![CDATA[password ]]>
-    </line>
-    <line>
-      <![CDATA[time_shift 0]]>
-    </line>
-    <line>
-      <![CDATA[type push]]>
-    </line>
-    <line>
-      <![CDATA[uiport 4444]]>
-    </line>
-    <line>
-      <![CDATA[userName admin]]>
-    </line>
-    <line>
-      <![CDATA[userPass1234]]>
-    </line>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[userName: admin]]>
-    </line>
-    <line>
-      <![CDATA[userPass: 1234]]>
-    </line>
-    <line>
-      <![CDATA[host: 10.7.0.66]]>
-    </line>
-    <line>
-      <![CDATA[loin_ip: 10.7.0.63]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4444]]>
-    </line>
-    <line>
-      <![CDATA[id: pushtest]]>
-    </line>
-    <line>
-      <![CDATA[testduration: 120]]>
-    </line>
-    <line>
-      <![CDATA[Max bitrate is 20110737]]>
-    </line>
-    <line>
-      <![CDATA[Min bitrete is 4186773]]>
-    </line>
-    <line>
-      <![CDATA[Average bitrate is -1284974]]>
-    </line>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[login_ip: 10.7.0.63]]>
-    </line>
-    <line>
-      <![CDATA[userName: admin]]>
-    </line>
-    <line>
-      <![CDATA[userPassword: 1234]]>
-    </line>
-    <line>
-      <![CDATA[streamId: pushtest]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4444]]>
-    </line>
-    <line>
-      <![CDATA[Stream pushtest removed.]]>
-    </line>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[login_ip: 10.7.0.66]]>
-    </line>
-    <line>
-      <![CDATA[userName: admin]]>
-    </line>
-    <line>
-      <![CDATA[userPassword: 1234]]>
-    </line>
-    <line>
-      <![CDATA[name: pushtest]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4444]]>
-    </line>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[login_ip: 10.7.0.66]]>
-    </line>
-    <line>
-      <![CDATA[userName: admin]]>
-    </line>
-    <line>
-      <![CDATA[userPassword: 1234]]>
-    </line>
-    <line>
-      <![CDATA[streamId: test]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4444]]>
-    </line>
-    <line>
-      <![CDATA[Stream test removed.]]>
-    </line>
-    <line>
-      <![CDATA[Test parameteres: ]]>
-    </line>
-    <line>
-      <![CDATA[login_ip: 192.168.5.10]]>
-    </line>
-    <line>
-      <![CDATA[userName: admin]]>
-    </line>
-    <line>
-      <![CDATA[userPassword: 1234]]>
-    </line>
-    <line>
-      <![CDATA[name: test]]>
-    </line>
-    <line>
-      <![CDATA[uiport: 4444]]>
+      <![CDATA[max_upload_bitrate: 50000]]>
     </line>
   </reporter-output>
-  <suite name="Broadcaster: UDP streaming suite" duration-ms="299300" started-at="2016-08-08T14:12:50Z" finished-at="2016-08-08T14:17:49Z">
+  <suite name="File transfer suite through poxy" duration-ms="33349" started-at="2016-08-08T17:08:42Z" finished-at="2016-08-08T17:09:15Z">
     <groups>
     </groups>
-    <test name="Broadcaster - UDP output stream creation" duration-ms="1445" started-at="2016-08-08T14:12:50Z" finished-at="2016-08-08T14:12:52Z">
-      <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@6adca536]" name="startTest" is-config="true" duration-ms="11" started-at="2016-08-08T17:12:50Z" finished-at="2016-08-08T17:12:50Z">
+    <test name="Broadcaster - enable file transfer" duration-ms="992" started-at="2016-08-08T17:08:42Z" finished-at="2016-08-08T17:08:43Z">
+      <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="startTest" is-config="true" duration-ms="9" started-at="2016-08-08T20:08:42Z" finished-at="2016-08-08T20:08:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3eb738bb]]>
+                <![CDATA[org.testng.TestRunner@292b08d6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@6adca536]" name="testInit" is-config="true" duration-ms="1" started-at="2016-08-08T17:12:50Z" finished-at="2016-08-08T17:12:50Z">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="testInit" is-config="true" duration-ms="1" started-at="2016-08-08T20:08:42Z" finished-at="2016-08-08T20:08:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@6adca536]" name="beforeTes" is-config="true" duration-ms="164" started-at="2016-08-08T17:12:50Z" finished-at="2016-08-08T17:12:50Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="beforeTes" is-config="true" duration-ms="158" started-at="2016-08-08T20:08:42Z" finished-at="2016-08-08T20:08:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[296]]>
+                <![CDATA[3919]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@6adca536]" name="broadcasterPullInCreation" duration-ms="1218" started-at="2016-08-08T17:12:50Z" finished-at="2016-08-08T17:12:52Z">
+        <test-method status="PASS" signature="broadcasterSetBxFileTransferVodSettings(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="broadcasterSetBxFileTransferVodSettings" duration-ms="773" started-at="2016-08-08T20:08:42Z" finished-at="2016-08-08T20:08:43Z">
           <params>
             <param index="0">
               <value>
@@ -401,32 +104,32 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[192.168.5.10]]>
+                <![CDATA[10.7.0.62]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[5000]]>
+                <![CDATA[4444]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[239.7.0.100]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[test]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="8">
@@ -441,17 +144,17 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[80]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[5]]>
+                <![CDATA[1462]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[15000]]>
               </value>
             </param>
             <param index="13">
@@ -461,62 +164,27 @@
             </param>
             <param index="14">
               <value>
-                <![CDATA[]]>
+                <![CDATA[4500]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[]]>
+                <![CDATA[4501]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[TS]]>
+                <![CDATA[50000]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[50000]]>
               </value>
             </param>
             <param index="18">
               <value>
-                <![CDATA[1000]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[192.168.5.10]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[90]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[296]]>
+                <![CDATA[3919]]>
               </value>
             </param>
           </params>
@@ -525,992 +193,108 @@
               <![CDATA[Test parameteres: ]]>
             </line>
             <line>
-              <![CDATA[userName: admin]]>
+              <![CDATA[userName: -- not provided ]]>
             </line>
             <line>
               <![CDATA[userPass: 1234]]>
             </line>
             <line>
-              <![CDATA[loin_ip: 192.168.5.10]]>
-            </line>
-            <line>
-              <![CDATA[port: 5000]]>
-            </line>
-            <line>
-              <![CDATA[stream: test]]>
-            </line>
-            <line>
-              <![CDATA[streamname: test]]>
-            </line>
-            <line>
-              <![CDATA[host: 239.7.0.100]]>
-            </line>
-            <line>
-              <![CDATA[id: test]]>
-            </line>
-            <line>
-              <![CDATA[rtp: 0]]>
-            </line>
-            <line>
-              <![CDATA[fec: 0]]>
-            </line>
-            <line>
-              <![CDATA[smoothing: 0]]>
-            </line>
-            <line>
-              <![CDATA[ttl: 5]]>
-            </line>
-            <line>
-              <![CDATA[remux_bitrate: 0]]>
-            </line>
-            <line>
-              <![CDATA[df: 0]]>
-            </line>
-            <line>
-              <![CDATA[local_port: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[dec_key: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[type: TS]]>
-            </line>
-            <line>
-              <![CDATA[rows: 10]]>
-            </line>
-            <line>
-              <![CDATA[remux_buff: 1000]]>
-            </line>
-            <line>
-              <![CDATA[local_ip: 192.168.5.10]]>
-            </line>
-            <line>
-              <![CDATA[remux_restampdts: 0]]>
+              <![CDATA[login_ip: 10.7.0.62]]>
             </line>
             <line>
               <![CDATA[uiport: 4444]]>
             </line>
             <line>
-              <![CDATA[remux_pcr: 90]]>
+              <![CDATA[ft_download: 1]]>
             </line>
             <line>
-              <![CDATA[dec_type: -- not provided ]]>
+              <![CDATA[ft_upload: 1]]>
             </line>
             <line>
-              <![CDATA[cols: 10]]>
+              <![CDATA[ft_auto_index: 1]]>
+            </line>
+            <line>
+              <![CDATA[ft_prog: 1]]>
+            </line>
+            <line>
+              <![CDATA[ft_encrypt: 0]]>
+            </line>
+            <line>
+              <![CDATA[ft_bitrate_cache: 0]]>
+            </line>
+            <line>
+              <![CDATA[ft_aggr: 80]]>
+            </line>
+            <line>
+              <![CDATA[ft_mtu: 1462]]>
+            </line>
+            <line>
+              <![CDATA[ft_init_speed: 15000]]>
+            </line>
+            <line>
+              <![CDATA[ft_cache: 0]]>
+            </line>
+            <line>
+              <![CDATA[ft_proxy_http_port: 4500]]>
+            </line>
+            <line>
+              <![CDATA[ft_proxy_https_port: 4501]]>
+            </line>
+            <line>
+              <![CDATA[max_download_bitrate: 50000]]>
+            </line>
+            <line>
+              <![CDATA[max_upload_bitrate: 50000]]>
             </line>
           </reporter-output>
-        </test-method> <!-- broadcasterPullInCreation -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@6adca536]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-08-08T17:12:52Z" finished-at="2016-08-08T17:12:52Z">
+        </test-method> <!-- broadcasterSetBxFileTransferVodSettings -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536]" name="afterTest" is-config="true" duration-ms="40" started-at="2016-08-08T20:08:43Z" finished-at="2016-08-08T20:08:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.zixi.testing.BxFileTransferAndVodSettingsTest.broadcasterSetBxFileTransferVodSettings(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterPullInCreation status=SUCCESS method=BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@6adca536] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=broadcasterSetBxFileTransferVodSettings status=SUCCESS method=BxFileTransferAndVodSettingsTest.broadcasterSetBxFileTransferVodSettings(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BxFileTransferAndVodSettingsTest@6adca536] output=Test parameteres: ]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcasterUDPOutputStreamCreationTest -->
-    </test> <!-- Broadcaster - UDP output stream creation -->
-    <test name="Broadcaster - UDP input stream creation " duration-ms="981" started-at="2016-08-08T14:12:52Z" finished-at="2016-08-08T14:12:53Z">
-      <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterUdpInStreamCreationTest@1cd072a9]" name="testInit" is-config="true" duration-ms="2" started-at="2016-08-08T17:12:52Z" finished-at="2016-08-08T17:12:52Z">
+      </class> <!-- com.zixi.testing.BxFileTransferAndVodSettingsTest -->
+    </test> <!-- Broadcaster - enable file transfer -->
+    <test name="Proxy - file upload test" duration-ms="7629" started-at="2016-08-08T17:08:43Z" finished-at="2016-08-08T17:08:50Z">
+      <class name="com.zixi.testing.FileTransferTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="testInit" is-config="true" duration-ms="1" started-at="2016-08-08T20:08:43Z" finished-at="2016-08-08T20:08:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterUdpInStreamCreationTest@1cd072a9]" name="startTest" is-config="true" duration-ms="0" started-at="2016-08-08T17:12:52Z" finished-at="2016-08-08T17:12:52Z">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="startTest" is-config="true" duration-ms="0" started-at="2016-08-08T20:08:43Z" finished-at="2016-08-08T20:08:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4c39bec8]]>
+                <![CDATA[org.testng.TestRunner@662ac478]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUdpInStreamCreationTest@1cd072a9]" name="beforeTes" is-config="true" duration-ms="47" started-at="2016-08-08T17:12:52Z" finished-at="2016-08-08T17:12:52Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="beforeTes" is-config="true" duration-ms="43" started-at="2016-08-08T20:08:43Z" finished-at="2016-08-08T20:08:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[294]]>
+                <![CDATA[3921]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterUdpInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUdpInStreamCreationTest@1cd072a9]" name="broadcasterUdpInCreation" duration-ms="895" started-at="2016-08-08T17:12:52Z" finished-at="2016-08-08T17:12:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10.7.0.66]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[5000]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[test]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[160000000]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[0.0.0.0]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[local-ts]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[239.7.0.100]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[-1]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[294]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[login_ip: 10.7.0.66]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPassword: 1234]]>
-            </line>
-            <line>
-              <![CDATA[streamId: test]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
-            </line>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPass: 1234]]>
-            </line>
-            <line>
-              <![CDATA[loin_ip: 10.7.0.66]]>
-            </line>
-            <line>
-              <![CDATA[ts_port: 5000]]>
-            </line>
-            <line>
-              <![CDATA[id: test]]>
-            </line>
-            <line>
-              <![CDATA[rtp_type: 0]]>
-            </line>
-            <line>
-              <![CDATA[multi_src: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[max_bitrate: 160000000]]>
-            </line>
-            <line>
-              <![CDATA[time_shift: 0]]>
-            </line>
-            <line>
-              <![CDATA[mcast_ip: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[mcast_force: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[mcast_port: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[nic: 0.0.0.0]]>
-            </line>
-            <line>
-              <![CDATA[type: local-ts]]>
-            </line>
-            <line>
-              <![CDATA[multicast: 239.7.0.100]]>
-            </line>
-            <line>
-              <![CDATA[enc_key: -- not provided ]]>
-            </line>
-            <line>
-              <![CDATA[kompression: 1]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- broadcasterUdpInCreation -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterUdpInStreamCreationTest@1cd072a9]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-08-08T17:12:53Z" finished-at="2016-08-08T17:12:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterUdpInStreamCreationTest.broadcasterUdpInCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=broadcasterUdpInCreation status=SUCCESS method=BroadcasterUdpInStreamCreationTest.broadcasterUdpInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterUdpInStreamCreationTest@1cd072a9] output=Test parameteres: ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcasterUdpInStreamCreationTest -->
-    </test> <!-- Broadcaster - UDP input stream creation  -->
-    <test name="Broadcaster - UDP input stream statistics test" duration-ms="146141" started-at="2016-08-08T14:12:53Z" finished-at="2016-08-08T14:15:19Z">
-      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@2133c8f8]" name="startTest" is-config="true" duration-ms="0" started-at="2016-08-08T17:12:53Z" finished-at="2016-08-08T17:12:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@2d2ffcb7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@2133c8f8]" name="testInit" is-config="true" duration-ms="3" started-at="2016-08-08T17:12:53Z" finished-at="2016-08-08T17:12:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@2133c8f8]" name="beforeTes" is-config="true" duration-ms="35" started-at="2016-08-08T17:12:53Z" finished-at="2016-08-08T17:12:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[298]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@2133c8f8]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="146054" started-at="2016-08-08T17:12:53Z" finished-at="2016-08-08T17:15:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[192.168.5.10]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10.7.0.66]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[test]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[120]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[298]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPass: 1234]]>
-            </line>
-            <line>
-              <![CDATA[host: 192.168.5.10]]>
-            </line>
-            <line>
-              <![CDATA[loin_ip: 10.7.0.66]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
-            </line>
-            <line>
-              <![CDATA[id: test]]>
-            </line>
-            <line>
-              <![CDATA[testduration: 120]]>
-            </line>
-            <line>
-              <![CDATA[Max bitrate is 20220694]]>
-            </line>
-            <line>
-              <![CDATA[Min bitrete is 20183920]]>
-            </line>
-            <line>
-              <![CDATA[Average bitrate is 2304058]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@2133c8f8]" name="afterTest" is-config="true" duration-ms="47" started-at="2016-08-08T17:15:19Z" finished-at="2016-08-08T17:15:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=broadcasterSingleInputStreamstatisticAnilyzer status=SUCCESS method=BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@2133c8f8] output=Test parameteres: ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
-    </test> <!-- Broadcaster - UDP input stream statistics test -->
-    <test name="Broadcaster - Push output stream creation test - default paremeters" duration-ms="899" started-at="2016-08-08T14:15:19Z" finished-at="2016-08-08T14:15:20Z">
-      <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@7a79be86]" name="startTest" is-config="true" duration-ms="1" started-at="2016-08-08T17:15:19Z" finished-at="2016-08-08T17:15:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@fa36558]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@7a79be86]" name="testInit" is-config="true" duration-ms="0" started-at="2016-08-08T17:15:19Z" finished-at="2016-08-08T17:15:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@7a79be86]" name="beforeTes" is-config="true" duration-ms="37" started-at="2016-08-08T17:15:19Z" finished-at="2016-08-08T17:15:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[353]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@7a79be86]" name="broadcasterPullInCreation" duration-ms="825" started-at="2016-08-08T17:15:19Z" finished-at="2016-08-08T17:15:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10.7.0.66]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10.7.0.63]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[6000]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[300]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[push]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[pushtest]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[30]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[test]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[2088]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[pushtest]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[pushtest]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[353]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- broadcasterPullInCreation -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@7a79be86]" name="afterTest" is-config="true" duration-ms="35" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:15:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterPushOutStreamCreationTest.broadcasterPullInCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=broadcasterPullInCreation status=SUCCESS method=BroadcasterPushOutStreamCreationTest.broadcasterPullInCreation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushOutStreamCreationTest@7a79be86] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcasterPushOutStreamCreationTest -->
-    </test> <!-- Broadcaster - Push output stream creation test - default paremeters -->
-    <test name="Broadcaster - Push input stream creation test - default paremeters" duration-ms="604" started-at="2016-08-08T14:15:20Z" finished-at="2016-08-08T14:15:20Z">
-      <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@511baa65]" name="startTest" is-config="true" duration-ms="1" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:15:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@236e3f4e]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@511baa65]" name="testInit" is-config="true" duration-ms="1" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:15:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@511baa65]" name="beforeTes" is-config="true" duration-ms="36" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:15:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[351]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@511baa65]" name="broadcasterSingleStreamRemoving" duration-ms="494" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:15:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10.7.0.63]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[-1]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[push]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[pushtest]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[351]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[analyze ]]>
-            </line>
-            <line>
-              <![CDATA[complete ]]>
-            </line>
-            <line>
-              <![CDATA[force_p2p 0]]>
-            </line>
-            <line>
-              <![CDATA[id pushtest]]>
-            </line>
-            <line>
-              <![CDATA[latency -1]]>
-            </line>
-            <line>
-              <![CDATA[login_ip 10.7.0.63]]>
-            </line>
-            <line>
-              <![CDATA[max_outputs ]]>
-            </line>
-            <line>
-              <![CDATA[mcast_force ]]>
-            </line>
-            <line>
-              <![CDATA[mcast_ip 0]]>
-            </line>
-            <line>
-              <![CDATA[mcast_out ]]>
-            </line>
-            <line>
-              <![CDATA[mcast_port 0]]>
-            </line>
-            <line>
-              <![CDATA[mcast_ttl ]]>
-            </line>
-            <line>
-              <![CDATA[on 1]]>
-            </line>
-            <line>
-              <![CDATA[password ]]>
-            </line>
-            <line>
-              <![CDATA[time_shift 0]]>
-            </line>
-            <line>
-              <![CDATA[type push]]>
-            </line>
-            <line>
-              <![CDATA[uiport 4444]]>
-            </line>
-            <line>
-              <![CDATA[userName admin]]>
-            </line>
-            <line>
-              <![CDATA[userPass1234]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- broadcasterSingleStreamRemoving -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@511baa65]" name="afterTest" is-config="true" duration-ms="71" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:15:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterPushInStreamCreationTest.broadcasterSingleStreamRemoving(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=broadcasterSingleStreamRemoving status=SUCCESS method=BroadcasterPushInStreamCreationTest.broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterPushInStreamCreationTest@511baa65] output=Test parameteres: ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcasterPushInStreamCreationTest -->
-    </test> <!-- Broadcaster - Push input stream creation test - default paremeters -->
-    <test name="Broadcaster - Push input stream statistics test - default paremeters" duration-ms="145595" started-at="2016-08-08T14:15:20Z" finished-at="2016-08-08T14:17:46Z">
-      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@7e0ea639]" name="startTest" is-config="true" duration-ms="0" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:15:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6c779568]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@7e0ea639]" name="beforeTes" is-config="true" duration-ms="36" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:15:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[355]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@7e0ea639]" name="testInit" is-config="true" duration-ms="0" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:15:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@7e0ea639]" name="broadcasterSingleInputStreamstatisticAnilyzer" duration-ms="145514" started-at="2016-08-08T17:15:20Z" finished-at="2016-08-08T17:17:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10.7.0.66]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10.7.0.63]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[pushtest]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[120]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[355]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPass: 1234]]>
-            </line>
-            <line>
-              <![CDATA[host: 10.7.0.66]]>
-            </line>
-            <line>
-              <![CDATA[loin_ip: 10.7.0.63]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
-            </line>
-            <line>
-              <![CDATA[id: pushtest]]>
-            </line>
-            <line>
-              <![CDATA[testduration: 120]]>
-            </line>
-            <line>
-              <![CDATA[Max bitrate is 20110737]]>
-            </line>
-            <line>
-              <![CDATA[Min bitrete is 4186773]]>
-            </line>
-            <line>
-              <![CDATA[Average bitrate is -1284974]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- broadcasterSingleInputStreamstatisticAnilyzer -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@7e0ea639]" name="afterTest" is-config="true" duration-ms="43" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=broadcasterSingleInputStreamstatisticAnilyzer status=SUCCESS method=BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@7e0ea639] output=Test parameteres: ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
-    </test> <!-- Broadcaster - Push input stream statistics test - default paremeters -->
-    <test name="Broadcaster - Remove Push input stream - default paremeters" duration-ms="574" started-at="2016-08-08T14:17:46Z" finished-at="2016-08-08T14:17:46Z">
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2812cbfa]" name="testInit" is-config="true" duration-ms="0" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2812cbfa]" name="startTest" is-config="true" duration-ms="0" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6a6afff2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2812cbfa]" name="beforeTes" is-config="true" duration-ms="38" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[357]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2812cbfa]" name="broadcasterInputStreamDeletion" duration-ms="499" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:46Z">
+        <test-method status="PASS" signature="fileTransfer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="fileTransfer" duration-ms="7542" started-at="2016-08-08T20:08:43Z" finished-at="2016-08-08T20:08:50Z">
           <params>
             <param index="0">
               <value>
@@ -1519,374 +303,112 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[admin]]>
+                <![CDATA[9999]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[1234]]>
+                <![CDATA[2]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[pushtest]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[357]]>
+                <![CDATA[3921]]>
               </value>
             </param>
           </params>
           <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[login_ip: 10.7.0.63]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPassword: 1234]]>
-            </line>
-            <line>
-              <![CDATA[streamId: pushtest]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
-            </line>
-            <line>
-              <![CDATA[Stream pushtest removed.]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- broadcasterInputStreamDeletion -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2812cbfa]" name="afterTest" is-config="true" duration-ms="34" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:46Z">
+        </test-method> <!-- fileTransfer -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9]" name="afterTest" is-config="true" duration-ms="41" started-at="2016-08-08T20:08:50Z" finished-at="2016-08-08T20:08:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.zixi.testing.FileTransferTest.fileTransfer(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterInputStreamDeletion status=SUCCESS method=BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@2812cbfa] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=fileTransfer status=SUCCESS method=FileTransferTest.fileTransfer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@1cd072a9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
-    </test> <!-- Broadcaster - Remove Push input stream - default paremeters -->
-    <test name="Broadcaster - Remove Push output stream - default paremeters" duration-ms="952" started-at="2016-08-08T14:17:46Z" finished-at="2016-08-08T14:17:47Z">
-      <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@60f82f98]" name="startTest" is-config="true" duration-ms="0" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:46Z">
+      </class> <!-- com.zixi.testing.FileTransferTest -->
+    </test> <!-- Proxy - file upload test -->
+    <test name="Proxy - file download test" duration-ms="24714" started-at="2016-08-08T17:08:50Z" finished-at="2016-08-08T17:09:15Z">
+      <class name="com.zixi.testing.FileTransferTest">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="testInit" is-config="true" duration-ms="0" started-at="2016-08-08T20:08:50Z" finished-at="2016-08-08T20:08:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="startTest" is-config="true" duration-ms="0" started-at="2016-08-08T20:08:50Z" finished-at="2016-08-08T20:08:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1eb5174b]]>
+                <![CDATA[org.testng.TestRunner@6ed3ccb2]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@60f82f98]" name="testInit" is-config="true" duration-ms="0" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@60f82f98]" name="beforeTes" is-config="true" duration-ms="34" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:46Z">
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="beforeTes" is-config="true" duration-ms="37" started-at="2016-08-08T20:08:50Z" finished-at="2016-08-08T20:08:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[359]]>
+                <![CDATA[3925]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@60f82f98]" name="broadcasterSingleStreamRemoving" duration-ms="857" started-at="2016-08-08T17:17:46Z" finished-at="2016-08-08T17:17:47Z">
+        <test-method status="PASS" signature="fileTransfer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="fileTransfer" duration-ms="24634" started-at="2016-08-08T20:08:51Z" finished-at="2016-08-08T20:09:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[10.7.0.66]]>
+                <![CDATA[10.7.0.63]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[admin]]>
+                <![CDATA[9999]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[1234]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[pushtest]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[359]]>
+                <![CDATA[3925]]>
               </value>
             </param>
           </params>
           <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[login_ip: 10.7.0.66]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPassword: 1234]]>
-            </line>
-            <line>
-              <![CDATA[name: pushtest]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- broadcasterSingleStreamRemoving -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@60f82f98]" name="afterTest" is-config="true" duration-ms="60" started-at="2016-08-08T17:17:47Z" finished-at="2016-08-08T17:17:47Z">
+        </test-method> <!-- fileTransfer -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502]" name="afterTest" is-config="true" duration-ms="42" started-at="2016-08-08T20:09:15Z" finished-at="2016-08-08T20:09:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void com.zixi.testing.FileTransferTest.fileTransfer(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[[TestResult name=broadcasterSingleStreamRemoving status=SUCCESS method=BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@60f82f98] output=Test parameteres: ]]]>
+                <![CDATA[[TestResult name=fileTransfer status=SUCCESS method=FileTransferTest.fileTransfer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.FileTransferTest@7c30a502] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest -->
-    </test> <!-- Broadcaster - Remove Push output stream - default paremeters -->
-    <test name="Broadcaster - Remove udp input stream" duration-ms="777" started-at="2016-08-08T14:17:47Z" finished-at="2016-08-08T14:17:48Z">
-      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@1554909b]" name="testInit" is-config="true" duration-ms="0" started-at="2016-08-08T17:17:47Z" finished-at="2016-08-08T17:17:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@1554909b]" name="startTest" is-config="true" duration-ms="0" started-at="2016-08-08T17:17:47Z" finished-at="2016-08-08T17:17:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@b62d79]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@1554909b]" name="beforeTes" is-config="true" duration-ms="36" started-at="2016-08-08T17:17:47Z" finished-at="2016-08-08T17:17:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[300]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@1554909b]" name="broadcasterInputStreamDeletion" duration-ms="706" started-at="2016-08-08T17:17:47Z" finished-at="2016-08-08T17:17:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[10.7.0.66]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[test]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[300]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[login_ip: 10.7.0.66]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPassword: 1234]]>
-            </line>
-            <line>
-              <![CDATA[streamId: test]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
-            </line>
-            <line>
-              <![CDATA[Stream test removed.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- broadcasterInputStreamDeletion -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@1554909b]" name="afterTest" is-config="true" duration-ms="34" started-at="2016-08-08T17:17:48Z" finished-at="2016-08-08T17:17:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=broadcasterInputStreamDeletion status=SUCCESS method=BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcasterSingleInputStreamDeletionTest@1554909b] output=Test parameteres: ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
-    </test> <!-- Broadcaster - Remove udp input stream -->
-    <test name="Broadcaster - Remove udp output stream" duration-ms="1304" started-at="2016-08-08T14:17:48Z" finished-at="2016-08-08T14:17:49Z">
-      <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest">
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@1a407d53]" name="startTest" is-config="true" duration-ms="0" started-at="2016-08-08T17:17:48Z" finished-at="2016-08-08T17:17:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6c130c45]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@1a407d53]" name="testInit" is-config="true" duration-ms="0" started-at="2016-08-08T17:17:48Z" finished-at="2016-08-08T17:17:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@1a407d53]" name="beforeTes" is-config="true" duration-ms="34" started-at="2016-08-08T17:17:48Z" finished-at="2016-08-08T17:17:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[302]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTes -->
-        <test-method status="PASS" signature="broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@1a407d53]" name="broadcasterSingleStreamRemoving" duration-ms="1201" started-at="2016-08-08T17:17:48Z" finished-at="2016-08-08T17:17:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[192.168.5.10]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[test]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[302]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Test parameteres: ]]>
-            </line>
-            <line>
-              <![CDATA[login_ip: 192.168.5.10]]>
-            </line>
-            <line>
-              <![CDATA[userName: admin]]>
-            </line>
-            <line>
-              <![CDATA[userPassword: 1234]]>
-            </line>
-            <line>
-              <![CDATA[name: test]]>
-            </line>
-            <line>
-              <![CDATA[uiport: 4444]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- broadcasterSingleStreamRemoving -->
-        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@1a407d53]" name="afterTest" is-config="true" duration-ms="68" started-at="2016-08-08T17:17:49Z" finished-at="2016-08-08T17:17:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=broadcasterSingleStreamRemoving status=SUCCESS method=BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest@1a407d53] output=Test parameteres: ]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest -->
-    </test> <!-- Broadcaster - Remove udp output stream -->
-  </suite> <!-- Broadcaster: UDP streaming suite -->
+      </class> <!-- com.zixi.testing.FileTransferTest -->
+    </test> <!-- Proxy - file download test -->
+  </suite> <!-- File transfer suite through poxy -->
 </testng-results>
