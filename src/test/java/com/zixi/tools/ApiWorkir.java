@@ -96,12 +96,12 @@ public class ApiWorkir {
 	}
 
 	public String sendGet(String url, String id, int mode,String[] responseCookieContainer, String HOST, Object caller, String uiport) {
-		debugLineNumber = 127;
+		debugLineNumber = 99;
 		StringBuffer response = new StringBuffer();
 		try {
 			
 			URL destUrl = new URL(url);
-			debugLineNumber = 132;
+			debugLineNumber = 104;
 			con = (HttpURLConnection) destUrl.openConnection();
 			debugLineNumber = 132;
 			// optional, default is GET
@@ -113,13 +113,13 @@ public class ApiWorkir {
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.setRequestProperty("Accept-Encoding", "gzip, deflate");
 			con.setRequestProperty("Referer", "http://" + HOST + ":" + uiport + "/index.html");
-			debugLineNumber = 142;
+			debugLineNumber = 116;
 			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0], "=", "%"), StringUtils.substringAfter(responseCookieContainer[0], "%3D"));
-			debugLineNumber = 144;
+			debugLineNumber = 118;
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; " + responseCookieContainer[0]);
-			debugLineNumber = 148;
+			debugLineNumber = 120;
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-			debugLineNumber = 150;
+			debugLineNumber = 122;
 			String inputLine = "";
 			while ((inputLine = in.readLine()) != null)
 			{
@@ -129,7 +129,8 @@ public class ApiWorkir {
 			
 			switch(mode)
 			{
-			  case RECEIVERIDMODE:		 		json = new JSONObject(inputLine);
+			  case RECEIVERIDMODE:		 		inputLine = response.toString();
+				  								json = new JSONObject(inputLine);
 												JSONArray streams = json.getJSONArray("streams");
 												for (int i = 0; i < streams.length(); i++) 
 												{
@@ -141,8 +142,8 @@ public class ApiWorkir {
 														return json.get("id").toString();
 													}
 												}
-												System.out.println("no such a stream to delete");
-												return "no such a stream to delete";
+												System.out.println("no such a stream");
+												return "no such a stream";
 									
 				case FEEDER_SSH_SERVER_STATUS:  inputLine = response.toString();
 				   							    json = new JSONObject(inputLine);

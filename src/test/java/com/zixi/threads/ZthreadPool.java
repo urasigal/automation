@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.concurrent.*;
 
 import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
+import com.zixi.drivers.BroadcasterPushInStreamCreationDriver;
+import com.zixi.drivers.BroadcasterPushOutStreamCreationDriver;
 import com.zixi.drivers.BroadcasterRtmpInCreationDriver;
 import com.zixi.drivers.BroadcasterRtmpPushInputStreamDriver;
 import com.zixi.drivers.BroadcasterRtmpPushOutputCreationDriver;
@@ -186,12 +188,131 @@ public class ZthreadPool
 	}
 	
 	
+	// Relates to the PUSH load testing.
+	public String zexecutePush() throws InterruptedException, ExecutionException
+	{
+		// This is a container for the Callable tasks.
+		ArrayList<Callable<String>> callablesZtasks1 = new ArrayList<Callable<String>>();
+		ArrayList<Callable<String>> callablesZtasks2 = new ArrayList<Callable<String>>();
+		
+		int parameterSize = parameters.size();
+		
+		// Gets a number of desired tasks.
+		int counter = Integer.parseInt( parameters.get(parameterSize -1) );
+		
+		for(int i = 0 ; i < counter; i++)
+		{
+			TestDriver driver1 = new BroadcasterPushInStreamCreationDriver();
+			TestDriver driver2 = new BroadcasterPushOutStreamCreationDriver();
+					
+			ArrayList<String> tempParameters = (ArrayList<String>)parameters.clone();
+			
+			tempParameters.set(16,  parameters.get(16) + i);
+			tempParameters.set(36,  parameters.get(36) + i); 
+			tempParameters.set(37,  parameters.get(37) + i); 
+			
+			// Add and create a callable tasks for PUSH input stream creation. 
+			callablesZtasks1.add(new Callable<String>()
+			{
+				public String call()
+				{
+					String results = ((BroadcasterPushInStreamCreationDriver)driver1).testIMPL(
+					tempParameters.get(0), // userName
+					tempParameters.get(2), // userPass
+					tempParameters.get(4), // login_ip
+					tempParameters.get(6), // latency
+					tempParameters.get(7), // time_shift
+					tempParameters.get(8), // force_p2p
+					tempParameters.get(9), // mcast_ip
+					tempParameters.get(10),// mcast_force
+					tempParameters.get(11),// mcast_port
+					tempParameters.get(12),// type
+					tempParameters.get(13),// uiport  
+					tempParameters.get(14),// analyze
+					tempParameters.get(15),// mcast_ttl
+					tempParameters.get(16),// id 
+					tempParameters.get(17),// mcast_out
+					tempParameters.get(18),// complete
+					tempParameters.get(19),// max_outputs
+					tempParameters.get(20),// on 
+					tempParameters.get(21));//password
+					return results;
+				}	
+			});
+			
+			// Add and create a callable tasks for RTMP push input stream creation. 
+			callablesZtasks2.add(new Callable<String>()
+			{
+				public String call()
+				{
+					String results = ((BroadcasterPushOutStreamCreationDriver)driver2).testIMPL(
+					tempParameters.get(1),
+					tempParameters.get(3),
+					tempParameters.get(5),
+					tempParameters.get(22),
+					tempParameters.get(23),
+					tempParameters.get(24),
+					tempParameters.get(25),
+					tempParameters.get(26),
+					tempParameters.get(27),
+				    tempParameters.get(28),
+					tempParameters.get(29),
+					tempParameters.get(30),
+					tempParameters.get(31), 
+					tempParameters.get(32),
+					tempParameters.get(33), 
+					tempParameters.get(34),
+					tempParameters.get(35),
+					tempParameters.get(36),
+					tempParameters.get(37));
+					return results;
+				}	
+			});
+		} // end for
+		// Execute concurrently all tasks.
+				List<Future<String>> futuresInputStreamCreation   = executorService.invokeAll(callablesZtasks1);
+				List<Future<String>> futuresOutPutStreamCreation  = executorService.invokeAll(callablesZtasks2);
+				
+				String result;
+				int numberOfAddedOutPutStreams = 0;
+				int numberOfAddedInputPutStreams = 0;
+				
+				for(Future<String> future : futuresOutPutStreamCreation)
+				{
+					result = future.get();
+					System.out.println("Result is " +  result);
+					String[] res = result.split(" ");
+					if(res[res.length - 1].equals("added."))
+					{
+						numberOfAddedOutPutStreams ++;
+					}
+					
+				}
+				
+				for(Future<String> future : futuresInputStreamCreation)
+				{
+					result = future.get();
+					System.out.println("Result is " +  result);
+					String[] res = result.split(" ");
+					if(res[res.length - 1].equals("added."))
+					{
+						numberOfAddedInputPutStreams ++;
+					}
+					
+				}
+				
+				if (numberOfAddedInputPutStreams == counter && numberOfAddedOutPutStreams == counter)
+					return "pass";
+				else
+					return "failed";
+	}
 	
 	
 	public String zexecutetRtmpPull() throws InterruptedException, ExecutionException
 	{
 		// This is a container for the Callable tasks.
 		ArrayList<Callable<String>> callablesZtasks = new ArrayList<Callable<String>>();
+		
 		/////////////////////////////////////////////////////////////////////////////////
 		int parameterSize = parameters.size();
 		

@@ -24,11 +24,12 @@ public class ReceiverUdpOutCreationDriver extends BroadcasterLoggableApiWorker i
 				"ttl:"+ttl, "smoothing:"+smoothing, "rtp:"+rtp, "fec:"+fec, "rows:"+rows,
 				"cols:"+cols, "remux_bitrate:"+remux_bitrate,"input_stream:"+input_stream);
 		
+		// Login to receiver server.
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
 				userPass, login_ip, uiport);
 
-		// This field is used in order to create an UDP output stream.
+		// Get stream id.
 		String streamId = streamCreator.sendGet("http://" + login_ip + ":"
 				+ uiport + "/in_streams.json?complete=1", input_stream, RECEIVERIDMODE,
 				responseCookieContainer, login_ip, this, uiport);
