@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink suite: "Streaming/ Streams/ Broadcaster UDP streaming/XXX" -->
 <suite name="Broadcaster: UDP streaming suite" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster - UDP output stream creation">
+	<test name="Broadcaster - UDP multicast output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="192.168.5.10" />
@@ -28,12 +28,12 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="296" />  
+		<parameter name="testid" value="3989" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP input stream creation ">
+	<test name="Broadcaster - UDP multicast input stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -58,7 +58,7 @@
 		<parameter name="complete" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="on" value="1" />
-		<parameter name="testid" value="294" />  
+		<parameter name="testid" value="3991" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
@@ -71,7 +71,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="298" />  
+		<parameter name="testid" value="3993" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -96,7 +96,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="353" />  
+		<parameter name="testid" value="3995" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
 		</classes>
@@ -121,9 +121,68 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="351" />    
+		<parameter name="testid" value="3997" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream statistics test - default paremeters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="3999" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream - default paremeters">
+		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="pushtest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="testid" value="4001" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test> 
+<test name="Broadcaster - Remove Push output stream - default paremeters">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="4003" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove udp input stream">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="test" />
+		<parameter name="testid" value="4005" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove udp output stream">
+		<parameter name="login_ip" value="192.168.5.10" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="4007" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>                              
 </suite>
