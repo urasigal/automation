@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink suite: "Streaming/ Streams/ Broadcaster UDP streaming/XXX" -->
-<suite name="Broadcaster: UDP streaming suite" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster - UDP multicast output stream creation">
+<suite name="Broadcaster: UDP mulricast streaming suite" verbose="5" data-provider-thread-count="1">
+	 <test name="Broadcaster - UDP multicast output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="192.168.5.10" />

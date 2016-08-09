@@ -13,6 +13,8 @@ import com.zixi.drivers.BroadcasterRtmpInCreationDriver;
 import com.zixi.drivers.BroadcasterRtmpPushInputStreamDriver;
 import com.zixi.drivers.BroadcasterRtmpPushOutputCreationDriver;
 import com.zixi.drivers.BroadcasterSinglePullInStreamCreationDriver;
+import com.zixi.drivers.BroadcasterSingleUdpInCreationDriver;
+import com.zixi.drivers.BroadcasterUdpOutputCreationDriver;
 import com.zixi.drivers.StreamsDriver;
 import com.zixi.drivers.TestDriver;
 import com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest;
@@ -187,6 +189,139 @@ public class ZthreadPool
 			return "failed";
 	}
 	
+	public String zexecuteUdp() throws InterruptedException, ExecutionException
+	{
+		// This is a containers for the Callable tasks.
+		ArrayList<Callable<String>> callablesZtasks1 = new ArrayList<Callable<String>>();
+		ArrayList<Callable<String>> callablesZtasks2 = new ArrayList<Callable<String>>();
+		
+		// number of test parameters.
+		int parameterSize = parameters.size();
+		
+		// Gets a number of desired tasks.
+		int counter = Integer.parseInt( parameters.get(parameterSize -1) );
+		
+		
+		for(int i = 0 ; i < counter; i++)
+		{
+			TestDriver driver1 = new BroadcasterSingleUdpInCreationDriver();
+			TestDriver driver2 = new BroadcasterUdpOutputCreationDriver();
+					
+			ArrayList<String> tempParameters = (ArrayList<String>)parameters.clone();
+			
+			tempParameters.set(7,  parameters.get(7) + i);
+			tempParameters.set(29,  parameters.get(29) + i); 
+			tempParameters.set(31,  parameters.get(31) + i); 
+			
+			tempParameters.set(6,  ((Integer.parseInt((parameters.get(6)))) + i) + "");
+			tempParameters.set(27,  ((Integer.parseInt((parameters.get(27)))) + i) + ""); 
+			
+			// Add and create a callable tasks for PUSH input stream creation. 
+			callablesZtasks1.add(new Callable<String>()
+			{
+				public String call()
+				{
+					String results = ((BroadcasterSingleUdpInCreationDriver)driver1).testIMPL(
+					tempParameters.get(0), // 
+					tempParameters.get(2), // 
+					tempParameters.get(4), // 
+					tempParameters.get(6), // 
+					tempParameters.get(7), // 
+					tempParameters.get(8), // 
+					tempParameters.get(9), // 
+					tempParameters.get(10),// 
+					tempParameters.get(11),// 
+					tempParameters.get(12),// 
+					tempParameters.get(13),//   
+					tempParameters.get(14),// 
+					tempParameters.get(15),// 
+					tempParameters.get(16),//  
+					tempParameters.get(17),// 
+					tempParameters.get(18),// 
+					tempParameters.get(19),// 
+					tempParameters.get(20),//  
+					tempParameters.get(21),
+					tempParameters.get(22),
+					tempParameters.get(23),
+					tempParameters.get(24),
+					tempParameters.get(25),
+					tempParameters.get(26));//
+					return results;
+				}	
+			});
+			
+			// Add and create a callable tasks for RTMP push input stream creation. 
+			callablesZtasks2.add(new Callable<String>()
+			{
+				public String call()
+				{
+					String results = ((BroadcasterUdpOutputCreationDriver)driver2).testIMPL(
+					tempParameters.get(1),
+					tempParameters.get(3),
+					tempParameters.get(5),
+					tempParameters.get(27),
+					tempParameters.get(28),
+					tempParameters.get(29),
+					tempParameters.get(30),
+					tempParameters.get(31),
+					tempParameters.get(32),
+				    tempParameters.get(33),
+					tempParameters.get(34),
+					tempParameters.get(35),
+					tempParameters.get(36), 
+					tempParameters.get(37),
+					tempParameters.get(38), 
+					tempParameters.get(39),
+					tempParameters.get(40),
+					tempParameters.get(41),
+					tempParameters.get(42),
+					tempParameters.get(43),
+					tempParameters.get(44),
+					tempParameters.get(45),
+					tempParameters.get(46),
+					tempParameters.get(47),
+					tempParameters.get(48));
+					return results;
+				}	
+			});
+		} 
+		
+		// Execute concurrently all tasks.
+		List<Future<String>> futuresInputStreamCreation   = executorService.invokeAll(callablesZtasks1);
+		List<Future<String>> futuresOutPutStreamCreation  = executorService.invokeAll(callablesZtasks2);
+		
+		String result;
+		int numberOfAddedOutPutStreams = 0;
+		int numberOfAddedInputPutStreams = 0;
+		
+		for(Future<String> future : futuresOutPutStreamCreation)
+		{
+			result = future.get();
+			System.out.println("Result is " +  result);
+			String[] res = result.split(" ");
+			if(res[res.length - 1].equals("good"))
+			{
+				numberOfAddedOutPutStreams ++;
+			}
+			
+		}
+		
+		for(Future<String> future : futuresInputStreamCreation)
+		{
+			result = future.get();
+			System.out.println("Result is " +  result);
+			String[] res = result.split(" ");
+			if(res[res.length - 1].equals("added."))
+			{
+				numberOfAddedInputPutStreams ++;
+			}
+		}
+		
+		if (numberOfAddedInputPutStreams == counter && numberOfAddedOutPutStreams == counter)
+			return "pass";
+		else
+			return "failed";
+	}
 	
 	// Relates to the PUSH load testing.
 	public String zexecutePush() throws InterruptedException, ExecutionException
@@ -270,41 +405,41 @@ public class ZthreadPool
 			});
 		} // end for
 		// Execute concurrently all tasks.
-				List<Future<String>> futuresInputStreamCreation   = executorService.invokeAll(callablesZtasks1);
-				List<Future<String>> futuresOutPutStreamCreation  = executorService.invokeAll(callablesZtasks2);
-				
-				String result;
-				int numberOfAddedOutPutStreams = 0;
-				int numberOfAddedInputPutStreams = 0;
-				
-				for(Future<String> future : futuresOutPutStreamCreation)
-				{
-					result = future.get();
-					System.out.println("Result is " +  result);
-					String[] res = result.split(" ");
-					if(res[res.length - 1].equals("added."))
-					{
-						numberOfAddedOutPutStreams ++;
-					}
-					
-				}
-				
-				for(Future<String> future : futuresInputStreamCreation)
-				{
-					result = future.get();
-					System.out.println("Result is " +  result);
-					String[] res = result.split(" ");
-					if(res[res.length - 1].equals("added."))
-					{
-						numberOfAddedInputPutStreams ++;
-					}
-					
-				}
-				
-				if (numberOfAddedInputPutStreams == counter && numberOfAddedOutPutStreams == counter)
-					return "pass";
-				else
-					return "failed";
+		List<Future<String>> futuresInputStreamCreation   = executorService.invokeAll(callablesZtasks1);
+		List<Future<String>> futuresOutPutStreamCreation  = executorService.invokeAll(callablesZtasks2);
+		
+		String result;
+		int numberOfAddedOutPutStreams = 0;
+		int numberOfAddedInputPutStreams = 0;
+		
+		for(Future<String> future : futuresOutPutStreamCreation)
+		{
+			result = future.get();
+			System.out.println("Result is " +  result);
+			String[] res = result.split(" ");
+			if(res[res.length - 1].equals("added."))
+			{
+				numberOfAddedOutPutStreams ++;
+			}
+			
+		}
+		
+		for(Future<String> future : futuresInputStreamCreation)
+		{
+			result = future.get();
+			System.out.println("Result is " +  result);
+			String[] res = result.split(" ");
+			if(res[res.length - 1].equals("added."))
+			{
+				numberOfAddedInputPutStreams ++;
+			}
+			
+		}
+		
+		if (numberOfAddedInputPutStreams == counter && numberOfAddedOutPutStreams == counter)
+			return "pass";
+		else
+			return "failed";
 	}
 	
 	

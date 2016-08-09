@@ -1,56 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="5" name="Failed suite [File transfer suite through poxy]" data-provider-thread-count="1">
-  <parameter name="ft_http" value="1"/>
-  <parameter name="ft_mtu" value="1462"/>
-  <parameter name="ft_bitrate_cache" value="0"/>
-  <parameter name="fiel_upload_mode" value="1"/>
-  <parameter name="ft_init_speed" value="15000"/>
-  <parameter name="userPass" value="1234"/>
-  <parameter name="ft_proxy_https_port" value="4501"/>
-  <parameter name="userName" value="admin"/>
-  <parameter name="login_ip" value="10.7.0.62"/>
-  <parameter name="destinationServerPort" value="9999"/>
-  <parameter name="ft_upload" value="1"/>
-  <parameter name="max_upload_bitrate" value="50000"/>
-  <parameter name="ft_auto_index" value="1"/>
-  <parameter name="ft_aggr" value="80"/>
-  <parameter name="uiport" value="4444"/>
-  <parameter name="ft_prog" value="1"/>
-  <parameter name="ft_cache" value="0"/>
-  <parameter name="max_download_bitrate" value="50000"/>
-  <parameter name="destinationServerIP" value="10.7.0.63"/>
-  <parameter name="ft_proxy_http_port" value="4500"/>
-  <parameter name="testid" value="3925"/>
-  <parameter name="ft_encrypt" value="0"/>
-  <parameter name="ft_download" value="1"/>
-  <test name="Proxy - file download test(failed)">
-    <parameter name="fiel_upload_mode" value="1"/>
-    <parameter name="destinationServerIP" value="10.7.0.63"/>
-    <parameter name="testid" value="3925"/>
-    <parameter name="destinationServerPort" value="9999"/>
+<suite verbose="5" name="Failed suite [Broadcaster: UDP load streaming suite]" data-provider-thread-count="1">
+  <parameter name="remux_bitrate" value="0"/>
+  <parameter name="df" value="0"/>
+  <parameter name="mcast_force" value=""/>
+  <parameter name="fec" value="0"/>
+  <parameter name="nic" value="0.0.0.0"/>
+  <parameter name="kompression" value="1"/>
+  <parameter name="host" value="10.7.0.66"/>
+  <parameter name="mcast_ttl" value=""/>
+  <parameter name="testid" value="296"/>
+  <parameter name="smoothing" value="0"/>
+  <parameter name="remux_pcr" value="90"/>
+  <parameter name="time_shift" value="0"/>
+  <parameter name="id_bx2" value="test"/>
+  <parameter name="type_bx2" value="TS"/>
+  <parameter name="type_bx1" value="local-ts"/>
+  <parameter name="userName_bx1" value="admin"/>
+  <parameter name="userName_bx2" value="admin"/>
+  <parameter name="id_bx1" value="test"/>
+  <parameter name="max_bitrate" value="160000000"/>
+  <parameter name="local_ip" value="0.0.0.0"/>
+  <parameter name="port" value="9999"/>
+  <parameter name="ts_port" value="9999"/>
+  <parameter name="rtp_type" value="0"/>
+  <parameter name="multi_src" value=""/>
+  <parameter name="dec_key" value=""/>
+  <parameter name="enc_key" value=""/>
+  <parameter name="stream" value="test"/>
+  <parameter name="remux_restampdts" value="0"/>
+  <parameter name="enc_type" value=""/>
+  <parameter name="cols" value="10"/>
+  <parameter name="max_outputs" value="-1"/>
+  <parameter name="streamname" value="test"/>
+  <parameter name="on" value="1"/>
+  <parameter name="userPass_bx1" value="1234"/>
+  <parameter name="uiport_bx1" value="4444"/>
+  <parameter name="userPass_bx2" value="1234"/>
+  <parameter name="mcast_ip" value=""/>
+  <parameter name="uiport_bx2" value="4444"/>
+  <parameter name="local_port" value=""/>
+  <parameter name="number_of_streams" value="50"/>
+  <parameter name="mcast_port" value=""/>
+  <parameter name="rows" value="10"/>
+  <parameter name="ttl" value="5"/>
+  <parameter name="multicast" value=""/>
+  <parameter name="remux_buff" value="1000"/>
+  <parameter name="rtp" value="0"/>
+  <parameter name="login_ip_bx2" value="10.7.0.63"/>
+  <parameter name="login_ip_bx1" value="10.7.0.66"/>
+  <parameter name="mcast_out" value="0"/>
+  <parameter name="complete" value=""/>
+  <parameter name="dec_type" value=""/>
+  <test name="Broadcaster - UDP input stream creation (failed)">
+    <parameter name="remux_bitrate" value="0"/>
+    <parameter name="df" value="0"/>
+    <parameter name="mcast_force" value=""/>
+    <parameter name="fec" value="0"/>
+    <parameter name="nic" value="0.0.0.0"/>
+    <parameter name="kompression" value="1"/>
+    <parameter name="host" value="10.7.0.66"/>
+    <parameter name="mcast_ttl" value=""/>
+    <parameter name="testid" value="296"/>
+    <parameter name="smoothing" value="0"/>
+    <parameter name="remux_pcr" value="90"/>
+    <parameter name="time_shift" value="0"/>
+    <parameter name="id_bx2" value="test"/>
+    <parameter name="type_bx2" value="TS"/>
+    <parameter name="type_bx1" value="local-ts"/>
+    <parameter name="userName_bx1" value="admin"/>
+    <parameter name="userName_bx2" value="admin"/>
+    <parameter name="id_bx1" value="test"/>
+    <parameter name="max_bitrate" value="160000000"/>
+    <parameter name="local_ip" value="0.0.0.0"/>
+    <parameter name="port" value="9999"/>
+    <parameter name="ts_port" value="9999"/>
+    <parameter name="rtp_type" value="0"/>
+    <parameter name="multi_src" value=""/>
+    <parameter name="dec_key" value=""/>
+    <parameter name="enc_key" value=""/>
+    <parameter name="stream" value="test"/>
+    <parameter name="remux_restampdts" value="0"/>
+    <parameter name="enc_type" value=""/>
+    <parameter name="cols" value="10"/>
+    <parameter name="max_outputs" value="-1"/>
+    <parameter name="streamname" value="test"/>
+    <parameter name="on" value="1"/>
+    <parameter name="userPass_bx1" value="1234"/>
+    <parameter name="uiport_bx1" value="4444"/>
+    <parameter name="userPass_bx2" value="1234"/>
+    <parameter name="mcast_ip" value=""/>
+    <parameter name="uiport_bx2" value="4444"/>
+    <parameter name="local_port" value=""/>
+    <parameter name="number_of_streams" value="50"/>
+    <parameter name="mcast_port" value=""/>
+    <parameter name="rows" value="10"/>
+    <parameter name="ttl" value="5"/>
+    <parameter name="multicast" value=""/>
+    <parameter name="remux_buff" value="1000"/>
+    <parameter name="rtp" value="0"/>
+    <parameter name="login_ip_bx2" value="10.7.0.63"/>
+    <parameter name="login_ip_bx1" value="10.7.0.66"/>
+    <parameter name="mcast_out" value="0"/>
+    <parameter name="complete" value=""/>
+    <parameter name="dec_type" value=""/>
     <classes>
-      <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest">
+      <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest">
         <methods>
           <include name="startTest"/>
           <include name="beforeTes"/>
+          <include name="broadcasterMultiplePullInCreation" invocation-numbers="0"/>
           <include name="testInit"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- com.zixi.testing.BxFileTransferAndVodSettingsTest -->
-      <class name="com.zixi.testing.FileTransferTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="fileTransfer" invocation-numbers="0"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.FileTransferTest -->
+      </class> <!-- com.zixi.load.testing.BroadcasterMultipleUdpTest -->
     </classes>
-  </test> <!-- Proxy - file download test(failed) -->
-</suite> <!-- Failed suite [File transfer suite through poxy] -->
+  </test> <!-- Broadcaster - UDP input stream creation (failed) -->
+</suite> <!-- Failed suite [Broadcaster: UDP load streaming suite] -->

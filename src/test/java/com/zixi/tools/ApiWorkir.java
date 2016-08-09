@@ -149,7 +149,9 @@ public class ApiWorkir {
 				   							    json = new JSONObject(inputLine);
 				   							    return json.getString("host");
 				   							   
-				case FEEDER_SSH_KEY_STATUS:     json = new JSONObject(inputLine);
+				   							
+				case FEEDER_SSH_KEY_STATUS:     inputLine = response.toString();   
+												json = new JSONObject(inputLine);
 											    json = json.getJSONObject("server");
 											    return json.getInt("key_present") + "";
 				
