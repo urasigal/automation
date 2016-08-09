@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
  
+
 import br.eti.kinoshita.testlinkjavaapi.TestLinkAPI;
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionType;
@@ -27,14 +28,14 @@ public class TestlinkIntegration {
 	{
         TestLinkAPI testlinkAPIClient = new TestLinkAPI(new URL(url), devKey);
         TestCase[] testcases = testlinkAPIClient.getTestCasesForTestPlan(
-                testPlanID, null, null, null, null, null, null, null,
-                ExecutionType.AUTOMATED, true, TestCaseDetails.FULL);
+        testPlanID, null, null, null, null, null, null, null,
+        ExecutionType.AUTOMATED, true, TestCaseDetails.FULL);
         
         ArrayList<Integer> testcaseNames = new ArrayList<Integer>();
         for (TestCase testCase : testcases)
         {
             TestCase finalTestcase = testlinkAPIClient.getTestCase(
-                    testCase.getId(), null, null);
+            testCase.getId(), null, null);
             testcaseNames.add(finalTestcase.getId());
             
             // finalTestcase.setPreconditions(preconditions);
@@ -47,16 +48,22 @@ public class TestlinkIntegration {
     {
         TestLinkAPI testlinkAPIClient = new TestLinkAPI(new URL(url), devKey);
         return testlinkAPIClient.getTestCaseIDByName(testcaseName, null,
-                projectName, null);
+        projectName, null);
     }
  
-    public void setResult(String testcaseId, ExecutionStatus status, String className)
+    public void setResult(String testcaseId, ExecutionStatus status, String className, int buildNumber)
             throws TestLinkAPIException, MalformedURLException 
     {
         TestLinkAPI testlinkAPIClient = new TestLinkAPI(new URL(url), devKey);
         testlinkAPIClient.setTestCaseExecutionResult(
-                Integer.parseInt(testcaseId), null, 262, status, null, null,
-                className, true, null, null, null, null, false);
+        Integer.parseInt(testcaseId), null, 262, status, buildNumber, null,
+        className, true, null, null, null, null, false);
     }
 
+    public int defineBuild(String build) throws TestLinkAPIException, MalformedURLException
+    {
+    	 TestLinkAPI testlinkAPIClient = new TestLinkAPI(new URL(url), devKey);
+    	 int buildId = testlinkAPIClient.createBuild(262, build, "").getId();
+    	 return buildId;
+    }
 }

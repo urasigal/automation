@@ -1,8 +1,15 @@
 package com.zixi.testing;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.FileHandler;
@@ -17,6 +24,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
+import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
 
 import com.zixi.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
@@ -61,7 +69,7 @@ public class BaseTest {
 	//@BeforeMethod: The annotated method will be run before each test method. 
 	@Parameters({"testid"})
 	@BeforeMethod
-	public void beforeTes(String testid) throws MalformedURLException
+	public void beforeTes(String testid) throws TestLinkAPIException, IOException
 	{
 		LOGGER = getLoggerInstance();
 		LOGGER.info(getClass().getName()); 
@@ -69,7 +77,7 @@ public class BaseTest {
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
 		TestlinkIntegration tl = new TestlinkIntegration();
-		tl.setResult(testid,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName());
+		tl.setResult(testid,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName(), getBuildIdFromFile());
 	}
 	
 	@AfterMethod
@@ -81,11 +89,11 @@ public class BaseTest {
         if (result.isSuccess()) {
             tl.setResult(testid,
                     ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + " Manul description: " + manulDescription); // pass data to a testLink notes in test execution.
+            automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + " Manul description: " + manulDescription , getBuildIdFromFile()); // pass data to a testLink notes in test execution.
         } else {
             tl.setResult(testid,
                     ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-                            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription );
+                            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription, getBuildIdFromFile() );
         }
      }catch(Exception e)
      {
@@ -139,5 +147,21 @@ public class BaseTest {
 		  return BaseTest.LOGGER;
 		}
 		return BaseTest.LOGGER;
+	}
+	
+	private int getBuildIdFromFile() throws IOException
+	{
+		String line;
+		int buildId = -1;
+		try (
+		    InputStream fis = new FileInputStream("src/main/resources/build");
+		    InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+		    BufferedReader br = new BufferedReader(isr);
+		) {
+		    while ((line = br.readLine()) != null) {
+		    	 buildId = Integer.parseInt(line);
+		    }
+		}
+		return buildId;
 	}
 }
