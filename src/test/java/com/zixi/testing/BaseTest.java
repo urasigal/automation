@@ -95,8 +95,8 @@ public class BaseTest {
         else 
         {
             tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + "\n Error is " + result.getThrowable().getMessage(),
-            getBuildIdFromFile() );
+            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + "\n Error is " + result.getThrowable().getMessage() + 
+            "\n Exception stack trace: " + result.getThrowable().getStackTrace(), getBuildIdFromFile() );
         }
      }
      catch(Exception e)
