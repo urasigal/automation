@@ -30,7 +30,7 @@ public class FeederOutputDeletioinTest extends BaseTest{
 	public void broadcasterSingleStreamRemoving(String userName,
 			String userPass, String login_ip, String uiport, String id,
 			String mip, String port, String ip, String prog, String chan,
-			String type, String host,String testid) throws InterruptedException {
+			String type, String host,String testid) throws Exception {
 		this.testid = testid;
 		
 		// Writes test results to the TestLink.

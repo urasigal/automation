@@ -84,18 +84,22 @@ public class BaseTest {
     public void afterTest(Method test, ITestResult result) 
 	{
 	 LOGGER.entering(getClass().getName(), "afterTest");
-     try{		
+     try
+     {		
         TestlinkIntegration tl = new TestlinkIntegration();
-        if (result.isSuccess()) {
-            tl.setResult(testid,
-                    ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + " Manul description: " + manulDescription , getBuildIdFromFile()); // pass data to a testLink notes in test execution.
-        } else {
-            tl.setResult(testid,
-                    ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-                            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription, getBuildIdFromFile() );
+        if (result.isSuccess()) 
+        {
+            tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
+            automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + "\nManul description: " + manulDescription , getBuildIdFromFile()); // pass data to a testLink notes in test execution.
+        } 
+        else 
+        {
+            tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n"+  
+            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + "\n Error is " + result.getThrowable().getMessage(),
+            getBuildIdFromFile() );
         }
-     }catch(Exception e)
+     }
+     catch(Exception e)
      {
     	 System.out.println("The error is" + e.getMessage()); 
      }

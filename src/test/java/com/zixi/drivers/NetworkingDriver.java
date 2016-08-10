@@ -19,7 +19,7 @@ implements TestDriver {
 	}
 	
 	
-	public String  getIpsFromApi(String login_ip, String uiport, String userName, String userPass)
+	public String  getIpsFromApi(String login_ip, String uiport, String userName, String userPass) throws Exception
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport 
 				+ "/login.htm", userName , userPass, login_ip, uiport);

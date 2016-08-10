@@ -15,8 +15,9 @@ public class BroadcasterPushInStreamCreationDriver extends BroadcasterLoggableAp
 	private ApiWorkir streamCreator = new ApiWorkir();
 	private TestParameters testParameters;
 	
-	public String testIMPL(String userName,String userPass,String login_ip,String latency,String time_shift,String force_p2p,String mcast_ip,String mcast_force,String mcast_port,String type,
-			String uiport,String analyze,String mcast_ttl,String id,String mcast_out,String complete,String max_outputs,String on, String password)
+	public String testIMPL(String userName,String userPass,String login_ip,String latency,String time_shift,String force_p2p,String mcast_ip,String mcast_force,String
+			mcast_port,String type, String uiport,String analyze,String mcast_ttl,String id,String mcast_out,String complete,String max_outputs,String on,
+			String password) throws Exception 
 	{
 		testParameters = new TestParameters(userName,userPass,login_ip,latency,
 				time_shift,force_p2p,mcast_ip,mcast_force,mcast_port,type,uiport,analyze,mcast_ttl,id,mcast_out,complete,
@@ -41,7 +42,7 @@ public class BroadcasterPushInStreamCreationDriver extends BroadcasterLoggableAp
 	}
 	
 	public String testIMPL(String userName,String userPass,String login_ip,String latency,String time_shift,String force_p2p,String mcast_ip,String mcast_force,String mcast_port,String type,
-			String uiport,String analyze,String mcast_ttl,String id,String mcast_out,String complete,String max_outputs,String on, String password, String priority_ids)
+			String uiport,String analyze,String mcast_ttl,String id,String mcast_out,String complete,String max_outputs,String on, String password, String priority_ids) throws Exception
 	{
 		testParameters = new TestParameters(userName,userPass,login_ip,latency,
 				time_shift,force_p2p,mcast_ip,mcast_force,mcast_port,type,uiport,analyze,mcast_ttl,id,mcast_out,complete,

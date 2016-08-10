@@ -22,7 +22,7 @@ public class FeederSettingsTest extends BaseTest{
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "host", "ssh_port", "ssh_user", "testid"})
 	@Test
 	public void uploadPrivateKeyToFeeder(String userName, String userPass, String login_ip, String uiport, String host,
-			String ssh_port, String ssh_user, String testid) throws InterruptedException, IOException {
+			String ssh_port, String ssh_user, String testid) throws Exception {
 		
 		this.testid = testid;
 		

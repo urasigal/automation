@@ -17,10 +17,10 @@ public class ReceiverOutputStreamDeletionTest extends BaseTest{
 	@Parameters({ "login_ip", "userName", "userPass", "uiport" ,"stream_name","destination","testid"})
 	@Test		
 	public void receiverDeleteOutputStreamTest(String login_ip, String userName, String userPass, String uiport 
-			,String stream_name, String  destination, String testid) throws InterruptedException {
+			,String stream_name, String  destination, String testid) throws Exception {
 		this.testid = testid;
 		
-this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
 		testParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPass", "uiport" ,"stream_name","destination","testid" }, 
 				

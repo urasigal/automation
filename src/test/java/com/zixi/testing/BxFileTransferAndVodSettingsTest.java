@@ -22,7 +22,7 @@ private TestDriver testDriver;
 	@Test
 	public void broadcasterSetBxFileTransferVodSettings(String userName, String userPass, String login_ip, String uiport, String ft_download, String ft_upload,
 			String ft_auto_index, String ft_prog, String ft_encrypt, String ft_bitrate_cache, String ft_aggr, String ft_mtu, String ft_init_speed,
-			String ft_cache, String ft_proxy_http_port, String ft_proxy_https_port, String max_download_bitrate, String max_upload_bitrate, String testid) throws InterruptedException 
+			String ft_cache, String ft_proxy_http_port, String ft_proxy_https_port, String max_download_bitrate, String max_upload_bitrate, String testid) throws Exception 
 	{
 		this.testid = testid;
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");

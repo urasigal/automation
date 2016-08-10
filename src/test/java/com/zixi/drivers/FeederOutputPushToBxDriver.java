@@ -71,7 +71,7 @@ public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker imp
 			String ofec, String ofecl, String stop_on_drop, String mmt,
 			String smoothing, String limited, String minbps,
 			String lim_enc_addr, String pad_to_cbr, String rtmp_feedback,
-			String ohst, String oprt, String onic, String oalt, String bonded, String uiport) {
+			String ohst, String oprt, String onic, String oalt, String bonded, String uiport) throws Exception {
 
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "login_ip:" + login_ip, "name:" + name, "mip:" + mip,
@@ -123,7 +123,7 @@ public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker imp
 			String lim_enc_addr, String pad_to_cbr, String rtmp_feedback,
 			String ohst, String oprt, String onic, String oalt, String bonded,
 			String rtmp_stream, String rtmp_url, String rtmp_user,
-			String rtmp_pass, String rtmp_url2, String rtmp_hot, String uiport) {
+			String rtmp_pass, String rtmp_url2, String rtmp_hot, String uiport) throws Exception {
 		
 		
 		testParameters = new TestParameters( "userName"+userName,  "userPass"+userPass,  "login_ip"+login_ip,

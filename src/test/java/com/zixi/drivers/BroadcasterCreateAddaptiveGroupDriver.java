@@ -16,7 +16,7 @@ public class BroadcasterCreateAddaptiveGroupDriver extends BroadcasterLoggableAp
 	public String testIMPL(String userName, String userPass, String login_ip,
 			String uiport, String name, String record, String zixi, String hls,
 			String hds, String mpd, String mmt, String compress_zixi,
-			String multicast, String streams, String bitrates, String max_time) {
+			String multicast, String streams, String bitrates, String max_time) throws Exception {
 
 		testParameters = new TestParameters("userName" + userName, "userPass"
 				+ userPass, "login_ip" + login_ip, "uiport" + uiport, "name"

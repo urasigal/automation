@@ -13,7 +13,7 @@ public class AddAudioProfileDriver extends BroadcasterLoggableApiWorker implemen
 	
 	public String testIMPL(String userName, String userPass, String login_ip,
 			String uiport, String profile_name, String enc, String bitrate,
-			String profile, String testid) {
+			String profile, String testid) throws Exception {
 		
 		testParameters = new TestParameters("userName:"+ userName, "userPass:"+ userPass, "login_ip:"+ login_ip, "uiport" + uiport, "profile_name" + profile_name +
 											"enc" + enc, "bitrate" + bitrate, "profile" + profile, "testid" + testid);

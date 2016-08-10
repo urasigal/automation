@@ -26,7 +26,7 @@ public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker imp
 
 	public String testIMPL(String userName, String userPass, String login_ip,
 			String uiport, String id, String mip, String port, String ip,
-			String prog, String chan, String type, String host) 
+			String prog, String chan, String type, String host) throws Exception 
 	{
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:"
@@ -47,7 +47,7 @@ public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker imp
 	
 	public String testUdpIMPL(String userName, String userPass, String login_ip,
 			String uiport, String id, String mip, String port, String ip,
-			String prog, String chan, String type, String host, String op) 
+			String prog, String chan, String type, String host, String op) throws Exception 
 	{
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:"

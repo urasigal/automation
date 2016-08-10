@@ -49,7 +49,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
 			String password, String mcast_port, String complete,
 			String mcast_ip, String fec_adaptive, String mcast_ttl, String on,
 			String func, String fec_force, String mcast_out,
-			String propertiesFile,String testid) throws InterruptedException {
+			String propertiesFile,String testid) throws Exception {
 		
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);

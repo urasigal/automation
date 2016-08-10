@@ -45,7 +45,7 @@ public class BroadcasterRtmpInCreationDriver extends BroadcasterLoggableApiWorke
 			String mcast_port, String type, String rtmp_user,
 			String rtmp_bitrate, String rtmp_passwd, String uiport,
 			String mcast_ttl, String rtmp_latency, String mcast_out,
-			String complete, String max_outputs, String on) {
+			String complete, String max_outputs, String on) throws Exception {
 		ApiWorkir streamCreator = new ApiWorkir();
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "login_ip:" + login_ip, "rtmp_nulls:" + rtmp_nulls,
@@ -88,7 +88,7 @@ public class BroadcasterRtmpInCreationDriver extends BroadcasterLoggableApiWorke
 			String mcast_port, String type, String rtmp_user,
 			String rtmp_bitrate, String rtmp_passwd, String uiport,
 			String mcast_ttl, String rtmp_latency, String mcast_out,
-			String complete, String max_outputs, String on) 
+			String complete, String max_outputs, String on) throws Exception 
 	{
 		ApiWorkir streamCreator = new ApiWorkir();
 		testParameters = new TestParameters("userName:" + userName, "userPass:"

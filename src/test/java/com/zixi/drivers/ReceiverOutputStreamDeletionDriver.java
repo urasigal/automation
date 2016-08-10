@@ -15,7 +15,7 @@ public class ReceiverOutputStreamDeletionDriver extends BroadcasterLoggableApiWo
 
 	private TestParameters testParameters;
 
-	public String testIMPL(String login_ip, String userName, String userPass, String uiport, String stream_name, String testid) {
+	public String testIMPL(String login_ip, String userName, String userPass, String uiport, String stream_name, String testid) throws Exception {
 
 		String streamName = null;
 		String streamId = null;

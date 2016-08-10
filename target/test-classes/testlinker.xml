@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Zixi testlink integration suite" verbose="5" data-provider-thread-count="1">
 <test name="Broadcaster - Pull input stream creation test - adaptive group test first stream">
-		<parameter name="userName" value="admin" />
+		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />

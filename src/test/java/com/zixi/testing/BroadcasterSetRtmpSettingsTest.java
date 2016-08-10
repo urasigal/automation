@@ -23,7 +23,7 @@ public class BroadcasterSetRtmpSettingsTest extends BaseTest {
 			String userPass, String login_ip, String uiport, String rtmp_on, String rtmp_port,
 			String rtmp_auto_out, String rtmp_auto_in, String rtmp_pcr_int,
 			String rtmp_auto_out_latency, String testid)
-			throws InterruptedException {
+			throws Exception {
 		this.testid = testid;
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);

@@ -27,7 +27,7 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTest {
 			String fast_connect, String kompression, String enc_type, String enc_key,
 			String rec_history, String rec_duration, String src, String ap, String ll, String all_pids,
 			String bit, String profile_name, String mode, String testid)
-			throws InterruptedException {
+			throws Exception {
 
 		this.testid = testid;
 

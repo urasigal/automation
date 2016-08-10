@@ -16,7 +16,7 @@ public class BroadcasterTrannscodeStreamDriver extends
 			String max_outputs, String mcast_out, String time_shift,
 			String old, String fast_connect, String kompression,
 			String enc_type, String enc_key, String rec_history,
-			String rec_duration, String src, String ap, String bit, String profile_name) {
+			String rec_duration, String src, String ap, String bit, String profile_name) throws Exception {
 		int pid = -8;
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "login_ip:" + login_ip, "uiport:" + uiport, "type:"
@@ -72,7 +72,7 @@ public class BroadcasterTrannscodeStreamDriver extends
 			String matrix, String max_outputs, String mcast_out, String time_shift, String old,
 			String fast_connect, String kompression, String enc_type, String enc_key,
 			String rec_history, String rec_duration, String src, String ap, String ll, String all_pids,
-			String bit, String profile_name, String mode) {
+			String bit, String profile_name, String mode) throws Exception {
 		
 		// Profile internal ID.
 		int pid = -8;

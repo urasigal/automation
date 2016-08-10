@@ -16,7 +16,7 @@ public class ReceiverUdpOutCreationDriver extends BroadcasterLoggableApiWorker i
 	public String testIMPL(String userName, String userPass, String login_ip,
 			String uiport, String name, String target, String type, String nic,
 			String ttl, String smoothing, String rtp, String fec, String rows,
-			String cols, String remux_bitrate,String input_stream) 
+			String cols, String remux_bitrate,String input_stream) throws Exception 
 	{
 		
 		testParameters = new TestParameters("userName:"+userName, "userPass:"+userPass, "login_ip:"+login_ip,
@@ -58,7 +58,7 @@ public class ReceiverUdpOutCreationDriver extends BroadcasterLoggableApiWorker i
 	final private static String rin_id = "in_id";
 
 	
-	public String addBackupToOut(String receiver_ip, String recever_uiport, String receiver_user_name, String receiver_password, String mainId, String backupId)
+	public String addBackupToOut(String receiver_ip, String recever_uiport, String receiver_user_name, String receiver_password, String mainId, String backupId) throws Exception
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + receiver_ip + ":" + recever_uiport + "/login.htm", receiver_user_name,

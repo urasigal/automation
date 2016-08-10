@@ -19,7 +19,7 @@ public class BroadcasterRtmpPushOutputCreationDriver extends
 			String rtmp_stream, String user, String bandwidth, String latency,
 			String reconnect, String sendfi, String disconnect_low_br,
 			String static_latency, String dec_type, String dec_key,
-			String password) {
+			String password) throws Exception {
 
 		testParameters = new TestParameters("login_ip:" + login_ip, "userName" + userName, "userPassword:" + userPassword, "uiport:" + uiport,
 				"type:" + type, "stream:" + stream, "matrix:" + matrix, "url:"

@@ -18,7 +18,7 @@ public class ReceiverInputStatisticDriver extends BroadcasterLoggableApiWorker i
 	private StreamStatisticAnalyzer streamStatisticAnalyzer = new StreamStatisticAnalyzer();
 
 	public String testIMPL(String userName, String userPass, String login_ip,
-			String uiport, String id, String testduration) {
+			String uiport, String id, String testduration) throws Exception {
 		int singleBitrateProbe = 0;
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(

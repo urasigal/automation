@@ -40,7 +40,7 @@ public class ReceiverPullInputStreamCreationDriver extends BroadcasterLoggableAp
 			String fec_adaptive, String fec_aware, String fec_force,
 			String fec_latency, String fec_overhead, String host,
 			String latency, String min_bit, String name, String nic,
-			String port, String session, String stream) {
+			String port, String session, String stream) throws Exception {
 		
 		testParameters = new TestParameters("userName:"+userName, "userPass:"+userPass, "login_ip:"+login_ip,
 				"uiport:"+uiport, "dec_key:"+dec_key, "dec_type:"+dec_type, "fec_adaptive:"+fec_adaptive, "fec_aware:"+fec_aware, "fec_force:"+fec_force,

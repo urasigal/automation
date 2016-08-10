@@ -17,7 +17,7 @@ public class FeederInuDeletionTest extends BaseTest{
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "mip", "port", "ip" , "testid"})
 	@Test
 	public void feederUdpInputTest(String userName, String userPass, String login_ip, String uiport , String mip, String port , String ip, String name,
-			String ssm , String  rtp_type , String  testid) throws InterruptedException 
+			String ssm , String  rtp_type , String  testid) throws Exception 
 	{
 		
 		this.testid = testid;

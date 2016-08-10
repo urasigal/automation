@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 
+
+
 import org.apache.commons.lang3.StringUtils;
 
 public class BroadcasterInitialSecuredLogin 
@@ -19,8 +21,9 @@ public class BroadcasterInitialSecuredLogin
 	 * @param      pass    			user password of a broadcaster user.
 	 * @param 	   bX_IP_ADDRESS    destination broadcaster IP address.
 	 * @param 	   uiport 			broadcaster UI port
+	 * @throws Exception 
 	 */
-	public String[] sendGet(String url, String user, String pass, String bX_IP_ADDRESS, String uiport) {
+	public String[] sendGet(String url, String user, String pass, String bX_IP_ADDRESS, String uiport) throws Exception {
 		String sessionID = null;
 		String responseCookieContainer[] = new String[2];
 		try {
@@ -75,6 +78,16 @@ public class BroadcasterInitialSecuredLogin
 			//System.out.println(sessionID);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+		}
+		
+		if(responseCookieContainer[0] == null || responseCookieContainer[1] == null)
+		{
+			throw new Exception(){
+				public String getMessage()
+				{
+					return "Loggin parameters are empty.";
+				}
+			};
 		}
 		return responseCookieContainer;
 	}

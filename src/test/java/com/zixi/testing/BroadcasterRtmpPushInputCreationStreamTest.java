@@ -35,7 +35,7 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 			String old, String fast_connect, String kompression,
 			String enc_type, String enc_key, String rec_history,
 			String rec_duration, String rtmp_url, String rtmp_name,
-			String rtmp_user, String testid) throws InterruptedException 
+			String rtmp_user, String testid) throws Exception 
 	{
 		
 		LOGGER.entering(getClass().getName(), "broadcasterRtmpPushTest");

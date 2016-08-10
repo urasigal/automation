@@ -33,7 +33,7 @@ public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
 	@Test
 	public void broadcasterSingleInputStreamstatisticAnilyzer(String userName,
 			String userPass, String Host, String login_ip, String uiport,
-			String id, String testduration,String testid) throws InterruptedException {
+			String id, String testduration,String testid) throws Exception {
 		this.testid = testid;
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");

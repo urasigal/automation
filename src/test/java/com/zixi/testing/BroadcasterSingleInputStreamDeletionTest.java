@@ -33,7 +33,7 @@ public class BroadcasterSingleInputStreamDeletionTest extends BaseTest {
 	@Test
 	public void broadcasterInputStreamDeletion(String login_ip,
 			String userName, String userPassword, String streamId,
-			String uiport, String testid) throws InterruptedException {
+			String uiport, String testid) throws Exception {
 		this.testid = testid;
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);

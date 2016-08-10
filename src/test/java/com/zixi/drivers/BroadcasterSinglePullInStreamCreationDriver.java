@@ -24,7 +24,7 @@ public class BroadcasterSinglePullInStreamCreationDriver extends
 			String nic, String max_outputs, String type, String password,
 			String mcast_port, String complete, String mcast_ip,
 			String fec_adaptive, String mcast_ttl, String on, String func,
-			String fec_force, String mcast_out, String propertiesFile) {
+			String fec_force, String mcast_out, String propertiesFile) throws Exception {
 		
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "Host:" + Host, "loin_ip:" + loin_ip, "id:" + id,

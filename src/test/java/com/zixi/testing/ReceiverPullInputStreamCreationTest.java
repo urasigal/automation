@@ -28,7 +28,7 @@ public class ReceiverPullInputStreamCreationTest extends BaseTest{
 			String fec_latency, String fec_overhead, String host,
 			String latency, String min_bit, String name, String nic,
 			String port, String session, String stream,String testid)
-			throws InterruptedException {
+			throws Exception {
 		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "dec_key",

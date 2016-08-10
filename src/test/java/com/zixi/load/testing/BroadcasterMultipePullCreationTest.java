@@ -36,7 +36,7 @@ public class BroadcasterMultipePullCreationTest extends BaseTest
 			String password, String mcast_port, String complete,
 			String mcast_ip, String fec_adaptive, String mcast_ttl, String on,
 			String func, String fec_force, String mcast_out,
-			String propertiesFile,String number_of_streams,  String testid) throws InterruptedException, ExecutionException {
+			String propertiesFile,String number_of_streams,  String testid) throws Exception {
 		
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);

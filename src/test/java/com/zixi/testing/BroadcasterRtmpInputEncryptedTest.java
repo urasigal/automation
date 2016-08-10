@@ -39,7 +39,7 @@ public class BroadcasterRtmpInputEncryptedTest extends BaseTest {
 			String rtmp_user, String rtmp_bitrate, String rtmp_passwd,
 			String uiport, String mcast_ttl, String rtmp_latency,
 			String mcast_out, String complete, String max_outputs, String on,
-			String testid) throws InterruptedException {
+			String testid) throws Exception {
 		this.testid = testid;
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);

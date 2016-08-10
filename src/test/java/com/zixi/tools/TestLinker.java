@@ -23,7 +23,7 @@ public void testInit() {
 
 	@Parameters({"userName", "userPass", "login_ip", "uiport"})
 	@Test
-	public void setToBlockedStatusTestLinkedTests(String userName, String userPass, String login_ip, String uiport) throws InterruptedException, TestLinkAPIException, IOException 
+	public void setToBlockedStatusTestLinkedTests(String userName, String userPass, String login_ip, String uiport) throws Exception 
 	{
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		Assert.assertEquals(((TestLinkerDriver) testDriver).testIMPL(version),

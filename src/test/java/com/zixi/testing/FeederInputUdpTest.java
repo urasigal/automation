@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import com.zixi.drivers.*;
 
 
@@ -18,7 +19,7 @@ public class FeederInputUdpTest extends BaseTest{
 				"ssm", "rtp_type", "testid"})
 	@Test
 	public void feederUdpInputTest(String userName, String userPass, String login_ip, String uiport , String mip, String port , String ip, String name,
-			String ssm , String  rtp_type , String  testid) throws InterruptedException 
+			String ssm , String  rtp_type , String  testid) throws Exception 
 	{
 		
 		this.testid = testid;

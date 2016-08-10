@@ -9,7 +9,7 @@ import com.zixi.threads.ZthreadPool;
 import com.zixi.tools.BroadcasterLoggableApiWorker;
 
 public class BroadcaserAllOutputStreamDeletorDriver extends BroadcasterLoggableApiWorker implements TestDriver{
-	public String testIMPL(String... args) throws InterruptedException, ExecutionException
+	public String testIMPL(String... args) throws Exception
 	{	
 		// Pass parameters to arrayList in order to provide them to ZthreadPool.
 		ArrayList<String> parameters = new ArrayList<String>(Arrays.asList(args));

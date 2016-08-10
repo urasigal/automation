@@ -19,7 +19,7 @@ public class BroadcasterTranscoderDeletProfileTest extends BaseTest{
 	@Test
 	public void broadcasterDeleteProfile(String userName,
 			String userPass, String login_ip, String uiport, String profile_name, String testid)
-			throws InterruptedException {
+			throws Exception {
 
 		this.testid = testid;
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");

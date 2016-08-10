@@ -22,7 +22,7 @@ public class ReceiverInputStatisticTest extends BaseTest {
 	@Test
 	public void receiverInputStatistic(String userName, String userPassword,
 			String login_ip, String uiport, String id, String testduration,
-			String testid) throws InterruptedException {
+			String testid) throws Exception {
 		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id",

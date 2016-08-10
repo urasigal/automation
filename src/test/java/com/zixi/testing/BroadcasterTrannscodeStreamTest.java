@@ -27,7 +27,7 @@ public class BroadcasterTrannscodeStreamTest extends BaseTest {
 			String kompression, String enc_type, String enc_key,
 			String rec_history, String rec_duration, String src, String ap,
 			String bit, String profile_name, String testid)
-			throws InterruptedException {
+			throws Exception {
 
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		

@@ -22,7 +22,7 @@ public class ReceiverUdpOutCreationTest extends BaseTest {
 			String login_ip, String uiport, String name, String target,
 			String type, String nic, String ttl, String smoothing, String rtp,
 			String fec, String rows, String cols, String remux_bitrate, String input_stream,
-			String testid) throws InterruptedException {
+			String testid) throws Exception {
 		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",

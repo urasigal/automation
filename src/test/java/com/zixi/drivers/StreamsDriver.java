@@ -12,7 +12,7 @@ BroadcasterLoggableApiWorker implements TestDriver{
 	
 	private ApiWorkir apiWorker = new ApiWorkir();
 	
-	public String getInputStreamIdByName(String name, String loin_ip, String uiport, String userName, String  userPass)
+	public String getInputStreamIdByName(String name, String loin_ip, String uiport, String userName, String  userPass) throws Exception
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://"
 				+ loin_ip + ":" + uiport + "/login.htm", userName, userPass,
@@ -22,7 +22,7 @@ BroadcasterLoggableApiWorker implements TestDriver{
 				responseCookieContainer, loin_ip, this, uiport), name);
 	}
 	
-	public String getOutputStreamIdByName(String name, String loin_ip, String uiport, String userName, String  userPass)
+	public String getOutputStreamIdByName(String name, String loin_ip, String uiport, String userName, String  userPass) throws Exception
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://"
 				+ loin_ip + ":" + uiport + "/login.htm", userName, userPass,
@@ -32,7 +32,7 @@ BroadcasterLoggableApiWorker implements TestDriver{
 				responseCookieContainer, loin_ip, this, uiport), name);
 	}
 	
-	public ArrayList<String> broadcasterGetOutputStreamsIds(String login_ip, String uiport, String userName, String  userPass)
+	public ArrayList<String> broadcasterGetOutputStreamsIds(String login_ip, String uiport, String userName, String  userPass) throws Exception
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://"
 				+ login_ip + ":" + uiport + "/login.htm", userName, userPass, login_ip, uiport);
@@ -46,7 +46,7 @@ BroadcasterLoggableApiWorker implements TestDriver{
 		return JsonParser.getTranscoderProfiles(supplier.get(), profile_name);
 	}
 	
-	public int getInputStreamBitrate(String name, String loin_ip, String uiport, String userName, String  userPass)
+	public int getInputStreamBitrate(String name, String loin_ip, String uiport, String userName, String  userPass) throws Exception
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://"
 				+ loin_ip + ":" + uiport + "/login.htm", userName, userPass,
@@ -57,7 +57,7 @@ BroadcasterLoggableApiWorker implements TestDriver{
 	}
 	
 	// This function is using to get the source of a receiver's input stream.
-	public String getIpAddressOfActiveInputStreamOnReceiver(String name, String loin_ip, String uiport, String userName, String  userPass)
+	public String getIpAddressOfActiveInputStreamOnReceiver(String name, String loin_ip, String uiport, String userName, String  userPass) throws Exception
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://"
 				+ loin_ip + ":" + uiport + "/login.htm", userName, userPass,

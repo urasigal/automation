@@ -22,7 +22,7 @@ public class FeederPostKeyTest extends BaseTest{
 	// Test parameters - these parameters will be provided through an appropriate suite's XML file.
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "testid"})
 	@Test
-	public void uploadPrivateKeyToFeeder(String userName, String userPass, String login_ip, String uiport, String testid) throws InterruptedException, IOException {
+	public void uploadPrivateKeyToFeeder(String userName, String userPass, String login_ip, String uiport, String testid) throws Exception {
 		
 		this.testid = testid;
 		

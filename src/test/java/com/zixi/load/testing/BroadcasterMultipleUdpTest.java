@@ -33,7 +33,7 @@ public class BroadcasterMultipleUdpTest extends BaseTest
 				String complete, String max_outputs, String on, String port,String stream, String streamname, String host, String id_bx2, String rtp,
 				String fec, String smoothing, String ttl, String remux_bitrate, String df, String local_port, String dec_key, String type_bx2, String rows, 
 				String remux_buff, String local_ip, String remux_restampdts, String uiport_bx2, String remux_pcr, String dec_type, String cols, String number_of_streams,
-				String testid) throws InterruptedException, ExecutionException {
+				String testid) throws Exception {
 			
 			
 			this.version = productAboutDriver.getBroadcasterVersion(login_ip_bx1, uiport_bx1, userName_bx1, userPass_bx1);

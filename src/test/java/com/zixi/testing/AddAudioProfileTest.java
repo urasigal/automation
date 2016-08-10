@@ -27,7 +27,7 @@ public class AddAudioProfileTest extends BaseTest{
 	@Test
 	public void broadcasterPullInCreation(String userName, String userPass, String login_ip, String uiport, String profile_name, String enc, 
 			String bitrate, String profile , String testid)
-			throws InterruptedException {
+			throws Exception {
 		// Set the "testid" parameter to an "extended" class property.
 		this.testid = testid; 
 		

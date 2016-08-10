@@ -9,7 +9,7 @@ TestDriver{
 
 	public String testIMPL(String userName, String userPass, String login_ip,
 			String uiport, String mip, String port, String ip, String name,
-			String ssm, String rtp_type) {
+			String ssm, String rtp_type) throws Exception {
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,

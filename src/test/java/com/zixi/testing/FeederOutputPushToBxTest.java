@@ -32,7 +32,7 @@ public class FeederOutputPushToBxTest extends BaseTest{
 			String stop_on_drop, String mmt, String smoothing, String limited,
 			String minbps, String lim_enc_addr, String pad_to_cbr,
 			String rtmp_feedback, String ohst, String oprt, String onic,
-			String oalt,String bonded, String uiport,String testid) throws InterruptedException {
+			String oalt,String bonded, String uiport,String testid) throws Exception {
 		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "name", "mip", "port",
@@ -78,7 +78,7 @@ public void feederOutputToBxTestAutomaticRtmp(String userName,
 		String rtmp_feedback, String ohst, String oprt, String onic,
 		String oalt,String bonded, String rtmp_stream,String rtmp_url ,
 		String rtmp_user,String rtmp_pass, String rtmp_url2, String rtmp_hot, 
-		String uiport,String testid) throws InterruptedException {
+		String uiport,String testid) throws Exception {
 	this.testid = testid;
 	
 	testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "name", "mip", "port",

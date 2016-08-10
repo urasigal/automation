@@ -19,7 +19,7 @@ public class BroadcasterAdaptiveGroupDeletionTest extends BaseTest{
 	@Test
 	public void receiverOutputUdpTest(String userName, String userPass,
 			String login_ip, String uiport, String name, String testid)
-			throws InterruptedException {
+			throws Exception {
 		this.testid = testid;
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.

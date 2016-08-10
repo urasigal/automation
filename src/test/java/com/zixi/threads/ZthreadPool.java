@@ -35,7 +35,7 @@ public class ZthreadPool
 	}
 	
 	
-	public String executeDeleteAll() throws InterruptedException, ExecutionException 
+	public String executeDeleteAll() throws Exception 
 	{
 		// Container for the callable tasks.
 		ArrayList<Callable<String>> callablesZtasks = new ArrayList<Callable<String>>();
@@ -51,7 +51,7 @@ public class ZthreadPool
 			int index = i;
 			callablesZtasks.add(new Callable<String>()
 			{
-				public String call()
+				public String call() throws Exception
 				{ 
 					ApiWorkir apiworker = new ApiWorkir();
 					//login_ip, userName, userPassword, uiport
@@ -107,7 +107,7 @@ public class ZthreadPool
 			// Add and create a callable tasks for RTMP output stream creation. 
 			callablesZtasks1.add(new Callable<String>()
 			{
-				public String call()
+				public String call() throws Exception
 				{
 					String results = ((BroadcasterRtmpPushOutputCreationDriver)driver1).testIMPL(
 					tempParameters.get(0), //login_ipBX1 login_ip
@@ -138,7 +138,7 @@ public class ZthreadPool
 			// Add and create a callable tasks for RTMP push input stream creation. 
 			callablesZtasks2.add(new Callable<String>()
 			{
-				public String call()
+				public String call() throws Exception
 				{
 					
 					String results = ((BroadcasterRtmpPushInputStreamDriver)driver2).testIMPL(tempParameters.get(2),tempParameters.get(5), tempParameters.get(1), tempParameters.get(7),
@@ -219,7 +219,7 @@ public class ZthreadPool
 			// Add and create a callable tasks for PUSH input stream creation. 
 			callablesZtasks1.add(new Callable<String>()
 			{
-				public String call()
+				public String call() throws Exception
 				{
 					String results = ((BroadcasterSingleUdpInCreationDriver)driver1).testIMPL(
 					tempParameters.get(0), // 
@@ -253,7 +253,7 @@ public class ZthreadPool
 			// Add and create a callable tasks for RTMP push input stream creation. 
 			callablesZtasks2.add(new Callable<String>()
 			{
-				public String call()
+				public String call() throws Exception
 				{
 					String results = ((BroadcasterUdpOutputCreationDriver)driver2).testIMPL(
 					tempParameters.get(1),
@@ -349,7 +349,7 @@ public class ZthreadPool
 			// Add and create a callable tasks for PUSH input stream creation. 
 			callablesZtasks1.add(new Callable<String>()
 			{
-				public String call()
+				public String call() throws Exception
 				{
 					String results = ((BroadcasterPushInStreamCreationDriver)driver1).testIMPL(
 					tempParameters.get(0), // userName
@@ -378,7 +378,7 @@ public class ZthreadPool
 			// Add and create a callable tasks for RTMP push input stream creation. 
 			callablesZtasks2.add(new Callable<String>()
 			{
-				public String call()
+				public String call() throws Exception
 				{
 					String results = ((BroadcasterPushOutStreamCreationDriver)driver2).testIMPL(
 					tempParameters.get(1),
@@ -463,7 +463,7 @@ public class ZthreadPool
 			// Add and create a callable tasks. 
 			callablesZtasks.add(new Callable<String>()
 			{
-				public String call()
+				public String call() throws Exception
 				{
 //					userName, userPass, login_ip, rtmp_nulls, id, rtmp_url, rtmp_name, time_shift, mcast_ip, mcast_force, mcast_port, type,
 //					rtmp_user, rtmp_bitrate, rtmp_passwd, uiport, mcast_ttl, rtmp_latency, mcast_out, complete, max_outputs, on, number_of_streams

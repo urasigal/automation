@@ -21,7 +21,7 @@ public class FeederUdpOutToFfmpegTest extends BaseTest{
 	@Test
 	public void broadcasterSingleStreamRemoving(String userName, String userPass, String login_ip, String uiport, String name, String mip,
 			String port, String ip, String prog, String chan, String oh,
-			String op, String onic, String ottl, String osmooth,String testid) throws InterruptedException {
+			String op, String onic, String ottl, String osmooth,String testid) throws Exception {
 		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "name", "mip",

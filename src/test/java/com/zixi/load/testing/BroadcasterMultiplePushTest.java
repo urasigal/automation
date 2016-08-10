@@ -32,7 +32,7 @@ public class BroadcasterMultiplePushTest extends BaseTest{
 			String type_bx1, String uiport_bx1, String analyze, String mcast_ttl, String id_bx1, String mcast_out,
 			String complete, String max_outputs, String on, String password, String host, String latency_bx2, String fec_force, String session, 
 			String fec_adaptive, String nic, String fec_block, String type_bx2, String snames, String fec_aware, String fec_overhead, String stream, 
-			String port, String uiport_bx2, String alias, String id_bx2, String number_of_streams, String testid) throws InterruptedException, ExecutionException {
+			String port, String uiport_bx2, String alias, String id_bx2, String number_of_streams, String testid) throws Exception {
 		
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip_bx1, uiport_bx1, userName_bx1, userPass_bx1);

@@ -33,7 +33,7 @@ public class BroadcasterPushOutStreamCreationTest extends BaseTest {
 			String session, String fec_adaptive, String nic, String fec_block,
 			String type, String snames, String fec_aware, String fec_overhead,
 			String stream, String port, String uiport, String alias, String id,
-			String testid) throws InterruptedException {
+			String testid) throws Exception {
 		this.testid = testid;
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);

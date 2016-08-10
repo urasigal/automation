@@ -14,7 +14,7 @@ public class FeederPostKeyDriver extends BroadcasterLoggableApiWorker implements
 	FileInputStream fileInputStream=null;
 	File sppk = null;
 	 
-	public String testIMPL(String userName, String userPass, String login_ip, String uiport) throws IOException  
+	public String testIMPL(String userName, String userPass, String login_ip, String uiport) throws Exception  
 	{
 		// Post request content.
 		sppk  = new File("src/main/resources/sppk"); // Open a file which contains a RCA key.

@@ -29,7 +29,7 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 	private String internalStreamName = null;
 	final private String rid = "id";
 	
-	public String testIMPL(String login_ip,String userName,String userPassword,String name,String uiport)
+	public String testIMPL(String login_ip,String userName,String userPassword,String name,String uiport) throws Exception
 	{
 		testParameters = new TestParameters("login_ip:"+login_ip,"userName:"+userName ,"userPassword:"+userPassword ,"name:"+name ,"uiport:"+uiport);
 		String response;

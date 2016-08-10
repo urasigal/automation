@@ -35,7 +35,7 @@ public class BroadcasterMultipleRtmpPushTest extends BaseTest{
 			String static_latency, String dec_type, String dec_key, String password, String typeBX2, String id, String matrixBX2, 
 			String max_outputs, String mcast_out, String time_shift,String old,
 			String fast_connect, String kompression,String enc_type, String enc_key, String rec_history, String rec_duration, String rtmp_url,
-			String rtmp_name, String rtmp_user, String number_of_streams, String testid) throws InterruptedException, ExecutionException 
+			String rtmp_name, String rtmp_user, String number_of_streams, String testid) throws Exception 
 	{	
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX1,  "22",  "pidof zixi_broadcaster");

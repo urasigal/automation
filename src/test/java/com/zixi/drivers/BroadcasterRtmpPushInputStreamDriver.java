@@ -19,7 +19,7 @@ public class BroadcasterRtmpPushInputStreamDriver extends BroadcasterLoggableApi
 			String old, String fast_connect, String kompression,
 			String enc_type, String enc_key, String rec_history,
 			String rec_duration, String rtmp_url, String rtmp_name,
-			String rtmp_user) {
+			String rtmp_user) throws Exception {
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
 				userPass, login_ip, uiport);

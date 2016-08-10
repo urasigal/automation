@@ -42,7 +42,7 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 			String type, String multicast, String enc_key, String kompression,
 			String uiport, String mcast_ttl, String enc_type, String mcast_out,
 			String complete, String max_outputs, String on,String testid)
-			throws InterruptedException {
+			throws Exception { 
 		this.testid = testid;
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
@@ -64,9 +64,15 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 		
 		
 		 prerequisitor  = (param) -> {BroadcasterSingleInputStreamDeletionDriver testDriver = new BroadcasterSingleInputStreamDeletionDriver();
-		 							 testDriver.removeInput( param[2], param[0], param[1], param[4], param[17]);};
+		 							 try {
+										testDriver.removeInput( param[2], param[0], param[1], param[4], param[17]);
+									} catch (Exception e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}};
 		 prerequisitor.setToExecutionLevel(params);
-		Assert.assertEquals(((BroadcasterSingleUdpInCreationDriver) testDriver)
+		
+		 Assert.assertEquals(((BroadcasterSingleUdpInCreationDriver) testDriver)
 				.testIMPL(userName, userPass, login_ip, ts_port, id, rtp_type,
 						multi_src, max_bitrate, time_shift, mcast_ip,
 						mcast_force, mcast_port, nic, type, multicast, enc_key,

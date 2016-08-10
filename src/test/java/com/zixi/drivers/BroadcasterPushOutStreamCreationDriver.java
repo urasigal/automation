@@ -36,7 +36,7 @@ public class BroadcasterPushOutStreamCreationDriver extends BroadcasterLoggableA
 			String host, String latency, String fec_force, String session,
 			String fec_adaptive, String nic, String fec_block, String type,
 			String snames, String fec_aware, String fec_overhead,
-			String stream, String port, String uiport, String alias, String id) {
+			String stream, String port, String uiport, String alias, String id) throws Exception {
 		
 		testParameters = new TestParameters("userName:"+ userName ,"userPass:"+ userPass ,"login_ip:"+ login_ip
 				,"host:"+ host ,"latency:"+ latency ,"fec_force:"+ fec_force ,"session:"+ session

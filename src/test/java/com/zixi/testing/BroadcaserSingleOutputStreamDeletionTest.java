@@ -31,7 +31,7 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 	// Test parameters.
 	@Parameters({ "login_ip","userName","userPassword","id","uiport", "testid"})
 	@Test
-	public void broadcasterSingleStreamRemoving(String login_ip,String userName,String userPassword,String id,String uiport,String testid) throws InterruptedException 
+	public void broadcasterSingleStreamRemoving(String login_ip,String userName,String userPassword,String id,String uiport,String testid) throws Exception 
 	{
 		//Print this class name to the log file.
 		getLoggerInstance().info(getClass().getName());

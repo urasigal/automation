@@ -25,7 +25,7 @@ public class BroadcasterAddIntelTranscoderProfileTest extends BaseTest {
 			String b_frames, String frame_type, String profile, String level, String bitrate_mode,
 			String ref_frames, String hrd, String idr_int, String cavlc, String brightness, String contrast, String fps,
 			String width, String height, String crf, String tune, String max_bitrate, String testid)
-			throws InterruptedException {
+			throws Exception {
 
 		this.testid = testid;
 		

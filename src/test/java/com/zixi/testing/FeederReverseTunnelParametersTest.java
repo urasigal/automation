@@ -23,7 +23,7 @@ public class FeederReverseTunnelParametersTest extends BaseTest{
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "on", "target_port", "target_ip", "remote_port", "testid"})
 	@Test
 	public void uploadPrivateKeyToFeeder( String userName, String userPass, String login_ip, String uiport, String on, 
-			String target_port, String target_ip, String remote_port, String testid) throws InterruptedException, IOException, JSchException {
+			String target_port, String target_ip, String remote_port, String testid) throws Exception {
 		
 		this.testid = testid;
 		

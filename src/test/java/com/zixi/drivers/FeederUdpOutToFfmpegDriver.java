@@ -2,6 +2,7 @@ package com.zixi.drivers;
 
 import com.zixi.tools.ApiWorkir;
 import com.zixi.tools.BroadcasterLoggableApiWorker;
+
 import static com.zixi.globals.Macros.*;
 
 public class FeederUdpOutToFfmpegDriver extends BroadcasterLoggableApiWorker implements TestDriver{
@@ -10,7 +11,7 @@ public class FeederUdpOutToFfmpegDriver extends BroadcasterLoggableApiWorker imp
 	public String testIMPL(String userName, String userPass, String login_ip,
 			String uiport, String name, String mip, String port, String ip,
 			String prog, String chan, String oh, String op, String onic,
-			String ottl, String osmooth) {
+			String ottl, String osmooth) throws Exception {
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,

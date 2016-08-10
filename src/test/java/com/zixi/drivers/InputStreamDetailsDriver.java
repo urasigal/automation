@@ -11,14 +11,14 @@ implements TestDriver{
 	
 	private ApiWorkir apiWorker = new ApiWorkir();
 	
-	private void logIn(String login_ip, String uiport, String userName, String userPass)
+	private void logIn(String login_ip, String uiport, String userName, String userPass) throws Exception
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" +
 				 login_ip + ":" + uiport + "/login.htm", userName, userPass,
 				login_ip, uiport);
 	}
 	
-	public String findSourceIpOfInputStream(String id , String login_ip, String uiport, String userName, String userPass)
+	public String findSourceIpOfInputStream(String id , String login_ip, String uiport, String userName, String userPass) throws Exception
 	{
 		JsonParser jsonParser  = new JsonParser();
 		logIn(login_ip, uiport, userName, userPass);
@@ -26,7 +26,7 @@ implements TestDriver{
 				77, responseCookieContainer, login_ip, this, uiport), id);
 	}
 	
-	public String findSourceIpOfOutputStream(String id , String login_ip, String uiport, String userName, String userPass)
+	public String findSourceIpOfOutputStream(String id , String login_ip, String uiport, String userName, String userPass) throws Exception
 	{
 		JsonParser jsonParser  = new JsonParser();
 		logIn(login_ip, uiport, userName, userPass);
@@ -36,7 +36,7 @@ implements TestDriver{
 	
 	
 	// Testing main function, coment it out if no needed - not in the testing mode.
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
 		InputStreamDetailsDriver inputStreamDetailsDriver = new InputStreamDetailsDriver();
 		System.out.println(inputStreamDetailsDriver.findSourceIpOfInputStream("best", "10.7.0.91", "4444", "admin", "1234")); 

@@ -23,7 +23,7 @@ public class BroadcasterCreateAddaptiveGroupTest extends BaseTest {
 			String zixi, String hls, String hds, String mpd, String mmt,
 			String compress_zixi, String multicast, String streams,
 			String bitrates, String max_time, String testid)
-			throws InterruptedException {
+			throws Exception {
 		this.testid = testid;
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.

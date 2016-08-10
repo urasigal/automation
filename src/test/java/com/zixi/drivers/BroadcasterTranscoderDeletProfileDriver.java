@@ -13,7 +13,7 @@ BroadcasterLoggableApiWorker implements TestDriver
 {
 
 	public String testIMPL(String userName, String userPass, String login_ip,
-			String uiport, String profile_name) {
+			String uiport, String profile_name) throws Exception {
 		
 		int pid = -8;
 

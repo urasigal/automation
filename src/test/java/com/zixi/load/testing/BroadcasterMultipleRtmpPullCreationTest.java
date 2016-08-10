@@ -31,7 +31,7 @@ public class BroadcasterMultipleRtmpPullCreationTest extends BaseTest
 	public void broadcasterMultipleRtmpPullInCreation(String userName, String userPass, String login_ip, String rtmp_nulls, String id, String rtmp_url,
 			String rtmp_name, String time_shift, String mcast_ip, String mcast_force, String mcast_port, String type,
 			String rtmp_user, String rtmp_bitrate, String rtmp_passwd, String uiport, String mcast_ttl, String rtmp_latency, String mcast_out, 
-			String complete, String max_outputs, String on, String number_of_streams, String testid) throws InterruptedException, ExecutionException
+			String complete, String max_outputs, String on, String number_of_streams, String testid) throws Exception
 	{
 		// Get a SUT build number - SSH access is required. 
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);

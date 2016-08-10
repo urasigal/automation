@@ -18,7 +18,7 @@ public class BroadcasterPullOutputTest extends BaseTest{
 	@Test
 	public void broadcasterPullInCreation(String userName,String userPass, String login_ip, String uiport, String type, String name, String stream, String matrix, String alt_stream,
 			String remote_id, String session, String latency, String session_auth, String stats_hist ,String testid)
-			throws InterruptedException {
+			throws Exception {
 		this.testid = testid;
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");

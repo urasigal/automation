@@ -5,6 +5,7 @@ import static com.zixi.globals.Macros.FEEDER_SSH_SERVER_STATUS;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+
 import static com.zixi.globals.Macros.*; 
 
 import com.zixi.tools.BroadcasterLoggableApiWorker;
@@ -12,7 +13,7 @@ import com.zixi.tools.BroadcasterLoggableApiWorker;
 public class FeederReverseTunnelParametersDriver extends BroadcasterLoggableApiWorker implements TestDriver{
 	
 	 
-	public String testIMPL(String userName, String userPass, String login_ip, String uiport, String on, String target_port, String target_ip, String remote_port) throws IOException  
+	public String testIMPL(String userName, String userPass, String login_ip, String uiport, String on, String target_port, String target_ip, String remote_port) throws Exception  
 	{
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPass, login_ip, uiport);
 		

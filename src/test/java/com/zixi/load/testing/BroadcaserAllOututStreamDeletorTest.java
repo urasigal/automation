@@ -24,7 +24,7 @@ public class BroadcaserAllOututStreamDeletorTest extends BaseTest{
 	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "testid" })
 	@Test
 	public void broadcasterDeleteAllOutputStreams(String login_ip,
-			String userName, String userPassword, String uiport, String testid) throws InterruptedException, ExecutionException {
+			String userName, String userPassword, String uiport, String testid) throws Exception {
 		this.testid = testid;
 		
 		// Get broadcaster PID in the beginning of the test.

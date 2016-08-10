@@ -17,7 +17,7 @@ public class Ztask implements Callable<String> {
 		this.parameters = parameters;
 	}
 	
-	public String call() 
+	public String call() throws Exception 
 	{
 		String results = ((BroadcasterSinglePullInStreamCreationDriver)driver).testIMPL(parameters.get(0), parameters.get(1), parameters.get(2), parameters.get(3), parameters.get(4), 
 				parameters.get(5), parameters.get(6), parameters.get(7), parameters.get(8), parameters.get(9), parameters.get(10), parameters.get(11), parameters.get(12), 

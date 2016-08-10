@@ -35,7 +35,7 @@ public class BroadcasterPushInStreamCreationWithHighPriorityTest extends BaseTes
 			String mcast_force, String mcast_port, String type, String uiport,
 			String analyze, String mcast_ttl, String id, String mcast_out,
 			String complete, String max_outputs, String on, String password, String priority_ids,
-			String testid) throws InterruptedException {
+			String testid) throws Exception {
 		this.testid = testid;
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);

@@ -12,7 +12,7 @@ implements TestDriver{
 	
 	
 	public String testIMPL(String userName, String userPass, String login_ip,
-			String uiport, String id) {
+			String uiport, String id) throws Exception {
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,

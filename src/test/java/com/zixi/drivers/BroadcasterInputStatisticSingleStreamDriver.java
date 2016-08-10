@@ -23,8 +23,7 @@ public class BroadcasterInputStatisticSingleStreamDriver extends
 	final private static String HTTP = "http://";
 	final private static String FUNCTION = "/input_stream_stats.json?"; 
 	
-	public String testStatistic(String userName, String userPass, String host,
-			String loin_ip, String uiport, String id, String testduration) {
+	public String testStatistic(String userName, String userPass, String host,String loin_ip, String uiport, String id, String testduration) throws Exception {
 		
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "host:" + host, "loin_ip:" + loin_ip, "uiport:"

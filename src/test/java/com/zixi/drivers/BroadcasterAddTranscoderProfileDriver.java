@@ -15,7 +15,7 @@ public class BroadcasterAddTranscoderProfileDriver extends
 			String profile, String level, String bitrate_mode,
 			String ref_frames, String idr_int, String cavlc, String brightness,
 			String contrast, String fps, String width, String height,
-			String max_bitrate) {
+			String max_bitrate) throws Exception {
 
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "login_ip:" + login_ip, "uiport:" + uiport,
@@ -54,7 +54,7 @@ public class BroadcasterAddTranscoderProfileDriver extends
 			String enc, String bitrate, String gop, String fixed_gop, String closed_gop, String copy_gop, String performance,
 			String b_frames, String frame_type, String profile, String level, String bitrate_mode,
 			String ref_frames, String hrd, String idr_int, String cavlc, String brightness, String contrast, String fps,
-			String width, String height, String crf, String tune, String max_bitrate) {
+			String width, String height, String crf, String tune, String max_bitrate) throws Exception {
 
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
 				+ userPass, "login_ip:" + login_ip, "uiport:" + uiport,

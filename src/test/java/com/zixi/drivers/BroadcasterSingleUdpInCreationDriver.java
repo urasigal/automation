@@ -43,7 +43,7 @@ public class BroadcasterSingleUdpInCreationDriver extends BroadcasterLoggableApi
 			String loin_ip, String ts_port, String id,String rtp_type,String multi_src, String max_bitrate,
 			String time_shift,String mcast_ip,String mcast_force, String mcast_port, String nic,String type,String multicast,
 			String enc_key, String kompression,
-			String uiport,String mcast_ttl,String enc_type,String mcast_out,String complete,String max_outputs,String on) {
+			String uiport,String mcast_ttl,String enc_type,String mcast_out,String complete,String max_outputs,String on) throws Exception {
 		testParameters = new TestParameters("userName:"+userName, "userPass:"+userPass, "loin_ip:"+loin_ip, "ts_port:"+ts_port, "id:"+id,
 				"rtp_type:"+rtp_type, "multi_src:"+multi_src, "max_bitrate:"+max_bitrate, "time_shift:"+time_shift, "mcast_ip:"+mcast_ip, 
 				"mcast_force:"+mcast_force, "mcast_port:"+mcast_port, "nic:"+nic, "type:"+type, "multicast:"+multicast, "enc_key:"+enc_key,"kompression:"+kompression);

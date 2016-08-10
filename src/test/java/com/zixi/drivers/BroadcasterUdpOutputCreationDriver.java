@@ -17,7 +17,7 @@ public class BroadcasterUdpOutputCreationDriver extends BroadcasterLoggableApiWo
 			String remux_bitrate, String df, String local_port, String dec_key,
 			String type, String rows, String remux_buff, String local_ip,
 			String remux_restampdts, String uiport, String remux_pcr,
-			String dec_type, String cols) 
+			String dec_type, String cols) throws Exception 
 	{
 		testParameters = new TestParameters("userName:"+ userName, "userPass:"+ userPass, "loin_ip:"+ loin_ip,
 				"port:"+ port, "stream:"+ stream, "streamname:"+ streamname, "host:"+ host,

@@ -46,7 +46,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 	public void redundancyFxFxBx(String udp_port, String bx_stream_id, String middle_bx_login_ip, 
 			String middle_bx_uiport, String middle_bx_userName, 
 			String middle_bx_userPass, String sshUser, String sshPassword, String sshPort, 
-			String command, String testid) throws InterruptedException, IOException, JSchException 
+			String command, String testid) throws Exception 
 	{
 		this.testid = testid;
 		
@@ -100,7 +100,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 	public void redundancyFxFxBxMevatek(String udp_port, String bx_stream_id, String middle_bx_login_ip, 
 			String middle_bx_uiport, String middle_bx_userName, 
 			String middle_bx_userPass, String sshUser, String sshPassword, String sshPort, 
-			String command, String testid) throws InterruptedException, IOException, JSchException 
+			String command, String testid) throws Exception 
 	{
 		this.testid = testid;
 		
@@ -174,7 +174,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 	public void redundancyFxFxBxBXMevatek(String udp_port, String bx_stream_id, String middle_bx_login_ip, 
 			String middle_bx_uiport, String middle_bx_userName, 
 			String middle_bx_userPass, String sshUser, String sshPassword, String sshPort, 
-			String command, String testid) throws InterruptedException, IOException, JSchException 
+			String command, String testid) throws Exception 
 	{
 		this.testid = testid;
 		
@@ -250,7 +250,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 	public void redundancyFxFxRx(String udp_port, String bx_stream_id, String middle_bx_login_ip, 
 			String middle_bx_uiport, String middle_bx_userName, 
 			String middle_bx_userPass, String sshUser, String sshPassword, String sshPort, 
-			String command, String testid) throws InterruptedException, IOException, JSchException 
+			String command, String testid) throws Exception 
 	{
 		this.testid = testid;
 		
@@ -303,7 +303,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 	public void redundancyBxRxRx(String udp_port, String bx_stream_id, String middle_bx_login_ip, 
 			String middle_bx_uiport, String middle_bx_userName, 
 			String middle_bx_userPass, String sshUser, String sshPassword, String sshPort, 
-			String command, String testid) throws InterruptedException, IOException, JSchException 
+			String command, String testid) throws Exception 
 	{
 		this.testid = testid; // This field is used in a testlink integration.
 		String sshLoginIp;

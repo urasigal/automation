@@ -36,7 +36,7 @@ public class BroadcasterUDPOutputStreamCreationTest extends BaseTest{
 			String dec_key, String type, String rows, String remux_buff,
 			String local_ip, String remux_restampdts, String uiport,
 			String remux_pcr, String dec_type, String cols,String testid)
-			throws InterruptedException {
+			throws Exception {
 		this.testid = testid;
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");

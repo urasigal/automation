@@ -11,7 +11,7 @@ public class DeleteAudioProfileDriver extends BroadcasterLoggableApiWorker imple
 {
 
 	public String testIMPL(String userName, String userPass, String login_ip,
-			String uiport, String profile_name, String testid) {
+			String uiport, String profile_name, String testid) throws Exception {
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,

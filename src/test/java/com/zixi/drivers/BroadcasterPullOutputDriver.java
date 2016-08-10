@@ -13,7 +13,7 @@ BroadcasterLoggableApiWorker implements TestDriver {
 	
 	public String testIMPL(String userName, String userPass, String login_ip, String uiport, 
 			String type, String name, String stream, String matrix, String alt_stream, String 
-			remote_id, String session, String latency, String session_auth, String stats_hist) 
+			remote_id, String session, String latency, String session_auth, String stats_hist)  throws Exception 
 	{
 		testParameters = new TestParameters( "userName:" + userName,  "userPass:"+ userPass, "login_ip:"+login_ip,  "uiport:"+uiport, 
 				 "type:"+ type,  "name:"+ name,  "stream:"+ stream,  "matrix:"+matrix,  "alt_stream:"+ alt_stream,  

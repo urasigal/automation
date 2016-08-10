@@ -3,6 +3,7 @@ package com.zixi.drivers;
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
 import com.zixi.tools.BroadcasterLoggableApiWorker;
+
 import static com.zixi.globals.Macros.*;
 
 public class BroadcasterAdaptiveGroupDeletionDriver extends BroadcasterLoggableApiWorker
@@ -13,7 +14,7 @@ public class BroadcasterAdaptiveGroupDeletionDriver extends BroadcasterLoggableA
 	private TestParameters testParameters;
 
 	public String testIMPL(String userName, String userPass, String login_ip,
-			String uiport, String name) {
+			String uiport, String name) throws Exception {
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(
 				"http://" + login_ip + ":" + uiport + "/login.htm", userName,
 				userPass, login_ip, uiport);
