@@ -262,7 +262,7 @@
 		<parameter name="complete" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="on" value="1" />
-		<parameter name="testid" value="2864" />
+		<parameter name="testid" value="4025" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterRtmpInputEncryptedTest"/>
 		</classes>
@@ -293,24 +293,24 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="aes256" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="2866" />  
+		<parameter name="testid" value="4027" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
 	<test name="FFMPEG test encryption 256">
-		<parameter name="testid" value="2868" />  
+		<parameter name="testid" value="4029" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-   <test name="Broadcaster - Remove udp output stream ryption 256 ">
+   <test name="Broadcaster - Remove udp output stream enryption 256">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="2870" />  
+		<parameter name="testid" value="4031" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -322,7 +322,7 @@
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="2872" />  
+		<parameter name="testid" value="4033" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>

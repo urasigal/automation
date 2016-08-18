@@ -152,8 +152,8 @@ public class ZthreadPool
 		}
 		
 		// Execute concurrently all tasks.
-		List<Future<String>> futuresOutPutStreamCreation = executorService.invokeAll(callablesZtasks1);
 		List<Future<String>> futuresInputStreamCreation  = executorService.invokeAll(callablesZtasks2);
+		List<Future<String>> futuresOutPutStreamCreation = executorService.invokeAll(callablesZtasks1);
 		
 		String result;
 		int numberOfAddedOutPutStreams = 0;
@@ -184,9 +184,9 @@ public class ZthreadPool
 		}
 		
 		if (numberOfAddedInputPutStreams == counter && numberOfAddedOutPutStreams == counter)
-			return "pass";
+			return numberOfAddedInputPutStreams + "";
 		else
-			return "failed";
+			return numberOfAddedInputPutStreams + "failed";
 	}
 	
 	public String zexecuteUdp() throws InterruptedException, ExecutionException

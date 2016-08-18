@@ -25,45 +25,65 @@ public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker imp
 	final private static String rtype = "type";
 
 	public String testIMPL(String userName, String userPass, String login_ip,
-			String uiport, String id, String mip, String port, String ip,
-			String prog, String chan, String type, String host) throws Exception 
-	{
+		String uiport, String id, String mip, String port, String ip,
+		String prog, String chan, String type, String host) throws Exception {
+		
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
-				+ userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:"
-				+ id, "mip:" + mip, "port:" + port, "ip:" + ip, "prog:" + prog,
-				"chan:" + chan, "type:" + type, "host:" + host);
+		+ userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:"
+		+ id, "mip:" + mip, "port:" + port, "ip:" + ip, "prog:" + prog,
+		"chan:" + chan, "type:" + type, "host:" + host);
+		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP
-				+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
-				login_ip, uiport);
-
+		+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
+		login_ip, uiport);
+ 
 		return streamCreator.sendGet(HTTP + login_ip + ":" + uiport
-				+ params7 + rmip + "=" + mip + "&" + rport + "=" + port + "&"
-				+ rip + "=" + ip + "&" + rprog + "=" + prog + "&" + rchan + "="
-				+ chan + "&" + rtype + "=" + type + "&" + rid + "="
-				+ "zixi%3A%2F%2F" + host + "%3A2088%2F" + id, id, PUSHINMODE,
-				responseCookieContainer, login_ip, this, uiport);
+		+ params7 + rmip + "=" + mip + "&" + rport + "=" + port + "&"
+		+ rip + "=" + ip + "&" + rprog + "=" + prog + "&" + rchan + "="
+		+ chan + "&" + rtype + "=" + type + "&" + rid + "="
+		+ "zixi%3A%2F%2F" + host + "%3A2088%2F" + id, id, PUSHINMODE,
+		responseCookieContainer, login_ip, this, uiport);
 		// TODO Auto-generated method stub
 	}
 	
+	public String testIMPL(String userName, String userPass, String login_ip, String uiport, String id, String mip, 
+		String port, String ip, String prog, String chan, String type, String nic1, String nic2, String dest_host1,
+		String dest_host2) throws Exception {
+		
+		testParameters = new TestParameters("userName:"+userName, "userPass:" + userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:" + id, "mip:" + mip, 
+		"port:" + port, "ip:" + ip, "prog:" + prog, "chan:" + chan, "type:" + type, "nic1:" + nic1, "nic2:" + nic2, "dest_host1:" + dest_host1, 
+		"dest_host2:" + dest_host2);
+		
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP
+		+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
+		login_ip, uiport);
+ 
+		String request = "http://" + login_ip + ":" + uiport + "/del_sink?mip=" + mip + "&port=" + port + "&ip=" + ip + "&prog=" + prog + "&chan=" + chan + 
+		"&type=" + type + "&id=zixi%3A%2F%2Fbonded(" + id + ")%23" + dest_host1 + "%3A2088%40" + nic1 + "%2C" + dest_host2 + "%3A2088%40" + nic2;
+		
+		return streamCreator.sendGet(request, id, PUSHINMODE,
+		responseCookieContainer, login_ip, this, uiport);
+		// TODO Auto-generated method stub
+		}
+	
 	public String testUdpIMPL(String userName, String userPass, String login_ip,
-			String uiport, String id, String mip, String port, String ip,
-			String prog, String chan, String type, String host, String op) throws Exception 
+		String uiport, String id, String mip, String port, String ip,
+		String prog, String chan, String type, String host, String op) throws Exception 
 	{
 		testParameters = new TestParameters("userName:" + userName, "userPass:"
-				+ userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:"
-				+ id, "mip:" + mip, "port:" + port, "ip:" + ip, "prog:" + prog,
-				"chan:" + chan, "type:" + type, "host:" + host);
+		+ userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:"
+		+ id, "mip:" + mip, "port:" + port, "ip:" + ip, "prog:" + prog,
+		"chan:" + chan, "type:" + type, "host:" + host);
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP
-				+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
-				login_ip, uiport);
+		+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
+		login_ip, uiport);
 
 		return streamCreator.sendGet(HTTP + login_ip + params1 + uiport
-				+ params7 + rmip + "=" + mip + "&" + rport + "=" + port + "&"
-				+ rip + "=" + ip + "&" + rprog + "=" + prog + "&" + rchan + "="
-				+ chan + "&" + rtype + "=" + type + "&" + rid + "="
-				+ "udp%3A%2F%2F" + host + "%3A" + op, id, PUSHINMODE,
-				responseCookieContainer, login_ip, this, uiport);
+		+ params7 + rmip + "=" + mip + "&" + rport + "=" + port + "&"
+		+ rip + "=" + ip + "&" + rprog + "=" + prog + "&" + rchan + "="
+		+ chan + "&" + rtype + "=" + type + "&" + rid + "="
+		+ "udp%3A%2F%2F" + host + "%3A" + op, id, PUSHINMODE,
+		responseCookieContainer, login_ip, this, uiport);
 		// TODO Auto-generated method stub
 	}
-
 }

@@ -26,6 +26,7 @@ public class BroadcasterUdpOutputCreationDriver extends BroadcasterLoggableApiWo
 				"type:"+ type, "rows:"+ rows, "remux_buff:"+ remux_buff, "local_ip:"+ local_ip,
 				"remux_restampdts:"+ remux_restampdts, "uiport:"+ uiport, "remux_pcr:"+ remux_pcr,
 				"dec_type:"+ dec_type, "cols:"+ cols);
+		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + loin_ip + ":" + uiport + "/login.htm", userName , userPass, loin_ip, uiport);
 		
 		return streamCreator.sendGet(HTTP + loin_ip + ":" + uiport + params7 + rtype + "=" + type+

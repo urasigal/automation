@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink suite "Streaming/ Streams/ Feeder to BX redundancy./" -->
 <suite name="Feeder: outputs: redundancy suite. Alternative host" verbose="5" data-provider-thread-count="1">
-<test name="Push input stream creation (main broadcaster) test - with redundant host">
+<test name="Broadcaster - Push input stream creation (main broadcaster) test - with redundant host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
