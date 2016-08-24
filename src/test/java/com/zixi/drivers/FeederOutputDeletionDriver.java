@@ -86,4 +86,25 @@ public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker imp
 		responseCookieContainer, login_ip, this, uiport);
 		// TODO Auto-generated method stub
 	}
+	
+	public String testIMPL(String userName, String userPass, String login_ip, String uiport, String id, String mip, 
+		String port, String ip, String prog, String chan, String type, String nic1, String nic2, String nic3, String dest_host1,
+		String dest_host2, String dest_host3) throws Exception {
+		
+		testParameters = new TestParameters("userName:"+userName, "userPass:" + userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:" + id, "mip:" + mip, 
+		"port:" + port, "ip:" + ip, "prog:" + prog, "chan:" + chan, "type:" + type, "nic1:" + nic1, "nic2:" + nic2, "dest_host1:" + dest_host1, 
+		"dest_host2:" + dest_host2);
+		
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP
+		+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
+		login_ip, uiport);
+ 
+		String request = "http://" + login_ip + ":" + uiport + "/del_sink?mip=" + mip + "&port=" + port + "&ip=" + ip + "&prog=" + prog + "&chan=" + chan + 
+		"&type=" + type + "&id=zixi%3A%2F%2Fbonded(" + id + ")%23" + dest_host1 + "%3A2088%40" + nic1 + "%2C" + dest_host2 + "%3A2088%40" + nic2 + "%2C" +
+		dest_host3 + "%3A2088%40" + nic3;
+		
+		return streamCreator.sendGet(request, id, PUSHINMODE,
+		responseCookieContainer, login_ip, this, uiport);
+		// TODO Auto-generated method stub
+		}
 }

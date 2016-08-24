@@ -16,11 +16,12 @@ public class FeederBondedOutputDeletioinTest extends BaseTest{
 	public void testInit() {
 		testDriver = new FeederOutputDeletionDriver();
 	}
-	// id:zixi://bonded(feederout)#10.7.0.66:2088@10.7.0.65, 192.168.60.66:2088@192.168.50.65
-		
+	
+	
+	// Deletes a feeder bonded output stream while a output stream is consists of a two bonded links.
 	@Parameters({"userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type", "nic1", "nic2", "dest_host1", "dest_host2" ,"testid"})
 	@Test
-	public void broadcasterSingleStreamRemoving(String userName, String userPass, String login_ip, String uiport, String id, String mip, 
+	public void broadcasterBondedTwoLinkStreamRemoving(String userName, String userPass, String login_ip, String uiport, String id, String mip, 
 		String port, String ip, String prog, String chan, String type, String nic1, String nic2, String dest_host1,
 		String dest_host2, String testid) throws Exception {
 		
@@ -33,9 +34,29 @@ public class FeederBondedOutputDeletioinTest extends BaseTest{
 		new String[] {userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, nic1, nic2, dest_host1, 
 		dest_host2 ,testid});
 		
-		
 		Assert.assertEquals(((FeederOutputDeletionDriver) testDriver).testIMPL(
 		userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, nic1, nic2, dest_host1, dest_host2), "Output deleted.");
+	}
+	
+	// Deletes a feeder bonded output stream while a output stream is consists of a three bonded links.
+	@Parameters({"userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type", "nic1", "nic2", "nic3", 
+		"dest_host1", "dest_host2", "dest_host3", "testid"})
+	@Test
+	public void broadcasterBondedThreeLinkStreamRemoving(String userName, String userPass, String login_ip, String uiport, String id, String mip, 
+		String port, String ip, String prog, String chan, String type, String nic1, String nic2, String nic3, String dest_host1,
+		String dest_host2, String dest_host3, String testid) throws Exception {
+		
+		this.testid = testid;
+		
+		// Writes test results to the TestLink.
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
+		"nic1", "nic2", "nic3", "dest_host1", "dest_host2", "dest_host3", "testid"}, 
+		
+		new String[] {userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, nic1, nic2, nic3, dest_host1, 
+		dest_host2, dest_host3, testid});
+		
+		Assert.assertEquals(((FeederOutputDeletionDriver) testDriver).testIMPL(
+		userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, nic1, nic2, nic3, dest_host1, dest_host2, dest_host3), "Output deleted.");
 	}
 	
 }

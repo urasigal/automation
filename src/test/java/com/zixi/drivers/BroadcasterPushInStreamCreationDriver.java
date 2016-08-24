@@ -41,6 +41,32 @@ public class BroadcasterPushInStreamCreationDriver extends BroadcasterLoggableAp
 				+ rtime_shift + params4 + time_shift + params2 + params5, id, PUSHINMODE, responseCookieContainer, login_ip, this, uiport); 
 	}
 	
+	
+	
+	
+	
+	public String testIMPL(String userName, String userPass, String login_ip, String latency, String time_shift, String force_p2p, String mcast_ip,
+			String mcast_force, String mcast_port, String type, String uiport, String analyze, String mcast_ttl, String id, String mcast_out,
+			String complete, String max_outputs, String on, String password, String dec_type, String dec_key) throws Exception 
+	{
+		testParameters = new TestParameters(userName,userPass,login_ip,latency,
+				time_shift,force_p2p,mcast_ip,mcast_force,mcast_port,type,uiport,analyze,mcast_ttl,id,mcast_out,complete,
+				max_outputs,on, password, dec_type, dec_key);
+		
+		// Print out to the HTML test report the test's parameters
+		testParameters.printParametersToHTML();
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName , userPass, login_ip, uiport);
+		
+		return streamCreator.sendGet("HTTP://" + login_ip + ":" + uiport + params7 + rtype + "=" + type + "&" + rpassword + "=" + password
+		+ "&" + rlatency + "=" + latency + "&" + rforce_p2p + "=" + force_p2p + "&" + rid + "=" + id  + "&" + rmax_outputs + "=" + max_outputs + "&"
+		+ rmcast_out + "=" + mcast_out + "&" + ron + "=" + on + "&" + ranalyze + "=" + analyze + "&"
+		+ rcomplete + "=" + complete + "&" + rmcast_force + "=" + mcast_force + "&" + rmcast_ip + "="
+		+ mcast_ip + "&" + rmcast_port + "=" + mcast_port + "&" + rmcast_ttl + "=" + mcast_port + "&"
+		+ rtime_shift + "=" + time_shift + "&" + "dec_type=" + dec_type + "&dec_key=" + dec_key  + "&ie_fooler=0.45086039789021015", id, PUSHINMODE, responseCookieContainer, login_ip, this, uiport); 
+	}
+	
+	
+	
 	public String testIMPL(String userName,String userPass,String login_ip,String latency,String time_shift,String force_p2p,String mcast_ip,String mcast_force,String mcast_port,String type,
 			String uiport,String analyze,String mcast_ttl,String id,String mcast_out,String complete,String max_outputs,String on, String password, String priority_ids) throws Exception
 	{

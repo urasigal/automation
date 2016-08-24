@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- Streaming/ Streams/ Feeder: push output streaming suite./ Push to BX default parameters/ -->
+<suite name="Feeder: bonded push output streaming suite two links" verbose="5" data-provider-thread-count="1">
+	<test name="Feeder - bonded push to broadcaster test - default parameteres">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="name" value="bond" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="ostr" value="feederout" />
+		<parameter name="oses" value="" />
+		<parameter name="oetp" value="" />
+		<parameter name="oeky" value="" />
+		<parameter name="obit" value="8000000" />
+		<parameter name="olat" value="6000" />
+		<parameter name="ofc" value="0" />
+		<parameter name="ocmp" value="1" />
+		<parameter name="oold" value="0" />
+		<parameter name="onfec" value="1" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="ofec" value="30" />
+		<parameter name="ofecl" value="150" />
+		<parameter name="stop_on_drop" value="0" />
+		<parameter name="mmt" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="limited" value="0" />
+		<parameter name="minbps" value="0" />
+		<parameter name="lim_enc_addr" value="" />
+		<parameter name="pad_to_cbr" value="1" />
+		<parameter name="rtmp_feedback" value="0" />
+		<parameter name="group" value="" />
+		<parameter name="bonded" value="1" />
+		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_port1" value="2088" />
+		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_limit1" value="0" />
+		<parameter name="bond_backup1" value="0" />
+		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_port2" value="2088" />
+		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_limit2" value="0" />
+		 <parameter name="bond_backup2" value="0" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="4037" />
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederBondedPushOutputCreationTest" />
+     		 </methods>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation test - default paremeters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="4039" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics test - default paremeters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="4041" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - bonded output stream deletion test - default paremeters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="nic1" value="10.7.0.65" />
+		<parameter name="nic2" value="192.168.50.65" />
+		<parameter name="dest_host1" value="10.7.0.66" />
+		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="testid" value="4043" />
+		<classes>
+		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest"/>
+		    <methods>
+        		<include name="broadcasterBondedTwoLinkStreamRemoving" />
+     		 </methods>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream - default paremeters">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="4045" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - bonded push to broadcaster test - using password">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="name" value="bond" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="ostr" value="feederout" />
+		<parameter name="oses" value="1qaz!QAZ" />
+		<parameter name="oetp" value="" />
+		<parameter name="oeky" value="" />
+		<parameter name="obit" value="8000000" />
+		<parameter name="olat" value="6000" />
+		<parameter name="ofc" value="0" />
+		<parameter name="ocmp" value="1" />
+		<parameter name="oold" value="0" />
+		<parameter name="onfec" value="1" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="ofec" value="30" />
+		<parameter name="ofecl" value="150" />
+		<parameter name="stop_on_drop" value="0" />
+		<parameter name="mmt" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="limited" value="0" />
+		<parameter name="minbps" value="0" />
+		<parameter name="lim_enc_addr" value="" />
+		<parameter name="pad_to_cbr" value="1" />
+		<parameter name="rtmp_feedback" value="0" />
+		<parameter name="group" value="" />
+		<parameter name="bonded" value="1" />
+		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_port1" value="2088" />
+		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_limit1" value="0" />
+		<parameter name="bond_backup1" value="0" />
+		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_port2" value="2088" />
+		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_limit2" value="0" />
+		 <parameter name="bond_backup2" value="0" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="4048" /> 
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederBondedPushOutputCreationTest" />
+     		 </methods>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation test - using password">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="1qaz!QAZ" />
+		<parameter name="testid" value="4050" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics test - using password">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="4052" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - output stream deletion test - using password">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="nic1" value="10.7.0.65" />
+		<parameter name="nic2" value="192.168.50.65" />
+		<parameter name="dest_host1" value="10.7.0.66" />
+		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="testid" value="4054" />
+		<classes>
+		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest"/>
+		    <methods>
+        		<include name="broadcasterBondedTwoLinkStreamRemoving" />
+     		 </methods>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream - using password">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="4056" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - push to broadcaster test - zero latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="name" value="bond" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="ostr" value="feederout" />
+		<parameter name="oses" value="" />
+		<parameter name="oetp" value="" />
+		<parameter name="oeky" value="" />
+		<parameter name="obit" value="8000000" />
+		<parameter name="olat" value="0" />
+		<parameter name="ofc" value="0" />
+		<parameter name="ocmp" value="1" />
+		<parameter name="oold" value="0" />
+		<parameter name="onfec" value="1" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="ofec" value="30" />
+		<parameter name="ofecl" value="150" />
+		<parameter name="stop_on_drop" value="0" />
+		<parameter name="mmt" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="limited" value="0" />
+		<parameter name="minbps" value="0" />
+		<parameter name="lim_enc_addr" value="" />
+		<parameter name="pad_to_cbr" value="1" />
+		<parameter name="rtmp_feedback" value="0" />
+		<parameter name="group" value="" />
+		<parameter name="bonded" value="1" />
+		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_port1" value="2088" />
+		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_limit1" value="0" />
+		<parameter name="bond_backup1" value="0" />
+		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_port2" value="2088" />
+		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_limit2" value="0" />
+		 <parameter name="bond_backup2" value="0" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="4059" /> 
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederBondedPushOutputCreationTest"/>
+     		 </methods>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation test - zero latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="4061" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics test - zero latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="4063" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - output stream deletion test - zero latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="nic1" value="10.7.0.65" />
+		<parameter name="nic2" value="192.168.50.65" />
+		<parameter name="dest_host1" value="10.7.0.66" />
+		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="testid" value="4065" />
+		<classes>
+		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest"/>
+		    <methods>
+        		<include name="broadcasterBondedTwoLinkStreamRemoving" />
+     		 </methods>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream - zero latency">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="4067" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - bonded push to broadcaster test low latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="name" value="bond" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="ostr" value="feederout" />
+		<parameter name="oses" value="" />
+		<parameter name="oetp" value="" />
+		<parameter name="oeky" value="" />
+		<parameter name="obit" value="8000000" />
+		<parameter name="olat" value="500" />
+		<parameter name="ofc" value="0" />
+		<parameter name="ocmp" value="1" />
+		<parameter name="oold" value="0" />
+		<parameter name="onfec" value="1" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="ofec" value="30" />
+		<parameter name="ofecl" value="150" />
+		<parameter name="stop_on_drop" value="0" />
+		<parameter name="mmt" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="limited" value="0" />
+		<parameter name="minbps" value="0" />
+		<parameter name="lim_enc_addr" value="" />
+		<parameter name="pad_to_cbr" value="1" />
+		<parameter name="rtmp_feedback" value="0" />
+		<parameter name="group" value="" />
+		<parameter name="bonded" value="1" />
+		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_port1" value="2088" />
+		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_limit1" value="0" />
+		<parameter name="bond_backup1" value="0" />
+		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_port2" value="2088" />
+		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_limit2" value="0" />
+		 <parameter name="bond_backup2" value="0" />
+		<parameter name="uiport" value="4200" /> 
+		<parameter name="testid" value="4070" />
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederBondedPushOutputCreationTest" />
+     		 </methods>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation test - low latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="4072" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics test - low latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testduration" value="60" />
+		<parameter name="testid" value="4074" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - output stream deletion test low latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="nic1" value="10.7.0.65" />
+		<parameter name="nic2" value="192.168.50.65" />
+		<parameter name="dest_host1" value="10.7.0.66" />
+		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="testid" value="4076" />
+		<classes>
+		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest"/>
+		    <methods>
+        		<include name="broadcasterBondedTwoLinkStreamRemoving" />
+     		 </methods>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream low latency">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="4078" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test> 
+	<test name="Feeder - bonded push to broadcaster test - Encryption AES 128">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="name" value="bond" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="ostr" value="feederout" />
+		<parameter name="oses" value="" />
+		<parameter name="oetp" value="aes128" />
+		<parameter name="oeky" value="a69a8ba04520a8e0fa66fdb0af94cb33" />
+		<parameter name="obit" value="8000000" />
+		<parameter name="olat" value="6000" />
+		<parameter name="ofc" value="0" />
+		<parameter name="ocmp" value="1" />
+		<parameter name="oold" value="0" />
+		<parameter name="onfec" value="1" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="ofec" value="30" />
+		<parameter name="ofecl" value="150" />
+		<parameter name="stop_on_drop" value="0" />
+		<parameter name="mmt" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="limited" value="0" />
+		<parameter name="minbps" value="0" />
+		<parameter name="lim_enc_addr" value="" />
+		<parameter name="pad_to_cbr" value="1" />
+		<parameter name="rtmp_feedback" value="0" />
+		<parameter name="group" value="" />
+		<parameter name="bonded" value="1" />
+		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_port1" value="2088" />
+		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_limit1" value="0" />
+		<parameter name="bond_backup1" value="0" />
+		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_port2" value="2088" />
+		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_limit2" value="0" />
+		 <parameter name="bond_backup2" value="0" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="4081" />   
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederBondedPushOutputCreationTest" />
+     		 </methods>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation test - Encryption AES 128">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="4083" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 128">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="4085" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - output stream deletion test - Encryption AES 128">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="nic1" value="10.7.0.65" />
+		<parameter name="nic2" value="192.168.50.65" />
+		<parameter name="dest_host1" value="10.7.0.66" />
+		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="testid" value="4087" />  
+		<classes>
+		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest"/>
+		    <methods>
+        		<include name="broadcasterBondedTwoLinkStreamRemoving" />
+     		 </methods>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream - Encryption AES 128">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="4089" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - bonded push to broadcaster test - Encryption AES 192">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="name" value="bond" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="ostr" value="feederout" />
+		<parameter name="oses" value="" />
+		<parameter name="oetp" value="aes192" />
+		<parameter name="oeky" value="5de87ecce15ceb1d1873dd768cbd0f0371d7fd9bb665767f" />
+		<parameter name="obit" value="8000000" />
+		<parameter name="olat" value="6000" />
+		<parameter name="ofc" value="0" />
+		<parameter name="ocmp" value="1" />
+		<parameter name="oold" value="0" />
+		<parameter name="onfec" value="1" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="ofec" value="30" />
+		<parameter name="ofecl" value="150" />
+		<parameter name="stop_on_drop" value="0" />
+		<parameter name="mmt" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="limited" value="0" />
+		<parameter name="minbps" value="0" />
+		<parameter name="lim_enc_addr" value="" />
+		<parameter name="pad_to_cbr" value="1" />
+		<parameter name="rtmp_feedback" value="0" />
+		<parameter name="group" value="" />
+		<parameter name="bonded" value="1" />
+		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_port1" value="2088" />
+		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_limit1" value="0" />
+		<parameter name="bond_backup1" value="0" />
+		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_port2" value="2088" />
+		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_limit2" value="0" />
+		 <parameter name="bond_backup2" value="0" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="4092" />   
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederBondedPushOutputCreationTest" />
+     		 </methods>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation test - Encryption AES 192">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="4094" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 192">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="4096" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - output stream deletion test - Encryption AES 192">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="nic1" value="10.7.0.65" />
+		<parameter name="nic2" value="192.168.50.65" />
+		<parameter name="dest_host1" value="10.7.0.66" />
+		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="testid" value="4098" />  
+		<classes>
+		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest"/>
+		    <methods>
+        		<include name="broadcasterBondedTwoLinkStreamRemoving" />
+     		 </methods>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream - Encryption AES 192">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="4100" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - bonded push to broadcaster test Encryption AES 256">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="name" value="bond" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="ostr" value="feederout" />
+		<parameter name="oses" value="" />
+		<parameter name="oetp" value="aes256" />
+		<parameter name="oeky" value="972e3319f4e01e2eee33d1ce987027c5b63c967187c4671735a0635790a05250" />
+		<parameter name="obit" value="8000000" />
+		<parameter name="olat" value="6000" />
+		<parameter name="ofc" value="0" />
+		<parameter name="ocmp" value="1" />
+		<parameter name="oold" value="0" />
+		<parameter name="onfec" value="1" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="ofec" value="30" />
+		<parameter name="ofecl" value="150" />
+		<parameter name="stop_on_drop" value="0" />
+		<parameter name="mmt" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="limited" value="0" />
+		<parameter name="minbps" value="0" />
+		<parameter name="lim_enc_addr" value="" />
+		<parameter name="pad_to_cbr" value="1" />
+		<parameter name="rtmp_feedback" value="0" />
+		<parameter name="group" value="" />
+		<parameter name="bonded" value="1" />
+		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_port1" value="2088" />
+		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_limit1" value="0" />
+		<parameter name="bond_backup1" value="0" />
+		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_port2" value="2088" />
+		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_limit2" value="0" />
+		 <parameter name="bond_backup2" value="0" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="4103" />   
+		<classes>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <methods>
+        		<include name="feederBondedPushOutputCreationTest" />
+     		 </methods>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push input stream creation test - Encryption AES 256">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="4105" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 256">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="4107" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - output stream deletion test - Encryption AES 256">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="feederout" />
+		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="file" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="2" />
+		<parameter name="nic1" value="10.7.0.65" />
+		<parameter name="nic2" value="192.168.50.65" />
+		<parameter name="dest_host1" value="10.7.0.66" />
+		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="testid" value="4109" />  
+		<classes>
+		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest"/>
+		    <methods>
+        		<include name="broadcasterBondedTwoLinkStreamRemoving" />
+     		 </methods>
+		</classes>
+	</test> 
+	<test name="Broadcaster - Remove Push input stream - Encryption AES 256">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="feederout" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="4111" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>                        
+</suite>
