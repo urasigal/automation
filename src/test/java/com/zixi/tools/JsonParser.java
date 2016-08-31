@@ -201,8 +201,7 @@ public class JsonParser {
 	}
 
 
-	public static int getTranscoderProfiles(String outJson,
-			String profile_name) {
+	public static int getTranscoderProfiles(String outJson, String profile_name) {
 		int pid = -1;
 		JSONObject responseJson = new JSONObject(outJson);
 		JSONArray outputStreamsArray = responseJson.getJSONArray("profiles");
@@ -221,8 +220,22 @@ public class JsonParser {
 		    	pid = outputStream.getInt("id");
 		    	//testID = profileID;
 		    }
-	  }
+		}
 		// TODO Auto-generated method stub
 		return pid;
+	}
+	
+	public static ArrayList< String > feederOutsIds(String inputJson)
+	{
+		ArrayList <String> ids = new ArrayList<>();
+		JSONObject responseJson = new JSONObject(inputJson);
+		JSONArray outputStreamsArray = responseJson.getJSONArray("outs");
+		
+		for (int i = 0; i < outputStreamsArray.length(); i++) 
+		{
+			JSONObject outputStream = outputStreamsArray.getJSONObject(i);
+			ids.add(outputStream.getString("id")); 
+		}
+		return ids;
 	}
 }

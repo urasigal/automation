@@ -2,12 +2,13 @@ package com.zixi.drivers;
 
 import static com.zixi.globals.Macros.PUSHINMODE;
 
+import java.net.URLEncoder;
+
 import com.zixi.entities.TestParameters;
 import com.zixi.tools.ApiWorkir;
 import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker implements
-		TestDriver {
+public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker implements TestDriver {
 
 	private ApiWorkir streamCreator = new ApiWorkir();
 
@@ -87,6 +88,7 @@ public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker imp
 		// TODO Auto-generated method stub
 	}
 	
+	// Delete bonded stream with three links.
 	public String testIMPL(String userName, String userPass, String login_ip, String uiport, String id, String mip, 
 		String port, String ip, String prog, String chan, String type, String nic1, String nic2, String nic3, String dest_host1,
 		String dest_host2, String dest_host3) throws Exception {
@@ -107,4 +109,21 @@ public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker imp
 		responseCookieContainer, login_ip, this, uiport);
 		// TODO Auto-generated method stub
 		}
+	
+	    // Delete bonded stream with three links multiple.
+		public String testIMPL(String userName, String userPass, String login_ip, String uiport, String mip, String port, 
+		String ip, String prog, String chan, String type, String id) throws Exception {
+			
+			testParameters = new TestParameters("userName:"+userName, "userPass:" + userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:" + id);
+			
+			responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP
+			+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
+			login_ip, uiport);
+	 
+			String request = "http://" + login_ip + ":" + uiport + "/del_sink?mip=" + mip + "&port=" + port + "&ip=" + ip + "&prog=" + prog + "&chan=" + chan + 
+			"&type=" + type + "&id=" +  URLEncoder.encode(id, "UTF-8");
+			
+			return streamCreator.sendGet(request, id, PUSHINMODE, responseCookieContainer, login_ip, this, uiport);
+			// TODO Auto-generated method stub
+			}
 }

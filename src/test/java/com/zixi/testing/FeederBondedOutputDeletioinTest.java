@@ -41,6 +41,8 @@ public class FeederBondedOutputDeletioinTest extends BaseTest{
 	// Deletes a feeder bonded output stream while a output stream is consists of a three bonded links.
 	@Parameters({"userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type", "nic1", "nic2", "nic3", 
 		"dest_host1", "dest_host2", "dest_host3", "testid"})
+	
+	// Deletes a bonded output streams at feeder server.
 	@Test
 	public void broadcasterBondedThreeLinkStreamRemoving(String userName, String userPass, String login_ip, String uiport, String id, String mip, 
 		String port, String ip, String prog, String chan, String type, String nic1, String nic2, String nic3, String dest_host1,

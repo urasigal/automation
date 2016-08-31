@@ -38,19 +38,15 @@ public class BroadcasterInitialSecuredLogin
 
 			con.setRequestProperty("Host", bX_IP_ADDRESS + ":" + uiport);
 			con.setRequestMethod("POST");
-			con.setRequestProperty("User-Agent",
-					"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.04");
+			con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.04");
 			
-			con.setRequestProperty("Accept",
-					"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+			con.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
 			
 			con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 			con.setRequestProperty("Accept-Encoding", "gzip, deflate");
-			con.setRequestProperty("Referer",
-					"http://" +  bX_IP_ADDRESS + ":" + uiport + "/login.html");
+			con.setRequestProperty("Referer", "http://" +  bX_IP_ADDRESS + ":" + uiport + "/login.html");
 			con.setRequestProperty("Connection", "keep-alive");
-			con.setRequestProperty("Content-Type",
-					"application/x-www-form-urlencoded");
+			con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 			con.setRequestProperty("Content-Length", "20");
 
 			con.setDoOutput(true);

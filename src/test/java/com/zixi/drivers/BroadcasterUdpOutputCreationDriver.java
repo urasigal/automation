@@ -20,17 +20,17 @@ public class BroadcasterUdpOutputCreationDriver extends BroadcasterLoggableApiWo
 			String dec_type, String cols) throws Exception 
 	{
 		testParameters = new TestParameters("userName:"+ userName, "userPass:"+ userPass, "loin_ip:"+ loin_ip,
-				"port:"+ port, "stream:"+ stream, "streamname:"+ streamname, "host:"+ host,
-				"id:"+ id, "rtp:"+ rtp, "fec:"+ fec, "smoothing:"+ smoothing, "ttl:"+ ttl,
-				"remux_bitrate:"+ remux_bitrate, "df:"+ df, "local_port:"+ local_port, "dec_key:"+ dec_key,
-				"type:"+ type, "rows:"+ rows, "remux_buff:"+ remux_buff, "local_ip:"+ local_ip,
-				"remux_restampdts:"+ remux_restampdts, "uiport:"+ uiport, "remux_pcr:"+ remux_pcr,
-				"dec_type:"+ dec_type, "cols:"+ cols);
+		"port:"+ port, "stream:"+ stream, "streamname:"+ streamname, "host:"+ host,
+		"id:"+ id, "rtp:"+ rtp, "fec:"+ fec, "smoothing:"+ smoothing, "ttl:"+ ttl,
+		"remux_bitrate:"+ remux_bitrate, "df:"+ df, "local_port:"+ local_port, "dec_key:"+ dec_key,
+		"type:"+ type, "rows:"+ rows, "remux_buff:"+ remux_buff, "local_ip:"+ local_ip,
+		"remux_restampdts:"+ remux_restampdts, "uiport:"+ uiport, "remux_pcr:"+ remux_pcr,
+		"dec_type:"+ dec_type, "cols:"+ cols);
 		
 		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + loin_ip + ":" + uiport + "/login.htm", userName , userPass, loin_ip, uiport);
 		
-		return streamCreator.sendGet(HTTP + loin_ip + ":" + uiport + params7 + rtype + "=" + type+
-				"&" + rid + "=" + id  + "&" + rname + "=" + streamname + "&" + rstream + "=" + stream + "&" +
+		return streamCreator.sendGet(HTTP + loin_ip + ":" + uiport + params7 + rtype + "=" + type +
+		"&" + rid + "=" + id  + "&" + rname + "=" + streamname + "&" + rstream + "=" + stream + "&" +
 		rhost + "=" + host + "&" + rport + "=" + port + "&" + rsmoothing + "=" + smoothing + "&" +
 		rttl + "=" + ttl + "&" + rdf +  "=" + df + "&" + rlocal_port + "=" + local_port + "&" +
 		rlocal_ip + "=" + local_ip + "&" + rdec_type + "=" + dec_type + "&" + rdec_key + "=" + dec_key + "&" + rrtp + "=" + rtp + "&" +

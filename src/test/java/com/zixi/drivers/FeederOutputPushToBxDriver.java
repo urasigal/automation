@@ -115,6 +115,7 @@ public class FeederOutputPushToBxDriver extends BroadcasterLoggableApiWorker imp
 		return streamOutCreator.sendGet(request, name, PUSHINMODE, responseCookieContainer, login_ip, this, uiport);
 	}
 	
+	// Bonded stuff.
 	public String testIMPL(String userName, String userPass, String login_ip,
 		String name, String mip, String port, String ip, String prog, String chan, String type, String ostr, String oses, String oetp,
 		String oeky, String obit, String olat, String ofc, String ocmp, String oold, String onfec, String fec_force, String fec_adaptive,

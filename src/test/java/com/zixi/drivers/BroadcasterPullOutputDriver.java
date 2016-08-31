@@ -16,17 +16,15 @@ BroadcasterLoggableApiWorker implements TestDriver {
 			remote_id, String session, String latency, String session_auth, String stats_hist)  throws Exception 
 	{
 		testParameters = new TestParameters( "userName:" + userName,  "userPass:"+ userPass, "login_ip:"+login_ip,  "uiport:"+uiport, 
-				 "type:"+ type,  "name:"+ name,  "stream:"+ stream,  "matrix:"+matrix,  "alt_stream:"+ alt_stream,  
-				"remote_id:"+ remote_id,  "session:"+ session,  "latenc:"+latency,  "session_auth:"+ session_auth,  "stats_hist:"+ stats_hist);
+		"type:"+ type,  "name:"+ name,  "stream:"+ stream,  "matrix:"+matrix,  "alt_stream:"+ alt_stream,  
+		"remote_id:"+ remote_id,  "session:"+ session,  "latenc:"+latency,  "session_auth:"+ session_auth,  "stats_hist:"+ stats_hist);
 		
-		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://"
-				+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
-				login_ip, uiport);
+		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + login_ip + ":" + uiport + "/login.htm", userName, userPass, login_ip, uiport);
 
 		return apiworker.sendGet("http://"+ login_ip +":"+ uiport + "/zixi/add_output.json?type=" + type + "&"
 		+ "name="+ name + "&stream="+ stream + "&matrix=" + matrix +"&alt_stream=" + alt_stream + "&remote_id=" + remote_id +"&"
 		+ "session=" +session+ "&latency="+ latency +"&session_auth=" + session_auth + "&stats_hist=" + stats_hist, "", PUSHOUTMODE,
-				responseCookieContainer, login_ip, this, uiport);
+		responseCookieContainer, login_ip, this, uiport);
 		// TODO Auto-generated method stub
 	}
 }
