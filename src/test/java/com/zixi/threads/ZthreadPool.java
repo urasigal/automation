@@ -38,7 +38,6 @@ public class ZthreadPool
 		this.parameters = parameters;
 	}
 	
-	
 	public String executeDeleteAll() throws Exception 
 	{
 		// Container for the callable tasks.
@@ -445,8 +444,7 @@ public class ZthreadPool
 		else
 			return "failed";
 	}
-	
-	
+
 	public String zexecutetRtmpPull() throws InterruptedException, ExecutionException
 	{
 		// This is a container for the Callable tasks.
@@ -740,6 +738,94 @@ public class ZthreadPool
 		}
 		
 		if (numberOfAddedStreams == numberOfOutputs)
+			return "pass";
+		else
+			return "failed";
+	}
+	
+	public String zexecuteBondedBroadcaster2Bx() throws InterruptedException, ExecutionException
+	{
+		// This is a container for the Callable tasks.
+		ArrayList<Callable<String>> broadcasterOutputBondedZtasks = new ArrayList<Callable<String>>();
+		ArrayList<Callable<String>> broadcasterInputBonedeZtasks  = new ArrayList<Callable<String>>();
+		
+		// Have to implement
+		int parameterSize = parameters.size();
+		
+		// Gets a number of desired tasks.
+		int counter = Integer.parseInt( parameters.get(parameterSize -1) );
+		
+		for(int i = 0 ; i < counter; i++)
+		{
+			
+			TestDriver driver1 = new BroadcasterPushOutStreamCreationDriver();
+			TestDriver driver2 = new BroadcasterPushInStreamCreationDriver();
+					
+			ArrayList<String> tempParameters = (ArrayList<String>)parameters.clone();
+			
+			tempParameters.set(5,   parameters.get(5)  + i);
+			tempParameters.set(8,   parameters.get(8)  + i); 
+			tempParameters.set(34,  parameters.get(34) + i); 
+			
+			// Add and create a callable tasks for PUSH input stream creation. 
+			broadcasterOutputBondedZtasks.add(new Callable<String>(){
+				public String call() throws Exception
+				{	
+					String results = ((BroadcasterPushOutStreamCreationDriver)driver1).testIMPL(tempParameters.get(0), tempParameters.get(1), tempParameters.get(2),
+					tempParameters.get(3), tempParameters.get(4), tempParameters.get(5), tempParameters.get(6), tempParameters.get(7),tempParameters.get(8),
+					tempParameters.get(9), tempParameters.get(10),tempParameters.get(11), tempParameters.get(12), tempParameters.get(13), tempParameters.get(14),
+					tempParameters.get(15), tempParameters.get(16), tempParameters.get(17), tempParameters.get(18),tempParameters.get(19),tempParameters.get(20));
+					
+					return results;
+				}	
+			});
+			
+			// Add and create a callable tasks for RTMP push input stream creation. 
+			broadcasterInputBonedeZtasks.add(new Callable<String>()
+			{
+				public String call() throws Exception
+				{ 
+					String results = ((BroadcasterPushInStreamCreationDriver)driver2).testIMPL(tempParameters.get(21),tempParameters.get(22),tempParameters.get(23),
+					tempParameters.get(24), tempParameters.get(25), tempParameters.get(26), tempParameters.get(27), tempParameters.get(28), tempParameters.get(29),
+					tempParameters.get(30), tempParameters.get(31), tempParameters.get(32), tempParameters.get(33), tempParameters.get(34), tempParameters.get(35),
+					tempParameters.get(36), tempParameters.get(37), tempParameters.get(38), tempParameters.get(39), tempParameters.get(40),tempParameters.get(41));
+					
+					return results;
+				}	
+			});
+		} // end for
+		
+		// Execute concurrently all tasks.
+		List<Future<String>> futuresOutPutStreamCreation  = executorService.invokeAll(broadcasterOutputBondedZtasks);
+		List<Future<String>> futuresInputStreamCreation   = executorService.invokeAll(broadcasterInputBonedeZtasks);
+		
+		String result;
+		int numberOfAddedBondedStreams = 0;
+		int numberOfAddedInputPutStreams = 0;
+		
+		for(Future<String> future : futuresOutPutStreamCreation)
+		{
+			result = future.get();
+			System.out.println("Result is " +  result);
+			String[] res = result.split(" ");
+			if(res[res.length - 1].equals("added."))
+			{
+				numberOfAddedBondedStreams ++;
+			}
+		}
+		
+		for(Future<String> future : futuresInputStreamCreation)
+		{
+			result = future.get();
+			System.out.println("Result is " +  result);
+			String[] res = result.split(" ");
+			if(res[res.length - 1].equals("added."))
+			{
+				numberOfAddedInputPutStreams ++;
+			}
+		}
+		
+		if (numberOfAddedInputPutStreams == counter && numberOfAddedBondedStreams == counter)
 			return "pass";
 		else
 			return "failed";

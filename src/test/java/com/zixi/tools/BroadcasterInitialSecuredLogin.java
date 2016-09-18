@@ -26,6 +26,7 @@ public class BroadcasterInitialSecuredLogin
 	public String[] sendGet(String url, String user, String pass, String bX_IP_ADDRESS, String uiport) throws Exception {
 		String sessionID = null;
 		String responseCookieContainer[] = new String[2];
+		HttpURLConnection con = null;
 		try {
 			System.setProperty("sun.net.http.allowRestrictedHeaders", "true");
 			StringBuilder postData = new StringBuilder();
@@ -33,7 +34,7 @@ public class BroadcasterInitialSecuredLogin
 			byte[] postDataBytes = postData.toString().getBytes("UTF-8");
 
 			URL obj = new URL(url);
-			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+			con = (HttpURLConnection) obj.openConnection();
 			con.setInstanceFollowRedirects(false); 
 
 			con.setRequestProperty("Host", bX_IP_ADDRESS + ":" + uiport);
@@ -74,6 +75,9 @@ public class BroadcasterInitialSecuredLogin
 			//System.out.println(sessionID);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+		}
+		finally {
+			con.disconnect();
 		}
 		
 		if(responseCookieContainer[0] == null || responseCookieContainer[1] == null)

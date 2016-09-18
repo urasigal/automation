@@ -44,25 +44,25 @@ public class BroadcasterMultiplePushTest extends BaseTest{
 		
 		// Gather the test parameters in order to pass them to the TestLink
 		testParameters = buildTestParametersString(new String[] { "userName_bx1", "userName_bx2", "userPass_bx1", "userPass_bx2", "login_ip_bx1", "login_ip_bx2", "latency_bx1", "time_shift",
-				"force_p2p", "mcast_ip", "mcast_force", "mcast_port", "type_bx1", "uiport_bx1", "analyze", "mcast_ttl", "id_bx1", "mcast_out",
-				"complete", "max_outputs", "on", "password", "host", "latency_bx2", "fec_force", "session", "fec_adaptive",
-				"nic", "fec_block", "type_bx2", "snames", "fec_aware", "fec_overhead", "stream", "port", "uiport_bx2", "alias", "id_bx2" ,
-				"number_of_streams", "testid"}, 
-				
-				new String[] { userName_bx1,  userName_bx2,  userPass_bx1,  userPass_bx2,  login_ip_bx1, 
-				 login_ip_bx2,  latency_bx1,  time_shift , force_p2p,  mcast_ip,  mcast_force,  mcast_port, 
-				 type_bx1,  uiport_bx1,  analyze,  mcast_ttl,  id_bx1,  mcast_out,
-				 complete,  max_outputs,  on,  password,  host,  latency_bx2,  fec_force,  session, 
-				 fec_adaptive,  nic,  fec_block,  type_bx2,  snames,  fec_aware,  fec_overhead,  stream, 
-				 port,  uiport_bx2,  alias,  id_bx2,  number_of_streams,  testid });
+		"force_p2p", "mcast_ip", "mcast_force", "mcast_port", "type_bx1", "uiport_bx1", "analyze", "mcast_ttl", "id_bx1", "mcast_out",
+		"complete", "max_outputs", "on", "password", "host", "latency_bx2", "fec_force", "session", "fec_adaptive",
+		"nic", "fec_block", "type_bx2", "snames", "fec_aware", "fec_overhead", "stream", "port", "uiport_bx2", "alias", "id_bx2" ,
+		"number_of_streams", "testid"}, 
+		
+		new String[] { userName_bx1,  userName_bx2,  userPass_bx1,  userPass_bx2,  login_ip_bx1, 
+		 login_ip_bx2,  latency_bx1,  time_shift , force_p2p,  mcast_ip,  mcast_force,  mcast_port, 
+		 type_bx1,  uiport_bx1,  analyze,  mcast_ttl,  id_bx1,  mcast_out,
+		 complete,  max_outputs,  on,  password,  host,  latency_bx2,  fec_force,  session, 
+		 fec_adaptive,  nic,  fec_block,  type_bx2,  snames,  fec_aware,  fec_overhead,  stream, 
+		 port,  uiport_bx2,  alias,  id_bx2,  number_of_streams,  testid });
 		
 		// The actual test method.
 		Assert.assertEquals(((BroadcasterMultiplePushDriver) testDriver).testIMPL
-								(userName_bx1, userName_bx2, userPass_bx1, userPass_bx2, login_ip_bx1, login_ip_bx2, latency_bx1, time_shift,
-								 force_p2p, mcast_ip, mcast_force, mcast_port, type_bx1, uiport_bx1, analyze, mcast_ttl, id_bx1, mcast_out,
-								 complete, max_outputs, on, password, host, latency_bx2, fec_force, session, fec_adaptive,
-								 nic, fec_block, type_bx2, snames, fec_aware, fec_overhead, stream, port, uiport_bx2, alias, id_bx2 ,
-								 number_of_streams), "pass");
+		(userName_bx1, userName_bx2, userPass_bx1, userPass_bx2, login_ip_bx1, login_ip_bx2, latency_bx1, time_shift,
+		 force_p2p, mcast_ip, mcast_force, mcast_port, type_bx1, uiport_bx1, analyze, mcast_ttl, id_bx1, mcast_out,
+		 complete, max_outputs, on, password, host, latency_bx2, fec_force, session, fec_adaptive,
+		 nic, fec_block, type_bx2, snames, fec_aware, fec_overhead, stream, port, uiport_bx2, alias, id_bx2 ,
+		 number_of_streams), "pass");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		// This is special case because of here a two broadcaster are involved.

@@ -42,8 +42,8 @@ public class FeederMultipleDeletionTest  extends BaseTest{
 		 new String[] { userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type });
 		
 		// Actual test method.
-		Assert.assertEquals(((FeederMultipleDeletionDriver) testDriver).testIMPL
-		(userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type), "pass");
+		Assert.assertEquals(((FeederMultipleDeletionDriver) testDriver).
+		testIMPL(userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type), "pass");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		// This is special case because of here a two broadcaster are involved.

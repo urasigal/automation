@@ -92,7 +92,7 @@
 						<suiteXmlFile>src/test/resources/wholeconnectionscenario.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/rtmppush.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/udpinrtmpout.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/ffmpegpullinput.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/puffmpegpullinput.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/push/ffmpegpush.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/ffmpegfullpath.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/encryption/ffmpegfullpathencrypthandred.xml</suiteXmlFile>
@@ -100,7 +100,8 @@
 						<suiteXmlFile>src/test/resources/broadcasterhlstoffmpeg.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/broadcasterflvtoffmpeg.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feeder_to_broadcaser_remote_rtmp_output.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/feederudpout.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feederudpout.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feeder_udp_in.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/vod.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/encryption/ffmpeg_full_encryption_with_fec.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feeder_ssh.xml</suiteXmlFile>
@@ -111,8 +112,10 @@
 						<suiteXmlFile>src/test/resources/udp/broadcaster_udp_multicast.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/push/broadcaster_push_load.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/udp/broadcster_udp_load.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_two_links.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_three_links.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_three_links_load.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/push/broadcaster_bonded_push_load.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<properties>
 						<property>

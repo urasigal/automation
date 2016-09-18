@@ -56,7 +56,7 @@ public class BroadcasterRundomInputStreamDriver extends DriverStuff implements T
 		
 		ArrayList<String> ffmpegResults = new ArrayList<>();
 		
-		for(int i = 0 ; i < 25 ; i++)
+		for(int i = 0 ; i < TEST_ATTEMPT_QUNTYTY ; i++)
 		{
 			int randNumIndex = rand.nextInt((inputStreamNumbers));
 			apiworker.sendGet("http://" + login_ip + ":" + uiport + "/zixi/redirect_client.json?id=" + internalStreamID + "&stream=" + streamsNames[randNumIndex] + 

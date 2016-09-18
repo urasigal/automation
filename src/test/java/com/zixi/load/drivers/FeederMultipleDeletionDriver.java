@@ -27,7 +27,7 @@ public class FeederMultipleDeletionDriver extends BroadcasterLoggableApiWorker i
 		// Pass parameters to arrayList in order to provide them to ZthreadPool.
 		ArrayList<String> parameters = new ArrayList<String>(Arrays.asList(args));
 		
-		ZthreadPool zthreadPool =  new ZthreadPool(10, parameters);
+		ZthreadPool zthreadPool =  new ZthreadPool(1, parameters);
 		return zthreadPool.zexecuteFeederDeletion(ids);
 	}
 

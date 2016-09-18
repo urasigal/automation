@@ -43,8 +43,9 @@ public class ApiWorkir {
 			URL destUrl = new URL(url);  
 			con = (HttpURLConnection) destUrl.openConnection();
 			con	.setDoOutput( true );
+			//  Setup parameters and general request properties that you may need before connecting.
+			///////////////////////////////////////////////////////////////////////////////////////
 			con.setRequestMethod("POST");
-			// add request header
 			con.setRequestProperty("Accept", "*/*");
 			con.setRequestProperty("Pragma","no-cache");
 			con.setRequestProperty("Cache-Control","no-cache");
@@ -56,15 +57,14 @@ public class ApiWorkir {
 			con.setRequestProperty("Content-Type", "multipart/form-data" + ";" + " boundary=----WebKitFormBoundary8jMUwKeMgBKtvuqv");
 			con.setRequestProperty("Referer", "http://" + HOST + ":" + uiport + "/index.html");
 			con.setRequestProperty("Accept-Language", "en-US,en;q=0.8,he;q=0.6,ru;q=0.4");
-	
 			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0], "=", "%"), StringUtils.substringAfter(responseCookieContainer[0], "%3D"));
-	
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; "+ responseCookieContainer[0]);
-			debugLineNumber = 89;
+			//////////////////////////////////////////////////////////////////////////////////////////////////
+			debugLineNumber = 63;
 			DataOutputStream wr = new DataOutputStream( con.getOutputStream()); 
-			debugLineNumber = 91;
+			debugLineNumber = 65;
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream( );
-			debugLineNumber = 93;
+			debugLineNumber = 67;
 			// Temporary buffer.
 			outputStream.write( keyByteArray );
 
@@ -74,8 +74,7 @@ public class ApiWorkir {
 			wr.write( c );
 			wr.flush();
 			
-			BufferedReader in = new BufferedReader(new InputStreamReader(
-					con.getInputStream()));
+			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			String inputLine = "";
 			while ((inputLine = in.readLine()) != null) {
 				response.append(inputLine);
@@ -96,30 +95,30 @@ public class ApiWorkir {
 	}
 
 	public String sendGet(String url, String id, int mode,String[] responseCookieContainer, String HOST, Object caller, String uiport) {
-		debugLineNumber = 99;
+		debugLineNumber = 98;
 		StringBuffer response = new StringBuffer();
 		try {
-			
 			URL destUrl = new URL(url);
-			debugLineNumber = 104;
+			debugLineNumber = 102;
 			con = (HttpURLConnection) destUrl.openConnection();
-			debugLineNumber = 132;
-			// optional, default is GET
+			// Setup parameters and general request properties that you may need before connecting.
+			///////////////////////////////////////////////////////////////////////////////////////
+			con.setReadTimeout(60000);
+			debugLineNumber    = 107;
 			con.setRequestMethod("GET");
-			// add request header
 			con.setRequestProperty("Accept", "application/json, text/javascript, */*; q=0.01");
 			con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
 			con.setRequestProperty("Host", HOST + ":" + uiport);
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.setRequestProperty("Accept-Encoding", "gzip, deflate");
 			con.setRequestProperty("Referer", "http://" + HOST + ":" + uiport + "/index.html");
-			debugLineNumber = 116;
 			con.setRequestProperty(StringUtils.substringBetween(responseCookieContainer[0], "=", "%"), StringUtils.substringAfter(responseCookieContainer[0], "%3D"));
-			debugLineNumber = 118;
+			debugLineNumber    = 116;
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; " + responseCookieContainer[0]);
-			debugLineNumber = 120;
+			///////////////////////////////////////////////////////////////////////////////////////
+			debugLineNumber = 119;
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-			debugLineNumber = 122;
+			debugLineNumber = 120;
 			String inputLine = "";
 			while ((inputLine = in.readLine()) != null)
 			{
@@ -166,6 +165,7 @@ public class ApiWorkir {
 												return json.get("msg").toString();
 				
 				case PUSHINMODE:				inputLine = response.toString();
+												System.out.println("Debug printing ------>>> " + inputLine);
 												json = new JSONObject(inputLine);
 												return json.get("msg").toString();
 				
@@ -225,8 +225,7 @@ public class ApiWorkir {
 												String[] splittedResults;
 												inputLine = response.toString();
 												json = new JSONObject(inputLine);
-												System.out.println("Debug printing   -- "
-														+ json.get("msg").toString());
+												System.out.println("Debug printing   -- " + json.get("msg").toString());
 												wholeResult = json.get("msg").toString();
 												splittedResults = wholeResult.split(",");
 												return splittedResults[0];

@@ -116,9 +116,7 @@ public class FeederOutputDeletionDriver extends BroadcasterLoggableApiWorker imp
 			
 			testParameters = new TestParameters("userName:"+userName, "userPass:" + userPass, "login_ip:" + login_ip, "uiport:" + uiport, "id:" + id);
 			
-			responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP
-			+ login_ip + ":" + uiport + "/login.htm", userName, userPass,
-			login_ip, uiport);
+			responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP + login_ip + ":" + uiport + "/login.htm", userName, userPass, login_ip, uiport);
 	 
 			String request = "http://" + login_ip + ":" + uiport + "/del_sink?mip=" + mip + "&port=" + port + "&ip=" + ip + "&prog=" + prog + "&chan=" + chan + 
 			"&type=" + type + "&id=" +  URLEncoder.encode(id, "UTF-8");

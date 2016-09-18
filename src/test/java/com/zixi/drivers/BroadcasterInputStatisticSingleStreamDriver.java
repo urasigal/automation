@@ -13,8 +13,7 @@ import com.zixi.tools.BroadcasterInputStatisticHelper;
 import com.zixi.tools.BroadcasterLoggableApiWorker;
 import com.zixi.tools.StreamStatisticAnalyzer;
 
-public class BroadcasterInputStatisticSingleStreamDriver extends
-		BroadcasterLoggableApiWorker implements TestDriver {
+public class BroadcasterInputStatisticSingleStreamDriver extends BroadcasterLoggableApiWorker implements TestDriver {
 
 	private BroadcasterInputStatisticHelper broadcasterInputStatisticHelper = new BroadcasterInputStatisticHelper();
 	private JSONObject statisitcJson;
@@ -25,15 +24,12 @@ public class BroadcasterInputStatisticSingleStreamDriver extends
 	
 	public String testStatistic(String userName, String userPass, String host,String loin_ip, String uiport, String id, String testduration) throws Exception {
 		
-		testParameters = new TestParameters("userName:" + userName, "userPass:"
-				+ userPass, "host:" + host, "loin_ip:" + loin_ip, "uiport:"
-				+ uiport, "id:" + id, "testduration:" + testduration);
+	testParameters = new TestParameters("userName:" + userName, "userPass:" + userPass, "host:" + host, "loin_ip:" + loin_ip, "uiport:"
+	+ uiport, "id:" + id, "testduration:" + testduration);
 		
-		responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP
-				+ loin_ip + ":" + uiport + "/login.htm", userName, userPass,
-				loin_ip, uiport);
+	responseCookieContainer = broadcasterInitialSecuredLogin.sendGet(HTTP + loin_ip + ":" + uiport + "/login.htm", userName, userPass, loin_ip, uiport);
 		
-		ArrayList<Integer> bitRateList = new ArrayList<Integer>();
+	ArrayList<Integer> bitRateList = new ArrayList<Integer>();
 
 		try {
 			Thread.sleep(25000);
@@ -64,6 +60,7 @@ public class BroadcasterInputStatisticSingleStreamDriver extends
 		}
 
 		int statResults[] = streamStatisticAnalyzer.getMaxMinAvg(bitRateList);
+		
 		Reporter.log("Max bitrate is " + statResults[0]);
 		Reporter.log("Min bitrete is " + statResults[1]);
 		Reporter.log("Average bitrate is " + statResults[2]);
