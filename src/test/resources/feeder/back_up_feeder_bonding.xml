@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- Streaming/ Streams/ Feeder: push output streaming suite./ Push to BX default parameters/ -->
-<suite name="Feeder: bonded push output streaming suite two links" verbose="5" data-provider-thread-count="1">
+<suite name="Feeder: bonded push output streaming suite two links backup suite" verbose="5" data-provider-thread-count="1">
 	<test name="Feeder - bonded push to broadcaster test - default parameteres">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
