@@ -21,17 +21,17 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 	
 	public  ArrayList<String> list = new ArrayList<String>();
 	
-	final private static String params1 = ":";
-	final private static String params2 = "&";
-	final private static String params4 = "=";
-	final private static String params5 = "ie_fooler=0.45086039789021015";
-	private String internalStreamID = null;
-	private String internalStreamName = null;
-	final private String rid = "id";
+//	final private static String 	params1 		 	= ":";
+//	final private static String 	params2 		 	= "&";
+//	final private static String 	params4			 	= "=";
+//	final private static String 	params5 		 	= "ie_fooler=0.45086039789021015";
+	private String 					internalStreamID	= null;
+	private String 					internalStreamName 	= null;
+	final private String 		    rid                 = "id";
 	
-	public String testIMPL(String login_ip,String userName,String userPassword,String name,String uiport) throws Exception
+	public String testIMPL(String login_ip,String userName,String userPassword,String name, String uiport) throws Exception
 	{
-		testParameters = new TestParameters("login_ip:"+login_ip,"userName:"+userName ,"userPassword:"+userPassword ,"name:"+name ,"uiport:"+uiport);
+		testParameters = new TestParameters("login_ip:"+login_ip, "userName:"+userName, "userPassword:"+userPassword, "name:"+name, "uiport:"+uiport);
 		String response;
 		
 		// Super class member (BroadcasterLoggableApiWorker) -- get session parameters - broadcaster credentials.
@@ -40,10 +40,10 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		// get all outputs Json from broadcaster
 		response = apiworker.sendGet("http://" + login_ip + ":" + uiport + "/zixi/outputs.json", "", 77, responseCookieContainer, login_ip, this, uiport );
 		
-		JSONObject responseJson = new JSONObject(response.toString());
-		JSONArray outputStreamsArray = responseJson.getJSONArray("outputs");
+		JSONObject responseJson 		= 	new JSONObject(response.toString());
+		JSONArray outputStreamsArray 	= 	responseJson.getJSONArray("outputs");
 
-		String streamName = null;
+		String streamName 				= 	null;
 		// Walk through all outputs and find an id by an output name.
 		for (int i = 0; i < outputStreamsArray.length(); i++) 
 		{
@@ -52,10 +52,11 @@ public class BroadcaserSingleOutputStreamDeletionDriver extends BroadcasterLogga
 		    streamName = outputStream.getString("name");
 		    if(streamName.equals(name))
 		    {
-		    	internalStreamID = outputStream.getString("id");
-		    	internalStreamName = outputStream.getString("stream_id");
+		    	internalStreamID 	= outputStream.getString("id");
+		    	internalStreamName  = outputStream.getString("stream_id");
 		    }
-		  }
+		 }
+		
 		// Send a broadcaster WEB API request to delete an output stream by its ID.
 		return apiworker.sendGet("http://" + login_ip + ":" + uiport +  "/zixi/remove_output.json?" + rid + "=" + internalStreamID +"&stream=" +
 		internalStreamName , streamName, UDPMODE, responseCookieContainer, login_ip, this, uiport);

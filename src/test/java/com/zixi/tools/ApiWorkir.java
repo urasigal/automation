@@ -23,22 +23,30 @@ import static com.zixi.globals.Macros.*;
 
 public class ApiWorkir {
 
-	protected JSONObject json = null;
-	protected final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";
-	private String tester = null;
+	protected JSONObject        json = null;
+	protected final String      USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36";
+	private String              tester = null;
 	protected HttpURLConnection con;
-	protected int debugLineNumber = 0;
+	protected int               debugLineNumber = 0;
+	protected StringBuffer 		testFlowDescriptor;
+	// default constructor.
+	public ApiWorkir() {}
+	
+	
+	public ApiWorkir(StringBuffer testFlowDescriptor) {
+		this.testFlowDescriptor = testFlowDescriptor;
+	}
+	
 	
 	// It is very specific function is used to upload a server private key to a SPECIFIC feeder server - Such strong and disturbing rule comes from a Feeder server UI implementation.
 	public String inserKeyToSpecificFeeder(String url, String id, String[] responseCookieContainer, String HOST, Object caller, String uiport, byte[] keyByteArray)
 	{
-		List<Byte>   bytesList = new ArrayList<>();
-		debugLineNumber = 36;
+		List<Byte>   bytesList       = new ArrayList<>();
+					 debugLineNumber = 36;
 	
 		StringBuffer response = new StringBuffer();
 		
 		try {
-			
 			debugLineNumber = 42;
 			URL destUrl = new URL(url);  
 			con = (HttpURLConnection) destUrl.openConnection();
@@ -64,7 +72,7 @@ public class ApiWorkir {
 			DataOutputStream wr = new DataOutputStream( con.getOutputStream()); 
 			debugLineNumber = 65;
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream( );
-			debugLineNumber = 67;
+			debugLineNumber = 75;
 			// Temporary buffer.
 			outputStream.write( keyByteArray );
 
@@ -116,7 +124,7 @@ public class ApiWorkir {
 			debugLineNumber    = 116;
 			con.setRequestProperty("Cookie", responseCookieContainer[1] + "; " + responseCookieContainer[0]);
 			///////////////////////////////////////////////////////////////////////////////////////
-			debugLineNumber = 119;
+			debugLineNumber = 127;
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			debugLineNumber = 120;
 			String inputLine = "";
@@ -201,7 +209,7 @@ public class ApiWorkir {
 												tester = json.getString("msg");
 												if (tester.endsWith("Output " + id + " added."))
 												{
-													return tester = "good";
+													return tester = "Output " + id + " added.";
 												}
 				
 				case JSONMODE:					ArrayList<String> inputsStreamNames = new ArrayList();

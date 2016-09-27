@@ -36,30 +36,31 @@ import com.zixi.tools.TestlinkIntegration;
 public class BaseTest {
 	
 	// It is an interface, all test drivers have to implement this interface.
-	protected TestDriver testDriver;
+	protected TestDriver 						testDriver;
 	protected com.zixi.drivers.tools.TestDriver newTestDriver;
-	protected ClassLoader classLoader;
-	protected Object driverObj;
-	protected Method m;
-	protected String testid;
-	protected String version = "";
-	protected String automationTestIdentifiers = "";
-	protected ProductAboutDriver productAboutDriver = new ProductAboutDriver();
-	protected TestBaseFunction testBaseFunction = new TestBaseFunction ();
+	protected ClassLoader 						classLoader;
+	protected Object 							driverObj;
+	protected Method 							m;
+	protected String 							testid; // Stores unique test number which is the number provided by TestLink test management system. 
+	protected String 							version						= ""; // Stores the SUT version (feeder broadcaster receiver).
+	protected String 							automationTestIdentifiers 	= "";
+	protected ProductAboutDriver 				productAboutDriver 			= new ProductAboutDriver();
+	protected TestBaseFunction 					testBaseFunction 			= new TestBaseFunction ();
+	protected StringBuffer 						testFlowDescriptor 			= new StringBuffer("Test flow: "); // Put it any place in order to describe a test flow.
 	
-	protected String sutProcessId;
+	protected String 							sutProcessId;
 	
 	// Writes test results to the TestLink.
-	protected String testParameters =  "";
+	protected String 							testParameters 				= "";
 	
 	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developers.
-	protected static  Logger       LOGGER      = null;
-	protected static  FileHandler  FILEHANDLER = null ;
+	protected static  Logger       				LOGGER      				= null;
+	protected static  FileHandler  				FILEHANDLER 				= null ;
 	
 	// Reflection stuff.
-	protected Class c;
-	protected Object params[];
-	protected String manulDescription = "";
+	protected Class 							c;
+	protected Object 							params[];
+	protected String 							manulDescription 			= "";
 	
 	@BeforeTest
 	public void startTest(final ITestContext testContext) {
@@ -80,6 +81,9 @@ public class BaseTest {
 		tl.setResult(testid,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName(), getBuildIdFromFile());
 	}
 	
+	
+	// Prepare a lot of stuff:
+	// Write test results to the TestLink.
 	@AfterMethod
     public void afterTest(Method test, ITestResult result) 
 	{
@@ -90,12 +94,12 @@ public class BaseTest {
         if (result.isSuccess()) 
         {
             tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + "\nManul description: " + manulDescription , getBuildIdFromFile()); // pass data to a testLink notes in test execution.
+            automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor, getBuildIdFromFile()); // pass data to a testLink notes in test execution.
         } 
         else 
         {
-            tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + "\n Error is " + result.getThrowable().getMessage() + 
+            tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n" +  
+            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + testFlowDescriptor +  "\n Error is " + result.getThrowable().getMessage() + 
             "\n Exception stack trace: " + result.getThrowable().getStackTrace(), getBuildIdFromFile() );
         }
      }

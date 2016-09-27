@@ -9,16 +9,26 @@ import com.zixi.ssh.SshJcraftClient;
 
 public class BroadcasterLoggableApiWorker {
 	
-	protected ApiWorkir apiworker = new ApiWorkir();
+	protected ApiWorkir 					apiworker 						= new ApiWorkir();
 	
-	protected TestParameters testParameters;
+	protected String 						responseCookieContainer[] 		= new String[2];
+	
+	protected TestParameters 				testParameters;
 	
 	protected BroadcasterInitialSecuredLogin broadcasterInitialSecuredLogin = new BroadcasterInitialSecuredLogin();
 	
-	protected String responseCookieContainer[] = new String[2];
+	private static SshJcraftClient 			 sshJcraftClient;
 	
-	private static SshJcraftClient sshJcraftClient;
+	protected StringBuffer 					 testFlowDescriptor;
 	
+	// Default constructor.
+	public BroadcasterLoggableApiWorker() {}
+	
+	public BroadcasterLoggableApiWorker(StringBuffer testFlowDescriptor) {
+		
+		this.testFlowDescriptor = testFlowDescriptor;
+	}
+
 	public static String getPid(String sshUser, String sshPassword, String sshLoginIp, String sshPort, String command)
 	{
 		sshJcraftClient = new SshJcraftClient();

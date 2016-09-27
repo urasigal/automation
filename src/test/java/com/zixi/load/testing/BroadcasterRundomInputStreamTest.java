@@ -16,13 +16,13 @@ public class BroadcasterRundomInputStreamTest extends BaseTest
 {
 	@BeforeClass
 	public void testInit() {
-		newTestDriver = new BroadcasterRundomInputStreamDriver();
+		newTestDriver = new BroadcasterRundomInputStreamDriver(testFlowDescriptor);
 	}
 	
 	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "name", "testid" })
 	@Test
-	public void broadcasterDeleteAllInputs(String login_ip,
-			String userName, String userPassword, String uiport, String name, String testid) throws Exception {
+	public void broadcasterDeleteAllInputs(String login_ip, String userName, String userPassword, String uiport, String name, String testid) throws Exception {
+		
 		this.testid = testid;
 		
 		// Get broadcaster PID in the beginning of the test.
@@ -32,7 +32,9 @@ public class BroadcasterRundomInputStreamTest extends BaseTest
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 				
 		testParameters = buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "uiport", "name", "testid"}, 
-												   new String[] { login_ip, userName, userPassword, uiport, name, testid });
+		new String[] { login_ip, userName, userPassword, uiport, name, testid });
+		
+		testFlowDescriptor.append(" Beginning of the test (BroadcasterRundomInputStreamDriver) ");
 		
 		Assert.assertEquals(((BroadcasterRundomInputStreamDriver) newTestDriver).testIMPL(login_ip, userName, userPassword, uiport, name), "good");
 		

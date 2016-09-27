@@ -28,8 +28,8 @@ import com.zixi.tools.BroadcasterInitialSecuredLogin;
 public class ZthreadPool
 {
 	private ExecutorService executorService = null; 
-	ArrayList<String> parameters = null;
-	private TestDriver driver    = null;
+	ArrayList<String> parameters            = null;
+	private TestDriver driver               = null;
 	
 	// Constructor method.
 	public ZthreadPool(int numOfThreads, ArrayList<String> parameters)
@@ -41,35 +41,47 @@ public class ZthreadPool
 	public String executeDeleteAll() throws Exception 
 	{
 		// Container for the callable tasks.
-		ArrayList<Callable<String>> callablesZtasks = new ArrayList<Callable<String>>();
+		ArrayList<Callable<String>> callablesTaskList = new ArrayList<Callable<String>>();
 		
-		int parameterSize = parameters.size();
-		StreamsDriver streamsDriver = new StreamsDriver();
-		ArrayList<String> outputIds =  streamsDriver.broadcasterGetOutputStreamsIds(parameters.get(0), parameters.get(3), parameters.get(1), parameters.get(2));
+		int parameterSize           				  = parameters.size();
+		StreamsDriver streamsDriver 				  = new StreamsDriver();
+		ArrayList<String> outputIds 				  =  streamsDriver.broadcasterGetOutputStreamsIds(parameters.get(0), parameters.get(3), parameters.get(1), parameters.get(2));
 		
 		// Create a tasks.
 		for (int i = 0; i < outputIds.size(); i++) {
 			// Add and create a callable tasks for RTMP output stream creation. 
 			
 			int index = i;
-			callablesZtasks.add(new Callable<String>()
-			{
-				public String call() throws Exception
-				{ 
-					ApiWorkir apiworker = new ApiWorkir();
-					//login_ip, userName, userPassword, uiport
-					BroadcasterInitialSecuredLogin broadcasterInitialSecuredLogin = new BroadcasterInitialSecuredLogin();
-					String responseCookieContainer[] = new String[2];
-					responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + parameters.get(0) + ":" + parameters.get(3) + "/login.htm", 
-					parameters.get(1) , parameters.get(2), parameters.get(0), parameters.get(3));
-					
-					return apiworker.sendGet("http://" + parameters.get(0) + ":" + parameters.get(3) +  "/zixi/remove_output.json?id=" + outputIds.get(index), "", UDPMODE, 
-					responseCookieContainer, parameters.get(0), this, parameters.get(3));
-				}	
+//			callablesTaskList.add(new Callable<String>()
+//			{
+//				public String call() throws Exception
+//				{ 
+//					ApiWorkir apiworker = new ApiWorkir();
+//					//login_ip, userName, userPassword, uiport
+//					BroadcasterInitialSecuredLogin broadcasterInitialSecuredLogin = new BroadcasterInitialSecuredLogin();
+//					String responseCookieContainer[] = new String[2];
+//					responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + parameters.get(0) + ":" + parameters.get(3) + "/login.htm", 
+//					parameters.get(1) , parameters.get(2), parameters.get(0), parameters.get(3));
+//					
+//					return apiworker.sendGet("http://" + parameters.get(0) + ":" + parameters.get(3) +  "/zixi/remove_output.json?id=" + outputIds.get(index), "", UDPMODE, 
+//					responseCookieContainer, parameters.get(0), this, parameters.get(3));
+//				}	
+//			});
+			
+			callablesTaskList.add(() -> { 
+				 ApiWorkir apiworker = new ApiWorkir();
+				//login_ip, userName, userPassword, uiport
+				BroadcasterInitialSecuredLogin broadcasterInitialSecuredLogin = new BroadcasterInitialSecuredLogin();
+				String responseCookieContainer[] = new String[2];
+				responseCookieContainer = broadcasterInitialSecuredLogin.sendGet("http://" + parameters.get(0) + ":" + parameters.get(3) + "/login.htm", 
+				parameters.get(1) , parameters.get(2), parameters.get(0), parameters.get(3));
+				
+				return apiworker.sendGet("http://" + parameters.get(0) + ":" + parameters.get(3) +  "/zixi/remove_output.json?id=" + outputIds.get(index), "", UDPMODE, 
+				responseCookieContainer, parameters.get(0), this, parameters.get(3));
 			});
 		}
 		
-		List<Future<String>> futuresOutPutStreamDeletion = executorService.invokeAll(callablesZtasks);
+		List<Future<String>> futuresOutPutStreamDeletion = executorService.invokeAll(callablesTaskList);
 		
 		ArrayList<String> splittedResults = new ArrayList<>();
 		
@@ -480,7 +492,7 @@ public class ZthreadPool
 			});
 		}
 		
-		// Execute concurrently all tasks.
+		// Execute concurrently all tasks. Can block here.
 		List<Future<String>> futures = executorService.invokeAll(callablesZtasks);
 		
 		String result;
@@ -503,12 +515,16 @@ public class ZthreadPool
 			return "failed";
 	}
 	
-	public String zexecute() throws InterruptedException, ExecutionException
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public String zexecute(StringBuffer testFlowDescriptor) throws InterruptedException, ExecutionException
 	{
+		testFlowDescriptor.append("\nUsing  test driver \"ZthreadPool\" driver and its \"zexecute\" method ");
 		ArrayList<Callable<String>> callablesZtasks = new ArrayList<Callable<String>>();
-		int parameterSize = parameters.size();
-		int counter = Integer.parseInt( parameters.get(parameterSize -1) );
+		int 						parameterSize 	= parameters.size();
+		int 						counter       	= Integer.parseInt( parameters.get(parameterSize -1) );
 		
+		testFlowDescriptor.append("\n " + counter + " pull onput streams will be cteated ");
 		for(int i = 0 ; i < counter; i++)
 		{
 			driver = new BroadcasterSinglePullInStreamCreationDriver();
@@ -535,12 +551,17 @@ public class ZthreadPool
 		}
 		
 		if (numberOfAddedStreams == counter)
+		{
+			testFlowDescriptor.append("\nThe number of desired streams is equal to number of actually added streams, so the test will be considered as a successful test.");
 			return "pass";
+		}
 		else
+		{
+			testFlowDescriptor.append("\nThe number of desired streams is'n equal to number of actually added streams");
 			return "failed";
+		}
 	}
-	
-	
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// Relates to the Bonded load testing.
 	public String zexecuteBondedFeeder2Bx() throws InterruptedException, ExecutionException

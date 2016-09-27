@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- Streaming/ Streams/ Feeder: push output streaming suite./ Push to BX default parameters/ -->
-<suite name="Feeder: bonded push output streaming suite two links backup suite" verbose="5" data-provider-thread-count="1">
+<suite name="Feeder: bonded push output two links backup partial limitation suite" verbose="5" data-provider-thread-count="1">
 	<test name="Feeder - bonded push to broadcaster test - default parameteres">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -40,12 +40,12 @@
 		<parameter name="bond_host1" value="10.7.0.66" />
 		<parameter name="bond_port1" value="2088" />
 		<parameter name="bond_nic1" value="10.7.0.65" />
-		<parameter name="bond_limit1" value="0" />
+		<parameter name="bond_limit1" value="3000000" />
 		<parameter name="bond_backup1" value="1" />
 		<parameter name="bond_host2" value="192.168.60.66" />
 		<parameter name="bond_port2" value="2088" />
 		<parameter name="bond_nic2" value="192.168.50.65" />
-		<parameter name="bond_limit2" value="0" />
+		<parameter name="bond_limit2" value="3000000" />
 		 <parameter name="bond_backup2" value="0" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="4037" />
@@ -116,6 +116,9 @@
 		<parameter name="testid" value="669" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGBondingBackupTest"/>
+		    <methods>
+        		<include name="ffmpegBondingTestBackUpScenarioPartialLimitation" />
+     		 </methods>
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp input stream">

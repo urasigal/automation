@@ -86,13 +86,13 @@
 						<suiteXmlFile>src/test/resources/udp/udp.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/push/push.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/rtmp/rtmp.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/feederbxsetup.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feederbxsetup.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feederredundency.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feedersmoothing.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/wholeconnectionscenario.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/rtmppush.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/udpinrtmpout.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/puffmpegpullinput.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/pull/ffmpegpullinput.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/push/ffmpegpush.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/ffmpegfullpath.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/encryption/ffmpegfullpathencrypthandred.xml</suiteXmlFile>
@@ -116,6 +116,7 @@
 						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_three_links.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_three_links_load.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/push/broadcaster_bonded_push_load.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/back_up_feeder_bonding_full_limitation.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<properties>
 						<property>
