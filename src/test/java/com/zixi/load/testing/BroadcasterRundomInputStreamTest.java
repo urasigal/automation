@@ -7,16 +7,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcaserAllInputStreamDeletorDriver;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.BroadcasterRundomInputStreamDriver;
 import com.zixi.testing.BaseTest;
 
 public class BroadcasterRundomInputStreamTest extends BaseTest
 {
 	@BeforeClass
-	public void testInit() {
-		newTestDriver = new BroadcasterRundomInputStreamDriver(testFlowDescriptor);
+	public void testInit() { testDriver = new BroadcasterRundomInputStreamDriver(testFlowDescriptor);
 	}
 	
 	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "name", "testid" })
@@ -36,7 +35,7 @@ public class BroadcasterRundomInputStreamTest extends BaseTest
 		
 		testFlowDescriptor.append(" Beginning of the test (BroadcasterRundomInputStreamDriver) ");
 		
-		Assert.assertEquals(((BroadcasterRundomInputStreamDriver) newTestDriver).testIMPL(login_ip, userName, userPassword, uiport, name), "good");
+		Assert.assertEquals(((BroadcasterRundomInputStreamDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport, name), "good");
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

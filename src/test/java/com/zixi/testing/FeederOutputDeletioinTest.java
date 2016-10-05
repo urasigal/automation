@@ -13,11 +13,10 @@ import org.testng.annotations.Test;
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.FeederOutputDeletionDriver;
 import com.zixi.tools.TestlinkIntegration;
 
 public class FeederOutputDeletioinTest extends BaseTest{
-
-	private TestDriver testDriver;
 
 	@BeforeClass
 	public void testInit() {

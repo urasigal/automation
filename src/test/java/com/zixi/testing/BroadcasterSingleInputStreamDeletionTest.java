@@ -13,10 +13,9 @@ import org.testng.annotations.Test;
 
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
-import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
-import com.zixi.drivers.BroadcasterSingleInputStreamDeletionDriver;
-import com.zixi.drivers.BroadcasterSinglePullInStreamCreationDriver;
-import com.zixi.drivers.TestDriver;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
+import com.zixi.drivers.drivers.BroadcasterSingleInputStreamDeletionDriver;
+import com.zixi.drivers.drivers.TestDriver;
 import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterSingleInputStreamDeletionTest extends BaseTest {

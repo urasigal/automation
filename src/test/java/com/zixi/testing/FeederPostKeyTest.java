@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.FeederPostKeyDriver;
+import com.zixi.drivers.drivers.FeederPostKeyDriver;
 
 // The goal of the test is to verify an ability of a feeder server to accept a private key file through an UI API request.
 public class FeederPostKeyTest extends BaseTest{

@@ -12,10 +12,7 @@ import org.testng.annotations.Test;
 
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
-import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
-import com.zixi.drivers.BroadcasterInputStatisticSingleStreamDriver;
-import com.zixi.drivers.BroadcasterSinglePullInStreamCreationDriver;
-import com.zixi.drivers.TestDriver;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.entities.StreamEntity;
 import com.zixi.tools.TestlinkIntegration;
 
@@ -23,7 +20,7 @@ public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
 
 	@BeforeClass
 	public void testInit() {
-		newTestDriver = new com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver();
+		testDriver = new com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver();
 	}
 
 	@Parameters({ "userName", "userPass", "Host", "login_ip", "uiport", "id", "testduration" ,"testid"})
@@ -42,7 +39,7 @@ public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
 		new String[] { userName, userPass, Host, login_ip, uiport, id, testduration ,testid });
 		
 		// Perform the statistic test.
-		Assert.assertEquals(((com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver) newTestDriver).testStatistic(userName, userPass, Host, login_ip,
+		Assert.assertEquals(((com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver) testDriver).testStatistic(userName, userPass, Host, login_ip,
 		uiport, id, testduration), "statistics parameters are correct");
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));

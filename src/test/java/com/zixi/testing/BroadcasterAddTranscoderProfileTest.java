@@ -6,6 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.BroadcasterAddTranscoderProfileDriver;
 
 public class BroadcasterAddTranscoderProfileTest extends BaseTest {
 
@@ -15,10 +16,10 @@ public class BroadcasterAddTranscoderProfileTest extends BaseTest {
 	}
 
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "profile_name",
-			"enc", "bitrate", "gop", "fixed_gop", "closed_gop", "performance",
-			"b_frames", "frame_type", "profile", "level", "bitrate_mode",
-			"ref_frames", "idr_int", "cavlc", "brightness", "contrast", "fps",
-			"width", "height", "max_bitrate", "testid" })
+	"enc", "bitrate", "gop", "fixed_gop", "closed_gop", "performance",
+	"b_frames", "frame_type", "profile", "level", "bitrate_mode",
+	"ref_frames", "idr_int", "cavlc", "brightness", "contrast", "fps",
+	"width", "height", "max_bitrate", "testid" })
 	@Test
 	public void broadcasterSingleInputStreamstatisticAnilyzer(String userName,
 			String userPass, String login_ip, String uiport,

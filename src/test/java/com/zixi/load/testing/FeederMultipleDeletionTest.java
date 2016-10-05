@@ -5,8 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
-import com.zixi.drivers.FeederOutputDeletionDriver;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.FeederBroadcasterBondingMultipleThreeLinkDriver;
 import com.zixi.load.drivers.FeederMultipleDeletionDriver;
 import com.zixi.testing.BaseTest;
@@ -21,10 +20,7 @@ public class FeederMultipleDeletionTest  extends BaseTest{
 		testDriver = new FeederMultipleDeletionDriver();
 	}
 	
-	
-	
 	@Parameters({ "userName_feeder", "userPass_feeder", "login_ip_feeder", "uiport", "mip",  "port", "ip", "prog", "chan", "type"})
-	
 	// This test will create a number of bonded output streams from feeder to broadcaster.
 	@Test
 	public void broadcasterMultiplePullInCreation(String userName_feeder, String userPass_feeder, String login_ip_feeder, String uiport, 

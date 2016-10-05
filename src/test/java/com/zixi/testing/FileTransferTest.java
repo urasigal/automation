@@ -8,6 +8,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.BroadcasterFileUploadDriver;
 
 public class FileTransferTest extends BaseTest{
 	@BeforeClass

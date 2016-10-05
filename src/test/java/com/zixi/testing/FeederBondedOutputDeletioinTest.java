@@ -5,18 +5,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.FeederOutputDeletionDriver;
-import com.zixi.drivers.TestDriver;
+import com.zixi.drivers.drivers.FeederOutputDeletionDriver;
+import com.zixi.drivers.drivers.TestDriver;
 
 public class FeederBondedOutputDeletioinTest extends BaseTest{
-
-	private TestDriver testDriver;
 
 	@BeforeClass
 	public void testInit() {
 		testDriver = new FeederOutputDeletionDriver();
 	}
-	
 	
 	// Deletes a feeder bonded output stream while a output stream is consists of a two bonded links.
 	@Parameters({"userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type", "nic1", "nic2", "dest_host1", "dest_host2" ,"testid"})

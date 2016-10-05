@@ -8,8 +8,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.BroadcasterCreateAddaptiveGroupDriver;
-
 public class ZixiGenericAdapiveTest extends BaseTest {
 
 	@Parameters({ "driver", "userName", "userPass", "login_ip", "uiport",

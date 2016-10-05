@@ -5,11 +5,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.FeederOutputDeletionDriver;
-import com.zixi.drivers.TestDriver;
+import com.zixi.drivers.drivers.FeederOutputDeletionDriver;
 
 public class FeederUdpOutputDeletioinTest extends BaseTest{
-	private TestDriver testDriver;
 
 	@BeforeClass
 	public void testInit() {

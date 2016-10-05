@@ -13,6 +13,8 @@ import org.testng.annotations.Test;
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
+import com.zixi.drivers.drivers.BroadcasterRtmpInCreationDriver;
 import com.zixi.tools.TestlinkIntegration;
 
 

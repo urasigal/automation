@@ -9,10 +9,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
-
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.tools.TestlinkIntegration;
 
 
@@ -22,10 +21,8 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 	
 	@BeforeClass
 	public void testInit() { 
-		
-			// Super class element
-			testDriver = new BroadcaserSingleOutputStreamDeletionDriver();
-		
+		// Super class element
+		testDriver = new BroadcaserSingleOutputStreamDeletionDriver();
 	}
 
 	// Test parameters.

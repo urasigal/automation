@@ -6,9 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcaserAllInputStreamDeletorDriver;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.BroadcasterMultipleCreationDriver;
 import com.zixi.testing.BaseTest;
 
@@ -16,7 +15,7 @@ public class BroadcaserAllInputStreamDeletorTest extends BaseTest
 {
 	@BeforeClass
 	public void testInit() {
-		newTestDriver = new BroadcaserAllInputStreamDeletorDriver();
+		testDriver = new BroadcaserAllInputStreamDeletorDriver();
 	}
 	
 	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "testid" })
@@ -34,7 +33,7 @@ public class BroadcaserAllInputStreamDeletorTest extends BaseTest
 		testParameters = buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "uiport", "testid"}, 
 												   new String[] { login_ip, userName, userPassword, uiport, testid });
 		
-		Assert.assertEquals(((BroadcaserAllInputStreamDeletorDriver) newTestDriver).testIMPL(login_ip, userName, userPassword, uiport), "good");
+		Assert.assertEquals(((BroadcaserAllInputStreamDeletorDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport), "good");
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 }

@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.FFMPEGImageStatisticTestDriver;
+import com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver;
 
 public class FFMPEGBondingBackupTest extends BaseTest{
 	

@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.BroadcasterMultipleCreationDriver;
 import com.zixi.load.drivers.BroadcasterMultipleUdpDriver;
 import com.zixi.testing.BaseTest;
@@ -41,24 +41,23 @@ public class BroadcasterMultipleUdpTest extends BaseTest
 			
 			// Gather the test parameters in order to pass them to the TestLink
 			testParameters = buildTestParametersString(new String[] { "userName_bx1", "userName_bx2", "userPass_bx1", "userPass_bx2", "login_ip_bx1", "login_ip_bx2","ts_port","id_bx1","rtp_type", 				
-					 "multi_src","max_bitrate", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "nic", "type_bx1", "multicast", "enc_key","kompression",			
-						"uiport_bx1", "mcast_ttl", "enc_type", "mcast_out", "complete", "max_outputs", "on", "port", "stream", "streamname", "host", "id_bx2", "rtp",
-						"fec", "smoothing", "ttl", "remux_bitrate", "df", "local_port", "dec_key", "type_bx2", "rows", "remux_buff", "local_ip", "remux_restampdts", 
-						"uiport_bx2", "remux_pcr", "dec_type", "cols", "number_of_streams", "testid"}, 
-					
-					new String[] {userName_bx1, userName_bx2, userPass_bx1, userPass_bx2, login_ip_bx1, login_ip_bx2, ts_port, id_bx1, rtp_type, 				
-						multi_src,  max_bitrate, time_shift, mcast_ip, mcast_force, mcast_port, nic, type_bx1, multicast, enc_key, kompression,			
-						uiport_bx1, mcast_ttl, enc_type, mcast_out, complete, max_outputs, on, port, stream, streamname, host, id_bx2, rtp,
-						fec, smoothing, ttl, remux_bitrate, df, local_port, dec_key, type_bx2, rows, remux_buff, local_ip, remux_restampdts, 
-						uiport_bx2, remux_pcr, dec_type, cols, number_of_streams, testid });
+			"multi_src","max_bitrate", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "nic", "type_bx1", "multicast", "enc_key","kompression",			
+			"uiport_bx1", "mcast_ttl", "enc_type", "mcast_out", "complete", "max_outputs", "on", "port", "stream", "streamname", "host", "id_bx2", "rtp",
+			"fec", "smoothing", "ttl", "remux_bitrate", "df", "local_port", "dec_key", "type_bx2", "rows", "remux_buff", "local_ip", "remux_restampdts", 
+			"uiport_bx2", "remux_pcr", "dec_type", "cols", "number_of_streams", "testid"}, 
+			 new String[] {userName_bx1, userName_bx2, userPass_bx1, userPass_bx2, login_ip_bx1, login_ip_bx2, ts_port, id_bx1, rtp_type, 				
+			multi_src,  max_bitrate, time_shift, mcast_ip, mcast_force, mcast_port, nic, type_bx1, multicast, enc_key, kompression,			
+			uiport_bx1, mcast_ttl, enc_type, mcast_out, complete, max_outputs, on, port, stream, streamname, host, id_bx2, rtp,
+			fec, smoothing, ttl, remux_bitrate, df, local_port, dec_key, type_bx2, rows, remux_buff, local_ip, remux_restampdts, 
+			uiport_bx2, remux_pcr, dec_type, cols, number_of_streams, testid });
 			
 			// The actual test method.
 			Assert.assertEquals(((BroadcasterMultipleUdpDriver) testDriver).testIMPL
-									(userName_bx1, userName_bx2, userPass_bx1, userPass_bx2, login_ip_bx1, login_ip_bx2, ts_port, id_bx1, rtp_type, 				
-									multi_src,  max_bitrate, time_shift, mcast_ip, mcast_force, mcast_port, nic, type_bx1, multicast, enc_key, kompression,			
-									uiport_bx1, mcast_ttl, enc_type, mcast_out, complete, max_outputs, on, port, stream, streamname, host, id_bx2, rtp,
-									fec, smoothing, ttl, remux_bitrate, df, local_port, dec_key, type_bx2, rows, remux_buff, local_ip, remux_restampdts, 
-									uiport_bx2, remux_pcr, dec_type, cols, number_of_streams), "pass");
+			(userName_bx1, userName_bx2, userPass_bx1, userPass_bx2, login_ip_bx1, login_ip_bx2, ts_port, id_bx1, rtp_type, 				
+			multi_src,  max_bitrate, time_shift, mcast_ip, mcast_force, mcast_port, nic, type_bx1, multicast, enc_key, kompression,			
+			uiport_bx1, mcast_ttl, enc_type, mcast_out, complete, max_outputs, on, port, stream, streamname, host, id_bx2, rtp,
+			fec, smoothing, ttl, remux_bitrate, df, local_port, dec_key, type_bx2, rows, remux_buff, local_ip, remux_restampdts, 
+			uiport_bx2, remux_pcr, dec_type, cols, number_of_streams), "pass");
 			
 			// Checking if broadcaster has crashes while execution of the test.
 			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx1,  "22",  "pidof zixi_broadcaster"));

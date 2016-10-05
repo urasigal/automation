@@ -6,19 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
-import com.zixi.drivers.BroadcasterPushInStreamCreationDriver;
-import com.zixi.drivers.BroadcasterPushOutStreamCreationDriver;
-import com.zixi.drivers.BroadcasterRtmpInCreationDriver;
-import com.zixi.drivers.BroadcasterRtmpPushInputStreamDriver;
-import com.zixi.drivers.BroadcasterRtmpPushOutputCreationDriver;
-import com.zixi.drivers.BroadcasterSinglePullInStreamCreationDriver;
-import com.zixi.drivers.BroadcasterSingleUdpInCreationDriver;
-import com.zixi.drivers.BroadcasterUdpOutputCreationDriver;
-import com.zixi.drivers.FeederOutputDeletionDriver;
-import com.zixi.drivers.FeederOutputPushToBxDriver;
-import com.zixi.drivers.StreamsDriver;
-import com.zixi.drivers.TestDriver;
+import com.zixi.drivers.drivers.BroadcasterPushInStreamCreationDriver;
+import com.zixi.drivers.drivers.BroadcasterPushOutStreamCreationDriver;
+import com.zixi.drivers.drivers.BroadcasterRtmpInCreationDriver;
+import com.zixi.drivers.drivers.BroadcasterRtmpPushInputStreamDriver;
+import com.zixi.drivers.drivers.BroadcasterRtmpPushOutputCreationDriver;
+import com.zixi.drivers.drivers.BroadcasterSinglePullInStreamCreationDriver;
+import com.zixi.drivers.drivers.BroadcasterSingleUdpInCreationDriver;
+import com.zixi.drivers.drivers.BroadcasterUdpOutputCreationDriver;
+import com.zixi.drivers.drivers.FeederOutputDeletionDriver;
+import com.zixi.drivers.drivers.FeederOutputPushToBxDriver;
+import com.zixi.drivers.drivers.StreamsDriver;
+import com.zixi.drivers.drivers.TestDriver;
 import com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest;
 import com.zixi.testing.BroadcasterPushInStreamCreationDecriptionTest;
 import com.zixi.testing.FeederBondedOutputDeletioinTest;
@@ -525,9 +524,10 @@ public class ZthreadPool
 		int 						counter       	= Integer.parseInt( parameters.get(parameterSize -1) );
 		
 		testFlowDescriptor.append("\n " + counter + " pull onput streams will be cteated ");
-		for(int i = 0 ; i < counter; i++)
+		
+		driver = new BroadcasterSinglePullInStreamCreationDriver();
+		for(int i = 0 ; i < counter; i ++, driver = new BroadcasterSinglePullInStreamCreationDriver())
 		{
-			driver = new BroadcasterSinglePullInStreamCreationDriver();
 			parameters.set(4,  "abc" + i);
 			ArrayList<String> tempParameters = (ArrayList<String>)parameters.clone();
 			Ztask ztask = new Ztask(driver, tempParameters);
@@ -559,6 +559,53 @@ public class ZthreadPool
 		{
 			testFlowDescriptor.append("\nThe number of desired streams is'n equal to number of actually added streams");
 			return "failed";
+		}
+	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public String zexecute() throws InterruptedException, ExecutionException
+	{
+	
+		ArrayList<Callable<String>> callablesZtasks = new ArrayList<Callable<String>>();
+		int 						parameterSize 	= parameters.size();
+		int 						counter       	= Integer.parseInt( parameters.get(parameterSize -1) );
+		
+		
+		driver = new BroadcasterSinglePullInStreamCreationDriver();
+		for(int i = 0 ; i < counter; i ++, driver = new BroadcasterSinglePullInStreamCreationDriver())
+		{
+			parameters.set(4,  "abc" + i);
+			ArrayList<String> tempParameters = (ArrayList<String>)parameters.clone();
+			Ztask ztask = new Ztask(driver, tempParameters);
+			callablesZtasks.add(ztask);
+		}
+		
+		List<Future<String>> futures = executorService.invokeAll(callablesZtasks);
+		
+		String result;
+		int numberOfAddedStreams = 0;
+		
+		for(Future<String> future : futures)
+		{
+			result = future.get();
+			System.out.println("Result is " +  result);
+			String[] res = result.split(" ");
+			if(res[res.length - 1].equals("added."))
+			{
+				numberOfAddedStreams ++;
+			}
+		}
+		
+		if (numberOfAddedStreams == counter)
+		{
+			return "pass";
+		}
+		else
+		{
+		
+		return "failed";
 		}
 	}
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -764,7 +811,7 @@ public class ZthreadPool
 			return "failed";
 	}
 	
-	public String zexecuteBondedBroadcaster2Bx() throws InterruptedException, ExecutionException
+	public String zexecuteBondedBroadcaster2Bx(StringBuffer testFlowDescriptor) throws InterruptedException, ExecutionException
 	{
 		// This is a container for the Callable tasks.
 		ArrayList<Callable<String>> broadcasterOutputBondedZtasks = new ArrayList<Callable<String>>();
@@ -775,6 +822,7 @@ public class ZthreadPool
 		
 		// Gets a number of desired tasks.
 		int counter = Integer.parseInt( parameters.get(parameterSize -1) );
+		testFlowDescriptor.append("\nNumber of streams that would be created " + counter);
 		
 		for(int i = 0 ; i < counter; i++)
 		{

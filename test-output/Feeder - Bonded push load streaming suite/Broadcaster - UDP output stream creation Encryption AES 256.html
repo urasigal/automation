@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Broadcaster - UDP output stream creation Encryption AES 256</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 12 14:06:23 IDT 2016</td>
+<td>Started on:</td><td>Thu Sep 29 13:46:01 IDT 2016</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (894 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1411 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,50 +67,75 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation()'><b>broadcasterPullInCreation</b><br>Test class: com.zixi.testing.BroadcasterUDPOutputStreamCreationTest<br>Parameters: admin, 1234, 10.7.0.66, 5555, , test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , , TS, 10, 1000, 0.0.0.0, 0, 4444, 90, , 10, 4309<br/>
-<a href="#Output-491273700" onClick='toggleBox("Output-491273700", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-491273700" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-491273700">
-Test parameteres: <br/>
-userName: admin<br/>
-userPass: 1234<br/>
-loin_ip: 10.7.0.66<br/>
-port: 5555<br/>
-stream: -- not provided <br/>
-streamname: test<br/>
-host: 10.7.0.150<br/>
-id: test<br/>
-rtp: 0<br/>
-fec: 0<br/>
-smoothing: 0<br/>
-ttl: 5<br/>
-remux_bitrate: 0<br/>
-df: 0<br/>
-local_port: -- not provided <br/>
-dec_key: -- not provided <br/>
-type: TS<br/>
-rows: 10<br/>
-remux_buff: 1000<br/>
-local_ip: 0.0.0.0<br/>
-remux_restampdts: 0<br/>
-uiport: 4444<br/>
-remux_pcr: 90<br/>
-dec_type: -- not provided <br/>
-cols: 10<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@2a5ca609</td></tr>
+<td title='com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation()'><b>broadcasterPullInCreation</b><br>Test class: com.zixi.testing.BroadcasterUDPOutputStreamCreationTest<br>Parameters: admin, 1234, 10.7.0.66, 5555, , test, 10.7.0.150, test, 0, 0, 0, 5, 0, 0, , , TS, 10, 1000, 0.0.0.0, 0, 4444, 90, , 10, 4309</td>
+<td><div><pre>com.zixi.tools.BroadcasterInitialSecuredLogin$1: Loggin parameters are empty.
+	at com.zixi.tools.BroadcasterInitialSecuredLogin.sendGet(BroadcasterInitialSecuredLogin.java:85)
+	at com.zixi.drivers.ProductAboutDriver.getBroadcasterVersion(ProductAboutDriver.java:10)
+	at com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(BroadcasterUDPOutputStreamCreationTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace491273700", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace491273700'><pre>com.zixi.tools.BroadcasterInitialSecuredLogin$1: Loggin parameters are empty.
+	at com.zixi.tools.BroadcasterInitialSecuredLogin.sendGet(BroadcasterInitialSecuredLogin.java:85)
+	at com.zixi.drivers.ProductAboutDriver.getBroadcasterVersion(ProductAboutDriver.java:10)
+	at com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(BroadcasterUDPOutputStreamCreationTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.zixi.testing.BroadcasterUDPOutputStreamCreationTest@68be2bc2</td></tr>
 </table><p>
 </body>
 </html>

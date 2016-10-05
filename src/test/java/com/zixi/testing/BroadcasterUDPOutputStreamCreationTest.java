@@ -13,6 +13,8 @@ import org.testng.annotations.Test;
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
+import com.zixi.drivers.drivers.BroadcasterUdpOutputCreationDriver;
 import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterUDPOutputStreamCreationTest extends BaseTest{

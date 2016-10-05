@@ -6,10 +6,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.ReceiverPullInputStreamCreationDriver;
 
 public class ReceiverPullInputStreamCreationTest extends BaseTest{
-
-	private TestDriver testDriver;
 
 	@BeforeClass
 	public void testInit() {

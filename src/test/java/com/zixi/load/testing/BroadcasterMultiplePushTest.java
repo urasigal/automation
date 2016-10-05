@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.BroadcasterMultipleCreationDriver;
 import com.zixi.load.drivers.BroadcasterMultiplePushDriver;
 import com.zixi.testing.BaseTest;
@@ -36,10 +36,10 @@ public class BroadcasterMultiplePushTest extends BaseTest{
 			String port, String uiport_bx2, String alias, String id_bx2, String number_of_streams, String testid) throws Exception {
 		
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip_bx1, uiport_bx1, userName_bx1, userPass_bx1);
+		this.version          = productAboutDriver.getBroadcasterVersion(login_ip_bx1, uiport_bx1, userName_bx1, userPass_bx1);
 		
 		// Here we take PIDs from a two broadcaster servers because of in this particular test case a two different broadcasters are involved.
-		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx1,  "22",  "pidof zixi_broadcaster");
+		sutProcessId         = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx1,  "22",  "pidof zixi_broadcaster");
 		String sutProcessId2 = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx2,  "22",  "pidof zixi_broadcaster");
 		
 		// Gather the test parameters in order to pass them to the TestLink

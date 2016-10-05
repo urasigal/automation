@@ -9,15 +9,17 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.jcraft.jsch.JSchException;
-import com.zixi.ssh.*;
+import com.zixi.ssh.SshJcraftClient;
 import com.zixi.threads.ExternalRunnerThread;
-import com.zixi.tools.StreamStatisticAnalyzer;
-import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.*;
+import com.zixi.drivers.tools.StreamStatisticAnalyzer;
+
 
 public class RedundantFeedersOneBxTest extends BaseTest {
-	private TestDriver inputStreamDetailsDriver;
 	
+	private TestDriver inputStreamDetailsDriver;
 	private TestDriver redundantFeederOneBxDriver;
+	
 	private SshJcraftClient sshJcraftClient;
 	@BeforeClass
 	public void testInit() {
@@ -63,6 +65,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		for(int i = 0 ; i < 10; i++)
 		{
 			ExternalRunnerThread externalRunnerThread = new ExternalRunnerThread(((RedundantFeederOneBxDriver)redundantFeederOneBxDriver), udp_port);
+			
 			sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
 					middle_bx_userName, middle_bx_userPass);
 			externalRunnerThread.start();

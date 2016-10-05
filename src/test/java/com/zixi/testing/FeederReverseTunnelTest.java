@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import com.jcraft.jsch.JSchException;
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.FeederReverseTunnelDriver;
 
 public class FeederReverseTunnelTest extends BaseTest{
 	

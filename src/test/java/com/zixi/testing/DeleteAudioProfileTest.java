@@ -6,6 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.DeleteAudioProfileDriver;
 
 public class DeleteAudioProfileTest extends BaseTest{
 	@BeforeClass
@@ -13,13 +14,7 @@ public class DeleteAudioProfileTest extends BaseTest{
 		testDriver = new DeleteAudioProfileDriver();
 	}
 
-	@Parameters({ 
-		"userName",
-		"userPass", 
-		"login_ip", 
-		"uiport",
-		"profile_name",
-		"testid"})
+	@Parameters({ "userName","userPass", "login_ip", "uiport", "profile_name", "testid"})
 	@Test
 	public void broadcasterPullInCreation(String userName, String userPass, String login_ip, String uiport, String profile_name, String testid)
 			throws Exception {

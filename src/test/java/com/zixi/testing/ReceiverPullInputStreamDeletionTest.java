@@ -6,10 +6,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.ReceiverPullInputStreamDeletionDriver;
 
 public class ReceiverPullInputStreamDeletionTest extends BaseTest{
-
-	private TestDriver testDriver;
 
 	@BeforeClass
 	public void testInit() {
@@ -26,7 +25,7 @@ public class ReceiverPullInputStreamDeletionTest extends BaseTest{
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id" ,"testid" }, 
 				
-				new String[] { userName, userPassword, login_ip, uiport, id ,testid });
+		new String[] { userName, userPassword, login_ip, uiport, id ,testid });
 		
 		
 		String streamForDeletion = ((ReceiverPullInputStreamDeletionDriver) testDriver)

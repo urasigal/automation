@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.zixi.drivers.BroadcaserSingleOutputStreamDeletionDriver;
+import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.BroadcasterMultipleCreationDriver;
 import com.zixi.testing.BaseTest;
 
@@ -18,13 +18,13 @@ public class BroadcasterMultipleRtmpPullCreationTest extends BaseTest
 	@BeforeClass
 	public void testInit()
 	{
-		testDriver = new BroadcasterMultipleCreationDriver();
+		testDriver = new BroadcasterMultipleCreationDriver(testFlowDescriptor);
 	}
 	
 	// Parameters section.
 	@Parameters({"userName", "userPass", "login_ip", "rtmp_nulls", "id", "rtmp_url", "rtmp_name", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "type",
-				"rtmp_user", "rtmp_bitrate", "rtmp_passwd", "uiport", "mcast_ttl", "rtmp_latency", "mcast_out", "complete", "max_outputs", "on", 
-				"number_of_streams", "testid"})
+	"rtmp_user", "rtmp_bitrate", "rtmp_passwd", "uiport", "mcast_ttl", "rtmp_latency", "mcast_out", "complete", "max_outputs", "on", 
+	"number_of_streams", "testid"})
 	
 	// Test method section. 
 	@Test
@@ -40,13 +40,12 @@ public class BroadcasterMultipleRtmpPullCreationTest extends BaseTest
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		// Gather the test parameters in order to pass them to the TestLink
-		testParameters = buildTestParametersString(
-				new String[] { "userName", "userPass", "login_ip", "rtmp_nulls","id", "rtmp_url", "rtmp_name", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "type",
-				"rtmp_user", "rtmp_bitrate", "rtmp_passwd", "uiport", "mcast_ttl", "rtmp_latency", "mcast_out", "complete", "max_outputs", "on", 
-				"number_of_streams", "testid"}, 
-				new String[] {userName, userPass, login_ip, rtmp_nulls, id, rtmp_url, rtmp_name, time_shift, mcast_ip, mcast_force, mcast_port, type,
-				rtmp_user, rtmp_bitrate, rtmp_passwd, uiport, mcast_ttl, rtmp_latency, mcast_out, complete, max_outputs, on, 
-				number_of_streams, testid});
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "rtmp_nulls","id", "rtmp_url", "rtmp_name",
+		"time_shift", "mcast_ip", "mcast_force", "mcast_port", "type", "rtmp_user", "rtmp_bitrate", "rtmp_passwd", "uiport", "mcast_ttl", "rtmp_latency", 
+		"mcast_out", "complete", "max_outputs", "on", "number_of_streams", "testid"}, 
+		new String[] {userName, userPass, login_ip, rtmp_nulls, id, rtmp_url, rtmp_name, time_shift, mcast_ip, mcast_force, mcast_port, type,
+		rtmp_user, rtmp_bitrate, rtmp_passwd, uiport, mcast_ttl, rtmp_latency, mcast_out, complete, max_outputs, on, 
+		number_of_streams, testid});
 		
 		// The actual test method.
 		// The condition of a passed test is if the number of added streams is equal to the number of the desired steams.

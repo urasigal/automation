@@ -16,7 +16,7 @@
 		<parameter name="oses" value="" />
 		<parameter name="oetp" value="" />
 		<parameter name="oeky" value="" />
-		<parameter name="obit" value="80000000" />
+		<parameter name="obit" value="15000000" />
 		<parameter name="olat" value="6000" />
 		<parameter name="ofc" value="0" />
 		<parameter name="ocmp" value="1" />
@@ -25,7 +25,7 @@
 		<parameter name="fec_force" value="0" />
 		<parameter name="fec_adaptive" value="1" />
 		<parameter name="ofec" value="30" />
-		<parameter name="ofecl" value="150" />
+		<parameter name="ofecl" value="100" />
 		<parameter name="stop_on_drop" value="0" />
 		<parameter name="mmt" value="0" />
 		<parameter name="smoothing" value="0" />
@@ -39,7 +39,7 @@
 		<parameter name="bond_host1" value="10.7.0.66" />
 		<parameter name="bond_port1" value="2088" />
 		<parameter name="bond_nic1" value="10.7.0.65" />
-		<parameter name="bond_limit1" value="0" />
+		<parameter name="bond_limit1" value="1000000" />
 		<parameter name="bond_backup1" value="0" />
 		<parameter name="bond_host2" value="192.168.60.66" />
 		<parameter name="bond_port2" value="2088" />

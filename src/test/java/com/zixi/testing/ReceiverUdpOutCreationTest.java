@@ -6,6 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.ReceiverUdpOutCreationDriver;
 
 public class ReceiverUdpOutCreationTest extends BaseTest {
 
@@ -26,12 +27,12 @@ public class ReceiverUdpOutCreationTest extends BaseTest {
 		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
-				"target", "type", "nic", "ttl", "smoothing", "rtp", "fec", "rows",
-				"cols", "remux_bitrate", "input_stream", "testid"}, 
-				
-				new String[] { userName, userPass, login_ip, uiport, name,
-				target, type, nic, ttl, smoothing, rtp, fec, rows,
-				cols, remux_bitrate, input_stream, testid });
+		"target", "type", "nic", "ttl", "smoothing", "rtp", "fec", "rows",
+		"cols", "remux_bitrate", "input_stream", "testid"}, 
+		
+		new String[] { userName, userPass, login_ip, uiport, name,
+		target, type, nic, ttl, smoothing, rtp, fec, rows,
+		cols, remux_bitrate, input_stream, testid });
 		
 		Assert.assertEquals(((ReceiverUdpOutCreationDriver) testDriver).testIMPL(
 				userName, userPass, login_ip, uiport, name,

@@ -27,6 +27,8 @@ import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
 
 import com.zixi.drivers.*;
+import com.zixi.drivers.drivers.ProductAboutDriver;
+import com.zixi.drivers.drivers.TestDriver;
 import com.zixi.tools.TestlinkIntegration;
 
 /*
@@ -37,7 +39,6 @@ public class BaseTest {
 	
 	// It is an interface, all test drivers have to implement this interface.
 	protected TestDriver 						testDriver;
-	protected com.zixi.drivers.tools.TestDriver newTestDriver;
 	protected ClassLoader 						classLoader;
 	protected Object 							driverObj;
 	protected Method 							m;

@@ -9,11 +9,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
-
-import com.zixi.drivers.BroadcasterRtmpInCreationDriver;
-import com.zixi.drivers.TestDriver;
+import com.zixi.drivers.drivers.BroadcasterRtmpInCreationDriver;
+import com.zixi.drivers.drivers.TestDriver;
 import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcaseterRtmpPushInputTest extends BaseTest{
