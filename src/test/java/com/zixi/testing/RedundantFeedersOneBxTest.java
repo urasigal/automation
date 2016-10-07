@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 import com.jcraft.jsch.JSchException;
 import com.zixi.ssh.SshJcraftClient;
 import com.zixi.threads.ExternalRunnerThread;
+import com.zixi.tools.StreamStatisticAnalyzer;
 import com.zixi.drivers.drivers.*;
-import com.zixi.drivers.tools.StreamStatisticAnalyzer;
 
 
 public class RedundantFeedersOneBxTest extends BaseTest {
@@ -80,10 +80,6 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		long statistics[] = StreamStatisticAnalyzer.getMaxMinAvgLong(results);
 		System.out.println("Max is " + statistics[0] + "Min is " + statistics[1] + "Avg is " + statistics[2]);
 	}
-	
-	
-	
-	
 	
 	@Parameters({ 
 		"udp_port_server", // needed for UDP server, UDP server will be listen to this port. 
