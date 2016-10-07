@@ -20,7 +20,7 @@ public class BroadcasterRundomInputStreamTest extends BaseTest
 	
 	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "name", "testid" })
 	@Test
-	public void broadcasterDeleteAllInputs(String login_ip, String userName, String userPassword, String uiport, String name, String testid) throws Exception {
+	public void broadcasterSwitchUdpOut(String login_ip, String userName, String userPassword, String uiport, String name, String testid) throws Exception {
 		
 		this.testid = testid;
 		
