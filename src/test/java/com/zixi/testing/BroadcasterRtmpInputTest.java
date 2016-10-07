@@ -9,10 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
-
-import com.zixi.drivers.*;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterRtmpInCreationDriver;
 import com.zixi.tools.TestlinkIntegration;
