@@ -4,8 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.zixi.drivers.*;
 import com.zixi.drivers.drivers.BroadcasterAddTranscoderProfileDriver;
 
 public class BroadcasterAddTranscoderProfileTest extends BaseTest {

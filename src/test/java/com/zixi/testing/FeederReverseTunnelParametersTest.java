@@ -1,14 +1,9 @@
 package com.zixi.testing;
 
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.jcraft.jsch.JSchException;
-import com.zixi.drivers.*;
 import com.zixi.drivers.drivers.FeederReverseTunnelParametersDriver;
 
 public class FeederReverseTunnelParametersTest extends BaseTest{

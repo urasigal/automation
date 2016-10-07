@@ -2,33 +2,23 @@ package com.zixi.testing;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
 import java.lang.reflect.Method;
-import java.net.MalformedURLException;
 import java.nio.charset.Charset;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
-
-import com.zixi.drivers.*;
-import com.zixi.drivers.drivers.ProductAboutDriver;
-import com.zixi.drivers.drivers.TestDriver;
+import com.zixi.drivers.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
 /*

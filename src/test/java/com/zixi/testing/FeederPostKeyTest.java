@@ -1,12 +1,9 @@
 package com.zixi.testing;
 
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.zixi.drivers.drivers.FeederPostKeyDriver;
 
 // The goal of the test is to verify an ability of a feeder server to accept a private key file through an UI API request.

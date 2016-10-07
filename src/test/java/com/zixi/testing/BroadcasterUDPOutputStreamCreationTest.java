@@ -1,21 +1,11 @@
 package com.zixi.testing;
 
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
-
-import com.zixi.drivers.*;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterUdpOutputCreationDriver;
-import com.zixi.tools.TestlinkIntegration;
 
 public class BroadcasterUDPOutputStreamCreationTest extends BaseTest{
 

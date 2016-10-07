@@ -1,13 +1,11 @@
 package com.zixi.testing;
 
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.zixi.drivers.drivers.FeederSettingsDriver;
+
 public class FeederSettingsTest extends BaseTest{
 	
 	@BeforeClass
