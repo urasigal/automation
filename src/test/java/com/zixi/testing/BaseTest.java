@@ -22,13 +22,13 @@ import com.zixi.drivers.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
 /*
- * This is a most high hierarchy test class in all automation test project. All test case classes must to inherit from this class.
+ * This is a most high hierarchy test class. All test case classes have to inherit from this class.
  */
 
 public class BaseTest {
 	
 	// It is an interface, all test drivers have to implement this interface.
-	protected TestDriver 						testDriver;
+	protected TestDriver 						testDriver; //Reference to test driver interface. 
 	protected ClassLoader 						classLoader;
 	protected Object 							driverObj;
 	protected Method 							m;
@@ -38,7 +38,6 @@ public class BaseTest {
 	protected ProductAboutDriver 				productAboutDriver 			= new ProductAboutDriver();
 	protected TestBaseFunction 					testBaseFunction 			= new TestBaseFunction ();
 	protected StringBuffer 						testFlowDescriptor 			= new StringBuffer("Test flow: "); // Put it any place in order to describe a test flow.
-	
 	protected String 							sutProcessId;
 	
 	// Writes test results to the TestLink.
@@ -90,8 +89,8 @@ public class BaseTest {
         else 
         {
             tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n" +  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + testFlowDescriptor +  "\n Error is " + result.getThrowable().getMessage() + 
-            "\n Exception stack trace: " + result.getThrowable().getStackTrace(), getBuildIdFromFile() );
+            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
+            "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + result.getThrowable().getStackTrace(), getBuildIdFromFile() );
         }
      }
      catch(Exception e)
@@ -111,7 +110,6 @@ public class BaseTest {
 		}
 		return sb.toString();
 	}
-	
 	
 	protected class TestBaseFunction {
 		protected String buildTestParametersString(String parametersNmes[], String[] paramertersValues)
@@ -148,14 +146,14 @@ public class BaseTest {
 		return BaseTest.LOGGER;
 	}
 	
-	private int getBuildIdFromFile() throws IOException
-	{
+	private int getBuildIdFromFile() throws IOException{
+		
 		String line;
 		int buildId = -1;
 		try (
-		    InputStream fis = new FileInputStream("src/main/resources/build");
-		    InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
-		    BufferedReader br = new BufferedReader(isr);
+		    InputStream 	  fis 	= 	new FileInputStream("src/main/resources/build");
+		    InputStreamReader isr 	= 	new InputStreamReader(fis, Charset.forName("UTF-8"));
+		    BufferedReader	  br  	= 	new BufferedReader(isr);
 		) {
 		    while ((line = br.readLine()) != null) {
 		    	 buildId = Integer.parseInt(line);

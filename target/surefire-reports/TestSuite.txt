@@ -1,0 +1,1069 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 630, Failures: 121, Errors: 0, Skipped: 15, Time elapsed: 18,803.424 sec <<< FAILURE!
+setToBlockedStatusTestLinkedTests(com.zixi.tools.TestLinker)  Time elapsed: 0.03 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.zixi.tools.TestLinker.setToBlockedStatusTestLinkedTests(TestLinker.java:33)
+
+broadcasterPullInCreation(com.zixi.testing.BroadcasterSinglePullInStreamCreationTest)  Time elapsed: 0.472 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Stream 'test' added.] but found [load_live_inputs({"error":"Stream already exists."});]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterSinglePullInStreamCreationTest.broadcasterPullInCreation(BroadcasterSinglePullInStreamCreationTest.java:57)
+
+broadcasterPullInCreation(com.zixi.testing.BroadcasterUDPOutputStreamCreationTest)  Time elapsed: 0.453 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Output test added.] but found [{"error":"Failed creating UDP output"}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(BroadcasterUDPOutputStreamCreationTest.java:39)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 85.619 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleStreamRemoving(com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest)  Time elapsed: 0.418 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Output test removed.] but found [{"error":"failed removing output null"}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(BroadcaserSingleOutputStreamDeletionTest.java:35)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.FFMPEGImageStatisticModeTest)  Time elapsed: 219.2 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver.testStatistic(FFMPEGImageStatisticTestDriver.java:120)
+	at com.zixi.testing.FFMPEGImageStatisticModeTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticModeTest.java:33)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.FFMPEGImageStatisticModeTest)  Time elapsed: 27.648 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver.testStatistic(FFMPEGImageStatisticTestDriver.java:124)
+	at com.zixi.testing.FFMPEGImageStatisticModeTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticModeTest.java:33)
+
+broadcasterPullInCreation(com.zixi.testing.BroadcasterSinglePullInStreamCreationTest)  Time elapsed: 0.505 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Stream 'w1' added.] but found [load_live_inputs({"error":"Stream already exists."});]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterSinglePullInStreamCreationTest.broadcasterPullInCreation(BroadcasterSinglePullInStreamCreationTest.java:57)
+
+broadcasterPullInCreation(com.zixi.testing.BroadcasterSinglePullInStreamCreationTest)  Time elapsed: 0.464 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Stream 'w2' added.] but found [load_live_inputs({"error":"Stream already exists."});]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterSinglePullInStreamCreationTest.broadcasterPullInCreation(BroadcasterSinglePullInStreamCreationTest.java:57)
+
+receiverInputStatistic(com.zixi.testing.ReceiverInputStatisticTest)  Time elapsed: 35.025 sec  <<< FAILURE!
+java.lang.AssertionError: expected [tested] but found [zero bit rate is detected]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.ReceiverInputStatisticTest.receiverInputStatistic(ReceiverInputStatisticTest.java:35)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.FFMPEGImageStatisticTest)  Time elapsed: 17.284 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver.testStatistic(FFMPEGImageStatisticTestDriver.java:60)
+	at com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticTest.java:28)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.364 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.392 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.45 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.319 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.442 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.413 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 25.909 sec  <<< FAILURE!
+org.json.JSONException: JSONObject["net"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at org.json.JSONObject.getJSONObject(JSONObject.java:576)
+	at com.zixi.tools.StreamStatisticAnalyzer.getStatBitrate(StreamStatisticAnalyzer.java:13)
+	at com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver.testStatistic(BroadcasterInputStatisticSingleStreamDriver.java:53)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleStreamRemoving(com.zixi.testing.FeederOutputDeletioinTest)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Output deleted.] but found []
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FeederOutputDeletioinTest.broadcasterSingleStreamRemoving(FeederOutputDeletioinTest.java:33)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.427 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.721 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.711 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.703 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.738 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSwitchUdpOut(com.zixi.load.testing.BroadcasterRundomInputStreamTest)  Time elapsed: 644.327 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.BroadcasterRundomInputStreamTest.broadcasterSwitchUdpOut(BroadcasterRundomInputStreamTest.java:38)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.483 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.689 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 25.736 sec  <<< FAILURE!
+org.json.JSONException: JSONObject["net"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at org.json.JSONObject.getJSONObject(JSONObject.java:576)
+	at com.zixi.tools.StreamStatisticAnalyzer.getStatBitrate(StreamStatisticAnalyzer.java:13)
+	at com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver.testStatistic(BroadcasterInputStatisticSingleStreamDriver.java:53)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleStreamRemoving(com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest)  Time elapsed: 0.214 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Output reverse_test removed.] but found [{"error":"failed removing output null"}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(BroadcaserSingleOutputStreamDeletionTest.java:35)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.699 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 146.51 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.74 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.684 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.73 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.749 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.741 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSwitchUdpOut(com.zixi.load.testing.BroadcasterRundomInputStreamTest)  Time elapsed: 137.759 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.BroadcasterRundomInputStreamTest.broadcasterSwitchUdpOut(BroadcasterRundomInputStreamTest.java:38)
+
+broadcasterSwitchUdpOut(com.zixi.load.testing.BroadcasterRundomInputStreamTest)  Time elapsed: 260.365 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.BroadcasterRundomInputStreamTest.broadcasterSwitchUdpOut(BroadcasterRundomInputStreamTest.java:38)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.494 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.68 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.766 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.737 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.626 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.896 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.491 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 146.681 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.82 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+receiverInputStatistic(com.zixi.testing.ReceiverInputStatisticTest)  Time elapsed: 21.008 sec  <<< FAILURE!
+java.lang.AssertionError: expected [tested] but found [zero bit rate is detected]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.ReceiverInputStatisticTest.receiverInputStatistic(ReceiverInputStatisticTest.java:35)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.448 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.755 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.75 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 25.957 sec  <<< FAILURE!
+org.json.JSONException: JSONObject["net"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at org.json.JSONObject.getJSONObject(JSONObject.java:576)
+	at com.zixi.tools.StreamStatisticAnalyzer.getStatBitrate(StreamStatisticAnalyzer.java:13)
+	at com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver.testStatistic(BroadcasterInputStatisticSingleStreamDriver.java:53)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+receiverInputStatistic(com.zixi.testing.ReceiverInputStatisticTest)  Time elapsed: 21.005 sec  <<< FAILURE!
+java.lang.AssertionError: expected [tested] but found [zero bit rate is detected]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.ReceiverInputStatisticTest.receiverInputStatistic(ReceiverInputStatisticTest.java:35)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.464 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.74 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.763 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.FFMPEGImageStatisticNegativeTest)  Time elapsed: 1.004 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FFMPEGImageStatisticNegativeTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticNegativeTest.java:29)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.704 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.FFMPEGImageStatisticNegativeTest)  Time elapsed: 1.004 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FFMPEGImageStatisticNegativeTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticNegativeTest.java:29)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 25.935 sec  <<< FAILURE!
+org.json.JSONException: JSONObject["net"] not found.
+	at org.json.JSONObject.get(JSONObject.java:476)
+	at org.json.JSONObject.getJSONObject(JSONObject.java:576)
+	at com.zixi.tools.StreamStatisticAnalyzer.getStatBitrate(StreamStatisticAnalyzer.java:13)
+	at com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver.testStatistic(BroadcasterInputStatisticSingleStreamDriver.java:53)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+receiverInputStatistic(com.zixi.testing.ReceiverInputStatisticTest)  Time elapsed: 21.004 sec  <<< FAILURE!
+java.lang.AssertionError: expected [tested] but found [zero bit rate is detected]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.ReceiverInputStatisticTest.receiverInputStatistic(ReceiverInputStatisticTest.java:35)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.FFMPEGImageStatisticTest)  Time elapsed: 145.82 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticTest.java:28)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.471 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.697 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.721 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+receiverInputStatistic(com.zixi.testing.ReceiverInputStatisticTest)  Time elapsed: 70.061 sec  <<< FAILURE!
+java.lang.AssertionError: expected [tested] but found [zero bit rate is detected]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.ReceiverInputStatisticTest.receiverInputStatistic(ReceiverInputStatisticTest.java:35)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.FFMPEGImageStatisticTest)  Time elapsed: 402.443 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticTest.java:28)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.426 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 40.479 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 40.301 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.744 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterPullInCreation(com.zixi.testing.BroadcasterUDPOutputStreamCreationTest)  Time elapsed: 0.527 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Output autrtmp added.] but found [{"error":"Failed creating UDP output"}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(BroadcasterUDPOutputStreamCreationTest.java:39)
+
+broadcasterSingleStreamRemoving(com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest)  Time elapsed: 0.466 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Output autrtmp removed.] but found [{"error":"failed removing output null"}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(BroadcaserSingleOutputStreamDeletionTest.java:35)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.703 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.773 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.706 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 85.657 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 138.396 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [On of the bit rate API probing showed zero bit rete]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleStreamRemoving(com.zixi.testing.FeederOutputDeletioinTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Output deleted.] but found []
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FeederOutputDeletioinTest.broadcasterSingleStreamRemoving(FeederOutputDeletioinTest.java:33)
+
+broadcasterInputStreamDeletion(com.zixi.testing.BroadcasterSingleInputStreamDeletionTest)  Time elapsed: 0.331 sec  <<< FAILURE!
+java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:406)
+	at org.testng.Assert.assertNotNull(Assert.java:391)
+	at com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.broadcasterInputStreamDeletion(BroadcasterSingleInputStreamDeletionTest.java:27)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.745 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.693 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+feederOutputToBxTest(com.zixi.testing.FeederOutputPushToBxTest)  Time elapsed: 0.302 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Broadcaster output added.] but found []
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.FeederOutputPushToBxTest.feederOutputToBxTest(FeederOutputPushToBxTest.java:41)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.705 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.706 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.615 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.728 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 85.587 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.646 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.6 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.722 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.748 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.824 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 85.51 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.748 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.696 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.755 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.687 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSwitchUdpOut(com.zixi.load.testing.BroadcasterRundomInputStreamTest)  Time elapsed: 479.464 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.BroadcasterRundomInputStreamTest.broadcasterSwitchUdpOut(BroadcasterRundomInputStreamTest.java:38)
+
+broadcasterMultiplePullInCreation(com.zixi.load.testing.FeederMultipleDeletionTest)  Time elapsed: 2.064 sec  <<< FAILURE!
+java.lang.AssertionError: expected [pass] but found [failed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.FeederMultipleDeletionTest.broadcasterMultiplePullInCreation(FeederMultipleDeletionTest.java:41)
+
+broadcasterMultiplePullInCreation(com.zixi.load.testing.FeederMultipleDeletionTest)  Time elapsed: 0.747 sec  <<< FAILURE!
+java.lang.AssertionError: expected [pass] but found [failed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.FeederMultipleDeletionTest.broadcasterMultiplePullInCreation(FeederMultipleDeletionTest.java:41)
+
+broadcasterMultiplePullInCreation(com.zixi.load.testing.FeederMultipleDeletionTest)  Time elapsed: 0.755 sec  <<< FAILURE!
+java.lang.AssertionError: expected [pass] but found [failed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.FeederMultipleDeletionTest.broadcasterMultiplePullInCreation(FeederMultipleDeletionTest.java:41)
+
+broadcasterMultiplePullInCreation(com.zixi.load.testing.FeederMultipleDeletionTest)  Time elapsed: 0.704 sec  <<< FAILURE!
+java.lang.AssertionError: expected [pass] but found [failed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.FeederMultipleDeletionTest.broadcasterMultiplePullInCreation(FeederMultipleDeletionTest.java:41)
+
+broadcasterMultiplePullInCreation(com.zixi.load.testing.FeederMultipleDeletionTest)  Time elapsed: 0.791 sec  <<< FAILURE!
+java.lang.AssertionError: expected [pass] but found [failed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.FeederMultipleDeletionTest.broadcasterMultiplePullInCreation(FeederMultipleDeletionTest.java:41)
+
+broadcasterMultiplePullInCreation(com.zixi.load.testing.FeederMultipleDeletionTest)  Time elapsed: 0.699 sec  <<< FAILURE!
+java.lang.AssertionError: expected [pass] but found [failed]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.FeederMultipleDeletionTest.broadcasterMultiplePullInCreation(FeederMultipleDeletionTest.java:41)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.673 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.701 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.776 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.638 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.706 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:29)
+
+fileTransfer(com.zixi.testing.FileTransferTest)  Time elapsed: 0.997 sec  <<< FAILURE!
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.zixi.drivers.drivers.BroadcasterFileUploadDriver.testIMPL(BroadcasterFileUploadDriver.java:26)
+	at com.zixi.testing.FileTransferTest.fileTransfer(FileTransferTest.java:29)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 25.89 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [On of the bit rate API probing showed zero bit rete]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 25.753 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [On of the bit rate API probing showed zero bit rete]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterMultipleUdpCreation(com.zixi.load.testing.BroadcasterMultipleUdpTest)  Time elapsed: 1.705 sec  <<< FAILURE!
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.zixi.threads.ZthreadPool.zexecuteUdp(ZthreadPool.java:311)
+	at com.zixi.load.drivers.BroadcasterMultipleUdpDriver.testIMPL(BroadcasterMultipleUdpDriver.java:19)
+	at com.zixi.load.testing.BroadcasterMultipleUdpTest.broadcasterMultipleUdpCreation(BroadcasterMultipleUdpTest.java:55)
+Caused by: java.lang.NullPointerException
+	at com.zixi.drivers.drivers.BroadcasterUdpOutputCreationDriver.testIMPL(BroadcasterUdpOutputCreationDriver.java:21)
+	at com.zixi.threads.ZthreadPool$4.call(ZthreadPool.java:270)
+	at com.zixi.threads.ZthreadPool$4.call(ZthreadPool.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+broadcasterSwitchUdpOut(com.zixi.load.testing.BroadcasterRundomInputStreamTest)  Time elapsed: 1,129.579 sec  <<< FAILURE!
+java.lang.AssertionError: expected [good] but found [bad]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.load.testing.BroadcasterRundomInputStreamTest.broadcasterSwitchUdpOut(BroadcasterRundomInputStreamTest.java:38)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.733 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.745 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.797 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.776 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
+broadcasterSingleInputStreamStatisticAnilyzer(com.zixi.testing.BroadcasterInputStatisticSingleStreamTest)  Time elapsed: 145.769 sec  <<< FAILURE!
+java.lang.AssertionError: expected [statistics parameters are correct] but found [good]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)
+
