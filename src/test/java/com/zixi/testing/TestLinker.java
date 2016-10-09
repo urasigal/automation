@@ -8,13 +8,11 @@ import com.zixi.drivers.drivers.ProductAboutDriver;
 import com.zixi.drivers.drivers.TestDriver;
 import com.zixi.drivers.drivers.TestLinkerDriver;
 
-public class TestLinker {
-	
-	private TestDriver testDriver;
+public class TestLinker extends BaseTest{
 		
 	@BeforeClass
 	public void testInit() { 
-		TestDriver testDriver = new TestLinkerDriver();
+		 testDriver = new TestLinkerDriver();
 	}
 	
 		@Parameters({"userName", "userPass", "login_ip", "uiport"})

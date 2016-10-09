@@ -146,6 +146,8 @@ public class BaseTest {
 		return BaseTest.LOGGER;
 	}
 	
+	
+	// Get TestLink test plan ID.
 	private int getBuildIdFromFile() throws IOException{
 		
 		String line;
