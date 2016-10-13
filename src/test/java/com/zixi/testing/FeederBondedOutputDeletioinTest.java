@@ -20,8 +20,6 @@ public class FeederBondedOutputDeletioinTest extends BaseTest {
 		String port, String ip, String prog, String chan, String type, String nic1, String nic2, String dest_host1,
 		String dest_host2, String testid) throws Exception {
 		
-		this.testid = testid;
-		
 		// Writes test results to the TestLink.
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
 		"nic1", "nic2", "dest_host1", "dest_host2" ,"testid" }, 

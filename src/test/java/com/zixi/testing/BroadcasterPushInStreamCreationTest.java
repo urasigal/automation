@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterPushInStreamCreationDriver;
 
@@ -25,8 +24,6 @@ public class BroadcasterPushInStreamCreationTest extends BaseTest {
 			String analyze, String mcast_ttl, String id, String mcast_out,
 			String complete, String max_outputs, String on, String password,
 			String testid) throws Exception {
-		
-		this.testid = testid;
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
