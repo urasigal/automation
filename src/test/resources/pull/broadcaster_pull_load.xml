@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!--   -->
-<suite name="Broadcaster: Pull load suite with random FFMPEG analyser " verbose="5" data-provider-thread-count="1">
+<!-- Create multiple pull input streams from BX to BX.
+The streams are created in the same time  -->
+<suite name="Broadcaster: Pull load suite with random stream FFMPEG analyser " verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - multiple pull input stream creation test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -32,7 +33,7 @@
 		<parameter name="propertiesFile" value="stream.properties" />
 		<parameter name="dec_type" value="" />
 		<parameter name="dec_key" value="" />
-		<parameter name="number_of_streams" value="70" />
+		<parameter name="number_of_streams" value="20" />
 		<parameter name="testid" value="3930" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipePullCreationTest"/>

@@ -1,6 +1,5 @@
 package com.zixi.load.testing;
 
-import java.util.concurrent.ExecutionException;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -13,11 +12,12 @@ import com.zixi.testing.BaseTest;
 
 public class BroadcasterMultipePullCreationTest extends BaseTest
 {
-	//The method will be run before the first test's method invocation in the current class.
+	// The method will be run before the first test's method invocation in the current class.
 	@BeforeClass
 	public void testInit() {
 		testDriver = new BroadcasterMultipleCreationDriver(testFlowDescriptor);
 	}
+	
 	@Parameters({ "userName", "userPass", "Host", "login_ip", "id", "source", "uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
 	"mcast_force", "time_shift", "nic", "max_outputs", "type","password", "mcast_port", "complete", "mcast_ip", "fec_adaptive",
 	"mcast_ttl", "on", "func", "fec_force", "mcast_out","propertiesFile", "dec_type", "dec_key", "number_of_streams", "testid"})
@@ -29,6 +29,7 @@ public class BroadcasterMultipePullCreationTest extends BaseTest
 		String mcast_ip, String fec_adaptive, String mcast_ttl, String on, String func, String fec_force, String mcast_out,
 		String propertiesFile, String dec_type, String dec_key, String number_of_streams,  String testid) throws Exception {
 		
+		// TestLink debug message. 
 		testFlowDescriptor.append("\nStart the \"BroadcasterMultipePullCreationTest\" test");
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
