@@ -55,10 +55,11 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="4116" />
 		<classes>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
-		    <methods>
-        		<include name="feederBondedPushOutputCreationThreeLinksTest" />
-     		 </methods>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest">
+			    <methods>
+	        		<include name="feederBondedPushOutputCreationThreeLinksTest" />
+	     		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - default paremeters">
@@ -169,10 +170,11 @@
 		<parameter name="dest_host3" value="192.168.5.166" />
 		<parameter name="testid" value="4128" />
 		<classes>
-		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest"/>
+		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest">
 		    <methods>
         		<include name="broadcasterBondedThreeLinkStreamRemoving" />
      		 </methods>
+     		 </class>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - default paremeters">
@@ -240,10 +242,11 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="4133" /> 
 		<classes>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest">
 		    <methods>
         		<include name="feederBondedPushOutputCreationThreeLinksTest" />
      		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - using password">
@@ -354,10 +357,11 @@
 		<parameter name="dest_host3" value="192.168.5.166" />
 		<parameter name="testid" value="4145" />
 		<classes>
-		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest"/>
+		    <class name="com.zixi.testing.FeederBondedOutputDeletioinTest">
 		    <methods>
         		<include name="broadcasterBondedThreeLinkStreamRemoving" />
      		 </methods>
+     		 </class>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - using password">
@@ -610,10 +614,11 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="4167" />   
 		<classes>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest">
 		    <methods>
         		<include name="feederBondedPushOutputCreationThreeLinksTest" />
      		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 128">

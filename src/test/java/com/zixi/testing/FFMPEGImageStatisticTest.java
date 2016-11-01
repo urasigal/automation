@@ -20,7 +20,6 @@ public class FFMPEGImageStatisticTest extends BaseTest{
 	@Parameters({"testid"})
 	@Test
 	public void broadcasterSingleInputStreamStatisticAnilyzer(String testid) throws InterruptedException {
-		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] { "testid" }, 
 		new String[] {"testid" });

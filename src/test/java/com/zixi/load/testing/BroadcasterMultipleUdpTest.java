@@ -21,11 +21,11 @@ public class BroadcasterMultipleUdpTest extends BaseTest
 		}
 		
 		@Parameters({ "userName_bx1", "userName_bx2", "userPass_bx1", "userPass_bx2", "login_ip_bx1", "login_ip_bx2","ts_port","id_bx1","rtp_type", 				
-			 "multi_src","max_bitrate", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "nic", "type_bx1", "multicast", "enc_key","kompression",			
-			"uiport_bx1", "mcast_ttl", "enc_type", "mcast_out", "complete", "max_outputs", "on", "port", "stream", "streamname", "host", "id_bx2", "rtp",
-			"fec", "smoothing", "ttl", "remux_bitrate", "df", "local_port", "dec_key", "type_bx2", "rows", "remux_buff", "local_ip", "remux_restampdts", 
-			"uiport_bx2", "remux_pcr", "dec_type", "cols", "number_of_streams", "testid"})
-		
+		"multi_src","max_bitrate", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "nic", "type_bx1", "multicast", "enc_key","kompression",			
+		"uiport_bx1", "mcast_ttl", "enc_type", "mcast_out", "complete", "max_outputs", "on", "port", "stream", "streamname", "host", "id_bx2", "rtp",
+		"fec", "smoothing", "ttl", "remux_bitrate", "df", "local_port", "dec_key", "type_bx2", "rows", "remux_buff", "local_ip", "remux_restampdts", 
+		"uiport_bx2", "remux_pcr", "dec_type", "cols", "number_of_streams", "testid"})
+	
 		@Test
 		public void broadcasterMultipleUdpCreation(String userName_bx1, String userName_bx2, String userPass_bx1, String userPass_bx2, String login_ip_bx1,String login_ip_bx2,
 				String ts_port,String id_bx1, String rtp_type, String multi_src, String max_bitrate, String time_shift, String mcast_ip, String mcast_force, String mcast_port, 
