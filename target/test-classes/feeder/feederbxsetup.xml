@@ -43,10 +43,11 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="716" />
 		<classes>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
-		    <methods>
-        		<include name="feederOutputToBxTest" />
-     		 </methods>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest">
+			    <methods>
+	        		<include name="feederOutputToBxTest"/>
+	     		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - default paremeters">
