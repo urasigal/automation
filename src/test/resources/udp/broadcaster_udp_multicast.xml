@@ -20,6 +20,35 @@
 		    <class name="com.zixi.testing.BroadcasterConfigMulticastPoolTest"/>
 		</classes>
 	 </test>
+	 <test name="Broadcaster - Configure multicast stream">
+	 <parameter name="bx1_login_ip" value="10.7.0.62" />
+		<parameter name="bx1_userName" value="admin" />
+		<parameter name="bx1_bxuserPassword" value="1234" />
+		<parameter name="bx1_uiport" value="4444" />
+		<parameter name="bx2_login_ip" value="10.7.0.62" />
+		<parameter name="bx2_userName" value="admin" />
+		<parameter name="bx2_bxuserPassword" value="1234" />
+		<parameter name="bx2_uiport" value="4444" />
+		<parameter name="prev_id" value="test" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="test" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="1" />
+		<parameter name="mcast_pool" value="1" />
+		<parameter name="mcast_force" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="nba.ts" />
+		<parameter name="testid" value="3989" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterStreamMulticastTest"/>
+		</classes>
+	 </test>
 	 <test name="Broadcaster - UDP multicast output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
