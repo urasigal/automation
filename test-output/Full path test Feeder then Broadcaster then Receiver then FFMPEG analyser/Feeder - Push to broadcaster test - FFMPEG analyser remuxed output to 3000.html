@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Feeder - Push to broadcaster test - FFMPEG analyser remuxed output to 3000</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 09 20:00:18 IDT 2016</td>
+<td>Started on:</td><td>Mon Nov 07 13:57:55 IST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (36 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (690 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,167 +67,61 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.zixi.testing.FeederOutputPushToBxTest.beforeTes()'><b>beforeTes</b><br>Test class: com.zixi.testing.FeederOutputPushToBxTest<br>Parameters: 962</td>
-<td><div><pre>br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException: Build (id:49), does not exist for Test Plan (name:Automation/id:262).
-	at br.eti.kinoshita.testlinkjavaapi.BaseService.checkResponseError(BaseService.java:113)
-	at br.eti.kinoshita.testlinkjavaapi.BaseService.executeXmlRpcCall(BaseService.java:91)
-	at br.eti.kinoshita.testlinkjavaapi.TestCaseService.reportTCResult(TestCaseService.java:561)
-	at br.eti.kinoshita.testlinkjavaapi.TestLinkAPI.setTestCaseExecutionResult(TestLinkAPI.java:938)
-	at com.zixi.tools.TestlinkIntegration.setResult(TestlinkIntegration.java:58)
-	at com.zixi.testing.BaseTest.beforeTes(BaseTest.java:75)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:601)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace63001505", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace63001505'><pre>br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException: Build (id:49), does not exist for Test Plan (name:Automation/id:262).
-	at br.eti.kinoshita.testlinkjavaapi.BaseService.checkResponseError(BaseService.java:113)
-	at br.eti.kinoshita.testlinkjavaapi.BaseService.executeXmlRpcCall(BaseService.java:91)
-	at br.eti.kinoshita.testlinkjavaapi.TestCaseService.reportTCResult(TestCaseService.java:561)
-	at br.eti.kinoshita.testlinkjavaapi.TestLinkAPI.setTestCaseExecutionResult(TestLinkAPI.java:938)
-	at com.zixi.tools.TestlinkIntegration.setResult(TestlinkIntegration.java:58)
-	at com.zixi.testing.BaseTest.beforeTes(BaseTest.java:75)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:601)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>0</td>
-<td>com.zixi.testing.FeederOutputPushToBxTest@735f7ae5</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.zixi.testing.FeederOutputPushToBxTest.afterTest()'><b>afterTest</b><br>Test class: com.zixi.testing.FeederOutputPushToBxTest</td>
+<td title='com.zixi.testing.FeederOutputPushToBxTest.feederOutputToBxTest()'><b>feederOutputToBxTest</b><br>Test class: com.zixi.testing.FeederOutputPushToBxTest<br>Parameters: admin, 1234, 10.7.0.65, feederoutputname, live_recording.ts, 0, file, 1, -1, 2, feederout, , , , 8000000, 6000, 0, 1, 0, 1, 0, 1, 30, 150, 0, 0, 0, 0, 0, , 1, 0, 10.7.0.66, 2088, 0.0.0.0, , 0, 4200, 962<br/>
+<a href="#Output-621300254" onClick='toggleBox("Output-621300254", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-621300254" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-621300254">
+Test parameteres: <br/>
+userName: admin<br/>
+userPass: 1234<br/>
+login_ip: 10.7.0.65<br/>
+name: feederoutputname<br/>
+mip: live_recording.ts<br/>
+port: 0<br/>
+ip: file<br/>
+prog: 1<br/>
+chan: -1<br/>
+type: 2<br/>
+ostr: feederout<br/>
+oses: -- not provided <br/>
+oetp: -- not provided <br/>
+oeky: -- not provided <br/>
+obit: 8000000<br/>
+olat: 6000<br/>
+ofc: 0<br/>
+ocmp: 1<br/>
+0: -- not provided <br/>
+1: -- not provided <br/>
+0: -- not provided <br/>
+1: -- not provided <br/>
+ofec: 30<br/>
+ofecl: 150<br/>
+stop_on_drop: 0<br/>
+mmt: 0<br/>
+smoothing: 0<br/>
+limited: 0<br/>
+minbps: 0<br/>
+lim_enc_addr: -- not provided <br/>
+pad_to_cbr: 1<br/>
+rtmp_feedback0: -- not provided <br/>
+ohst: 10.7.0.66<br/>
+oprt: 2088<br/>
+onic: 0.0.0.0<br/>
+oalt: -- not provided <br/>
+</div>
+</td>
 <td></td>
 <td>0</td>
-<td>com.zixi.testing.FeederOutputPushToBxTest@735f7ae5</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.zixi.testing.FeederOutputPushToBxTest.feederOutputToBxTest()'><b>feederOutputToBxTest</b><br>Test class: com.zixi.testing.FeederOutputPushToBxTest<br>Parameters: admin, 1234, 10.7.0.65, feederoutputname, live_recording.ts, 0, file, 1, -1, 2, feederout, , , , 8000000, 6000, 0, 1, 0, 1, 0, 1, 30, 150, 0, 0, 0, 0, 0, , 1, 0, 10.7.0.66, 2088, 0.0.0.0, , 0, 4200, 962</td>
-<td></td>
-<td>0</td>
-<td>com.zixi.testing.FeederOutputPushToBxTest@735f7ae5</td></tr>
-<tr>
-<td title='com.zixi.testing.FeederOutputPushToBxTest.feederOutputToBxTestAutomaticRtmp()'><b>feederOutputToBxTestAutomaticRtmp</b><br>Test class: com.zixi.testing.FeederOutputPushToBxTest</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;rtmp_stream&apos; is required by @Test on method feederOutputToBxTestAutomaticRtmp but has not been marked @Optional or defined
-in C:\work\automationPrj\automation\src\test\resources\ffmpegfullpath.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:165)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:372)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:462)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace26728049", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace26728049'><pre>org.testng.TestNGException: 
-Parameter &apos;rtmp_stream&apos; is required by @Test on method feederOutputToBxTestAutomaticRtmp but has not been marked @Optional or defined
-in C:\work\automationPrj\automation\src\test\resources\ffmpegfullpath.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:165)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:372)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:462)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1032)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>0</td>
-<td>com.zixi.testing.FeederOutputPushToBxTest@735f7ae5</td></tr>
+<td>com.zixi.testing.FeederOutputPushToBxTest@5315b42e</td></tr>
 </table><p>
 </body>
 </html>

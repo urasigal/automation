@@ -576,8 +576,7 @@
 			</methods>
 		</classes>
 	</test>
-	<test
-		name="Broadcaster - Push input stream creation test - Encryption AES 128">
+	<test name="Broadcaster - Push input stream creation test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -597,9 +596,11 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="4083" />
+		<parameter name="dec_type" value="aes128" />
+		<parameter name="dec_key" value="a69a8ba04520a8e0fa66fdb0af94cb33" />
+		<parameter name="testid" value="4203" />    
 		<classes>
-			<class name="com.zixi.testing.BroadcasterPushInStreamCreationTest" />
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationDecriptionTest"/>
 		</classes>
 	</test>
 	<test
@@ -666,8 +667,7 @@
 		<parameter name="ostr" value="bonded" />
 		<parameter name="oses" value="" />
 		<parameter name="oetp" value="aes192" />
-		<parameter name="oeky"
-			value="5de87ecce15ceb1d1873dd768cbd0f0371d7fd9bb665767f" />
+		<parameter name="oeky" value="5de87ecce15ceb1d1873dd768cbd0f0371d7fd9bb665767f" />
 		<parameter name="obit" value="8000000" />
 		<parameter name="olat" value="6000" />
 		<parameter name="ofc" value="0" />
@@ -707,8 +707,7 @@
 			</methods>
 		</classes>
 	</test>
-	<test
-		name="Broadcaster - Push input stream creation test - Encryption AES 192">
+	<test name="Broadcaster - Push input stream creation test - Encryption AES 192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -728,9 +727,11 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="4094" />
+		<parameter name="dec_type" value="aes192" />
+		<parameter name="dec_key" value="5de87ecce15ceb1d1873dd768cbd0f0371d7fd9bb665767f" />
+		<parameter name="testid" value="4203" />    
 		<classes>
-			<class name="com.zixi.testing.BroadcasterPushInStreamCreationTest" />
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationDecriptionTest"/>
 		</classes>
 	</test>
 	<test
@@ -797,8 +798,7 @@
 		<parameter name="ostr" value="bonded" />
 		<parameter name="oses" value="" />
 		<parameter name="oetp" value="aes256" />
-		<parameter name="oeky"
-			value="972e3319f4e01e2eee33d1ce987027c5b63c967187c4671735a0635790a05250" />
+		<parameter name="oeky" value="972e3319f4e01e2eee33d1ce987027c5b63c967187c4671735a0635790a05250" />
 		<parameter name="obit" value="8000000" />
 		<parameter name="olat" value="6000" />
 		<parameter name="ofc" value="0" />
@@ -838,8 +838,7 @@
 			</methods>
 		</classes>
 	</test>
-	<test
-		name="Broadcaster - Push input stream creation test - Encryption AES 256">
+	<test name="Broadcaster - Push input stream creation test - Encryption AES 256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -859,9 +858,11 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="4105" />
+		<parameter name="dec_type" value="aes256" />
+		<parameter name="dec_key" value="972e3319f4e01e2eee33d1ce987027c5b63c967187c4671735a0635790a05250" />
+		<parameter name="testid" value="4203" />    
 		<classes>
-			<class name="com.zixi.testing.BroadcasterPushInStreamCreationTest" />
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationDecriptionTest"/>
 		</classes>
 	</test>
 	<test

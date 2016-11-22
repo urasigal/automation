@@ -132,7 +132,6 @@ public class FeederOutputPushToBxTest extends BaseTest{
 		String bond_nic2, String bond_limit2, String bond_backup2, String bond_host3, String bond_port3, 
 		String bond_nic3, String bond_limit3, String bond_backup3, String uiport, String testid) throws Exception
 	{
-		this.testid = testid;
 		
 		// Get SUT's PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");

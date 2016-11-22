@@ -27,20 +27,16 @@ public class BroadcasterConfigMulticastPoolTest extends BaseTest{
 		//Print this class name to the log file.
 		getLoggerInstance().info(getClass().getName());
 		
-		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster");
-		
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		testParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "uiport", "multicast_pool_enabled", "multicast_pool_address",
 		"multicast_pool_mask", "multicast_pool_fec_overhead", "multicast_pool_port", "multicast_pool_ttl", "multicast_pool_nic", "multicast_pool_tos", "testid" }, 
-		
 		new String[] {login_ip, userName, userPassword, uiport, multicast_pool_enabled, multicast_pool_address, multicast_pool_mask, multicast_pool_fec_overhead,
 		multicast_pool_port, multicast_pool_ttl, multicast_pool_nic, multicast_pool_tos, testid});
 		
 		Assert.assertEquals(((BroadcasterConfigMulticastPoolDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport, multicast_pool_enabled,
 		multicast_pool_address, multicast_pool_mask, multicast_pool_fec_overhead, multicast_pool_port, multicast_pool_ttl, multicast_pool_nic, multicast_pool_tos), "GOOD");
 		// Checking if broadcaster has crashes while execution of the test.
-		Assert.assertNotEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 
 }

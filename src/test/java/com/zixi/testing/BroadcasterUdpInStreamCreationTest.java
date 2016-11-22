@@ -20,22 +20,15 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 	}
 
 	
-	@Parameters({ "userName", "userPass", "login_ip", "ts_port", "id",
-			"rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
-			"mcast_force", "mcast_port", "nic", "type", "multicast", "enc_key",
-			"kompression", "uiport", "mcast_ttl", "enc_type", "mcast_out",
-			"complete", "max_outputs", "on" ,"testid"})
+	@Parameters({ "userName", "userPass", "login_ip", "ts_port", "id", "rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
+	"mcast_force", "mcast_port", "nic", "type", "multicast", "enc_key", "kompression", "uiport", "mcast_ttl", "enc_type", "mcast_out",
+	"complete", "max_outputs", "on" ,"testid"})
 	
 	@Test
-	public void broadcasterUdpInCreation(String userName, String userPass,
-			String login_ip, String ts_port, String id, String rtp_type,
-			String multi_src, String max_bitrate, String time_shift,
-			String mcast_ip, String mcast_force, String mcast_port, String nic,
-			String type, String multicast, String enc_key, String kompression,
-			String uiport, String mcast_ttl, String enc_type, String mcast_out,
-			String complete, String max_outputs, String on,String testid)
-			throws Exception { 
-		this.testid = testid;
+	public void broadcasterUdpInCreation(String userName, String userPass, String login_ip, String ts_port, String id, String rtp_type,
+	String multi_src, String max_bitrate, String time_shift, String mcast_ip, String mcast_force, String mcast_port, String nic,
+	String type, String multicast, String enc_key, String kompression, String uiport, String mcast_ttl, String enc_type, String mcast_out,
+	String complete, String max_outputs, String on,String testid) throws Exception { 
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		

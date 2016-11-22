@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Broadcaster - Push from Feeder input stream statistics test - Encryption AES 192 FFMPEG analyser</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 04 15:04:23 IDT 2016</td>
+<td>Started on:</td><td>Mon Nov 07 14:31:54 IST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>146 seconds (146201 ms)</td>
+<tr><td>Total time:</td><td>10 seconds (10876 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,19 +67,19 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamstatisticAnilyzer()'><b>broadcasterSingleInputStreamstatisticAnilyzer</b><br>Test class: com.zixi.testing.BroadcasterInputStatisticSingleStreamTest<br>Parameters: admin, 1234, 10.7.0.66, 10.7.0.66, 4444, feederout, 120, 592<br/>
-<a href="#Output-1040776996" onClick='toggleBox("Output-1040776996", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer()'><b>broadcasterSingleInputStreamStatisticAnilyzer</b><br>Test class: com.zixi.testing.BroadcasterInputStatisticSingleStreamTest<br>Parameters: admin, 1234, 10.7.0.66, 10.7.0.66, 4444, feederout, 120, 592<br/>
+<a href="#Output-1621002296" onClick='toggleBox("Output-1621002296", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1040776996" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1040776996">
+<a href="#Output-1621002296" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1621002296">
 Test parameteres: <br/>
 userName: admin<br/>
 userPass: 1234<br/>
@@ -88,14 +88,74 @@ loin_ip: 10.7.0.66<br/>
 uiport: 4444<br/>
 id: feederout<br/>
 testduration: 120<br/>
-Max bitrate is 959456<br/>
-Min bitrete is 476792<br/>
-Average bitrate is 881230<br/>
 </div>
 </td>
-<td></td>
-<td>146</td>
-<td>com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@68837a77</td></tr>
+<td><div><pre>java.lang.AssertionError: expected [good] but found [On of the bit rate API probing showed zero bit rete]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1621002296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1621002296'><pre>java.lang.AssertionError: expected [good] but found [On of the bit rate API probing showed zero bit rete]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>10</td>
+<td>com.zixi.testing.BroadcasterInputStatisticSingleStreamTest@6615435c</td></tr>
 </table><p>
 </body>
 </html>

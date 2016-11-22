@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- Streaming/ Streams/ Feeder: push output streaming suite./ Push to BX default parameters/ -->
+<!-- The goal of the test suite is to test a Zixi bonding feature between feeder and broadcaster servers using 3 bonded links -->
 <suite name="Feeder: bonded push output streaming suite three links" verbose="5" data-provider-thread-count="1">
 	<test name="Feeder - bonded push to broadcaster test - default parameteres">
 		<parameter name="userName" value="admin" />
