@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink suite: "Streaming/ FFMPEG-testing/ Full path default parameters/"  -->
+<!-- Full path default parameters -->
+<!-- Full path with receiver's remuxed UDP output -->
 <suite name="Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser" verbose="5" data-provider-thread-count="1">
 	<test name="Feeder - Push to broadcaster test - default parameters FFMPEG analyser">
 		<parameter name="userName" value="admin" />
