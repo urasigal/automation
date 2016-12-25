@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- TestLink suite: ""Streaming/ FFMPEG-testing/ Broadcaster Push/ Broadcaster: Push suite with FFMPEG analyser/ -->
-<suite name="Broadcaster: Push suite with FFMPEG analyser default" verbose="5" data-provider-thread-count="1">
-<test name="Broadcaster - Push input stream creation test default parameters Push input FFMPEG analyser">
+<suite name="Broadcaster: Push streaming suite  - Alternative host" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Push input stream creation test -  alternative host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -22,12 +21,12 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="546" />    
+		<parameter name="testid" value="351" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push output stream creation test - default parameters Push input FFMPEG analyser">
+	<test name="Broadcaster - Push output stream creation test - alternative host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
@@ -47,12 +46,15 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="548" />  
+		<parameter name="link1" value="10.7.0.77,2088,,,0" />
+		<parameter name="link2" value="10.7.0.66,2088,,,0" />
+		<parameter name="bond_links" value="0" />
+		<parameter name="testid" value="353" />  
 		<classes>
-		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
+		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationGeneralTest"/>
 		</classes>
-</test>
-<test name="Broadcaster - Push input stream statistics test - default parameters Push input FFMPEG analyser">
+	</test>
+	<test name="Broadcaster - Push input stream statistics test -  alternative host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -60,15 +62,65 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="552" />  
+		<parameter name="testid" value="355" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP output stream creation default parameters Push input FFMPEG analyser">
+	<test name="Broadcaster - Push input stream creation test redundant - alternative host">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="latency" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type" value="push" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="testid" value="351" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove Push input stream alternative host">
 		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="pushtest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="testid" value="558" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>    
+	<test name="Broadcaster - Push input stream statistics test redundant - alternative host">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="355" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - UDP output stream creation alternative host">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="pushtest" />
 		<parameter name="streamname" value="pushtest" />
@@ -96,14 +148,14 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="FFMPEG test default parameters Push input FFMPEG analyser">
+	<test name="FFMPEG test alternative host">
 		<parameter name="testid" value="554" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove udp output stream default parameters push input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.66" />
+	<test name="Broadcaster - Remove udp output stream alternative host">
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
@@ -112,28 +164,28 @@
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
-	</test>		
-<test name="Broadcaster - Remove Push input stream - default parameters Push input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.66" />
+	</test>		   
+	<test name="Broadcaster - Remove Push input stream redundant - default paremeters">
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="558" />  
+		<parameter name="testid" value="357" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
-	</test> 
-<test name="Broadcaster - Remove Push output stream - default parameters Push input FFMPEG analyser">
+	</test>
+	<test name="Broadcaster - Remove Push output stream - default paremeters">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="560" />  
+		<parameter name="testid" value="359" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
-	</test>
+	</test>                                       
 </suite>
