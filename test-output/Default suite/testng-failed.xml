@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.zixi.load.testing.FeederBroadcasterBondingMultipleThreeLinkTest">
+      <class name="com.zixi.testing.FFMPEGImageStatisticTest">
         <methods>
           <include name="startTest"/>
-          <include name="broadcasterMultiplePullInCreation"/>
+          <include name="testInit"/>
+          <include name="broadcasterSingleInputStreamStatisticAnilyzer"/>
         </methods>
-      </class> <!-- com.zixi.load.testing.FeederBroadcasterBondingMultipleThreeLinkTest -->
+      </class> <!-- com.zixi.testing.FFMPEGImageStatisticTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
