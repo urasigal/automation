@@ -77,8 +77,6 @@ public class BaseTest {
 		tl.setResult(testid,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName(), getBuildIdFromFile());
 	}
 	
-	
-	// Prepare a lot of stuff:
 	// Write test results to the TestLink.
 	@AfterMethod
     public void afterTest(Method test, ITestResult result) 
@@ -126,8 +124,8 @@ public class BaseTest {
 	protected class TestBaseFunction {
 		protected String buildTestParametersString(String parametersNmes[], String[] paramertersValues)
 		{
-			StringBuffer sb = new StringBuffer();
-			int length = parametersNmes.length;
+			StringBuffer sb 		= 	new StringBuffer();
+			int 		 length 	= 	parametersNmes.length;
 			for(int i = 0 ; i < length; i++ )
 			{
 				sb.append("\n").append(parametersNmes[i]).append(" = ").append(paramertersValues[i]); 
@@ -162,19 +160,18 @@ public class BaseTest {
 		return BaseTest.LOGGER;
 	}
 	
-	
 	// Get TestLink test plan ID.
 	private int getBuildIdFromFile() throws IOException{
 		
-		String line;
-		int buildId = -1;
+		String 	line;
+		int 	buildId = -1;
 		try (
 		    InputStream 	  fis 	= 	new FileInputStream("src/main/resources/build");
 		    InputStreamReader isr 	= 	new InputStreamReader(fis, Charset.forName("UTF-8"));
 		    BufferedReader	  br  	= 	new BufferedReader(isr);
 		) {
 		    while ((line = br.readLine()) != null) {
-		    	 buildId = Integer.parseInt(line);
+		    	buildId = Integer.parseInt(line);
 		    }
 		}
 		return buildId;
