@@ -12,17 +12,14 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.logging.StreamHandler;
-
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
-
 import com.zixi.drivers.drivers.*;
 import com.zixi.tools.TestlinkIntegration;
 
@@ -73,8 +70,9 @@ public class BaseTest {
 		LOGGER = getLoggerInstance(); 
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
-		TestlinkIntegration tl = new TestlinkIntegration();
-		tl.setResult(testid,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName(), getBuildIdFromFile());
+		testDriver.setLogger(LOGGER); // Provide logger instance 
+		//TestlinkIntegration tl = new TestlinkIntegration();
+		//tl.setResult(testid,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName(), getBuildIdFromFile());
 	}
 	
 	// Write test results to the TestLink.
@@ -84,7 +82,8 @@ public class BaseTest {
 	 testDuration = System.currentTimeMillis() - testDuration;
 	 LOGGER.entering(getClass().getName(), "afterTest");
 	 LOGGER.entering(getClass().getName(), "afterTest");
-     try
+     
+	 try
      {		
         TestlinkIntegration tl = new TestlinkIntegration();
         if (result.isSuccess()) 
@@ -99,8 +98,8 @@ public class BaseTest {
         	LOGGER.info("Test duration[ms]: " + testDuration);
             tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n" +  
             automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
-            "\nTest duration[ms]: " + testDuration + "\n" +
-            "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + result.getThrowable().getStackTrace(), getBuildIdFromFile() );
+            "\nTest duration[ms]: " + testDuration + "\n" + "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + 
+            result.getThrowable().getStackTrace(), getBuildIdFromFile() );
         }
      }
      catch(Exception e)
@@ -140,11 +139,11 @@ public class BaseTest {
 		if(BaseTest.LOGGER == null)
 		{
 		  try {
-			  	PrintWriter pw = new PrintWriter("src/main/resources/log");
+			  	PrintWriter pw 			= new PrintWriter("src/main/resources/log");
 			  	pw.close();
-			    BaseTest.FILEHANDLER 	= new FileHandler("src/main/resources/log", true);
-			    BaseTest.STREAMHANDLER	= new StreamHandler(System.out, new SimpleFormatter());
-			    BaseTest.LOGGER 		= Logger.getLogger("com");
+			    BaseTest.FILEHANDLER 	= 	new FileHandler("src/main/resources/log", true);
+			    BaseTest.STREAMHANDLER	= 	new StreamHandler(System.out, new SimpleFormatter());
+			    BaseTest.LOGGER 		= 	Logger.getLogger("com");
 			    BaseTest.FILEHANDLER.setFormatter(new SimpleFormatter());
 				BaseTest.LOGGER.addHandler(BaseTest.FILEHANDLER);
 				BaseTest.LOGGER.addHandler(BaseTest.STREAMHANDLER);
