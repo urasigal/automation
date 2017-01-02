@@ -4,7 +4,7 @@
 <!-- TestLink suite: "Streaming/ FFMPEG-testing/ Full encryption test 256 FEC/" -->
 <!-- TestLink suite: "Streaming/ FFMPEG-testing/ Full encryption test 256 FEC/" -->
 <suite name="Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser FEC encryption 128" verbose="5" data-provider-thread-count="1">
-	<test name="Feeder - push to broadcaster test - Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Feeder - push to broadcaster test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -51,7 +51,7 @@
      		 </methods>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation test - Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Broadcaster - Push input stream creation test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -76,7 +76,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Receiver - pull input stream creation - Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Receiver - pull input stream creation - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.67" />
@@ -101,7 +101,7 @@
 		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.66" />
@@ -114,7 +114,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Receiver - Pull input stream statistic - Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Receiver - Pull input stream statistic - Encryption AES 128">
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -126,7 +126,7 @@
 		    <class name="com.zixi.testing.ReceiverInputStatisticTest"/>
 		</classes>
 	</test>
-	<test name="Receiver: UDP out creation - Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Receiver: UDP out creation - Encryption AES 128">
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -148,13 +148,13 @@
 			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
 		</classes>
 	</test>
-	<test name="FFMPEG test Encryption AES 128 FFMPEG analyser FEC">
+	<test name="FFMPEG test - Encryption AES 128">
 		<parameter name="testid" value="1161" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-	<test name="Receiver: UDP out deletion Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Receiver: UDP out deletion - Encryption AES 128">
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -166,7 +166,7 @@
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
 		</classes>
 	</test>
-	<test name="Feeder - output stream deletion test - Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Feeder - output stream deletion test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -184,7 +184,7 @@
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster - Remove Push input stream - Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Broadcaster - Remove Push input stream - Encryption AES 128">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -196,7 +196,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Receiver - Remove Pull input stream - Encryption AES 128 FFMPEG analyser FEC">
+	<test name="Receiver - Remove Pull input stream - Encryption AES 128">
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

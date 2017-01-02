@@ -12,7 +12,6 @@ import com.zixi.tools.Prerequisitor;
 
 public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 
-	private TestDriver testDriver;
 	private Prerequisitor prerequisitor;
 	@BeforeClass
 	public void testInit() {
