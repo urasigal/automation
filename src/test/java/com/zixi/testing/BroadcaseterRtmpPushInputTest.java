@@ -7,7 +7,7 @@ import com.zixi.drivers.drivers.BroadcasterRtmpInCreationDriver;
 import com.zixi.drivers.drivers.TestDriver;
 
 public class BroadcaseterRtmpPushInputTest extends BaseTest{
-	private TestDriver testDriver;
+	
 	@BeforeClass
 	public void testInit() 
 	{	

@@ -20,7 +20,7 @@ public class ZixiGenericAdapiveTest extends BaseTest {
 			String bitrates, String max_time, String testid)
 			throws ClassNotFoundException, NoSuchMethodException,
 			SecurityException, InstantiationException, IllegalAccessException {
-		this.testid = testid;
+
 		c = Class.forName(driver);
 		driverObj = c.newInstance();
 		m = c.getMethod("testIMPL", new Class[] { String.class , String.class , String.class ,

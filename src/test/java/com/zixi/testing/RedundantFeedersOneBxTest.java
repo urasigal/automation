@@ -16,13 +16,13 @@ import com.zixi.tools.StreamStatisticAnalyzer;
 
 public class RedundantFeedersOneBxTest extends BaseTest {
 	
-	private TestDriver inputStreamDetailsDriver;
 	private TestDriver redundantFeederOneBxDriver;
 	
 	private SshJcraftClient sshJcraftClient;
+	
 	@BeforeClass
 	public void testInit() {
-		inputStreamDetailsDriver = new InputStreamDetailsDriver();
+		testDriver   = new InputStreamDetailsDriver();
 		redundantFeederOneBxDriver = new RedundantFeederOneBxDriver();
 		sshJcraftClient = new SshJcraftClient();
 	}
@@ -48,12 +48,11 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 			String middle_bx_uiport, String middle_bx_userName, 
 			String middle_bx_userPass, String sshUser, String sshPassword, String sshPort, 
 			String command, String testid) throws Exception 
-	{
-		this.testid = testid;
+	{	
 		
+		String sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
+		middle_bx_userName, middle_bx_userPass);
 		
-		String sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
-								middle_bx_userName, middle_bx_userPass);
 		sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, command);
 		((RedundantFeederOneBxDriver)redundantFeederOneBxDriver).testIMPL(Integer.parseInt(udp_port));
 		
@@ -65,7 +64,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		{
 			ExternalRunnerThread externalRunnerThread = new ExternalRunnerThread(((RedundantFeederOneBxDriver)redundantFeederOneBxDriver), udp_port);
 			
-			sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
+			sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
 					middle_bx_userName, middle_bx_userPass);
 			externalRunnerThread.start();
 			sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, command);
@@ -117,7 +116,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		for(int i = 0 ; i < 10; i++)
 		{
 			// Get an IP address of the active source server. In this stage it have to be the Main feeder
-			sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
+			sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
 					middle_bx_userName, middle_bx_userPass);
 			
 			ExternalRunnerThread externalRunnerThread = new ExternalRunnerThread(((RedundantFeederOneBxDriver)redundantFeederOneBxDriver), udp_port);
@@ -191,7 +190,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		for(int i = 0 ; i < 10; i++)
 		{
 			// Get an IP address of the active source server. In this stage it have to be the Main feeder
-			sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
+			sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
 					middle_bx_userName, middle_bx_userPass);
 			
 			ExternalRunnerThread externalRunnerThread = new ExternalRunnerThread(((RedundantFeederOneBxDriver)redundantFeederOneBxDriver), udp_port);
@@ -252,7 +251,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 	{
 		this.testid = testid;
 		
-		String sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
+		String sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
 								middle_bx_userName, middle_bx_userPass);
 		sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, command);
 		((RedundantFeederOneBxDriver)redundantFeederOneBxDriver).testIMPL(Integer.parseInt(udp_port));
@@ -264,7 +263,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		for(int i = 0 ; i < 10; i++)
 		{
 			ExternalRunnerThread externalRunnerThread = new ExternalRunnerThread(((RedundantFeederOneBxDriver)redundantFeederOneBxDriver), udp_port);
-			sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
+			sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
 					middle_bx_userName, middle_bx_userPass);
 			externalRunnerThread.start();
 			sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, command);
@@ -326,7 +325,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 			ExternalRunnerThread externalRunnerThread = new ExternalRunnerThread(((RedundantFeederOneBxDriver)redundantFeederOneBxDriver), udp_port);
 			
 			// Get destination IP address of the live output 
-			sshLoginIp = ((InputStreamDetailsDriver)inputStreamDetailsDriver).findSourceIpOfOutputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
+			sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfOutputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
 					middle_bx_userName, middle_bx_userPass);
 			
 			externalRunnerThread.start();

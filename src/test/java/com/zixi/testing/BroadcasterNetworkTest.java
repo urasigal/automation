@@ -14,8 +14,7 @@ public class BroadcasterNetworkTest extends BaseTest{
 		testDriver = new NetworkingDriver();
 	}
 	
-	@Parameters({"sshuser", "sshpass", "sshaddress", "sshport", "command", "login_ip", "uiport",
-					"userName", "userPass","testid" })
+	@Parameters({"sshuser", "sshpass", "sshaddress", "sshport", "command", "login_ip", "uiport", "userName", "userPass","testid" })
 	@Test
 	public void compareIpsTest(String sshuser, String sshpass, String sshaddress, String sshport,  String command, String login_ip, String uiport, 
 	String userName, String userPass, String testid) throws Exception {

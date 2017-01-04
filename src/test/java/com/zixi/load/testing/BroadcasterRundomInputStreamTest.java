@@ -22,7 +22,6 @@ public class BroadcasterRundomInputStreamTest extends BaseTest
 	@Test
 	public void broadcasterSwitchUdpOut(String login_ip, String userName, String userPassword, String uiport, String name, String testid) throws Exception {
 		
-		this.testid = testid;
 		
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");

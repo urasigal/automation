@@ -18,14 +18,11 @@ public class BroadcaserAllOututStreamDeletorTest extends BaseTest{
 	@BeforeClass
 	public void testInit(String testid) {
 		testDriver = new BroadcaserAllOutputStreamDeletorDriver();
-		this.testid = testid;
 	}
 	
 	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "testid" })
 	@Test
-	public void broadcasterDeleteAllOutputStreams(String login_ip,
-			String userName, String userPassword, String uiport, String testid) throws Exception {
-		this.testid = testid;
+	public void broadcasterDeleteAllOutputStreams(String login_ip, String userName, String userPassword, String uiport, String testid) throws Exception {
 		
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");

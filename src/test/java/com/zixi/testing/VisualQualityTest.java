@@ -17,8 +17,6 @@ public class VisualQualityTest extends BaseTest{
 	@Parameters({"testid"})
 	@Test
 	public void broadcasterRtmpPullTest(String testid) throws InterruptedException {
-		this.testid = testid;
-		
 		
 		testParameters = buildTestParametersString(new String[] {"testid"}, 
 		new String[] {testid});

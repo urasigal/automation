@@ -11,11 +11,9 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTest {
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterTrannscodeStreamDriver();}
 
-	@Parameters({"userName", "userPass", "login_ip", "uiport", "type", "id",
-			"matrix", "max_outputs", "mcast_out", "time_shift", "old",
-			"fast_connect", "kompression", "enc_type", "enc_key",
-			"rec_history", "rec_duration", "src", "ap", "ll", "all_pids",
-			"bit", "profile_name", "mode", "testid"})
+	@Parameters({"userName", "userPass", "login_ip", "uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "old",
+	"fast_connect", "kompression", "enc_type", "enc_key", "rec_history", "rec_duration", "src", "ap", "ll", "all_pids",
+	"bit", "profile_name", "mode", "testid"})
 	
 	@Test // This test is actually transcodes an input test.
 	public void broadcasterSingleInputStreamstatisticAnilyzer(String userName, String userPass, String login_ip, String uiport, String type,String id,
@@ -25,10 +23,7 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTest {
 	String bit, String profile_name, String mode, String testid)
 	throws Exception {
 
-		this.testid = testid;
-
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip,
-		uiport, userName, userPass);
+		this.version = productAboutDriver.getBroadcasterVersion(login_ip,uiport, userName, userPass);
 
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "old",
 		"fast_connect", "kompression", "enc_type", "enc_key", "rec_history", "rec_duration", "src", "ap", "ll", "all_pids", "bit", "profile_name", "mode", "testid" },

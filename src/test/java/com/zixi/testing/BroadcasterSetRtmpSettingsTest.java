@@ -9,8 +9,7 @@ import com.zixi.drivers.drivers.BroadcasterSetRtmpSettingsDriver;
 import com.zixi.drivers.drivers.TestDriver;
 
 public class BroadcasterSetRtmpSettingsTest extends BaseTest {
-	private TestDriver testDriver;
-
+	
 	@BeforeClass
 	public void testInit() {
 		testDriver = new BroadcasterSetRtmpSettingsDriver();

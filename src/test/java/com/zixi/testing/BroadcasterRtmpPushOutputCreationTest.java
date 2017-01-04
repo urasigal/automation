@@ -29,7 +29,6 @@ public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 			String disconnect_low_br, String static_latency, String dec_type,
 			String dec_key, String password, String testid)
 			throws Exception {
-		this.testid = testid;
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		

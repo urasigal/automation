@@ -19,7 +19,6 @@ public class ReceiverPullInputStreamDeletionTest extends BaseTest{
 	public void feederOutputToBxTest(String userName, String userPassword,
 			String login_ip, String uiport, String id,String testid)
 			throws Exception {
-		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id" ,"testid" }, 
 				

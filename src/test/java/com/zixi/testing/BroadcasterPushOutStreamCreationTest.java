@@ -9,7 +9,6 @@ import com.zixi.drivers.drivers.BroadcasterPushOutStreamCreationDriver;
 import com.zixi.drivers.drivers.TestDriver;
 
 public class BroadcasterPushOutStreamCreationTest extends BaseTest {
-	private TestDriver testDriver;
 
 	@BeforeClass
 	public void testInit() {

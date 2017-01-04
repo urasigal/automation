@@ -26,7 +26,6 @@ public class ReceiverPullInputStreamCreationTest extends BaseTest{
 			String latency, String min_bit, String name, String nic,
 			String port, String session, String stream,String testid)
 			throws Exception {
-		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "dec_key",
 				"dec_type", "fec_adaptive", "fec_aware", "fec_force",

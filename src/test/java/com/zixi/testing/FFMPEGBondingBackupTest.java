@@ -20,7 +20,6 @@ public class FFMPEGBondingBackupTest extends BaseTest{
 	@Parameters({"testid"})
 	@Test
 	public void ffmpegBondingTestBackUpScenarioPartialLimitation(String testid) throws InterruptedException {
-		this.testid = testid;
 		
 		testParameters = buildTestParametersString(new String[] { "testid" }, new String[] {"testid" });
 		

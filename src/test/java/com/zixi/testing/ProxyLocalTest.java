@@ -19,8 +19,6 @@ public class ProxyLocalTest extends BaseTest{
 	@Test
 	public void broadcasterSingleStreamRemoving(String function, String source, String stream_name, String mode, String proxy_port, String regime, String testid) throws InterruptedException 
 	{
-		this.testid = testid;
-		Assert.assertEquals(((ProxyLocalDriver) testDriver).testIMPL(function, source, stream_name, mode, proxy_port, regime),
-				"Output ");
+		Assert.assertEquals(((ProxyLocalDriver) testDriver).testIMPL(function, source, stream_name, mode, proxy_port, regime),"Output ");
 	}
 }

@@ -17,7 +17,6 @@ public class ReceiverOutputStreamDeletionTest extends BaseTest{
 	@Test		
 	public void receiverDeleteOutputStreamTest(String login_ip, String userName, String userPass, String uiport 
 			,String stream_name, String  destination, String testid) throws Exception {
-		this.testid = testid;
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
