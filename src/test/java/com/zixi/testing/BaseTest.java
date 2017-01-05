@@ -80,8 +80,8 @@ public class BaseTest {
     public void afterTest(Method test, ITestResult result) 
 	{
 	 testDuration = System.currentTimeMillis() - testDuration;
-	 LOGGER.entering(getClass().getName(), "afterTest");
-	 LOGGER.entering(getClass().getName(), "afterTest");
+	 LOGGER.entering(this.getClass().getName(), "afterTest");
+	 LOGGER.entering(this.getClass().getName(), "afterTest");
      
 	 try
      {		

@@ -15,7 +15,7 @@ public class BroadcaserAllInputStreamDeletorTest extends BaseTest
 		testDriver = new BroadcaserAllInputStreamDeletorDriver();
 	}
 	
-	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "testid" })
+	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "testid"})
 	@Test
 	public void broadcasterDeleteAllInputs(String login_ip, String userName, String userPassword, String uiport, String testid) throws Exception {
 		

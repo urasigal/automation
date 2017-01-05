@@ -2,7 +2,7 @@ package com.zixi.testing.util;
 
 public abstract class GenericImageTable<T> {
 	
-	private T img [][];
+	private T img [][]; 
 	
 	public GenericImageTable( T [][] img)
 	{

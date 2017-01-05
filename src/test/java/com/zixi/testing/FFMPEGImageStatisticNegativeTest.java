@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver;
 
 public class FFMPEGImageStatisticNegativeTest extends BaseTest{
+	
 	@BeforeClass
 	public void testInit() {
-
 		// This is a test driver.
 		testDriver = new FFMPEGImageStatisticTestDriver();
 	}
@@ -19,16 +19,9 @@ public class FFMPEGImageStatisticNegativeTest extends BaseTest{
 	@Parameters({"testid"})
 	@Test
 	public void broadcasterSingleInputStreamStatisticAnilyzer(String testid) throws InterruptedException {
-		this.testid = testid;
 		
-		testParameters = buildTestParametersString(new String[] { "testid" }, 
-				
-				new String[] { testid });
+		testParameters = buildTestParametersString(new String[] { "testid" }, new String[] { testid });
 		
-		
-		Assert.assertEquals(
-				((FFMPEGImageStatisticTestDriver) testDriver)
-						.testStatistic(true), "good");
+		Assert.assertEquals(((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(true), "good");
 	}
-
 }
