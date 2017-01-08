@@ -33,7 +33,7 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 		
 		driverReslut = ((BroadcaserSingleOutputStreamDeletionDriver) testDriver).testIMPL(login_ip, userName, userPassword, id, uiport);
 		
-		Assert.assertEquals(((BroadcaserSingleOutputStreamDeletionDriver) testDriver).testIMPL(login_ip, userName, userPassword, id, uiport), "Output " +  id + " removed.");
+		Assert.assertEquals(driverReslut.getResult(), "Output " +  id + " removed.");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

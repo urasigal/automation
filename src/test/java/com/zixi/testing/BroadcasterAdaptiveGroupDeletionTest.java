@@ -24,6 +24,7 @@ public class BroadcasterAdaptiveGroupDeletionTest extends BaseTest{
 						
 		new String[] { userName, userPass, login_ip, uiport, name, testid });
 		driverReslut = ((BroadcasterAdaptiveGroupDeletionDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport, name);
+		
 		Assert.assertEquals( driverReslut.getResult(), "{\"success\":1}");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));

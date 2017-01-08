@@ -34,9 +34,7 @@ public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 		driverReslut = ((BroadcasterRtmpPushOutputCreationDriver) testDriver) .testIMPL(login_ip, userName, userPassword, uiport, type, name, stream, matrix, url, url_alt, 
 		rtmp_stream, user, bandwidth, latency, reconnect, sendfi, disconnect_low_br, static_latency, dec_type, dec_key, password);
 		
-		Assert.assertEquals(
-		((BroadcasterRtmpPushOutputCreationDriver) testDriver) .testIMPL(login_ip, userName, userPassword, uiport, type, name, stream, matrix, url, url_alt, 
-		rtmp_stream, user, bandwidth, latency, reconnect, sendfi, disconnect_low_br, static_latency, dec_type, dec_key, password), "Output " +name+ " added.");
+		Assert.assertEquals( driverReslut.getResult(), "Output " +name+ " added.");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));

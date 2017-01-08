@@ -9,10 +9,7 @@ import com.zixi.drivers.drivers.ReceiverPullInputStreamDeletionDriver;
 public class ReceiverPullInputStreamDeletionTest extends BaseTest{
 
 	@BeforeClass
-	public void testInit() {
-
-		testDriver = new ReceiverPullInputStreamDeletionDriver();
-	}
+	public void testInit() { testDriver = new ReceiverPullInputStreamDeletionDriver();}
 
 	@Parameters({ "userName", "userPassword", "login_ip", "uiport", "id" ,"testid"})
 	@Test
@@ -26,6 +23,6 @@ public class ReceiverPullInputStreamDeletionTest extends BaseTest{
 		// String streamForDeletion = ((ReceiverPullInputStreamDeletionDriver) testDriver).testIMPL(userName, userPassword, login_ip, uiport, id);
 		
 		driverReslut = ((ReceiverPullInputStreamDeletionDriver) testDriver).testIMPL(userName, userPassword, login_ip, uiport, id);
-		Assert.assertEquals(driverReslut.getResult(), "Stream removed.");
+		Assert.assertEquals(driverReslut.getResult(),"Stream removed.");
 	}
 }
