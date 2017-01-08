@@ -11,14 +11,14 @@ public class ProxyLocalTest extends BaseTest{
 	
 	
 	@BeforeClass
-	public void testInit() {
-			testDriver = new ProxyLocalDriver();
-	}
+	public void testInit() { testDriver = new ProxyLocalDriver(); }
 
 	@Parameters({ "function", "source", "stream_name", "mode", "proxy_port", "regime", "testid"}) 
 	@Test
 	public void broadcasterSingleStreamRemoving(String function, String source, String stream_name, String mode, String proxy_port, String regime, String testid) throws InterruptedException 
 	{
-		Assert.assertEquals(((ProxyLocalDriver) testDriver).testIMPL(function, source, stream_name, mode, proxy_port, regime),"Output ");
+		driverReslut = ((ProxyLocalDriver) testDriver).testIMPL(function, source, stream_name, mode, proxy_port, regime);
+		
+		Assert.assertEquals(driverReslut.getResult(), "Output ");
 	}
 }

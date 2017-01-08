@@ -32,8 +32,10 @@ public class BroadcasterPushOutStreamCreationTest extends BaseTest {
 		new String[] { userName, userPass, login_ip, host, latency, fec_force, session, fec_adaptive, nic, fec_block, type,
 		snames, fec_aware, fec_overhead, stream, port, uiport, alias, id, testid });
 		
-		Assert.assertEquals(((BroadcasterPushOutStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, host, latency, fec_force,
-		session, fec_adaptive, nic, fec_block, type, snames, fec_aware, fec_overhead, stream, port, uiport, alias, id), "Output " + id + " added.");
+		driverReslut = ((BroadcasterPushOutStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, host, latency, fec_force,
+		session, fec_adaptive, nic, fec_block, type, snames, fec_aware, fec_overhead, stream, port, uiport, alias, id);
+		
+		Assert.assertEquals(driverReslut.getResult(), "Output " + id + " added.");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster"));

@@ -12,10 +12,7 @@ import com.zixi.drivers.drivers.BroadcasterStreamMulticastDriver;
 public class BroadcasterStreamMulticastTest  extends BaseTest{
 	
 	@BeforeClass
-	public void testInit() { 
-		// Super class element
-		testDriver = new BroadcasterStreamMulticastDriver();
-	}
+	public void testInit() {  testDriver = new BroadcasterStreamMulticastDriver(); }
 
 	// Test parameters.
 	@Parameters({"bx1_login_ip", "bx1_userName", "bx1_bxuserPassword", "bx1_uiport", "bx2_login_ip", "bx2_userName", "bx2_bxuserPassword",
@@ -46,8 +43,10 @@ public class BroadcasterStreamMulticastTest  extends BaseTest{
 		
 		String multiastIp = ((BroadcasterStreamMulticastDriver) testDriver).testIMPL(bx1_login_ip, bx1_userName, bx1_bxuserPassword, bx1_uiport, id);
 		
-		Assert.assertEquals(new BroadcasterSingleUdpInCreationDriver().testIMPL(bx2_userName, bx2_bxuserPassword, bx2_login_ip, ts_port, id, rtp_type,
+		driverReslut = new BroadcasterSingleUdpInCreationDriver().testIMPL(bx2_userName, bx2_bxuserPassword, bx2_login_ip, ts_port, id, rtp_type,
 		multi_src, max_bitrate, time_shift, "", "", ts_port, nic, type, multiastIp, enc_key,
-		kompression, bx2_uiport, "", enc_type, mcast_out, "", max_outputs, "1"), "Stream " + "'" + id + "'" + " added.");	
+		kompression, bx2_uiport, "", enc_type, mcast_out, "", max_outputs, "1");
+		
+		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");	
 	}
 }

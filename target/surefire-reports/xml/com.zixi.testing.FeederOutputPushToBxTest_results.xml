@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Feeder - push to broadcaster test - Encryption AES 256"
-           tests="1"
+<testsuite name="Feeder - push to broadcaster test - Encryption AES 192"
+           tests="4"
            failures="1"
            errors="0"
-           skipped="0"
-           time="0.302">
+           skipped="3"
+           time="0.000">
   <properties />
-            <testcase name="feederOutputToBxTest" time="0.302" classname="com.zixi.testing.FeederOutputPushToBxTest">
-                <failure type="java.lang.AssertionError"
-                  message="expected [Broadcaster output added.] but found []"
+            <testcase name="testInit" time="0.000" classname="com.zixi.testing.FeederOutputPushToBxTest">
+                <failure type="java.lang.NoClassDefFoundError"
+                  message="com/zixi/drivers/drivers/FeederOutputPushToBxDriver"
               >
-<![CDATA[java.lang.AssertionError: expected [Broadcaster output added.] but found []
-  org.testng.Assert.fail(Assert.java:94)
-  org.testng.Assert.failNotEquals(Assert.java:496)
-  org.testng.Assert.assertEquals(Assert.java:125)
-  org.testng.Assert.assertEquals(Assert.java:178)
-  org.testng.Assert.assertEquals(Assert.java:188)
-  com.zixi.testing.FeederOutputPushToBxTest.feederOutputToBxTest(FeederOutputPushToBxTest.java:41)
-  sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+<![CDATA[java.lang.NoClassDefFoundError: com/zixi/drivers/drivers/FeederOutputPushToBxDriver
+  com.zixi.testing.FeederOutputPushToBxTest.testInit(FeederOutputPushToBxTest.java:14)
+  sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
   java.lang.reflect.Method.invoke(Unknown Source)
   org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-  org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
-  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
-  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
-  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)
+  org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
   org.testng.TestRunner.privateRun(TestRunner.java:771)
   org.testng.TestRunner.run(TestRunner.java:621)
   org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
@@ -51,6 +46,15 @@
 
           </testcase>
   
+            <testcase name="afterTest" time="0.0" classname="com.zixi.testing.FeederOutputPushToBxTest">
+          <skipped />
+    </testcase>
+            <testcase name="beforeTes" time="0.0" classname="com.zixi.testing.FeederOutputPushToBxTest">
+          <skipped />
+    </testcase>
+            <testcase name="feederOutputToBxTest" time="0.0" classname="com.zixi.testing.FeederOutputPushToBxTest">
+          <skipped />
+    </testcase>
   
   
 </testsuite>

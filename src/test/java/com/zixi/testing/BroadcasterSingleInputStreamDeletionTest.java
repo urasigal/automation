@@ -9,10 +9,7 @@ import com.zixi.drivers.drivers.*;
 public class BroadcasterSingleInputStreamDeletionTest extends BaseTest {
 
 	@BeforeClass
-	public void testInit() {
-		// Load the page in the browser
-		testDriver = new BroadcasterSingleInputStreamDeletionDriver();
-	}
+	public void testInit() { testDriver = new BroadcasterSingleInputStreamDeletionDriver(); }
 
 	@Parameters({ "login_ip", "userName", "userPassword", "streamId", "uiport" ,"testid"})
 	@Test
@@ -24,8 +21,8 @@ public class BroadcasterSingleInputStreamDeletionTest extends BaseTest {
 		testParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "streamId", "uiport" ,"testid" }, 
 		new String[] {login_ip, userName, userPassword, streamId, uiport ,testid });
 		
-		Assert.assertNotNull(((BroadcasterSingleInputStreamDeletionDriver) testDriver).removeInput(login_ip, userName, userPassword, streamId, uiport));
-		
+		driverReslut = ((BroadcasterSingleInputStreamDeletionDriver) testDriver).removeInput(login_ip, userName, userPassword, streamId, uiport);
+		 		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

@@ -9,36 +9,19 @@ import com.zixi.drivers.drivers.FeederOutputDeletionDriver;
 public class FeederUdpOutputDeletioinTest extends BaseTest{
 
 	@BeforeClass
-	public void testInit() {
-		testDriver = new FeederOutputDeletionDriver();
-	}
+	public void testInit() { testDriver = new FeederOutputDeletionDriver(); }
 
-	@Parameters({ "userName", "userPass", "login_ip", "uiport", "id", "mip",
-			"port", "ip", "prog", "chan", "type","host", "udpport" ,"testid"})
+	@Parameters({ "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type","host", "udpport" ,"testid"})
 	@Test
-	public void broadcasterSingleStreamRemoving(String userName,
-			String userPass, String login_ip, String uiport, String id,
-			String mip, String port, String ip, String prog, String chan,
-			String type, String host, String udpport, String testid) throws Exception {
-		this.testid = testid;
+	public void broadcasterSingleStreamRemoving(String userName, String userPass, String login_ip, String uiport, String id,
+	String mip, String port, String ip, String prog, String chan, String type, String host, String udpport, String testid) throws Exception {
 		
+		testParameters = buildTestParametersString(new String[] { userName, userPass, login_ip, uiport, id, mip,port, ip, prog, chan, type,host, udpport ,testid }, 
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip",
-				"port", "ip", "prog", "chan", "type","host", "udpport" ,"testid" }, 
-				
-				new String[] {"userName", "userPass", "login_ip", "uiport", "id", "mip",
-				"port", "ip", "prog", "chan", "type","host", "udpport" ,"testid" });
+		new String[] { userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type,host, udpport ,testid });
 		
+		driverReslut = ((FeederOutputDeletionDriver) testDriver).testUdpIMPL( userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, host, udpport);
 		
-		testParameters = buildTestParametersString(new String[] { userName, userPass, login_ip, uiport, id, mip,
-				port, ip, prog, chan, type,host, udpport ,testid }, 
-				
-				new String[] { userName, userPass, login_ip, uiport, id, mip,
-				port, ip, prog, chan, type,host, udpport ,testid });
-		
-		
-		Assert.assertEquals(((FeederOutputDeletionDriver) testDriver).testUdpIMPL(
-				userName, userPass, login_ip, uiport, id, mip, port, ip, prog,
-				chan, type, host, udpport), "Output deleted.");
+		Assert.assertEquals(driverReslut.getResult(), "Output deleted.");
 	}
 }

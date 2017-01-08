@@ -24,7 +24,6 @@ public class BroadcasterPushInStreamCreationDecriptionTest extends BaseTest {
 	String mcast_force, String mcast_port, String type, String uiport, String analyze, String mcast_ttl, String id, String mcast_out,
 	String complete, String max_outputs, String on, String password, String dec_type, String dec_key, String testid) throws Exception {
 		
-		this.testid = testid;
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
@@ -33,10 +32,12 @@ public class BroadcasterPushInStreamCreationDecriptionTest extends BaseTest {
 		"max_outputs", "on", "password", "dec_type", "dec_key", "testid"}, 
 		new String[] {userName, userPass, login_ip, latency, time_shift, force_p2p, mcast_ip, mcast_force, mcast_port, type,
 		uiport, analyze, mcast_ttl, id, mcast_out, complete, max_outputs, on, password, dec_type, dec_key, testid });
-			
-		Assert.assertEquals(((BroadcasterPushInStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, latency, time_shift,
+		
+		driverReslut = ((BroadcasterPushInStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, latency, time_shift,
 		force_p2p, mcast_ip, mcast_force, mcast_port, type,uiport, analyze, mcast_ttl, id, mcast_out, complete,
-		max_outputs, on, password, dec_type, dec_key), "Stream " + "'" + id + "'"+ " added.");
+		max_outputs, on, password, dec_type, dec_key);
+		
+		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'"+ " added.");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

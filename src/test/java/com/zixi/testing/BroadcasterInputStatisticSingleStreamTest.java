@@ -29,9 +29,10 @@ public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "Host", "login_ip", "uiport", "id", "testduration" ,"testid"}, 
 		new String[] { userName, userPass, Host, login_ip, uiport, id, testduration ,testid });
 		
+		driverReslut = ((com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver) testDriver).testStatistic(userName, userPass, Host, login_ip, uiport, id, testduration);
+		
 		// Perform the statistic test.
-		Assert.assertEquals(((com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver) testDriver).testStatistic(userName, userPass, Host, login_ip,
-		uiport, id, testduration), "good");
+		Assert.assertEquals(driverReslut.getResult(), "good");
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

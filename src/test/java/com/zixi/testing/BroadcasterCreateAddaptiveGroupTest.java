@@ -31,8 +31,10 @@ public class BroadcasterCreateAddaptiveGroupTest extends BaseTest {
 		new String[] { "userName", "userPass", "login_ip", "uiport", "name","record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi",
 		"multicast", "streams", "bitrates", "max_time", "testid" });
 
-		Assert.assertEquals(((BroadcasterCreateAddaptiveGroupDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, name, record,
-		zixi, hls, hds, mpd, mmt, compress_zixi, multicast, streams, bitrates, max_time), "{\"success\":1}");
+		driverReslut = ((BroadcasterCreateAddaptiveGroupDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, name, record,
+		zixi, hls, hds, mpd, mmt, compress_zixi, multicast, streams, bitrates, max_time);
+		
+		Assert.assertEquals(driverReslut.getResult(), "{\"success\":1}");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

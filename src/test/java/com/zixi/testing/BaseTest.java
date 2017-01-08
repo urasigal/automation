@@ -12,15 +12,19 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.logging.StreamHandler;
+
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
+
 import com.zixi.drivers.drivers.*;
+import com.zixi.drivers.tools.DriverReslut;
 import com.zixi.tools.TestlinkIntegration;
 
 /*
@@ -35,26 +39,28 @@ public class BaseTest {
 	protected Object 							driverObj;
 	protected Method 							m;
 	protected String 							testid; // Stores unique test number which is the number provided by TestLink test management system. 
-	protected String 							version						= ""; // Stores the SUT version (feeder broadcaster receiver).
-	protected String 							automationTestIdentifiers 	= "";
-	protected ProductAboutDriver 				productAboutDriver 			= new ProductAboutDriver();
-	protected TestBaseFunction 					testBaseFunction 			= new TestBaseFunction ();
-	protected StringBuffer 						testFlowDescriptor 			= new StringBuffer("Test flow: "); // Put it any place in order to describe a test flow.
+	protected String 							version						= 	""; // Stores the SUT version (feeder broadcaster receiver).
+	protected String 							automationTestIdentifiers 	= 	"";
+	protected ProductAboutDriver 				productAboutDriver 			= 	new ProductAboutDriver();
+	protected TestBaseFunction 					testBaseFunction 			= 	new TestBaseFunction ();
+	protected StringBuffer 						testFlowDescriptor 			=	new StringBuffer("Test flow: "); // Put it any place in order to describe a test flow.
 	protected String 							sutProcessId;
 	protected double 							testDuration;
 	
 	// Writes test results to the TestLink.
-	protected String 							testParameters 				= "";
+	protected String 							testParameters 				= 	"";
 	
 	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developers.
-	protected static  Logger       				LOGGER      				= null;
-	protected static  FileHandler  				FILEHANDLER 				= null ;
-	protected static  StreamHandler				STREAMHANDLER				= null;
+	protected static  Logger       				LOGGER      				= 	null;
+	protected static  FileHandler  				FILEHANDLER 				= 	null ;
+	protected static  StreamHandler				STREAMHANDLER				= 	null;
 	
 	// Reflection stuff.
 	protected Class 							c;
 	protected Object 							params[];
-	protected String 							manulDescription 			= "";
+	protected String 							manulDescription 			= 	"";
+	
+	protected DriverReslut						driverReslut				= 	null;		
 	
 	@BeforeTest
 	public void startTest(final ITestContext testContext) {
@@ -91,7 +97,7 @@ public class BaseTest {
         	LOGGER.info("Test duration[ms]: " + testDuration);
             tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
             automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor +
-            "\nTest duration[ms]: " + testDuration + "\n", getBuildIdFromFile()); // pass data to a testLink notes in test execution.
+            "\nTest duration[ms]: " + testDuration + "\n " + " Test notes " + driverReslut.touchResutlDescription(" "), getBuildIdFromFile()); // pass data to a testLink notes in test execution.
         } 
         else 
         {
@@ -99,7 +105,7 @@ public class BaseTest {
             tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n" +  
             automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
             "\nTest duration[ms]: " + testDuration + "\n" + "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + 
-            result.getThrowable().getStackTrace(), getBuildIdFromFile() );
+            result.getThrowable().getStackTrace()  + " Test notes " + driverReslut.touchResutlDescription(" ") , getBuildIdFromFile());
         }
      }
      catch(Exception e)

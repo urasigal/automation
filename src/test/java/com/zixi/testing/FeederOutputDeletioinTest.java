@@ -9,9 +9,7 @@ import com.zixi.drivers.drivers.FeederOutputDeletionDriver;
 public class FeederOutputDeletioinTest extends BaseTest{
 
 	@BeforeClass
-	public void testInit() {
-		testDriver = new FeederOutputDeletionDriver();
-	}
+	public void testInit() {testDriver = new FeederOutputDeletionDriver();}
 
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type","host" ,"testid"})
 	@Test
@@ -19,13 +17,11 @@ public class FeederOutputDeletioinTest extends BaseTest{
 	String mip, String port, String ip, String prog, String chan, String type, String host,String testid) throws Exception {
 		
 		// Writes test results to the TestLink.
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip",
-		"port", "ip", "prog", "chan", "type","host" ,"testid" }, 
-		
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip","port", "ip", "prog", "chan", "type","host" ,"testid" }, 
 		new String[] { userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type,host ,testid });
 		
-		Assert.assertEquals(((FeederOutputDeletionDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, id, mip, port, ip, prog,
-		chan, type, host), "Output deleted.");
+		driverReslut = ((FeederOutputDeletionDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, host);
+		
+		Assert.assertEquals(driverReslut.getResult(), "Output deleted.");
 	}
-	
 }

@@ -10,9 +10,7 @@ public class VisualQualityTest extends BaseTest{
 	
 	
 	@BeforeClass
-	public void testInit() {
-		testDriver = new VisualQualityDriver();
-	}
+	public void testInit() { testDriver = new VisualQualityDriver(); }
 
 	@Parameters({"testid"})
 	@Test

@@ -11,9 +11,7 @@ import com.zixi.drivers.drivers.TestLinkerDriver;
 public class TestLinker extends BaseTest{
 		
 	@BeforeClass
-	public void testInit() { 
-		 testDriver = new TestLinkerDriver();
-	}
+	public void testInit() {  testDriver = new TestLinkerDriver();}
 	
 		@Parameters({"userName", "userPass", "login_ip", "uiport"})
 		@Test
@@ -22,7 +20,9 @@ public class TestLinker extends BaseTest{
 			ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 	
 			String version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
-			Assert.assertEquals(((TestLinkerDriver) testDriver).testIMPL(version),
-					"success");
+			
+			driverReslut = ((TestLinkerDriver) testDriver).testIMPL(version);
+			
+			Assert.assertEquals(driverReslut.getResult(), "success");
 		}
 }

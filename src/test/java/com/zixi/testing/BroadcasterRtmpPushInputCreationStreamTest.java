@@ -10,14 +10,11 @@ import com.zixi.drivers.drivers.BroadcasterRtmpPushInputStreamDriver;
 public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 
 	@BeforeClass
-	public void testInit() {
-		testDriver = new BroadcasterRtmpPushInputStreamDriver();
-	}
+	public void testInit() { testDriver = new BroadcasterRtmpPushInputStreamDriver(); }
 
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix",
 	"max_outputs", "mcast_out", "time_shift", "old", "fast_connect", "kompression", "enc_type", "enc_key", "rec_history",
 	"rec_duration", "rtmp_url", "rtmp_name", "rtmp_user", "testid" })
-	
 	// The goal of the test is to verify adding of a RTMP push input stream.
 	@Test
 	public void broadcasterRtmpPushTest(String userName, String userPass,
@@ -40,9 +37,10 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 	    new String[] { userName, userPass, login_ip, uiport, type, id, matrix, max_outputs, mcast_out, time_shift, old, fast_connect,
 		kompression, enc_type, enc_key, rec_history, rec_duration, rtmp_url, rtmp_name, rtmp_user, testid });
 		
-		Assert.assertEquals(((BroadcasterRtmpPushInputStreamDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, type, id, matrix,
-		max_outputs, mcast_out, time_shift, old, fast_connect, kompression, enc_type, enc_key, rec_history, rec_duration, rtmp_url, rtmp_name, rtmp_user),
-		"Stream " + "'" + id + "'" + " added.");
+		driverReslut = ((BroadcasterRtmpPushInputStreamDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, type, id, matrix,
+		max_outputs, mcast_out, time_shift, old, fast_connect, kompression, enc_type, enc_key, rec_history, rec_duration, rtmp_url, rtmp_name, rtmp_user);
+		
+		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));

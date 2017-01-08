@@ -14,9 +14,7 @@ import com.zixi.drivers.drivers.BroadcasterRtmpInCreationDriver;
 public class BroadcasterRtmpInputTest extends BaseTest {
 
 	@BeforeClass
-	public void testInit() {
-		testDriver = new BroadcasterRtmpInCreationDriver();
-	}
+	public void testInit() { testDriver = new BroadcasterRtmpInCreationDriver(); }
 
 	@Parameters({ "userName", "userPass", "login_ip", "rtmp_nulls", "id","rtmp_url", "rtmp_name", "time_shift", "mcast_ip", "mcast_force",
 	"mcast_port", "type", "rtmp_user", "rtmp_bitrate", "rtmp_passwd", "uiport", "mcast_ttl", "rtmp_latency", "mcast_out", "complete", "max_outputs", "on" ,"testid"})
@@ -33,13 +31,15 @@ public class BroadcasterRtmpInputTest extends BaseTest {
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "rtmp_nulls", "id",
 		"rtmp_url", "rtmp_name", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "type", "rtmp_user", "rtmp_bitrate", "rtmp_passwd",
 		"uiport", "mcast_ttl", "rtmp_latency", "mcast_out", "complete", "max_outputs", "on" ,"testid"}, 
-		
 		new String[] {userName, userPass, login_ip, rtmp_nulls, id, rtmp_url, rtmp_name, time_shift, mcast_ip, mcast_force,
 		mcast_port, type, rtmp_user, rtmp_bitrate, rtmp_passwd, uiport, mcast_ttl, rtmp_latency, mcast_out, complete, max_outputs, on ,testid});
 		
-		Assert.assertEquals(((BroadcasterRtmpInCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, rtmp_nulls, id,
+		driverReslut = ((BroadcasterRtmpInCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, rtmp_nulls, id,
 		rtmp_url, rtmp_name, time_shift, mcast_ip, mcast_force, mcast_port, type, rtmp_user, rtmp_bitrate, rtmp_passwd, uiport, mcast_ttl, 
-		rtmp_latency, mcast_out, complete, max_outputs, on), "Stream " + "'" + id + "'" + " added.");
+		rtmp_latency, mcast_out, complete, max_outputs, on);
+		
+		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
+		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

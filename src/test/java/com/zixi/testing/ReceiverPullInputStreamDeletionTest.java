@@ -16,18 +16,16 @@ public class ReceiverPullInputStreamDeletionTest extends BaseTest{
 
 	@Parameters({ "userName", "userPassword", "login_ip", "uiport", "id" ,"testid"})
 	@Test
-	public void feederOutputToBxTest(String userName, String userPassword,
-			String login_ip, String uiport, String id,String testid)
-			throws Exception {
+	public void feederOutputToBxTest(String userName, String userPassword, String login_ip, String uiport, String id,String testid)
+	throws Exception {
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id" ,"testid" }, 
 				
 		new String[] { userName, userPassword, login_ip, uiport, id ,testid });
+			
+		// String streamForDeletion = ((ReceiverPullInputStreamDeletionDriver) testDriver).testIMPL(userName, userPassword, login_ip, uiport, id);
 		
-		
-		String streamForDeletion = ((ReceiverPullInputStreamDeletionDriver) testDriver)
-				.testIMPL(userName, userPassword, login_ip, uiport, id);
-		Assert.assertEquals(streamForDeletion,
-				"Stream removed.");
+		driverReslut = ((ReceiverPullInputStreamDeletionDriver) testDriver).testIMPL(userName, userPassword, login_ip, uiport, id);
+		Assert.assertEquals(driverReslut.getResult(), "Stream removed.");
 	}
 }

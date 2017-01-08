@@ -10,9 +10,7 @@ import com.zixi.drivers.drivers.BroadcasterUdpOutputCreationDriver;
 public class BroadcasterUDPOutputStreamCreationTest extends BaseTest{
 
 	@BeforeClass
-	public void testInit() {
-		testDriver = new BroadcasterUdpOutputCreationDriver(testFlowDescriptor);
-	}
+	public void testInit() { testDriver = new BroadcasterUdpOutputCreationDriver(testFlowDescriptor); }
 
 	@Parameters({ "userName", "userPass", "login_ip", "port", "stream", "streamname", "host", "id", "rtp", "fec", "smoothing", "ttl",
 	"remux_bitrate", "df", "local_port", "dec_key", "type", "rows", "remux_buff", "local_ip", "remux_restampdts", "uiport", "remux_pcr", "dec_type", "cols" ,"testid"})
@@ -23,7 +21,6 @@ public class BroadcasterUDPOutputStreamCreationTest extends BaseTest{
 	String dec_type, String cols,String testid) throws Exception {
 		
 		testFlowDescriptor.append("\nStarting the BroadcasterUDPOutputStreamCreationTest test");
-		this.testid = testid;
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
@@ -35,9 +32,10 @@ public class BroadcasterUDPOutputStreamCreationTest extends BaseTest{
 		new String[] {userName, userPass, login_ip, port, stream, streamname, host, id, rtp, fec, smoothing, ttl, remux_bitrate, df, local_port, dec_key, type, rows,
 		remux_buff, local_ip, remux_restampdts, uiport, remux_pcr, dec_type, cols ,testid });
 		
+		driverReslut = ((BroadcasterUdpOutputCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, port, stream, streamname, host, id, rtp, fec, smoothing,
+		ttl, remux_bitrate, df, local_port, dec_key, type, rows, remux_buff, local_ip, remux_restampdts, uiport, remux_pcr, dec_type, cols);
 		
-		Assert.assertEquals(((BroadcasterUdpOutputCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, port, stream, streamname, host, id, rtp, fec, smoothing,
-		ttl, remux_bitrate, df, local_port, dec_key, type, rows, remux_buff, local_ip, remux_restampdts, uiport, remux_pcr, dec_type, cols), "Output " + id + " added.");
+		Assert.assertEquals(driverReslut.getResult(), "Output " + id + " added.");
 		
 		// Checking if broadcaster has crashed while test execution.
 		String postTestPid = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");

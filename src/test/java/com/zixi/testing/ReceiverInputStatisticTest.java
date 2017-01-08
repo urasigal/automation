@@ -9,30 +9,19 @@ import com.zixi.drivers.drivers.ReceiverInputStatisticDriver;
 public class ReceiverInputStatisticTest extends BaseTest {
 	
 	@BeforeClass
-	public void testInit() {
+	public void testInit() { testDriver = new ReceiverInputStatisticDriver(); }
 
-		testDriver = new ReceiverInputStatisticDriver();
-	}
-
-	@Parameters({ "userName", "userPassword", "login_ip", "uiport", "id",
-			"testduration" ,"testid"})
+	@Parameters({ "userName", "userPassword", "login_ip", "uiport", "id", "testduration" ,"testid"})
 	@Test
-	public void receiverInputStatistic(String userName, String userPassword,
-			String login_ip, String uiport, String id, String testduration,
-			String testid) throws Exception {
-		this.testid = testid;
+	public void receiverInputStatistic(String userName, String userPassword, String login_ip, String uiport, String id, String testduration, String testid) throws Exception {
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id",
-				"testduration" ,"testid" }, 
+		testParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id", "testduration" ,"testid" }, 
 				
-				new String[] {userName, userPassword, login_ip, uiport, id,
-				testduration ,testid });
+		new String[] {userName, userPassword, login_ip, uiport, id, testduration ,testid });
 		
+		driverReslut = ((ReceiverInputStatisticDriver) testDriver) .testIMPL(userName, userPassword, login_ip, uiport, id, testduration);
 		
-		String streamForDeletion = ((ReceiverInputStatisticDriver) testDriver)
-				.testIMPL(userName, userPassword, login_ip, uiport, id,
-						testduration);
-		Assert.assertEquals(streamForDeletion, "tested");
+		Assert.assertEquals(driverReslut.getResult(), "tested");
 	}
 
 }

@@ -22,6 +22,8 @@ public class FFMPEGImageStatisticNegativeTest extends BaseTest{
 		
 		testParameters = buildTestParametersString(new String[] { "testid" }, new String[] { testid });
 		
-		Assert.assertEquals(((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(true), "good");
+		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(true).getResultObj();
+		
+		Assert.assertEquals(driverReslut.getResult(), "good");
 	}
 }

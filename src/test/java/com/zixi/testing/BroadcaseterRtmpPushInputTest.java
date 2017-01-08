@@ -9,10 +9,7 @@ import com.zixi.drivers.drivers.TestDriver;
 public class BroadcaseterRtmpPushInputTest extends BaseTest{
 	
 	@BeforeClass
-	public void testInit() 
-	{	
-		testDriver = new BroadcasterRtmpInCreationDriver();
-	}
+	public void testInit() {	testDriver = new BroadcasterRtmpInCreationDriver(); }
 
 	@Parameters({ "userName","userPass","login_ip" ,"testid"})
 	@Test

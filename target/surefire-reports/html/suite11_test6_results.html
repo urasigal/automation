@@ -12,7 +12,7 @@
 <body>
 <h1>Broadcaster - RTMP Push input stream statistics test</h1>
 <p>
-  Test duration: 145.561s
+  Test duration: 10.754s
 </p>
 
 
@@ -28,7 +28,7 @@
                   broadcasterSingleInputStreamStatisticAnilyzer
       </td>
   <td class="duration">
-    145.490s
+    10.716s
   </td>
   <td class="result">
         
@@ -43,21 +43,17 @@
                                 uiport: 4444<br />
                                 id: udpin<br />
                                 testduration: 120<br />
-                                Max bitrate is 1065704<br />
-                                Min bitrete is 821000<br />
-                                Average bitrate is 967513<br />
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [statistics parameters are correct] but found [good]</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.json.JSONException: JSONObject[&quot;net&quot;] not found.</b></a><br />
     <div class="stackTrace" id="exception-0">
-              org.testng.Assert.fail(Assert.java:94)<br />
-              org.testng.Assert.failNotEquals(Assert.java:496)<br />
-              org.testng.Assert.assertEquals(Assert.java:125)<br />
-              org.testng.Assert.assertEquals(Assert.java:178)<br />
-              org.testng.Assert.assertEquals(Assert.java:188)<br />
-              com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:32)<br />
-              sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)<br />
+              org.json.JSONObject.get(JSONObject.java:476)<br />
+              org.json.JSONObject.getJSONObject(JSONObject.java:576)<br />
+              com.zixi.tools.StreamStatisticAnalyzer.getStatBitrate(StreamStatisticAnalyzer.java:11)<br />
+              com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver.testStatistic(BroadcasterInputStatisticSingleStreamDriver.java:61)<br />
+              com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:33)<br />
+              sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
               java.lang.reflect.Method.invoke(Unknown Source)<br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />

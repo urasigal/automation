@@ -34,8 +34,10 @@ public class BroadcasterConfigMulticastPoolTest extends BaseTest{
 		new String[] {login_ip, userName, userPassword, uiport, multicast_pool_enabled, multicast_pool_address, multicast_pool_mask, multicast_pool_fec_overhead,
 		multicast_pool_port, multicast_pool_ttl, multicast_pool_nic, multicast_pool_tos, testid});
 		
-		Assert.assertEquals(((BroadcasterConfigMulticastPoolDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport, multicast_pool_enabled,
-		multicast_pool_address, multicast_pool_mask, multicast_pool_fec_overhead, multicast_pool_port, multicast_pool_ttl, multicast_pool_nic, multicast_pool_tos), "GOOD");
+		driverReslut = ((BroadcasterConfigMulticastPoolDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport, multicast_pool_enabled,
+		multicast_pool_address, multicast_pool_mask, multicast_pool_fec_overhead, multicast_pool_port, multicast_pool_ttl, multicast_pool_nic, multicast_pool_tos); 
+		
+		Assert.assertEquals(driverReslut.getResult(), "GOOD");
 		// Checking if broadcaster has crashes while execution of the test.
 	}
 

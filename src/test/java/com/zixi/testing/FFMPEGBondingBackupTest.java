@@ -23,7 +23,9 @@ public class FFMPEGBondingBackupTest extends BaseTest{
 		
 		testParameters = buildTestParametersString(new String[] { "testid" }, new String[] {"testid" });
 		
-		Assert.assertEquals(((FFMPEGImageStatisticTestDriver) testDriver).backUpBondedPartialLimitation(), "good");
+		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).backUpBondedPartialLimitation();
+		
+		Assert.assertEquals(driverReslut.getResult(), "good");
 	}
 	
 	
@@ -37,6 +39,8 @@ public class FFMPEGBondingBackupTest extends BaseTest{
 		
 		testParameters = buildTestParametersString(new String[] { "testid" }, new String[] {"testid" }); // Fill out test parameters.
 		
-		Assert.assertEquals(((FFMPEGImageStatisticTestDriver) testDriver).backUpBondedFullLimitation(), "good");
+		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).backUpBondedFullLimitation();
+		
+		Assert.assertEquals(driverReslut.getResult(), "good");
 	}
 }

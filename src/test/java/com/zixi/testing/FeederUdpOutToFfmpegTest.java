@@ -7,33 +7,22 @@ import com.zixi.drivers.drivers.FeederUdpOutToFfmpegDriver;
 public class FeederUdpOutToFfmpegTest extends BaseTest{
 	
 	@BeforeClass
-	public void testInit() {
-		testDriver = new FeederUdpOutToFfmpegDriver();
-	}
+	public void testInit() { testDriver = new FeederUdpOutToFfmpegDriver(); }
 
-	@Parameters({ "userName", "userPass", "login_ip", "uiport", "name", "mip",
-			"port", "ip", "prog", "chan", "oh",
-			"op", "onic", "ottl", "osmooth" ,"testid"})
+	@Parameters({ "userName", "userPass", "login_ip", "uiport", "name", "mip","port", "ip", "prog", "chan", "oh", "op", "onic", "ottl", "osmooth" ,"testid"})
 	@Test
 	public void broadcasterSingleStreamRemoving(String userName, String userPass, String login_ip, String uiport, String name, String mip,
-			String port, String ip, String prog, String chan, String oh,
-			String op, String onic, String ottl, String osmooth,String testid) throws Exception {
-		this.testid = testid;
+	String port, String ip, String prog, String chan, String oh, String op, String onic, String ottl, String osmooth,String testid) throws Exception {
 		
-		testParameters = buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "name", "mip",
-				"port", "ip", "prog", "chan", "oh",
-				"op", "onic", "ottl", "osmooth" ,"testid"}, 
-				
-				new String[] { userName, userPass, login_ip, uiport, name, mip,
-				port, ip, prog, chan, oh,
-				op, onic, ottl, osmooth ,testid });
+		testParameters = buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "name", "mip", "port", "ip", "prog", "chan", "oh",
+		"op", "onic", "ottl", "osmooth" ,"testid"}, 
+		new String[] { userName, userPass, login_ip, uiport, name, mip, port, ip, prog, chan, oh, op, onic, ottl, osmooth ,testid });
 		
 		
-		Assert.assertEquals(
-				((FeederUdpOutToFfmpegDriver) testDriver).testIMPL(
-						 userName,  userPass,  login_ip,  uiport,  name,  mip,
-						 port,  ip,  prog,  chan,  oh,
-						 op,  onic,  ottl,  osmooth), "UDP output added.");
+		driverReslut = ((FeederUdpOutToFfmpegDriver) testDriver).testIMPL( userName,  userPass,  login_ip,  uiport,  name,  mip, port,  ip,  prog,  chan,  oh,
+		op,  onic,  ottl,  osmooth);
+		
+		Assert.assertEquals(driverReslut.getResult(), "UDP output added.");
 	}
 
 }

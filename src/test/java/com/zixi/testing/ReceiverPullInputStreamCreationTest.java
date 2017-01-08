@@ -9,41 +9,24 @@ import com.zixi.drivers.drivers.ReceiverPullInputStreamCreationDriver;
 public class ReceiverPullInputStreamCreationTest extends BaseTest{
 
 	@BeforeClass
-	public void testInit() {
+	public void testInit() { testDriver = new ReceiverPullInputStreamCreationDriver(); }
 
-		testDriver = new ReceiverPullInputStreamCreationDriver();
-	}
-
-	@Parameters({ "userName", "userPass", "login_ip", "uiport", "dec_key",
-			"dec_type", "fec_adaptive", "fec_aware", "fec_force",
-			"fec_latency", "fec_overhead", "host", "latency", "min_bit",
-			"name", "nic", "port", "session", "stream" ,"testid" })
+	@Parameters({ "userName", "userPass", "login_ip", "uiport", "dec_key", "dec_type", "fec_adaptive", "fec_aware", "fec_force","fec_latency", "fec_overhead", 
+	"host", "latency", "min_bit", "name", "nic", "port", "session", "stream" ,"testid" })
 	@Test
-	public void feederOutputToBxTest(String userName, String userPass,
-			String login_ip, String uiport, String dec_key, String dec_type,
-			String fec_adaptive, String fec_aware, String fec_force,
-			String fec_latency, String fec_overhead, String host,
-			String latency, String min_bit, String name, String nic,
-			String port, String session, String stream,String testid)
-			throws Exception {
+	public void feederOutputToBxTest(String userName, String userPass, String login_ip, String uiport, String dec_key, String dec_type,
+	String fec_adaptive, String fec_aware, String fec_force, String fec_latency, String fec_overhead, String host, String latency, String min_bit, String name, String nic,
+	String port, String session, String stream,String testid) throws Exception {
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "dec_key",
-				"dec_type", "fec_adaptive", "fec_aware", "fec_force",
-				"fec_latency", "fec_overhead", "host", "latency", "min_bit",
-				"name", "nic", "port", "session", "stream" ,"testid"}, 
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "dec_key", "dec_type", "fec_adaptive", "fec_aware", "fec_force",
+		"fec_latency", "fec_overhead", "host", "latency", "min_bit", "name", "nic", "port", "session", "stream" ,"testid"}, 
 				
-				new String[] { userName, userPass, login_ip, uiport, dec_key,
-				dec_type, fec_adaptive, fec_aware, fec_force,
-				fec_latency, fec_overhead, host, latency, min_bit,
-				name, nic, port, session, stream ,testid});
+		new String[] { userName, userPass, login_ip, uiport, dec_key, dec_type, fec_adaptive, fec_aware, fec_force, fec_latency, fec_overhead, host, latency, min_bit,
+		name, nic, port, session, stream ,testid});
 		
+		driverReslut = ((ReceiverPullInputStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, dec_key, dec_type, fec_adaptive, fec_aware,
+		fec_force, fec_latency, fec_overhead, host, latency, min_bit, name, nic, port, session, stream);
 		
-		Assert.assertEquals(
-				((ReceiverPullInputStreamCreationDriver) testDriver).testIMPL(
-						userName, userPass, login_ip, uiport, dec_key,
-						dec_type, fec_adaptive, fec_aware, fec_force,
-						fec_latency, fec_overhead, host, latency, min_bit,
-						name, nic, port, session, stream),
-				"Stream 'pull: " +host+ ":"+ port+ "/"+ stream + "' added.");
+		Assert.assertEquals(driverReslut.getResult(), "Stream 'pull: " +host+ ":"+ port+ "/"+ stream + "' added.");
 	}
 }

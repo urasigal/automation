@@ -26,19 +26,16 @@ public class BroadcasterPushInStreamCreationWithHighPriorityTest extends BaseTes
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "latency", "time_shift",
-		"force_p2p", "mcast_ip", "mcast_force", "mcast_port", "type",
-		"uiport", "analyze", "mcast_ttl", "id", "mcast_out", "complete",
-		"max_outputs", "on", "password", "priority_ids" ,"testid"}, 
+		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "latency", "time_shift", "force_p2p", "mcast_ip", "mcast_force", 
+		"mcast_port", "type", "uiport", "analyze", "mcast_ttl", "id", "mcast_out", "complete", "max_outputs", "on", "password", "priority_ids" ,"testid"}, 
 		
-		new String[] {userName, userPass, login_ip, latency, time_shift,
-		force_p2p, mcast_ip, mcast_force, mcast_port, type,
-		uiport, analyze, mcast_ttl, id, mcast_out, complete,
-		max_outputs, on, password, priority_ids ,testid });
+		new String[] {userName, userPass, login_ip, latency, time_shift, force_p2p, mcast_ip, mcast_force, mcast_port, type,
+		uiport, analyze, mcast_ttl, id, mcast_out, complete, max_outputs, on, password, priority_ids ,testid });
 		
-		
-		Assert.assertEquals(((BroadcasterPushInStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, latency, time_shift,
+		driverReslut = ((BroadcasterPushInStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, latency, time_shift,
 		force_p2p, mcast_ip, mcast_force, mcast_port, type, uiport, analyze, mcast_ttl, id, mcast_out, complete,
-		max_outputs, on, password, priority_ids), "Stream " + "'" + id + "'" + " added.");
+		max_outputs, on, password, priority_ids);
+		
+		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 	}
 }

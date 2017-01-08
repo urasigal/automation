@@ -4,20 +4,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
+import com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver;
 import com.zixi.drivers.drivers.FeederOutputPushToBxDriver;
+import com.zixi.drivers.tools.DriverReslut;
 
 public class FeederOutputPushToBxTest extends BaseTest{
 
 	@BeforeClass
-	public void testInit() {
-		testDriver = new FeederOutputPushToBxDriver();
-		//newTestDriver
-	}
+	public void testInit() { testDriver = new FeederOutputPushToBxDriver();}
 
 	@Parameters({ "userName", "userPass", "login_ip", "name", "mip", "port", "ip", "prog", "chan", "type", "ostr", "oses", "oetp", "oeky",
-		"obit", "olat", "ofc", "ocmp", "oold", "onfec", "fec_force", "fec_adaptive", "ofec", "ofecl", "stop_on_drop", "mmt",
-		"smoothing", "limited", "minbps", "lim_enc_addr", "pad_to_cbr", "rtmp_feedback", "ohst", "oprt", "onic", "oalt","bonded","uiport" ,"testid"})
+	"obit", "olat", "ofc", "ocmp", "oold", "onfec", "fec_force", "fec_adaptive", "ofec", "ofecl", "stop_on_drop", "mmt",
+	"smoothing", "limited", "minbps", "lim_enc_addr", "pad_to_cbr", "rtmp_feedback", "ohst", "oprt", "onic", "oalt","bonded","uiport" ,"testid"})
 	@Test
 	public void feederOutputToBxTest(String userName, String userPass, String login_ip, String name, String mip,
 		String port, String ip, String prog, String chan, String type, String ostr, String oses, String oetp, String oeky, String obit,
@@ -35,11 +35,13 @@ public class FeederOutputPushToBxTest extends BaseTest{
 		smoothing, limited, minbps, lim_enc_addr, pad_to_cbr, rtmp_feedback, ohst, oprt, onic, oalt,bonded,uiport ,testid });
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");
-		
-		Assert.assertEquals(((FeederOutputPushToBxDriver) testDriver).testIMPL(userName, userPass, login_ip, name, mip, port,
+
+		driverReslut = ((FeederOutputPushToBxDriver) testDriver).testIMPL(userName, userPass, login_ip, name, mip, port,
 		ip, prog, chan, type, ostr, oses, oetp, oeky, obit, olat, ofc, ocmp, oold, onfec, fec_force, fec_adaptive,
 		ofec, ofecl, stop_on_drop, mmt, smoothing, limited, minbps, lim_enc_addr, pad_to_cbr, rtmp_feedback, ohst,
-		oprt, onic, oalt,bonded, uiport),"Broadcaster output added.");
+		oprt, onic, oalt,bonded, uiport).getResultObj();
+		
+		Assert.assertEquals(driverReslut.getResult(), "Broadcaster output added.");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder"));
@@ -67,14 +69,11 @@ public class FeederOutputPushToBxTest extends BaseTest{
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");
 		
-		Assert.assertEquals(((FeederOutputPushToBxDriver) testDriver)
-		.testIMPL(userName, userPass, login_ip, name, mip, port,
-		ip, prog, chan, type, ostr, oses, oetp, oeky, obit,
-		olat, ofc, ocmp, oold, onfec, fec_force, fec_adaptive,
-		ofec, ofecl, stop_on_drop, mmt, smoothing, limited,
-		minbps, lim_enc_addr, pad_to_cbr, rtmp_feedback, ohst,
-		oprt, onic, oalt,bonded,rtmp_stream, rtmp_url, rtmp_user, 
-		rtmp_pass, rtmp_url2, rtmp_hot, uiport),"Broadcaster output added.");
+		driverReslut = ((FeederOutputPushToBxDriver) testDriver).testIMPL(userName, userPass, login_ip, name, mip, port, ip, prog, chan, type, ostr, oses, oetp, oeky, obit,
+		olat, ofc, ocmp, oold, onfec, fec_force, fec_adaptive, ofec, ofecl, stop_on_drop, mmt, smoothing, limited, minbps, lim_enc_addr, pad_to_cbr, rtmp_feedback, ohst,
+		oprt, onic, oalt,bonded,rtmp_stream, rtmp_url, rtmp_user, rtmp_pass, rtmp_url2, rtmp_hot, uiport).getResultObj();
+		
+		Assert.assertEquals(driverReslut.getResult(),"Broadcaster output added.");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder"));
@@ -102,16 +101,18 @@ public class FeederOutputPushToBxTest extends BaseTest{
 		"oeky","obit", "olat", "ofc", "ocmp", "oold", "onfec", "fec_force","fec_adaptive", "ofec", "ofecl", "stop_on_drop", "mmt",
 		"smoothing", "limited", "minbps", "lim_enc_addr", "pad_to_cbr","rtmp_feedback", "group", "bonded", "bond_host1",
 		"bond_port1", "bond_nic1", "bond_limit1", "bond_backup1", "bond_host2", "bond_port2", "bond_nic2", "bond_limit2", "bond_backup2" ,"uiport" ,"testid"}, 
+		
 		new String[] { userName, userPass, login_ip, name, mip, port, ip, prog, chan, type, ostr, oses, oetp, 
 		oeky, obit, olat, ofc, ocmp, oold, onfec, fec_force, fec_adaptive, ofec, ofecl, stop_on_drop, mmt,
 		smoothing, limited, minbps, lim_enc_addr, pad_to_cbr,rtmp_feedback, group, bonded, bond_host1,
 		bond_port1, bond_nic1, bond_limit1, bond_backup1, bond_host2, bond_port2, bond_nic2, bond_limit2, bond_backup2, uiport, testid});
 		
-		Assert.assertEquals(((FeederOutputPushToBxDriver) testDriver)
-		.testIMPL( userName,  userPass,  login_ip, name,  mip,  port,  ip,  prog,  chan,  type,  ostr,  oses,  oetp,
-		 oeky,  obit,  olat,  ofc,  ocmp,  oold,  onfec,  fec_force,  fec_adaptive,ofec,  ofecl,  stop_on_drop,  mmt,  smoothing,  limited,  minbps,
-		 lim_enc_addr,  pad_to_cbr,  rtmp_feedback, group,  bonded,  bond_host1,  bond_port1,  bond_nic1,  bond_limit1,  bond_backup1, 
-		 bond_host2,  bond_port2,  bond_nic2,  bond_limit2,  bond_backup2 , uiport),"Broadcaster output added.");
+		driverReslut = ( (FeederOutputPushToBxDriver) testDriver).testIMPL( userName,  userPass,  login_ip, name,  mip,  port, 
+		ip,  prog,  chan,  type,  ostr,  oses,  oetp, oeky,  obit,  olat,  ofc,  ocmp,  oold,  onfec,  fec_force,  fec_adaptive,ofec,  ofecl,  stop_on_drop, 
+		mmt,  smoothing,  limited,  minbps, lim_enc_addr,  pad_to_cbr,  rtmp_feedback, group,  bonded,  bond_host1,  bond_port1,  bond_nic1,  bond_limit1,  bond_backup1, 
+		bond_host2,  bond_port2,  bond_nic2,  bond_limit2,  bond_backup2 , uiport);
+		
+		Assert.assertEquals(driverReslut.getResult(),"Broadcaster output added.");
 
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder"));
@@ -148,13 +149,14 @@ public class FeederOutputPushToBxTest extends BaseTest{
 		bond_port1, bond_nic1, bond_limit1, bond_backup1, bond_host2, bond_port2, bond_nic2, bond_limit2, bond_backup2,  bond_host3,  bond_port3, 
 		bond_nic3,  bond_limit3,  bond_backup3, uiport, testid});
 		
-		Assert.assertEquals(((FeederOutputPushToBxDriver) testDriver)
-		.testIMPL( userName,  userPass,  login_ip, name,  mip,  port,  ip,  prog,  chan,  type,  ostr,  oses,  oetp,
+		driverReslut = ((FeederOutputPushToBxDriver) testDriver).testIMPL( userName,  userPass,  login_ip, name,  mip,  port,  ip,  prog,  chan,  type,  ostr,  oses,  oetp,
 		oeky,  obit,  olat,  ofc,  ocmp,  oold,  onfec,  fec_force,  fec_adaptive,ofec,  ofecl,  stop_on_drop,  mmt,  smoothing,  limited,  minbps,
 		lim_enc_addr,  pad_to_cbr,  rtmp_feedback, group,  bonded,  bond_host1,  bond_port1,  bond_nic1,  bond_limit1,  bond_backup1, 
 		bond_host2,  bond_port2,  bond_nic2,  bond_limit2,  bond_backup2, bond_host3,  bond_port3, 
-		bond_nic3,  bond_limit3,  bond_backup3, uiport),"Broadcaster output added.");
-
+		bond_nic3,  bond_limit3,  bond_backup3, uiport);
+		
+		Assert.assertEquals(driverReslut.getResult(),"Broadcaster output added.");
+		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder"));
 	}

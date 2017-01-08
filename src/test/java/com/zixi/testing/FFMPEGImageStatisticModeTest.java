@@ -10,11 +10,7 @@ public class FFMPEGImageStatisticModeTest extends BaseTest{
 
 	
 	@BeforeClass
-	public void testInit() {
-
-		// This is a test driver.
-		testDriver = new FFMPEGImageStatisticTestDriver();
-	}
+	public void testInit() {testDriver = new FFMPEGImageStatisticTestDriver(); }
 
 	// The goal of the test is to measure a quality of a Zixi delivered video by using FFMPEG.
 	// The quality is estimated by a number of a stream probing (FFMPEG) and then getting a ratio between a successful probing to failed attempts.
@@ -22,11 +18,10 @@ public class FFMPEGImageStatisticModeTest extends BaseTest{
 	@Test
 	public void broadcasterSingleInputStreamStatisticAnilyzer(String mode, String testid) throws InterruptedException {
 		
-		testParameters = buildTestParametersString(new String[] { "mode", "testid" }, 
-				
-				new String[] { mode, testid});
+		testParameters = buildTestParametersString(new String[] { "mode", "testid" }, new String[] { mode, testid});
 		
+		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(mode);
 		
-		Assert.assertEquals(((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(mode), "good");
+		Assert.assertEquals(driverReslut.getResult(), "good");
 	}
 }

@@ -28,9 +28,11 @@ public class BroadcasterPushInStreamCreationTest extends BaseTest {
 		new String[] {userName, userPass, login_ip, latency, time_shift, force_p2p, mcast_ip, mcast_force, mcast_port, type,
 		uiport, analyze, mcast_ttl, id, mcast_out, complete, max_outputs, on, password ,testid });
 		
-		Assert.assertEquals( ((BroadcasterPushInStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, latency, time_shift,
-		force_p2p, mcast_ip, mcast_force, mcast_port, type, uiport, analyze, mcast_ttl, id, mcast_out, complete, max_outputs, on, password), 
-		"Stream " + "'" + id + "'" + " added.");
+		driverReslut = ((BroadcasterPushInStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, latency, time_shift,
+		force_p2p, mcast_ip, mcast_force, mcast_port, type, uiport, analyze, mcast_ttl, id, mcast_out, complete, max_outputs, on, password);
+		
+		Assert.assertEquals( driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
+		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

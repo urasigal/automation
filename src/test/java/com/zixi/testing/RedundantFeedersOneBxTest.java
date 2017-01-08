@@ -27,31 +27,13 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		sshJcraftClient = new SshJcraftClient();
 	}
 
-	@Parameters({ 
-		"udp_port_server", // needed for UDP server, UDP server will be listen to this port. 
-		
-		"bx_stream_id",
-		"middle_bx_login_ip", 
-		"middle_bx_uiport", 
-		"middle_bx_userName", 
-		"middle_bx_userPass",
-		
-		"sshUser", 
-		"sshPassword", 
-		"sshPort", 
-		"command",
-		
-		"testid"
-		})
+	@Parameters({ "udp_port_server", // needed for UDP server, UDP server will be listen to this port. 
+	"bx_stream_id", "middle_bx_login_ip", "middle_bx_uiport", "middle_bx_userName", "middle_bx_userPass", "sshUser", "sshPassword", "sshPort",  "command","testid"})
 	@Test
-	public void redundancyFxFxBx(String udp_port, String bx_stream_id, String middle_bx_login_ip, 
-			String middle_bx_uiport, String middle_bx_userName, 
-			String middle_bx_userPass, String sshUser, String sshPassword, String sshPort, 
-			String command, String testid) throws Exception 
+	public void redundancyFxFxBx(String udp_port, String bx_stream_id, String middle_bx_login_ip, String middle_bx_uiport, String middle_bx_userName, 
+	String middle_bx_userPass, String sshUser, String sshPassword, String sshPort, String command, String testid) throws Exception 
 	{	
-		
-		String sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
-		middle_bx_userName, middle_bx_userPass);
+		String sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, middle_bx_userName, middle_bx_userPass);
 		
 		sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, command);
 		((RedundantFeederOneBxDriver)redundantFeederOneBxDriver).testIMPL(Integer.parseInt(udp_port));
@@ -64,8 +46,7 @@ public class RedundantFeedersOneBxTest extends BaseTest {
 		{
 			ExternalRunnerThread externalRunnerThread = new ExternalRunnerThread(((RedundantFeederOneBxDriver)redundantFeederOneBxDriver), udp_port);
 			
-			sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, 
-					middle_bx_userName, middle_bx_userPass);
+			sshLoginIp = ((InputStreamDetailsDriver)testDriver).findSourceIpOfInputStream(bx_stream_id , middle_bx_login_ip, middle_bx_uiport, middle_bx_userName, middle_bx_userPass);
 			externalRunnerThread.start();
 			sshJcraftClient.performCommand(sshUser, sshPassword, sshLoginIp, sshPort, command);
 			//((RedundantFeederOneBxDriver)redundantFeederOneBxDriver).testIMPL(Integer.parseInt(udp_port));

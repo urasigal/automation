@@ -24,6 +24,8 @@ public class FFMPEGImageStatisticTest extends BaseTest{
 		testParameters = buildTestParametersString(new String[] { "testid" }, 
 		new String[] {"testid" });
 		
-		Assert.assertEquals(((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(), "good");
+		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).testStatistic().getResultObj();
+		
+		Assert.assertEquals(driverReslut.getResult(), "good");
 	}
 }

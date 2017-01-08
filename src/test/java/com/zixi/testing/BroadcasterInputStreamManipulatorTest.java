@@ -12,9 +12,7 @@ public class BroadcasterInputStreamManipulatorTest extends BaseTest{
 	
 	@BeforeClass
 	public void testInit() 
-	{	
-		testDriver = new BroadcasterInputStreamManipulatorDriver();
-	}
+	{	testDriver = new BroadcasterInputStreamManipulatorDriver(); }
 
 	@Parameters({ "userName","userPass","login_ip", "uiport", "streamId", "onOff", "streamType", "testid"})
 	@Test
@@ -29,8 +27,10 @@ public class BroadcasterInputStreamManipulatorTest extends BaseTest{
 		
 		new String[] { userName, userPass, login_ip, uiport, streamId, onOff, streamType, testid });
 		
-		Assert.assertEquals(((BroadcasterInputStreamManipulatorDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport,
-		streamId, onOff, streamType),"Applied new configuration to " + streamId);
+		driverReslut = ((BroadcasterInputStreamManipulatorDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport,
+		streamId, onOff, streamType);
+		
+		Assert.assertEquals(driverReslut.getResult(),"Applied new configuration to " + streamId);
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster"));
 	}
