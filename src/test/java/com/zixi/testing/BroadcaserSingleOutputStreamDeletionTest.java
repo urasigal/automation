@@ -20,9 +20,6 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 	@Test
 	public void broadcasterSingleStreamRemoving(String login_ip,String userName,String userPassword,String id, String uiport, String testid) throws Exception 
 	{
-		//Print this class name to the log file.
-		getLoggerInstance().info(getClass().getName());
-		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.

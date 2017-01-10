@@ -11,13 +11,12 @@ import com.zixi.drivers.drivers.BroadcasterInputStreamManipulatorDriver;
 public class BroadcasterInputStreamManipulatorTest extends BaseTest{
 	
 	@BeforeClass
-	public void testInit() 
-	{	testDriver = new BroadcasterInputStreamManipulatorDriver(); }
+	public void testInit() {testDriver = new BroadcasterInputStreamManipulatorDriver(); }
 
 	@Parameters({ "userName","userPass","login_ip", "uiport", "streamId", "onOff", "streamType", "testid"})
 	@Test
-	public void broadcasterStopStartInputStream(String userName, String userPass, String login_ip, String uiport,
-	String streamId, String onOff, String streamType, String testid) throws Exception {
+	public void broadcasterStopStartInputStream(String userName, String userPass, String login_ip, String uiport, String streamId, String onOff, String streamType, String testid)
+	throws Exception {
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		

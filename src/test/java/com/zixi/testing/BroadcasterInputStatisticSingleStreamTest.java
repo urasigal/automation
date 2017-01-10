@@ -32,7 +32,7 @@ public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
 		driverReslut = ((com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver) testDriver).testStatistic(userName, userPass, Host, login_ip, uiport, id, testduration);
 		
 		// Perform the statistic test.
-		Assert.assertEquals(driverReslut.getResult(), "good");
+		Assert.assertEquals(driverReslut.getResult(), "statistic was accepted");
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

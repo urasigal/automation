@@ -15,13 +15,11 @@ import com.zixi.testing.BaseTest;
 public class BroadcasterRundomInputStreamTest extends BaseTest
 {
 	@BeforeClass
-	public void testInit() { testDriver = new BroadcasterRundomInputStreamDriver(testFlowDescriptor);
-	}
+	public void testInit() { testDriver = new BroadcasterRundomInputStreamDriver(testFlowDescriptor); }
 	
 	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "name", "testid" })
 	@Test
 	public void broadcasterSwitchUdpOut(String login_ip, String userName, String userPassword, String uiport, String name, String testid) throws Exception {
-		
 		
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
@@ -34,7 +32,9 @@ public class BroadcasterRundomInputStreamTest extends BaseTest
 		
 		testFlowDescriptor.append(" Beginning of the test (BroadcasterRundomInputStreamDriver) ");
 		
-		Assert.assertEquals(((BroadcasterRundomInputStreamDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport, name), "good");
+		driverReslut = ((BroadcasterRundomInputStreamDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport, name);
+		
+		Assert.assertEquals(driverReslut.getResult(), "good");
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

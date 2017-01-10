@@ -13,9 +13,7 @@ public class BroadcasterMultipePullCreationTest extends BaseTest
 {
 	// The method will be run before the first test's method invocation in the current class.
 	@BeforeClass
-	public void testInit() {
-		testDriver = new BroadcasterMultipleCreationDriver(testFlowDescriptor);
-	}
+	public void testInit() { testDriver = new BroadcasterMultipleCreationDriver(testFlowDescriptor);}
 	
 	@Parameters({ "userName", "userPass", "Host", "login_ip", "id", "source", "uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
 	"mcast_force", "time_shift", "nic", "max_outputs", "type","password", "mcast_port", "complete", "mcast_ip", "fec_adaptive",
@@ -43,10 +41,12 @@ public class BroadcasterMultipePullCreationTest extends BaseTest
 		mcast_force, time_shift, nic, max_outputs, type, password, mcast_port, complete, mcast_ip, fec_adaptive,
 		mcast_ttl, on, func, fec_force, mcast_out, propertiesFile, dec_type, dec_key, number_of_streams, testid });
 		
-		// The actual test method.
-		Assert.assertEquals(((BroadcasterMultipleCreationDriver) testDriver).testIMPL(userName, userPass, Host, login_ip, id,
+		driverReslut = ((BroadcasterMultipleCreationDriver) testDriver).testIMPL(userName, userPass, Host, login_ip, id,
 		source, uiport, pull_port, latency, fec_latency, fec_overhead, mcast_force, time_shift, nic, max_outputs, type, password,
-		mcast_port, complete, mcast_ip, fec_adaptive, mcast_ttl, on, func, fec_force, mcast_out, propertiesFile, dec_type, dec_key, number_of_streams), "pass");
+		mcast_port, complete, mcast_ip, fec_adaptive, mcast_ttl, on, func, fec_force, mcast_out, propertiesFile, dec_type, dec_key, number_of_streams);
+		
+		// The actual test method.
+		Assert.assertEquals(driverReslut.getResult(), "pass");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));

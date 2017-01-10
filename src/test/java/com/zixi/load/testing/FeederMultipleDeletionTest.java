@@ -24,8 +24,7 @@ public class FeederMultipleDeletionTest  extends BaseTest{
 	// This test will create a number of bonded output streams from feeder to broadcaster.
 	@Test
 	public void broadcasterMultiplePullInCreation(String userName_feeder, String userPass_feeder, String login_ip_feeder, String uiport, 
-			String mip, String port, String ip, String prog, String chan, String type) throws Exception {
-		
+	String mip, String port, String ip, String prog, String chan, String type) throws Exception {
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip_feeder, uiport, userName_feeder, userPass_feeder);
 		
@@ -37,9 +36,10 @@ public class FeederMultipleDeletionTest  extends BaseTest{
 				
 		 new String[] { userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type });
 		
+		driverReslut = ((FeederMultipleDeletionDriver) testDriver).testIMPL(userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type);
+		
 		// Actual test method.
-		Assert.assertEquals(((FeederMultipleDeletionDriver) testDriver).
-		testIMPL(userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type), "pass");
+		Assert.assertEquals(driverReslut.getResult(), "pass");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		// This is special case because of here a two broadcaster are involved.

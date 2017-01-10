@@ -10,9 +10,7 @@ import com.zixi.drivers.drivers.BroadcasterCreateAddaptiveGroupDriver;
 public class BroadcasterCreateAddaptiveGroupTest extends BaseTest {
 
 	@BeforeClass
-	public void testInit() {
-		testDriver = new BroadcasterCreateAddaptiveGroupDriver();
-	}
+	public void testInit() { testDriver = new BroadcasterCreateAddaptiveGroupDriver(); }
 
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "name", "record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi",
 	"multicast", "streams", "bitrates", "max_time", "testid" })

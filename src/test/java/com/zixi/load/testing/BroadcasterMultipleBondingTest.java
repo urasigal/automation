@@ -25,15 +25,14 @@ public class BroadcasterMultipleBondingTest extends BaseTest{
 	"fec_block", "fec_adaptive", "mmt", "fec_aware", "stats_hist", "userName_dst", "userPass_dst", "login_ip_dst", "latency_dst", "time_shift", "force_p2p",
 	"mcast_ip", "mcast_force", "mcast_port", "type_dst", "uiport_dst", "analyze", "mcast_ttl", "id", "mcast_out", "complete", "max_outputs", "on",
 	"password", "dec_type", "dec_key", "number_of_streams", "testid" })
-	
 	// This test will create a number of bonded output streams from feeder to broadcaster.
 	@Test
 	public void broadcasterMultiplePushBondedTest(String userName_src, String userPass_src, String login_ip_src, String uiport_src, 
-			String type_src, String name, String stream, String matrix, String alias, String session, String link_a, String link_b, String bond_links,
-			String latency_src, String fec_force, String fec_overhead,String fec_block, String fec_adaptive, String mmt, String fec_aware, String stats_hist, 
-			String userName_dst, String userPass_dst, String login_ip_dst, String latency_dst, String time_shift, String force_p2p, String mcast_ip, String mcast_force,
-			String mcast_port, String type_dst, String uiport_dst, String analyze, String mcast_ttl, String id, String mcast_out, String complete,
-			String max_outputs, String  on, String password, String dec_type, String dec_key, String number_of_streams, String testid) throws Exception {
+	String type_src, String name, String stream, String matrix, String alias, String session, String link_a, String link_b, String bond_links,
+	String latency_src, String fec_force, String fec_overhead,String fec_block, String fec_adaptive, String mmt, String fec_aware, String stats_hist, 
+	String userName_dst, String userPass_dst, String login_ip_dst, String latency_dst, String time_shift, String force_p2p, String mcast_ip, String mcast_force,
+	String mcast_port, String type_dst, String uiport_dst, String analyze, String mcast_ttl, String id, String mcast_out, String complete,
+	String max_outputs, String  on, String password, String dec_type, String dec_key, String number_of_streams, String testid) throws Exception {
 		
 		testFlowDescriptor.append("\n Start the test BroadcasterMultipleBondingTest.broadcasterMultiplePushBondedTest");
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip_src, uiport_src, userName_src, userPass_src);
@@ -53,12 +52,14 @@ public class BroadcasterMultipleBondingTest extends BaseTest{
 		 userName_dst, userPass_dst, login_ip_dst, latency_dst,  time_shift, force_p2p,  mcast_ip, mcast_force,mcast_port, type_dst, uiport_dst, analyze, mcast_ttl, id,
 		 mcast_out, complete, max_outputs,  on, password, dec_type, dec_key, number_of_streams, testid });
 		
-		// Actual test method.
-		Assert.assertEquals(((BroadcasterMultipleBondingDriver) testDriver).testIMPL
+		driverReslut = ((BroadcasterMultipleBondingDriver) testDriver).testIMPL
 		( userName_src,  userPass_src,  login_ip_src,  uiport_src, type_src,  name,  stream,  matrix, alias,  session, link_a, link_b, bond_links,
 		 latency_src, fec_force, fec_overhead, fec_block, fec_adaptive,  mmt, fec_aware, stats_hist, userName_dst, userPass_dst, login_ip_dst,  
 		 latency_dst, time_shift, force_p2p, mcast_ip, mcast_force,mcast_port, type_dst, uiport_dst, analyze, mcast_ttl, id, mcast_out, complete, 
-		 max_outputs, on, password, dec_type, dec_key, number_of_streams), "pass");
+		 max_outputs, on, password, dec_type, dec_key, number_of_streams);
+		
+		// Actual test method.
+		Assert.assertEquals(driverReslut.getResult(), "pass");
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		// This is special case because of here a two broadcaster are involved.
