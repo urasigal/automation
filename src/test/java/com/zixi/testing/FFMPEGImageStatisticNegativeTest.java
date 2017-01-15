@@ -9,10 +9,7 @@ import com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver;
 public class FFMPEGImageStatisticNegativeTest extends BaseTest{
 	
 	@BeforeClass
-	public void testInit() {
-		// This is a test driver.
-		testDriver = new FFMPEGImageStatisticTestDriver();
-	}
+	public void testInit() { testDriver = new FFMPEGImageStatisticTestDriver(); }
 
 	// The goal of the test is to measure a quality of a Zixi delivered video by using FFMPEG.
 	// The quality is estimated by a number of a stream probing (FFMPEG) and then getting a ratio between a successful probing to failed attempts.
@@ -24,6 +21,6 @@ public class FFMPEGImageStatisticNegativeTest extends BaseTest{
 		
 		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(true).getResultObj();
 		
-		Assert.assertEquals(driverReslut.getResult(), "good");
+		Assert.assertEquals(driverReslut.getResult(), "The number of sucessful attempts was 0");
 	}
 }
