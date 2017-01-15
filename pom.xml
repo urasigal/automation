@@ -109,6 +109,10 @@
 						
 						<suiteXmlFile>src/test/resources/encryption/ffmpeg_full_path_encrypt.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/encryption/ffmpeg_full_encryption_with_fec.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/udp/broadcaster_udp_encryption_reciver_decryption.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/encryption/ffmpeg_semi_path_encrypt.xml</suiteXmlFile>
+						
+						
 						
 						<suiteXmlFile>src/test/resources/feeder/feederredundency.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/feeder/feeder_to_broadcaser_remote_rtmp_output.xml</suiteXmlFile>
@@ -129,6 +133,7 @@
 						<suiteXmlFile>src/test/resources/udp/udp.xml</suiteXmlFile>
 						
 						<suiteXmlFile>src/test/resources/redundancy/broadcaster_alternative_host_delete_scn.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/redundancy/broadcaster_alternative_host_stop_scn.xml</suiteXmlFile>
 						
 					</suiteXmlFiles>
 					<properties>

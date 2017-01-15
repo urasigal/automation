@@ -9,7 +9,7 @@
   <parameter name="userPass" value="1234"/>
   <parameter name="ft_proxy_https_port" value="4501"/>
   <parameter name="userName" value="admin"/>
-  <parameter name="login_ip" value="10.7.0.63"/>
+  <parameter name="login_ip" value="10.7.0.66"/>
   <parameter name="destinationServerPort" value="9999"/>
   <parameter name="ft_upload" value="1"/>
   <parameter name="max_upload_bitrate" value="50000"/>
@@ -21,28 +21,15 @@
   <parameter name="max_download_bitrate" value="50000"/>
   <parameter name="destinationServerIP" value="10.7.0.63"/>
   <parameter name="ft_proxy_http_port" value="4500"/>
-  <parameter name="testid" value="3925"/>
+  <parameter name="testid" value="3921"/>
   <parameter name="ft_encrypt" value="0"/>
   <parameter name="ft_download" value="1"/>
   <test name="Proxy - file upload test(failed)">
-    <parameter name="fiel_upload_mode" value="2"/>
+    <parameter name="fiel_upload_mode" value="1"/>
     <parameter name="destinationServerIP" value="10.7.0.63"/>
     <parameter name="testid" value="3921"/>
     <parameter name="destinationServerPort" value="9999"/>
     <classes>
-      <class name="com.zixi.testing.FileTransferTest">
-        <methods>
-          <include name="startTest"/>
-          <include name="startTest"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="testInit"/>
-          <include name="beforeTes"/>
-          <include name="fileTransfer" invocation-numbers="0"/>
-          <include name="afterTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.zixi.testing.FileTransferTest -->
       <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest">
         <methods>
           <include name="startTest"/>
@@ -51,6 +38,15 @@
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.zixi.testing.BxFileTransferAndVodSettingsTest -->
+      <class name="com.zixi.testing.FileTransferTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="fileTransfer" invocation-numbers="0"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.FileTransferTest -->
     </classes>
   </test> <!-- Proxy - file upload test(failed) -->
 </suite> <!-- Failed suite [File transfer suite through poxy] -->

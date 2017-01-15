@@ -25,7 +25,6 @@ public class BroadcasterCreateAddaptiveGroupTest extends BaseTest {
 		
 		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
 		"record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi", "multicast", "streams", "bitrates", "max_time", "testid" }, 
-		
 		new String[] { "userName", "userPass", "login_ip", "uiport", "name","record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi",
 		"multicast", "streams", "bitrates", "max_time", "testid" });
 

@@ -29,19 +29,10 @@
 	  <test name="Proxy - file upload test">
 		<parameter name="destinationServerIP" value="10.7.0.63" /> 
 		<parameter name="destinationServerPort" value="9999" />
-		<parameter name="fiel_upload_mode" value="2" />
+		<parameter name="fiel_upload_mode" value="1" />
 		<parameter name="testid" value="3921" />
 		<classes>
 		    <class name="com.zixi.testing.FileTransferTest"/>
 		</classes>
 	</test>
-    <test name="Proxy - file download test">
-		<parameter name="destinationServerIP" value="10.7.0.63" /> 
-		<parameter name="destinationServerPort" value="9999" />
-		<parameter name="fiel_upload_mode" value="1" />
-		<parameter name="testid" value="3925" />
-		<classes>
-		    <class name="com.zixi.testing.FileTransferTest"/>
-		</classes>
-    </test>
 </suite>

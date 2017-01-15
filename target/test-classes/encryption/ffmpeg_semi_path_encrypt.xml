@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser with encryption 128" verbose="5" data-provider-thread-count="1">
+<suite name="Semi path test Feeder then Broadcaster then FFMPEG analyser with encryption 128" verbose="5" data-provider-thread-count="1">
 	<test name="Feeder - push to broadcaster test - Encryption AES 128 FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -42,10 +42,11 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="7171" />   
 		<classes>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
-		     <methods>
-        		<include name="feederOutputToBxTest" />
-     		 </methods>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest">
+			     <methods>
+	        		<include name="feederOutputToBxTest" />
+	     		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Decrypt AES 128 FFMPEG analyser">

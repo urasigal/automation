@@ -7,14 +7,10 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver;
 
-
-
 public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
 
 	@BeforeClass
-	public void testInit() {
-		testDriver = new BroadcasterInputStatisticSingleStreamDriver();
-	}
+	public void testInit() { testDriver = new BroadcasterInputStatisticSingleStreamDriver(); }
 
 	@Parameters({ "userName", "userPass", "Host", "login_ip", "uiport", "id", "testduration" ,"testid"})
 	@Test
