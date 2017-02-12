@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
-<suite name="Broadcaster: adaptive simple maxvell test" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: adaptive group maxvell test" verbose="5" data-provider-thread-count="1">
 	<test name="Configure maxwell simulator">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" /> <!--The standard impairment server API is listening to this TCP port -->
