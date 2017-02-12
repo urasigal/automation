@@ -7,7 +7,7 @@
 		<parameter name="standart_impairment_server_api_port" value="7021" /> <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
 		<!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0 zerostats rate 5000000 8 12000 160 36000 0 0" />
+		<parameter name="impairment_control_setimpair" value="setimpair 0 0 zerostats rate 500000000 8 120000 1600 360000 0 0" />
 		<parameter name="testid" value="1129" />  
 		<classes>
 		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest"/>
