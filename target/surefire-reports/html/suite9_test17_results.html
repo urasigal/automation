@@ -12,40 +12,51 @@
 <body>
 <h1>FFMPEG test - aes128</h1>
 <p>
-  Test duration: 0.000s
+  Test duration: 42.010s
 </p>
 
-  <table class="resultsTable configTable">
-    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
-              <tr class="group">
-        <td colspan="3">com.zixi.testing.FFMPEGImageStatisticTest</td>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com.zixi.testing.FFMPEGImageStatisticTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  testInit
+                  broadcasterSingleInputStreamStatisticAnilyzer
       </td>
   <td class="duration">
-    0.000s
+    21.003s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">"7278"</span><br />
     
-        
+            <div class="testOutput">
+                        FFMPEG success measurement relation: 0 / 0<br />
+                  </div>
+    
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NoClassDefFoundError: com/zixi/drivers/drivers/FFMPEGImageStatisticTestDriver</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [good] but found [bad]</b></a><br />
     <div class="stackTrace" id="exception-0">
-              com.zixi.testing.FFMPEGImageStatisticTest.testInit(FFMPEGImageStatisticTest.java:15)<br />
+              org.testng.Assert.fail(Assert.java:94)<br />
+              org.testng.Assert.failNotEquals(Assert.java:496)<br />
+              org.testng.Assert.assertEquals(Assert.java:125)<br />
+              org.testng.Assert.assertEquals(Assert.java:178)<br />
+              org.testng.Assert.assertEquals(Assert.java:188)<br />
+              com.zixi.testing.FFMPEGImageStatisticTest.broadcasterSingleInputStreamStatisticAnilyzer(FFMPEGImageStatisticTest.java:29)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
-              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)<br />
-              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
-              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)<br />
-              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:659)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
               org.testng.TestRunner.privateRun(TestRunner.java:771)<br />
               org.testng.TestRunner.run(TestRunner.java:621)<br />
               org.testng.SuiteRunner.runTest(SuiteRunner.java:357)<br />
@@ -61,75 +72,16 @@
               org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)<br />
               org.apache.maven.surefire.Surefire.run(Surefire.java:180)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)<br />
               org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)<br />
                 </div>
       </td>
 </tr>
-    
-          <tr><td colspan="3">&nbsp;</td></tr>
-      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
-                    <tr>
-          <td colspan="3" class="group">com.zixi.testing.FFMPEGImageStatisticTest</td>
-        </tr>
-                
-<tr>
-  <td class="method">
-                  afterTest
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                         
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  beforeTes
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                         
-    
-        
-
-      </td>
-</tr>
-            </table>
-
-
-
-  <table class="resultsTable" width="100%">
-    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">com.zixi.testing.FFMPEGImageStatisticTest</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  broadcasterSingleInputStreamStatisticAnilyzer
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                         
-          <i>Method arguments: </i><span class="arguments">"7278"</span><br />
-    
-        
-
-      </td>
-</tr>
       </table>
+
 
   
 </body>

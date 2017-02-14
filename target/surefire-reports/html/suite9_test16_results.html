@@ -12,15 +12,13 @@
 <body>
 <h1>Broadcaster - UDP output stream creation - aes128</h1>
 <p>
-  Test duration: 0.567s
+  Test duration: 21.005s
 </p>
 
 
 
-
-
   <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
         <td colspan="3" class="group">com.zixi.testing.BroadcasterUDPOutputStreamCreationTest</td>
       </tr>
@@ -30,45 +28,56 @@
                   broadcasterPullInCreation
       </td>
   <td class="duration">
-    0.524s
+    21.004s
   </td>
   <td class="result">
         
           <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.66", "5555", "rtmp_out", "out_test", "10.7.0.150", "out_test", "0", "0", "0", "5", "0", "0", "", "", "TS", "10", "1000", "0.0.0.0", "0", "4444", "90", "", "10", "7276"</span><br />
     
-            <div class="testOutput">
-                        Test parameteres: <br />
-                                userName: admin<br />
-                                userPass: 1234<br />
-                                loin_ip: 10.7.0.66<br />
-                                port: 5555<br />
-                                stream: rtmp_out<br />
-                                streamname: out_test<br />
-                                host: 10.7.0.150<br />
-                                id: out_test<br />
-                                rtp: 0<br />
-                                fec: 0<br />
-                                smoothing: 0<br />
-                                ttl: 5<br />
-                                remux_bitrate: 0<br />
-                                df: 0<br />
-                                local_port: -- not provided <br />
-                                dec_key: -- not provided <br />
-                                type: TS<br />
-                                rows: 10<br />
-                                remux_buff: 1000<br />
-                                local_ip: 0.0.0.0<br />
-                                remux_restampdts: 0<br />
-                                uiport: 4444<br />
-                                remux_pcr: 90<br />
-                                dec_type: -- not provided <br />
-                                cols: 10<br />
-                  </div>
-    
+        
 
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              com.zixi.ssh.SshJcraftClient.callCommand(SshJcraftClient.java:86)<br />
+              com.zixi.ssh.SshJcraftClient.callCommand(SshJcraftClient.java:129)<br />
+              com.zixi.tools.BroadcasterLoggableApiWorker.getPid(BroadcasterLoggableApiWorker.java:37)<br />
+              com.zixi.testing.BroadcasterUDPOutputStreamCreationTest.broadcasterPullInCreation(BroadcasterUDPOutputStreamCreationTest.java:25)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:659)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:771)<br />
+              org.testng.TestRunner.run(TestRunner.java:621)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:357)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:259)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1124)<br />
+              org.testng.TestNG.run(TestNG.java:1032)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)<br />
+              org.apache.maven.surefire.Surefire.run(Surefire.java:180)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)<br />
+              org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)<br />
+                </div>
       </td>
 </tr>
       </table>
+
+
   
 </body>
 </html>

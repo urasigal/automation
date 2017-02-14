@@ -12,7 +12,7 @@
 <body>
 <h1>Broadcaster - UDP input stream statistics test</h1>
 <p>
-  Test duration: 10.771s
+  Test duration: 21.016s
 </p>
 
 
@@ -28,34 +28,23 @@
                   broadcasterSingleInputStreamStatisticAnilyzer
       </td>
   <td class="duration">
-    10.734s
+    21.015s
   </td>
   <td class="result">
         
           <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.63", "10.7.0.66", "4444", "udpin", "120", "513"</span><br />
     
-            <div class="testOutput">
-                        Test parameteres: <br />
-                                userName: admin<br />
-                                userPass: 1234<br />
-                                host: 10.7.0.63<br />
-                                loin_ip: 10.7.0.66<br />
-                                uiport: 4444<br />
-                                id: udpin<br />
-                                testduration: 120<br />
-                  </div>
-    
+        
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.json.JSONException: JSONObject[&quot;net&quot;] not found.</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
     <div class="stackTrace" id="exception-0">
-              org.json.JSONObject.get(JSONObject.java:476)<br />
-              org.json.JSONObject.getJSONObject(JSONObject.java:576)<br />
-              com.zixi.tools.StreamStatisticAnalyzer.getStatBitrate(StreamStatisticAnalyzer.java:11)<br />
-              com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver.testStatistic(BroadcasterInputStatisticSingleStreamDriver.java:61)<br />
-              com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:33)<br />
+              com.zixi.ssh.SshJcraftClient.callCommand(SshJcraftClient.java:86)<br />
+              com.zixi.ssh.SshJcraftClient.callCommand(SshJcraftClient.java:129)<br />
+              com.zixi.tools.BroadcasterLoggableApiWorker.getPid(BroadcasterLoggableApiWorker.java:37)<br />
+              com.zixi.testing.BroadcasterInputStatisticSingleStreamTest.broadcasterSingleInputStreamStatisticAnilyzer(BroadcasterInputStatisticSingleStreamTest.java:20)<br />
               sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
               org.testng.internal.Invoker.invokeMethod(Invoker.java:659)<br />
               org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)<br />
@@ -77,9 +66,9 @@
               org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)<br />
               org.apache.maven.surefire.Surefire.run(Surefire.java:180)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)<br />
               org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)<br />
                 </div>

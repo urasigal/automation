@@ -12,7 +12,7 @@
 <body>
 <h1>Broadcaster - Remove RTMP push output stream - aes192</h1>
 <p>
-  Test duration: 0.327s
+  Test duration: 21.006s
 </p>
 
 
@@ -28,33 +28,23 @@
                   broadcasterSingleStreamRemoving
       </td>
   <td class="duration">
-    0.294s
+    21.005s
   </td>
   <td class="result">
         
           <i>Method arguments: </i><span class="arguments">"10.7.0.63", "admin", "1234", "rtmpushout", "4444", "7309"</span><br />
     
-            <div class="testOutput">
-                        Test parameteres: <br />
-                                login_ip: 10.7.0.63<br />
-                                userName: admin<br />
-                                userPassword: 1234<br />
-                                name: rtmpushout<br />
-                                uiport: 4444<br />
-                  </div>
-    
+        
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [Output rtmpushout removed.] but found [{&quot;error&quot;:&quot;failed removing output null&quot;}]</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
     <div class="stackTrace" id="exception-0">
-              org.testng.Assert.fail(Assert.java:94)<br />
-              org.testng.Assert.failNotEquals(Assert.java:496)<br />
-              org.testng.Assert.assertEquals(Assert.java:125)<br />
-              org.testng.Assert.assertEquals(Assert.java:178)<br />
-              org.testng.Assert.assertEquals(Assert.java:188)<br />
-              com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(BroadcaserSingleOutputStreamDeletionTest.java:34)<br />
+              com.zixi.ssh.SshJcraftClient.callCommand(SshJcraftClient.java:86)<br />
+              com.zixi.ssh.SshJcraftClient.callCommand(SshJcraftClient.java:129)<br />
+              com.zixi.tools.BroadcasterLoggableApiWorker.getPid(BroadcasterLoggableApiWorker.java:37)<br />
+              com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(BroadcaserSingleOutputStreamDeletionTest.java:22)<br />
               sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
               org.testng.internal.Invoker.invokeMethod(Invoker.java:659)<br />
               org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)<br />
@@ -76,9 +66,9 @@
               org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)<br />
               org.apache.maven.surefire.Surefire.run(Surefire.java:180)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)<br />
               org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)<br />
                 </div>

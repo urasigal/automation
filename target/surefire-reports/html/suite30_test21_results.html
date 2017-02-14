@@ -3,92 +3,134 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Feeder - bonded push to broadcaster test - Encryption AES 128</title>
+  <title>Test Results Report - Broadcaster - test random outputs with FFMPG analyzer Encryption AES 128</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Feeder - bonded push to broadcaster test - Encryption AES 128</h1>
+<h1>Broadcaster - test random outputs with FFMPG analyzer Encryption AES 128</h1>
 <p>
-  Test duration: 0.707s
+  Test duration: 0.000s
 </p>
 
-
-
-
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">com.zixi.testing.FeederOutputPushToBxTest</td>
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">com.zixi.load.testing.BroadcasterRundomInputStreamTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  feederBondedPushOutputCreationTest
+                  testInit
       </td>
   <td class="duration">
-    0.630s
+    0.000s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"admin", "1234", "10.7.0.65", "bond", "4000.ts", "0", "file", "-1", "-1", "2", "bonded", "", "aes128", "a69a8ba04520a8e0fa66fdb0af94cb33", "8000000", "6000", "0", "1", "0", "1", "0", "1", "30", "150", "0", "0", "0", "0", "0", "", "1", "0", "", "1", "10.7.0.66", "2088", "10.7.0.65", "0", "0", "192.168.60.66", "2088", "192.168.50.65", "0", "0", "4200", "4081"</span><br />
     
-            <div class="testOutput">
-                        Test parameteres: <br />
-                                userName:&nbsp; admin<br />
-                                userPass: 1234<br />
-                                login_ip : 10.7.0.65<br />
-                                name: bond<br />
-                                mip: 4000.ts<br />
-                                port: 0<br />
-                                ip: file<br />
-                                prog: -1<br />
-                                chan: -1<br />
-                                type: 2<br />
-                                ostr: bonded<br />
-                                oses: -- not provided <br />
-                                oetp: aes128<br />
-                                oeky: a69a8ba04520a8e0fa66fdb0af94cb33<br />
-                                obit: 8000000<br />
-                                olat: 6000<br />
-                                ofc: 0<br />
-                                ocmp: 1<br />
-                                oold: 0<br />
-                                onfec: 1<br />
-                                fec_force: 0<br />
-                                fec_adaptive: 1<br />
-                                ofec: 30<br />
-                                ofecl: 150<br />
-                                stop_on_drop: 0<br />
-                                mmt: 0<br />
-                                smoothing: 0<br />
-                                limited: 0<br />
-                                minbps: 0<br />
-                                lim_enc_addr: -- not provided <br />
-                                pad_to_cbr: 1<br />
-                                rtmp_feedback: 0<br />
-                                group: -- not provided <br />
-                                bonded: 1<br />
-                                bond_host1: 10.7.0.66<br />
-                                bond_port1: 2088<br />
-                                bond_nic1: 10.7.0.65<br />
-                                bond_limit1: 0<br />
-                                bond_backup1: 0<br />
-                                bond_host2: 192.168.60.66<br />
-                                bond_port2: 2088<br />
-                                bond_nic2: 192.168.50.65<br />
-                                bond_limit2: 0<br />
-                                bond_backup2: 0<br />
-                                uiport: 4200<br />
-                  </div>
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NoClassDefFoundError: com/zixi/load/drivers/BroadcasterRundomInputStreamDriver</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              com.zixi.load.testing.BroadcasterRundomInputStreamTest.testInit(BroadcasterRundomInputStreamTest.java:18)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)<br />
+              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:771)<br />
+              org.testng.TestRunner.run(TestRunner.java:621)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:357)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:259)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1124)<br />
+              org.testng.TestNG.run(TestNG.java:1032)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)<br />
+              org.apache.maven.surefire.Surefire.run(Surefire.java:180)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)<br />
+              org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)<br />
+                </div>
+      </td>
+</tr>
     
+          <tr><td colspan="3">&nbsp;</td></tr>
+      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
+                    <tr>
+          <td colspan="3" class="group">com.zixi.load.testing.BroadcasterRundomInputStreamTest</td>
+        </tr>
+                
+<tr>
+  <td class="method">
+                  afterTest
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                         
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeTes
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                         
+    
+        
+
+      </td>
+</tr>
+            </table>
+
+
+
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com.zixi.load.testing.BroadcasterRundomInputStreamTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  broadcasterSwitchUdpOut
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                         
+          <i>Method arguments: </i><span class="arguments">"10.7.0.66", "admin", "1234", "4444", "test", "4281"</span><br />
+    
+        
 
       </td>
 </tr>
       </table>
+
   
 </body>
 </html>

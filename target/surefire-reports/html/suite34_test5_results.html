@@ -3,48 +3,54 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Remove Push input stream (main broadcaster) test - with redundant host</title>
+  <title>Test Results Report - Broadcaster - Remove udp output stream</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Remove Push input stream (main broadcaster) test - with redundant host</h1>
+<h1>Broadcaster - Remove udp output stream</h1>
 <p>
-  Test duration: 0.001s
+  Test duration: 21.013s
 </p>
 
-  <table class="resultsTable configTable">
-    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
-              <tr class="group">
-        <td colspan="3">com.zixi.testing.BroadcasterSingleInputStreamDeletionTest</td>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  testInit
+                  broadcasterSingleStreamRemoving
       </td>
   <td class="duration">
-    0.000s
+    21.011s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">"10.7.0.63", "admin", "1234", "test", "4444", "302"</span><br />
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NoClassDefFoundError: com/zixi/drivers/drivers/BroadcasterSingleInputStreamDeletionDriver</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
     <div class="stackTrace" id="exception-0">
-              com.zixi.testing.BroadcasterSingleInputStreamDeletionTest.testInit(BroadcasterSingleInputStreamDeletionTest.java:14)<br />
-              sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              com.zixi.ssh.SshJcraftClient.callCommand(SshJcraftClient.java:86)<br />
+              com.zixi.ssh.SshJcraftClient.callCommand(SshJcraftClient.java:129)<br />
+              com.zixi.tools.BroadcasterLoggableApiWorker.getPid(BroadcasterLoggableApiWorker.java:37)<br />
+              com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest.broadcasterSingleStreamRemoving(BroadcaserSingleOutputStreamDeletionTest.java:22)<br />
+              sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
-              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)<br />
-              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)<br />
-              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)<br />
-              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:659)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
               org.testng.TestRunner.privateRun(TestRunner.java:771)<br />
               org.testng.TestRunner.run(TestRunner.java:621)<br />
               org.testng.SuiteRunner.runTest(SuiteRunner.java:357)<br />
@@ -60,75 +66,16 @@
               org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)<br />
               org.apache.maven.surefire.Surefire.run(Surefire.java:180)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
               org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)<br />
               org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)<br />
                 </div>
       </td>
 </tr>
-    
-          <tr><td colspan="3">&nbsp;</td></tr>
-      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
-                    <tr>
-          <td colspan="3" class="group">com.zixi.testing.BroadcasterSingleInputStreamDeletionTest</td>
-        </tr>
-                
-<tr>
-  <td class="method">
-                  afterTest
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                         
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  beforeTes
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                         
-    
-        
-
-      </td>
-</tr>
-            </table>
-
-
-
-  <table class="resultsTable" width="100%">
-    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">com.zixi.testing.BroadcasterSingleInputStreamDeletionTest</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  broadcasterInputStreamDeletion
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                         
-          <i>Method arguments: </i><span class="arguments">"10.7.0.66", "admin", "1234", "feederout", "4444", "831"</span><br />
-    
-        
-
-      </td>
-</tr>
       </table>
+
 
   
 </body>
