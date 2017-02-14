@@ -33,10 +33,8 @@ public class BroadcasterAddIntelTranscoderProfileTest extends BaseTest {
 		"b_frames", "frame_type", "profile", "level", "bitrate_mode", "ref_frames", "hrd", "idr_int", "cavlc", "brightness", "contrast", "fps",
 		"width", "height","crf", "tune", "use_hw",  "max_bitrate", "testid"}, 
 						
-		new String[] {userName, userPass, login_ip, uiport, mode, profile_name,
-		enc, bitrate, gop, fixed_gop, closed_gop, copy_gop, performance,
-		b_frames, frame_type, profile, level, bitrate_mode, ref_frames, hrd, idr_int, cavlc, brightness, contrast, fps,
-		width, height,crf, tune, use_hw,  max_bitrate, testid});
+		new String[] {userName, userPass, login_ip, uiport, mode, profile_name, enc, bitrate, gop, fixed_gop, closed_gop, copy_gop, performance,
+		b_frames, frame_type, profile, level, bitrate_mode, ref_frames, hrd, idr_int, cavlc, brightness, contrast, fps, width, height,crf, tune, use_hw,  max_bitrate, testid});
 		
 		Assert.assertEquals(((BroadcasterAddTranscoderProfileDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, mode, profile_name,
 		enc, bitrate, gop, fixed_gop, closed_gop, copy_gop, performance, b_frames, frame_type, profile, level, bitrate_mode,
