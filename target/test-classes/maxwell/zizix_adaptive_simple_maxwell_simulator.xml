@@ -2,17 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
 <suite name="Broadcaster: adaptive group maxvell test" verbose="5" data-provider-thread-count="1">
-	<test name="Configure maxwell simulator">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" /> <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		<!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0 zerostats rate 500000000 8 120000 1600 360000 0 0" />
-		<parameter name="testid" value="1129" />  
-		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest"/>
-		</classes>
-	</test>
 	<!-- Add a transcoder profile -->
 	<test name="Broadcaster: add profile h.264 - 720*480 1Mbps">
 		<parameter name="userName" value="admin" />
