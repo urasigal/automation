@@ -153,6 +153,65 @@
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster: create an adaptive group">
+		<parameter name="userName" value="admin" /> 
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="adaptive" />
+		<parameter name="record" value="false" />
+		<parameter name="zixi" value="1" />
+		<parameter name="hls" value="1" />
+		<parameter name="hds" value="1" /> 
+		<parameter name="mpd" value="0" /> 
+		<parameter name="mmt" value="0" />
+		<parameter name="compress_zixi" value="1" />
+		<parameter name="multicast" value="0" />
+		<parameter name="streams" value="5000,2000" />
+		<parameter name="bitrates" value="500000,2000000" />
+		<parameter name="max_time" value="0" />
+		<parameter name="testid" value="686" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - pull input stream creation - adaptive group test">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="dec_key" value="" />
+		<parameter name="dec_type" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_latency" value="150" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="host" value="10.7.0.74" />
+		<parameter name="latency" value="8000" />
+		<parameter name="min_bit" value="0" />
+		<parameter name="name" value="receivertest" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="port" value="2077" />
+		<parameter name="session" value="" />
+		<parameter name="stream" value="adaptive" />
+		<parameter name="testid" value="688" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - Pull input stream statistic - adaptive group test">
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="id" value="receivertest" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="2849" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverInputStatisticTest"/>
+		</classes>
+	</test>
 	<test name="Broadcaster - Remove an input stream test - 5Mbps">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
