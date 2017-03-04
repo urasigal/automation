@@ -142,6 +142,7 @@
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
 	</test>
+	<!-- Add an adaptive group - consists from transcoded streams -->
 	<test name="Broadcaster: create an adaptive group">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
@@ -164,6 +165,7 @@
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
 		</classes>
 	</test>
+	<!-- Define an Pull input stream on the receiver side-->
 	<test name="Receiver - pull input stream creation - adaptive group test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -189,6 +191,7 @@
 		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
 		</classes>
 	</test>
+	<!-- Test receiver stream's statistics on a receiver side -->
 	<test name="Receiver - Pull input stream statistic - adaptive group test">
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
@@ -201,6 +204,7 @@
 		    <class name="com.zixi.testing.ReceiverInputStatisticTest"/>
 		</classes>
 	</test>
+	<!-- delete on a transcoded streams -->
 	<test name="Broadcaster - Remove an input stream test - 5Mbps">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
@@ -213,6 +217,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
+	<!-- delete on a transcoded streams -->
 	<test name="Broadcaster - Remove an input stream test - 2Mbps">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
