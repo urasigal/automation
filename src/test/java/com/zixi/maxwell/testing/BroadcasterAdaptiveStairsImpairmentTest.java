@@ -19,7 +19,7 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTest {
 		         "userName", "userPassword", "login_ip", "uiport", "id", "testid"})
 	@Test
 	public void broadcasterSingleStreamRemoving(String maxwell_address, String standart_impairment_server_api_port, String flow_match_control_setmatch,
-			String impairment_control_setimpair, String userName, String userPassword, String login_ip, String uiport, String id, String testid) throws Exception {
+	String impairment_control_setimpair, String userName, String userPassword, String login_ip, String uiport, String id, String testid) throws Exception {
 		
 		//Print this class name to the log file.
 		getLoggerInstance().info(getClass().getName());
