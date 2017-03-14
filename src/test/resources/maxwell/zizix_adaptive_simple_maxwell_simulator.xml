@@ -21,10 +21,11 @@
 		<parameter name="path" value="1080i_4ChAud.ts" />
 		<parameter name="testid" value="1249" />    
 		<classes>
-		    <class name="com.zixi.testing.BroadcasterFileInputTest"/>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
         		<include name="broadcasterCreateFileInout" />
      		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<!-- Add a transcoder profile -->
