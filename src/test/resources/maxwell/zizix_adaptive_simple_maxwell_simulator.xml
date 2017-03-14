@@ -309,4 +309,15 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
+	<test name="Receiver - Remove Pull input stream - Encryption AES 128">
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="id" value="receivertest" />
+		<parameter name="testid" value="1169" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
+		</classes>
+	</test>
 </suite>
