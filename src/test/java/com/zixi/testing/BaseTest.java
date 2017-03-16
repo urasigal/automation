@@ -48,7 +48,7 @@ public class BaseTest {
 	protected double 							testDuration;
 	
 	// Writes test results to the TestLink.
-	protected String 							testParameters 				= 	"";
+	protected String 							testLinktestParameters 				= 	"";
 	
 	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developers.
 	protected static  Logger       				LOGGER      				= 	null;
@@ -96,14 +96,14 @@ public class BaseTest {
         {
         	LOGGER.info("Test duration[ms]: " + testDuration);
             tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor +
+            automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor +
             "\nTest duration[ms]: " + testDuration + "\n " + " Test notes " + driverReslut.touchResutlDescription(" "), getBuildIdFromFile()); // pass data to a testLink notes in test execution.
         } 
         else 
         {
         	LOGGER.info("Test duration[ms]: " + testDuration);
             tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n" +  
-            automationTestIdentifiers + "\nTest Parameters: "+ testParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
+            automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
             "\nTest duration[ms]: " + testDuration + "\n" + "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + 
             result.getThrowable().getStackTrace()  + " Test notes " + driverReslut.touchResutlDescription(" ") , getBuildIdFromFile());
         }

@@ -24,7 +24,7 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
-		testParameters = buildTestParametersString(new String[] { "login_ip","userName","userPassword", "id","uiport", "testid" }, 
+		testLinktestParameters = buildTestParametersString(new String[] { "login_ip","userName","userPassword", "id","uiport", "testid" }, 
 		new String[] {login_ip,userName,userPassword,id,uiport, testid});
 		
 		driverReslut = ((BroadcaserSingleOutputStreamDeletionDriver) testDriver).testIMPL(login_ip, userName, userPassword, id, uiport);

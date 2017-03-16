@@ -25,7 +25,7 @@ public class BroadcasterPushOutStreamCreationGeneralTest extends BaseTest {
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "host", "latency", "fec_force", "session", "fec_adaptive", "nic", "fec_block", "type",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "host", "latency", "fec_force", "session", "fec_adaptive", "nic", "fec_block", "type",
 		"snames", "fec_aware", "fec_overhead", "stream", "port", "uiport", "alias", "id", "link1", "link2", "bond_links", "testid"}, 
 		
 		new String[] { userName, userPass, login_ip, host, latency, fec_force, session, fec_adaptive, nic, fec_block, type, snames, fec_aware, fec_overhead, 

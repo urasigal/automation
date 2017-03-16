@@ -21,7 +21,7 @@ public class BroadcasterTranscoderDeletProfileTest extends BaseTest{
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "profile_name", "testid" }, 
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "profile_name", "testid" }, 
 				
 		new String[] {userName,userPass, login_ip, uiport, profile_name,testid });
 		

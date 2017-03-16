@@ -25,7 +25,7 @@ public class BroadcasterPullOutputTest extends BaseTest{
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] {"userName", "userPass",  "login_ip", "uiport", "type", "name", "stream", "matrix",
+		testLinktestParameters = buildTestParametersString(new String[] {"userName", "userPass",  "login_ip", "uiport", "type", "name", "stream", "matrix",
 		"alt_stream", "remote_id", "session", "latency", "session_auth", "stats_hist" ,"testid"}, new String[] { userName, userPass, login_ip,
 		uiport, type, name, stream, matrix, alt_stream, remote_id, session, latency, session_auth, stats_hist, testid });
 		

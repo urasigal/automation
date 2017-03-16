@@ -46,7 +46,7 @@ public class BroadcasterMultipleRtmpPushTest extends BaseTest{
 		this.version = productAboutDriver.getBroadcasterVersion(login_ipBX1, uiportBX1, userNameBX1, userPasswordBX1);
 		InnerHelper innerHelper = new InnerHelper();		
 		
-		testParameters = innerHelper.saveParameters(login_ipBX1, login_ipBX2, userNameBX1, userNameBX2, userPasswordBX1, userPasswordBX2, uiportBX1, uiportBX2, typeBX1, name, stream, matrixBX1,
+		testLinktestParameters = innerHelper.saveParameters(login_ipBX1, login_ipBX2, userNameBX1, userNameBX2, userPasswordBX1, userPasswordBX2, uiportBX1, uiportBX2, typeBX1, name, stream, matrixBX1,
 		url, url_alt, rtmp_stream, user, bandwidth, latency, reconnect, sendfi, disconnect_low_br, static_latency, dec_type,
 		dec_key, password, typeBX2, sutProcessIdBX2, matrixBX2, max_outputs, mcast_out, time_shift, old, fast_connect, kompression, enc_type, 
 		enc_key, rec_history, rec_duration, rtmp_url, rtmp_name, rtmp_user, number_of_streams, testid);

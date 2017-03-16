@@ -16,7 +16,7 @@ public class VisualQualityTest extends BaseTest{
 	@Test
 	public void broadcasterRtmpPullTest(String testid) throws InterruptedException {
 		
-		testParameters = buildTestParametersString(new String[] {"testid"}, 
+		testLinktestParameters = buildTestParametersString(new String[] {"testid"}, 
 		new String[] {testid});
 		
 		String testResult = ((VisualQualityDriver) testDriver).testVideo();

@@ -22,7 +22,7 @@ public class BxFileTransferAndVodSettingsTest extends BaseTest{
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] { "userName","userPass","login_ip", "uiport", "ft_download", "ft_upload",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName","userPass","login_ip", "uiport", "ft_download", "ft_upload",
 		"ft_auto_index", "ft_prog", "ft_encrypt", "ft_bitrate_cache", "ft_aggr", "ft_mtu", "ft_init_speed", "ft_cache", "ft_proxy_http_port",
 		"ft_proxy_https_port", "max_download_bitrate", "max_upload_bitrate", "testid" }, 
 		new String[] { userName, userPass, login_ip, uiport, ft_download , ft_upload, ft_auto_index , ft_prog , ft_encrypt , ft_bitrate_cache ,

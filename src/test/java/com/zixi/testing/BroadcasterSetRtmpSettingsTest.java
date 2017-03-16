@@ -22,7 +22,7 @@ public class BroadcasterSetRtmpSettingsTest extends BaseTest {
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "rtmp_on", "rtmp_port",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "rtmp_on", "rtmp_port",
 		"rtmp_auto_out", "rtmp_auto_in", "rtmp_pcr_int", "rtmp_auto_out_latency", "testid" }, 
 		new String[] { userName, userPass, login_ip, uiport, rtmp_on, rtmp_port, rtmp_auto_out, rtmp_auto_in, rtmp_pcr_int, rtmp_auto_out_latency, testid });
 		

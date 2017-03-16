@@ -25,7 +25,7 @@ public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
 		// This is data structure to store a test parameters then provide it to TestLink integration.
-		testParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "uiport", "type",
+		testLinktestParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "uiport", "type",
 		"name", "stream", "matrix", "url", "url_alt", "rtmp_stream", "user", "bandwidth", "latency", "reconnect", "sendfi",
 		"disconnect_low_br", "static_latency", "dec_type", "dec_key", "password", "testid" }, 
 		new String[] { login_ip, userName, userPassword, uiport, type, name, stream, matrix, url, url_alt, rtmp_stream, user, bandwidth, latency, reconnect, sendfi,

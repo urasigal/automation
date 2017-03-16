@@ -18,7 +18,7 @@ public class FeederSettingsTest extends BaseTest{
 	String ssh_port, String ssh_user, String testid) throws Exception {
 		
 		// Provide parameters to a TestLink.
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "host", "ssh_port", "ssh_user", "testid"}, 
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "host", "ssh_port", "ssh_user", "testid"}, 
 		new String[] { userName, userPass, login_ip, uiport, host, ssh_port, ssh_user, testid });
 		
 		driverReslut = ( (FeederSettingsDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, host, ssh_port, ssh_user);

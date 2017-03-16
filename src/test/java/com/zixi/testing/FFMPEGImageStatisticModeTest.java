@@ -18,7 +18,7 @@ public class FFMPEGImageStatisticModeTest extends BaseTest{
 	@Test
 	public void broadcasterSingleInputStreamStatisticAnilyzer(String mode, String testid) throws InterruptedException {
 		
-		testParameters = buildTestParametersString(new String[] { "mode", "testid" }, new String[] { mode, testid});
+		testLinktestParameters = buildTestParametersString(new String[] { "mode", "testid" }, new String[] { mode, testid});
 		
 		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(mode);
 		

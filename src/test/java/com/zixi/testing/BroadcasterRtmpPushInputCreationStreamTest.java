@@ -30,7 +30,7 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTest {
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix",
 		"max_outputs", "mcast_out", "time_shift", "old", "fast_connect",
 		"kompression", "enc_type", "enc_key", "rec_history",
 		"rec_duration", "rtmp_url", "rtmp_name", "rtmp_user", "testid" }, 

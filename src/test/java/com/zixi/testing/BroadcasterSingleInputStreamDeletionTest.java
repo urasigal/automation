@@ -18,7 +18,7 @@ public class BroadcasterSingleInputStreamDeletionTest extends BaseTest {
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster" );
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
-		testParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "streamId", "uiport" ,"testid" }, 
+		testLinktestParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "streamId", "uiport" ,"testid" }, 
 		new String[] {login_ip, userName, userPassword, streamId, uiport ,testid });
 		
 		driverReslut = ((BroadcasterSingleInputStreamDeletionDriver) testDriver).removeInput(login_ip, userName, userPassword, streamId, uiport);

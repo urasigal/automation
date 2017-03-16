@@ -21,7 +21,7 @@ public class FFMPEGBondingBackupTest extends BaseTest{
 	@Test
 	public void ffmpegBondingTestBackUpScenarioPartialLimitation(String testid) throws InterruptedException {
 		
-		testParameters = buildTestParametersString(new String[] { "testid" }, new String[] {"testid" });
+		testLinktestParameters = buildTestParametersString(new String[] { "testid" }, new String[] {"testid" });
 		
 		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).backUpBondedPartialLimitation();
 		
@@ -37,7 +37,7 @@ public class FFMPEGBondingBackupTest extends BaseTest{
 		
 		testFlowDescriptor.append("\nStarting the test FFMPEGBondingBackupTest.ffmpegBondingTestBackUpScenarioFullLimitation" );
 		
-		testParameters = buildTestParametersString(new String[] { "testid" }, new String[] {"testid" }); // Fill out test parameters.
+		testLinktestParameters = buildTestParametersString(new String[] { "testid" }, new String[] {"testid" }); // Fill out test parameters.
 		
 		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).backUpBondedFullLimitation();
 		

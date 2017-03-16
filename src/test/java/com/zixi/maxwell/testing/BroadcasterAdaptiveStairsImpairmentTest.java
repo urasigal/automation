@@ -27,7 +27,7 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTest {
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		//this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
-		testParameters = buildTestParametersString(new String[] { "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
+		testLinktestParameters = buildTestParametersString(new String[] { "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
 		"impairment_control_setimpair", "testid" }, 
 		new String[] { maxwell_address, standart_impairment_server_api_port, flow_match_control_setmatch, impairment_control_setimpair, testid });
 		
