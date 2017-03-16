@@ -32,7 +32,7 @@ public class FeederMultipleDeletionTest  extends BaseTest{
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_feeder,  "22",  "pidof zixi_feeder");
 		
 		// Gather the test parameters in order to pass them to the TestLink
-		testParameters = buildTestParametersString(new String[] { "userName_feeder", "userPass_feeder", "login_ip_feeder", "uiport", "mip",  "port", "ip", "prog", "chan", "type"}, 
+		testLinktestParameters = buildTestParametersString(new String[] { "userName_feeder", "userPass_feeder", "login_ip_feeder", "uiport", "mip",  "port", "ip", "prog", "chan", "type"}, 
 				
 		 new String[] { userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type });
 		

@@ -18,7 +18,7 @@ public class ReceiverOutputStreamDeletionTest extends BaseTest{
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPass", "uiport" ,"stream_name","destination","testid" }, 
+		testLinktestParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPass", "uiport" ,"stream_name","destination","testid" }, 
 				
 		new String[] { login_ip, userName, userPass,uiport ,stream_name,destination,testid});
 		

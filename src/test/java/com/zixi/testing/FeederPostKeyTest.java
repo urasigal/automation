@@ -18,7 +18,7 @@ public class FeederPostKeyTest extends BaseTest{
 	public void uploadPrivateKeyToFeeder(String userName, String userPass, String login_ip, String uiport, String testid) throws Exception {
 		
 		// Provide parameters to a TestLink.
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "testid"}, 
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "testid"}, 
 		new String[] { userName, userPass, login_ip, uiport, testid });
 		
 		driverReslut = ((FeederPostKeyDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport);

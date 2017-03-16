@@ -18,7 +18,7 @@ public class FeederInputUdpTest extends BaseTest{
 	String ssm , String  rtp_type , String  testid) throws Exception 
 	{	
 		// Writes test results to the TestLink.
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "mip","port", "ip","name", "ssm", "rtp_type", "testid" }, 
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "mip","port", "ip","name", "ssm", "rtp_type", "testid" }, 
 		new String[] { userName, userPass, login_ip, uiport, mip,port, ip, name, ssm, rtp_type, testid});
 		
 		driverReslut = ((FeederInputUdpDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport, mip,port, ip, name,ssm, rtp_type);

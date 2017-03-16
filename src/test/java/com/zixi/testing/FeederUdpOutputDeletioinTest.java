@@ -16,7 +16,7 @@ public class FeederUdpOutputDeletioinTest extends BaseTest{
 	public void broadcasterSingleStreamRemoving(String userName, String userPass, String login_ip, String uiport, String id,
 	String mip, String port, String ip, String prog, String chan, String type, String host, String udpport, String testid) throws Exception {
 		
-		testParameters = buildTestParametersString(new String[] { userName, userPass, login_ip, uiport, id, mip,port, ip, prog, chan, type,host, udpport ,testid }, 
+		testLinktestParameters = buildTestParametersString(new String[] { userName, userPass, login_ip, uiport, id, mip,port, ip, prog, chan, type,host, udpport ,testid }, 
 		
 		new String[] { userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type,host, udpport ,testid });
 		

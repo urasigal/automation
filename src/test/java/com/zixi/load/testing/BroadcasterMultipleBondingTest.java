@@ -42,7 +42,7 @@ public class BroadcasterMultipleBondingTest extends BaseTest{
 		String sutProcessId2 = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_dst,  "22",  "pidof zixi_broadcaster");
 		
 		// Gather the test parameters in order to pass them to the TestLink
-		testParameters = buildTestParametersString(new String[] { "userName_src", "userPass_src", "login_ip_src", "uiport_src", "type_src", "name", "stream", "matrix", 
+		testLinktestParameters = buildTestParametersString(new String[] { "userName_src", "userPass_src", "login_ip_src", "uiport_src", "type_src", "name", "stream", "matrix", 
 		"alias", "session", "link_a", "link_b", "bond_links", "latency_src", "fec_force", "fec_overhead",
 		"fec_block", "fec_adaptive", "mmt", "fec_aware", "stats_hist", "userName_dst", "userPass_dst", "login_ip_dst", "latency_dst", "time_shift", "force_p2p",
 		"mcast_ip", "mcast_force", "mcast_port", "type_dst", "uiport_dst", "analyze", "mcast_ttl", "id", "mcast_out", "complete", "max_outputs", "on",

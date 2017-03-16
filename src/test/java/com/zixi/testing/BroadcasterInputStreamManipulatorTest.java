@@ -22,7 +22,7 @@ public class BroadcasterInputStreamManipulatorTest extends BaseTest{
 		
 		sutProcessId 	= BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster");
 		
-		testParameters 	= buildTestParametersString(new String[] { "userName","userPass","login_ip", "uiport", "streamId", "stopStart", "streamType", "testid"}, 
+		testLinktestParameters 	= buildTestParametersString(new String[] { "userName","userPass","login_ip", "uiport", "streamId", "stopStart", "streamType", "testid"}, 
 		new String[] { userName, userPass, login_ip, uiport, streamId, onOff, streamType, testid });
 		
 		driverReslut 	= ((BroadcasterInputStreamManipulatorDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport, streamId, onOff, streamType);

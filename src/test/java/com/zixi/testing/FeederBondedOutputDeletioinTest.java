@@ -21,7 +21,7 @@ public class FeederBondedOutputDeletioinTest extends BaseTest {
 	String dest_host2, String testid) throws Exception {
 		
 		// Writes test results to the TestLink.
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
 		"nic1", "nic2", "dest_host1", "dest_host2" ,"testid" }, 
 		new String[] {userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, nic1, nic2, dest_host1, 
 		dest_host2 ,testid});
@@ -43,7 +43,7 @@ public class FeederBondedOutputDeletioinTest extends BaseTest {
 		String dest_host2, String dest_host3, String testid) throws Exception {
 		
 		// Writes test results to the TestLink.
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
 		"nic1", "nic2", "nic3", "dest_host1", "dest_host2", "dest_host3", "testid"}, 
 		new String[] {userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, nic1, nic2, nic3, dest_host1, 
 		dest_host2, dest_host3, testid});

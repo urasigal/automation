@@ -27,7 +27,7 @@ public class BroadcasterPushInStreamCreationDecriptionTest extends BaseTest {
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "latency", "time_shift",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "latency", "time_shift",
 		"force_p2p", "mcast_ip", "mcast_force", "mcast_port", "type", "uiport", "analyze", "mcast_ttl", "id", "mcast_out", "complete",
 		"max_outputs", "on", "password", "dec_type", "dec_key", "testid"}, 
 		new String[] {userName, userPass, login_ip, latency, time_shift, force_p2p, mcast_ip, mcast_force, mcast_port, type,

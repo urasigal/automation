@@ -26,7 +26,7 @@ public class BroadcasterUDPOutputStreamCreationTest extends BaseTest{
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "port", "stream",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "port", "stream",
 		"streamname", "host", "id", "rtp", "fec", "smoothing", "ttl", "remux_bitrate", "df", "local_port", "dec_key", "type", "rows",
 		"remux_buff", "local_ip", "remux_restampdts", "uiport", "remux_pcr", "dec_type", "cols" ,"testid"}, 
 		new String[] {userName, userPass, login_ip, port, stream, streamname, host, id, rtp, fec, smoothing, ttl, remux_bitrate, df, local_port, dec_key, type, rows,

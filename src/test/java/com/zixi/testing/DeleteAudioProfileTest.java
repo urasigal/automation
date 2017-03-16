@@ -21,7 +21,7 @@ public class DeleteAudioProfileTest extends BaseTest{
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] {"userName","userPass", "login_ip", "uiport","profile_name",
+		testLinktestParameters = buildTestParametersString(new String[] {"userName","userPass", "login_ip", "uiport","profile_name",
 				"testid"}, new String[] { userName, userPass, login_ip, uiport, profile_name, testid});
 		
 		Assert.assertEquals(((DeleteAudioProfileDriver) testDriver)

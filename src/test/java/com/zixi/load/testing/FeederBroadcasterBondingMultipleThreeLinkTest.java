@@ -52,7 +52,7 @@ public class FeederBroadcasterBondingMultipleThreeLinkTest extends BaseTest{
 			String sutProcessId2 = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_broadcaster,  "22",  "pidof zixi_broadcaster");
 			
 			// Gather the test parameters in order to pass them to the TestLink
-			testParameters = buildTestParametersString(new String[] { "userName_feeder", "userPass_feeder", "login_ip_feeder", "name", "mip", "port", "ip", "prog", "chan", "type_feeder", 
+			testLinktestParameters = buildTestParametersString(new String[] { "userName_feeder", "userPass_feeder", "login_ip_feeder", "name", "mip", "port", "ip", "prog", "chan", "type_feeder", 
 			"ostr", "oses", "oetp", "oeky", "obit", "olat", "ofc", "ocmp", "oold", "onfec", "fec_force", "fec_adaptive", "ofec",
 			"ofecl", "stop_on_drop", "mmt", "smoothing", "limited", "minbps", "lim_enc_addr", "pad_to_cbr", "rtmp_feedback", "group", 
 			"bonded", "bond_host1", "bond_port1", "bond_nic1", "bond_limit1", "bond_backup1", "bond_host2", "bond_port2", "bond_nic2",

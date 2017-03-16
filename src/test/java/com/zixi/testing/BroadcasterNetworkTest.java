@@ -21,7 +21,7 @@ public class BroadcasterNetworkTest extends BaseTest{
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] { "sshuser", "sshpass", "sshaddress", "sshport", "command", "login_ip", "uiport",
+		testLinktestParameters = buildTestParametersString(new String[] { "sshuser", "sshpass", "sshaddress", "sshport", "command", "login_ip", "uiport",
 		"userName", "userPass","testid" }, new String[] { sshuser, sshpass, sshaddress, sshport, command, login_ip, uiport, userName, userPass,testid});
 		
 		String ips[] = ((NetworkingDriver)testDriver).getServerInterfacesAddresses(sshuser, sshpass, sshaddress, sshport, command);

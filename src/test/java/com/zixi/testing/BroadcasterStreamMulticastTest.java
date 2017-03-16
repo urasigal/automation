@@ -32,7 +32,7 @@ public class BroadcasterStreamMulticastTest  extends BaseTest{
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		this.version = productAboutDriver.getBroadcasterVersion(bx1_login_ip, bx1_uiport, bx1_userName, bx1_bxuserPassword);
 		
-		testParameters = buildTestParametersString(new String[] {"bx1_login_ip", "bx1_userName", "bx1_bxuserPassword", "bx1_uiport", "bx2_login_ip", "bx2_userName", 
+		testLinktestParameters = buildTestParametersString(new String[] {"bx1_login_ip", "bx1_userName", "bx1_bxuserPassword", "bx1_uiport", "bx2_login_ip", "bx2_userName", 
 		"bx2_bxuserPassword", "bx2_uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "old", "fast_connect", "kompression",
 		"enc_type", "rec_history", "rec_duration", "ts_port", "max_bitrate", "multicast", "multi_src", "nic", "device",
 		"rtp_type", "enc_key", "testid"}, 

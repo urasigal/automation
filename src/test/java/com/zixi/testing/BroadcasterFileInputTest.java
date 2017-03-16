@@ -28,7 +28,7 @@ public class BroadcasterFileInputTest extends BaseTest{
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id",
 				"matrix", "max_outputs", "mcast_out", "time_shift", "old", "fast_connect", "kompression", "enc_type", "enc_key", "path","testid"}, 
 				
 				new String[] {userName, userPass, login_ip, uiport, type, id,
@@ -53,7 +53,7 @@ public class BroadcasterFileInputTest extends BaseTest{
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id","on", "testid"}, 
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id","on", "testid"}, 
 												  new String[] {userName, userPass, login_ip, uiport, id, on, testid });
 		
 		Assert.assertEquals(((BroadcasterFileInputDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, id, on),

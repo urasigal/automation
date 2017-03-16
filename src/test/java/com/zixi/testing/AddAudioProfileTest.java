@@ -32,7 +32,7 @@ public class AddAudioProfileTest extends BaseTest{
 		
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testParameters = buildTestParametersString(new String[] {"userName","userPass", "login_ip", "uiport","profile_name","enc","bitrate","profile",
+		testLinktestParameters = buildTestParametersString(new String[] {"userName","userPass", "login_ip", "uiport","profile_name","enc","bitrate","profile",
 				"testid"}, new String[] { userName, userPass, login_ip, uiport, profile_name, enc, bitrate, profile, testid});
 		
 		Assert.assertEquals(((AddAudioProfileDriver) testDriver)

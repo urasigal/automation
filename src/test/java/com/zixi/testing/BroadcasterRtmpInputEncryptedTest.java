@@ -31,7 +31,7 @@ public class BroadcasterRtmpInputEncryptedTest extends BaseTest {
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "enc-type","enc-key", "disconnect_low_br","rtmp_nulls", "id",
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "enc-type","enc-key", "disconnect_low_br","rtmp_nulls", "id",
 		"rtmp_url", "rtmp_name", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "type", "rtmp_user", "rtmp_bitrate", "rtmp_passwd",
 		"uiport", "mcast_ttl", "rtmp_latency", "mcast_out", "complete","max_outputs", "on" ,"testid"}, 
 		

@@ -33,8 +33,8 @@ public class BroadcasterMultipleRtmpPullCreationTest extends BaseTest
 		// Get a SUT PID number in the beginning of the test. 
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
-		// Gather the test parameters in order to pass them to the TestLink
-		testParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "rtmp_nulls","id", "rtmp_url", "rtmp_name",
+		// Gather test parameters in order to pass them to the TestLink
+		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "rtmp_nulls","id", "rtmp_url", "rtmp_name",
 		"time_shift", "mcast_ip", "mcast_force", "mcast_port", "type", "rtmp_user", "rtmp_bitrate", "rtmp_passwd", "uiport", "mcast_ttl", "rtmp_latency", 
 		"mcast_out", "complete", "max_outputs", "on", "number_of_streams", "testid"}, 
 		new String[] {userName, userPass, login_ip, rtmp_nulls, id, rtmp_url, rtmp_name, time_shift, mcast_ip, mcast_force, mcast_port, type,
