@@ -34,7 +34,7 @@ public class BroadcasterRundomInputStreamTest extends BaseTest
 		
 		driverReslut = ((BroadcasterRundomInputStreamDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport, name);
 		
-		Assert.assertEquals(driverReslut.getResult(), "More than + 90%");
+		Assert.assertEquals(driverReslut.getResult(), "More than + 80%");
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
