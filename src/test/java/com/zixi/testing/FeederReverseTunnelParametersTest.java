@@ -17,7 +17,7 @@ public class FeederReverseTunnelParametersTest extends BaseTest{
 	String target_port, String target_ip, String remote_port, String testid) throws Exception {
 		
 		// Provide parameters to a TestLink.
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "on", "target_port", "target_ip", "remote_port", "testid"}, 
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "on", "target_port", "target_ip", "remote_port", "testid"}, 
 		new String[] { userName, userPass, login_ip, uiport, on, target_port, target_ip, remote_port, testid });
 		
 		driverReslut = ((FeederReverseTunnelParametersDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, on, target_port, target_ip, remote_port);

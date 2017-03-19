@@ -9,9 +9,7 @@ import com.zixi.drivers.drivers.FeederOutputDeletionDriver;
 public class FeederBondedOutputDeletioinTest extends BaseTest {
 
 	@BeforeClass
-	public void testInit() {
-		testDriver = new FeederOutputDeletionDriver();
-	}
+	public void testInit() { testDriver = new FeederOutputDeletionDriver(); }
 	
 	// Deletes a feeder bonded output stream while a output stream is consists of a two bonded links.
 	@Parameters({"userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type", "nic1", "nic2", "dest_host1", "dest_host2" ,"testid"})
@@ -21,7 +19,7 @@ public class FeederBondedOutputDeletioinTest extends BaseTest {
 	String dest_host2, String testid) throws Exception {
 		
 		// Writes test results to the TestLink.
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
 		"nic1", "nic2", "dest_host1", "dest_host2" ,"testid" }, 
 		new String[] {userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, nic1, nic2, dest_host1, 
 		dest_host2 ,testid});
@@ -43,7 +41,7 @@ public class FeederBondedOutputDeletioinTest extends BaseTest {
 		String dest_host2, String dest_host3, String testid) throws Exception {
 		
 		// Writes test results to the TestLink.
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip", "port", "ip", "prog", "chan", "type",
 		"nic1", "nic2", "nic3", "dest_host1", "dest_host2", "dest_host3", "testid"}, 
 		new String[] {userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, nic1, nic2, nic3, dest_host1, 
 		dest_host2, dest_host3, testid});

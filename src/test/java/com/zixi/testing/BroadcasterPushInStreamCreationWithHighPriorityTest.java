@@ -24,9 +24,9 @@ public class BroadcasterPushInStreamCreationWithHighPriorityTest extends BaseTes
 	String analyze, String mcast_ttl, String id, String mcast_out, String complete, String max_outputs, String on, String password, String priority_ids,
 	String testid) throws Exception {
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "latency", "time_shift", "force_p2p", "mcast_ip", "mcast_force", 
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "latency", "time_shift", "force_p2p", "mcast_ip", "mcast_force", 
 		"mcast_port", "type", "uiport", "analyze", "mcast_ttl", "id", "mcast_out", "complete", "max_outputs", "on", "password", "priority_ids" ,"testid"}, 
 		
 		new String[] {userName, userPass, login_ip, latency, time_shift, force_p2p, mcast_ip, mcast_force, mcast_port, type,

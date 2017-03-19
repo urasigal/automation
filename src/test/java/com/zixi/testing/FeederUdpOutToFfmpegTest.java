@@ -14,10 +14,9 @@ public class FeederUdpOutToFfmpegTest extends BaseTest{
 	public void broadcasterSingleStreamRemoving(String userName, String userPass, String login_ip, String uiport, String name, String mip,
 	String port, String ip, String prog, String chan, String oh, String op, String onic, String ottl, String osmooth,String testid) throws Exception {
 		
-		testLinktestParameters = buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "name", "mip", "port", "ip", "prog", "chan", "oh",
+		buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "name", "mip", "port", "ip", "prog", "chan", "oh",
 		"op", "onic", "ottl", "osmooth" ,"testid"}, 
 		new String[] { userName, userPass, login_ip, uiport, name, mip, port, ip, prog, chan, oh, op, onic, ottl, osmooth ,testid });
-		
 		
 		driverReslut = ((FeederUdpOutToFfmpegDriver) testDriver).testIMPL( userName,  userPass,  login_ip,  uiport,  name,  mip, port,  ip,  prog,  chan,  oh,
 		op,  onic,  ottl,  osmooth);

@@ -18,11 +18,11 @@ public class BroadcasterInputStreamManipulatorTest extends BaseTest{
 	public void broadcasterStopStartInputStream(String userName, String userPass, String login_ip, String uiport, String streamId, String onOff, String streamType, String testid)
 	throws Exception {
 		
-		this.version 	= productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		 productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
 		sutProcessId 	= BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster");
 		
-		testLinktestParameters 	= buildTestParametersString(new String[] { "userName","userPass","login_ip", "uiport", "streamId", "stopStart", "streamType", "testid"}, 
+		buildTestParametersString(new String[] { "userName","userPass","login_ip", "uiport", "streamId", "stopStart", "streamType", "testid"}, 
 		new String[] { userName, userPass, login_ip, uiport, streamId, onOff, streamType, testid });
 		
 		driverReslut 	= ((BroadcasterInputStreamManipulatorDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport, streamId, onOff, streamType);

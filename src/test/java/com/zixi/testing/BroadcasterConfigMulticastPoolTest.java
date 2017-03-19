@@ -25,9 +25,9 @@ public class BroadcasterConfigMulticastPoolTest extends BaseTest{
 		getLoggerInstance().info(getClass().getName());
 		
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "uiport", "multicast_pool_enabled", "multicast_pool_address",
+		buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "uiport", "multicast_pool_enabled", "multicast_pool_address",
 		"multicast_pool_mask", "multicast_pool_fec_overhead", "multicast_pool_port", "multicast_pool_ttl", "multicast_pool_nic", "multicast_pool_tos", "testid" }, 
 		new String[] {login_ip, userName, userPassword, uiport, multicast_pool_enabled, multicast_pool_address, multicast_pool_mask, multicast_pool_fec_overhead,
 		multicast_pool_port, multicast_pool_ttl, multicast_pool_nic, multicast_pool_tos, testid});

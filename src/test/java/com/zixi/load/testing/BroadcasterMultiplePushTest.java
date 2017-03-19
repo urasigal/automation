@@ -36,14 +36,14 @@ public class BroadcasterMultiplePushTest extends BaseTest{
 	String port, String uiport_bx2, String alias, String id_bx2, String number_of_streams, String testid) throws Exception {
 		
 		
-		this.version          = productAboutDriver.getBroadcasterVersion(login_ip_bx1, uiport_bx1, userName_bx1, userPass_bx1);
+	 productAboutDriver.getBroadcasterVersion(login_ip_bx1, uiport_bx1, userName_bx1, userPass_bx1);
 		
 		// Here we take PIDs from a two broadcaster servers because of in this particular test case a two different broadcasters are involved.
 		sutProcessId         = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx1,  "22",  "pidof zixi_broadcaster");
 		String sutProcessId2 = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx2,  "22",  "pidof zixi_broadcaster");
 		
 		// Gather the test parameters in order to pass them to the TestLink
-		testLinktestParameters = buildTestParametersString(new String[] { "userName_bx1", "userName_bx2", "userPass_bx1", "userPass_bx2", "login_ip_bx1", "login_ip_bx2", "latency_bx1", "time_shift",
+		buildTestParametersString(new String[] { "userName_bx1", "userName_bx2", "userPass_bx1", "userPass_bx2", "login_ip_bx1", "login_ip_bx2", "latency_bx1", "time_shift",
 		"force_p2p", "mcast_ip", "mcast_force", "mcast_port", "type_bx1", "uiport_bx1", "analyze", "mcast_ttl", "id_bx1", "mcast_out",
 		"complete", "max_outputs", "on", "password", "host", "latency_bx2", "fec_force", "session", "fec_adaptive",
 		"nic", "fec_block", "type_bx2", "snames", "fec_aware", "fec_overhead", "stream", "port", "uiport_bx2", "alias", "id_bx2" ,
@@ -70,6 +70,5 @@ public class BroadcasterMultiplePushTest extends BaseTest{
 		// This is special case because of here a two broadcaster are involved.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx1,  "22",  "pidof zixi_broadcaster"));
 		Assert.assertEquals(sutProcessId2, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx2,  "22",  "pidof zixi_broadcaster"));
-
 	} 
 }

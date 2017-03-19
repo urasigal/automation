@@ -15,7 +15,7 @@ public class ReceiverInputStatisticTest extends BaseTest {
 	@Test
 	public void receiverInputStatistic(String userName, String userPassword, String login_ip, String uiport, String id, String testduration, String testid) throws Exception {
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id", "testduration" ,"testid" }, 
+		buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id", "testduration" ,"testid" }, 
 				
 		new String[] {userName, userPassword, login_ip, uiport, id, testduration ,testid });
 		
@@ -23,5 +23,4 @@ public class ReceiverInputStatisticTest extends BaseTest {
 		
 		Assert.assertEquals(driverReslut.getResult(), "tested");
 	}
-
 }

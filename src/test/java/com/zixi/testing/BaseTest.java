@@ -35,12 +35,14 @@ public class BaseTest {
 	
 	// It is an interface, all test drivers have to implement this interface.
 	protected TestDriver 						testDriver; //Reference to test driver interface. 
-	protected ClassLoader 						classLoader;
-	protected Object 							driverObj;
-	protected Method 							m;
+	
+	//protected ClassLoader 					classLoader;
+	//protected Object 							driverObj;
+	//protected Method 							m;
+	
 	protected String 							testid; // Stores unique test number which is the number provided by TestLink test management system. 
 	protected String 							version						= 	""; // Stores the SUT version (feeder broadcaster receiver).
-	protected String 							automationTestIdentifiers 	= 	"";
+	protected String 							automationTestIdentifiers 	= 	""; // Stores an qutomation test name and automation suite name, then it will be written to TestLinlk. 
 	protected ProductAboutDriver 				productAboutDriver 			= 	new ProductAboutDriver();
 	protected TestBaseFunction 					testBaseFunction 			= 	new TestBaseFunction ();
 	protected StringBuffer 						testFlowDescriptor 			=	new StringBuffer("Test flow: "); // Put it any place in order to describe a test flow.
@@ -56,7 +58,7 @@ public class BaseTest {
 	protected static  StreamHandler				STREAMHANDLER				= 	null;
 	
 	// Reflection stuff.
-	protected Class 							c;
+	//protected Class 							c;
 	protected Object 							params[];
 	protected String 							manulDescription 			= 	"";
 	
@@ -95,14 +97,14 @@ public class BaseTest {
         if (result.isSuccess()) 
         {
         	LOGGER.info("Test duration[ms]: " + testDuration);
-            tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + version + "\n"+  
+            tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"+  
             automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor +
             "\nTest duration[ms]: " + testDuration + "\n " + " Test notes " + driverReslut.touchResutlDescription(" "), getBuildIdFromFile()); // pass data to a testLink notes in test execution.
         } 
         else 
         {
         	LOGGER.info("Test duration[ms]: " + testDuration);
-            tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + version + "\n" +  
+            tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
             automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
             "\nTest duration[ms]: " + testDuration + "\n" + "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + 
             result.getThrowable().getStackTrace()  + " Test notes " + driverReslut.touchResutlDescription(" ") , getBuildIdFromFile());
@@ -115,7 +117,7 @@ public class BaseTest {
      LOGGER.exiting(getClass().getName(), "afterTest");
     }
 	
-	protected String buildTestParametersString(String parametersNmes[], String[] paramertersValues)
+	protected String  buildTestParametersString(String parametersNmes[], String[] paramertersValues)
 	{
 		StringBuffer sb = new StringBuffer();
 		int length = parametersNmes.length;
@@ -123,7 +125,8 @@ public class BaseTest {
 		{
 			sb.append("\n").append(parametersNmes[i]).append(" = ").append(paramertersValues[i]); 
 		}
-		return sb.toString();
+		testLinktestParameters =  sb.toString();
+		return testLinktestParameters;
 	}
 	
 	protected class TestBaseFunction {

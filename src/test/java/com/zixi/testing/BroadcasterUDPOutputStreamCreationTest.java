@@ -24,9 +24,9 @@ public class BroadcasterUDPOutputStreamCreationTest extends BaseTest{
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "port", "stream",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "port", "stream",
 		"streamname", "host", "id", "rtp", "fec", "smoothing", "ttl", "remux_bitrate", "df", "local_port", "dec_key", "type", "rows",
 		"remux_buff", "local_ip", "remux_restampdts", "uiport", "remux_pcr", "dec_type", "cols" ,"testid"}, 
 		new String[] {userName, userPass, login_ip, port, stream, streamname, host, id, rtp, fec, smoothing, ttl, remux_bitrate, df, local_port, dec_key, type, rows,

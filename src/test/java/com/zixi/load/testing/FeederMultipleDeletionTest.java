@@ -26,15 +26,15 @@ public class FeederMultipleDeletionTest  extends BaseTest{
 	public void broadcasterMultiplePullInCreation(String userName_feeder, String userPass_feeder, String login_ip_feeder, String uiport, 
 	String mip, String port, String ip, String prog, String chan, String type) throws Exception {
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip_feeder, uiport, userName_feeder, userPass_feeder);
+		productAboutDriver.getBroadcasterVersion(login_ip_feeder, uiport, userName_feeder, userPass_feeder);
 		
 		// Here we take PIDs from a two broadcaster servers because of in this particular test case a two different broadcasters are involved.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_feeder,  "22",  "pidof zixi_feeder");
 		
 		// Gather the test parameters in order to pass them to the TestLink
-		testLinktestParameters = buildTestParametersString(new String[] { "userName_feeder", "userPass_feeder", "login_ip_feeder", "uiport", "mip",  "port", "ip", "prog", "chan", "type"}, 
+		buildTestParametersString(new String[] { "userName_feeder", "userPass_feeder", "login_ip_feeder", "uiport", "mip",  "port", "ip", "prog", "chan", "type"}, 
 				
-		 new String[] { userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type });
+		new String[] { userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type });
 		
 		driverReslut = ((FeederMultipleDeletionDriver) testDriver).testIMPL(userName_feeder, userPass_feeder, login_ip_feeder, uiport, mip, port, ip, prog, chan, type);
 		

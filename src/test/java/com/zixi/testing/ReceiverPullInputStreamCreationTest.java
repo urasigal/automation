@@ -18,7 +18,7 @@ public class ReceiverPullInputStreamCreationTest extends BaseTest{
 	String fec_adaptive, String fec_aware, String fec_force, String fec_latency, String fec_overhead, String host, String latency, String min_bit, String name, String nic,
 	String port, String session, String stream,String testid) throws Exception {
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "dec_key", "dec_type", "fec_adaptive", "fec_aware", "fec_force",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "dec_key", "dec_type", "fec_adaptive", "fec_aware", "fec_force",
 		"fec_latency", "fec_overhead", "host", "latency", "min_bit", "name", "nic", "port", "session", "stream" ,"testid"}, 
 				
 		new String[] { userName, userPass, login_ip, uiport, dec_key, dec_type, fec_adaptive, fec_aware, fec_force, fec_latency, fec_overhead, host, latency, min_bit,

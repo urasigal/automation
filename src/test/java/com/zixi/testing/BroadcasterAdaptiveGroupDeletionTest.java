@@ -18,9 +18,9 @@ public class BroadcasterAdaptiveGroupDeletionTest extends BaseTest{
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 				
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name", "testid" }, 
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name", "testid" }, 
 						
 		new String[] { userName, userPass, login_ip, uiport, name, testid });
 		driverReslut = ((BroadcasterAdaptiveGroupDeletionDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport, name);

@@ -21,11 +21,11 @@ public class BroadcasterPushOutStreamCreationGeneralTest extends BaseTest {
 	String session, String fec_adaptive, String nic, String fec_block, String type, String snames, String fec_aware, String fec_overhead,
 	String stream, String port, String uiport, String alias, String id, String link1, String link2, String bond_links, String testid) throws Exception {
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "host", "latency", "fec_force", "session", "fec_adaptive", "nic", "fec_block", "type",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "host", "latency", "fec_force", "session", "fec_adaptive", "nic", "fec_block", "type",
 		"snames", "fec_aware", "fec_overhead", "stream", "port", "uiport", "alias", "id", "link1", "link2", "bond_links", "testid"}, 
 		
 		new String[] { userName, userPass, login_ip, host, latency, fec_force, session, fec_adaptive, nic, fec_block, type, snames, fec_aware, fec_overhead, 
