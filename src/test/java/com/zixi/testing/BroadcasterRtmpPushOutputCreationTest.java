@@ -22,10 +22,10 @@ public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
 		// This is data structure to store a test parameters then provide it to TestLink integration.
-		testLinktestParameters = buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "uiport", "type",
+	    buildTestParametersString(new String[] { "login_ip", "userName", "userPassword", "uiport", "type",
 		"name", "stream", "matrix", "url", "url_alt", "rtmp_stream", "user", "bandwidth", "latency", "reconnect", "sendfi",
 		"disconnect_low_br", "static_latency", "dec_type", "dec_key", "password", "testid" }, 
 		new String[] { login_ip, userName, userPassword, uiport, type, name, stream, matrix, url, url_alt, rtmp_stream, user, bandwidth, latency, reconnect, sendfi,

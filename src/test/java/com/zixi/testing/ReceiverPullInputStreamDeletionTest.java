@@ -16,7 +16,7 @@ public class ReceiverPullInputStreamDeletionTest extends BaseTest{
 	public void feederOutputToBxTest(String userName, String userPassword, String login_ip, String uiport, String id,String testid)
 	throws Exception {
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id" ,"testid" }, 
+		buildTestParametersString(new String[] { "userName", "userPassword", "login_ip", "uiport", "id" ,"testid" }, 
 				
 		new String[] { userName, userPassword, login_ip, uiport, id ,testid });
 			

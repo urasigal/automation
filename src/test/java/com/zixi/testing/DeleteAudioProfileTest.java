@@ -15,18 +15,14 @@ public class DeleteAudioProfileTest extends BaseTest{
 	@Parameters({ "userName","userPass", "login_ip", "uiport", "profile_name", "testid"})
 	@Test
 	public void broadcasterPullInCreation(String userName, String userPass, String login_ip, String uiport, String profile_name, String testid)
-			throws Exception {
-		// Set the "testid" parameter to an "extended" class property.
-		this.testid = testid; 
+	throws Exception {
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testLinktestParameters = buildTestParametersString(new String[] {"userName","userPass", "login_ip", "uiport","profile_name",
-				"testid"}, new String[] { userName, userPass, login_ip, uiport, profile_name, testid});
+		buildTestParametersString(new String[] {"userName","userPass", "login_ip", "uiport","profile_name",
+		"testid"}, new String[] { userName, userPass, login_ip, uiport, profile_name, testid});
 		
-		Assert.assertEquals(((DeleteAudioProfileDriver) testDriver)
-				.testIMPL(userName, userPass, login_ip, uiport, profile_name, testid), 
-				"Profile deleted");
+		Assert.assertEquals(((DeleteAudioProfileDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, profile_name, testid), 
+		"Profile deleted");
 	}
-
 }

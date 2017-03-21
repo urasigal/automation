@@ -28,10 +28,10 @@ public class BroadcasterRtmpInputEncryptedTest extends BaseTest {
 	String mcast_out, String complete, String max_outputs, String on,
 	String testid) throws Exception {
 
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "enc-type","enc-key", "disconnect_low_br","rtmp_nulls", "id",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "enc-type","enc-key", "disconnect_low_br","rtmp_nulls", "id",
 		"rtmp_url", "rtmp_name", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "type", "rtmp_user", "rtmp_bitrate", "rtmp_passwd",
 		"uiport", "mcast_ttl", "rtmp_latency", "mcast_out", "complete","max_outputs", "on" ,"testid"}, 
 		

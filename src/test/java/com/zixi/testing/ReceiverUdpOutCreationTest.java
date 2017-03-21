@@ -18,7 +18,7 @@ public class ReceiverUdpOutCreationTest extends BaseTest {
 	String type, String nic, String ttl, String smoothing, String rtp,String fec, String rows, String cols, String remux_bitrate, String input_stream,
 	String testid) throws Exception {
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
 		"target", "type", "nic", "ttl", "smoothing", "rtp", "fec", "rows","cols", "remux_bitrate", "input_stream", "testid"}, 
 		
 		new String[] { userName, userPass, login_ip, uiport, name,target, type, nic, ttl, smoothing, rtp, fec, rows,cols, remux_bitrate, input_stream, testid });
@@ -28,5 +28,4 @@ public class ReceiverUdpOutCreationTest extends BaseTest {
 		
 		Assert.assertEquals(driverReslut.getResult(), "Stream "  + "'"+ target + "'"+ " added.");
 	}
-
 }

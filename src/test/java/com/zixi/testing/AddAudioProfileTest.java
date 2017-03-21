@@ -13,16 +13,8 @@ public class AddAudioProfileTest extends BaseTest{
 		testDriver = new AddAudioProfileDriver();
 	}
 
-	@Parameters({ 
-		"userName",
-		"userPass", 
-		"login_ip", 
-		"uiport",
-		"profile_name",
-		"enc",
-		"bitrate",
-		"profile",
-		"testid"})
+	@Parameters({  "userName", "userPass",  "login_ip", "uiport", "profile_name", "enc", "bitrate", "profile",
+	"testid"})
 	@Test
 	public void broadcasterPullInCreation(String userName, String userPass, String login_ip, String uiport, String profile_name, String enc, 
 			String bitrate, String profile , String testid)
@@ -30,10 +22,10 @@ public class AddAudioProfileTest extends BaseTest{
 		// Set the "testid" parameter to an "extended" class property.
 		this.testid = testid; 
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testLinktestParameters = buildTestParametersString(new String[] {"userName","userPass", "login_ip", "uiport","profile_name","enc","bitrate","profile",
-				"testid"}, new String[] { userName, userPass, login_ip, uiport, profile_name, enc, bitrate, profile, testid});
+		buildTestParametersString(new String[] {"userName","userPass", "login_ip", "uiport","profile_name","enc","bitrate","profile",
+		"testid"}, new String[] { userName, userPass, login_ip, uiport, profile_name, enc, bitrate, profile, testid});
 		
 		Assert.assertEquals(((AddAudioProfileDriver) testDriver)
 				.testIMPL(userName, userPass, login_ip, uiport, profile_name, enc, bitrate, profile, testid), 

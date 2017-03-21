@@ -6,8 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.VisualQualityDriver;
 
-public class VisualQualityTest extends BaseTest{
-	
+public class VisualQualityTest extends BaseTest{	
 	
 	@BeforeClass
 	public void testInit() { testDriver = new VisualQualityDriver(); }
@@ -16,7 +15,7 @@ public class VisualQualityTest extends BaseTest{
 	@Test
 	public void broadcasterRtmpPullTest(String testid) throws InterruptedException {
 		
-		testLinktestParameters = buildTestParametersString(new String[] {"testid"}, 
+		buildTestParametersString(new String[] {"testid"}, 
 		new String[] {testid});
 		
 		String testResult = ((VisualQualityDriver) testDriver).testVideo();

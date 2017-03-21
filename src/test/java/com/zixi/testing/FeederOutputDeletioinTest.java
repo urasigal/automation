@@ -17,7 +17,7 @@ public class FeederOutputDeletioinTest extends BaseTest{
 	String mip, String port, String ip, String prog, String chan, String type, String host,String testid) throws Exception {
 		
 		// Writes test results to the TestLink.
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip","port", "ip", "prog", "chan", "type","host" ,"testid" }, 
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "id", "mip","port", "ip", "prog", "chan", "type","host" ,"testid" }, 
 		new String[] { userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type,host ,testid });
 		
 		driverReslut = ((FeederOutputDeletionDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, id, mip, port, ip, prog, chan, type, host);

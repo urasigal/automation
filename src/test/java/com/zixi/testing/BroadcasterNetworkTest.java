@@ -19,9 +19,9 @@ public class BroadcasterNetworkTest extends BaseTest{
 	public void compareIpsTest(String sshuser, String sshpass, String sshaddress, String sshport,  String command, String login_ip, String uiport, 
 	String userName, String userPass, String testid) throws Exception {
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		 productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "sshuser", "sshpass", "sshaddress", "sshport", "command", "login_ip", "uiport",
+		buildTestParametersString(new String[] { "sshuser", "sshpass", "sshaddress", "sshport", "command", "login_ip", "uiport",
 		"userName", "userPass","testid" }, new String[] { sshuser, sshpass, sshaddress, sshport, command, login_ip, uiport, userName, userPass,testid});
 		
 		String ips[] = ((NetworkingDriver)testDriver).getServerInterfacesAddresses(sshuser, sshpass, sshaddress, sshport, command);

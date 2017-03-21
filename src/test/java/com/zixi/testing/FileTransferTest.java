@@ -15,7 +15,7 @@ public class FileTransferTest extends BaseTest{
 	@Test
 	public void fileTransfer(String destinationServerIP, String destinationServerPort, String fiel_upload_mode, String testid) throws InterruptedException, IOException 
 	{ 
-		testLinktestParameters = buildTestParametersString(new String[] {"destinationServerIP", "destinationServerPort", "fiel_upload_mode", "testid"}, 
+		buildTestParametersString(new String[] {"destinationServerIP", "destinationServerPort", "fiel_upload_mode", "testid"}, 
 		new String[] {destinationServerIP, destinationServerPort, fiel_upload_mode, testid });
 		
 		driverReslut = ((BroadcasterFileUploadDriver) testDriver).testIMPL(destinationServerIP, destinationServerPort, fiel_upload_mode);

@@ -43,10 +43,10 @@ public class BroadcasterMultipleRtmpPushTest extends BaseTest{
 		String sutProcessIdBX2 = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX2,  "22",  "pidof zixi_broadcaster");
 		
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
-		this.version = productAboutDriver.getBroadcasterVersion(login_ipBX1, uiportBX1, userNameBX1, userPasswordBX1);
+		productAboutDriver.getBroadcasterVersion(login_ipBX1, uiportBX1, userNameBX1, userPasswordBX1);
 		InnerHelper innerHelper = new InnerHelper();		
 		
-		testLinktestParameters = innerHelper.saveParameters(login_ipBX1, login_ipBX2, userNameBX1, userNameBX2, userPasswordBX1, userPasswordBX2, uiportBX1, uiportBX2, typeBX1, name, stream, matrixBX1,
+		innerHelper.saveParameters(login_ipBX1, login_ipBX2, userNameBX1, userNameBX2, userPasswordBX1, userPasswordBX2, uiportBX1, uiportBX2, typeBX1, name, stream, matrixBX1,
 		url, url_alt, rtmp_stream, user, bandwidth, latency, reconnect, sendfi, disconnect_low_br, static_latency, dec_type,
 		dec_key, password, typeBX2, sutProcessIdBX2, matrixBX2, max_outputs, mcast_out, time_shift, old, fast_connect, kompression, enc_type, 
 		enc_key, rec_history, rec_duration, rtmp_url, rtmp_name, rtmp_user, number_of_streams, testid);

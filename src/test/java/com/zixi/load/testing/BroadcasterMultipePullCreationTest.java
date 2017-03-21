@@ -33,7 +33,7 @@ public class BroadcasterMultipePullCreationTest extends BaseTest
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		// Gather the test parameters in order to pass them to the TestLink
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "Host", "login_ip", "id", "source",
+		buildTestParametersString(new String[] { "userName", "userPass", "Host", "login_ip", "id", "source",
 		"uiport", "pull_port", "latency", "fec_latency", "fec_overhead", "mcast_force", "time_shift", "nic", "max_outputs", "type",
 		"password", "mcast_port", "complete", "mcast_ip", "fec_adaptive","mcast_ttl", "on", "func", "fec_force", "mcast_out", "propertiesFile", "dec_type", "dec_key",
 		"number_of_streams", "testid"}, 

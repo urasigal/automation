@@ -21,9 +21,9 @@ public class BroadcasterCreateAddaptiveGroupTest extends BaseTest {
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
 		"record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi", "multicast", "streams", "bitrates", "max_time", "testid" }, 
 		new String[] { "userName", "userPass", "login_ip", "uiport", "name","record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi",
 		"multicast", "streams", "bitrates", "max_time", "testid" });

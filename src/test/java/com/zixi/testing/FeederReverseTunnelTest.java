@@ -20,7 +20,7 @@ public class FeederReverseTunnelTest extends BaseTest{
 	throws InterruptedException, IOException, JSchException {
 		
 		// Provide parameters to a TestLink.
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "sshPass", "login_ip", "ssh_port", "ssh_user", "reverse_port", "testid"}, 
+		buildTestParametersString(new String[] { "userName", "sshPass", "login_ip", "ssh_port", "ssh_user", "reverse_port", "testid"}, 
 		new String[] { userName, sshPass, login_ip, ssh_port, ssh_user, reverse_port, testid });
 		
 		driverReslut = ((FeederReverseTunnelDriver) testDriver).testIMPL(userName, sshPass, login_ip, ssh_port, ssh_user, reverse_port);

@@ -45,14 +45,14 @@ public class FeederBroadcasterBondingMultipleThreeLinkTest extends BaseTest{
 		String max_outputs, String on, String password, String dec_type, String dec_key, String number_of_streams, String testid) throws Exception {
 			
 			
-			this.version = productAboutDriver.getBroadcasterVersion(login_ip_feeder, uiport_feeder, userName_feeder, userPass_feeder);
+			productAboutDriver.getBroadcasterVersion(login_ip_feeder, uiport_feeder, userName_feeder, userPass_feeder);
 			
 			// Here we take PIDs from a two broadcaster servers because of in this particular test case a two different broadcasters are involved.
 			sutProcessId         = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_feeder,  "22",  "pidof zixi_feeder");
 			String sutProcessId2 = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_broadcaster,  "22",  "pidof zixi_broadcaster");
 			
 			// Gather the test parameters in order to pass them to the TestLink
-			testLinktestParameters = buildTestParametersString(new String[] { "userName_feeder", "userPass_feeder", "login_ip_feeder", "name", "mip", "port", "ip", "prog", "chan", "type_feeder", 
+			buildTestParametersString(new String[] { "userName_feeder", "userPass_feeder", "login_ip_feeder", "name", "mip", "port", "ip", "prog", "chan", "type_feeder", 
 			"ostr", "oses", "oetp", "oeky", "obit", "olat", "ofc", "ocmp", "oold", "onfec", "fec_force", "fec_adaptive", "ofec",
 			"ofecl", "stop_on_drop", "mmt", "smoothing", "limited", "minbps", "lim_enc_addr", "pad_to_cbr", "rtmp_feedback", "group", 
 			"bonded", "bond_host1", "bond_port1", "bond_nic1", "bond_limit1", "bond_backup1", "bond_host2", "bond_port2", "bond_nic2",
@@ -61,8 +61,7 @@ public class FeederBroadcasterBondingMultipleThreeLinkTest extends BaseTest{
 			"time_shift", "force_p2p", "mcast_ip", "mcast_force", "mcast_port", "type_broadcaster", "uiport_broadcaster", "analyze", 
 			"mcast_ttl", "id", "mcast_out", "complete", "max_outputs", "on", "password", "dec_type", "dec_key", "number_of_streams", "testid" }, 
 					
-			 new String[] { 
-			 userName_feeder, userPass_feeder, login_ip_feeder, name, mip, port,  ip,  prog, chan, type_feeder, ostr, oses, oetp, oeky, obit, 
+			 new String[] { userName_feeder, userPass_feeder, login_ip_feeder, name, mip, port,  ip,  prog, chan, type_feeder, ostr, oses, oetp, oeky, obit, 
 			 olat, ofc, ocmp, oold, onfec, fec_force, fec_adaptive, ofec, ofecl, stop_on_drop, mmt, smoothing, limited, minbps, lim_enc_addr, pad_to_cbr,
 			 rtmp_feedback, group, bonded, bond_host1, bond_port1, bond_nic1, bond_limit1, bond_backup1, bond_host2, bond_port2, bond_nic2, bond_limit2, 
 			 bond_backup2, bond_host3, bond_port3, bond_nic3, bond_limit3, bond_backup3, uiport_feeder, userName_broadcaster, userPass_broadcaster, login_ip_broadcaster, latency, time_shift, force_p2p, mcast_ip, 

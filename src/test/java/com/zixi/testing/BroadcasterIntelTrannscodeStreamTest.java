@@ -23,9 +23,9 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTest {
 	String bit, String profile_name, String mode, String testid)
 	throws Exception {
 
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip,uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip,uiport, userName, userPass);
 
-		testLinktestParameters = buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "old",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "old",
 		"fast_connect", "kompression", "enc_type", "enc_key", "rec_history", "rec_duration", "src", "ap", "ll", "all_pids", "bit", "profile_name", "mode", "testid" },
 
 		new String[] { userName,  userPass,  login_ip,  uiport,  type, id,  matrix,  max_outputs,  mcast_out,  time_shift,  old,
@@ -35,5 +35,4 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTest {
 		 matrix,  max_outputs,  mcast_out,  time_shift,  old, fast_connect,  kompression,  enc_type,  enc_key,  rec_history,  rec_duration,  src, ap,  ll,  all_pids,
 		 bit,  profile_name, mode), "Stream " + "'" + id + "'" + " added.");
 	}
-
 }

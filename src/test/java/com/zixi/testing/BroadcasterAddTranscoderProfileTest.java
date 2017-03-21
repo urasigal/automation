@@ -28,9 +28,9 @@ public class BroadcasterAddTranscoderProfileTest extends BaseTest {
 	throws Exception {
 		
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 				
-		testLinktestParameters = buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "profile_name",
+		buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "profile_name",
 		"enc", "bitrate", "gop", "fixed_gop", "closed_gop", "performance",
 		"b_frames", "frame_type", "profile", "level", "bitrate_mode", "ref_frames", "idr_int", "cavlc", "brightness", "contrast", "fps",
 		"width", "height", "max_bitrate", "testid"  }, 
