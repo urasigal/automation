@@ -93,7 +93,11 @@
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="827" />   
 		<classes>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest">
+		    <methods>
+        		<include name="feederOutputToBxTest" />
+     		 </methods>
+     		 </class>
 		</classes> 
 	</test>
 	<test name="Broadcaster - Push from Feeder input stream statistics (main broadcaster test) - with redundant host">

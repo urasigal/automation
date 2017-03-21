@@ -79,8 +79,6 @@ public class BaseTest {
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
 		testDriver.setLogger(LOGGER); // Provide logger instance 
-		//TestlinkIntegration tl = new TestlinkIntegration();
-		//tl.setResult(testid,ExecutionStatus.BLOCKED,this.getClass().getCanonicalName(), getBuildIdFromFile());
 	}
 	
 	// Write test results to the TestLink.
@@ -89,7 +87,6 @@ public class BaseTest {
 	{
 	 testDuration = System.currentTimeMillis() - testDuration;
 	 LOGGER.entering(this.getClass().getName(), "afterTest");
-	 LOGGER.entering(this.getClass().getName(), "afterTest");
      
 	 try
      {		
@@ -97,6 +94,7 @@ public class BaseTest {
         if (result.isSuccess()) 
         {
         	LOGGER.info("Test duration[ms]: " + testDuration);
+        	
             tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"+  
             automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor +
             "\nTest duration[ms]: " + testDuration + "\n " + " Test notes " + driverReslut.touchResutlDescription(" "), getBuildIdFromFile()); // pass data to a testLink notes in test execution.
@@ -104,6 +102,7 @@ public class BaseTest {
         else 
         {
         	LOGGER.info("Test duration[ms]: " + testDuration);
+        	
             tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
             automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
             "\nTest duration[ms]: " + testDuration + "\n" + "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + 
