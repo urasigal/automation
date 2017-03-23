@@ -29,7 +29,7 @@ public class BroadcasterMultipePullCreationTest extends BaseTest
 		// TestLink debug message. 
 		testFlowDescriptor.append("\nStart the \"BroadcasterMultipePullCreationTest\" test");
 		
-		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		// Gather the test parameters in order to pass them to the TestLink
