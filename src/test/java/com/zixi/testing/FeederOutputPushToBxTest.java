@@ -26,7 +26,7 @@ public class FeederOutputPushToBxTest extends BaseTest{
 		String rtmp_feedback, String ohst, String oprt, String onic, String oalt,String bonded, String uiport,String testid) throws Exception {
 		
 		// Save test parameters in order to pass them to testLink.
-		 buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "name", "mip", "port",
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "name", "mip", "port",
 		"ip", "prog", "chan", "type", "ostr", "oses", "oetp", "oeky", "obit", "olat", "ofc", "ocmp", "oold", "onfec", "fec_force",
 		"fec_adaptive", "ofec", "ofecl", "stop_on_drop", "mmt", "smoothing", "limited", "minbps", "lim_enc_addr", "pad_to_cbr",
 		"rtmp_feedback", "ohst", "oprt", "onic", "oalt","bonded","uiport" ,"testid"}, 
@@ -69,6 +69,7 @@ public class FeederOutputPushToBxTest extends BaseTest{
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");
 		
+		// Execute a test
 		driverReslut = ((FeederOutputPushToBxDriver) testDriver).testIMPL(userName, userPass, login_ip, name, mip, port, ip, prog, chan, type, ostr, oses, oetp, oeky, obit,
 		olat, ofc, ocmp, oold, onfec, fec_force, fec_adaptive, ofec, ofecl, stop_on_drop, mmt, smoothing, limited, minbps, lim_enc_addr, pad_to_cbr, rtmp_feedback, ohst,
 		oprt, onic, oalt,bonded,rtmp_stream, rtmp_url, rtmp_user, rtmp_pass, rtmp_url2, rtmp_hot, uiport).getResultObj();
