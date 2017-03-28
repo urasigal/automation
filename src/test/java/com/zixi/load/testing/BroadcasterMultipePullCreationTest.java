@@ -26,7 +26,7 @@ public class BroadcasterMultipePullCreationTest extends BaseTest
 		String mcast_ip, String fec_adaptive, String mcast_ttl, String on, String func, String fec_force, String mcast_out,
 		String propertiesFile, String dec_type, String dec_key, String number_of_streams,  String testid) throws Exception {
 		
-		// TestLink debug message. 
+		// TestLink debug message. Not thread safe.
 		testFlowDescriptor.append("\nStart the \"BroadcasterMultipePullCreationTest\" test");
 		
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
@@ -46,7 +46,7 @@ public class BroadcasterMultipePullCreationTest extends BaseTest
 		mcast_port, complete, mcast_ip, fec_adaptive, mcast_ttl, on, func, fec_force, mcast_out, propertiesFile, dec_type, dec_key, number_of_streams);
 		
 		// The actual test method.
-		Assert.assertEquals(driverReslut.getResult(), "pass");
+		Assert.assertEquals(driverReslut.getResult(), "Tne number of added threads is " + number_of_streams);
 		
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
