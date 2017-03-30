@@ -24,6 +24,7 @@ import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
 
 import com.zixi.drivers.drivers.*;
+import com.zixi.drivers.setup.SetSutUpTimeDriver;
 import com.zixi.drivers.tools.DriverReslut;
 import com.zixi.tools.TestlinkIntegration;
 
@@ -34,12 +35,12 @@ import com.zixi.tools.TestlinkIntegration;
 public class BaseTest {
 	
 	// It is an interface, all test drivers have to implement this interface.
-	protected TestDriver 						testDriver; //Reference to test driver interface. 
+	protected TestDriver 						testDriver; //Reference to test driver interface. `
 	
-	//protected ClassLoader 					classLoader;
-	//protected Object 							driverObj;
-	//protected Method 							m;
-	
+	// Check SUT up time.
+	protected SetSutUpTimeDriver 				setSutUpTimeDriver;
+	protected String 							res                         =   "";
+	protected boolean 							crashFlag;
 	protected String 							testid; // Stores unique test number which is the number provided by TestLink test management system. 
 	protected String 							version						= 	""; // Stores the SUT version (feeder broadcaster receiver).
 	protected String 							automationTestIdentifiers 	= 	""; // Stores an qutomation test name and automation suite name, then it will be written to TestLinlk. 
@@ -50,15 +51,13 @@ public class BaseTest {
 	protected double 							testDuration;
 	
 	// Writes test results to the TestLink.
-	protected String 							testLinktestParameters 				= 	"";
+	protected String 							testLinktestParameters 		= 	"";
 	
 	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developers.
 	protected static  Logger       				LOGGER      				= 	null;
 	protected static  FileHandler  				FILEHANDLER 				= 	null ;
 	protected static  StreamHandler				STREAMHANDLER				= 	null;
 	
-	// Reflection stuff.
-	//protected Class 							c;
 	protected Object 							params[];
 	protected String 							manulDescription 			= 	"";
 	
@@ -66,7 +65,7 @@ public class BaseTest {
 	
 	@BeforeTest
 	public void startTest(final ITestContext testContext) {
-		automationTestIdentifiers = "Test name is: " + testContext.getName() + "\nSuite name is: " + testContext.getSuite().getName() ;
+		automationTestIdentifiers = "Test name is: " + testContext.getName() + "\nSuite name is: " + testContext.getSuite().getName();
 	}
 	
 	//@BeforeMethod: The annotated method will be run before each test method. 
@@ -74,11 +73,23 @@ public class BaseTest {
 	@BeforeMethod
 	public void beforeTes(String testid) throws TestLinkAPIException, IOException
 	{
+		setSutUpTimeDriver = new SetSutUpTimeDriver();
 		testDuration = System.currentTimeMillis();
 		LOGGER = getLoggerInstance(); 
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
 		testDriver.setLogger(LOGGER); // Provide logger instance 
+		
+		res = setSutUpTimeDriver.checkUptime("src/main/resources/uptime").getResult();
+		
+		if(res.equals("first bx good secod bx good"))
+		{
+			crashFlag = false;
+		}
+		else
+		{
+			crashFlag = true;
+		}
 	}
 	
 	// Write test results to the TestLink.
@@ -87,31 +98,44 @@ public class BaseTest {
 	{
 	 testDuration = System.currentTimeMillis() - testDuration;
 	 LOGGER.entering(this.getClass().getName(), "afterTest");
-     
+     String crashStatus = "";
+    
+     TestlinkIntegration tl = new TestlinkIntegration();
 	 try
      {		
-        TestlinkIntegration tl = new TestlinkIntegration();
-        if (result.isSuccess()) 
+        if(crashFlag)
         {
-        	LOGGER.info("Test duration[ms]: " + testDuration);
-        	
-            tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"+  
-            automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor +
-            "\nTest duration[ms]: " + testDuration + "\n " + " Test notes " + driverReslut.touchResutlDescription(" "), getBuildIdFromFile()); // pass data to a testLink notes in test execution.
-        } 
-        else 
-        {
-        	LOGGER.info("Test duration[ms]: " + testDuration);
-        	
-            tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
-            automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
-            "\nTest duration[ms]: " + testDuration + "\n" + "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + 
-            result.getThrowable().getStackTrace()  + " Test notes " + driverReslut.touchResutlDescription(" ") , getBuildIdFromFile());
+       	 crashStatus = "There was a crash in the recent tests " + res;
+	     LOGGER.info("Test duration[ms]: " + testDuration);
+	    	
+        tl.setResult(testid, ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
+        automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
+        "\nTest duration[ms]: " + testDuration + "\n" + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
         }
+        else
+        {	
+	        if (result.isSuccess()) 
+	        {
+	        	LOGGER.info("Test duration[ms]: " + testDuration);
+	        	
+	            tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"+  
+	            automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor +
+	            "\nTest duration[ms]: " + testDuration + "\n " + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile()); // pass data to a testLink notes in test execution.
+	        } 
+	        else 
+	        {
+	        	LOGGER.info("Test duration[ms]: " + testDuration);
+	        	
+	            tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
+	            automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
+	            "\nTest duration[ms]: " + testDuration + "\n" + "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + 
+	            result.getThrowable().getStackTrace()  + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
+	        }
+       }
      }
      catch(Exception e)
      {
-    	 System.out.println("The error is" + e.getMessage()); 
+    	 System.out.println("The error is " + e.getMessage()); 
      }
      LOGGER.exiting(getClass().getName(), "afterTest");
     }

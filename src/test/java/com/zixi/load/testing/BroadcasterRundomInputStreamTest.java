@@ -30,7 +30,7 @@ public class BroadcasterRundomInputStreamTest extends BaseTest
 		buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "uiport", "name", "testid"}, 
 		new String[] { login_ip, userName, userPassword, uiport, name, testid });
 		
-		testFlowDescriptor.append(" Beginning of the test (BroadcasterRundomInputStreamDriver) ");
+		testFlowDescriptor.append("Begin the test (BroadcasterRundomInputStreamDriver) ");
 		
 		driverReslut = ((BroadcasterRundomInputStreamDriver) testDriver).testIMPL(login_ip, userName, userPassword, uiport, name);
 		
