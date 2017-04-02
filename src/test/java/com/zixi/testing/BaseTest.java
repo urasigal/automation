@@ -105,12 +105,13 @@ public class BaseTest {
      {		
         if(crashFlag)
         {
-       	 crashStatus = "There was a crash in the recent tests " + res;
-	     LOGGER.info("Test duration[ms]: " + testDuration);
+       	  crashStatus = "There was a crash in the recent tests " + res;
+	      LOGGER.info("Test duration[ms]: " + testDuration);
 	    	
-        tl.setResult(testid, ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
-        automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
-        "\nTest duration[ms]: " + testDuration + "\n" + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
+          tl.setResult(testid, ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
+          automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
+          "\nTest duration[ms]: " + testDuration + "\n" + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
+          Thread.sleep(610000);
         }
         else
         {	
