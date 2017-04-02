@@ -111,6 +111,7 @@ public class BaseTest {
           tl.setResult(testid, ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
           automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
           "\nTest duration[ms]: " + testDuration + "\n" + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
+          
           Thread.sleep(610000);
         }
         else
