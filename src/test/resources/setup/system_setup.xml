@@ -15,4 +15,14 @@
      		 </methods>
 		</classes>
 	</test>
+	<test name="Set/update uptime to system file">
+		<parameter name="setUpFileLocation" value="src/main/resources/uptime" />
+		<parameter name="upTimeFileLocation" value="src/main/resources/current_uptime" />
+		<classes>
+		    <class name="com.zixi.setup.SetSutUpTimeTest"/>
+		    <methods>
+        		<include name="setUptime" />
+     		 </methods>
+		</classes>
+	</test>
 </suite>

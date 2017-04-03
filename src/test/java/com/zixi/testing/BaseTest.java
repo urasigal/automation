@@ -79,17 +79,6 @@ public class BaseTest {
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
 		testDriver.setLogger(LOGGER); // Provide logger instance 
-		
-		res = setSutUpTimeDriver.checkUptime("src/main/resources/uptime").getResult();
-		
-		if(res.equals("first bx good secod bx good"))
-		{
-			crashFlag = false;
-		}
-		else
-		{
-			crashFlag = true;
-		}
 	}
 	
 	// Write test results to the TestLink.
@@ -102,7 +91,18 @@ public class BaseTest {
     
      TestlinkIntegration tl = new TestlinkIntegration();
 	 try
-     {		
+     {	
+		 res = setSutUpTimeDriver.continuousUpTimeCheck();
+			
+			if(res.equals("pass"))
+			{
+				crashFlag = false;
+			}
+			else
+			{
+				crashFlag = true;
+			}
+		 
         if(crashFlag)
         {
        	  crashStatus = "There was a crash in the recent tests " + res;
@@ -111,8 +111,6 @@ public class BaseTest {
           tl.setResult(testid, ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
           automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
           "\nTest duration[ms]: " + testDuration + "\n" + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
-          
-          Thread.sleep(610000);
         }
         else
         {	
@@ -134,6 +132,8 @@ public class BaseTest {
 	            result.getThrowable().getStackTrace()  + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
 	        }
        }
+        
+        setSutUpTimeDriver.uptimeSet("src/main/resources/uptime", "src/main/resources/current_uptime");
      }
      catch(Exception e)
      {

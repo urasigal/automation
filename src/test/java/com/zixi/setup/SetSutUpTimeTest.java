@@ -29,4 +29,16 @@ public class SetSutUpTimeTest{
 	public void checkUptime(String setUpFileLocation) throws Exception {
 		Assert.assertEquals( ( (SetSutUpTimeDriver) testDriver).checkUptime(setUpFileLocation).getResult(), "pass" );
 	}
+	
+	
+	@Parameters({"setUpFileLocation", "upTimeFileLocation"})
+	@Test
+	public void setUptime(String setUpFileLocation, String upTimeFileLocation) throws Exception {
+		Assert.assertEquals( ( (SetSutUpTimeDriver) testDriver).uptimeSet(setUpFileLocation, upTimeFileLocation), "pass" );
+	}
+	
+	@Test
+	public void checkContinuousUptime() throws Exception {
+		Assert.assertEquals( ( (SetSutUpTimeDriver) testDriver).continuousUpTimeCheck(), "" );
+	}
 }
