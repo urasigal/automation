@@ -41,4 +41,11 @@ public class SetSutUpTimeTest{
 	public void checkContinuousUptime() throws Exception {
 		Assert.assertEquals( ( (SetSutUpTimeDriver) testDriver).continuousUpTimeCheck(), "" );
 	}
+	
+	
+//	@Parameters({"mailFolderLocation"})
+//	@Test
+//	public void checkUptime(String smailFolderLocation) throws Exception {
+//		Assert.assertEquals( ( (SetSutUpTimeDriver) testDriver).checkUptime(mailFolderLocation).getResult(), "pass" );
+//	}
 }

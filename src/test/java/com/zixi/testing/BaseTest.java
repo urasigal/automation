@@ -26,6 +26,7 @@ import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
 import com.zixi.drivers.drivers.*;
 import com.zixi.drivers.setup.SetSutUpTimeDriver;
 import com.zixi.drivers.tools.DriverReslut;
+import com.zixi.email.drivers.GoogleMailDriver;
 import com.zixi.tools.TestlinkIntegration;
 
 /*
@@ -37,6 +38,7 @@ public class BaseTest {
 	// It is an interface, all test drivers have to implement this interface.
 	protected TestDriver 						testDriver; //Reference to test driver interface. `
 	
+	protected GoogleMailDriver mail;
 	// Check SUT up time.
 	protected SetSutUpTimeDriver 				setSutUpTimeDriver;
 	protected String 							res                         =   "";
@@ -111,6 +113,11 @@ public class BaseTest {
           tl.setResult(testid, ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
           automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
           "\nTest duration[ms]: " + testDuration + "\n" + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
+         
+          String message = "Crash detected \n";
+          message =  message + tl.getTestInfo(Integer.parseInt(testid)).toString() + "\n" + "Test Parameters: "+ testLinktestParameters;;
+          String subject = "Crash detected";
+          GoogleMailDriver.sendToList(SetSutUpTimeDriver.getEmailAddressesFromSystemFolder("src/main/resources/email_addresses"), subject, message);
         }
         else
         {	
@@ -130,6 +137,11 @@ public class BaseTest {
 	            automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
 	            "\nTest duration[ms]: " + testDuration + "\n" + "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + 
 	            result.getThrowable().getStackTrace()  + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
+	            
+	            String message = "Test failed \n";
+	            message =  message + tl.getTestInfo(Integer.parseInt(testid)).toString() + "\n" + "Test Parameters: "+ testLinktestParameters;
+	            String subject = "Test failed \n";
+	            GoogleMailDriver.sendToList(SetSutUpTimeDriver.getEmailAddressesFromSystemFolder("src/main/resources/email_addresses"), subject, message);
 	        }
        }
         
