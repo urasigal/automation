@@ -52,7 +52,7 @@ public class BaseTest {
 	protected String 							sutProcessId;
 	protected double 							testDuration;
 	
-	// Writes test results to the TestLink.
+	//Writes test results to the TestLink.
 	protected String 							testLinkTestParameters 		= 	"";
 	
 	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developers.
