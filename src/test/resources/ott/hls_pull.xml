@@ -211,7 +211,7 @@
 		<parameter name="rec_duration" value="7200" />
 		<parameter name="rec_path" value="" />
 		<parameter name="rec_template" value="%S_%Y%M%D-%T.ts" />
-		<parameter name="hls_url:http" value="http://10.7.0.74:7777/adaptive.m3u8" />
+		<parameter name="hls_url" value="http://10.7.0.74:7777/adaptive.m3u8" />
 		<parameter name="testid" value="1249" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterHlsPullInputTest">
