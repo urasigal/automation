@@ -115,7 +115,7 @@ public class BaseTest {
           "\nTest duration[ms]: " + testDuration + "\n" + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
          
           String message = "Crash detected \n";
-          message =  message + tl.getTestInfo(Integer.parseInt(testid)).toString() + "\n" + "Test Parameters: "+ testLinktestParameters;;
+          message =  message + tl.getTestInfo(Integer.parseInt(testid)).toString() + "\n" + "Test Parameters: "+ testLinkTestParameters;
           String subject = "Crash detected";
           GoogleMailDriver.sendToList(SetSutUpTimeDriver.getEmailAddressesFromSystemFolder("src/main/resources/email_addresses"), subject, message);
         }
@@ -139,7 +139,7 @@ public class BaseTest {
 	            result.getThrowable().getStackTrace()  + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
 	            
 	            String message = "Test failed \n";
-	            message =  message + tl.getTestInfo(Integer.parseInt(testid)).toString() + "\n" + "Test Parameters: "+ testLinktestParameters;
+	            message =  message + tl.getTestInfo(Integer.parseInt(testid)).toString() + "\n" + "Test Parameters: "+ testLinkTestParameters;
 	            String subject = "Test failed \n";
 	            GoogleMailDriver.sendToList(SetSutUpTimeDriver.getEmailAddressesFromSystemFolder("src/main/resources/email_addresses"), subject, message);
 	        }
