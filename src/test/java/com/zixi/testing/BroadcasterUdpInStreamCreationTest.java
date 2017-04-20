@@ -32,7 +32,7 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTest {
 		
 		String[] params = new String[] { userName, userPass, login_ip, ts_port, id, rtp_type, multi_src, max_bitrate, time_shift, mcast_ip,
 		mcast_force, mcast_port, nic, type, multicast,  enc_key, kompression, uiport, mcast_ttl, enc_type,  mcast_out, complete, max_outputs, on ,testid };
-		testLinktestParameters = testBaseFunction.buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "ts_port", "id", "rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
+		testLinkTestParameters = testBaseFunction.buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "ts_port", "id", "rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
 		"mcast_force", "mcast_port", "nic", "type", "multicast", "enc_key", "kompression", "uiport", "mcast_ttl", "enc_type", "mcast_out",
 		"complete", "max_outputs", "on" ,"testid" }, params);
 		

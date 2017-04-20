@@ -53,7 +53,7 @@ public class BaseTest {
 	protected double 							testDuration;
 	
 	// Writes test results to the TestLink.
-	protected String 							testLinktestParameters 		= 	"";
+	protected String 							testLinkTestParameters 		= 	"";
 	
 	// logging stuff - uses all test cases to write a test process execution log. This log is intended to be used by a test automation developers.
 	protected static  Logger       				LOGGER      				= 	null;
@@ -111,7 +111,7 @@ public class BaseTest {
 	      LOGGER.info("Test duration[ms]: " + testDuration);
 	    	
           tl.setResult(testid, ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
-          automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
+          automationTestIdentifiers + "\nTest Parameters: "+ testLinkTestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
           "\nTest duration[ms]: " + testDuration + "\n" + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
          
           String message = "Crash detected \n";
@@ -126,7 +126,7 @@ public class BaseTest {
 	        	LOGGER.info("Test duration[ms]: " + testDuration);
 	        	
 	            tl.setResult(testid, ExecutionStatus.PASSED, this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"+  
-	            automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor +
+	            automationTestIdentifiers + "\nTest Parameters: "+ testLinkTestParameters  + "\nManul description: " + manulDescription  + testFlowDescriptor +
 	            "\nTest duration[ms]: " + testDuration + "\n " + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile()); // pass data to a testLink notes in test execution.
 	        } 
 	        else 
@@ -134,7 +134,7 @@ public class BaseTest {
 	        	LOGGER.info("Test duration[ms]: " + testDuration);
 	        	
 	            tl.setResult(testid,ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
-	            automationTestIdentifiers + "\nTest Parameters: "+ testLinktestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
+	            automationTestIdentifiers + "\nTest Parameters: "+ testLinkTestParameters + " Manul description: " + manulDescription + testFlowDescriptor + 
 	            "\nTest duration[ms]: " + testDuration + "\n" + "\n Error is " + result.getThrowable().getMessage() + "\n Exception stack trace: " + 
 	            result.getThrowable().getStackTrace()  + "Test notes " + driverReslut.touchResutlDescription(" ") + "\n" + crashStatus, getBuildIdFromFile());
 	            
@@ -162,8 +162,8 @@ public class BaseTest {
 		{
 			sb.append("\n").append(parametersNmes[i]).append(" = ").append(paramertersValues[i]); 
 		}
-		testLinktestParameters =  sb.toString();
-		return testLinktestParameters;
+		testLinkTestParameters =  sb.toString();
+		return testLinkTestParameters;
 	}
 	
 	protected class TestBaseFunction {
