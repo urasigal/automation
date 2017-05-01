@@ -200,7 +200,7 @@
 		<parameter name="matrix" value="0" />
 		<parameter name="stream" value="adaptive" />
 		<parameter name="type" value="adaptive_http" />
-		<parameter name="url" value="http://10.7.0.42:5432/west" />
+		<parameter name="url" value="http://10.7.0.90:5432/west" />
 		<parameter name="cleanup" value="0" />
 		<parameter name="encap" value="0" />
 		<parameter name="no_tls" value="0" />
@@ -212,7 +212,7 @@
 	</test>
 	
 	<test name="FFMPEG test default parameters - FFMPEG analyser adaptive HLS">
-		<parameter name="mode" value="http://10.7.0.42:4321/west/index.m3u8" /> 
+		<parameter name="mode" value="http://10.7.0.90:4321/west/index.m3u8" /> 
 		<parameter name="testid" value="7653" />  
 		<classes>
 		    <class name="com.zixi.anlalise.testing.FFMPEGImageStatisticHlsPushOutTest"/>
