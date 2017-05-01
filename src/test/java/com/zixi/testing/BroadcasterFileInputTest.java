@@ -30,9 +30,10 @@ public class BroadcasterFileInputTest extends BaseTest{
 		new String[] {userName, userPass, login_ip, uiport, type, id,
 		matrix, max_outputs, mcast_out, time_shift, old, fast_connect, kompression, enc_type, enc_key, path, testid });
 		
-		Assert.assertEquals(((BroadcasterFileInputDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, type, id,
-		matrix, max_outputs, mcast_out, time_shift, old, fast_connect, kompression, enc_type, enc_key, path),
-		"Stream " + "'" + id + "'" + " added.");
+		driverReslut = ((BroadcasterFileInputDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, type, id,
+		matrix, max_outputs, mcast_out, time_shift, old, fast_connect, kompression, enc_type, enc_key, path);
+		
+		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 	}
 	
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "id", "on","testid" })
