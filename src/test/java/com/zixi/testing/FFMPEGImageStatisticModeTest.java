@@ -7,8 +7,6 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver;
 
 public class FFMPEGImageStatisticModeTest extends BaseTest{
-
-	
 	@BeforeClass
 	public void testInit() {testDriver = new FFMPEGImageStatisticTestDriver(); }
 
