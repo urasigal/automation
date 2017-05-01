@@ -27,12 +27,13 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTest {
 
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "old",
 		"fast_connect", "kompression", "enc_type", "enc_key", "rec_history", "rec_duration", "src", "ap", "ll", "all_pids", "bit", "profile_name", "mode", "testid" },
-
 		new String[] { userName,  userPass,  login_ip,  uiport,  type, id,  matrix,  max_outputs,  mcast_out,  time_shift,  old,
-		 fast_connect,  kompression,  enc_type,  enc_key, rec_history,  rec_duration,  src,  ap,  ll,  all_pids,  bit,  profile_name, mode, testid });
+		fast_connect,  kompression,  enc_type,  enc_key, rec_history,  rec_duration,  src,  ap,  ll,  all_pids,  bit,  profile_name, mode, testid });
 
-		Assert.assertEquals(((BroadcasterTrannscodeStreamDriver) testDriver) .testIMPL( userName,  userPass,  login_ip,  uiport,  type, id,
-		 matrix,  max_outputs,  mcast_out,  time_shift,  old, fast_connect,  kompression,  enc_type,  enc_key,  rec_history,  rec_duration,  src, ap,  ll,  all_pids,
-		 bit,  profile_name, mode), "Stream " + "'" + id + "'" + " added.");
+		driverReslut = ((BroadcasterTrannscodeStreamDriver) testDriver) .testIMPL( userName,  userPass,  login_ip,  uiport,  type, id,
+	    matrix,  max_outputs,  mcast_out,  time_shift,  old, fast_connect,  kompression,  enc_type,  enc_key,  rec_history,  rec_duration,  src, ap,  ll,  all_pids,
+	    bit,  profile_name, mode);
+		
+		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 	}
 }
