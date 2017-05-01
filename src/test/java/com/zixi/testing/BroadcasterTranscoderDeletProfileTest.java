@@ -25,7 +25,7 @@ public class BroadcasterTranscoderDeletProfileTest extends BaseTest{
 				
 		new String[] {userName,userPass, login_ip, uiport, profile_name,testid });
 		
-		Assert.assertEquals(((BroadcasterTranscoderDeletProfileDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, profile_name),
+		Assert.assertEquals(((BroadcasterTranscoderDeletProfileDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, profile_name).getResult(),
 		"Profile deleted");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
