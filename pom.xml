@@ -83,17 +83,39 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/ott/hls_push_out.xml</suiteXmlFile>
 					    
+						<suiteXmlFile>src/test/resources/pull/broadcaster_pull_load.xml</suiteXmlFile>
 						
+						<suiteXmlFile>src/test/resources/push/broadcaster_push_load.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>src/test/resources/push/broadcaster_bonded_push_load.xml</suiteXmlFile> -->
 						
+						<suiteXmlFile>src/test/resources/rtmp/rtmp_pull_load_test.xml</suiteXmlFile>  
+						<suiteXmlFile>src/test/resources/rtmp/rtmp_push_load.xml</suiteXmlFile> 
 						
-						
+						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_three_links_load.xml</suiteXmlFile>
+				
+						<suiteXmlFile>src/test/resources/udp/broadcster_udp_load.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<properties>
 						<property>
 							<name>usedefaultlisteners</name>
 							<value>false</value>
+						</property>
+					</properties>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
 						</property>
 					</properties>
 				</configuration>
