@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.zixi.testing</groupId>
+	<artifactId>automation</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>br.eti.kinoshita</groupId>
+			<artifactId>testlink-java-api</artifactId>
+			<version>1.9.6-1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.4</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20141113</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.2</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.53</version>
+		</dependency>
+	   <dependency>
+		  <groupId>com.zixi.drivers</groupId>
+		  <artifactId>drivers</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
+<<<<<<< HEAD
+					    
+						<suiteXmlFile>src/test/resources/pull/pull.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/pull/password_pull.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/push/push.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/rtmp/rtmp.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/rtmp/rtmp_push.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/wholeconnectionscenario.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/udpinrtmpout.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/feeder/feederudpout.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feederbxsetup.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_two_links.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_three_links.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/back_up_feeder_bonding_full_limitation.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feedersmoothing.xml</suiteXmlFile>
+				
+						<suiteXmlFile>src/test/resources/udp/udp.xml</suiteXmlFile>
+=======
+					    <suiteXmlFile>src/test/resources/ott/hls_push_out.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/vod.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/zixiadaptive.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/broadcasterhlstoffmpeg.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/broadcasterflvtoffmpeg.xml</suiteXmlFile>
+					    
+						<suiteXmlFile>src/test/resources/pull/ffmpeg_pull_input.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/push/ffmpegpush.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/ffmpegfullpath.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/encryption/ffmpeg_full_path_encrypt.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/encryption/ffmpeg_full_encryption_with_fec.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/udp/broadcaster_udp_encryption_reciver_decryption.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/encryption/ffmpeg_semi_path_encrypt.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/feeder/feederredundency.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feeder_to_broadcaser_remote_rtmp_output.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/redundancy/broadcaster_alternative_host_delete_scn.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/redundancy/broadcaster_alternative_host_stop_scn.xml</suiteXmlFile>
+						
+>>>>>>> centos7_new_setup
+					</suiteXmlFiles>
+					<properties>
+						<property>
+							<name>usedefaultlisteners</name>
+							<value>false</value>
+						</property>
+					</properties>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
