@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcasterConfigMulticastPoolDriver;
 import com.zixi.drivers.drivers.BroadcasterUpdateSettingsDriver;
 
-public class BroadcasterUpdateSettingsTest extends BaseTest{
+public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestartCase{
 	
 	@BeforeClass
 	public void testInit() {  testDriver = new BroadcasterUpdateSettingsDriver(); }

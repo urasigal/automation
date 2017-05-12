@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcasterAddTranscoderProfileDriver;
 
-public class BroadcasterAddTranscoderProfileTest extends BaseTest {
+public class BroadcasterAddTranscoderProfileTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() {

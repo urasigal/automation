@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver;
 
-public class FFMPEGImageStatisticModeTest extends BaseTest{
+public class FFMPEGImageStatisticModeTest extends BaseTestZixiMainComponents{
 	@BeforeClass
 	public void testInit() {testDriver = new FFMPEGImageStatisticTestDriver(); }
 

@@ -9,7 +9,7 @@ import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterHlsPullInputDriver;
 import com.zixi.drivers.drivers.BroadcasterPushInStreamCreationDriver;
 
-public class BroadcasterHlsPullInputTest extends BaseTest {
+public class BroadcasterHlsPullInputTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterHlsPullInputDriver(); }

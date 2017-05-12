@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.BroadcasterMultipleCreationDriver;
-import com.zixi.testing.BaseTest;
+import com.zixi.testing.BaseTestZixiMainComponents;
 
 
-public class BroadcasterMultipleRtmpPullCreationTest extends BaseTest
+public class BroadcasterMultipleRtmpPullCreationTest extends BaseTestZixiMainComponents
 {
 	//The method will be run before the first test's method invocation in the current class.
 	@BeforeClass

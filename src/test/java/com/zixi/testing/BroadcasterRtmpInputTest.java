@@ -11,7 +11,7 @@ import com.zixi.drivers.drivers.BroadcasterRtmpInCreationDriver;
 // The goal of the test is to verify the broadcaster RTMP Pull input connection.
 // The broadcaster RTMP Pull input connection is defined as an ability of a broadcaster server to establish a RTMP connection with 
 // an another broadcaster when the RTMP connection initiator will be the receiving broadcaster server.
-public class BroadcasterRtmpInputTest extends BaseTest {
+public class BroadcasterRtmpInputTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterRtmpInCreationDriver(); }

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcasterFileInputDriver;
 import com.zixi.drivers.drivers.TestDriver;
 import com.zixi.drivers.setup.SetSutUpTimeDriver;
-import com.zixi.testing.BaseTest;
+import com.zixi.testing.BaseTestZixiMainComponents;
 
 public class SetSutUpTimeTest{
 	private TestDriver testDriver;

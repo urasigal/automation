@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcasterRtmpInCreationDriver;
 import com.zixi.drivers.drivers.TestDriver;
 
-public class BroadcaseterRtmpPushInputTest extends BaseTest{
+public class BroadcaseterRtmpPushInputTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() {	testDriver = new BroadcasterRtmpInCreationDriver(); }

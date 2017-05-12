@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterRtmpPushOutputCreationDriver;
 
-public class BroadcasterRtmpPushOutputCreationTest extends BaseTest {
+public class BroadcasterRtmpPushOutputCreationTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterRtmpPushOutputCreationDriver(); }

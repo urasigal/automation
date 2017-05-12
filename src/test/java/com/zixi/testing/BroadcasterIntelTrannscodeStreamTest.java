@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcasterTrannscodeStreamDriver;
 
-public class BroadcasterIntelTrannscodeStreamTest extends BaseTest {
+public class BroadcasterIntelTrannscodeStreamTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterTrannscodeStreamDriver();}

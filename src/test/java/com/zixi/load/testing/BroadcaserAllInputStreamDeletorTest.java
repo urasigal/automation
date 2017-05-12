@@ -6,9 +6,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserAllInputStreamDeletorDriver;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
-import com.zixi.testing.BaseTest;
+import com.zixi.testing.BaseTestZixiMainComponents;
 
-public class BroadcaserAllInputStreamDeletorTest extends BaseTest
+public class BroadcaserAllInputStreamDeletorTest extends BaseTestZixiMainComponents
 {
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcaserAllInputStreamDeletorDriver(); }
