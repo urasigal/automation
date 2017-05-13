@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 
 import com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver;
 import com.zixi.tcpserver.JettyZixiRunnerThread;
-import com.zixi.testing.BaseTest;
+import com.zixi.testing.BaseTestZixiMainComponents;
 
-public class FFMPEGImageStatisticHlsPushOutTest extends BaseTest{
+public class FFMPEGImageStatisticHlsPushOutTest extends BaseTestZixiMainComponents{
 	@BeforeClass
 	public void testInit() {testDriver = new FFMPEGImageStatisticTestDriver(); }
 

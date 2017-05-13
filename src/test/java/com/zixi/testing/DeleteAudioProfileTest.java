@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.DeleteAudioProfileDriver;
 
-public class DeleteAudioProfileTest extends BaseTest{
+public class DeleteAudioProfileTest extends BaseTestZixiMainComponents{
 	@BeforeClass
 	public void testInit() {
 		testDriver = new DeleteAudioProfileDriver();

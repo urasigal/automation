@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.FeederReverseTunnelParametersDriver;
 
-public class FeederReverseTunnelParametersTest extends BaseTest{
+public class FeederReverseTunnelParametersTest extends BaseTestZixiMainComponents{
 	@BeforeClass
 	public void testInit() { testDriver = new FeederReverseTunnelParametersDriver(); }
 	

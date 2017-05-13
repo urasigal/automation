@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.BroadcasterMultipleBondingDriver;
-import com.zixi.testing.BaseTest;
+import com.zixi.testing.BaseTestZixiMainComponents;
 
-public class BroadcasterMultipleBondingTest extends BaseTest{
+public class BroadcasterMultipleBondingTest extends BaseTestZixiMainComponents{
 	
 	//The method will be run before the first test's method invocation in the current class.
 	@Parameters({"testid"})

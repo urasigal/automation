@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.jcraft.jsch.JSchException;
 import com.zixi.drivers.drivers.FeederReverseTunnelDriver;
 
-public class FeederReverseTunnelTest extends BaseTest{
+public class FeederReverseTunnelTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new FeederReverseTunnelDriver(); }

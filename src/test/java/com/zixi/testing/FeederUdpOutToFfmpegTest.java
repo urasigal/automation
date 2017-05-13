@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import com.zixi.drivers.drivers.FeederUdpOutToFfmpegDriver;
 
-public class FeederUdpOutToFfmpegTest extends BaseTest{
+public class FeederUdpOutToFfmpegTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new FeederUdpOutToFfmpegDriver(); }

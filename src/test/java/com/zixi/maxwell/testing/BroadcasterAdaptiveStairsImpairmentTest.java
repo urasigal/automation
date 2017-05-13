@@ -5,10 +5,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.maxwell.drivers.BroadcasterAdaptiveStairsImpairmentDriver;
-import com.zixi.testing.BaseTest;
+import com.zixi.testing.BaseTestZixiMainComponents;
 
 
-public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTest {
+public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() {  testDriver = new BroadcasterAdaptiveStairsImpairmentDriver(); }
@@ -22,9 +22,6 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTest {
 		
 		//Print this class's name to the log file.
 		getLoggerInstance().info(getClass().getName());
-		
-		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
-		//this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		
 		buildTestParametersString(new String[] { "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
 		"impairment_control_setimpair", "testid" }, 

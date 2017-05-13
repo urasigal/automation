@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.NetworkingDriver;
 import com.zixi.tools.JsonParser;
 
-public class BroadcasterNetworkTest extends BaseTest{
+public class BroadcasterNetworkTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() {

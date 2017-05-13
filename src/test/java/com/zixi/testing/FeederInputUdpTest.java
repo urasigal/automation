@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.FeederInputUdpDriver;
 
 
-public class FeederInputUdpTest extends BaseTest{
+public class FeederInputUdpTest extends BaseTestZixiMainComponents{
 
 	@BeforeClass
 	public void testInit() { testDriver = new FeederInputUdpDriver(); }

@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserAllInputStreamDeletorDriver;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.BroadcasterMultipleRtmpPushDriver;
-import com.zixi.testing.BaseTest;
+import com.zixi.testing.BaseTestZixiMainComponents;
 
-public class BroadcasterMultipleRtmpPushTest extends BaseTest{
+public class BroadcasterMultipleRtmpPushTest extends BaseTestZixiMainComponents{
 
 	// Instantiate a test driver class
 	// Will run before any test method in this class

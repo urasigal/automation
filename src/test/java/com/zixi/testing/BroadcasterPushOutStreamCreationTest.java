@@ -8,7 +8,7 @@ import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterPushOutStreamCreationDriver;
 import com.zixi.drivers.drivers.TestDriver;
 
-public class BroadcasterPushOutStreamCreationTest extends BaseTest {
+public class BroadcasterPushOutStreamCreationTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() {

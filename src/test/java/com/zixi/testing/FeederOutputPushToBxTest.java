@@ -10,7 +10,7 @@ import com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver;
 import com.zixi.drivers.drivers.FeederOutputPushToBxDriver;
 import com.zixi.drivers.tools.DriverReslut;
 
-public class FeederOutputPushToBxTest extends BaseTest{
+public class FeederOutputPushToBxTest extends BaseTestZixiMainComponents{
 
 	@BeforeClass
 	public void testInit() { testDriver = new FeederOutputPushToBxDriver();}

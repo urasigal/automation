@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterAdaptiveGroupDeletionDriver;
 
-public class BroadcasterAdaptiveGroupDeletionTest extends BaseTest{
+public class BroadcasterAdaptiveGroupDeletionTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterAdaptiveGroupDeletionDriver(); }

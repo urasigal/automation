@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterSinglePullInStreamCreationDriver;
 
-public class BroadcasterSinglePullInStreamCreationTest extends BaseTest {
+public class BroadcasterSinglePullInStreamCreationTest extends BaseTestZixiMainComponents {
 
 	
 	//The method will be run before the first test method in the current class is invoked.

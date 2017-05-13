@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterTranscoderDeletProfileDriver;
 
-public class BroadcasterTranscoderDeletProfileTest extends BaseTest{
+public class BroadcasterTranscoderDeletProfileTest extends BaseTestZixiMainComponents{
 
 	@BeforeClass
 	public void testInit() {

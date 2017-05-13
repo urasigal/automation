@@ -8,7 +8,7 @@ import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterSetRtmpSettingsDriver;
 import com.zixi.drivers.drivers.TestDriver;
 
-public class BroadcasterSetRtmpSettingsTest extends BaseTest {
+public class BroadcasterSetRtmpSettingsTest extends BaseTestZixiMainComponents {
 	
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterSetRtmpSettingsDriver(); }

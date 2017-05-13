@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BxFileTransferAndVodSettingsDriver;
 
-public class BxFileTransferAndVodSettingsTest extends BaseTest{
+public class BxFileTransferAndVodSettingsTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new BxFileTransferAndVodSettingsDriver(); }

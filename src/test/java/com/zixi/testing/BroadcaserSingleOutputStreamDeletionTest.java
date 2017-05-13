@@ -9,7 +9,7 @@ import com.zixi.drivers.tools.DriverReslut;
 
 
 // This class is used in general purpose of deletion of output stream on a zixi broadcaster server.
-public class BroadcaserSingleOutputStreamDeletionTest extends BaseTest{
+public class BroadcaserSingleOutputStreamDeletionTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcaserSingleOutputStreamDeletionDriver(); } // Super class element

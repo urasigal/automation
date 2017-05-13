@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.ReceiverUdpOutCreationDriver;
 
-public class ReceiverUdpOutCreationTest extends BaseTest {
+public class ReceiverUdpOutCreationTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() {testDriver = new ReceiverUdpOutCreationDriver();}

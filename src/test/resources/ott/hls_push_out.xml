@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
-<suite name="Broadcaster: HLS PUSH out test, using FFMPEG as actual test analiser" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: HLS PUSH out test, using FFMPEG as actual test analyzer " verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -191,7 +191,7 @@
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
 		</classes>
 	</test>
-	  <test name="Broadcaster - Define HLS pull input steam">
+	  <test name="Broadcaster - Define HLS push output steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
@@ -210,7 +210,6 @@
      		 </class>
 		</classes>
 	</test>
-	
 	<test name="FFMPEG test default parameters - FFMPEG analyser adaptive HLS">
 		<parameter name="mode" value="http://10.7.0.90:4321/west/index.m3u8" /> 
 		<parameter name="testid" value="7653" />  
@@ -218,7 +217,6 @@
 		    <class name="com.zixi.anlalise.testing.FFMPEGImageStatisticHlsPushOutTest"/>
 		</classes>
 	</test>
-		
 	<!-- delete a transcoded stream -->
 	<test name="Broadcaster - Remove an input stream test - 5Mbps">
 		<parameter name="login_ip" value="10.7.0.74" />
