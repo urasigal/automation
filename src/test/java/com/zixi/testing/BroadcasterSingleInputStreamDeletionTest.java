@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.*;
 
-public class BroadcasterSingleInputStreamDeletionTest extends BaseTest {
+public class BroadcasterSingleInputStreamDeletionTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterSingleInputStreamDeletionDriver(); }

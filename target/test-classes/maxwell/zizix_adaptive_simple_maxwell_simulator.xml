@@ -236,7 +236,7 @@
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
 		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0 zerostats rate 2000000 8 11000 120 5000000 0 0" />
+		<parameter name="impairment_control_setimpair" value="setimpair 0 0 zerostats rate 3000000 8 11000 120 5000000 0 0" />
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

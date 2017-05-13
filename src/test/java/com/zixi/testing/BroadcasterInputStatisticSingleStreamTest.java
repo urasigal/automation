@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterInputStatisticSingleStreamDriver;
 
-public class BroadcasterInputStatisticSingleStreamTest extends BaseTest {
+public class BroadcasterInputStatisticSingleStreamTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterInputStatisticSingleStreamDriver(); }

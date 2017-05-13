@@ -8,7 +8,7 @@ import com.zixi.drivers.drivers.ProductAboutDriver;
 import com.zixi.drivers.drivers.TestDriver;
 import com.zixi.drivers.drivers.TestLinkerDriver;
 
-public class TestLinker extends BaseTest{
+public class TestLinker extends BaseTestZixiMainComponents{
 		
 	@BeforeClass
 	public void testInit() {  testDriver = new TestLinkerDriver();}

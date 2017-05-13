@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.ReceiverOutputStreamDeletionDriver;
 
-public class ReceiverOutputStreamDeletionTest extends BaseTest{
+public class ReceiverOutputStreamDeletionTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() {testDriver = new ReceiverOutputStreamDeletionDriver();}

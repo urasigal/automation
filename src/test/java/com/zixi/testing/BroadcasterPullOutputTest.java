@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterPullOutputDriver;
 
-public class BroadcasterPullOutputTest extends BaseTest{
+public class BroadcasterPullOutputTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() {
@@ -15,7 +15,7 @@ public class BroadcasterPullOutputTest extends BaseTest{
 	}
 
 	@Parameters({ 
-		"userName","userPass", "login_ip", "uiport","type","name","stream","matrix","alt_stream","remote_id","session","latency","session_auth","stats_hist","testid"})
+	"userName","userPass", "login_ip", "uiport","type","name","stream","matrix","alt_stream","remote_id","session","latency","session_auth","stats_hist","testid"})
 	@Test
 	public void broadcasterPullInCreation(String userName,String userPass, String login_ip, String uiport, String type, String name, String stream, String matrix, String alt_stream,
 	String remote_id, String session, String latency, String session_auth, String stats_hist ,String testid)

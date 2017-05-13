@@ -9,7 +9,7 @@ import com.zixi.drivers.drivers.BroadcasterPushInStreamCreationDriver;
 import com.zixi.drivers.drivers.TestDriver;
 
 
-public class BroadcasterPushInStreamCreationDecriptionTest extends BaseTest {
+public class BroadcasterPushInStreamCreationDecriptionTest extends BaseTestZixiMainComponents {
 	
 	@BeforeClass
 	public void testInit() {

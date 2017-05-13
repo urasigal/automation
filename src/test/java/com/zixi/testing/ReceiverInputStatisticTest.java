@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.ReceiverInputStatisticDriver;
 
-public class ReceiverInputStatisticTest extends BaseTest {
+public class ReceiverInputStatisticTest extends BaseTestZixiMainComponents {
 	
 	@BeforeClass
 	public void testInit() { testDriver = new ReceiverInputStatisticDriver(); }

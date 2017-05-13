@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.FeederBroadcasterBondingMultipleThreeLinkDriver;
 import com.zixi.load.drivers.FeederMultipleDeletionDriver;
-import com.zixi.testing.BaseTest;
+import com.zixi.testing.BaseTestZixiMainComponents;
 
-public class FeederMultipleDeletionTest  extends BaseTest{
+public class FeederMultipleDeletionTest  extends BaseTestZixiMainComponents{
 	
 	//The method will be run before the first test's method invocation in the current class.
 	@Parameters({"testid"})

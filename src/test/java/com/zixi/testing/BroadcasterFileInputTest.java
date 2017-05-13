@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.*;
 import com.zixi.drivers.drivers.BroadcasterFileInputDriver;
 
-public class BroadcasterFileInputTest extends BaseTest{
+public class BroadcasterFileInputTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() {

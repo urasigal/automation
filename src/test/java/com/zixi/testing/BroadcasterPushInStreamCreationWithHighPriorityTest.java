@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcasterPushInStreamCreationDriver;
 import com.zixi.drivers.drivers.TestDriver;
 
-public class BroadcasterPushInStreamCreationWithHighPriorityTest extends BaseTest {
+public class BroadcasterPushInStreamCreationWithHighPriorityTest extends BaseTestZixiMainComponents {
 	
 	@BeforeClass
 	public void testInit() {

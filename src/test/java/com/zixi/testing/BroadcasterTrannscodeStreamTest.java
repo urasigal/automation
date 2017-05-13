@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterTrannscodeStreamDriver;
 
-public class BroadcasterTrannscodeStreamTest extends BaseTest {
+public class BroadcasterTrannscodeStreamTest extends BaseTestZixiMainComponents {
 	
 	@BeforeClass
 	public void testInit() {

@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.AddAudioProfileDriver;
 
-public class AddAudioProfileTest extends BaseTest{
+public class AddAudioProfileTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() {

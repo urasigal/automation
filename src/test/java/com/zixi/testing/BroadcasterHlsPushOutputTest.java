@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterHlsPushOutputDriver;
 
-public class BroadcasterHlsPushOutputTest extends BaseTest {
+public class BroadcasterHlsPushOutputTest extends BaseTestZixiMainComponents {
 
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterHlsPushOutputDriver(); }

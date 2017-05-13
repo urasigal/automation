@@ -10,7 +10,7 @@ import com.zixi.drivers.drivers.BroadcasterSingleUdpInCreationDriver;
 import com.zixi.drivers.drivers.TestDriver;
 import com.zixi.tools.Prerequisitor;
 
-public class BroadcasterUdpInStreamCreationTest extends BaseTest {
+public class BroadcasterUdpInStreamCreationTest extends BaseTestZixiMainComponents {
 
 	private Prerequisitor prerequisitor;
 	@BeforeClass

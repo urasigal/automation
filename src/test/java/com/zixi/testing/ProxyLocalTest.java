@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import com.zixi.drivers.drivers.ProxyLocalDriver;
 
-public class ProxyLocalTest extends BaseTest{
+public class ProxyLocalTest extends BaseTestZixiMainComponents{
 	
 	
 	@BeforeClass

@@ -14,7 +14,7 @@ import com.zixi.threads.ExternalRunnerThread;
 import com.zixi.tools.StreamStatisticAnalyzer;
 
 
-public class RedundantFeedersOneBxTest extends BaseTest {
+public class RedundantFeedersOneBxTest extends BaseTestZixiMainComponents {
 	
 	private TestDriver redundantFeederOneBxDriver;
 	

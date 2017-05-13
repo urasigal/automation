@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserAllInputStreamDeletorDriver;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.load.drivers.BroadcasterRundomInputStreamDriver;
-import com.zixi.testing.BaseTest;
+import com.zixi.testing.BaseTestZixiMainComponents;
 
-public class BroadcasterRundomInputStreamTest extends BaseTest
+public class BroadcasterRundomInputStreamTest extends BaseTestZixiMainComponents
 {
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterRundomInputStreamDriver(testFlowDescriptor); }
