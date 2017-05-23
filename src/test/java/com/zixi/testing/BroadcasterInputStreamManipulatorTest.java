@@ -38,7 +38,7 @@ public class BroadcasterInputStreamManipulatorTest extends BaseTestZixiMainCompo
 	public void broadcasterStartStopRecording(String userName, String userPass, String login_ip, String uiport, String id, String on, String testid)
 	throws Exception {
 		
-		 productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
 		sutProcessId 	= BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster");
 		
