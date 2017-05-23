@@ -47,7 +47,7 @@ public class BroadcasterInputStreamManipulatorTest extends BaseTestZixiMainCompo
 		
 		driverReslut 	= ((BroadcasterInputStreamManipulatorDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport, id, duration_ms );
 		
-		Assert.assertEquals(driverReslut.getResult(), "1 2");
+		Assert.assertEquals(driverReslut.getResult(), "stream was successfully recorded");
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster"));
 	}
