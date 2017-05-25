@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: pull input stream resording" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
+	<test name="Broadcaster - Pull input stream creation test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -40,7 +40,7 @@
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="duration_ms" value="50000" />
+		<parameter name="duration_ms" value="180000" />
 		<parameter name="testid" value="7785" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStreamManipulatorTest">
@@ -107,13 +107,13 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="FFMPEG test default parameters Pull input FFMPEG analyser">
+	<test name="FFMPEG test analyser">
 		<parameter name="testid" value="538" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove udp output stream default parameters Pull input FFMPEG analyser">
+	<test name="Broadcaster - Remove udp output stream">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -124,7 +124,7 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>	
-	<test name="Broadcaster - Remove input stream test - default paremeters">
+	<test name="Broadcaster - remove input stream test">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -136,7 +136,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Fiel input">
+	<test name="Broadcaster - remove Fiel input">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -148,7 +148,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - delete from files folder using API">
+	<test name="Broadcaster - delete from files folder">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
