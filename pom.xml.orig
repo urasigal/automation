@@ -83,9 +83,15 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
-<<<<<<< HEAD
 					    
 						<suiteXmlFile>src/test/resources/pull/broadcaster_pull_load.xml</suiteXmlFile>
+<<<<<<< HEAD
+=======
+						<suiteXmlFile>src/test/resources/pull/ffmpeg_pull_input.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/pull/password_pull.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/pull/record_pull_input_stream.xml</suiteXmlFile>
+						
+>>>>>>> centos7_new_setup
 						
 						<suiteXmlFile>src/test/resources/push/broadcaster_push_load.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>src/test/resources/push/broadcaster_bonded_push_load.xml</suiteXmlFile> -->
@@ -96,36 +102,27 @@
 						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_three_links_load.xml</suiteXmlFile>
 				
 						<suiteXmlFile>src/test/resources/udp/broadcster_udp_load.xml</suiteXmlFile>
-=======
-					    <suiteXmlFile>src/test/resources/ott/hls_push_out.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/vod.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/zixiadaptive.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/broadcasterhlstoffmpeg.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/broadcasterflvtoffmpeg.xml</suiteXmlFile>
-					    
-						<suiteXmlFile>src/test/resources/pull/ffmpeg_pull_input.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/push/ffmpegpush.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/ffmpegfullpath.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/encryption/ffmpeg_full_path_encrypt.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/encryption/ffmpeg_full_encryption_with_fec.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/udp/broadcaster_udp_encryption_reciver_decryption.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/encryption/ffmpeg_semi_path_encrypt.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/feeder/feederredundency.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/feeder/feeder_to_broadcaser_remote_rtmp_output.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/redundancy/broadcaster_alternative_host_delete_scn.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/redundancy/broadcaster_alternative_host_stop_scn.xml</suiteXmlFile>
-						
->>>>>>> centos7_new_setup
 					</suiteXmlFiles>
 					<properties>
 						<property>
 							<name>usedefaultlisteners</name>
 							<value>false</value>
+						</property>
+					</properties>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
 						</property>
 					</properties>
 				</configuration>

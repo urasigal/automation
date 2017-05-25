@@ -31,4 +31,25 @@ public class BroadcasterInputStreamManipulatorTest extends BaseTestZixiMainCompo
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster"));
 	}
+	
+	
+	@Parameters({ "userName", "userPass","login_ip", "uiport", "id", "duration_ms", "testid" })
+	@Test
+	public void broadcasterStartStopRecording(String userName, String userPass, String login_ip, String uiport, String id, String duration_ms, String testid)
+	throws Exception {
+		
+		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		
+		sutProcessId 	= BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster");
+		
+		buildTestParametersString(new String[] { "userName", "userPass","login_ip", "uiport", "id", "duration_ms", "testid" }, 
+		new String[] { userName, userPass, login_ip, uiport, id, duration_ms, testid });
+		
+		driverReslut 	= ((BroadcasterInputStreamManipulatorDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport, id, duration_ms );
+		
+		Assert.assertEquals(driverReslut.getResult(), "stream was successfully recorded");
+		
+		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster"));
+	}
+	
 }
