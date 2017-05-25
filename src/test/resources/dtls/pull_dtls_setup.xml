@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- The goal of the suite is to verify an feeder server ability to establish SSH connection to a SSH server and make a reverse tunnel connection-->
 <suite name="Feeder - SHH functionality suite" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster-Upload DTLS etrificate">
+	<test name="Broadcaster-Upload DTLS cetrificate">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="3904" />    
+		<parameter name="testid" value="7703" />    
 		<classes>
 		    <class name="com.zixi.testing.FeederPostKeyTest">
 			    <methods>
@@ -21,7 +21,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="3904" />    
+		<parameter name="testid" value="7705" />    
 		<classes>
 		    <class name="com.zixi.testing.FeederPostKeyTest">
 			    <methods>
@@ -50,7 +50,7 @@
 		<parameter name="use_observer" value="0" />
 		<parameter name="private_port" value="2089,,,1" />
 		<parameter name="public_port" value="2079,,,1" />
-		<parameter name="testid" value="3904" />   
+		<parameter name="testid" value="7707" />   
 	<classes>
 		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
 			    <methods>
@@ -62,7 +62,7 @@
 	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="internal.zixi.com" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="source" value="test" />
@@ -87,7 +87,7 @@
 		<parameter name="fec_force" value="" />
 		<parameter name="mcast_out" value="" />
 		<parameter name="propertiesFile" value="stream.properties" />
-		<parameter name="testid" value="124" />  
+		<parameter name="testid" value="7710" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
@@ -100,7 +100,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="265" />  
+		<parameter name="testid" value="7712" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -112,7 +112,7 @@
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="267" />  
+		<parameter name="testid" value="7714" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -120,7 +120,7 @@
 		<test name="Broadcaster - Pull input stream creation zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="internal.zixi.com" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test2" />
 		<parameter name="source" value="test2" />
@@ -145,7 +145,7 @@
 		<parameter name="fec_force" value="" />
 		<parameter name="mcast_out" value="" />
 		<parameter name="propertiesFile" value="stream2.properties" />
-		<parameter name="testid" value="271" />  
+		<parameter name="testid" value="7717" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
@@ -158,7 +158,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test2" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="273" />  
+		<parameter name="testid" value="7719" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -170,7 +170,7 @@
 		<parameter name="streamId" value="test2" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test2" />
-		<parameter name="testid" value="275" />  
+		<parameter name="testid" value="7721" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -178,7 +178,7 @@
 	<test name="Broadcaster - Pull input stream creation low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="internal.zixi.com" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test2" />
 		<parameter name="source" value="test2" />
