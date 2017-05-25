@@ -29,19 +29,19 @@
 		<parameter name="fec_force" value="" />
 		<parameter name="mcast_out" value="" />
 		<parameter name="propertiesFile" value="stream.properties" />
-		<parameter name="testid" value="124" />  
+		<parameter name="testid" value="7879" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - pull input stream resording">
+	<test name="Broadcaster - pull input stream recording">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="duration_ms" value="180000" />
-		<parameter name="testid" value="7785" />    
+		<parameter name="testid" value="7881" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStreamManipulatorTest">
 			    <methods>
@@ -67,7 +67,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="test" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="7883" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -102,13 +102,13 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="534" />  
+		<parameter name="testid" value="7885" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
 	<test name="FFMPEG test analyser">
-		<parameter name="testid" value="538" />  
+		<parameter name="testid" value="7887" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -119,7 +119,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="540" />  
+		<parameter name="testid" value="7889" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -131,7 +131,7 @@
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="267" />  
+		<parameter name="testid" value="7891" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -143,7 +143,7 @@
 		<parameter name="streamId" value="file_out" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoder" />
-		<parameter name="testid" value="1249" />  
+		<parameter name="testid" value="7893" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -156,7 +156,7 @@
 		<parameter name="path" value="test" />
 		<parameter name="user" value="" />
 		<parameter name="pass" value="" />
-		<parameter name="testid" value="7785" />    
+		<parameter name="testid" value="7895" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterDeleteFromFilesTest">
 			    <methods>
