@@ -102,7 +102,11 @@
 		<parameter name="streamType" value="FILE" />
 		<parameter name="testid" value="7249" />  
 		<classes>
-		    <class name="com.zixi.testing.BroadcasterInputStreamManipulatorTest"/>
+		    <class name="com.zixi.testing.BroadcasterInputStreamManipulatorTest">
+		    <methods>
+		        	<include name="broadcasterStopStartInputStream" />
+		     	</methods>
+		    </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream statistics test redundant - alternative host">
