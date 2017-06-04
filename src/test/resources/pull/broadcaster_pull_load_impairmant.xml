@@ -438,7 +438,7 @@ The streams are created in the same time  -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
 		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
 		<parameter name="impairment_control_setimpair" value="setimpair 0 0" />
-		<parameter name="testid" value="1129" />  
+		<parameter name="testid" value="7946" />  
 		<classes>
 		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
 		    <methods>
