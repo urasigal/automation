@@ -244,7 +244,11 @@
 		<parameter name="id" value="receivertest" />
 		<parameter name="testid" value="1129" />  
 		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest"/>
+		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
+		    <methods>
+        		<include name="configureMaxwellSimulator" />
+     		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<!-- delete on a transcoded streams -->
