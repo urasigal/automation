@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: Push streaming suite" verbose="5" data-provider-thread-count="1">
+	<listeners>
+		<listener class-name="com.zixi.reports.TestListenerLogger" />
+	</listeners>
 	<test name="Broadcaster - Push input stream creation test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />

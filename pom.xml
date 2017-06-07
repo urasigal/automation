@@ -80,6 +80,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.5</version>
 				<configuration>
+					<systemPropertyVariables>
+            			<java.util.logging.config.file>src/main/resources/log_cfg</java.util.logging.config.file>
+	                </systemPropertyVariables>
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
@@ -87,6 +90,8 @@
 						<suiteXmlFile>src/test/resources/pull/pull.xml</suiteXmlFile>
 						
 						<suiteXmlFile>src/test/resources/pull/password_pull.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/pull/record_pull_input_stream.xml</suiteXmlFile>
+						
 						
 						<suiteXmlFile>src/test/resources/push/push.xml</suiteXmlFile>
 						
