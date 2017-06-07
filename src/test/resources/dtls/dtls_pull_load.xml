@@ -63,7 +63,7 @@ The streams are created in the same time  -->
 	<test name="Broadcaster - multiple pull input stream creation test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="internal.zixi.com" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="source" value="test" />
@@ -162,7 +162,7 @@ The streams are created in the same time  -->
 	<test name="Broadcaster pull - low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="internal.zixi.com" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="source" value="test" />
@@ -348,7 +348,7 @@ The streams are created in the same time  -->
 	<test name="Broadcaster - multiple pull input stream creation test Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="internal.zixi.com" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="id" value="test" />
 		<parameter name="source" value="feederout" />
