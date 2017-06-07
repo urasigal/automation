@@ -37,19 +37,18 @@ public class BaseTestZixiMainComponents {
 	
 	// It is an interface, all test drivers have to implement this interface.
 	protected TestDriver 						testDriver; //Reference to test driver interface. `
-	
-	protected GoogleMailDriver mail;
+	protected DriverReslut						driverReslut				= 	null;
+	protected GoogleMailDriver 					mail;
 	// Check SUT up time.
 	protected SetSutUpTimeDriver 				setSutUpTimeDriver;
-	protected String 							res                         =   "";
+	protected String 							crashTestResults            =   null;
 	protected boolean 							crashFlag;
-	protected String 							testid; // Stores unique test number which is the number provided by TestLink test management system. 
+	protected String 							testid; // Stores unique test number which is the number provided by TestLink the test management system. 
 	protected String 							version						= 	""; // Stores the SUT version (feeder broadcaster receiver).
-	protected String 							automationTestIdentifiers 	= 	""; // Stores an qutomation test name and automation suite name, then it will be written to TestLinlk. 
-	protected ProductAboutDriver 				productAboutDriver 			= 	new ProductAboutDriver();
-	protected TestBaseFunction 					testBaseFunction 			= 	new TestBaseFunction ();
+	protected String 							automationTestIdentifiers 	= 	""; // Stores an automation test name and automation suite name, then it will be written to TestLinlk. 
+	protected ProductAboutDriver 				productAboutDriver 			= 	new ProductAboutDriver(); // Retrieves and stores SUT version information - Broadcaster build number.
 	protected StringBuffer 						testFlowDescriptor 			=	new StringBuffer("Test flow: "); // Put it any place in order to describe a test flow.
-	protected String 							sutProcessId;
+	protected String 							sutProcessId				=	""; // Stores a SUT's process id or PID. This files is ONLY relevant to LINUX servers.
 	protected double 							testDuration;
 	
 	//Writes test results to the TestLink.
@@ -60,10 +59,8 @@ public class BaseTestZixiMainComponents {
 	protected static  FileHandler  				FILEHANDLER 				= 	null ;
 	protected static  StreamHandler				STREAMHANDLER				= 	null;
 	
-	protected Object 							params[];
-	protected String 							manulDescription 			= 	"";
-	
-	protected DriverReslut						driverReslut				= 	null;		
+	//protected Object 							params[];
+	protected String 							manulDescription 			= 	"";		
 	
 	@BeforeTest
 	public void startTest(final ITestContext testContext) {
@@ -94,9 +91,9 @@ public class BaseTestZixiMainComponents {
      TestlinkIntegration tl = new TestlinkIntegration();
 	 try
      {	
-		 res = setSutUpTimeDriver.continuousUpTimeCheck();
-			
-			if(res.equals("pass"))
+		 crashTestResults = setSutUpTimeDriver.continuousUpTimeCheck();
+		 if(crashTestResults == null) throw new NullPointerException("crashTestResults is null !!!");
+			if(crashTestResults.equals("pass"))
 			{
 				crashFlag = false;
 			}
@@ -107,7 +104,7 @@ public class BaseTestZixiMainComponents {
 		 
         if(crashFlag)
         {
-       	  crashStatus = "There was a crash in the recent tests " + res;
+       	  crashStatus = "There was a crash in the recent tests " + crashTestResults;
 	      LOGGER.info("Test duration[ms]: " + testDuration);
 	    	
           tl.setResult(testid, ExecutionStatus.FAILED,  this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n" +  
@@ -166,38 +163,23 @@ public class BaseTestZixiMainComponents {
 		return testLinkTestParameters;
 	}
 	
-	protected class TestBaseFunction {
-		protected String buildTestParametersString(String parametersNmes[], String[] paramertersValues)
-		{
-			StringBuffer sb 		= 	new StringBuffer();
-			int 		 length 	= 	parametersNmes.length;
-			for(int i = 0 ; i < length; i++ )
-			{
-				sb.append("\n").append(parametersNmes[i]).append(" = ").append(paramertersValues[i]); 
-			}
-			return sb.toString();
-		}
-	}
-	
 	// Singleton manner of definition.
 	protected Logger getLoggerInstance()
 	{
 		if(BaseTestZixiMainComponents.LOGGER == null)
 		{
 		  try {
-			  	PrintWriter pw 			= new PrintWriter("src/main/resources/log");
+			  	PrintWriter pw 								= new PrintWriter("src/main/resources/log");
 			  	pw.close();
-			    BaseTestZixiMainComponents.FILEHANDLER 	= 	new FileHandler("src/main/resources/log", true);
+			    BaseTestZixiMainComponents.FILEHANDLER 		= 	new FileHandler("src/main/resources/log", true);
 			    BaseTestZixiMainComponents.STREAMHANDLER	= 	new StreamHandler(System.out, new SimpleFormatter());
-			    BaseTestZixiMainComponents.LOGGER 		= 	Logger.getLogger("com");
+			    BaseTestZixiMainComponents.LOGGER 			= 	Logger.getLogger("com");
 			    BaseTestZixiMainComponents.FILEHANDLER.setFormatter(new SimpleFormatter());
 				BaseTestZixiMainComponents.LOGGER.addHandler(BaseTestZixiMainComponents.FILEHANDLER);
 				BaseTestZixiMainComponents.LOGGER.addHandler(BaseTestZixiMainComponents.STREAMHANDLER);
 			} catch (SecurityException e) {
-				// TODO Auto-generated catch block
 				System.out.println(" ------------------------------------------- Cant to open a file");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				System.out.println(" -------------------------------------------- Cant to open a file");
 			}
 		  return BaseTestZixiMainComponents.LOGGER;
