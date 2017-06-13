@@ -58,7 +58,7 @@
 		    </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Create a file input steam">
+	<test name="Broadcaster - Create a file input steam - default parameters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -75,7 +75,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="download.ts" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="8027" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -170,6 +170,44 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster - Remove Fiel input - default parameters">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="pushtest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="testid" value="8029" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Create a file input steam low latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="download.ts" />
+		<parameter name="testid" value="8031" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
 	<test name="Broadcaster - Push input stream creation low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -254,6 +292,44 @@
 		<parameter name="testid" value="7811" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove Fiel input - low latency">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="pushtest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="testid" value="8033" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Create a file input steam with password">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="download.ts" />
+		<parameter name="testid" value="8035" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation with password">
@@ -342,6 +418,44 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster - Remove Fiel input - with password">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="pushtest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="testid" value="8037" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Create a file input steam force FEC">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="download.ts" />
+		<parameter name="testid" value="8039" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
 	<test name="Broadcaster - Push input stream creation force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -417,7 +531,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-<test name="Broadcaster - Remove Push output stream force FEC">
+	<test name="Broadcaster - Remove Push output stream force FEC">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -426,6 +540,44 @@
 		<parameter name="testid" value="7835" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove File input with password force FEC">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="pushtest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="testid" value="8041" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Create a file input steam FEC block 50">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="download.ts" />
+		<parameter name="testid" value="8043" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation FEC block 50">
@@ -514,6 +666,44 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster - Remove Fiel input block 50">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="pushtest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="testid" value="8045" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Create a file input steam zero latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="pushtest" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="download.ts" />
+		<parameter name="testid" value="8043" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
 	<test name="Broadcaster - Push input stream creation test zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -600,14 +790,14 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Fiel input">
-		<parameter name="login_ip" value="10.7.0.66" />
+	<test name="Broadcaster - Remove File input zero latency">
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="transcoder" />
-		<parameter name="testid" value="1249" />  
+		<parameter name="id" value="pushtest" />
+		<parameter name="testid" value="8049" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
