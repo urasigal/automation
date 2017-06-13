@@ -1,61 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster: DTLS Push load streaming suite" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster-Upload DTLS cetrificate">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7703" />    
+<suite name="Broadcaster: Push load streaming suite" verbose="5" data-provider-thread-count="1">
+<!-- Configure maxwell and test perform a testing -->
+	<test name="Configure maxwell simulator set interference">
+		<parameter name="maxwell_address" value="10.7.0.70" />
+		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
+		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
+		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
+		<parameter name="impairment_control_setimpair" value="setimpair 0 1 drop 12.5 jitter 50.0 gaussian 200 30" />
+		<parameter name="testid" value="7944" />  
 		<classes>
-		    <class name="com.zixi.testing.FeederPostKeyTest">
-			    <methods>
-		        	<include name="uploadSslCertificateToBroadcasterServer" />
-		     	</methods>
-		  	</class>
-		</classes>
-	</test>
-	<test name="Broadcaster-Upload DTLS private key">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7705" />    
-		<classes>
-		    <class name="com.zixi.testing.FeederPostKeyTest">
-			    <methods>
-		        	<include name="uploadPrivateKeyToBroadcasterServer" />
-		     	</methods>
-		    </class>
-		</classes>
-	</test>
-	<test name="Broadcaster-Update settings">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="server_id" value="localhost.localdomain" />
-		<parameter name="gui_web_port" value="4444" />
-		<parameter name="uname" value="user" />
-		<parameter name="aname" value="admin" />
-		<parameter name="ft_max_quota" value="85" />
-		<parameter name="max_cpu" value="90" />
-		<parameter name="max_mem" value="90" />
-		<parameter name="max_in_bandwidth" value="0" />
-		<parameter name="max_out_bandwidth" value="0" />
-		<parameter name="admin_https" value="0" />
-		<parameter name="use_operator" value="0" />
-		<parameter name="use_user" value="1" />
-		<parameter name="use_observer" value="0" />
-		<parameter name="private_port" value="2089,,,1" />
-		<parameter name="public_port" value="2079,,,1" />
-		<parameter name="testid" value="7707" />   
-	<classes>
-		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
-			    <methods>
-		        	<include name="broadcasterUpdateSettings" />
-		     	</methods>
-		    </class>
+		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
+		    <methods>
+        		<include name="broadcasterSetGlobalInpairment" />
+     		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Multiple  Push test creation (both direction)" > 
@@ -81,7 +40,7 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="host" value="internal.zixi.com" />
+		<parameter name="host" value="10.7.0.74" />
 		<parameter name="latency_bx2" value="6000" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="session" value="" />
@@ -93,12 +52,12 @@
 		<parameter name="fec_aware" value="0" />
 		<parameter name="fec_overhead" value="30" />
 		<parameter name="stream" value="test" />
-		<parameter name="port" value="2089" />
+		<parameter name="port" value="2088" />
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id_bx2" value="pushtest" />
 		<parameter name="number_of_streams" value="70" />
-		<parameter name="testid" value="7868" />
+		<parameter name="testid" value="3961" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
@@ -129,7 +88,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="7870" />  
+		<parameter name="testid" value="3964" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -140,7 +99,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="test" />
-		<parameter name="testid" value="7872" />  
+		<parameter name="testid" value="3966" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
@@ -151,7 +110,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7874" />  
+		<parameter name="testid" value="3968" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -161,7 +120,7 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7876" />  
+		<parameter name="testid" value="3970" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
@@ -171,7 +130,7 @@
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="7876" /> 
+			<parameter name="testid" value="3972" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
@@ -199,7 +158,7 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="host" value="internal.zixi.com" />
+		<parameter name="host" value="10.7.0.74" />
 		<parameter name="latency_bx2" value="500" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="session" value="" />
@@ -211,7 +170,7 @@
 		<parameter name="fec_aware" value="0" />
 		<parameter name="fec_overhead" value="30" />
 		<parameter name="stream" value="test" />
-		<parameter name="port" value="2089" />
+		<parameter name="port" value="2088" />
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id_bx2" value="pushtest" />
@@ -293,5 +252,20 @@
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
-	</test>                    
+	</test>
+		<test name="Configure maxwell simulator release interferenc ">
+		<parameter name="maxwell_address" value="10.7.0.70" />
+		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
+		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
+		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
+		<parameter name="impairment_control_setimpair" value="setimpair 0 1" />
+		<parameter name="testid" value="8001" />  
+		<classes>
+		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
+		    <methods>
+        		<include name="broadcasterSetGlobalInpairment" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>                                          
 </suite>
