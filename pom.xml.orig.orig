@@ -58,12 +58,6 @@
 		  <artifactId>drivers</artifactId>
 		  <version>0.0.1-SNAPSHOT</version>
 	  </dependency>
-	  <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
-		<dependency>
-		    <groupId>org.jsoup</groupId>
-		    <artifactId>jsoup</artifactId>
-		    <version>1.10.2</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<resources>
@@ -86,10 +80,14 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.5</version>
 				<configuration>
+					<systemPropertyVariables>
+            			<java.util.logging.config.file>src/main/resources/log_cfg</java.util.logging.config.file>
+	                </systemPropertyVariables>
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
 					    
+<<<<<<< HEAD
 						<suiteXmlFile>src/test/resources/pull/broadcaster_pull_load.xml</suiteXmlFile>
 						
 						
@@ -102,11 +100,52 @@
 						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_three_links_load.xml</suiteXmlFile>
 				
 						<suiteXmlFile>src/test/resources/udp/broadcster_udp_load.xml</suiteXmlFile>
+=======
+						<suiteXmlFile>src/test/resources/pull/pull.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/pull/password_pull.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/pull/record_pull_input_stream.xml</suiteXmlFile>
+						
+						
+						<suiteXmlFile>src/test/resources/push/push.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/rtmp/rtmp.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/rtmp/rtmp_push.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/wholeconnectionscenario.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/udpinrtmpout.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/feeder/feeder_udp_in.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feederudpout.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feederbxsetup.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_two_links.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feeder_bonded_push_three_links.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/back_up_feeder_bonding_full_limitation.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/feeder/feedersmoothing.xml</suiteXmlFile>
+				
+						<suiteXmlFile>src/test/resources/udp/udp.xml</suiteXmlFile>
+>>>>>>> centos7_new_setup
 					</suiteXmlFiles>
 					<properties>
 						<property>
 							<name>usedefaultlisteners</name>
 							<value>false</value>
+						</property>
+					</properties>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
 						</property>
 					</properties>
 				</configuration>
