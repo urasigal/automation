@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLInk Suite "" -->
 <suite name="Feeder: UDP input streaming suite" verbose="5" data-provider-thread-count="1">
-<test name="Broadcaster - UDP output stream creation default parameters Push input FFMPEG analyser">
+<test name="Broadcaster - UDP output stream creation ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
@@ -28,7 +28,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="550" />  
+		<parameter name="testid" value="2885" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -44,12 +44,12 @@
 		<parameter name="name" value="inputudp" />
 		<parameter name="ssm" value="" />
 		<parameter name="rtp_type" value="0" />	 
-		<parameter name="testid" value="1061" />
+		<parameter name="testid" value="8007" />
 	<classes>
 		<class name="com.zixi.testing.FeederInputUdpTest"/>
 	</classes>
 	</test>
-	<test name="Feeder - UDP out to FFMPEG default parameters">
+	<test name="Feeder - UDP out to FFMPEG">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -65,18 +65,18 @@
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="ottl" value="5" /> 
 		<parameter name="osmooth" value="" /> 
-		<parameter name="testid" value="1061" />
+		<parameter name="testid" value="8009" />
 	<classes>
 		<class name="com.zixi.testing.FeederUdpOutToFfmpegTest"/>
 	</classes>
 	</test>
-	<test name="FFMPEG FFMPEG analyser test default parameters">
-		<parameter name="testid" value="1063" />  
+	<test name="FFMPEG FFMPEG analyser test">
+		<parameter name="testid" value="8011" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-	<test name="Feeder - output stream deletion test default parameters">
+	<test name="Feeder - output stream deletion test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -90,18 +90,18 @@
 		<parameter name="type" value="1" />
 		<parameter name="host" value="10.7.0.150" />
 		<parameter name="udpport" value="5555" /> 
-		<parameter name="testid" value="1065" />  
+		<parameter name="testid" value="8013" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederUdpOutputDeletioinTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove udp output stream default parameters push input FFMPEG analyser">
+	<test name="Broadcaster - Remove udp output stream">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="556" />  
+		<parameter name="testid" value="8015" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -114,7 +114,7 @@
 		<parameter name="mip" value="0.0.0.0" />
 		<parameter name="port" value="4433" />
 		<parameter name="ip" value="0.0.0.0" />
-		<parameter name="testid" value="556" />  
+		<parameter name="testid" value="8017" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederInputStreamDeletionTest"/>
 		</classes>
