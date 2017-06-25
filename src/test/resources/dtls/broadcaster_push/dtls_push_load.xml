@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: DTLS Push load streaming suite" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster-Upload DTLS cetrificate">
+	<test name="Broadcaster-Upload DTLS cetrificate to server">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
@@ -15,7 +15,7 @@
 		  	</class>
 		</classes>
 	</test>
-	<test name="Broadcaster-Upload DTLS private key">
+	<test name="Broadcaster-Upload DTLS private key to server">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
@@ -29,7 +29,7 @@
 		    </class>
 		</classes>
 	</test>
-	<test name="Broadcaster-Update settings">
+	<test name="Broadcaster-Update settings DTLS server">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
