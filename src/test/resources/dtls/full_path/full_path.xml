@@ -222,7 +222,7 @@
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
 		</classes>
 	</test>
-	<test name="Feeder - output stream deletion test">
+	<test name="Feeder - output stream deletion test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -235,11 +235,12 @@
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
 		<parameter name="host" value="internal.zixi.com" />
+		<parameter name="push_port" value="2089" />
 		<parameter name="testid" value="8065" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
-	</test> 
+	</test>
 	<test name="Broadcaster - Remove Push input stream - default paremeters">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
