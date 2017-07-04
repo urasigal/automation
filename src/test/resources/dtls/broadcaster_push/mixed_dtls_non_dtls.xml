@@ -47,8 +47,8 @@
 		<parameter name="use_operator" value="0" />
 		<parameter name="use_user" value="1" />
 		<parameter name="use_observer" value="0" />
-		<parameter name="private_port" value="2089,,,1&private_port=2088,,,0" />
-		<parameter name="public_port" value="2079,,,1&public_port=2077,,,0" />
+		<parameter name="private_port" value="2089,,,1&amp;private_port=2088,,,0" />
+		<parameter name="public_port" value="2079,,,1&amp;public_port=2077,,,0" />
 		<parameter name="testid" value="7865" />   
 	<classes>
 		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
@@ -98,6 +98,7 @@
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id_bx2" value="pushtest" />
 		<parameter name="number_of_streams" value="70" />
+		<parameter name="mixed" value="1" />
 		<parameter name="testid" value="7868" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
