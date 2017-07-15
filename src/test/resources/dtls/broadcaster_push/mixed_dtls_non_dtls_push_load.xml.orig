@@ -6,7 +6,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7861" />    
+		<parameter name="testid" value="8072" />    
 		<classes>
 		    <class name="com.zixi.testing.FeederPostKeyTest">
 			    <methods>
@@ -20,7 +20,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7863" />    
+		<parameter name="testid" value="8074" />    
 		<classes>
 		    <class name="com.zixi.testing.FeederPostKeyTest">
 			    <methods>
@@ -47,9 +47,9 @@
 		<parameter name="use_operator" value="0" />
 		<parameter name="use_user" value="1" />
 		<parameter name="use_observer" value="0" />
-		<parameter name="private_port" value="2089,,,1" />
-		<parameter name="public_port" value="2079,,,1" />
-		<parameter name="testid" value="7865" />   
+		<parameter name="private_port" value="2089,,,1&amp;private_port=2088,,,0" />
+		<parameter name="public_port" value="2079,,,1&amp;public_port=2077,,,0" />
+		<parameter name="testid" value="8076" />   
 	<classes>
 		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
 			    <methods>
@@ -97,8 +97,13 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id_bx2" value="pushtest" />
-		<parameter name="number_of_streams" value="70" />
-		<parameter name="testid" value="7868" />
+<<<<<<< HEAD:src/test/resources/dtls/broadcaster_push/mixed_dtls_non_dtls.xml
+		<parameter name="number_of_streams" value="20" />
+=======
+		<parameter name="number_of_streams" value="50" />
+>>>>>>> d310f2ca3a977ef3535e42179b7539e59ea500dd:src/test/resources/dtls/broadcaster_push/mixed_dtls_non_dtls_push_load.xml
+		<parameter name="mixed" value="1" />
+		<parameter name="testid" value="8078" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
@@ -129,7 +134,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="7870" />  
+		<parameter name="testid" value="8080" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -140,7 +145,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="test" />
-		<parameter name="testid" value="8039" />  
+		<parameter name="testid" value="8082" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
@@ -151,7 +156,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7872" />  
+		<parameter name="testid" value="8084" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -161,7 +166,7 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7874" />  
+		<parameter name="testid" value="8086" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
@@ -171,7 +176,7 @@
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="7876" /> 
+			<parameter name="testid" value="8088" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
@@ -215,8 +220,14 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id_bx2" value="pushtest" />
-		<parameter name="number_of_streams" value="70" />
+<<<<<<< HEAD:src/test/resources/dtls/broadcaster_push/mixed_dtls_non_dtls.xml
+		<parameter name="number_of_streams" value="10" />
 		<parameter name="testid" value="8027" />
+=======
+		<parameter name="number_of_streams" value="50" />
+		<parameter name="mixed" value="1" />
+		<parameter name="testid" value="8093" />
+>>>>>>> d310f2ca3a977ef3535e42179b7539e59ea500dd:src/test/resources/dtls/broadcaster_push/mixed_dtls_non_dtls_push_load.xml
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
@@ -247,7 +258,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="8029" />  
+		<parameter name="testid" value="8095" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -258,7 +269,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="test" />
-		<parameter name="testid" value="8031" />  
+		<parameter name="testid" value="8097" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
@@ -269,7 +280,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8033" />  
+		<parameter name="testid" value="8099" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -279,7 +290,7 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8035" />  
+		<parameter name="testid" value="8101" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
@@ -289,7 +300,7 @@
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="8037" /> 
+			<parameter name="testid" value="8103" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
