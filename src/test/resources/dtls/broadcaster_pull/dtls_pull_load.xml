@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- Create multiple pull input streams from BX to BX.
 The streams are created in the same time  -->
-<suite name="Broadcaster: Pull load suite with random stream FFMPEG analyser " verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: Pull load suite with random stream FFMPEG analyser" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster-Upload DTLS cetrificate to server">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
