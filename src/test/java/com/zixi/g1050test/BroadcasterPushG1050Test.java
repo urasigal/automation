@@ -9,6 +9,12 @@ public class BroadcasterPushG1050Test {
 		
 		BroadcasterPushG1050Driver testDriver = new BroadcasterPushG1050Driver();
 		
-		String sutProcessId = BroadcasterPushG1050Driver.getPid("maxwell",  "maxwell",  "10.7.0.70",  "22",  "pidof stdiserver");
+		String maxwellProcessId = BroadcasterPushG1050Driver.
+		getPid("maxwell",  "maxwell",  "10.7.0.70",  "22",  "pidof stdiserver")
+		.split("/")[0];
+		
+		String killMaxwellAnswer = BroadcasterPushG1050Driver.
+		getPid("maxwell",  "maxwell",  "10.7.0.70",  "22",  "suso kill -9 " + maxwellProcessId)
+		.split("/")[0];
 	}
 }
