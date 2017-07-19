@@ -18,6 +18,6 @@ public class BroadcasterPushG1050Test {
 		
 		String startMaxwell = BroadcasterPushG1050Driver.
 		getPid("root", "maxwell", "10.7.0.70", "22", 
-		"stdiserver -L /usr/local/lib/iwl/plugins/itu_t_g_1050_3.so");
+		"stdiserver -L /usr/local/lib/iwl/plugins/itu_t_g_1050_3.so > /dev/null &");
 	}
 }
