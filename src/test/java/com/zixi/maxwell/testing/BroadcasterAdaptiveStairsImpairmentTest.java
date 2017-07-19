@@ -62,7 +62,7 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 		@Parameters({"maxwell_address", "standart_impairment_server_api_port",
 		"flow_match_control_setmatch", "impairment_control_setimpair1", "impairment_control_setimpair2", "g_1050TestCaseNumber", "testid"})
 		@Test
-		public void G_1050SetTestCaseNumber(String maxwell_address, String standart_impairment_server_api_port, String flow_match_control_setmatch,
+		public void g_1050SetTestCaseNumber(String maxwell_address, String standart_impairment_server_api_port, String flow_match_control_setmatch,
 		String impairment_control_setimpair1, String impairment_control_setimpair2, String g_1050TestCaseNumber, String testid) throws Exception {
 			
 			//Print this class's name to the log file.
