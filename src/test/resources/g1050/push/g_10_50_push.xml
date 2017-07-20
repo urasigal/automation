@@ -20,7 +20,7 @@
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
 		<parameter name="impairment_control_setimpair1" value="setimpair 0 0" />
 		<parameter name="impairment_control_setimpair2" value="setimpair 0 1" />
-		<parameter name="g_1050TestCaseNumber" value="setplugin 0 1 on num 0 87" />
+		<parameter name="g_1050TestCaseNumber" value="setplugin 0 1 on num 0 94" />
 		<parameter name="testid" value="7951" />  
 		<classes>
 		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
@@ -33,7 +33,7 @@
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="File" />
 		<parameter name="id" value="g1050" />
@@ -59,7 +59,7 @@
 	<test name="Broadcaster - Push input stream creation test default parameters FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -84,8 +84,8 @@
 	<test name="Broadcaster - Push output stream creation test - default parameters Push input FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
-		<parameter name="host" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="host" value="10.7.0.63" />
 		<parameter name="latency" value="6000" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="session" value="" />
@@ -109,8 +109,8 @@
 <test name="Broadcaster - Push input stream statistics test - default parameters Push input FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="Host" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
@@ -122,7 +122,7 @@
 	<test name="Broadcaster - UDP output stream creation default parameters Push input FFMPEG analyser">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="pushtest" />
 		<parameter name="streamname" value="pushtest" />
@@ -157,7 +157,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream default parameters push input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
@@ -168,7 +168,7 @@
 		</classes>
 	</test>		
 	<test name="Broadcaster - Remove Push input stream - default parameters Push input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
@@ -180,7 +180,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push output stream - default parameters Push input FFMPEG analyser">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
@@ -191,7 +191,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Fiel input">
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="g1050" />
@@ -200,6 +200,15 @@
 		<parameter name="testid" value="1249" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Restart lab maxwell simulator without plugins">  
+		<classes>
+		    <class name="com.zixi.g1050test.BroadcasterPushG1050ConfigurationTest">
+		    <methods>
+        		<include name="confG1050OnMaxwell" />
+     		 </methods>
+     		 </class>
 		</classes>
 	</test>
 </suite>
