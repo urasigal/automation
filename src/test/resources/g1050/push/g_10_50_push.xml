@@ -20,7 +20,7 @@
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
 		<parameter name="impairment_control_setimpair1" value="setimpair 0 0" />
 		<parameter name="impairment_control_setimpair2" value="setimpair 0 1" />
-		<parameter name="g_1050TestCaseNumber" value="setplugin 0 1 on num 0 94" />
+		<parameter name="g_1050TestCaseNumber" value="setplugin 0 0 on num 0 94" />
 		<parameter name="testid" value="8140" />  
 		<classes>
 		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
@@ -206,7 +206,7 @@
 		<classes>
 		    <class name="com.zixi.g1050test.BroadcasterPushG1050ConfigurationTest">
 		    <methods>
-        		<include name="confG1050OnMaxwell" />
+        		<include name="releaseG1050OnMaxwell" />
      		 </methods>
      		 </class>
 		</classes>
