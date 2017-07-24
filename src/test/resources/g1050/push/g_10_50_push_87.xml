@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster: Push streaming g1050 OTT1_1080p maxwell table's code 87" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: Push streaming g1050 OTT1_1080p severity 1 maxwell table's code 87" verbose="5" data-provider-thread-count="1">
 	<listeners>
 		<listener class-name="com.zixi.reports.TestListenerLogger" />
 	</listeners>
@@ -21,7 +21,7 @@
 		<parameter name="impairment_control_setimpair1" value="setimpair 0 0" />
 		<parameter name="impairment_control_setimpair2" value="setimpair 0 1" />
 		<parameter name="g_1050TestCaseNumber" value="setplugin 0 0 on num 0 87" />
-		<parameter name="setlogging" value="setlogging 0 0" />
+		<parameter name="setlogging" value="setlogging 0 0 fate stats" />
 		<parameter name="testid" value="8140" />  
 		<classes>
 		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
