@@ -25,7 +25,7 @@ public class BroadcasterHlsPullInputTest extends BaseTestZixiMainComponents {
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "enc_type", "enc_key", "old", "fast_connect",
-				"kompression", "rec_history", "rec_duration", "rec_path", "rec_template", "hls_url", "testid"}, 
+		"kompression", "rec_history", "rec_duration", "rec_path", "rec_template", "hls_url", "testid"}, 
 				
 		new String[] {userName, userPass, login_ip, uiport, type, id, matrix, max_outputs, mcast_out, time_shift, enc_type, enc_key, old, fast_connect,
 		kompression, rec_history, rec_duration, rec_path, rec_template, hls_url, testid});
