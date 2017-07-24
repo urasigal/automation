@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
-<suite name="Broadcaster: HLS pull test,, using FFMPEG as actual test analiser" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: HLS pull test using FFMPEG as actual test analiser g1050 (87)" verbose="5" data-provider-thread-count="1">
 	<test name="Configure G_1050 on lab maxwell simulator">  
 		<classes>
 		    <class name="com.zixi.g1050test.BroadcasterPushG1050ConfigurationTest">
