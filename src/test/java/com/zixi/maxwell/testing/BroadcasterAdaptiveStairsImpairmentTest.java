@@ -29,7 +29,7 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 		new String[] { maxwell_address, standart_impairment_server_api_port, flow_match_control_setmatch, impairment_control_setimpair, testid });
 		
 		driverReslut = ((BroadcasterAdaptiveStairsImpairmentDriver) testDriver).testIMPL( maxwell_address,  standart_impairment_server_api_port, 
-		flow_match_control_setmatch, impairment_control_setimpair,  userName,  userPassword,  login_ip,  uiport,  id); 
+		flow_match_control_setmatch, impairment_control_setimpair,  userName,  userPassword,  login_ip,  uiport, id); 
 		
 		Assert.assertEquals(driverReslut.getResult(), "GOOD");
 		// Checking if broadcaster has crashes while execution of the test.
