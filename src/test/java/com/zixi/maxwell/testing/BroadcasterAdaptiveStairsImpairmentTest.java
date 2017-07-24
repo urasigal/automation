@@ -58,23 +58,23 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 		// Checking if broadcaster has crashes while execution of the test.
 	}
 	
-	// Test parameters.
-		@Parameters({"maxwell_address", "standart_impairment_server_api_port",
-		"flow_match_control_setmatch", "impairment_control_setimpair1", "impairment_control_setimpair2", "g_1050TestCaseNumber", "testid"})
+		// Test parameters.
+		@Parameters({"maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
+		"impairment_control_setimpair1", "impairment_control_setimpair2", "g_1050TestCaseNumber", "setlogging", "testid"})
 		@Test
 		public void g_1050SetTestCaseNumber(String maxwell_address, String standart_impairment_server_api_port, String flow_match_control_setmatch,
-		String impairment_control_setimpair1, String impairment_control_setimpair2, String g_1050TestCaseNumber, String testid) throws Exception {
+		String impairment_control_setimpair1, String impairment_control_setimpair2, String g_1050TestCaseNumber, String setlogging, String testid) throws Exception {
 			
 			//Print this class's name to the log file.
 			getLoggerInstance().info(getClass().getName());
 			
 			buildTestParametersString(new String[] {"maxwell_address", "standart_impairment_server_api_port",
-			"flow_match_control_setmatch", "impairment_control_setimpair1", "impairment_control_setimpair2", "g_1050TestCaseNumber", "testid"}, 
+			"flow_match_control_setmatch", "impairment_control_setimpair1", "impairment_control_setimpair2", "g_1050TestCaseNumber", "setlogging", "testid"}, 
 			new String[] {maxwell_address, standart_impairment_server_api_port, flow_match_control_setmatch, impairment_control_setimpair1, 
-			impairment_control_setimpair2, g_1050TestCaseNumber, testid});
+			impairment_control_setimpair2, g_1050TestCaseNumber, setlogging, testid});
 			
 			driverReslut = ((BroadcasterAdaptiveStairsImpairmentDriver) testDriver).testIMPL(maxwell_address, standart_impairment_server_api_port, flow_match_control_setmatch, impairment_control_setimpair1, 
-			impairment_control_setimpair2, g_1050TestCaseNumber); 
+			impairment_control_setimpair2, g_1050TestCaseNumber, setlogging); 
 			
 			Assert.assertEquals(driverReslut.getResult(), "GOOD");
 			// Checking if broadcaster has crashes while execution of the test.
