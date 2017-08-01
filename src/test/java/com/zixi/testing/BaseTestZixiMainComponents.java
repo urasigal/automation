@@ -37,7 +37,7 @@ public class BaseTestZixiMainComponents {
 	
 	// It is an interface, all test drivers have to implement this interface.
 	protected TestDriver 						testDriver; //Reference to test driver interface. `
-	protected DriverReslut						driverReslut				= 	null;
+	protected DriverReslut						driverReslut				= 	new DriverReslut();
 	protected GoogleMailDriver 					mail;
 	// Check SUT up time.
 	protected SetSutUpTimeDriver 				setSutUpTimeDriver;

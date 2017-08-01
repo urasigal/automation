@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster: DTLS Push load streaming suite impairment" verbose="5" data-provider-thread-count="1">
+<!--This is a mixed mode - intended to test DTLS streaming along side with non DTLS streams.-->
+<suite name="Broadcaster: DTLS Push load streaming suite mixed mode" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster-Upload DTLS cetrificate to server">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7703" />    
+		<parameter name="testid" value="8072" />    
 		<classes>
 		    <class name="com.zixi.testing.FeederPostKeyTest">
 			    <methods>
@@ -20,7 +21,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7705" />    
+		<parameter name="testid" value="8074" />    
 		<classes>
 		    <class name="com.zixi.testing.FeederPostKeyTest">
 			    <methods>
@@ -47,30 +48,15 @@
 		<parameter name="use_operator" value="0" />
 		<parameter name="use_user" value="1" />
 		<parameter name="use_observer" value="0" />
-		<parameter name="private_port" value="2089,,,1" />
-		<parameter name="public_port" value="2079,,,1" />
-		<parameter name="testid" value="7707" />   
+		<parameter name="private_port" value="2089,,,1&amp;private_port=2088,,,0" />
+		<parameter name="public_port" value="2079,,,1&amp;public_port=2077,,,0" />
+		<parameter name="testid" value="8076" />   
 	<classes>
 		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
 			    <methods>
 		        	<include name="broadcasterUpdateSettings" />
 		     	</methods>
 		    </class>
-		</classes>
-	</test>
-	<test name="Configure maxwell simulator set interference">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 1 drop 20.5 jitter 50.0 gaussian 200 30" />
-		<parameter name="testid" value="7951" />  
-		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
-		    <methods>
-        		<include name="broadcasterSetGlobalInpairment" />
-     		 </methods>
-     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Multiple  Push test creation (both direction)" > 
@@ -112,8 +98,9 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id_bx2" value="pushtest" />
-		<parameter name="number_of_streams" value="70" />
-		<parameter name="testid" value="7868" />
+		<parameter name="number_of_streams" value="50" />
+		<parameter name="mixed" value="1" />
+		<parameter name="testid" value="8078" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
@@ -144,7 +131,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="7870" />  
+		<parameter name="testid" value="8080" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -155,7 +142,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="test" />
-		<parameter name="testid" value="7872" />  
+		<parameter name="testid" value="8082" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
@@ -166,7 +153,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7874" />  
+		<parameter name="testid" value="8084" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -176,7 +163,7 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7876" />  
+		<parameter name="testid" value="8086" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
@@ -186,7 +173,7 @@
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="7876" /> 
+			<parameter name="testid" value="8088" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
@@ -230,8 +217,9 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id_bx2" value="pushtest" />
-		<parameter name="number_of_streams" value="70" />
-		<parameter name="testid" value="3975" />
+		<parameter name="number_of_streams" value="50" />
+		<parameter name="mixed" value="1" />
+		<parameter name="testid" value="8093" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
@@ -262,7 +250,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="3977" />  
+		<parameter name="testid" value="8095" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -273,7 +261,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="test" />
-		<parameter name="testid" value="3979" />  
+		<parameter name="testid" value="8097" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
@@ -284,17 +272,17 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="3981" />  
+		<parameter name="testid" value="8099" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
-	</test>	
+		</test>	
 	<test name="Broadcaster - delete all input streams low latency">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="3983" />  
+		<parameter name="testid" value="8101" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
@@ -304,24 +292,9 @@
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="3985" /> 
+			<parameter name="testid" value="8103" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
 	</test>
-	<test name="Configure maxwell simulator release interferenc ">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 1" />
-		<parameter name="testid" value="8001" />  
-		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
-		    <methods>
-        		<include name="broadcasterSetGlobalInpairment" />
-     		 </methods>
-     		 </class>
-		</classes>
-	</test>                     
 </suite>
