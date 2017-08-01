@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster: Push load streaming suite" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: Push load streaming suite with net impairments" verbose="5" data-provider-thread-count="1">
 <!-- Configure maxwell and test perform a testing -->
 	<test name="Configure maxwell simulator set interference">
 		<parameter name="maxwell_address" value="10.7.0.70" />
