@@ -18,8 +18,7 @@ public class BroadcasterFileInputTest extends BaseTestZixiMainComponents{
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "old",
 	"fast_connect", "kompression", "enc_type", "enc_key", "path","testid" })
 	@Test
-	public void broadcasterCreateFileInout(String userName,
-	String userPass, String login_ip, String uiport, String type,
+	public void broadcasterCreateFileInout(String userName, String userPass, String login_ip, String uiport, String type,
 	String id, String matrix, String max_outputs, String mcast_out, String time_shift, String old, String fast_connect,
 	String kompression, String enc_type, String enc_key, String path, String testid) throws Exception {
 
