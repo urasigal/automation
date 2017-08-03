@@ -31,6 +31,7 @@ public class FeederPostKeyTest extends BaseTestZixiMainComponents{
 		// Provide parameters to a TestLink.
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "testid"}, 
 		new String[] { userName, userPass, login_ip, uiport, testid });
+		
 		driverReslut = ((FeederPostKeyDriver) testDriver).testIMPL2(userName, userPass, login_ip, uiport);
 		Assert.assertTrue(driverReslut.getResult().contains("SSL private key is uploaded successfully"));
 	}
