@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
+<suite name="Broadcaster: HLS pull input non adaptive streaming - get all streams" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Create a file input steam">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="transcoder" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="1080i_4ChAud.ts" />
+		<parameter name="testid" value="8263" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
+	<!-- Add a transcoder profile -->
+	<test name="Broadcaster: add transcoder profile h.264 - 720*480 1Mbps">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="mode" value="h.264" />
+		<parameter name="profile_name" value="480p_1000" />
+		<parameter name="enc" value="1" />
+		<parameter name="bitrate" value="1000000" />
+		<parameter name="gop" value="30" />
+		<parameter name="fixed_gop" value="1" />
+		<parameter name="closed_gop" value="1" />
+		<parameter name="copy_gop" value="0" />
+		<parameter name="performance" value="4" />
+		<parameter name="b_frames" value="3" />
+		<parameter name="frame_type" value="0" />
+		<parameter name="profile" value="1" />
+		<parameter name="level" value="100" />
+		<parameter name="bitrate_mode" value="0" />
+		<parameter name="ref_frames" value="2" />
+		<parameter name="hrd" value="2" />
+		<parameter name="idr_int" value="1" />
+		<parameter name="cavlc" value="0" />
+		<parameter name="brightness" value="0" />
+		<parameter name="contrast" value="1" />
+		<parameter name="fps" value="0" />
+		<parameter name="width" value="720" />
+		<parameter name="height" value="480" />
+		<parameter name="crf" value="23" />
+		<parameter name="tune" value="zerolatency" />
+		<parameter name="use_hw" value="1" />
+		<parameter name="max_bitrate" value="2500000" />  
+		<parameter name="testid" value="8265" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
+		</classes>
+	</test>
+	<!-- Add a transcoder profile -->
+	<test name="Broadcaster: add transcoder profile h.264 - 720*480 4Mbps">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="mode" value="h.264" />
+		<parameter name="profile_name" value="480p_4000" />
+		<parameter name="enc" value="1" />
+		<parameter name="bitrate" value="4000000" />
+		<parameter name="gop" value="30" />
+		<parameter name="fixed_gop" value="1" />
+		<parameter name="closed_gop" value="1" />
+		<parameter name="copy_gop" value="0" />
+		<parameter name="performance" value="4" />
+		<parameter name="b_frames" value="3" />
+		<parameter name="frame_type" value="0" />
+		<parameter name="profile" value="1" />
+		<parameter name="level" value="100" />
+		<parameter name="bitrate_mode" value="0" />
+		<parameter name="ref_frames" value="2" />
+		<parameter name="hrd" value="2" />
+		<parameter name="idr_int" value="1" />
+		<parameter name="cavlc" value="0" />
+		<parameter name="brightness" value="0" />
+		<parameter name="contrast" value="1" />
+		<parameter name="fps" value="0" />
+		<parameter name="width" value="720" />
+		<parameter name="height" value="480" />
+		<parameter name="crf" value="23" />
+		<parameter name="tune" value="zerolatency" />
+		<parameter name="use_hw" value="1" />
+		<parameter name="max_bitrate" value="2500000" />  
+		<parameter name="testid" value="8267" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
+		</classes>
+	</test>
+	<!-- Transcode a stream to 1Mbps and pad it to 2Mbps -->
+	<test name="Broadcaster: transcode a stream - 720*480 to 2Mbps">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="Transcoded" />
+		<parameter name="id" value="2000" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="rec_history" value="0" />
+		<parameter name="rec_duration" value="7200" />
+		<parameter name="src" value="transcoder" />
+		<parameter name="ap" value="-1" />
+		<parameter name="use_hw" value="0" />
+		<parameter name="ll" value="0" />
+		<parameter name="all_pids" value="0" />
+		<parameter name="bit" value="0" />
+		<parameter name="profile_name" value="480p_1000" />
+		<parameter name="mode" value="h.264" />
+		<parameter name="testid" value="8269" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
+		</classes>
+	</test>
+	<!-- Transcode a stream to 1Mbps and pad it to 5Mbps -->
+	<test name="Broadcaster: transcode a stream - 720*480 to 5Mbps">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="Transcoded" />
+		<parameter name="id" value="5000" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="rec_history" value="0" />
+		<parameter name="rec_duration" value="7200" />
+		<parameter name="src" value="transcoder" />
+		<parameter name="ap" value="-1" />
+		<parameter name="use_hw" value="0" />
+		<parameter name="ll" value="0" />
+		<parameter name="all_pids" value="0" />
+		<parameter name="bit" value="0" />
+		<parameter name="profile_name" value="480p_4000" />
+		<parameter name="mode" value="h.264" />
+		<parameter name="testid" value="8271" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
+		</classes>
+	</test>
+	<!-- Add an adaptive group - consists of transcoded streams -->
+	<test name="Broadcaster: create an adaptive group">
+		<parameter name="userName" value="admin" /> 
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="adaptive" />
+		<parameter name="record" value="false" />
+		<parameter name="zixi" value="1" />
+		<parameter name="hls" value="1" />
+		<parameter name="hds" value="1" /> 
+		<parameter name="mpd" value="0" /> 
+		<parameter name="mmt" value="0" />
+		<parameter name="compress_zixi" value="1" />
+		<parameter name="multicast" value="0" />
+		<parameter name="streams" value="5000,2000" />
+		<parameter name="bitrates" value="5000000,2000000" />
+		<parameter name="max_time" value="0" />
+		<parameter name="testid" value="8273" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Define HLS pull input stream">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="HLS" />
+		<parameter name="id" value="hlspullinput" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="rec_history" value="0" />
+		<parameter name="rec_duration" value="7200" />
+		<parameter name="rec_path" value="" />
+		<parameter name="rec_template" value="%25S_%25Y%25M%25D-%25T.ts" />
+		<parameter name="hls_url" value="http%3A%2F%2F10.7.0.74%3A7777%2Fadaptive.m3u8" />
+		<parameter name="hls_adaptive" value="0" />
+		<parameter name="testid" value="8275" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterHlsPullInputTest">
+     		 </class>
+		</classes>
+	  </test>
+	<!-- UDP output stream - output to FFMPEG -->
+	<test name="Broadcaster - UDP output stream creation composed first">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="port" value="5555" />
+		<parameter name="stream" value="hlspullinput_2000" />
+		<parameter name="streamname" value="hlstest" />
+		<parameter name="host" value="10.7.0.150" />
+		<parameter name="id" value="hlstest" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="ttl" value="5" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="df" value="0" />
+		<parameter name="local_port" value="" />
+		<parameter name="dec_key" value="" />
+		<parameter name="type" value="TS" />
+		<parameter name="rows" value="10" />
+		<parameter name="remux_buff" value="1000" />
+		<parameter name="local_ip" value="0.0.0.0" />
+		<parameter name="remux_restampdts" value="0" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="remux_pcr" value="90" />
+		<parameter name="dec_type" value="" />
+		<parameter name="cols" value="10" />
+		<parameter name="testid" value="8277" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
+		</classes>
+	</test> 
+	<test name="FFMPEG test composed first">
+		<parameter name="testid" value="8279" />  
+		<classes>
+		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
+		</classes>
+	</test><!--comment-->
+	<test name="Broadcaster - Remove udp output stream composed first">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="hlstest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8281" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+	</test>		
+	<!-- UDP output stream - output to FFMPEG -->
+	<test name="Broadcaster - UDP output stream creation composed second">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="port" value="5555" />
+		<parameter name="stream" value="hlspullinput_5000" />
+		<parameter name="streamname" value="hlstest" />
+		<parameter name="host" value="10.7.0.150" />
+		<parameter name="id" value="hlstest" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="ttl" value="5" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="df" value="0" />
+		<parameter name="local_port" value="" />
+		<parameter name="dec_key" value="" />
+		<parameter name="type" value="TS" />
+		<parameter name="rows" value="10" />
+		<parameter name="remux_buff" value="1000" />
+		<parameter name="local_ip" value="0.0.0.0" />
+		<parameter name="remux_restampdts" value="0" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="remux_pcr" value="90" />
+		<parameter name="dec_type" value="" />
+		<parameter name="cols" value="10" />
+		<parameter name="testid" value="8283" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
+		</classes>
+	</test> 
+	<!-- This is test tests the quality of one of the stream that composes the adaptive HLS input to broadcaster server -->
+	<test name="FFMPEG test composed second">
+		<parameter name="testid" value="8285" />  
+		<classes>
+		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove udp output stream composed second">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="hlstest" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8287" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+	</test>	
+	<!-- delete a transcoded stream -->
+	<test name="Broadcaster - Remove input stream test - 5Mbps">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="5000" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="5000" />
+		<parameter name="testid" value="8289" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<!-- delete a transcoded stream -->
+	<test name="Broadcaster - Remove an input stream test - 2Mbps">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="2000" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="2000" />
+		<parameter name="testid" value="8291" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<!-- Delete a transcoder profile 1Mbps -->
+	<test name="Broadcaster: transcode delete a profile - 720*480 1Mbps">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="profile_name" value="480p_1000" />
+		<parameter name="testid" value="8293" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
+		</classes>
+	</test>
+	<!-- Delete a transcoder profile 4Mbps -->
+	<test name="Broadcaster: transcode delete a profile - 720*480 5Mbps">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="profile_name" value="480p_4000" />
+		<parameter name="testid" value="8295" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
+		</classes>
+	</test>	
+	<test name="Broadcaster - Remove File input">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="transcoder" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="transcoder" />
+		<parameter name="testid" value="8297" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove HLS input composed first">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="hlspullinput_2000" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="hlspullinput_2000" />
+		<parameter name="testid" value="8299" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove HLS input composed second">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="hlspullinput_5000" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="hlspullinput_5000" />
+		<parameter name="testid" value="8301" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+</suite>

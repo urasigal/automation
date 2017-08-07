@@ -10,7 +10,6 @@ public class FFMPEGImageStatisticTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
 	public void testInit() {
-
 		// This is a test driver.
 		testDriver = new FFMPEGImageStatisticTestDriver();
 	}
