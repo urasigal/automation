@@ -66,7 +66,7 @@ The streams are created in the same time  -->
 		</classes>
 	</test>
 	<!-- Configure maxwell and test perform a testing -->
-	<test name="Configure maxwell simulator set interference">
+	<test name="Configure maxwell simulator set interference simple case">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
@@ -123,7 +123,7 @@ The streams are created in the same time  -->
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
 	</test>
-	<test name="Configure maxwell simulator release interference encryption suite">
+	<test name="Configure maxwell simulator release interference simple case">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
@@ -196,7 +196,7 @@ The streams are created in the same time  -->
 		</classes>
 	</test>
 	<!-- Configure maxwell and test perform a testing -->
-	<test name="Configure maxwell simulator set interference">
+	<test name="Configure maxwell simulator set interference low latency">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
@@ -253,7 +253,7 @@ The streams are created in the same time  -->
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
 	</test>
-	<test name="Configure maxwell simulator release interference encryption suite">
+	<test name="Configure maxwell simulator release interference low latency">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
@@ -412,7 +412,7 @@ The streams are created in the same time  -->
 		</classes>
 	</test>
 	<!-- Configure maxwell and test perform a testing -->
-	<test name="Configure maxwell simulator set interference">
+	<test name="Configure maxwell simulator set interference encryption 128">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
@@ -469,7 +469,7 @@ The streams are created in the same time  -->
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
 	</test>
-	<test name="Configure maxwell simulator release interference encryption suite">
+	<test name="Configure maxwell simulator release interference encryption 128">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
