@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
-<suite name="Broadcaster: HLS pull test,, using FFMPEG as actual test analiser" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: HLS pull input non adaptive streaming - get all streams" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -211,7 +211,7 @@
 		<parameter name="rec_duration" value="7200" />
 		<parameter name="rec_path" value="" />
 		<parameter name="rec_template" value="%25S_%25Y%25M%25D-%25T.ts" />
-		<parameter name="hls_url" value="http://10.7.0.74:7777/adaptive.m3u8" />
+		<parameter name="hls_url" value="http%3A%2F%2F10.7.0.74%3A7777%2Fadaptive.m3u8" />
 		<parameter name="hls_adaptive" value="0" />
 		<parameter name="testid" value="8275" />    
 		<classes>
@@ -261,7 +261,7 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="hlspullinput_2000" />
+		<parameter name="id" value="hlstest" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="8281" />  
 		<classes>
@@ -311,7 +311,7 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="hlspullinput_5000" />
+		<parameter name="id" value="hlstest" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="8287" />  
 		<classes>
@@ -402,6 +402,17 @@
 		<parameter name="testid" value="8301" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster: delete an adaptive group test">
+		<parameter name="userName" value="admin" /> 
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="adaptive" />
+		<parameter name="testid" value="8315" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest"/>
 		</classes>
 	</test>
 </suite>

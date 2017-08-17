@@ -1,12 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster: bonded push load streaming suite impairments mode" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: DTLS bonded push load streaming suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster-Upload DTLS certificate to server">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8318" />    
+		<classes>
+		    <class name="com.zixi.testing.FeederPostKeyTest">
+			    <methods>
+		        	<include name="uploadSslCertificateToBroadcasterServer" />
+		     	</methods>
+		  	</class>
+		</classes>
+	</test>
+	<test name="Broadcaster-Upload DTLS private key to server">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8320" />    
+		<classes>
+		    <class name="com.zixi.testing.FeederPostKeyTest">
+			    <methods>
+		        	<include name="uploadPrivateKeyToBroadcasterServer" />
+		     	</methods>
+		    </class>
+		</classes>
+	</test>
+	<test name="Broadcaster-Update settings DTLS server">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="server_id" value="localhost.localdomain" />
+		<parameter name="gui_web_port" value="4444" />
+		<parameter name="uname" value="user" />
+		<parameter name="aname" value="admin" />
+		<parameter name="ft_max_quota" value="85" />
+		<parameter name="max_cpu" value="90" />
+		<parameter name="max_mem" value="90" />
+		<parameter name="max_in_bandwidth" value="0" />
+		<parameter name="max_out_bandwidth" value="0" />
+		<parameter name="admin_https" value="0" />
+		<parameter name="use_operator" value="0" />
+		<parameter name="use_user" value="1" />
+		<parameter name="use_observer" value="0" />
+		<parameter name="private_port" value="2089,10.7.5.177,,1" /> <!-- Here the IP have to be bind to port explicitly -->
+		<parameter name="public_port" value="2079,,,1" />
+		<parameter name="testid" value="8322" />   
+	<classes>
+		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+			    <methods>
+		        	<include name="broadcasterUpdateSettings" />
+		     	</methods>
+		    </class>
+		</classes>
+	</test>
 	<test name="Feeder - push to broadcaster test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
-		<parameter name="mip" value="4000.ts" />
+		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -34,13 +91,13 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.74" />
+		<parameter name="ohst" value="10.7.0.66" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="7953" />
+		<parameter name="testid" value="8324" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest">
 			    <methods>
@@ -52,7 +109,7 @@
 	<test name="Broadcaster - Push input stream creation test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -69,20 +126,20 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="7955" />  
+		<parameter name="testid" value="8326" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push from Feeder input stream statistics test - default paremeters">
+	<test name="Broadcaster - Push from Feeder input stream statistics test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.74" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="Host" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
-		<parameter name="testduration" value="40" />
-		<parameter name="testid" value="7957" />
+		<parameter name="testduration" value="20" />
+		<parameter name="testid" value="8328" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -90,7 +147,7 @@
 	<test name="Broadcaster - Multiple bonded Push test creation (both direction)"> 	
 		<parameter name="userName_src" value="admin" />
 		<parameter name="userPass_src" value="1234" />
-		<parameter name="login_ip_src" value="10.7.0.74" />
+		<parameter name="login_ip_src" value="10.7.0.66" />
 		<parameter name="uiport_src" value="4444" />
 		<parameter name="type_src" value="push" />
 		<parameter name="name" value="outpu_name" />
@@ -98,8 +155,8 @@
 		<parameter name="matrix" value="1" />
 		<parameter name="alias" value="stream_id_" />
 		<parameter name="session" value="" />
-		<parameter name="link_a" value="10.7.0.72,2088,10.7.0.74,,0" />
-		<parameter name="link_b" value="192.168.7.72,2088,192.168.7.74,,0" />
+		<parameter name="link_a" value="internal.zixi.com,2089,192.168.60.66,,0" />
+		<parameter name="link_b" value="internal.zixi.com,2089,192.168.5.166,,0" />
 		<parameter name="bond_links" value="1" />
 		<parameter name="latency_src" value="500" />
 		<parameter name="fec_force" value="0" />
@@ -111,7 +168,7 @@
 		<parameter name="stats_hist" value="1" />
 		<parameter name="userName_dst" value="admin" />
 		<parameter name="userPass_dst" value="1234" />
-		<parameter name="login_ip_dst" value="10.7.0.72" />
+		<parameter name="login_ip_dst" value="10.7.0.77" />
 		<parameter name="latency_dst" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="" />
@@ -131,31 +188,15 @@
 		<parameter name="dec_type" value="" />
 		<parameter name="dec_key" value="" />
 		<parameter name="number_of_streams" value="150" />
-		<parameter name="testid" value="7959" />
+		<parameter name="testid" value="8330" />
 		<classes>
 			<class name="com.zixi.load.testing.BroadcasterMultipleBondingTest"/>
-		</classes>
-	</test>
-	<!-- Configure maxwell and test perform a testing -->
-	<test name="Configure maxwell simulator set interference">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0 drop 20.5 jitter 50.0 gaussian 200 30" />
-		<parameter name="testid" value="7951" />  
-		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
-		    <methods>
-        		<include name="broadcasterSetGlobalInpairment" />
-     		 </methods>
-     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="" />
 		<parameter name="streamname" value="test" />
@@ -178,92 +219,92 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="7961" />  
+		<parameter name="testid" value="8332" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - test random outputs with FFMPG analyzer">
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="test" />
-		<parameter name="testid" value="7963" />  
+		<parameter name="testid" value="8334" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream">
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7965" />  
+		<parameter name="testid" value="8336" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>	
 	<test name="Broadcaster - delete all input streams">
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7967" />  
+		<parameter name="testid" value="8338" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Load test Push out deletion" >
-			<parameter name="login_ip" value="10.7.0.74" />
+			<parameter name="login_ip" value="10.7.0.66" />
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="7969" /> 
+			<parameter name="testid" value="8340" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
 	</test>
-	<test name="Feeder - output stream deletion test - default paremeters">
+	<test name="Feeder - output stream deletion test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
-		<parameter name="mip" value="4000.ts" />
+		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.74" />
-		<parameter name="testid" value="7971" />
+		<parameter name="host" value="10.7.0.66" />
+		<parameter name="testid" value="8342" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster - Remove Push input stream - default paremeters">
-		<parameter name="login_ip" value="10.7.0.74" />
+	<test name="Broadcaster - Remove Push input stream">
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
-		<parameter name="testid" value="7973" />
+		<parameter name="testid" value="8344" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
 	<!-- ********************************************************************* --> 
-	<!-- Test encrypted bonding Zixi streaming between two broadcasters servers -->
+	<!-- Test encrypted bonding zixi transfer between two broadcasters servers -->
 	<!-- ********************************************************************* -->
-	<test name="Feeder - bonded push to broadcaster test - Encryption AES 128">
+	<test name="Feeder - push to broadcaster test encrypted">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
-		<parameter name="mip" value="4000.ts" />
+		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -291,13 +332,13 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.74" />
+		<parameter name="ohst" value="10.7.0.66" />
 		<parameter name="oprt" value="2088" />
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="7979" />
+		<parameter name="testid" value="8347" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputPushToBxTest">
 			    <methods>
@@ -306,10 +347,10 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation test - Encryption AES 128">
+	<test name="Broadcaster - Push input stream creation test encrypted">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -326,28 +367,28 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="7981" />    
+		<parameter name="testid" value="8349" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 128">
+	<test name="Broadcaster - Push from Feeder input stream statistics encrypted">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.74" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="Host" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
-		<parameter name="testduration" value="60" />
-		<parameter name="testid" value="7983" />  
+		<parameter name="testduration" value="20" />
+		<parameter name="testid" value="8351" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
-	</test>
-	<test name="Broadcaster - Multiple bonded Push test creation (both direction)  - Encryption AES 128"> 	
+	</test>	
+	<test name="Broadcaster - Multiple bonded Push test creation (both direction) encrypted"> 	
 		<parameter name="userName_src" value="admin" />
 		<parameter name="userPass_src" value="1234" />
-		<parameter name="login_ip_src" value="10.7.0.74" />
+		<parameter name="login_ip_src" value="10.7.0.66" />
 		<parameter name="uiport_src" value="4444" />
 		<parameter name="type_src" value="push" />
 		<parameter name="name" value="outpu_name" />
@@ -355,10 +396,10 @@
 		<parameter name="matrix" value="1" />
 		<parameter name="alias" value="stream_id_" />
 		<parameter name="session" value="" />
-		<parameter name="link_a" value="10.7.0.72,2088,10.7.0.74,,0" />
-		<parameter name="link_b" value="192.168.7.72,2088,192.168.7.74,,0" />
+		<parameter name="link_a" value="internal.zixi.com,2089,192.168.60.66,,0" />
+		<parameter name="link_b" value="internal.zixi.com,2089,192.168.5.166,,0" />
 		<parameter name="bond_links" value="1" />
-		<parameter name="latency_src" value="6000" />
+		<parameter name="latency_src" value="500" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="fec_overhead" value="30" />
 		<parameter name="fec_block" value="150" />
@@ -368,7 +409,7 @@
 		<parameter name="stats_hist" value="1" />
 		<parameter name="userName_dst" value="admin" />
 		<parameter name="userPass_dst" value="1234" />
-		<parameter name="login_ip_dst" value="10.7.0.72" />
+		<parameter name="login_ip_dst" value="10.7.0.77" />
 		<parameter name="latency_dst" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="" />
@@ -388,31 +429,15 @@
 		<parameter name="dec_type" value="aes128" />
 		<parameter name="dec_key" value="a69a8ba04520a8e0fa66fdb0af94cb33" />
 		<parameter name="number_of_streams" value="150" />
-		<parameter name="testid" value="7985" />
+		<parameter name="testid" value="8353" />
 		<classes>
 			<class name="com.zixi.load.testing.BroadcasterMultipleBondingTest"/>
 		</classes>
 	</test>
-	<!-- Configure maxwell and test perform a testing -->
-	<test name="Configure maxwell simulator set interference encryption suite">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0 drop 20.5 jitter 50.0 gaussian 200 30" />
-		<parameter name="testid" value="8303" />  
-		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
-		    <methods>
-        		<include name="broadcasterSetGlobalInpairment" />
-     		 </methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="Broadcaster - UDP output stream creation - Encryption AES 128">
+	<test name="Broadcaster - UDP output stream creation encrypted">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="" />
 		<parameter name="streamname" value="test" />
@@ -435,96 +460,81 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="7987" />  
+		<parameter name="testid" value="8355" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - test random outputs with FFMPG analyzer - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.72" />
+	<test name="Broadcaster - test random outputs with FFMPG analyzer encrypted">
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="test" />
-		<parameter name="testid" value="7989" />  
+		<parameter name="testid" value="8357" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
 	</test>
-	<test name="Configure maxwell simulator release interferenc encryption suite">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0" />
-		<parameter name="testid" value="8305" />  
-		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
-		    <methods>
-        		<include name="broadcasterSetGlobalInpairment" />
-     		 </methods>
-     		 </class>
-		</classes>
-	</test>     
-	<test name="Broadcaster - Remove udp output stream - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.72" />
+	<test name="Broadcaster - Remove udp output stream encrypted">
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7991" />  
+		<parameter name="testid" value="8359" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>	
-	<test name="Broadcaster - delete all input streams - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.72" />
+	<test name="Broadcaster - delete all input streams encrypted">
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7993" />  
+		<parameter name="testid" value="8361" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Load test Push out deletion - Encryption AES 128" >
-			<parameter name="login_ip" value="10.7.0.74" />
+	<test name="Broadcaster - Load test Push out deletion encrypted" >
+			<parameter name="login_ip" value="10.7.0.66" />
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="7995" /> 
+			<parameter name="testid" value="8363" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
-	</test> 
-	<test name="Feeder - output stream deletion test - Encryption 128">
+	</test>
+	<test name="Feeder - output stream deletion test encrypted">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
-		<parameter name="mip" value="4000.ts" />
+		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.74" />
-		<parameter name="testid" value="7997" />
+		<parameter name="host" value="10.7.0.66" />
+		<parameter name="testid" value="8365" />
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster - Remove Push input stream - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.74" />
+	<test name="Broadcaster - Remove Push input stream encrypted">
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="bonded" />
-		<parameter name="testid" value="7999" />  
+		<parameter name="id" value="feederout" />
+		<parameter name="testid" value="8367" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
-	</test>                  
+	</test>
 </suite>
