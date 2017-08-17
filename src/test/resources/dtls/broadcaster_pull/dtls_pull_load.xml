@@ -6,7 +6,7 @@ The streams are created in the same time  -->
 	<test name="Broadcaster-Upload DTLS cetrificate to server">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="7734" />    
 		<classes>
@@ -20,7 +20,7 @@ The streams are created in the same time  -->
 	<test name="Broadcaster-Upload DTLS private key to server">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="7736" />    
 		<classes>
@@ -34,7 +34,7 @@ The streams are created in the same time  -->
 	<test name="Broadcaster-Update settings DTLS server">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="server_id" value="localhost.localdomain" />
 		<parameter name="gui_web_port" value="4444" />
@@ -310,7 +310,7 @@ The streams are created in the same time  -->
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -336,7 +336,7 @@ The streams are created in the same time  -->
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="feederout" />
 		<parameter name="testduration" value="120" />
@@ -464,7 +464,7 @@ The streams are created in the same time  -->
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Push input stream - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
