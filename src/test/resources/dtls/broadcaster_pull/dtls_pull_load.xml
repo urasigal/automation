@@ -49,7 +49,7 @@ The streams are created in the same time  -->
 		<parameter name="use_operator" value="0" />
 		<parameter name="use_user" value="1" />
 		<parameter name="use_observer" value="0" />
-		<parameter name="private_port" value="2089,,,1" />
+		<parameter name="private_port" value="2089,10.7.5.177,,1&amp;private_port=2090,10.7.0.77,,1" />
 		<parameter name="public_port" value="2079,,,1" />
 		<parameter name="testid" value="7738" />   
 	<classes>
@@ -90,7 +90,7 @@ The streams are created in the same time  -->
 		<parameter name="propertiesFile" value="stream.properties" />
 		<parameter name="dec_type" value="" />
 		<parameter name="dec_key" value="" />
-		<parameter name="number_of_streams" value="20" />
+		<parameter name="number_of_streams" value="100" />
 		<parameter name="testid" value="7741" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipePullCreationTest"/>
@@ -189,7 +189,7 @@ The streams are created in the same time  -->
 		<parameter name="propertiesFile" value="stream.properties" />
 		<parameter name="dec_type" value="" />
 		<parameter name="dec_key" value="" />
-		<parameter name="number_of_streams" value="70" />
+		<parameter name="number_of_streams" value="100" />
 		<parameter name="testid" value="7752" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipePullCreationTest"/>
@@ -264,7 +264,7 @@ The streams are created in the same time  -->
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="name" value="feederoutputname" />
-		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="mip" value="4000.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
@@ -293,8 +293,8 @@ The streams are created in the same time  -->
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
 		<parameter name="ohst" value="internal.zixi.com" />
-		<parameter name="oprt" value="2089" />
-		<parameter name="onic" value="0.0.0.0" />
+		<parameter name="oprt" value="2090" />
+		<parameter name="onic" value="10.7.0.65" />
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -375,7 +375,7 @@ The streams are created in the same time  -->
 		<parameter name="propertiesFile" value="stream.properties" />
 		<parameter name="dec_type" value="aes128" />
 		<parameter name="dec_key" value="a69a8ba04520a8e0fa66fdb0af94cb33" />
-		<parameter name="number_of_streams" value="70" />
+		<parameter name="number_of_streams" value="100" />
 		<parameter name="testid" value="7769" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipePullCreationTest"/>
@@ -450,14 +450,14 @@ The streams are created in the same time  -->
 		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
-		<parameter name="mip" value="live_recording.ts" />
+		<parameter name="mip" value="4000.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="file" />
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
 		<parameter name="host" value="internal.zixi.com" />
-		<parameter name="push_port" value="2089" />
+		<parameter name="push_port" value="2090" />
 		<parameter name="testid" value="7779" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
