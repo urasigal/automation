@@ -132,7 +132,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Receiver - pull input stream creation - default parameters">
+	<test name="Receiver - pull input stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.67" />
@@ -157,7 +157,7 @@
 		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push from Feeder input stream statistics test - default paremeters">
+	<test name="Broadcaster - Push from Feeder input stream statistics test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -170,7 +170,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Receiver - Pull input stream statistic - default parameters">
+	<test name="Receiver - Pull input stream statistic">
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -204,13 +204,13 @@
 			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
 		</classes>
 	</test>
-	<test name="FFMPEG test Encryption AES 128 FFMPEG analyser">
+	<test name="FFMPEG test Encryption">
 		<parameter name="testid" value="8061" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-	<test name="Receiver: UDP out deletion Encryption AES 128 FFMPEG analyser">
+	<test name="Receiver: UDP out deletion">
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -222,7 +222,7 @@
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
 		</classes>
 	</test>
-	<test name="Feeder - output stream deletion test - Encryption AES 128">
+	<test name="Feeder - output stream deletion test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -241,7 +241,7 @@
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Push input stream - default paremeters">
+	<test name="Broadcaster - Remove Push input stream">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -253,7 +253,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Receiver - Remove Pull input stream - default paremeters">
+	<test name="Receiver - Remove Pull input stream">
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
