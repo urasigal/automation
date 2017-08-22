@@ -5,7 +5,7 @@
 	<test name="Broadcaster-Upload DTLS cetrificate">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="7703" />    
 		<classes>
@@ -19,7 +19,7 @@
 	<test name="Broadcaster-Upload DTLS private key">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="7705" />    
 		<classes>
@@ -33,7 +33,7 @@
 	<test name="Broadcaster-Update settings">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="server_id" value="localhost.localdomain" />
 		<parameter name="gui_web_port" value="4444" />
@@ -95,7 +95,7 @@
 	<test name="Broadcaster - Stream statistics test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="10.7.0.77" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
@@ -153,7 +153,7 @@
 	<test name="Broadcaster - Stream statistics test zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="10.7.0.77" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test2" />
@@ -211,7 +211,7 @@
 	<test name="Broadcaster - Stream statistics test low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="10.7.0.77" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test2" />
@@ -269,7 +269,7 @@
 	<test name="Broadcaster - Stream statistics test force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="Host" value="10.7.0.77" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test2" />
