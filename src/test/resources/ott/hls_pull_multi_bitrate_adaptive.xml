@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
+<!-- TestLink: "HLS multi bitrate adaptive streaming" -->
 <suite name="Broadcaster: HLS pull input test multi bitrate adaptive streaming" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
@@ -256,7 +256,7 @@
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove udp output stream default parameters push input FFMPEG analyser">
+	<test name="Broadcaster - Remove udp output stream push input FFMPEG analyser">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
