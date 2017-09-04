@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
-<suite name="Broadcaster: adaptive group maxvell test" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: adaptive group maxvell test switch to higher bitrate stream" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -19,7 +19,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="TearsOfSteel_720p_h265.ts" />
-		<parameter name="testid" value="8370" />    
+		<parameter name="testid" value="8397" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -61,7 +61,7 @@
 		<parameter name="tune" value="zerolatency" />
 		<parameter name="use_hw" value="1" />
 		<parameter name="max_bitrate" value="1500000" />  
-		<parameter name="testid" value="8372" />
+		<parameter name="testid" value="8399" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
@@ -99,7 +99,7 @@
 		<parameter name="tune" value="zerolatency" />
 		<parameter name="use_hw" value="1" />
 		<parameter name="max_bitrate" value="3500000" />  
-		<parameter name="testid" value="8374" />
+		<parameter name="testid" value="8401" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
@@ -131,7 +131,7 @@
 		<parameter name="bit" value="0" />
 		<parameter name="profile_name" value="480p_1000" />
 		<parameter name="mode" value="h.264" />
-		<parameter name="testid" value="8376" />
+		<parameter name="testid" value="8403" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
@@ -163,7 +163,7 @@
 		<parameter name="bit" value="0" />
 		<parameter name="profile_name" value="480p_3000" />
 		<parameter name="mode" value="h.264" />
-		<parameter name="testid" value="8378" />
+		<parameter name="testid" value="8405" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
@@ -186,7 +186,7 @@
 		<parameter name="streams" value="3000,1000" />
 		<parameter name="bitrates" value="3000000,1000000" />
 		<parameter name="max_time" value="0" />
-		<parameter name="testid" value="8380" />
+		<parameter name="testid" value="8407" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
 		</classes>
@@ -212,7 +212,7 @@
 		<parameter name="port" value="2077" />
 		<parameter name="session" value="" />
 		<parameter name="stream" value="adaptive" />
-		<parameter name="testid" value="8382" />  
+		<parameter name="testid" value="8409" />  
 		<classes>
 		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
 		</classes>
@@ -225,7 +225,7 @@
 		<parameter name="uiport" value="4300" />
 		<parameter name="id" value="receivertest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="8384" />  
+		<parameter name="testid" value="8411" />  
 		<classes>
 		    <class name="com.zixi.testing.ReceiverInputStatisticTest"/>
 		</classes>
@@ -240,11 +240,11 @@
 		<parameter name="maxwellPort" value="7021" />
 		<parameter name="maxwell_match_control" value="setmatch 0 0 zerostats all" />
 		<parameter name="maxwellImpairmentsCommand" value="setimpair 0 0 zerostats rate 1500000 160 11000 120 4000000 100000000 20" />
-		<parameter name="testid" value="8386" />
+		<parameter name="testid" value="8413" />
 		<classes>
 		    <class name="com.zixi.testing.AdaptiveReceiverInputTest">
 		    <methods>
-        		<include name="receiverAdaptiveInputDownCaseTest" />
+        		<include name="receiverAdaptiveInputUpCaseTest" />
      		 </methods>
 		    </class>
 		</classes>
@@ -255,19 +255,23 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="id" value="receivertest" />
-		<parameter name="testid" value="8388" />  
+		<parameter name="testid" value="8415" />  
 		<classes>
-		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest">
+		    <methods>
+        		<include name="receiverAdaptiveInputUpCaseTest" />
+     		 </methods>
+     		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Fiel input">
+	<test name="Broadcaster - Remove File input">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="transcoder" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoder" />
-		<parameter name="testid" value="8390" />  
+		<parameter name="testid" value="8417" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -279,7 +283,7 @@
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="480p_1000" />
-		<parameter name="testid" value="8392" />
+		<parameter name="testid" value="8419" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
 		</classes>
@@ -291,7 +295,7 @@
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="480p_3000" />
-		<parameter name="testid" value="8394" />
+		<parameter name="testid" value="8421" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
 		</classes>
