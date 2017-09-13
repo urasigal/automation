@@ -18,7 +18,7 @@
 		<parameter name="kompression" value="1" />
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
-		<parameter name="path" value="TearsOfSteel_720p_h265.ts" />
+		<parameter name="path" value="n6000k.ts" />
 		<parameter name="testid" value="8370" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
@@ -146,7 +146,6 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	
 	<test name="Broadcaster - UDP output stream creation stream params">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -190,7 +189,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream params">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="transcoder" />
