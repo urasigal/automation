@@ -181,9 +181,9 @@
 	<test name="FFMPEG test stream props">
 		<parameter name="codec_name" value="h264" />
 		<parameter name="profile" value="Main" />
-		<parameter name="coded_width" value="720" />
-		<parameter name="coded_height" value="480" />
-		<parameter name="field_order" value="progressive" />
+		<parameter name="coded_width" value="1280" />
+		<parameter name="coded_height" value="720" />
+		<parameter name="field_order" value="bb" />
 		<parameter name="testid" value="8441" />  
 		<classes>
 		    <class name="com.zixi.transcoder.testing.BroadcasterTranscoderTest"/>
