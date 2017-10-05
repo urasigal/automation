@@ -15,7 +15,7 @@ public class BroadcasterInputStatisticSingleStreamTest extends BaseTestZixiMainC
 	@Parameters({ "userName", "userPass", "Host", "login_ip", "uiport", "id", "testduration" ,"testid"})
 	@Test
 	public void broadcasterSingleInputStreamStatisticAnilyzer(String userName, String userPass, String Host, String login_ip, String uiport,
-	String id, String testduration,String testid) throws Exception {
+	String id, String testduration, String testid) throws Exception {
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		

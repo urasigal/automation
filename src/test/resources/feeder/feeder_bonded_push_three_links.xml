@@ -1118,7 +1118,7 @@
 		</classes>
 	</test>
 	
-	<test name="Feeder - bonded push to broadcaster test - FAC latency 100">
+	<test name="Feeder - bonded push to broadcaster test - FEC latency 100">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -1177,7 +1177,7 @@
      		 </methods>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation test - FAC latency 100">
+	<test name="Broadcaster - Push input stream creation test - FEC latency 100">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -1204,7 +1204,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationDecriptionTest"/> 
 		</classes>
 	</test>
-	<test name="Broadcaster - Push from Feeder input stream statistics test - FAC latency 100">
+	<test name="Broadcaster - Push from Feeder input stream statistics test - FEC latency 100">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.66" />
@@ -1217,7 +1217,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP output stream creation FFMPEG analyser - FAC latency 100">
+	<test name="Broadcaster - UDP output stream creation FFMPEG analyser - FEC latency 100">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -1248,13 +1248,13 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="FFMPEG test FAC latency 100 Push input FFMPEG analyser">
+	<test name="FFMPEG test FEC latency 100 Push input">
 		<parameter name="testid" value="4226" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove udp output stream FAC latency 100 push input FFMPEG analyser">
+	<test name="Broadcaster - Remove udp output stream FEC latency 100 push input FFMPEG analyser">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -1265,7 +1265,7 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>		
-	<test name="Feeder - bonded output stream deletion test - FAC latency 100">
+	<test name="Feeder - bonded output stream deletion test - FEC latency 100">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -1291,7 +1291,7 @@
      		 </methods>
 		</classes>
 	</test> 
-	<test name="Broadcaster - Remove Push input stream - FAC latency 100">
+	<test name="Broadcaster - Remove Push input stream - FEC latency 100">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
