@@ -21,7 +21,7 @@ public class FFMPEGImageStatisticTest extends BaseTestZixiMainComponents{
 	public void broadcasterSingleInputStreamStatisticAnilyzer(String testid) throws InterruptedException {
 		
 		buildTestParametersString(new String[] { "testid" }, 
-		new String[] {"testid" });
+		new String[] {testid });
 		
 		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).testStatistic().getResultObj();
 		
