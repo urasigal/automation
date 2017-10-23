@@ -13,23 +13,23 @@ public class BroadcasterCreateAddaptiveGroupTest extends BaseTestZixiMainCompone
 	public void testInit() { testDriver = new BroadcasterCreateAddaptiveGroupDriver(); }
 
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "name", "record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi",
-	"multicast", "streams", "bitrates", "max_time", "testid" })
+	"multicast", "streams", "bitrates", "max_time", "remux", "testid" })
 	@Test
 	public void receiverOutputUdpTest(String userName, String userPass, String login_ip, String uiport, String name, String record,
 	String zixi, String hls, String hds, String mpd, String mmt, String compress_zixi, String multicast, String streams,
-	String bitrates, String max_time, String testid)throws Exception {
+	String bitrates, String max_time, String remux, String testid)throws Exception {
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
-		"record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi", "multicast", "streams", "bitrates", "max_time", "testid" }, 
-		new String[] { "userName", "userPass", "login_ip", "uiport", "name","record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi",
-		"multicast", "streams", "bitrates", "max_time", "testid" });
+		"record", "zixi", "hls", "hds", "mpd", "mmt", "compress_zixi", "multicast", "streams", "bitrates", "max_time", "remux", "testid" }, 
+		new String[] { userName, userPass, login_ip, uiport, name,record, zixi, hls, hds, mpd, mmt, compress_zixi,
+		multicast, streams, bitrates, max_time, remux, testid });
 
 		driverReslut = ((BroadcasterCreateAddaptiveGroupDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, name, record,
-		zixi, hls, hds, mpd, mmt, compress_zixi, multicast, streams, bitrates, max_time);
+		zixi, hls, hds, mpd, mmt, compress_zixi, multicast, streams, bitrates, max_time, remux);
 		
 		Assert.assertEquals(driverReslut.getResult(), "{\"success\":1}");
 		// Checking if broadcaster has crashes while execution of the test.
