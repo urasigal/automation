@@ -46,6 +46,7 @@
 		<parameter name="streams" value="transcoder" />
 		<parameter name="bitrates" value="10002000" />
 		<parameter name="max_time" value="0" />
+		<parameter name="remux" value="1"/>
 		<parameter name="testid" value="686" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
@@ -149,6 +150,17 @@
 		<parameter name="testid" value="1249" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster: delete an adaptive group test">
+		<parameter name="userName" value="admin" /> 
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="adaptive" />
+		<parameter name="testid" value="8315" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest"/>
 		</classes>
 	</test>
 </suite>
