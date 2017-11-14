@@ -20,7 +20,7 @@ public class FeederPostKeyTest extends BaseTestZixiMainComponents{
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "testid"}, 
 		new String[] { userName, userPass, login_ip, uiport, testid });
 		
-		driverReslut = ((FeederPostKeyDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport,"src/main/resources/sppk");
+		driverReslut = ((FeederPostKeyDriver) testDriver).uploadHttpsCertificate(userName, userPass, login_ip, uiport,"src/main/resources/sppk");
 		Assert.assertTrue(driverReslut.getResult().contains("SSL Certificate is uploaded successfully"));
 	}
 	
