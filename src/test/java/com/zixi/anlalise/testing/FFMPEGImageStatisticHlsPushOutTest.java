@@ -21,7 +21,7 @@ public class FFMPEGImageStatisticHlsPushOutTest extends BaseTestZixiMainComponen
 		
 		// Start locally HTTP server.
 		JettyZixiRunnerThread jettyZixiRunnerThread = new JettyZixiRunnerThread();
-		jettyZixiRunnerThread.startServers();
+		jettyZixiRunnerThread.startServers("src/main/resources");
 		Thread.sleep(60_000);
 		
 		buildTestParametersString(new String[] { "mode", "testid" }, new String[] { mode, testid});
