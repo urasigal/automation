@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: RTMP Push streaming suite" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - RTMP Push output stream creation - default parameters" >
-			<parameter name="login_ip" value="10.7.0.63" /> 
+			<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" /> 
 			<parameter name="userName" value="admin" />  
 			<parameter name="userPassword" value="1234" />  
 			<parameter name="uiport" value="4444" />  
@@ -10,7 +10,7 @@
 			<parameter name="name" value="rtmpushout" />  
 			<parameter name="stream" value="test" />  
 			<parameter name="matrix" value="1" />  
-			<parameter name="url" value="rtmp://10.7.0.66/live" />  
+			<parameter name="url" value="rtmp://2607:f0d0:1002:11::2/live" />  
 			<parameter name="url_alt" value="" />  
 			<parameter name="rtmp_stream" value="rtmp_out" />  
 			<parameter name="user" value="" />  
@@ -31,7 +31,7 @@
 	<test name="Broadcaster - RTMP Push input stream creation - default parameters">
 				<parameter name="userName" value="admin" />
 				<parameter name="userPass" value="1234" />
-				<parameter name="login_ip" value="10.7.0.66" />
+				<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 				<parameter name="uiport" value="4444" />
 				<parameter name="type" value="rtmp_push" />
 				<parameter name="id" value="rtmp_out" />
@@ -57,8 +57,8 @@
 	<test name="Broadcaster - RTMP Push input stream statistics test" >
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="rtmp_out" />
 		<parameter name="testduration" value="120" />
@@ -68,7 +68,7 @@
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove RTMP push input stream">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="rtmp_out" />
@@ -80,7 +80,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove RTMP push output stream">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="rtmpushout" />
@@ -93,7 +93,7 @@
 	<test name="Feeder - push to broadcaster test - aes128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -123,9 +123,9 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.63" />
+		<parameter name="ohst" value="2607:f0d0:1002:11::3" />
 		<parameter name="oprt" value="2088" />
-		<parameter name="onic" value="0.0.0.0" />
+		<parameter name="onic" value="" />
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -141,7 +141,7 @@
 	<test name="Broadcaster - Push input stream creation test - aes128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -164,7 +164,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - aes128" >
-			<parameter name="login_ip" value="10.7.0.63" /> 
+			<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" /> 
 			<parameter name="userName" value="admin" />  
 			<parameter name="userPassword" value="1234" />  
 			<parameter name="uiport" value="4444" />  
@@ -172,7 +172,7 @@
 			<parameter name="name" value="rtmpushout" />  
 			<parameter name="stream" value="feederout" />  
 			<parameter name="matrix" value="1" />  
-			<parameter name="url" value="rtmp://10.7.0.66/live" />  
+			<parameter name="url" value="rtmp://2607:f0d0:1002:11::2/live" />  
 			<parameter name="url_alt" value="" />  
 			<parameter name="rtmp_stream" value="rtmp_out" />  
 			<parameter name="user" value="" />  
@@ -193,7 +193,7 @@
 	<test name="Broadcaster - RTMP Push input stream creation - aes128">
 				<parameter name="userName" value="admin" />
 				<parameter name="userPass" value="1234" />
-				<parameter name="login_ip" value="10.7.0.66" />
+				<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 				<parameter name="uiport" value="4444" />
 				<parameter name="type" value="rtmp_push" />
 				<parameter name="id" value="rtmp_out" />
@@ -219,8 +219,8 @@
 	<test name="Broadcaster - RTMP Push input stream statistics test - aes128" >
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="rtmp_out" />
 		<parameter name="testduration" value="120" />
@@ -232,7 +232,7 @@
 	<test name="Broadcaster - UDP output stream creation - aes128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="rtmp_out" />
 		<parameter name="streamname" value="out_test" />
@@ -267,7 +267,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream - aes128">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="out_test" />
@@ -278,7 +278,7 @@
 		</classes>
 	</test>		
 	<test name="Broadcaster - Remove RTMP push input stream - aes128">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="rtmp_out" />
@@ -290,7 +290,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove RTMP push output stream - aes128">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="rtmpushout" />
@@ -303,7 +303,7 @@
 	<test name="Feeder - output stream deletion test - aes128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -312,14 +312,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.63" />
+		<parameter name="host" value="2607:f0d0:1002:11::3" />
 		<parameter name="testid" value="7286" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - aes128">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -333,7 +333,7 @@
 	<test name="Feeder - push to broadcaster test - aes192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -363,9 +363,9 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.63" />
+		<parameter name="ohst" value="2607:f0d0:1002:11::3" />
 		<parameter name="oprt" value="2088" />
-		<parameter name="onic" value="0.0.0.0" />
+		<parameter name="onic" value="" />
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -381,7 +381,7 @@
 	<test name="Broadcaster - Push input stream creation test - aes192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -404,7 +404,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - aes192" >
-			<parameter name="login_ip" value="10.7.0.63" /> 
+			<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" /> 
 			<parameter name="userName" value="admin" />  
 			<parameter name="userPassword" value="1234" />  
 			<parameter name="uiport" value="4444" />  
@@ -412,7 +412,7 @@
 			<parameter name="name" value="rtmpushout" />  
 			<parameter name="stream" value="feederout" />  
 			<parameter name="matrix" value="1" />  
-			<parameter name="url" value="rtmp://10.7.0.66/live" />  
+			<parameter name="url" value="rtmp://2607:f0d0:1002:11::2/live" />  
 			<parameter name="url_alt" value="" />  
 			<parameter name="rtmp_stream" value="rtmp_out" />  
 			<parameter name="user" value="" />  
@@ -433,7 +433,7 @@
 	<test name="Broadcaster - RTMP Push input stream creation - aes192">
 				<parameter name="userName" value="admin" />
 				<parameter name="userPass" value="1234" />
-				<parameter name="login_ip" value="10.7.0.66" />
+				<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 				<parameter name="uiport" value="4444" />
 				<parameter name="type" value="rtmp_push" />
 				<parameter name="id" value="rtmp_out" />
@@ -459,8 +459,8 @@
 	<test name="Broadcaster - RTMP Push input stream statistics test - aes192" >
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="rtmp_out" />
 		<parameter name="testduration" value="120" />
@@ -472,7 +472,7 @@
 	<test name="Broadcaster - UDP output stream creation - aes192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="rtmp_out" />
 		<parameter name="streamname" value="out_test" />
@@ -507,7 +507,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream - aes192">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="out_test" />
@@ -518,7 +518,7 @@
 		</classes>
 	</test>		
 	<test name="Broadcaster - Remove RTMP push input stream - aes192">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="rtmp_out" />
@@ -530,7 +530,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove RTMP push output stream - aes192">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="rtmpushout" />
@@ -543,7 +543,7 @@
 	<test name="Feeder - output stream deletion test - aes192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -552,14 +552,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.63" />
+		<parameter name="host" value="2607:f0d0:1002:11::3" />
 		<parameter name="testid" value="7311" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - aes192">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />
@@ -573,7 +573,7 @@
 	<test name="Feeder - push to broadcaster test - aes256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="name" value="feederoutputname" />
 		<parameter name="mip" value="live_recording.ts" />
 		<parameter name="port" value="0" />
@@ -603,9 +603,9 @@
 		<parameter name="lim_enc_addr" value="" />
 		<parameter name="pad_to_cbr" value="1" />
 		<parameter name="rtmp_feedback" value="0" />
-		<parameter name="ohst" value="10.7.0.63" />
+		<parameter name="ohst" value="2607:f0d0:1002:11::3" />
 		<parameter name="oprt" value="2088" />
-		<parameter name="onic" value="0.0.0.0" />
+		<parameter name="onic" value="" />
 		<parameter name="oalt" value="" />
 		<parameter name="bonded" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -621,7 +621,7 @@
 	<test name="Broadcaster - Push input stream creation test - aes256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -644,7 +644,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - aes256" >
-			<parameter name="login_ip" value="10.7.0.63" /> 
+			<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" /> 
 			<parameter name="userName" value="admin" />  
 			<parameter name="userPassword" value="1234" />  
 			<parameter name="uiport" value="4444" />  
@@ -652,7 +652,7 @@
 			<parameter name="name" value="rtmpushout" />  
 			<parameter name="stream" value="feederout" />  
 			<parameter name="matrix" value="1" />  
-			<parameter name="url" value="rtmp://10.7.0.66/live" />  
+			<parameter name="url" value="rtmp://2607:f0d0:1002:11::2/live" />  
 			<parameter name="url_alt" value="" />  
 			<parameter name="rtmp_stream" value="rtmp_out" />  
 			<parameter name="user" value="" />  
@@ -673,7 +673,7 @@
 	<test name="Broadcaster - RTMP Push input stream creation - aes256">
 				<parameter name="userName" value="admin" />
 				<parameter name="userPass" value="1234" />
-				<parameter name="login_ip" value="10.7.0.66" />
+				<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 				<parameter name="uiport" value="4444" />
 				<parameter name="type" value="rtmp_push" />
 				<parameter name="id" value="rtmp_out" />
@@ -699,8 +699,8 @@
 	<test name="Broadcaster - RTMP Push input stream statistics test - aes256" >
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="rtmp_out" />
 		<parameter name="testduration" value="120" />
@@ -712,7 +712,7 @@
 	<test name="Broadcaster - UDP output stream creation - aes256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="rtmp_out" />
 		<parameter name="streamname" value="out_test" />
@@ -747,7 +747,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream - aes256">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="out_test" />
@@ -758,7 +758,7 @@
 		</classes>
 	</test>		
 	<test name="Broadcaster - Remove RTMP push input stream - aes256">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="rtmp_out" />
@@ -770,7 +770,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove RTMP push output stream - aes256">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="rtmpushout" />
@@ -783,7 +783,7 @@
 	<test name="Feeder - output stream deletion test - aes256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="feederout" />
 		<parameter name="mip" value="live_recording.ts" />
@@ -792,14 +792,14 @@
 		<parameter name="prog" value="1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="host" value="10.7.0.63" />
+		<parameter name="host" value="2607:f0d0:1002:11::3" />
 		<parameter name="testid" value="7336" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push input stream - aes256">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="feederout" />

@@ -6,7 +6,7 @@
 	<test name="Feeder - bonded push to broadcaster test - default parameteres">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="name" value="bond" />
 		<parameter name="mip" value="4000.ts" />
 		<parameter name="port" value="0" />
@@ -38,14 +38,14 @@
 		<parameter name="rtmp_feedback" value="0" />
 		<parameter name="group" value="" />
 		<parameter name="bonded" value="1" />
-		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_host1" value="2607:f0d0:1002:11::3" />
 		<parameter name="bond_port1" value="2088" />
-		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_nic1" value="2607:f0d0:1002:11::5" />
 		<parameter name="bond_limit1" value="0" />
 		<parameter name="bond_backup1" value="0" />
-		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="bond_port2" value="2088" />
-		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_nic2" value="2607:f0d0:1002:12::5" />
 		<parameter name="bond_limit2" value="0" />
 		<parameter name="bond_backup2" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -61,7 +61,7 @@
 		name="Broadcaster - Push input stream creation test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -87,8 +87,8 @@
 		name="Broadcaster - Push from Feeder input stream statistics test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="bonded" />
 		<parameter name="testduration" value="120" />
@@ -101,7 +101,7 @@
 		name="Feeder - bonded output stream deletion test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="bonded" />
 		<parameter name="mip" value="4000.ts" />
@@ -110,10 +110,10 @@
 		<parameter name="prog" value="-1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="nic1" value="10.7.0.65" />
-		<parameter name="nic2" value="192.168.50.65" />
-		<parameter name="dest_host1" value="10.7.0.66" />
-		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="nic1" value="2607:f0d0:1002:11::5" />
+		<parameter name="nic2" value="2607:f0d0:1002:12::5" />
+		<parameter name="dest_host1" value="2607:f0d0:1002:11::3" />
+		<parameter name="dest_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="testid" value="4043" />
 		<classes>
 			<class name="com.zixi.testing.FeederBondedOutputDeletioinTest" />
@@ -123,7 +123,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Push input stream - default paremeters">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="bonded" />
@@ -137,7 +137,7 @@
 	<test name="Feeder - bonded push to broadcaster test - using password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="name" value="bond" />
 		<parameter name="mip" value="4000.ts" />
 		<parameter name="port" value="0" />
@@ -169,14 +169,14 @@
 		<parameter name="rtmp_feedback" value="0" />
 		<parameter name="group" value="" />
 		<parameter name="bonded" value="1" />
-		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_host1" value="2607:f0d0:1002:11::3" />
 		<parameter name="bond_port1" value="2088" />
-		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_nic1" value="2607:f0d0:1002:11::5" />
 		<parameter name="bond_limit1" value="0" />
 		<parameter name="bond_backup1" value="0" />
-		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="bond_port2" value="2088" />
-		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_nic2" value="2607:f0d0:1002:12::5" />
 		<parameter name="bond_limit2" value="0" />
 		<parameter name="bond_backup2" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -191,7 +191,7 @@
 	<test name="Broadcaster - Push input stream creation test - using password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -217,8 +217,8 @@
 		name="Broadcaster - Push from Feeder input stream statistics test - using password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="bonded" />
 		<parameter name="testduration" value="120" />
@@ -230,7 +230,7 @@
 	<test name="Feeder - output stream deletion test - using password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="bonded" />
 		<parameter name="mip" value="4000.ts" />
@@ -239,10 +239,10 @@
 		<parameter name="prog" value="-1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="nic1" value="10.7.0.65" />
-		<parameter name="nic2" value="192.168.50.65" />
-		<parameter name="dest_host1" value="10.7.0.66" />
-		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="nic1" value="2607:f0d0:1002:11::5" />
+		<parameter name="nic2" value="2607:f0d0:1002:12::5" />
+		<parameter name="dest_host1" value="2607:f0d0:1002:11::3" />
+		<parameter name="dest_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="testid" value="4054" />
 		<classes>
 			<class name="com.zixi.testing.FeederBondedOutputDeletioinTest" />
@@ -252,7 +252,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Push input stream - using password">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="bonded" />
@@ -266,7 +266,7 @@
 	<test name="Feeder - bonded push to broadcaster test low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="name" value="bond" />
 		<parameter name="mip" value="4000.ts" />
 		<parameter name="port" value="0" />
@@ -298,14 +298,14 @@
 		<parameter name="rtmp_feedback" value="0" />
 		<parameter name="group" value="" />
 		<parameter name="bonded" value="1" />
-		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_host1" value="2607:f0d0:1002:11::3" />
 		<parameter name="bond_port1" value="2088" />
-		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_nic1" value="2607:f0d0:1002:11::5" />
 		<parameter name="bond_limit1" value="0" />
 		<parameter name="bond_backup1" value="0" />
-		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="bond_port2" value="2088" />
-		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_nic2" value="2607:f0d0:1002:12::5" />
 		<parameter name="bond_limit2" value="0" />
 		<parameter name="bond_backup2" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -320,7 +320,7 @@
 	<test name="Broadcaster - Push input stream creation test - low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -346,8 +346,8 @@
 		name="Broadcaster - Push from Feeder input stream statistics test - low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="bonded" />
 		<parameter name="testduration" value="60" />
@@ -359,7 +359,7 @@
 	<test name="Feeder - output stream deletion test low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="bonded" />
 		<parameter name="mip" value="4000.ts" />
@@ -368,10 +368,10 @@
 		<parameter name="prog" value="-1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="nic1" value="10.7.0.65" />
-		<parameter name="nic2" value="192.168.50.65" />
-		<parameter name="dest_host1" value="10.7.0.66" />
-		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="nic1" value="2607:f0d0:1002:11::5" />
+		<parameter name="nic2" value="2607:f0d0:1002:12::5" />
+		<parameter name="dest_host1" value="2607:f0d0:1002:11::3" />
+		<parameter name="dest_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="testid" value="4076" />
 		<classes>
 			<class name="com.zixi.testing.FeederBondedOutputDeletioinTest" />
@@ -381,7 +381,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Push input stream low latency">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="bonded" />
@@ -395,7 +395,7 @@
 	<test name="Feeder - bonded push to broadcaster test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="name" value="bond" />
 		<parameter name="mip" value="4000.ts" />
 		<parameter name="port" value="0" />
@@ -427,14 +427,14 @@
 		<parameter name="rtmp_feedback" value="0" />
 		<parameter name="group" value="" />
 		<parameter name="bonded" value="1" />
-		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_host1" value="2607:f0d0:1002:11::3" />
 		<parameter name="bond_port1" value="2088" />
-		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_nic1" value="2607:f0d0:1002:11::5" />
 		<parameter name="bond_limit1" value="0" />
 		<parameter name="bond_backup1" value="0" />
-		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="bond_port2" value="2088" />
-		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_nic2" value="2607:f0d0:1002:12::5" />
 		<parameter name="bond_limit2" value="0" />
 		<parameter name="bond_backup2" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -449,7 +449,7 @@
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -477,8 +477,8 @@
 		name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="bonded" />
 		<parameter name="testduration" value="120" />
@@ -490,7 +490,7 @@
 	<test name="Feeder - output stream deletion test - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="bonded" />
 		<parameter name="mip" value="4000.ts" />
@@ -499,10 +499,10 @@
 		<parameter name="prog" value="-1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="nic1" value="10.7.0.65" />
-		<parameter name="nic2" value="192.168.50.65" />
-		<parameter name="dest_host1" value="10.7.0.66" />
-		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="nic1" value="2607:f0d0:1002:11::5" />
+		<parameter name="nic2" value="2607:f0d0:1002:12::5" />
+		<parameter name="dest_host1" value="2607:f0d0:1002:11::3" />
+		<parameter name="dest_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="testid" value="4087" />
 		<classes>
 			<class name="com.zixi.testing.FeederBondedOutputDeletioinTest" />
@@ -512,7 +512,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Push input stream - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="bonded" />
@@ -526,7 +526,7 @@
 	<test name="Feeder - bonded push to broadcaster test - Encryption AES 192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="name" value="bond" />
 		<parameter name="mip" value="4000.ts" />
 		<parameter name="port" value="0" />
@@ -558,14 +558,14 @@
 		<parameter name="rtmp_feedback" value="0" />
 		<parameter name="group" value="" />
 		<parameter name="bonded" value="1" />
-		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_host1" value="2607:f0d0:1002:11::3" />
 		<parameter name="bond_port1" value="2088" />
-		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_nic1" value="2607:f0d0:1002:11::5" />
 		<parameter name="bond_limit1" value="0" />
 		<parameter name="bond_backup1" value="0" />
-		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="bond_port2" value="2088" />
-		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_nic2" value="2607:f0d0:1002:12::5" />
 		<parameter name="bond_limit2" value="0" />
 		<parameter name="bond_backup2" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -580,7 +580,7 @@
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -608,8 +608,8 @@
 		name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="bonded" />
 		<parameter name="testduration" value="120" />
@@ -621,7 +621,7 @@
 	<test name="Feeder - output stream deletion test - Encryption AES 192">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="bonded" />
 		<parameter name="mip" value="4000.ts" />
@@ -630,10 +630,10 @@
 		<parameter name="prog" value="-1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="nic1" value="10.7.0.65" />
-		<parameter name="nic2" value="192.168.50.65" />
-		<parameter name="dest_host1" value="10.7.0.66" />
-		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="nic1" value="2607:f0d0:1002:11::5" />
+		<parameter name="nic2" value="2607:f0d0:1002:12::5" />
+		<parameter name="dest_host1" value="2607:f0d0:1002:11::3" />
+		<parameter name="dest_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="testid" value="4098" />
 		<classes>
 			<class name="com.zixi.testing.FeederBondedOutputDeletioinTest" />
@@ -643,7 +643,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Push input stream - Encryption AES 192">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="bonded" />
@@ -657,7 +657,7 @@
 	<test name="Feeder - bonded push to broadcaster test Encryption AES 256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="name" value="bond" />
 		<parameter name="mip" value="4000.ts" />
 		<parameter name="port" value="0" />
@@ -689,14 +689,14 @@
 		<parameter name="rtmp_feedback" value="0" />
 		<parameter name="group" value="" />
 		<parameter name="bonded" value="1" />
-		<parameter name="bond_host1" value="10.7.0.66" />
+		<parameter name="bond_host1" value="2607:f0d0:1002:11::3" />
 		<parameter name="bond_port1" value="2088" />
-		<parameter name="bond_nic1" value="10.7.0.65" />
+		<parameter name="bond_nic1" value="2607:f0d0:1002:11::5" />
 		<parameter name="bond_limit1" value="0" />
 		<parameter name="bond_backup1" value="0" />
-		<parameter name="bond_host2" value="192.168.60.66" />
+		<parameter name="bond_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="bond_port2" value="2088" />
-		<parameter name="bond_nic2" value="192.168.50.65" />
+		<parameter name="bond_nic2" value="2607:f0d0:1002:12::5" />
 		<parameter name="bond_limit2" value="0" />
 		<parameter name="bond_backup2" value="0" />
 		<parameter name="uiport" value="4200" />
@@ -711,7 +711,7 @@
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -739,8 +739,8 @@
 		name="Broadcaster - Push from Feeder input stream statistics test - Encryption AES 256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="bonded" />
 		<parameter name="testduration" value="120" />
@@ -752,7 +752,7 @@
 	<test name="Feeder - output stream deletion test - Encryption AES 256">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::5]" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="id" value="bonded" />
 		<parameter name="mip" value="4000.ts" />
@@ -761,10 +761,10 @@
 		<parameter name="prog" value="-1" />
 		<parameter name="chan" value="-1" />
 		<parameter name="type" value="2" />
-		<parameter name="nic1" value="10.7.0.65" />
-		<parameter name="nic2" value="192.168.50.65" />
-		<parameter name="dest_host1" value="10.7.0.66" />
-		<parameter name="dest_host2" value="192.168.60.66" />
+		<parameter name="nic1" value="2607:f0d0:1002:11::5" />
+		<parameter name="nic2" value="2607:f0d0:1002:12::5" />
+		<parameter name="dest_host1" value="2607:f0d0:1002:11::3" />
+		<parameter name="dest_host2" value="2607:f0d0:1002:12::3" />
 		<parameter name="testid" value="4109" />
 		<classes>
 			<class name="com.zixi.testing.FeederBondedOutputDeletioinTest" />
@@ -774,7 +774,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Push input stream - Encryption AES 256">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="bonded" />

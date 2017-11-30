@@ -7,7 +7,7 @@
 	<test name="Broadcaster - Push input stream creation test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -32,8 +32,8 @@
 	<test name="Broadcaster - Push output stream creation test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
+		<parameter name="host" value="2607:f0d0:1002:11::2" />
 		<parameter name="latency" value="6000" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="session" value="" />
@@ -57,8 +57,8 @@
 <test name="Broadcaster - Push input stream statistics test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
@@ -68,7 +68,7 @@
 		</classes>
 </test>      
 <test name="Broadcaster - Remove Push input stream - default paremeters">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
@@ -80,7 +80,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove Push output stream - default paremeters">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
@@ -93,7 +93,7 @@
 	<test name="Broadcaster - Push input stream creation low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -118,8 +118,8 @@
 	<test name="Broadcaster - Push output stream creation low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
+		<parameter name="host" value="2607:f0d0:1002:11::2" />
 		<parameter name="latency" value="500" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="session" value="" />
@@ -143,8 +143,8 @@
 <test name="Broadcaster - Push input stream statistics test low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
@@ -154,7 +154,7 @@
 		</classes>
 	</test>      
 <test name="Broadcaster - Remove Push input stream low latency">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
@@ -166,7 +166,7 @@
 		</classes>
 	</test> 
 <test name="Broadcaster - Remove Push output stream low latency">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
@@ -179,7 +179,7 @@
 	<test name="Broadcaster - Push input stream creation with password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -204,8 +204,8 @@
 	<test name="Broadcaster - Push output stream creation with password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
+		<parameter name="host" value="2607:f0d0:1002:11::2" />
 		<parameter name="latency" value="6000" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="session" value="1qaz!QAZ" />
@@ -230,7 +230,7 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
@@ -240,7 +240,7 @@
 		</classes>
 	</test>      
 <test name="Broadcaster - Remove Push input stream with password">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
@@ -252,7 +252,7 @@
 		</classes>
 	</test> 
 <test name="Broadcaster - Remove Push output stream with password">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
@@ -265,7 +265,7 @@
 	<test name="Broadcaster - Push input stream creation force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -290,8 +290,8 @@
 	<test name="Broadcaster - Push output stream creation force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
+		<parameter name="host" value="2607:f0d0:1002:11::2" />
 		<parameter name="latency" value="6000" />
 		<parameter name="fec_force" value="1" />
 		<parameter name="session" value="" />
@@ -315,8 +315,8 @@
 <test name="Broadcaster - Push input stream statistics test force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
@@ -326,7 +326,7 @@
 		</classes>
 	</test>      
 <test name="Broadcaster - Remove Push input stream force FEC">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
@@ -338,7 +338,7 @@
 		</classes>
 	</test> 
 <test name="Broadcaster - Remove Push output stream force FEC">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
@@ -351,7 +351,7 @@
 	<test name="Broadcaster - Push input stream creation FEC block 50">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -376,8 +376,8 @@
 	<test name="Broadcaster - Push output stream creation FEC block 50">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
+		<parameter name="host" value="2607:f0d0:1002:11::2" />
 		<parameter name="latency" value="300" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="session" value="" />
@@ -401,8 +401,8 @@
 <test name="Broadcaster - Push input stream statistics test FEC block 50">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
@@ -412,7 +412,7 @@
 		</classes>
 	</test>      
 <test name="Broadcaster - Remove Push input stream FEC block 50">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
@@ -424,7 +424,7 @@
 		</classes>
 	</test> 
 <test name="Broadcaster - Remove Push output stream FEC block 50">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
@@ -437,7 +437,7 @@
 	<test name="Broadcaster - Push input stream creation test zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="latency" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -462,8 +462,8 @@
 	<test name="Broadcaster - Push output stream creation test zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
+		<parameter name="host" value="2607:f0d0:1002:11::2" />
 		<parameter name="latency" value="0" />
 		<parameter name="fec_force" value="0" />
 		<parameter name="session" value="" />
@@ -487,8 +487,8 @@
 <test name="Broadcaster - Push input stream statistics test zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="2607:f0d0:1002:11::3" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
@@ -498,7 +498,7 @@
 		</classes>
 	</test>      
 <test name="Broadcaster - Remove Push input stream test zero latency">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
@@ -510,7 +510,7 @@
 		</classes>
 	</test> 
 <test name="Broadcaster - Broadcaster - Remove Push output stream test zero latency">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
