@@ -27,6 +27,6 @@ public class ReceiverPullInputStreamCreationTest extends BaseTestZixiMainCompone
 		driverReslut = ((ReceiverPullInputStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, dec_key, dec_type, fec_adaptive, fec_aware,
 		fec_force, fec_latency, fec_overhead, host, latency, min_bit, name, nic, port, session, stream);
 		
-		Assert.assertTrue((driverReslut.getResult().equals("Stream 'pull: " +host+ ":"+ port+ "/"+ stream + "' added.")) || ( driverReslut.getResult().equals("Stream 'pull: " +host+ ":"+ port+ "/"+ stream + " NIC: ' added.")));
+		Assert.assertTrue( driverReslut.getResult().equals("Stream 'pull: " +host+ ":"+ port+ "/"+ stream + "' added.") || driverReslut.getResult().equals("Stream 'pull: " +host+ ":"+ port+ "/"+ stream + " NIC: ' added."));
 	}
 }
