@@ -175,4 +175,26 @@
 		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
 		</classes>
 	</test>
+	<test name="Receiver: UDP out creation test">
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="name" value="fallback_test" />
+		<parameter name="target" value="10.7.0.150:5555" />
+		<parameter name="type" value="net" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="ttl" value="1" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="rows" value="10" />
+		<parameter name="cols" value="10" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="input_stream" value="receivertest1" />
+		<parameter name="testid" value="573" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
+		</classes>
+	</test>
 </suite>
