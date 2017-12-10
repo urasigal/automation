@@ -14,7 +14,7 @@ public class ReceiverAddSourceToOutputTest  extends BaseTestZixiMainComponents{
 
 	@Parameters({ "userName", "userPass", "login_ip", "uiport",  "inputStreamIdArg", "outputStreamIdArg", "fallback", "testid"})
 	@Test
-	public void feederOutputToBxTest(String userName, String userPass, String login_ip, String uiport, String inputStreamIdArg, String outputStreamIdArg, String fallback, String testid)
+	public void addSourceToReceiverOutput(String userName, String userPass, String login_ip, String uiport, String inputStreamIdArg, String outputStreamIdArg, String fallback, String testid)
 	throws Exception {
 		
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport",  "inputStreamIdArg", "outputStreamIdArg", "fallback", "testid" }, 
