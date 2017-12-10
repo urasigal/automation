@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser with encryption 128" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
+	<test name="Broadcaster - Pull input stream creation test1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -34,7 +34,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
+	<test name="Broadcaster - Pull input stream creation test2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -67,7 +67,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
+	<test name="Broadcaster - Pull input stream creation test3">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
