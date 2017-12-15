@@ -197,7 +197,7 @@
 			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
 		</classes>
 	</test>
-	<test name="Receiver: add primary fallback stream test" >
+	<test name="Receiver: add primary fallback stream test1" >
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -208,6 +208,33 @@
 		<parameter name="testid" value="573" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverAddSourceToOutputTest" />
+		</classes>
+	</test>
+	<test name="Receiver: add primary fallback stream test2" >
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="inputStreamIdArg" value="receivertest3" />
+		<parameter name="outputStreamIdArg" value="fallback_test" />
+		<parameter name="fallback" value="0" />
+		<parameter name="testid" value="573" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverAddSourceToOutputTest" />
+		</classes>
+	</test>
+	
+	"userName", "userPass", "login_ip", "uiport",  "outputStreamIdArg", "fallback", "testid"
+	
+	<test name="Receiver: Delete primary output source" >
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="outputStreamIdArg" value="fallback_test" />
+		<parameter name="testid" value="573" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverDeleteActiveOutputSourceTest" />
 		</classes>
 	</test>
 </suite>
