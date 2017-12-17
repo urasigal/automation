@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Full path test Feeder then Broadcaster then Receiver then FFMPEG analyser with encryption 128" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Pull input stream creation test1">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="id" value="test1" />
+		<parameter name="source" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="pull_port" value="2088" />
+		<parameter name="latency" value="6000" />
+		<parameter name="fec_latency" value="300" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="mcast_force" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="type" value="pull" />
+		<parameter name="password" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="func" value="load_live_inputs" />
+		<parameter name="fec_force" value="" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="propertiesFile" value="stream.properties" />
+		<parameter name="testid" value="124" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Pull input stream creation test2">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="id" value="test2" />
+		<parameter name="source" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="pull_port" value="2088" />
+		<parameter name="latency" value="6000" />
+		<parameter name="fec_latency" value="300" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="mcast_force" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="type" value="pull" />
+		<parameter name="password" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="func" value="load_live_inputs" />
+		<parameter name="fec_force" value="" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="propertiesFile" value="stream.properties" />
+		<parameter name="testid" value="124" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Pull input stream creation test3">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="id" value="test3" />
+		<parameter name="source" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="pull_port" value="2088" />
+		<parameter name="latency" value="6000" />
+		<parameter name="fec_latency" value="300" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="mcast_force" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="type" value="pull" />
+		<parameter name="password" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="func" value="load_live_inputs" />
+		<parameter name="fec_force" value="" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="propertiesFile" value="stream.properties" />
+		<parameter name="testid" value="124" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - pull input stream1 creation">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="dec_key" value="" />
+		<parameter name="dec_type" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_latency" value="150" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="host" value="10.7.0.66" />
+		<parameter name="latency" value="8000" />
+		<parameter name="min_bit" value="0" />
+		<parameter name="name" value="receivertest1" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="port" value="2077" />
+		<parameter name="session" value="" />
+		<parameter name="stream" value="test1" />
+		<parameter name="testid" value="567" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - pull input stream2 creation">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="dec_key" value="" />
+		<parameter name="dec_type" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_latency" value="150" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="host" value="10.7.0.66" />
+		<parameter name="latency" value="8000" />
+		<parameter name="min_bit" value="0" />
+		<parameter name="name" value="receivertest2" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="port" value="2077" />
+		<parameter name="session" value="" />
+		<parameter name="stream" value="test2" />
+		<parameter name="testid" value="567" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - pull input stream3 creation">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="dec_key" value="" />
+		<parameter name="dec_type" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="fec_latency" value="150" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="host" value="10.7.0.66" />
+		<parameter name="latency" value="8000" />
+		<parameter name="min_bit" value="0" />
+		<parameter name="name" value="receivertest3" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="port" value="2077" />
+		<parameter name="session" value="" />
+		<parameter name="stream" value="test3" />
+		<parameter name="testid" value="567" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Receiver: UDP out creation test">
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="name" value="fallback_test" />
+		<parameter name="target" value="10.7.0.150:5555" />
+		<parameter name="type" value="net" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="ttl" value="1" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="rows" value="10" />
+		<parameter name="cols" value="10" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="input_stream" value="receivertest1" />
+		<parameter name="testid" value="573" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
+		</classes>
+	</test>
+	<test name="Receiver: add primary fallback stream test1" >
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="inputStreamIdArg" value="receivertest2" />
+		<parameter name="outputStreamIdArg" value="fallback_test" />
+		<parameter name="fallback" value="0" />
+		<parameter name="testid" value="573" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverAddSourceToOutputTest" />
+		</classes>
+	</test>
+	<test name="Receiver: add primary fallback stream test2" >
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="inputStreamIdArg" value="receivertest3" />
+		<parameter name="outputStreamIdArg" value="fallback_test" />
+		<parameter name="fallback" value="0" />
+		<parameter name="testid" value="573" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverAddSourceToOutputTest" />
+		</classes>
+	</test>
+	
+	"userName", "userPass", "login_ip", "uiport",  "outputStreamIdArg", "fallback", "testid"
+	
+	<test name="Receiver: Delete primary output source" >
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="outputStreamIdArg" value="fallback_test" />
+		<parameter name="testid" value="573" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverDeleteActiveOutputSourceTest" />
+		</classes>
+	</test>
+</suite>

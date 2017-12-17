@@ -18,8 +18,7 @@ public class ReceiverOutputStreamDeletionTest extends BaseTestZixiMainComponents
 		
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		buildTestParametersString(new String[] { "login_ip", "userName", "userPass", "uiport" ,"stream_name","destination","testid" }, 
-				
+		buildTestParametersString(new String[] { "login_ip", "userName", "userPass", "uiport" ,"stream_name","destination","testid" }, 	
 		new String[] { login_ip, userName, userPass,uiport ,stream_name,destination,testid});
 		
 		driverReslut = ((ReceiverOutputStreamDeletionDriver) testDriver).testIMPL(  login_ip,  userName,  userPass,  uiport , stream_name, testid);
