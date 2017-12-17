@@ -15,7 +15,7 @@ public class ReceiverDeleteActiveOutputSourceTest  extends BaseTestZixiMainCompo
 
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "outputStreamIdArg", "remoteBX_UI_port", "testid"})
 	@Test
-	public void addSourceToReceiverOutput(String userName, String userPass, String login_ip, String uiport, String outputStreamIdArg, String remoteBX_UI_port, String testid)
+	public void receiverDeleteActiveOutputSource(String userName, String userPass, String login_ip, String uiport, String outputStreamIdArg, String remoteBX_UI_port, String testid)
 	throws Exception {
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "outputStreamIdArg", "remoteBX_UI_port", "testid" }, 
 		new String[] { userName, userPass, login_ip, uiport, outputStreamIdArg, remoteBX_UI_port, testid });												  
