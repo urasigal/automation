@@ -223,7 +223,13 @@
 			<class name="com.zixi.testing.ReceiverAddSourceToOutputTest" />
 		</classes>
 	</test>
-	<test name="Receiver: Delete primary output source" >
+	<test name="FFMPEG test 1">
+		<parameter name="testid" value="669" />  
+		<classes>
+		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
+		</classes>
+	</test>
+	<test name="Receiver: Delete primary output source 1" >
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.67" />
@@ -233,6 +239,87 @@
 		<parameter name="testid" value="573" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverDeleteActiveOutputSourceTest" />
+		</classes>
+	</test>
+	<test name="FFMPEG test 2">
+		<parameter name="testid" value="669" />  
+		<classes>
+		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
+		</classes>
+	</test>
+	<test name="Receiver: Delete primary output source 2" >
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="outputStreamIdArg" value="fallback_test" />
+		<parameter name="remoteBX_UI_port" value="4444" />
+		<parameter name="testid" value="573" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverDeleteActiveOutputSourceTest" />
+		</classes>
+	</test>
+	<test name="FFMPEG test 3">
+		<parameter name="testid" value="669" />  
+		<classes>
+		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
+		</classes>
+	</test>
+	<test name="Receiver: Delete primary output source 3" >
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="outputStreamIdArg" value="fallback_test" />
+		<parameter name="remoteBX_UI_port" value="4444" />
+		<parameter name="testid" value="573" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverDeleteActiveOutputSourceTest" />
+		</classes>
+	</test>
+	<test name="Receiver: UDP out deletion">
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="stream_name" value="fallback_test" />
+		<parameter name="destination" value="10.7.0.150:5555" />
+		<parameter name="testid" value="671" />
+		<classes>
+			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
+		</classes>
+	</test>
+	<test name="Receiver - Remove Pull input stream 1">
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="id" value="receivertest1" />
+		<parameter name="testid" value="677" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - Remove Pull input stream 2">
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="id" value="receivertest2" />
+		<parameter name="testid" value="677" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Receiver - Remove Pull input stream 3">
+		<parameter name="login_ip" value="10.7.0.67" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4300" />
+		<parameter name="id" value="receivertest3" />
+		<parameter name="testid" value="677" />  
+		<classes>
+		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
 		</classes>
 	</test>
 </suite>
