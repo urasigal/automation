@@ -210,7 +210,7 @@ public class BaseTestZixiMainComponents {
 		//BaseTestZixiMainComponents.connecttoDb();
 	}
 	
-	public static void connecttoDb(String login_ip, int startMemory, int stopMemory, int diffMemory, long timeStemp)
+	public static void connecttoDb(String sutHost, int startMemory, int stopMemory, long timeStemp)
 	{
 		try{  
 			JSONParser parser = new JSONParser(); 
@@ -230,7 +230,7 @@ public class BaseTestZixiMainComponents {
 			
 			Statement stmt = cononnectionDb.createStatement();
 			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, stoptimestemp, ) "
-			          +"VALUES ('" + login_ip  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + ")");
+			          +"VALUES ('" + sutHost  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + ")");
 			
 			
 			
