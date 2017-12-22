@@ -229,7 +229,7 @@ public class BaseTestZixiMainComponents {
 			host+ ":" + port + "/" + db, user, password);  
 			
 			Statement stmt = cononnectionDb.createStatement();
-			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, stoptimestemp, ) "
+			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, memorydiff, stoptimestemp) "
 			          +"VALUES ('" + sutHost  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + ")");
 			
 			
