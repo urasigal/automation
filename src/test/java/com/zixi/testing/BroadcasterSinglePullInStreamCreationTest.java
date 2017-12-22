@@ -27,7 +27,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTestZixiMainC
 		
 		String buildNumber = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
-		String memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		String memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		
 		
 		// Gather the test parameters in order to pass them to the TestLink
@@ -41,10 +41,10 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTestZixiMainC
 		fec_overhead, mcast_force, time_shift, nic, max_outputs, type, password, mcast_port, complete, mcast_ip, fec_adaptive, mcast_ttl, on, func, fec_force, mcast_out,
 		propertiesFile);
 		
-		String 		memOnEnd  = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		String 		memOnEnd  = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
 		long 		timeStemp = timestamp.getTime() ;
-		connecttoDb(login_ip, Integer.parseInt(memOnStart), Integer.parseInt(memOnEnd), timeStemp);
+		connecttoDb(login_ip, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp);
 		// The actual test method.
 		Assert.assertEquals( driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 		// Checking if broadcaster has crashes while execution of the test.
