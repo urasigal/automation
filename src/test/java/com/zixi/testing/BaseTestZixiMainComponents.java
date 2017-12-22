@@ -2,6 +2,7 @@ package com.zixi.testing;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,21 +14,23 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.logging.StreamHandler;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+//import org.json.JSONObject;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
-
 import com.zixi.drivers.drivers.*;
 import com.zixi.drivers.setup.SetSutUpTimeDriver;
 import com.zixi.drivers.tools.DriverReslut;
 import com.zixi.email.drivers.GoogleMailDriver;
 import com.zixi.tools.TestlinkIntegration;
+import java.sql.*; 
 
 /*
  * This is a most high hierarchy test class. All test case classes have to inherit from this class.
@@ -59,7 +62,6 @@ public class BaseTestZixiMainComponents {
 	protected static  FileHandler  				FILEHANDLER 				= 	null ;
 	protected static  StreamHandler				STREAMHANDLER				= 	null;
 	
-	//protected Object 							params[];
 	protected String 							manulDescription 			= 	"";		
 	
 	@BeforeTest
@@ -202,4 +204,41 @@ public class BaseTestZixiMainComponents {
 		}
 		return buildId;
 	}
+	
+	
+	public static void main(String[] args) {
+		//BaseTestZixiMainComponents.connecttoDb();
+	}
+	
+	public static void connecttoDb(String login_ip, int startMemory, int stopMemory, int diffMemory, long timeStemp)
+	{
+		try{  
+			JSONParser parser = new JSONParser(); 
+			
+			Object object = parser.parse(new FileReader("src/main/resources/db_connection.json"));
+			//convert Object to JSONObject
+            JSONObject jsonObject = (JSONObject)object;
+            String connector = (String) jsonObject.get("connector");
+            String host = (String) jsonObject.get("host");
+            String port = (String) jsonObject.get("port");
+            String db = (String) jsonObject.get("db");
+            String user = (String) jsonObject.get("user");
+            String password = (String) jsonObject.get("password");
+			Class.forName(connector);  
+			Connection cononnectionDb = DriverManager.getConnection(  
+			host+ ":" + port + "/" + db, user, password);  
+			
+			Statement stmt = cononnectionDb.createStatement();
+			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, stoptimestemp, ) "
+			          +"VALUES ('" + login_ip  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + ")");
+			
+			
+			
+			ResultSet rs=stmt.executeQuery("select * from mysql.user");  
+			while(rs.next())  
+			System.out.println(rs.getString(1));  
+			cononnectionDb.close();  
+			}catch(Exception e){ System.out.println(e);}  
+	}
+	
 }

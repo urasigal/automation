@@ -1,5 +1,7 @@
 package com.zixi.testing;
 
+import java.sql.Timestamp;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -23,8 +25,10 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTestZixiMainC
 	String time_shift, String nic, String max_outputs, String type, String password, String mcast_port, String complete,
 	String mcast_ip, String fec_adaptive, String mcast_ttl, String on, String func, String fec_force, String mcast_out, String propertiesFile,String testid) throws Exception {
 		
-		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+		String buildNumber = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		String memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		
 		
 		// Gather the test parameters in order to pass them to the TestLink
 		buildTestParametersString(new String[] { "userName", "userPass", "Host", "login_ip", "id", "source", "uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
@@ -37,6 +41,10 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTestZixiMainC
 		fec_overhead, mcast_force, time_shift, nic, max_outputs, type, password, mcast_port, complete, mcast_ip, fec_adaptive, mcast_ttl, on, func, fec_force, mcast_out,
 		propertiesFile);
 		
+		String 		memOnEnd  = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
+		long 		timeStemp = timestamp.getTime() ;
+		connecttoDb(login_ip, Integer.parseInt(memOnStart), Integer.parseInt(memOnEnd), timeStemp);
 		// The actual test method.
 		Assert.assertEquals( driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 		// Checking if broadcaster has crashes while execution of the test.
