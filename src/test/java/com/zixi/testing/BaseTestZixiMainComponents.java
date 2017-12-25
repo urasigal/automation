@@ -2,6 +2,7 @@ package com.zixi.testing;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,6 +17,7 @@ import java.util.logging.StreamHandler;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 //import org.json.JSONObject;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -210,9 +212,12 @@ public class BaseTestZixiMainComponents {
 		//BaseTestZixiMainComponents.connecttoDb();
 	}
 	
-	public static void connecttoDb(String sutHost, int startMemory, int stopMemory, long timeStemp)
+	public  void connecttoDb(String sutHost, int startMemory, int stopMemory, long timeStemp) throws FileNotFoundException, IOException, ParseException
 	{
-		try{  
+		if(sutHost == null || startMemory == 0 || stopMemory == 0 ||  timeStemp == 0) {
+			throw new NullPointerException(); 
+		}
+		
 			JSONParser parser = new JSONParser(); 
 			
 			Object object = parser.parse(new FileReader("src/main/resources/db_connection.json"));
@@ -231,14 +236,8 @@ public class BaseTestZixiMainComponents {
 			Statement stmt = cononnectionDb.createStatement();
 			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, memorydiff, stoptimestemp) "
 			          +"VALUES ('" + sutHost  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + ")");
-			
-			
-			
-			ResultSet rs=stmt.executeQuery("select * from mysql.user");  
-			while(rs.next())  
-			System.out.println(rs.getString(1));  
 			cononnectionDb.close();  
-			}catch(Exception e){ System.out.println(e);}  
+			
 	}
 	
 }
