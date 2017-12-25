@@ -23,7 +23,9 @@ public class BxFileTransferAndVodSettingsTest extends BaseTestZixiMainComponents
 	{
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
-		String memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
+		String memOnStart;
+		
+		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		
 		buildTestParametersString(new String[] { "userName","userPass","login_ip", "uiport", "ft_download", "ft_upload",
 		"ft_auto_index", "ft_prog", "ft_encrypt", "ft_bitrate_cache", "ft_aggr", "ft_mtu", "ft_init_speed", "ft_cache", "ft_proxy_http_port",
@@ -35,7 +37,8 @@ public class BxFileTransferAndVodSettingsTest extends BaseTestZixiMainComponents
 		ft_prog, ft_encrypt, ft_bitrate_cache, ft_aggr, ft_mtu, ft_init_speed, ft_cache, ft_proxy_http_port, ft_proxy_https_port, max_download_bitrate, max_upload_bitrate);
 		
 
-		String 		memOnEnd  = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
+		String memOnEnd;
+		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
 		long 		timeStemp = timestamp.getTime() ;
 		connecttoDb(login_ip, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp);
