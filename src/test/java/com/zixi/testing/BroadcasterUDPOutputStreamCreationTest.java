@@ -28,7 +28,7 @@ public class BroadcasterUDPOutputStreamCreationTest extends BaseTestZixiMainComp
 		
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
-		String memOnStart;
+		String memOnStart = null;
 		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 
 		
@@ -41,7 +41,7 @@ public class BroadcasterUDPOutputStreamCreationTest extends BaseTestZixiMainComp
 		driverReslut = ((BroadcasterUdpOutputCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, port, stream, streamname, host, id, rtp, fec, smoothing,
 		ttl, remux_bitrate, df, local_port, dec_key, type, rows, remux_buff, local_ip, remux_restampdts, uiport, remux_pcr, dec_type, cols);
 		
-		String 		memOnEnd;
+		String 		memOnEnd = null;
 		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
 		long 		timeStemp = timestamp.getTime() ;
