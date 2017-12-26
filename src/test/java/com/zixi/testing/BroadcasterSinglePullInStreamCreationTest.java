@@ -41,7 +41,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTestZixiMainC
 		fec_overhead, mcast_force, time_shift, nic, max_outputs, type, password, mcast_port, complete, mcast_ip, fec_adaptive, mcast_ttl, on, func, fec_force, mcast_out,
 		propertiesFile);
 		
-		String 		memOnEnd = null;
+		String 	memOnEnd = null;
 		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
 		long 		timeStemp = timestamp.getTime() ;
