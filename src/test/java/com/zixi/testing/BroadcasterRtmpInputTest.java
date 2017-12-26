@@ -1,5 +1,7 @@
 package com.zixi.testing;
 
+import java.sql.Timestamp;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -25,8 +27,10 @@ public class BroadcasterRtmpInputTest extends BaseTestZixiMainComponents {
 	String uiport, String mcast_ttl, String rtmp_latency, String mcast_out, String complete, String max_outputs, String on, String testid) throws Exception {
 		
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
-		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+		
+		String memOnStart = null;
+		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "rtmp_nulls", "id",
 		"rtmp_url", "rtmp_name", "time_shift", "mcast_ip", "mcast_force", "mcast_port", "type", "rtmp_user", "rtmp_bitrate", "rtmp_passwd",
@@ -38,8 +42,13 @@ public class BroadcasterRtmpInputTest extends BaseTestZixiMainComponents {
 		rtmp_url, rtmp_name, time_shift, mcast_ip, mcast_force, mcast_port, type, rtmp_user, rtmp_bitrate, rtmp_passwd, uiport, mcast_ttl, 
 		rtmp_latency, mcast_out, complete, max_outputs, on);
 		
-		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
+		String 		memOnEnd = null;
+		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
+		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
+		long 		timeStemp = timestamp.getTime() ;
+		connecttoDb(login_ip, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp);
 		
+		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}

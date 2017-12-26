@@ -1,5 +1,7 @@
 package com.zixi.testing;
 
+import java.sql.Timestamp;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -35,14 +37,21 @@ public class FeederOutputPushToBxTest extends BaseTestZixiMainComponents{
 		smoothing, limited, minbps, lim_enc_addr, pad_to_cbr, rtmp_feedback, ohst, oprt, onic, oalt,bonded,uiport ,testid });
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");
-
+		String memOnStart = null;
+		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_feeder` | tail -n 1 |  awk '{print $8}'");
+		
 		driverReslut = ((FeederOutputPushToBxDriver) testDriver).testIMPL(userName, userPass, login_ip, name, mip, port,
 		ip, prog, chan, type, ostr, oses, oetp, oeky, obit, olat, ofc, ocmp, oold, onfec, fec_force, fec_adaptive,
 		ofec, ofecl, stop_on_drop, mmt, smoothing, limited, minbps, lim_enc_addr, pad_to_cbr, rtmp_feedback, ohst,
 		oprt, onic, oalt,bonded, uiport).getResultObj();
 		
-		Assert.assertEquals(driverReslut.getResult(), "Broadcaster output added.");
+		String 		memOnEnd = null;
+		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_feeder` | tail -n 1 |  awk '{print $8}'");
+		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
+		long 		timeStemp = timestamp.getTime() ;
+		connecttoDb(login_ip, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp);
 		
+		Assert.assertEquals(driverReslut.getResult(), "Broadcaster output added.");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder"));
 	} // End of test.
@@ -68,14 +77,20 @@ public class FeederOutputPushToBxTest extends BaseTestZixiMainComponents{
 		rtmp_feedback, ohst, oprt, onic, oalt,bonded, rtmp_stream, rtmp_url, rtmp_user, rtmp_pass, rtmp_url2, rtmp_hot ,uiport ,testid });
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");
-		
+		String memOnStart = null;
+		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_feeder` | tail -n 1 |  awk '{print $8}'");
 		// Execute a test
 		driverReslut = ((FeederOutputPushToBxDriver) testDriver).testIMPL(userName, userPass, login_ip, name, mip, port, ip, prog, chan, type, ostr, oses, oetp, oeky, obit,
 		olat, ofc, ocmp, oold, onfec, fec_force, fec_adaptive, ofec, ofecl, stop_on_drop, mmt, smoothing, limited, minbps, lim_enc_addr, pad_to_cbr, rtmp_feedback, ohst,
 		oprt, onic, oalt,bonded,rtmp_stream, rtmp_url, rtmp_user, rtmp_pass, rtmp_url2, rtmp_hot, uiport).getResultObj();
 		
-		Assert.assertEquals(driverReslut.getResult(),"Broadcaster output added.");
+		String 		memOnEnd = null;
+		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_feeder` | tail -n 1 |  awk '{print $8}'");
+		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
+		long 		timeStemp = timestamp.getTime() ;
+		connecttoDb(login_ip, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp);
 		
+		Assert.assertEquals(driverReslut.getResult(),"Broadcaster output added.");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder"));
 	} // End of test.
@@ -96,7 +111,8 @@ public class FeederOutputPushToBxTest extends BaseTestZixiMainComponents{
 		
 		// Get SUT's PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");
-		
+		String memOnStart = null;
+		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_feeder` | tail -n 1 |  awk '{print $8}'");
 		// Save test parameters in order to pass them to testLink.
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "name", "mip", "port","ip", "prog", "chan", "type", "ostr", "oses", "oetp", 
 		"oeky","obit", "olat", "ofc", "ocmp", "oold", "onfec", "fec_force","fec_adaptive", "ofec", "ofecl", "stop_on_drop", "mmt",
@@ -113,8 +129,13 @@ public class FeederOutputPushToBxTest extends BaseTestZixiMainComponents{
 		mmt,  smoothing,  limited,  minbps, lim_enc_addr,  pad_to_cbr,  rtmp_feedback, group,  bonded,  bond_host1,  bond_port1,  bond_nic1,  bond_limit1,  bond_backup1, 
 		bond_host2,  bond_port2,  bond_nic2,  bond_limit2,  bond_backup2 , uiport);
 		
+		String 		memOnEnd = null;
+		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_feeder` | tail -n 1 |  awk '{print $8}'");
+		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
+		long 		timeStemp = timestamp.getTime() ;
+		connecttoDb(login_ip, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp);
+		
 		Assert.assertEquals(driverReslut.getResult(),"Broadcaster output added.");
-
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder"));
 	}
@@ -137,7 +158,8 @@ public class FeederOutputPushToBxTest extends BaseTestZixiMainComponents{
 		
 		// Get SUT's PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");
-		
+		String memOnStart = null;
+		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_feeder` | tail -n 1 |  awk '{print $8}'");
 		// Save test parameters in order to pass them to testLink.
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "name", "mip", "port","ip", "prog", "chan", "type", "ostr", "oses", "oetp", 
 		"oeky","obit", "olat", "ofc", "ocmp", "oold", "onfec", "fec_force","fec_adaptive", "ofec", "ofecl", "stop_on_drop", "mmt",
@@ -156,8 +178,13 @@ public class FeederOutputPushToBxTest extends BaseTestZixiMainComponents{
 		bond_host2,  bond_port2,  bond_nic2,  bond_limit2,  bond_backup2, bond_host3,  bond_port3, 
 		bond_nic3,  bond_limit3,  bond_backup3, uiport);
 		
-		Assert.assertEquals(driverReslut.getResult(),"Broadcaster output added.");
+		String 		memOnEnd = null;
+		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_feeder` | tail -n 1 |  awk '{print $8}'");
+		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
+		long 		timeStemp = timestamp.getTime() ;
+		connecttoDb(login_ip, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp);
 		
+		Assert.assertEquals(driverReslut.getResult(),"Broadcaster output added.");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder"));
 	}
