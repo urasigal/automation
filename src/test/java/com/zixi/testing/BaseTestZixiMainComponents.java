@@ -212,7 +212,7 @@ public class BaseTestZixiMainComponents {
 		//BaseTestZixiMainComponents.connecttoDb();
 	}
 	
-	public  void connecttoDb(String sutHost, int startMemory, int stopMemory, long timeStemp) throws FileNotFoundException, IOException, ParseException, ClassNotFoundException, SQLException
+	public void connecttoDb(String sutHost, int startMemory, int stopMemory, long timeStemp) throws FileNotFoundException, IOException, ParseException, ClassNotFoundException, SQLException
 	{
 		if(sutHost == null || startMemory == 0 || stopMemory == 0 ||  timeStemp == 0) {
 			throw new NullPointerException(); 

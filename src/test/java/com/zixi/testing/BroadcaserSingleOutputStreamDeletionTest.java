@@ -27,7 +27,6 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTestZixiMainCo
 
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
-		
 		buildTestParametersString(new String[] { "login_ip","userName","userPassword", "id","uiport", "testid" }, 
 		new String[] {login_ip,userName,userPassword,id,uiport, testid});
 		
