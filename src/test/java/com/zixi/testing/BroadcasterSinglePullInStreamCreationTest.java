@@ -24,7 +24,6 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTestZixiMainC
 	String Host, String login_ip, String id, String source, String uiport, String pull_port, String latency, String fec_latency, String fec_overhead, String mcast_force,
 	String time_shift, String nic, String max_outputs, String type, String password, String mcast_port, String complete,
 	String mcast_ip, String fec_adaptive, String mcast_ttl, String on, String func, String fec_force, String mcast_out, String propertiesFile,String testid) throws Exception {
-		
 		String buildNumber = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		String memOnStart = null;
