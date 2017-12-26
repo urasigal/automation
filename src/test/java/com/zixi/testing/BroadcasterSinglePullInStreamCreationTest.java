@@ -30,7 +30,6 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTestZixiMainC
 		String memOnStart = null;
 		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		
-		
 		// Gather the test parameters in order to pass them to the TestLink
 		buildTestParametersString(new String[] { "userName", "userPass", "Host", "login_ip", "id", "source", "uiport", "pull_port", "latency", "fec_latency", "fec_overhead",
 		"mcast_force", "time_shift", "nic", "max_outputs", "type", "password", "mcast_port", "complete", "mcast_ip", "fec_adaptive",
