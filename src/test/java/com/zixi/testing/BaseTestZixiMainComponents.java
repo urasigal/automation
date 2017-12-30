@@ -214,30 +214,21 @@ public class BaseTestZixiMainComponents {
 	
 	public void connecttoDb(String sutHost, int startMemory, int stopMemory, long timeStemp) throws FileNotFoundException, IOException, ParseException, ClassNotFoundException, SQLException
 	{
-		if(sutHost == null || startMemory == 0 || stopMemory == 0 ||  timeStemp == 0) {
-			throw new NullPointerException(); 
-		}
-		
-			JSONParser parser = new JSONParser(); 
-			
-			Object object = parser.parse(new FileReader("src/main/resources/db_connection.json"));
-			//convert Object to JSONObject
-            JSONObject jsonObject = (JSONObject)object;
-            String connector = (String) jsonObject.get("connector");
-            String host = (String) jsonObject.get("host");
-            String port = (String) jsonObject.get("port");
-            String db = (String) jsonObject.get("db");
-            String user = (String) jsonObject.get("user");
-            String password = (String) jsonObject.get("password");
+		if(sutHost == null || startMemory == 0 || stopMemory == 0 ||  timeStemp == 0) { throw new NullPointerException(); }
+			JSONParser parser 			= new JSONParser(); 
+			Object object 				= parser.parse(new FileReader("src/main/resources/db_connection.json"));
+            JSONObject jsonObject 		= (JSONObject)object;
+            String connector 			= (String) jsonObject.get("connector");
+            String host 				= (String) jsonObject.get("host");
+            String port 				= (String) jsonObject.get("port");
+            String db 					= (String) jsonObject.get("db");
+            String user 				= (String) jsonObject.get("user");
+            String password 			= (String) jsonObject.get("password");
 			Class.forName(connector);  
-			Connection cononnectionDb = DriverManager.getConnection(  
-			host+ ":" + port + "/" + db, user, password);  
-			
+			Connection cononnectionDb 	= DriverManager.getConnection(host+ ":" + port + "/" + db, user, password);  	
 			Statement stmt = cononnectionDb.createStatement();
-			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, memorydiff, stoptimestemp) "
-			          +"VALUES ('" + sutHost  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + ")");
+			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, memorydiff, stoptimestemp, testid) "
+			+ "VALUES ('" + sutHost  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + "," + Integer.parseInt(testid) + ")");
 			cononnectionDb.close();  
-			
 	}
-	
 }
