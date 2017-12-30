@@ -22,7 +22,6 @@ public class ReceiverPullInputStreamCreationTest extends BaseTestZixiMainCompone
 	String fec_adaptive, String fec_aware, String fec_force, String fec_latency, String fec_overhead, String host, String latency, String min_bit, String name, String nic,
 	String port, String session, String stream,String testid) throws Exception {
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_receiver");
-		String memOnStart = null;
 		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_receiver` | tail -n 1 |  awk '{print $8}'");
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "dec_key", "dec_type", "fec_adaptive", "fec_aware", "fec_force",
 		"fec_latency", "fec_overhead", "host", "latency", "min_bit", "name", "nic", "port", "session", "stream" ,"testid"}, 
@@ -31,9 +30,7 @@ public class ReceiverPullInputStreamCreationTest extends BaseTestZixiMainCompone
 		name, nic, port, session, stream ,testid});
 		
 		driverReslut = ((ReceiverPullInputStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, dec_key, dec_type, fec_adaptive, fec_aware,
-		fec_force, fec_latency, fec_overhead, host, latency, min_bit, name, nic, port, session, stream);
-		
-		String 		memOnEnd = null;
+		fec_force, fec_latency, fec_overhead, host, latency, min_bit, name, nic, port, session, stream);		
 		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_receiver` | tail -n 1 |  awk '{print $8}'");
 		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
 		long 		timeStemp = timestamp.getTime() ;
