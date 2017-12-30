@@ -65,7 +65,8 @@ public class BaseTestZixiMainComponents {
 	protected static  StreamHandler				STREAMHANDLER				= 	null;
 	
 	protected String 							manulDescription 			= 	"";		
-	
+	protected String 							memOnStart 					= 	"";
+	protected String 							memOnEnd 					= 	"";
 	@BeforeTest
 	public void startTest(final ITestContext testContext) {
 		automationTestIdentifiers = "Test name is: " + testContext.getName() + "\nSuite name is: " + testContext.getSuite().getName();

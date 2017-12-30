@@ -22,17 +22,13 @@ public class ReceiverUdpOutCreationTest extends BaseTestZixiMainComponents {
 	String type, String nic, String ttl, String smoothing, String rtp,String fec, String rows, String cols, String remux_bitrate, String input_stream,
 	String testid) throws Exception {
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_receiver");
-		String memOnStart = null;
 		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_receiver` | tail -n 1 |  awk '{print $8}'");
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "name",
 		"target", "type", "nic", "ttl", "smoothing", "rtp", "fec", "rows","cols", "remux_bitrate", "input_stream", "testid"}, 
-		
 		new String[] { userName, userPass, login_ip, uiport, name,target, type, nic, ttl, smoothing, rtp, fec, rows,cols, remux_bitrate, input_stream, testid });
 		
 		driverReslut = ((ReceiverUdpOutCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, name, target, type, nic, ttl, smoothing, rtp, fec, rows,
-		cols, remux_bitrate , input_stream);
-		
-		String 		memOnEnd = null;
+		cols, remux_bitrate , input_stream);		
 		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_receiver` | tail -n 1 |  awk '{print $8}'");
 		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
 		long 		timeStemp = timestamp.getTime() ;

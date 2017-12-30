@@ -20,11 +20,8 @@ public class FFMPEGBondingBackupTest extends BaseTestZixiMainComponents{
 	@Parameters({"testid"})
 	@Test
 	public void ffmpegBondingTestBackUpScenarioPartialLimitation(String testid) throws InterruptedException {
-		
 		buildTestParametersString(new String[] { "testid" }, new String[] {"testid" });
-		
 		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).backUpBondedPartialLimitation();
-		
 		Assert.assertEquals(driverReslut.getResult(), "good");
 	}
 	
@@ -34,13 +31,9 @@ public class FFMPEGBondingBackupTest extends BaseTestZixiMainComponents{
 	@Parameters({"testid"})
 	@Test
 	public void ffmpegBondingTestBackUpScenarioFullLimitation(String testid) throws InterruptedException {
-		
 		testFlowDescriptor.append("\nStarting the test FFMPEGBondingBackupTest.ffmpegBondingTestBackUpScenarioFullLimitation" );
-		
 		buildTestParametersString(new String[] { "testid" }, new String[] {"testid" }); // Fill out test parameters.
-		
 		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).backUpBondedFullLimitation();
-		
 		Assert.assertEquals(driverReslut.getResult(), "good");
 	}
 }
