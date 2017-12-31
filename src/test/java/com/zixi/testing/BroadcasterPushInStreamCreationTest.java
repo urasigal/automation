@@ -23,7 +23,6 @@ public class BroadcasterPushInStreamCreationTest extends BaseTestZixiMainCompone
 		
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
-		String memOnStart = null;
 		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "latency", "time_shift", "force_p2p", "mcast_ip", "mcast_force", "mcast_port", "type",
@@ -34,8 +33,6 @@ public class BroadcasterPushInStreamCreationTest extends BaseTestZixiMainCompone
 		
 		driverReslut = ((BroadcasterPushInStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, latency, time_shift,
 		force_p2p, mcast_ip, mcast_force, mcast_port, type, uiport, analyze, mcast_ttl, id, mcast_out, complete, max_outputs, on, password);
-		
-		String 		memOnEnd = null;
 		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
 		long 		timeStemp = timestamp.getTime() ;
