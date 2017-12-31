@@ -1,5 +1,6 @@
 package com.zixi.load.testing;
 
+import java.sql.Timestamp;
 import java.util.concurrent.ExecutionException;
 
 import org.testng.Assert;
@@ -38,10 +39,11 @@ public class BroadcasterMultipleRtmpPushTest extends BaseTestZixiMainComponents{
 	String rtmp_name, String rtmp_user, String number_of_streams, String testid) throws Exception {	
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId		  = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX1,  "22",  "pidof zixi_broadcaster");
-		
 		// This is a special case because of using two broadcasters in a single test.
 		String sutProcessIdBX2 = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX2,  "22",  "pidof zixi_broadcaster");
-		
+		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX1,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
+		String tmpStartMemHolder = memOnStart;
+		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX2,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		productAboutDriver.getBroadcasterVersion(login_ipBX1, uiportBX1, userNameBX1, userPasswordBX1);
 		InnerHelper innerHelper = new InnerHelper();		
@@ -52,14 +54,22 @@ public class BroadcasterMultipleRtmpPushTest extends BaseTestZixiMainComponents{
 		enc_key, rec_history, rec_duration, rtmp_url, rtmp_name, rtmp_user, number_of_streams, testid);
 		
 		driverReslut = ((BroadcasterMultipleRtmpPushDriver) testDriver).testIMPL(login_ipBX1,  login_ipBX2,  userNameBX1, userNameBX2,  userPasswordBX1,  userPasswordBX2,  uiportBX1, 
-		 uiportBX2,  typeBX1,  name,  stream,  matrixBX1,  url, url_alt,  rtmp_stream,  user,  bandwidth,  latency,  reconnect,  sendfi, disconnect_low_br, 
-		 static_latency,  dec_type,  dec_key,  password,  typeBX2,  id,  matrixBX2, max_outputs,  mcast_out,  time_shift, old,
-		 fast_connect,  kompression, enc_type,  enc_key,  rec_history,  rec_duration,  rtmp_url, rtmp_name,  rtmp_user, number_of_streams);
+		uiportBX2,  typeBX1,  name,  stream,  matrixBX1,  url, url_alt,  rtmp_stream,  user,  bandwidth,  latency,  reconnect,  sendfi, disconnect_low_br, 
+		static_latency,  dec_type,  dec_key,  password,  typeBX2,  id,  matrixBX2, max_outputs,  mcast_out,  time_shift, old,
+		fast_connect,  kompression, enc_type,  enc_key,  rec_history,  rec_duration,  rtmp_url, rtmp_name,  rtmp_user, number_of_streams);
+		
+		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX1,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
+		Timestamp 	timestamp1 = new Timestamp(System.currentTimeMillis());
+		long 		timeStemp1 = timestamp1.getTime() ;
+		connecttoDb(login_ipBX1, Integer.parseInt(tmpStartMemHolder.substring(0, tmpStartMemHolder.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp1);
+		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX2,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
+		Timestamp 	timestamp2 = new Timestamp(System.currentTimeMillis());
+		long 		timeStemp2 = timestamp2.getTime() ;
+		connecttoDb(login_ipBX2, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp2);
 		
 		// Test logic: The test case checks if the number of created output streams is equal to the number of created input 
 		// streams and in turn it equal to the number of desired test.
 		Assert.assertEquals(driverReslut.getResult(), number_of_streams);
-		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX1,  "22",  "pidof zixi_broadcaster"));
 		Assert.assertEquals(sutProcessIdBX2, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ipBX2,  "22",  "pidof zixi_broadcaster"));
 	}

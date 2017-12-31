@@ -12,7 +12,6 @@ import com.zixi.drivers.tools.DriverReslut;
 
 // This class is used in general purpose of deletion of output stream on a zixi broadcaster server.
 public class BroadcaserSingleOutputStreamDeletionTest extends BaseTestZixiMainComponents{
-	
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcaserSingleOutputStreamDeletionDriver(); } // Super class element
 
@@ -23,7 +22,6 @@ public class BroadcaserSingleOutputStreamDeletionTest extends BaseTestZixiMainCo
 	{
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
-
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		buildTestParametersString(new String[] { "login_ip","userName","userPassword", "id","uiport", "testid" }, 
