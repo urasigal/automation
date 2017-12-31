@@ -22,7 +22,6 @@ public class BroadcasterPushOutStreamCreationGeneralTest extends BaseTestZixiMai
 	String stream, String port, String uiport, String alias, String id, String link1, String link2, String bond_links, String testid) throws Exception {
 		
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
-		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "host", "latency", "fec_force", "session", "fec_adaptive", "nic", "fec_block", "type",
