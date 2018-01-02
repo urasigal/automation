@@ -2,6 +2,8 @@ package com.zixi.testing;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,21 +15,24 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.logging.StreamHandler;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+//import org.json.JSONObject;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-
 import br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus;
 import br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException;
-
 import com.zixi.drivers.drivers.*;
 import com.zixi.drivers.setup.SetSutUpTimeDriver;
 import com.zixi.drivers.tools.DriverReslut;
 import com.zixi.email.drivers.GoogleMailDriver;
 import com.zixi.tools.TestlinkIntegration;
+import java.sql.*; 
 
 /*
  * This is a most high hierarchy test class. All test case classes have to inherit from this class.
@@ -59,9 +64,9 @@ public class BaseTestZixiMainComponents {
 	protected static  FileHandler  				FILEHANDLER 				= 	null ;
 	protected static  StreamHandler				STREAMHANDLER				= 	null;
 	
-	//protected Object 							params[];
 	protected String 							manulDescription 			= 	"";		
-	
+	protected String 							memOnStart 					= 	"";
+	protected String 							memOnEnd 					= 	"";
 	@BeforeTest
 	public void startTest(final ITestContext testContext) {
 		automationTestIdentifiers = "Test name is: " + testContext.getName() + "\nSuite name is: " + testContext.getSuite().getName();
@@ -201,5 +206,30 @@ public class BaseTestZixiMainComponents {
 		    }
 		}
 		return buildId;
+	}
+	
+	
+	public static void main(String[] args) {
+		//BaseTestZixiMainComponents.connecttoDb();
+	}
+	
+	public void connecttoDb(String sutHost, int startMemory, int stopMemory, long timeStemp) throws FileNotFoundException, IOException, ParseException, ClassNotFoundException, SQLException
+	{
+		if(sutHost == null || startMemory == 0 || stopMemory == 0 ||  timeStemp == 0) { throw new NullPointerException(); }
+			JSONParser parser 			= new JSONParser(); 
+			Object object 				= parser.parse(new FileReader("src/main/resources/db_connection.json"));
+            JSONObject jsonObject 		= (JSONObject)object;
+            String connector 			= (String) jsonObject.get("connector");
+            String host 				= (String) jsonObject.get("host");
+            String port 				= (String) jsonObject.get("port");
+            String db 					= (String) jsonObject.get("db");
+            String user 				= (String) jsonObject.get("user");
+            String password 			= (String) jsonObject.get("password");
+			Class.forName(connector);  
+			Connection cononnectionDb 	= DriverManager.getConnection(host+ ":" + port + "/" + db, user, password);  	
+			Statement stmt = cononnectionDb.createStatement();
+			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, memorydiff, stoptimestemp, testid, testcontext) "
+			+ "VALUES ('" + sutHost  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + "," + Integer.parseInt(testid) + ",'" + automationTestIdentifiers + "')");
+			cononnectionDb.close();  
 	}
 }
