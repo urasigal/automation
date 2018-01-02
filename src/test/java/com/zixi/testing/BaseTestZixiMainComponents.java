@@ -240,7 +240,7 @@ public class BaseTestZixiMainComponents {
 		Statement stmt = cononnectionDb.createStatement();
 		String queryString = "INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, memorydiff, stoptimestemp, testid, testcontext) "
 		+ "VALUES ('" + sutHost + "'," + startMemory + "," + stopMemory + ","
-		+ (stopMemory - startMemory) + "," + timeStemp + "," + Integer.parseInt(testid) + ",'" + automationTestIdentifiers + "')";
+		+ (stopMemory - startMemory) + "," + timeStemp + "," + Integer.parseInt(testid) + ",\"" + automationTestIdentifiers + "\")";
 		stmt.executeUpdate(queryString);
 		cononnectionDb.close();
 	}
