@@ -228,8 +228,8 @@ public class BaseTestZixiMainComponents {
 			Class.forName(connector);  
 			Connection cononnectionDb 	= DriverManager.getConnection(host+ ":" + port + "/" + db, user, password);  	
 			Statement stmt = cononnectionDb.createStatement();
-			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, memorydiff, stoptimestemp, testid) "
-			+ "VALUES ('" + sutHost  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + "," + Integer.parseInt(testid) + ")");
+			stmt.executeUpdate("INSERT INTO memory_host_usage (hostaddress, memorystart, memorystop, memorydiff, stoptimestemp, testid, testcontext) "
+			+ "VALUES ('" + sutHost  + "'," + startMemory + "," +  stopMemory + "," + (stopMemory - startMemory) + "," + timeStemp + "," + Integer.parseInt(testid) + "," + automationTestIdentifiers + ")");
 			cononnectionDb.close();  
 	}
 }
