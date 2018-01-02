@@ -16,7 +16,6 @@ public class BroadcasterSingleInputStreamDeletionTest extends BaseTestZixiMainCo
 	@Parameters({ "login_ip", "userName", "userPassword", "streamId", "uiport" ,"testid"})
 	@Test
 	public void broadcasterInputStreamDeletion(String login_ip, String userName, String userPassword, String streamId, String uiport, String testid) throws Exception {
-		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234", login_ip, "22", "pidof zixi_broadcaster" );
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
 		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
