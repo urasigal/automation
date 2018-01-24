@@ -37,7 +37,7 @@ public class BroadcasterStopStartAllInputsUtilityTest extends BaseTestZixiMainCo
 			Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
 			long 		timeStemp = timestamp.getTime() ;
 			connecttoDb(login_ip, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp);
-			connecttoDb(login_ip, Integer.parseInt(memOnStartRemote.substring(0, memOnStartRemote.length() - 1)), Integer.parseInt(memOnEndRemote.substring(0, memOnEndRemote.length() - 1)), timeStemp);
+			connecttoDb(login_ip_remote, Integer.parseInt(memOnStartRemote.substring(0, memOnStartRemote.length() - 1)), Integer.parseInt(memOnEndRemote.substring(0, memOnEndRemote.length() - 1)), timeStemp);
 
 		}
 		
