@@ -228,5 +228,23 @@
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
-	</test>                     
+	</test>
+	<test name="Broadcaster - Disable multicast pool"> <!-- Enable multicast on a broadcaster and set multicast pool IP-->
+	 	<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="multicast_pool_enabled" value="0" />
+		<parameter name="multicast_pool_address" value="239.7.0.0" />
+		<parameter name="multicast_pool_mask" value="24" />
+		<parameter name="multicast_pool_fec_overhead" value="5" />
+		<parameter name="multicast_pool_port" value="5000" />
+		<parameter name="multicast_pool_ttl" value="1" />
+		<parameter name="multicast_pool_nic" value="192.168.5.166" />
+		<parameter name="multicast_pool_tos" value="0" />
+		<parameter name="testid" value="6988" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterConfigMulticastPoolTest"/>
+		</classes>
+	 </test>                     
 </suite>
