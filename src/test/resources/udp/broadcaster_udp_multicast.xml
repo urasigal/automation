@@ -20,7 +20,7 @@
 		    <class name="com.zixi.testing.BroadcasterConfigMulticastPoolTest"/>
 		</classes>
 	 </test>
-	 <test name="Feeder - push to broadcaster test - default parameteres">
+	 <test name="Feeder - push to broadcaster test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -68,7 +68,7 @@
      		 </class>
 		</classes>
 	</test>
-	 <test name="Broadcaster - Push input stream creation test - default paremeters">
+	 <test name="Broadcaster - Push input stream creation test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -126,7 +126,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Multicast Pull from Broadcaster input stream statistics test">
+	<test name="Broadcaster - Multicast Pull stream statistics test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="192.168.5.166" />
@@ -176,7 +176,7 @@
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-<test name="Broadcaster - Remove udp output stream default parameters push input FFMPEG analyser">
+<test name="Broadcaster - Remove udp output stream">
 		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -187,7 +187,7 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>		 
-	<test name="Feeder - output stream deletion test - default paremeters">
+	<test name="Feeder - output stream deletion test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
@@ -205,7 +205,7 @@
 		    <class name="com.zixi.testing.FeederOutputDeletioinTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Push input stream - default paremeters">
+	<test name="Broadcaster - Remove Push input stream">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -242,7 +242,7 @@
 		<parameter name="multicast_pool_ttl" value="1" />
 		<parameter name="multicast_pool_nic" value="192.168.5.166" />
 		<parameter name="multicast_pool_tos" value="0" />
-		<parameter name="testid" value="6988" />
+		<parameter name="testid" value="8490" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterConfigMulticastPoolTest"/>
 		</classes>
