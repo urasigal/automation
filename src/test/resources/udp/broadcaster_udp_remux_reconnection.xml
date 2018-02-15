@@ -50,7 +50,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation test - default paremeters">
+	<test name="Broadcaster - Push input stream creation test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -75,7 +75,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP input stream creation test remux to 8000">
+	<test name="Broadcaster - UDP input stream creation test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -105,7 +105,7 @@
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP output stream creation test remux to 8000">
+	<test name="Broadcaster - UDP output stream creation test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -136,7 +136,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster - UDP input stream statistics test remux to 8000">
+	<test name="Broadcaster - UDP input stream statistics test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="127.0.0.1" />
@@ -159,7 +159,7 @@
 		    <class name="com.zixi.testasutility.RestartTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP input stream statistics test remux to 8000">
+	<test name="Broadcaster - UDP input stream statistics test afer source restart">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="127.0.0.1" />
@@ -172,7 +172,7 @@
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>  
-	<test name="Broadcaster - Remove udp input stream test remux to 8000">
+	<test name="Broadcaster - Remove udp input stream test">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -184,7 +184,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster - Remove udp output stream test remux to 8000">
+	<test name="Broadcaster - Remove udp output stream test">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
