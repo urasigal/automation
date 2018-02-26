@@ -140,6 +140,22 @@
      		 </class>
 		</classes>
 	</test>
+	<!-- Configure maxwell and test perform a testing -->
+	<test name="Configure maxwell simulator set interference simple case">
+		<parameter name="maxwell_address" value="10.7.0.70" />
+		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
+		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
+		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
+		<parameter name="impairment_control_setimpair" value="setimpair 0 0 drop 12.5 jitter 50.0 gaussian 200 30" />
+		<parameter name="testid" value="7944" />  
+		<classes>
+		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
+		    <methods>
+        		<include name="broadcasterSetGlobalInpairment" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
