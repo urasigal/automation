@@ -44,7 +44,7 @@
 		<parameter name="id_bx1" value="test" /> 			
 		<parameter name="rtp_type" value="0" />				
 		<parameter name="multi_src" value="" />				
-		<parameter name="max_bitrate" value="30000000" />	
+		<parameter name="max_bitrate" value="25000000" />	
 		<parameter name="time_shift" value="0" />			
 		<parameter name="mcast_ip" value="" />			
 		<parameter name="mcast_force" value="" />			
@@ -83,7 +83,7 @@
 		<parameter name="remux_pcr" value="90" />			
 		<parameter name="dec_type" value="" />				
 		<parameter name="cols" value="10" />				
-		<parameter name="number_of_streams" value="150" />									
+		<parameter name="number_of_streams" value="120" />									
 		<parameter name="testid" value="4011" />				
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest"/>
@@ -128,7 +128,7 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="test" />
 		<parameter name="id_bx2" value="test" />
-		<parameter name="number_of_streams" value="150" />
+		<parameter name="number_of_streams" value="120" />
 		<parameter name="testid" value="3961" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushManualTest"/>
@@ -146,7 +146,7 @@
 		<parameter name="id_bx1" value="test" />  <!-- Destination prefix name -->	
 		<parameter name="rtp_type" value="0" />				
 		<parameter name="multi_src" value="" />				
-		<parameter name="max_bitrate" value="30000000" />	
+		<parameter name="max_bitrate" value="25000000" />	
 		<parameter name="time_shift" value="0" />			
 		<parameter name="mcast_ip" value="" />			
 		<parameter name="mcast_force" value="" />			
@@ -185,7 +185,7 @@
 		<parameter name="remux_pcr" value="90" />			
 		<parameter name="dec_type" value="" />				
 		<parameter name="cols" value="10" />				
-		<parameter name="number_of_streams" value="150" />									
+		<parameter name="number_of_streams" value="120" />									
 		<parameter name="testid" value="4011" />				
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipleUdpManualTest"/>
