@@ -26,7 +26,7 @@ public class BroadcasterMultiplePushManualTest extends BaseTestZixiMainComponent
 	@Parameters({ "userName_bx1", "userName_bx2", "userPass_bx1", "userPass_bx2", "login_ip_bx1", "login_ip_bx2", "latency_bx1", "time_shift",
 	"force_p2p", "mcast_ip", "mcast_force", "mcast_port", "type_bx1", "uiport_bx1", "analyze", "mcast_ttl", "id_bx1", "mcast_out",
 	"complete", "max_outputs", "on", "password", "host", "latency_bx2", "fec_force", "session", "fec_adaptive",
-	"nic", "fec_block", "type_bx2", "snames", "fec_aware", "fec_overhead", "stream", "port", "uiport_bx2", "alias", "id_bx2" ,
+	"nic", "fec_block", "type_bx2", "snames", "fec_aware", "fec_overhead", "stream", "port", "uiport_bx2", "alias", "id_bx2", "enc_type", "enc_key",
 	"number_of_streams", "mixed", "testid"})
 	@Test
 	public void broadcasterMultiplePullInCreation(String userName_bx1, String userName_bx2, String userPass_bx1, String userPass_bx2, String login_ip_bx1, 
