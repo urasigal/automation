@@ -34,7 +34,7 @@ public class BroadcasterMultiplePushManualTest extends BaseTestZixiMainComponent
 	String type_bx1, String uiport_bx1, String analyze, String mcast_ttl, String id_bx1, String mcast_out,
 	String complete, String max_outputs, String on, String password, String host, String latency_bx2, String fec_force, String session, 
 	String fec_adaptive, String nic, String fec_block, String type_bx2, String snames, String fec_aware, String fec_overhead, String stream, 
-	String port, String uiport_bx2, String alias, String id_bx2, String number_of_streams, @Optional("0") String mixed, String testid) throws Exception {
+	String port, String uiport_bx2, String alias, String id_bx2, String enc_type, String enc_key, String number_of_streams, @Optional("0") String mixed, String testid) throws Exception {
 		productAboutDriver.getBroadcasterVersion(login_ip_bx1, uiport_bx1, userName_bx1, userPass_bx1);
 		// PIDs from a two broadcaster servers because of in this particular test case a two different broadcasters are involved.
 		sutProcessId         = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx1,  "22",  "pidof zixi_broadcaster");
@@ -60,7 +60,7 @@ public class BroadcasterMultiplePushManualTest extends BaseTestZixiMainComponent
 		userName_bx1, userName_bx2, userPass_bx1, userPass_bx2, login_ip_bx1, login_ip_bx2, latency_bx1, time_shift,
 		force_p2p, mcast_ip, mcast_force, mcast_port, type_bx1, uiport_bx1, analyze, mcast_ttl, id_bx1, mcast_out,
 		complete, max_outputs, on, password, host, latency_bx2, fec_force, session, fec_adaptive,
-		nic, fec_block, type_bx2, snames, fec_aware, fec_overhead, stream, port, uiport_bx2, alias, id_bx2 ,
+		nic, fec_block, type_bx2, snames, fec_aware, fec_overhead, stream, port, uiport_bx2, alias, id_bx2, enc_type, enc_key,
 		number_of_streams, mixed);
 		
 		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip_bx1,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
