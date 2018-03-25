@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Manual load test setup suite - creates a load setup" verbose="5" data-provider-thread-count="1">
-<!-- This setup made up from 3 broadcaster servers: the first broadcaster server has a file input stream,
-	the file input stream is going as multiple output UDP streams to the second broadcaster server,
-	then the accepted UDP from the second broadcaster are Zixi pushed to the third broadcaster
-	server and in the end the multiple push inputs from the third broadcaster UDP outputed 
-	to the first broadcaster so kind of circle is accepted -->
+<!-- Simple manual benchmark test suite with tr1010 turned on -->
 <test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -191,5 +187,27 @@
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipleUdpManualTest"/>
 		</classes>
-	</test>               
+	</test>  
+	<test name="Broadcaster - turn TR101 on ">
+		<parameter name="login_ip" value="10.7.0.91" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />		
+		<parameter name="analyz" value="1" />			
+		<parameter name="testid" value="4011" />		
+	<classes>
+		    <class name="com.zixi.anlalise.testing.SetAnalyzerTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - turn TR101 on">
+		<parameter name="login_ip" value="10.7.0.62" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />		
+		<parameter name="analyz" value="1" />			
+		<parameter name="testid" value="4011" />		
+	<classes>
+		    <class name="com.zixi.anlalise.testing.SetAnalyzerTest"/>
+		</classes>
+	</test>       
 </suite>
