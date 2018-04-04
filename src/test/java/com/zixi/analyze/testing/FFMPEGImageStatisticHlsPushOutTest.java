@@ -1,4 +1,4 @@
-package com.zixi.anlalise.testing;
+package com.zixi.analyze.testing;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
