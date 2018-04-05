@@ -45,7 +45,7 @@ public class SetAnalyzerTest extends BaseTestZixiMainComponents
 		
 		driverReslut = ((BroadcasterAnalyzerDriver) testDriver).boadcasterCompareStatisticOnAllInputsStreams( userName,  userPassword,  login_ip,  uiport,  refstream);
 			
-		Assert.assertEquals(driverReslut.getResult(), "analyzed");
+		Assert.assertEquals(driverReslut.getResult(), "passed");
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 }
