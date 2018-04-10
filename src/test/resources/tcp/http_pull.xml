@@ -4,26 +4,32 @@
 The streams are created in the same time  -->
 <suite name="Broadcaster: Pull load suite with random stream FFMPEG analyser" verbose="5" data-provider-thread-count="1">
 <test name="Broadcaster-Update settings DTLS server">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.77" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="server_id" value="localhost.localdomain" />
-		<parameter name="gui_web_port" value="4444" />
-		<parameter name="uname" value="user" />
-		<parameter name="aname" value="admin" />
-		<parameter name="ft_max_quota" value="85" />
-		<parameter name="max_cpu" value="90" />
-		<parameter name="max_mem" value="90" />
-		<parameter name="max_in_bandwidth" value="0" />
-		<parameter name="max_out_bandwidth" value="0" />
-		<parameter name="admin_https" value="0" />
-		<parameter name="use_operator" value="0" />
-		<parameter name="use_user" value="1" />
-		<parameter name="use_observer" value="0" />
-		<parameter name="private_port" value="2089,10.7.5.177,,1&amp;private_port=2090,10.7.0.77,,1" />
-		<parameter name="public_port" value="2079,,,1" />
-		<parameter name="testid" value="7738" />   
+		<parameter name="login_ip" value="10.7.0.63" />
+		 <parameter name="userName" value="admin" />
+		 <parameter name="userPass" value="1234" /> 
+		 <parameter name="uiport" value="4444" />
+		 <parameter name="flv_on" value="1" /> 
+		 <parameter name="hls_on" value="1" />
+		 <parameter name="mpd_on" value="1" /> 
+		 <parameter name="pls_on" value="1" />
+		 <parameter name="http_out_ip" value="" /> 
+		 <parameter name="http_out_port" value="7777" />
+		 <parameter name="hls_chunk_time" value="10" /> 
+		 <parameter name="hls_chunks" value="5" />
+		 <parameter name="http_auth_cahce_timeout" value="60" />
+		 <parameter name="http_on" value="1" />
+		 <parameter name="https_on" value="0" />
+		 <parameter name="https_out_port" value="443" /> 
+		 <parameter name="hls_dvr_duration_s" value="86400" />
+		 <parameter name="hls_no_mem_chunks" value="0" />
+		 <parameter name="hls_no_dvr" value="0" />
+		 <parameter name="hls_vod_abs_path_on" value="1" />
+		 <parameter name="http_ts_auto_in" value="1" />
+		 <parameter name="http_ts_auto_out" value="1" />
+		 <parameter name="http_ts_buffer_size" value="0" />
+		 <parameter name="http_ts_smoothing_latency" value="1000" />
+		 <parameter name="tcp_congestion_algo" value="cubic%20reno" />
+		 <parameter name="testid" value="7738" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
 			    <methods>
