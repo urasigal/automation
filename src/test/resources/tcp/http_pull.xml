@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- Create multiple pull input streams from BX to BX.
-The streams are created in the same time  -->
-<suite name="Broadcaster: Pull load suite with random stream FFMPEG analyser" verbose="5" data-provider-thread-count="1">
-<test name="Broadcaster-Update settings DTLS server">
+<suite name="Broadcaster: HTTP pull streaming" verbose="5" data-provider-thread-count="1">
+<test name="Broadcaster-Update settings - enable automatic HTTP push/pull">
 		 <parameter name="login_ip" value="10.7.0.63" />
 		 <parameter name="userName" value="admin" />
 		 <parameter name="userPass" value="1234" /> 
@@ -29,7 +27,7 @@ The streams are created in the same time  -->
 		 <parameter name="http_ts_buffer_size" value="0" />
 		 <parameter name="http_ts_smoothing_latency" value="1000" />
 		 <parameter name="tcp_congestion_algo" value="cubic%20reno" />
-		 <parameter name="testid" value="7738" />
+		 <parameter name="testid" value="8524" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
 			    <methods>
@@ -60,7 +58,7 @@ The streams are created in the same time  -->
 		<parameter name="rec_template" value="%25S_%25Y%25M%25D-%25T.ts" />
 		<parameter name="ts_http_url" value="http://10.7.0.63:7777/test.mp2t" />
 		<parameter name="smoothing_latency" value="1000" />
-		<parameter name="testid" value="7738" />
+		<parameter name="testid" value="8526" />
 	<classes>
 		    <class name="com.zixi.testing.BroadcasterAddHttpPullInputStreamTest">
 			    <methods>
@@ -95,13 +93,13 @@ The streams are created in the same time  -->
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="8508" />  
+		<parameter name="testid" value="8528" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG test">
-		<parameter name="testid" value="8510" />  
+		<parameter name="testid" value="8534" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -112,7 +110,7 @@ The streams are created in the same time  -->
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="http_pull" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8514" />  
+		<parameter name="testid" value="8530" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -124,7 +122,7 @@ The streams are created in the same time  -->
 		<parameter name="streamId" value="http_pull" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="558" />  
+		<parameter name="testid" value="8532" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
