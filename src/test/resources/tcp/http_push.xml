@@ -65,10 +65,10 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="port" value="5555" />
-		<parameter name="stream" value="http_pull" />
-		<parameter name="streamname" value="http_pull" />
+		<parameter name="stream" value="http_push" />
+		<parameter name="streamname" value="http_push" />
 		<parameter name="host" value="10.7.0.150" />
-		<parameter name="id" value="http_pull" />
+		<parameter name="id" value="http_push" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
 		<parameter name="smoothing" value="0" />
@@ -101,7 +101,7 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="http_pull" />
+		<parameter name="id" value="http_push" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="8530" />  
 		<classes>
@@ -112,7 +112,7 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="http_pull" />
+		<parameter name="streamId" value="http_push" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testid" value="8532" />  
