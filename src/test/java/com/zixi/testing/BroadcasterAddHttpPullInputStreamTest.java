@@ -8,12 +8,12 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
-import com.zixi.drivers.drivers.BroadcasterAddInputStreamDriver;
+import com.zixi.drivers.drivers.BroadcasterAddStreamDriver;
 import com.zixi.drivers.drivers.BroadcasterPushInStreamCreationDriver;
 
 public class BroadcasterAddHttpPullInputStreamTest  extends BaseTestZixiMainComponents {
 	@BeforeClass
-	public void testInit() { testDriver = new BroadcasterAddInputStreamDriver(); }
+	public void testInit() { testDriver = new BroadcasterAddStreamDriver(); }
 
 	@Parameters({ "login_ip", "userName", "userPass", "uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "enc_type", "enc_key", "old", "fast_connect", 
 	"kompression", "rec_history", "rec_duration", "rec_path", "rec_template", "ts_http_url", "smoothing_latency", "testid" })
@@ -32,7 +32,7 @@ public class BroadcasterAddHttpPullInputStreamTest  extends BaseTestZixiMainComp
 		new String[] {login_ip, userName, userPass, uiport, type, id, matrix, max_outputs, mcast_out, time_shift, enc_type, enc_key, old, fast_connect, kompression, rec_history, rec_duration,
 		rec_path, rec_template, ts_http_url, smoothing_latency, testid });
 		
-		driverReslut = ((BroadcasterAddInputStreamDriver) testDriver).broadcasterAddHttpPullInputStream(login_ip, userName, userPass, uiport, type, id, matrix, max_outputs, mcast_out, time_shift, 
+		driverReslut = ((BroadcasterAddStreamDriver) testDriver).broadcasterAddHttpPullInputStream(login_ip, userName, userPass, uiport, type, id, matrix, max_outputs, mcast_out, time_shift, 
 		enc_type, enc_key, old, fast_connect, kompression, rec_history, rec_duration, rec_path, rec_template, ts_http_url, smoothing_latency);
 		
 		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
