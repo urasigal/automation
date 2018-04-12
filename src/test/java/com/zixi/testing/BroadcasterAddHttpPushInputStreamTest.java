@@ -34,7 +34,7 @@ public class BroadcasterAddHttpPushInputStreamTest   extends BaseTestZixiMainCom
 		long 		timeStemp = timestamp.getTime() ;
 		connecttoDb(login_ip, Integer.parseInt(memOnStart.substring(0, memOnStart.length() - 1)), Integer.parseInt(memOnEnd.substring(0, memOnEnd.length() - 1)), timeStemp);
 		
-		Assert.assertEquals( driverReslut.getResult(), "Output " + "'" + name + "'" + " added."); 
+		Assert.assertEquals( driverReslut.getResult(), "Output " + name  + " added."); 
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
