@@ -27,7 +27,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - RTMP Pull input stream creation">
+	<test name="Broadcaster - RTMP Pull input stream creation (10% packet loss)">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.75" />
@@ -50,7 +50,36 @@
 		<parameter name="complete" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="on" value="1" />
-		<parameter name="number_of_streams" value="10" />
+		<parameter name="number_of_streams" value="5" />
+		<parameter name="testid" value="3935" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - RTMP Pull input stream creation (direct link)">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="rtmp_nulls" value="" />
+		<parameter name="id" value="test" />
+		<parameter name="rtmp_url" value="rtmp://192.168.7.75/live" />
+		<parameter name="rtmp_name" value="test1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="type" value="rtmp_pull" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="rtmp_bitrate" value="" />
+		<parameter name="rtmp_passwd" value="" />
+		<parameter name="uiport" value="4444" /> 
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="rtmp_latency" value="" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="on" value="1" />
+		<parameter name="number_of_streams" value="5" />
 		<parameter name="testid" value="3935" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipleRtmpPullCreationTest"/>
@@ -72,10 +101,10 @@
 		<parameter name="kompression" value="1" />
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
-		<parameter name="latency" value="6000" />
+		<parameter name="latency" value="300" />
 		<parameter name="max_bitrate" value="9999900" />
 		<parameter name="keep_rtp" value="1" />
-		<parameter name="group_components" value="test0,test1,test2,test3,test4,test5,test6,test7,test8,test9" />
+		<parameter name="group_components" value="test0,test1,test2,test3,test4,test10,test11,test12,test13,test14" />
 		<parameter name="testid" value="8500" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFailOverInputCreationTest">
