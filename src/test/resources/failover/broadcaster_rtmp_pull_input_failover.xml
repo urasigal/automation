@@ -104,7 +104,7 @@
 		<parameter name="latency" value="300" />
 		<parameter name="max_bitrate" value="9999900" />
 		<parameter name="keep_rtp" value="1" />
-		<parameter name="group_components" value="test0,test1,test2,test3,test4,test10,test11,test12,test13,test14" />
+		<parameter name="group_components" value="test0&priority=1,test1&priority=1,test2&priority=1,test3&priority=1,test4&priority=1,test10&priority=1,test11&priority=1,test12&priority=1,test13&priority=1,test14&priority=1" />
 		<parameter name="testid" value="8500" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFailOverInputCreationTest">
