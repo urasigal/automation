@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
 import com.zixi.drivers.drivers.BroadcasterConfigMulticastPoolDriver;
 
-public class BroadcasterConfigMulticastPoolTest extends BaseTestZixiMainComponents{
+public class BroadcasterConfigMulticastPoolTest extends BasetTestZixiComponentRestartCase {
 	
 	@BeforeClass
 	public void testInit() {  testDriver = new BroadcasterConfigMulticastPoolDriver(); }
@@ -17,7 +17,7 @@ public class BroadcasterConfigMulticastPoolTest extends BaseTestZixiMainComponen
 	@Parameters({"login_ip", "userName", "userPassword", "uiport", "multicast_pool_enabled", "multicast_pool_address", "multicast_pool_mask", "multicast_pool_fec_overhead",
 	"multicast_pool_port", "multicast_pool_ttl", "multicast_pool_nic", "multicast_pool_tos", "testid"})
 	@Test
-	public void broadcasterSingleStreamRemoving(String login_ip, String userName, String userPassword, String uiport, String multicast_pool_enabled,
+	public void broadcasterConfigureMulticastSetup(String login_ip, String userName, String userPassword, String uiport, String multicast_pool_enabled,
 	String multicast_pool_address, String multicast_pool_mask, String multicast_pool_fec_overhead, String multicast_pool_port, String multicast_pool_ttl, 
 	String multicast_pool_nic, String multicast_pool_tos, String  testid) throws Exception 
 	{
