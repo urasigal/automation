@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: RTMP Push streaming suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - RTMP Push input stream creation - default parameters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="rtmp_push" />
+		<parameter name="id" value="rtmp_out" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out"	value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="rec_history" value="0" />
+		<parameter name="rec_duration" value="7200" />
+		<parameter name="rtmp_url" value="" />
+		<parameter name="rtmp_name"	value="" />
+		<parameter name="rtmp_user" value="" />
+		<parameter name="testid" value="498" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterRtmpPushInputCreationStreamTest"/>
+		</classes>
+	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - default parameters" >
 			<parameter name="login_ip" value="10.7.0.63" /> 
 			<parameter name="userName" value="admin" />  
@@ -26,32 +52,6 @@
 			<parameter name="testid" value="504" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterRtmpPushOutputCreationTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - RTMP Push input stream creation - default parameters">
-				<parameter name="userName" value="admin" />
-				<parameter name="userPass" value="1234" />
-				<parameter name="login_ip" value="10.7.0.66" />
-				<parameter name="uiport" value="4444" />
-				<parameter name="type" value="rtmp_push" />
-				<parameter name="id" value="rtmp_out" />
-				<parameter name="matrix" value="1" />
-				<parameter name="max_outputs" value="-1" />
-				<parameter name="mcast_out"	value="0" />
-				<parameter name="time_shift" value="0" />
-				<parameter name="old" value="0" />
-				<parameter name="fast_connect" value="0" />
-				<parameter name="kompression" value="1" />
-				<parameter name="enc_type" value="" />
-				<parameter name="enc_key" value="" />
-				<parameter name="rec_history" value="0" />
-				<parameter name="rec_duration" value="7200" />
-				<parameter name="rtmp_url" value="" />
-				<parameter name="rtmp_name"	value="" />
-				<parameter name="rtmp_user" value="" />
-				<parameter name="testid" value="498" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterRtmpPushInputCreationStreamTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push input stream statistics test" >
@@ -163,6 +163,32 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster - RTMP Push input stream creation - aes128">
+				<parameter name="userName" value="admin" />
+				<parameter name="userPass" value="1234" />
+				<parameter name="login_ip" value="10.7.0.66" />
+				<parameter name="uiport" value="4444" />
+				<parameter name="type" value="rtmp_push" />
+				<parameter name="id" value="rtmp_out" />
+				<parameter name="matrix" value="1" />
+				<parameter name="max_outputs" value="-1" />
+				<parameter name="mcast_out"	value="0" />
+				<parameter name="time_shift" value="0" />
+				<parameter name="old" value="0" />
+				<parameter name="fast_connect" value="0" />
+				<parameter name="kompression" value="1" />
+				<parameter name="enc_type" value="" />
+				<parameter name="enc_key" value="" />
+				<parameter name="rec_history" value="0" />
+				<parameter name="rec_duration" value="7200" />
+				<parameter name="rtmp_url" value="" />
+				<parameter name="rtmp_name"	value="" />
+				<parameter name="rtmp_user" value="" />
+				<parameter name="testid" value="7272" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterRtmpPushInputCreationStreamTest"/>
+		</classes>
+	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - aes128" >
 			<parameter name="login_ip" value="10.7.0.63" /> 
 			<parameter name="userName" value="admin" />  
@@ -188,32 +214,6 @@
 			<parameter name="testid" value="7270" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterRtmpPushOutputCreationTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - RTMP Push input stream creation - aes128">
-				<parameter name="userName" value="admin" />
-				<parameter name="userPass" value="1234" />
-				<parameter name="login_ip" value="10.7.0.66" />
-				<parameter name="uiport" value="4444" />
-				<parameter name="type" value="rtmp_push" />
-				<parameter name="id" value="rtmp_out" />
-				<parameter name="matrix" value="1" />
-				<parameter name="max_outputs" value="-1" />
-				<parameter name="mcast_out"	value="0" />
-				<parameter name="time_shift" value="0" />
-				<parameter name="old" value="0" />
-				<parameter name="fast_connect" value="0" />
-				<parameter name="kompression" value="1" />
-				<parameter name="enc_type" value="" />
-				<parameter name="enc_key" value="" />
-				<parameter name="rec_history" value="0" />
-				<parameter name="rec_duration" value="7200" />
-				<parameter name="rtmp_url" value="" />
-				<parameter name="rtmp_name"	value="" />
-				<parameter name="rtmp_user" value="" />
-				<parameter name="testid" value="7272" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterRtmpPushInputCreationStreamTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push input stream statistics test - aes128" >
@@ -403,6 +403,32 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster - RTMP Push input stream creation - aes192">
+				<parameter name="userName" value="admin" />
+				<parameter name="userPass" value="1234" />
+				<parameter name="login_ip" value="10.7.0.66" />
+				<parameter name="uiport" value="4444" />
+				<parameter name="type" value="rtmp_push" />
+				<parameter name="id" value="rtmp_out" />
+				<parameter name="matrix" value="1" />
+				<parameter name="max_outputs" value="-1" />
+				<parameter name="mcast_out"	value="0" />
+				<parameter name="time_shift" value="0" />
+				<parameter name="old" value="0" />
+				<parameter name="fast_connect" value="0" />
+				<parameter name="kompression" value="1" />
+				<parameter name="enc_type" value="" />
+				<parameter name="enc_key" value="" />
+				<parameter name="rec_history" value="0" />
+				<parameter name="rec_duration" value="7200" />
+				<parameter name="rtmp_url" value="" />
+				<parameter name="rtmp_name"	value="" />
+				<parameter name="rtmp_user" value="" />
+				<parameter name="testid" value="7297" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterRtmpPushInputCreationStreamTest"/>
+		</classes>
+	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - aes192" >
 			<parameter name="login_ip" value="10.7.0.63" /> 
 			<parameter name="userName" value="admin" />  
@@ -428,32 +454,6 @@
 			<parameter name="testid" value="7295" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterRtmpPushOutputCreationTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - RTMP Push input stream creation - aes192">
-				<parameter name="userName" value="admin" />
-				<parameter name="userPass" value="1234" />
-				<parameter name="login_ip" value="10.7.0.66" />
-				<parameter name="uiport" value="4444" />
-				<parameter name="type" value="rtmp_push" />
-				<parameter name="id" value="rtmp_out" />
-				<parameter name="matrix" value="1" />
-				<parameter name="max_outputs" value="-1" />
-				<parameter name="mcast_out"	value="0" />
-				<parameter name="time_shift" value="0" />
-				<parameter name="old" value="0" />
-				<parameter name="fast_connect" value="0" />
-				<parameter name="kompression" value="1" />
-				<parameter name="enc_type" value="" />
-				<parameter name="enc_key" value="" />
-				<parameter name="rec_history" value="0" />
-				<parameter name="rec_duration" value="7200" />
-				<parameter name="rtmp_url" value="" />
-				<parameter name="rtmp_name"	value="" />
-				<parameter name="rtmp_user" value="" />
-				<parameter name="testid" value="7297" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterRtmpPushInputCreationStreamTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push input stream statistics test - aes192" >
@@ -643,6 +643,32 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster - RTMP Push input stream creation - aes256">
+				<parameter name="userName" value="admin" />
+				<parameter name="userPass" value="1234" />
+				<parameter name="login_ip" value="10.7.0.66" />
+				<parameter name="uiport" value="4444" />
+				<parameter name="type" value="rtmp_push" />
+				<parameter name="id" value="rtmp_out" />
+				<parameter name="matrix" value="1" />
+				<parameter name="max_outputs" value="-1" />
+				<parameter name="mcast_out"	value="0" />
+				<parameter name="time_shift" value="0" />
+				<parameter name="old" value="0" />
+				<parameter name="fast_connect" value="0" />
+				<parameter name="kompression" value="1" />
+				<parameter name="enc_type" value="" />
+				<parameter name="enc_key" value="" />
+				<parameter name="rec_history" value="0" />
+				<parameter name="rec_duration" value="7200" />
+				<parameter name="rtmp_url" value="" />
+				<parameter name="rtmp_name"	value="" />
+				<parameter name="rtmp_user" value="" />
+				<parameter name="testid" value="7322" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterRtmpPushInputCreationStreamTest"/>
+		</classes>
+	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - aes256" >
 			<parameter name="login_ip" value="10.7.0.63" /> 
 			<parameter name="userName" value="admin" />  
@@ -668,32 +694,6 @@
 			<parameter name="testid" value="7320" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterRtmpPushOutputCreationTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - RTMP Push input stream creation - aes256">
-				<parameter name="userName" value="admin" />
-				<parameter name="userPass" value="1234" />
-				<parameter name="login_ip" value="10.7.0.66" />
-				<parameter name="uiport" value="4444" />
-				<parameter name="type" value="rtmp_push" />
-				<parameter name="id" value="rtmp_out" />
-				<parameter name="matrix" value="1" />
-				<parameter name="max_outputs" value="-1" />
-				<parameter name="mcast_out"	value="0" />
-				<parameter name="time_shift" value="0" />
-				<parameter name="old" value="0" />
-				<parameter name="fast_connect" value="0" />
-				<parameter name="kompression" value="1" />
-				<parameter name="enc_type" value="" />
-				<parameter name="enc_key" value="" />
-				<parameter name="rec_history" value="0" />
-				<parameter name="rec_duration" value="7200" />
-				<parameter name="rtmp_url" value="" />
-				<parameter name="rtmp_name"	value="" />
-				<parameter name="rtmp_user" value="" />
-				<parameter name="testid" value="7322" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterRtmpPushInputCreationStreamTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push input stream statistics test - aes256" >

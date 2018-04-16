@@ -39,8 +39,7 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 		// Checking if broadcaster has crashes while execution of the test.
 	}
 	
-	
-	// Test parameters.
+		// Test parameters.
 		@Parameters({"userName","userPass","login_ip","uiport","server_id","gui_web_port","uname","aname","ft_max_quota","max_cpu","max_mem","max_in_bandwidth","max_out_bandwidth",
 		"admin_https","use_operator","use_user","use_observer","private_port","public_port", "testid"})
 		@Test
@@ -65,7 +64,38 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 			Assert.assertEquals(driverReslut.getResult(), "GOOD");
 			// Checking if broadcaster has crashes while execution of the test.
 		}
-	
-	
+		
+		// Enable HTTP automatic push/pull.
+		@Parameters({"login_ip", "userName", "userPass", "uiport", "flv_on", "hls_on", "mpd_on", "pls_on", "http_out_ip", "http_out_port",
+		"hls_chunk_time", "hls_chunks", "http_auth_cahce_timeout", "http_on", "https_on", "https_out_port", 
+		"hls_dvr_duration_s", "hls_no_mem_chunks", "hls_no_dvr", "hls_vod_abs_path_on", "http_ts_auto_in",
+		"http_ts_auto_out", "http_ts_buffer_size", "http_ts_smoothing_latency", "tcp_congestion_algo", "testid"})
+		@Test
+		public void broadcasterEnableAutomaticPushPullSettings(String login_ip, String userName, String userPass, String uiport, String flv_on, 
+		String hls_on, String mpd_on, String pls_on, String http_out_ip, String http_out_port,
+		String hls_chunk_time, String hls_chunks, String http_auth_cahce_timeout, String http_on, String https_on, String https_out_port, 
+		String hls_dvr_duration_s, String hls_no_mem_chunks, String hls_no_dvr, String hls_vod_abs_path_on, String http_ts_auto_in,
+		String http_ts_auto_out, String http_ts_buffer_size, String http_ts_smoothing_latency, String tcp_congestion_algo, String testid) 
+		throws Exception 
+		{	
+			// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+			productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
+			
+			buildTestParametersString(new String[] { "login_ip", "userName", "userPass", "uiport", "flv_on", "hls_on", "mpd_on", "pls_on", "http_out_ip", "http_out_port",
+			"hls_chunk_time", "hls_chunks", "http_auth_cahce_timeout", "http_on", "https_on", "https_out_port", 
+			"hls_dvr_duration_s", "hls_no_mem_chunks", "hls_no_dvr", "hls_vod_abs_path_on", "http_ts_auto_in",
+			"http_ts_auto_out", "http_ts_buffer_size", "http_ts_smoothing_latency", "tcp_congestion_algo", "testid" }, 
+			new String[] {login_ip, userName, userPass, uiport, flv_on, hls_on, mpd_on, pls_on, http_out_ip, http_out_port,
+			hls_chunk_time, hls_chunks, http_auth_cahce_timeout, http_on, https_on, https_out_port, 
+			hls_dvr_duration_s, hls_no_mem_chunks, hls_no_dvr, hls_vod_abs_path_on, http_ts_auto_in,
+			http_ts_auto_out, http_ts_buffer_size, http_ts_smoothing_latency, tcp_congestion_algo, testid});
+			
+			driverReslut = ((BroadcasterUpdateSettingsDriver) testDriver).enableHTTP(login_ip, userName, userPass, uiport, flv_on, hls_on, mpd_on, pls_on, http_out_ip, http_out_port,
+			hls_chunk_time, hls_chunks, http_auth_cahce_timeout, http_on, https_on, https_out_port, hls_dvr_duration_s, hls_no_mem_chunks, hls_no_dvr, hls_vod_abs_path_on, http_ts_auto_in,
+			http_ts_auto_out, http_ts_buffer_size, http_ts_smoothing_latency, tcp_congestion_algo); 
+			
+			Assert.assertEquals(driverReslut.getResult(), "GOOD");
+			// Checking if broadcaster has crashes while execution of the test.
+		}
 }
  
