@@ -4,7 +4,11 @@
 	<test name="Broadcaster - RTMP Push input stream creation - default parameters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
+<<<<<<< HEAD
 		<parameter name="login_ip" value="[2607:f0d0:1002:11::2]" />
+=======
+		<parameter name="login_ip" value="10.7.0.66" />
+>>>>>>> centos7_new_setup
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="rtmp_push" />
 		<parameter name="id" value="rtmp_out" />
@@ -190,7 +194,11 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - aes128" >
+<<<<<<< HEAD
 			<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" /> 
+=======
+			<parameter name="login_ip" value="10.7.0.63" /> 
+>>>>>>> centos7_new_setup
 			<parameter name="userName" value="admin" />  
 			<parameter name="userPassword" value="1234" />  
 			<parameter name="uiport" value="4444" />  
@@ -198,7 +206,11 @@
 			<parameter name="name" value="rtmpushout" />  
 			<parameter name="stream" value="feederout" />  
 			<parameter name="matrix" value="1" />  
+<<<<<<< HEAD
 			<parameter name="url" value="rtmp://2607:f0d0:1002:11::2/live" />  
+=======
+			<parameter name="url" value="rtmp://10.7.0.66/live" />  
+>>>>>>> centos7_new_setup
 			<parameter name="url_alt" value="" />  
 			<parameter name="rtmp_stream" value="rtmp_out" />  
 			<parameter name="user" value="" />  
@@ -430,7 +442,11 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - aes192" >
+<<<<<<< HEAD
 			<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" /> 
+=======
+			<parameter name="login_ip" value="10.7.0.63" /> 
+>>>>>>> centos7_new_setup
 			<parameter name="userName" value="admin" />  
 			<parameter name="userPassword" value="1234" />  
 			<parameter name="uiport" value="4444" />  
@@ -438,7 +454,11 @@
 			<parameter name="name" value="rtmpushout" />  
 			<parameter name="stream" value="feederout" />  
 			<parameter name="matrix" value="1" />  
+<<<<<<< HEAD
 			<parameter name="url" value="rtmp://2607:f0d0:1002:11::2/live" />  
+=======
+			<parameter name="url" value="rtmp://10.7.0.66/live" />  
+>>>>>>> centos7_new_setup
 			<parameter name="url_alt" value="" />  
 			<parameter name="rtmp_stream" value="rtmp_out" />  
 			<parameter name="user" value="" />  
@@ -670,7 +690,11 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - RTMP Push output stream creation - aes256" >
+<<<<<<< HEAD
 			<parameter name="login_ip" value="[2607:f0d0:1002:11::3]" /> 
+=======
+			<parameter name="login_ip" value="10.7.0.63" /> 
+>>>>>>> centos7_new_setup
 			<parameter name="userName" value="admin" />  
 			<parameter name="userPassword" value="1234" />  
 			<parameter name="uiport" value="4444" />  
@@ -678,7 +702,11 @@
 			<parameter name="name" value="rtmpushout" />  
 			<parameter name="stream" value="feederout" />  
 			<parameter name="matrix" value="1" />  
+<<<<<<< HEAD
 			<parameter name="url" value="rtmp://2607:f0d0:1002:11::2/live" />  
+=======
+			<parameter name="url" value="rtmp://10.7.0.66/live" />  
+>>>>>>> centos7_new_setup
 			<parameter name="url_alt" value="" />  
 			<parameter name="rtmp_stream" value="rtmp_out" />  
 			<parameter name="user" value="" />  

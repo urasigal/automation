@@ -9,11 +9,7 @@ import com.zixi.drivers.drivers.FFMPEGImageStatisticTestDriver;
 public class FFMPEGBondingBackupTest extends BaseTestZixiMainComponents{
 	
 	@BeforeClass
-	public void testInit() {
-
-		// This is a test driver.
-		testDriver = new FFMPEGImageStatisticTestDriver(testFlowDescriptor);
-	}
+	public void testInit() { testDriver = new FFMPEGImageStatisticTestDriver(testFlowDescriptor); }
 
 	// The goal of the test is to measure quality of a Zixi delivered video by using FFMPEG.
 	// The quality is estimated by a number of a stream probing (FFMPEG) and then getting a ratio between a successful probing to failed attempts.
