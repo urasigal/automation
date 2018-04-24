@@ -188,10 +188,11 @@
 		<parameter name="max_time" value="-1" />
 		<parameter name="remux" value="1" />
 		<parameter name="iframes" value="1" />
-		<parameter name="file" value="%N" />
+		<parameter name="file" value="%25N" />
 		<parameter name="scte35" value="1" />
 		<parameter name="ts_split" value="1" />
 		<parameter name="order_ascending" value="1" />
+		<parameter name="change_folder_chunks" value="0" />
 		<parameter name="testid" value="7649" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
