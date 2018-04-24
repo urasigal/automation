@@ -48,11 +48,11 @@
 		<parameter name="nic" value="0.0.0.0" />			
 		<parameter name="type_bx1" value="local-ts" />		
 		<parameter name="multicast" value="" />				
-		<parameter name="enc_key" value="" />				
+		<parameter name="enc_key" value="8b16a360df560a4e8049847dab7f2d3ef1ef598dc914fc3becd1edef9bc4481e" />				
 		<parameter name="kompression" value="1" />			
 		<parameter name="uiport_bx1" value="4444" /> 		
 		<parameter name="mcast_ttl" value="" />				
-		<parameter name="enc_type" value="" />				
+		<parameter name="enc_type" value="aes256" />				
 		<parameter name="mcast_out" value="0" />			
 		<parameter name="complete" value="" />				
 		<parameter name="max_outputs" value="-1" />			
@@ -124,8 +124,8 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="test" />
 		<parameter name="id_bx2" value="test" />
-		<parameter name="enc_type" value="aes256" /> 
-		<parameter name="enc_key" value="8b16a360df560a4e8049847dab7f2d3ef1ef598dc914fc3becd1edef9bc4481e" />
+		<parameter name="enc_type" value="" /> 
+		<parameter name="enc_key" value="" />
 		<parameter name="number_of_streams" value="120" />
 		<parameter name="testid" value="3961" />
 		<classes>
@@ -173,7 +173,7 @@
 		<parameter name="remux_bitrate" value="0" />
 		<parameter name="df" value="0" />					
 		<parameter name="local_port" value="" />			
-		<parameter name="dec_key" value="8b16a360df560a4e8049847dab7f2d3ef1ef598dc914fc3becd1edef9bc4481e" />		
+		<parameter name="dec_key" value="" />		
 		<parameter name="type_bx2" value="TS" />			
 		<parameter name="rows" value="10" />				
 		<parameter name="remux_buff" value="1000" />		
@@ -181,7 +181,7 @@
 		<parameter name="remux_restampdts" value="0" />		
 		<parameter name="uiport_bx2" value="4444" />		
 		<parameter name="remux_pcr" value="90" />			
-		<parameter name="dec_type" value="aes256" />				
+		<parameter name="dec_type" value="" />				
 		<parameter name="cols" value="10" />				
 		<parameter name="number_of_streams" value="120" />									
 		<parameter name="testid" value="4011" />				
