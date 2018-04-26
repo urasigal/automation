@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
@@ -19,8 +20,8 @@ public class BroadcasterCreateAddaptiveGroupTest extends BaseTestZixiMainCompone
 	@Test
 	public void receiverOutputUdpTest(String userName, String userPass, String login_ip, String uiport, String name, String record,
 	String zixi, String hls, String hds, String mpd, String mmt, String compress_zixi, String multicast, String streams,
-	String bitrates, String max_time, String remux, String iframes, String file, String scte35, String ts_split, 
-	String order_ascending, String change_folder_chunks, String testid)throws Exception {
+	String bitrates, String max_time, String remux, @Optional("1") String iframes, @Optional("%25N") String file, @Optional("1") String scte35, @Optional("1") String ts_split, 
+	@Optional("1") String order_ascending, @Optional("0") String change_folder_chunks, String testid)throws Exception {
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
