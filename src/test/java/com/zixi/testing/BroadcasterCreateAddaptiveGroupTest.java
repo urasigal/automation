@@ -20,7 +20,7 @@ public class BroadcasterCreateAddaptiveGroupTest extends BaseTestZixiMainCompone
 	@Test
 	public void receiverOutputUdpTest(String userName, String userPass, String login_ip, String uiport, String name, String record,
 	String zixi, String hls, String hds, String mpd, String mmt, String compress_zixi, String multicast, String streams,
-	String bitrates, String max_time, String remux, @Optional("1") String iframes, @Optional("%25N") String file, @Optional("1") String scte35, @Optional("1") String ts_split, 
+	String bitrates, String max_time, String remux, @Optional("1") String iframes, @Optional("%25N") String file, @Optional("1") String scte35, @Optional("0") String ts_split, 
 	@Optional("1") String order_ascending, @Optional("0") String change_folder_chunks, String testid)throws Exception {
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
