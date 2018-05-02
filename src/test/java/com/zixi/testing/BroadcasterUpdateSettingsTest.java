@@ -60,9 +60,9 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 			StringBuilder privatePorts = new StringBuilder();
 			int portRange = Integer.parseInt(range);
 			privatePorts.append(private_port).append(",,,0,0");
+			int privateTmpPort = Integer.parseInt(private_port);
 			for (int i = 1; i < portRange; i++) {
-				int privateTmpPort = Integer.parseInt(private_port);
-				privateTmpPort ++;
+				privateTmpPort = privateTmpPort + i;
 				privatePorts.append("&private_port=" + private_port).append(",,,0,0");
 			}
 			
