@@ -63,7 +63,7 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 			int privateTmpPort = Integer.parseInt(private_port);
 			for (int i = 1; i < portRange; i++) {
 				privateTmpPort = privateTmpPort + i;
-				privatePorts.append("&private_port=" + private_port).append(",,,0,0");
+				privatePorts.append("&private_port=" + privateTmpPort).append(",,,0,0");
 			}
 			
 			driverReslut = ((BroadcasterUpdateSettingsDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, server_id, gui_web_port, uname, aname,
