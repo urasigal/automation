@@ -41,7 +41,7 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 	
 	// Test parameters.
 		@Parameters({"userName","userPass","login_ip","uiport","server_id","gui_web_port","uname","aname","ft_max_quota","max_cpu","max_mem","max_in_bandwidth","max_out_bandwidth",
-		"admin_https","use_operator","use_user","use_observer","private_port","public_port", "testid"})
+		"admin_https","use_operator","use_user","use_observer","private_port","public_port", "range", "testid"})
 		@Test
 		public void broadcasterUpdateSettingsSetDiffPorts(String userName,String userPass,String login_ip,String uiport,String server_id,String gui_web_port,String uname,
 		String aname,String ft_max_quota,String max_cpu,String max_mem,String max_in_bandwidth,String max_out_bandwidth,String admin_https,String use_operator,
