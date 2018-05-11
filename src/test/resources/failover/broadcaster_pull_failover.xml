@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-	<suite name="Broadcaster: Failover zixi push input test suite" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: Failover zixi push input test suite" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -242,16 +242,6 @@
 		<parameter name="testid" value="8559" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - delete all outputs stream" >
-			<parameter name="login_ip" value="10.7.0.74" />
-			<parameter name="userName" value="admin" />
-			<parameter name="userPassword" value="1234" />
-			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="8561" /> 
-		<classes>
-		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove Fiel input">
