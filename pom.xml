@@ -136,6 +136,10 @@
 						<suiteXmlFile>src/test/resources/redundancy/broadcaster_alternative_host_stop_scn.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/redundancy/receiverFallback.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/udp/broadcaster_udp_multicast.xml</suiteXmlFile>
+						
+						<suiteXmlFile>src/test/resources/failover/broadcaster_push_input_failover.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/failover/broadcaster_push_udp_failover.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/failover/broadcaster_udp_input_failover.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<properties>
 						<property>
