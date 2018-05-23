@@ -48,18 +48,21 @@ public class SetAnalyzerTest extends BaseTestZixiMainComponents
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 	
-	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "streamName", "testid" })
+	// Detect "frozen frame stream"
+	// This test will see at stream's statistics and search for frozen counter field.
+	// The user has to decide what a particular number in the frozen field. 
+	@Parameters({ "login_ip", "userName", "userPassword", "uiport", "streamName", "frozenCounter", "streamLenthMin", "testid" })
 	@Test
 	public void broadcasterFrozenTest(String login_ip, String userName, String userPassword, 
-	String uiport, String streamName, String testid) throws Exception {
+	String uiport, String streamName, String frozenCounter, String streamLenthMin, String testid) throws Exception {
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);	
-		buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "uiport", "streamName", "testid"}, 
-		new String[] { login_ip, userName, userPassword, uiport, streamName, testid});
+		buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "uiport", "streamName", "frozenCounter", "streamLenthMin", "testid"}, 
+		new String[] { login_ip, userName, userPassword, uiport, streamName, frozenCounter, streamLenthMin, testid});
 		
-		driverReslut = ((BroadcasterAnalyzerDriver) testDriver).boadcasterFozenDetection( userName,  userPassword,  login_ip,  uiport,  streamName);
+		driverReslut = ((BroadcasterAnalyzerDriver) testDriver).boadcasterFozenDetection( userName,  userPassword,  login_ip,  uiport,  streamName, frozenCounter, streamLenthMin);
 			
 		Assert.assertEquals(driverReslut.getResult(), "passed");
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
