@@ -19,7 +19,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="h264_640_480_25.ts" />
-		<parameter name="testid" value="8230" />    
+		<parameter name="testid" value="8689" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -34,7 +34,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
 		<parameter name="analyze" value="1" />			
-		<parameter name="testid" value="4011" />		
+		<parameter name="testid" value="8691" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
@@ -51,7 +51,7 @@
 		<parameter name="streamName" value="H264_25fps_640_480" />		
 		<parameter name="frozenCounter" value="2" />
 		<parameter name="streamLenthSec" value="327" />			
-		<parameter name="testid" value="8580" />		
+		<parameter name="testid" value="8693" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
@@ -60,14 +60,14 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Fiel input">
+	<test name="Broadcaster - Remove File input">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="H264_25fps_640_480" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="H264_25fps_640_480" />
-		<parameter name="testid" value="8258" />  
+		<parameter name="testid" value="8695" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
