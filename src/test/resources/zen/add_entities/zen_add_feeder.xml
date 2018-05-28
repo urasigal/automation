@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLInk Suite "" -->
+<suite name="ZEN: Add feeder entity to ZEN" verbose="5" data-provider-thread-count="1">
+<test name="ZEN - Add feeder">
+		<parameter name="userName" value="admin@zixi.com" />
+		<parameter name="userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="80" />  
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederTest"/>
+		</classes>
+	</test> 
+</suite>
