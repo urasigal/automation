@@ -21,7 +21,7 @@ public class FeederPostKeyTest extends BaseTestZixiMainComponents{
 		new String[] { userName, userPass, login_ip, uiport, testid });
 		
 		driverReslut = ((FeederPostKeyDriver) testDriver).uploadPrivateKeyFeeder( userName, userPass, login_ip, uiport);
-		Assert.assertTrue(driverReslut.getResult().contains("SSL Certificate is uploaded successfully"));
+		Assert.assertTrue(driverReslut.getResult().contains("parent.query_ssh_tunnel_status();"));
 	}
 	
 	
@@ -34,7 +34,7 @@ public class FeederPostKeyTest extends BaseTestZixiMainComponents{
 		new String[] { userName, userPass, login_ip, uiport, testid });
 		
 		driverReslut = ((FeederPostKeyDriver) testDriver).uploadHttpsCertificate(userName, userPass, login_ip, uiport,"src/main/resources/sppk", "WebKitFormBoundaryAWGt00qual97XRDu");
-		Assert.assertTrue(driverReslut.getResult().contains("parent.query_ssh_tunnel_status();"));
+		Assert.assertTrue(driverReslut.getResult().contains("SSL Certificate is uploaded successfully"));
 	}
 	
 	// Test parameters - these parameters will be provided through an appropriate suite's XML file.
