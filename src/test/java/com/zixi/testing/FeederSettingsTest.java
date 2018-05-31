@@ -25,9 +25,9 @@ public class FeederSettingsTest extends BaseTestZixiMainComponents{
 		new String[] { userName, userPass, login_ip, uiport, zenHost, ssh_port, ssh_user, zenUser, zenPass, zenUiPort, zenFeederName, testid });
 		
 		// Set ssh connectivity on the feeder side.
-		driverReslut = ( (FeederSettingsDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, zenHost, ssh_port, ssh_user);
+		driverReslut = ( (FeederSettingsDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, "zixi.stagingio.devcloud.zixi.com", ssh_port, ssh_user);
 		
-		// Set reverce tunnel parameters on the feeder's side.
+		// Set reverse tunnel parameters on the feeder's side.
 		FeederReverseTunnelParametersDriver feederReverseTunnelParametersDriver = new FeederReverseTunnelParametersDriver();
 		feederReverseTunnelParametersDriver.testIMPL(userName, userPass, login_ip, uiport, "1", "4200", "127.0.0.1" ,
 		ZenFeedersData.getZenFeederRemoteTunnelPort(zenUser, zenPass, zenHost, zenUiPort, zenFeederName));
