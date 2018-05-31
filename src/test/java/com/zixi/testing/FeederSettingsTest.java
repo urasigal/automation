@@ -32,7 +32,7 @@ public class FeederSettingsTest extends BaseTestZixiMainComponents{
 		feederReverseTunnelParametersDriver.testIMPL(userName, userPass, login_ip, uiport, "1", "4200", "127.0.0.1" ,
 		ZenFeedersData.getZenFeederRemoteTunnelPort(zenUser, zenPass, zenHost, zenUiPort, zenFeederName));
 
-		Assert.assertEquals(driverReslut.getResult(), zenHost);
+		Assert.assertEquals(driverReslut.getResult(), "zixi.stagingio.devcloud.zixi.com");
 	}
 
 }
