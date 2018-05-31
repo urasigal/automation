@@ -15,6 +15,19 @@ public class FeederPostKeyTest extends BaseTestZixiMainComponents{
 	// Test parameters - these parameters will be provided through an appropriate suite's XML file.
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "testid"})
 	@Test
+	public void uploadPrivateKeyFeeder(String userName, String userPass, String login_ip, String uiport, String testid) throws Exception {
+		// Provide parameters to a TestLink.
+		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "testid"}, 
+		new String[] { userName, userPass, login_ip, uiport, testid });
+		
+		driverReslut = ((FeederPostKeyDriver) testDriver).uploadPrivateKeyFeeder( userName, userPass, login_ip, uiport);
+		Assert.assertTrue(driverReslut.getResult().contains("parent.query_ssh_tunnel_status();"));
+	}
+	
+	
+	// Test parameters - these parameters will be provided through an appropriate suite's XML file.
+	@Parameters({ "userName", "userPass", "login_ip", "uiport", "testid"})
+	@Test
 	public void uploadSslCertificateToBroadcasterServer(String userName, String userPass, String login_ip, String uiport, String testid) throws Exception {
 		// Provide parameters to a TestLink.
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "testid"}, 
