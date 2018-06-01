@@ -24,7 +24,6 @@ public class FeederReverseTunnelTest extends BaseTestZixiMainComponents{
 		new String[] { userName, sshPass, login_ip, ssh_port, ssh_user, reverse_port, testid });
 		
 		driverReslut = ((FeederReverseTunnelDriver) testDriver).testIMPL(userName, sshPass, login_ip, ssh_port, ssh_user, reverse_port);
-		
 		Assert.assertEquals(driverReslut.getResult(), "sshd");
 	}
 

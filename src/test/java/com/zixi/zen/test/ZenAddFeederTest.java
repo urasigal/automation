@@ -17,7 +17,7 @@ public class ZenAddFeederTest extends BaseTestZixiMainComponents{
 	// Test parameters - these parameters will be provided through an appropriate suite's XML file.
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "feederName", "feederUser", "feederPass", "shhKeyName", "accessTagName", "testid"})
 	@Test
-	public void uploadSslCertificateToBroadcasterServer(String userName, String userPass, String login_ip, String uiport, String feederName, String feederUser, String feederPass, String shhKeyName, String accessTagName, String testid) throws Exception {
+	public void addFeederToZen(String userName, String userPass, String login_ip, String uiport, String feederName, String feederUser, String feederPass, String shhKeyName, String accessTagName, String testid) throws Exception {
 		// Provide parameters to a TestLink.
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "uiport", "feederName", "feederUser", "feederPass", "shhKeyName", "accessTagName", "testid"}, 
 		new String[] { userName, userPass, login_ip, uiport, feederName, feederUser, feederPass, shhKeyName, accessTagName, testid });
