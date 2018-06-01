@@ -22,7 +22,7 @@ public class ZenFeederInputStreamTest extends BaseTestZixiMainComponents{
 		String zenHost, String zenUiport, String feederName, String testid) throws Exception {
 		buildTestParametersString(new String[] { "feederUserName", "feederUserPass", "feederLogin_ip", "feederUiport", "testid"}, 
 		new String[] { feederUserName, feederUserPass, feederLogin_ip, feederUiport, zenUserName, zenUserPass, zenHost, zenUiport, feederName, testid });
-		org.json.JSONArray feedersInputs 	= new org.json.JSONArray( ((FeederInputStreamDeletionDriver ) testDriver).feederGetInputStreamsNames(feederUserName, feederUserPass, feederLogin_ip, feederUiport));
+		org.json.JSONArray feedersInputs 	= new org.json.JSONArray( ((FeederInputStreamDeletionDriver ) testDriver).feederGetInputStreamsNames(feederUserName, feederUserPass, feederLogin_ip, feederUiport).getResult());
 		org.json.JSONArray zenFeedersInputs = new org.json.JSONArray(ZenFeedersData.getZenFeederInputStreams (zenUserName, zenUserPass, zenHost, zenUiport, feederName));
 		
 		LinkedList<String> zenFeederInputStreamName=new LinkedList<String>();
