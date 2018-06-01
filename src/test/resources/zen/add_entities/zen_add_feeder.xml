@@ -53,4 +53,27 @@
      		 </class>
 		</classes>  
 	</test>    
+	
+	"feederUserName", "feederUserPass", "feederLogin_ip", "feederUiport", "zenUserName", "zenUserPass", "zenHost", "zenUiport", "feederName", "testid"
+	
+	<test name="ZEN - test inputs for feeder">
+		<parameter name="feederUserName" value="admin" />
+		<parameter name="feederUserPass" value="1234" />
+		<parameter name="feederLogin_ip" value="10.7.0.65" />
+		<parameter name="feederUiport" value="4200" />
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenHost" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="feederName" value="feeder_test" />
+		<parameter name="testid" value="2885" />	
+		<classes>
+		    <class name="com.zixi.zen.test.ZenFeederInputStreamTest">
+		    <methods>
+        		<include name="checkZenFeederInputStreams" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>    
+	
 </suite>
