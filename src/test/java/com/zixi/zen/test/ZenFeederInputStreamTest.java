@@ -25,19 +25,19 @@ public class ZenFeederInputStreamTest extends BaseTestZixiMainComponents{
 		org.json.JSONArray feedersInputs 	= new org.json.JSONArray( ((FeederInputStreamDeletionDriver ) testDriver).feederGetInputStreamsNames(feederUserName, feederUserPass, feederLogin_ip, feederUiport).getResult());
 		org.json.JSONArray zenFeedersInputs = new org.json.JSONArray(ZenFeedersData.getZenFeederInputStreams (zenUserName, zenUserPass, zenHost, zenUiport, feederName));
 		
-		LinkedList<String> zenFeederInputStreamName=new LinkedList<String>();
+		LinkedList<String> zenFeederInputStreamName = new LinkedList<String>();
 		for(int i = 0; i < zenFeedersInputs.length(); i++)
 		{
 			zenFeederInputStreamName.add(zenFeedersInputs.getString(i));
 		}
-		
+		int zenFeederLengthCounter = zenFeederInputStreamName.size();
 		for(int i =0; i < feedersInputs.length(); i++)
 		{
 			if(zenFeederInputStreamName.contains(feedersInputs.get(i)))
 			{
-				zenFeederInputStreamName.remove(i);
+				zenFeederLengthCounter--;
 			}
 		}
-		Assert.assertEquals(zenFeederInputStreamName.size(), 0); 
+		Assert.assertEquals(zenFeederLengthCounter, 0); 
 	}
 }
