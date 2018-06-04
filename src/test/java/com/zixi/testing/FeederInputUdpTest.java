@@ -6,7 +6,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.FeederInputUdpDriver;
 
-
 public class FeederInputUdpTest extends BaseTestZixiMainComponents{
 
 	@BeforeClass
@@ -22,7 +21,6 @@ public class FeederInputUdpTest extends BaseTestZixiMainComponents{
 		new String[] { userName, userPass, login_ip, uiport, mip,port, ip, name, ssm, rtp_type, testid});
 		
 		driverReslut = ((FeederInputUdpDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport, mip,port, ip, name,ssm, rtp_type);
-		
 		Assert.assertEquals(driverReslut.getResult(), "Input added");
 	}
 }
