@@ -6,22 +6,23 @@
 		<parameter name="zenUserPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
 		<parameter name="zenUiport" value="80" />
-		<parameter name="clusterName" value="" />
-		<parameter name="resource_tag_name" value="" />
-		<parameter name="can_input" value="" />
-		<parameter name="can_output" value="" />
-		<parameter name="can_process" value="" />
-		<parameter name="http_streaming_port" value="" />
-		<parameter name="auth_mode" value="" />
-		<parameter name="allow_unmanaged_inputs" value="" />
-		<parameter name="allow_unmanaged_outputs" value="" />
-		<parameter name="dns_prefix" value="" />
-		<parameter name="is_auto_scaling" value="" />
-		<parameter name="activation_key" value="" />
-		<parameter name="bx_version" value="" />
-		<parameter name="aws_account_name" value="" />
-		<parameter name="api_user" value="" />
-		<parameter name="api_password" value="" />
+		<parameter name="clusterName" value="testCluster" />
+		<parameter name="resource_tag_name" value="infra" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="testCluster" />
+		<parameter name="is_auto_scaling" value="true" />
+		<parameter name="activation_key" value="key" />
+		<parameter name="bx_version" value="1.11.0.27500" />
+		<parameter name="aws_account_name" value="zixi-zen" />
+		<parameter name="region" value="us-east-1" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
 		<parameter name="testid" value="" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
