@@ -6,10 +6,6 @@
 		<parameter name="zenUserPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
 		<parameter name="zenUiport" value="80" />
-		
-	
-	
-	
 		<parameter name="clusterName" value="manualName" />
 		<parameter name="resource_tag_name" value="infra" />
 		<parameter name="can_input" value="1" />
@@ -21,6 +17,14 @@
 		<parameter name="allow_unmanaged_outputs" value="1" />
 		<parameter name="dns_prefix" value="manualName" />
 		<parameter name="is_auto_scaling" value="false" />
+		<parameter name="activation_key" value="" />
+		<parameter name="bx_version" value="" />
+		<parameter name="aws_account_name" value="" />
+		<parameter name="region" value="" />
+		<parameter name="min_size" value="" />
+		<parameter name="max_size" value="" />
+		<parameter name="api_user" value="" />
+		<parameter name="api_password" value="" />
 		<parameter name="testid" value="" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
