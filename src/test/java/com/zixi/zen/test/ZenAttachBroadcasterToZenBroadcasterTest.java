@@ -30,10 +30,13 @@ public class ZenAttachBroadcasterToZenBroadcasterTest extends BaseTestZixiMainCo
 		"sshHost", "ssh_port", "clusterName", "zenLogin_ip", "zen_ssh_host", "broadcaserName", "testid"},  
 		new String[] {bxUserName, bxUserPass, bxLogin_ip, bxUiport, sshUserName, sshHost, ssh_port, clusterName, zenLogin_ip, 
 		zen_ssh_host, broadcaserName, testid});
+		
 		String addSshHost = ((BroadcasterSetSshParametersDriver) testDriver).setHostandSshPortBroadcaster
 		(bxUserName, bxUserPass, bxLogin_ip, bxUiport, sshHost, ssh_port).getResult();
+		
 		String addKey = ((BroadcasterSetSshParametersDriver) testDriver).
 		uploadSshKeyToBroadcasterZen(bxUserName, bxUserPass, bxLogin_ip, bxUiport).getResult();
+		
 		JSONObject json = new JSONObject(); 
 		json.put("username", zenUserName).put("password", zenUserPass);
 		String[] cokieValuesForLoggin = new ApiWorkir().zenLogginPost("http://" + zenLogin_ip + "/login" , zenUserName , zenUserPass, 
