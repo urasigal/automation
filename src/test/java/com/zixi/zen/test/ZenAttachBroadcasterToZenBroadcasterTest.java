@@ -24,6 +24,11 @@ public class ZenAttachBroadcasterToZenBroadcasterTest extends BaseTestZixiMainCo
 		
 		driverReslut = ((BroadcasterSetSshParametersDriver) testDriver).setHostandSshPortBroadcaster
 																		(bxUserName, bxUserPass, bxLogin_ip, bxUiport, sshHost, ssh_port);
+		
+		((BroadcasterSetSshParametersDriver) testDriver).uploadSshKeyToBroadcasterZen(bxUserName, bxUserPass, bxLogin_ip, bxUiport);
+		
+		
+		
 		Assert.assertEquals(driverReslut.getResult(), "true"); 
 	}
 }
