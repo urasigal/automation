@@ -50,6 +50,6 @@ public class ZenAttachBroadcasterToZenBroadcasterTest extends BaseTestZixiMainCo
 		bxUiport, broadcaserName + "-" + clusterName, zen_ssh_host).getResult();  
 		String setSshPort = ((BroadcasterSetSshParametersDriver) testDriver).setSshPortBroadcaster(bxUserName, bxUserPass, bxLogin_ip, bxUiport,
 		rev_ssh_port, zen_ssh_host).getResult();
-		Assert.assertEquals(driverReslut.getResult(), "Tunnel added." ); 
+		Assert.assertEquals(setSshPort, "Tunnel added." ); 
 	}
 }
