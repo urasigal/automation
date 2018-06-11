@@ -48,6 +48,8 @@
 		    <class name="com.zixi.zen.test.ZenAddBroadcasterToClusterTest"/>
 		</classes>
 	</test> 
+	bxUserName", "bxUserPass", "bxLogin_ip", "bxUiport", "sshUserName", "sshHost", "ssh_port", 
+	"clusterName", "zenLogin_ip", "zen_ssh_host", "zenUserName", "zenUserPass", "zenUiport", "broadcaserName", "testid"
 	<test name="ZEN - Attach Broadcaster to Zen broadcaster entity"> 
 		<parameter name="bxUserName" value="admin" />
 		<parameter name="bxUserPass" value="1234" /> 
@@ -59,6 +61,9 @@
 		<parameter name="clusterName" value="manualName" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
 		<parameter name="zen_ssh_host" value="zixi.stagingio.devcloud.zixi.com" />
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenUiport" value="80" />
 		<parameter name="broadcaserName" value="manualBxName" />
 		<parameter name="testid" value="2885" />
 	   <classes>
