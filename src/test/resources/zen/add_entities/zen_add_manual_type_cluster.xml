@@ -25,9 +25,43 @@
 		<parameter name="max_size" value="" />
 		<parameter name="api_user" value="" />
 		<parameter name="api_password" value="" />
-		<parameter name="testid" value="" />  
+		<parameter name="testid" value="2885" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Add Broadcaster"> 
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" /> 
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="bxName" value="manualBxName" />
+		<parameter name="streaming_ip" value="null" />
+		<parameter name="private_ip" value="null" />
+		<parameter name="standby" value="0" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
+		<parameter name="remote_access_key_name" value="test" />
+		<parameter name="broadcaster_cluster_name" value="manualName" />
+		<parameter name="testid" value="2885" />
+	   <classes>
+		    <class name="com.zixi.zen.test.ZenAddBroadcasterToClusterTest"/>
+		</classes>
+	</test> 
+	
+	
+	<test name="ZEN - Attach Broadcaster to Zen broadcaster entity"> 
+		<parameter name="bxUserName" value="admin" />
+		<parameter name="bxUserPass" value="1234" /> 
+		<parameter name="bxLogin_ip" value="10.7.0.66" />
+		<parameter name="bxUiport" value="4444" />
+		<parameter name="sshUserName" value="" />
+		<parameter name="sshHost" value="zixi.stagingio.devcloud.zixi.com" />
+		<parameter name="ssh_port" value="22" />
+		<parameter name="clusterName" value="manualName" />
+		<parameter name="testid" value="2885" />
+	   <classes>
+		    <class name="com.zixi.zen.test.ZenAttachBroadcasterToZenBroadcasterTest"/>
 		</classes>
 	</test> 
 </suite>
