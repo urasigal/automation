@@ -23,6 +23,8 @@ public class ZenAttachReceiverToZenREceiverTest  extends BaseTestZixiMainCompone
 		new String[] {receiverUserName, receiverUserPass, receiverLogin_ip, receiverUiport, sshHost, ssh_port, ssh_user, testid});
 		driverReslut = ((ReceiverSshConnectionDriver) testDriver).setSshUserAndSshHostReceiver(
 						 receiverUserName,  receiverUserPass, receiverLogin_ip, receiverUiport, sshHost, ssh_port, ssh_user + "-receiver");
+		driverReslut = ((ReceiverSshConnectionDriver) testDriver).uploadSshKeyToReceiverZen( receiverUserName, receiverUserPass, receiverLogin_ip, receiverUiport);
+		
 		Assert.assertEquals(driverReslut.getResult(), "true"); 
 	}
 }
