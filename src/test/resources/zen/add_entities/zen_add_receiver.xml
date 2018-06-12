@@ -16,5 +16,19 @@
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddReceiverTest"/>
 		</classes>
-	</test>  
+	</test>
+	"receiverUserName", "receiverUserPass", "receiverLogin_ip", "receiverUiport", "sshHost", "ssh_port", "ssh_user", "testid"
+	<test name="ZEN - Attach receiver to ZEN entyty">
+		<parameter name="receiverUserName" value="admin" />
+		<parameter name="receiverUserPass" value="1234" />
+		<parameter name="receiverLogin_ip" value="10.7.0.67" />
+		<parameter name="receiverUiport" value="4300" />
+		<parameter name="sshHost" value="zixi.stagingio.devcloud.zixi.com" />
+		<parameter name="ssh_port" value="22" />
+		<parameter name="ssh_user" value="automationReiceiverTest" />
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddReceiverTest"/>
+		</classes>
+	</test>    
 </suite>
