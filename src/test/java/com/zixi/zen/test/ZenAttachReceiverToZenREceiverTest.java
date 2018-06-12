@@ -38,8 +38,8 @@ public class ZenAttachReceiverToZenREceiverTest  extends BaseTestZixiMainCompone
 		
 		String rev_ssh_port = new ApiWorkir().zenSendGet("http://" + zenLogin_ip + "/api/receivers", ZEN_GET_RECEIVER_REV_PORT,
 				cokieValuesForLoggin, zenLogin_ip, zenUiport, ssh_user);
-		((ReceiverSshConnectionDriver) testDriver).setSshPortReceiver(receiverUserName, receiverUserPass, receiverLogin_ip, receiverUiport, rev_ssh_port); 
+		driverReslut = ((ReceiverSshConnectionDriver) testDriver).setSshPortReceiver(receiverUserName, receiverUserPass, receiverLogin_ip, receiverUiport, rev_ssh_port); 
 		
-		Assert.assertEquals(driverReslut.getResult(), "true"); 
+		Assert.assertEquals(driverReslut.getResult(), "Tunnel is added."); 
 	}
 }
