@@ -66,7 +66,7 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="test" />
 		<parameter name="id_bx2" value="test" />
-		<parameter name="number_of_streams" value="5" />
+		<parameter name="number_of_streams" value="2" />
 		<parameter name="testid" value="8539" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
@@ -111,7 +111,7 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="test5" />
 		<parameter name="id_bx2" value="test5" />
-		<parameter name="number_of_streams" value="5" />
+		<parameter name="number_of_streams" value="2" />
 		<parameter name="testid" value="8541" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
@@ -136,7 +136,7 @@
 		<parameter name="latency" value="6000" />
 		<parameter name="max_bitrate" value="9999900" />
 		<parameter name="keep_rtp" value="1" />
-		<parameter name="group_components" value="test0&amp;priority=1,test1&amp;priority=1,test2&amp;priority=1,test3&amp;priority=1,test4&amp;priority=1,test50&amp;priority=1,test51&amp;priority=1,test52&amp;priority=1,test53&amp;priority=1,test54&amp;priority=1" />
+		<parameter name="group_components" value="test0&amp;priority=1,test1&amp;priority=1,test50&amp;priority=1,test51&amp;priority=1" />
 		<parameter name="testid" value="8543" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFailOverInputCreationTest">
@@ -286,230 +286,6 @@
 		</classes>
 	</test>
 	<test name="FFMPEG test 2">
-		<parameter name="testid" value="8553" />  
-		<classes>
-		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - Remove Push output stream 3">
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="test" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="359" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 3">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8549" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="FFMPEG test 3">
-		<parameter name="testid" value="8553" />  
-		<classes>
-		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - Remove Push output stream 4">
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="test" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="359" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 4">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8549" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="FFMPEG test 4">
-		<parameter name="testid" value="8553" />  
-		<classes>
-		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - Remove Push output stream 5">
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="test" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="359" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 5">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8549" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="FFMPEG test 5">
-		<parameter name="testid" value="8553" />  
-		<classes>
-		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - Remove Push output stream 6">
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="test5" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="359" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 6">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8549" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="FFMPEG test 6">
-		<parameter name="testid" value="8553" />  
-		<classes>
-		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - Remove Push output stream 7">
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="test5" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="359" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 7">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8549" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="FFMPEG test 7">
-		<parameter name="testid" value="8553" />  
-		<classes>
-		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - Remove Push output stream 8">
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="test5" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="359" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 8">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8549" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="FFMPEG test 8">
-		<parameter name="testid" value="8553" />  
-		<classes>
-		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - Remove Push output stream 9">
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="test5" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="359" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 9">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8549" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="FFMPEG test 9">
 		<parameter name="testid" value="8553" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
