@@ -40,6 +40,6 @@ public class ZenAttachReceiverToZenREceiverTest  extends BaseTestZixiMainCompone
 				cokieValuesForLoggin, zenLogin_ip, zenUiport, ssh_user);
 		driverReslut = ((ReceiverSshConnectionDriver) testDriver).setSshPortReceiver(receiverUserName, receiverUserPass, receiverLogin_ip, receiverUiport, rev_ssh_port); 
 		
-		Assert.assertEquals(driverReslut.getResult(), "Tunnel is added."); 
+		Assert.assertEquals(driverReslut.getResult(), "Tunnel added."); 
 	}
 }
