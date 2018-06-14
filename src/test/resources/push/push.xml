@@ -53,8 +53,8 @@
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
 		</classes>
-</test>
-<test name="Broadcaster - Push input stream statistics test - default paremeters">
+	</test>
+	<test name="Broadcaster - Push input stream statistics test - default paremeters">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -66,8 +66,8 @@
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
-</test>      
-<test name="Broadcaster - Remove Push input stream - default paremeters">
+	</test>      
+	<test name="Broadcaster - Remove Push input stream - default paremeters">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

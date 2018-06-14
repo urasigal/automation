@@ -8,7 +8,7 @@
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="File" />
-		<parameter name="id" value="H264_25fps_640_480" />
+		<parameter name="id" value="H264_25fps_640_480" /> 
 		<parameter name="matrix" value="1" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="mcast_out" value="0" />
@@ -19,7 +19,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="h264_640_480_25.ts" />
-		<parameter name="testid" value="8230" />    
+		<parameter name="testid" value="8689" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -28,64 +28,48 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Multiple  Push test creation (both direction)" > 
-		<parameter name="userName_bx1" value="admin" />
-		<parameter name="userName_bx2" value="admin" />
-		<parameter name="userPass_bx1" value="1234" />
-		<parameter name="userPass_bx2" value="1234" />
-		<parameter name="login_ip_bx1" value="10.7.0.66" />
-		<parameter name="login_ip_bx2" value="10.7.0.63" />
-		<parameter name="latency_bx1" value="-1" />
-		<parameter name="time_shift" value="0" />
-		<parameter name="force_p2p" value="0" />
-		<parameter name="mcast_ip" value="0" />
-		<parameter name="mcast_force" value="" />
-		<parameter name="mcast_port" value="0" />
-		<parameter name="type_bx1" value="push" />
-		<parameter name="uiport_bx1" value="4444" />
-		<parameter name="analyze" value="" />
-		<parameter name="mcast_ttl" value="" />
-		<parameter name="id_bx1" value="pushtest" />
-		<parameter name="mcast_out" value="" />
-		<parameter name="complete" value="" />
-		<parameter name="max_outputs" value="" />
-		<parameter name="on" value="1" />
-		<parameter name="password" value="" />
-		<parameter name="host" value="10.7.0.66" />
-		<parameter name="latency_bx2" value="6000" />
-		<parameter name="fec_force" value="0" />
-		<parameter name="session" value="" />
-		<parameter name="fec_adaptive" value="1" />
-		<parameter name="nic" value="" />
-		<parameter name="fec_block" value="300" />
-		<parameter name="type_bx2" value="push" />
-		<parameter name="snames" value="pushtest" />
-		<parameter name="fec_aware" value="0" />
-		<parameter name="fec_overhead" value="30" />
-		<parameter name="stream" value="H264_25fps_640_480" />
-		<parameter name="port" value="2088" />
-		<parameter name="uiport_bx2" value="4444" />
-		<parameter name="alias" value="pushtest" />
-		<parameter name="id_bx2" value="pushtest" />
-		<parameter name="number_of_streams" value="70" />
-		<parameter name="testid" value="3961" />
-		<classes>
-		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
-		</classes>
-	</test>
 	<test name="Broadcaster - turn TR101 on all input streams">
-		<parameter name="login_ip" value="10.7.0.66" />		
+		<parameter name="login_ip" value="10.7.0.63" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
 		<parameter name="analyze" value="1" />			
-		<parameter name="testid" value="4011" />		
+		<parameter name="testid" value="8691" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
 	        		<include name="broadcasterTurnOnAnalyzerOnAllStreams" />
 	     		</methods>
      		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - Detect frozen stream">
+		<parameter name="login_ip" value="10.7.0.63" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="streamName" value="H264_25fps_640_480" />		
+		<parameter name="frozenCounter" value="2" />
+		<parameter name="streamLenthSec" value="327" />			
+		<parameter name="testid" value="8693" />		
+		<classes>
+		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
+			    <methods>
+	        		<include name="broadcasterFrozenTest" />
+	     		</methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove File input">
+		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="H264_25fps_640_480" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="H264_25fps_640_480" />
+		<parameter name="testid" value="8695" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
 </suite>
