@@ -92,7 +92,11 @@
 		<parameter name="analyze" value="1" />			
 		<parameter name="testid" value="4011" />		
 		<classes>
-		    <class name="com.zixi.anlalise.testing.SetAnalyzerTest"/>
+		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
+		    <methods>
+        		<include name="broadcasterTurnOnAnalyzerOnAllStreams" />
+     		 </methods>
+     		 </class>
 		</classes>
 	</test>       
 </suite>
