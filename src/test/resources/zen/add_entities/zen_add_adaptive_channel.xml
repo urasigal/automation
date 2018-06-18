@@ -67,5 +67,57 @@
 	   <classes>
 		    <class name="com.zixi.zen.test.ZenAttachBroadcasterToZenBroadcasterTest"/>
 		</classes>
+	</test>
+	<test name="ZEN - Add feeder source">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="sourceName" value="adaptiveSource1" />  
+		<parameter name="broadcaster_cluster_name" value="zenauthcl" />  
+		<parameter name="feeder_name" value="feeder_test" />  
+		<parameter name="broadcaster_id" value="" />  
+		<parameter name="input_id" value="feederoutputname" />  
+		<parameter name="max_bitrate" value="5000000" />  
+		<parameter name="latency" value="4000" />  
+		<parameter name="monitor_pids_change" value="1" />  
+		<parameter name="resource_tag_ids" value="infra" />  
+		<parameter name="password" value="1234" />  
+		<parameter name="encryption" value="auto" />  
+		<parameter name="encryption_key" value="" />  
+		<parameter name="allow_outputs" value="true" />  
+		<parameter name="outputs_password" value="1234" />  
+		<parameter name="monitor_only" value="false" />  
+		<parameter name="cleanup_outputs" value="true" />   
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederSourceTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Add feeder source">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="sourceName" value="adaptiveSource1" />  
+		<parameter name="broadcaster_cluster_name" value="zenauthcl" />  
+		<parameter name="feeder_name" value="feeder_test" />  
+		<parameter name="broadcaster_id" value="" />  
+		<parameter name="input_id" value="bond" />  
+		<parameter name="max_bitrate" value="5000000" />  
+		<parameter name="latency" value="4000" />  
+		<parameter name="monitor_pids_change" value="1" />  
+		<parameter name="resource_tag_ids" value="infra" />  
+		<parameter name="password" value="1234" />  
+		<parameter name="encryption" value="auto" />  
+		<parameter name="encryption_key" value="" />  
+		<parameter name="allow_outputs" value="true" />  
+		<parameter name="outputs_password" value="1234" />  
+		<parameter name="monitor_only" value="false" />  
+		<parameter name="cleanup_outputs" value="true" />   
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederSourceTest"/>
+		</classes>
 	</test> 
 </suite>
