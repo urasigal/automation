@@ -28,9 +28,9 @@ public class ZenAddFeederSourceTest extends BaseTestZixiMainComponents{
 		max_bitrate, latency, monitor_pids_change, resource_tag_ids, password, encryption,
 		encryption_key, allow_outputs, outputs_password, monitor_only, cleanup_outputs, testid});
 		
-		driverReslut = ((AddFeederSourceDriver) testDriver).addFeederSource(zenUser, zenPass, zenLogin_ip, zenUiPort, sourceName, broadcaster_cluster_name, feeder_name, broadcaster_id, input_id,
-		max_bitrate, latency, monitor_pids_change, resource_tag_ids, password, encryption,
-		encryption_key, allow_outputs, outputs_password, monitor_only, cleanup_outputs, testid);
+		driverReslut = ((AddFeederSourceDriver) testDriver).addFeederSource(zenUser, zenPass, zenLogin_ip, zenUiPort, sourceName,
+		broadcaster_cluster_name, feeder_name, broadcaster_id, input_id, max_bitrate, latency, monitor_pids_change,
+		resource_tag_ids, password, encryption, encryption_key, allow_outputs, outputs_password, monitor_only, cleanup_outputs, testid);
 		Assert.assertEquals(driverReslut.getResult(), "true"); 
 	}
 	
