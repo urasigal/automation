@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="ZEN: Add adaptive channel" verbose="5" data-provider-thread-count="1">
+	<!-- 
+		1. Add feeder to ZEN.
+		2. Upload a key to the actual feeder.
+		3. Configure SSH tunnel on the actual feeder.
+		4. Perform some test on the feeder.
+		5. Add process cluster - the cluster which will hosts an adaptive group.
+		6. Add broadcaster to process cluster.
+		7. Attach actual broadcaster to process cluster.
+		8. Add a sources cluster.
+		9. Add broadcaster to sources cluster.
+		10. Attach an actual broadcaster to the sources cluster.
+		11. Add first feeder source entity to ZEN.
+		12. Add second feeder source entity to ZEN.
+		13. Add adaptive channel to ZEN.
+	-->
 	<test name="ZEN - Add feeder entity">
 		<parameter name="userName" value="admin@zixi.com" />
 		<parameter name="userPass" value="mnk4DNK4" />
@@ -16,7 +31,6 @@
 		    <class name="com.zixi.zen.test.ZenAddFeederTest"/>
 		</classes>
 	</test>
-	
 	<test name="Feeder - upload private key">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -276,5 +290,4 @@
 		    <class name="com.zixi.zen.test.ZenAddAdaptiveChannelTest"/>
 		</classes>
 	</test> 
-	
 </suite>
