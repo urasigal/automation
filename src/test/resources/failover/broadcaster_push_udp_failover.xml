@@ -66,13 +66,13 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="test" />
 		<parameter name="id_bx2" value="test" />
-		<parameter name="number_of_streams" value="2" />
+		<parameter name="number_of_streams" value="1" />
 		<parameter name="testid" value="8568" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Multiple  Push test creation (both direction) latency 4000" > 
+	<test name="Broadcaster - Multiple Push test creation (both direction) latency 4000 10% packet loss" > 
 		<parameter name="userName_bx1" value="admin" />
 		<parameter name="userName_bx2" value="admin" />
 		<parameter name="userPass_bx1" value="1234" />
@@ -111,7 +111,7 @@
 		<parameter name="uiport_bx2" value="4444" />
 		<parameter name="alias" value="test8" />
 		<parameter name="id_bx2" value="test8" />
-		<parameter name="number_of_streams" value="3" />
+		<parameter name="number_of_streams" value="1" />
 		<parameter name="testid" value="8570" />
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
@@ -167,7 +167,7 @@
 		<parameter name="remux_pcr" value="90" />			
 		<parameter name="dec_type" value="" />				
 		<parameter name="cols" value="2" />				
-		<parameter name="number_of_streams" value="5" />									
+		<parameter name="number_of_streams" value="2" />									
 		<parameter name="testid" value="8572" />				
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest"/>
@@ -192,7 +192,7 @@
 		<parameter name="latency" value="6000" />
 		<parameter name="max_bitrate" value="9999900" />
 		<parameter name="keep_rtp" value="1" />
-		<parameter name="group_components" value="test0&amp;priority=1,test1&amp;priority=1,test60&amp;priority=1,test61&amp;priority=1,test62&amp;priority=1,test80&amp;priority=1,test81&amp;priority=1,test82&amp;priority=1,test63&amp;priority=1,test64&amp;priority=1" />
+		<parameter name="group_components" value="test0&amp;priority=1,test60&amp;priority=1,test61&amp;priority=1,test80&amp;priority=1" />
 		<parameter name="testid" value="8574" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFailOverInputCreationTest">
