@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ZEN: Add cluster entity to ZEN manual mode, zen auth" verbose="5" data-provider-thread-count="1">
+	<test name="ZEN - Add cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="clusterName" value="zenauthcl" />
+		<parameter name="resource_tag_name" value="infra" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="zenauthcl" />
+		<parameter name="is_auto_scaling" value="false" />
+		<parameter name="activation_key" value="" />
+		<parameter name="bx_version" value="" />
+		<parameter name="aws_account_name" value="" />
+		<parameter name="region" value="" />
+		<parameter name="min_size" value="" />
+		<parameter name="max_size" value="" />
+		<parameter name="api_user" value="" />
+		<parameter name="api_password" value="" />
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Add Broadcaster"> 
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" /> 
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="bxName" value="zenauthclbx" />
+		<parameter name="streaming_ip" value="10.7.0.63" />
+		<parameter name="private_ip" value="null" />
+		<parameter name="standby" value="0" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
+		<parameter name="remote_access_key_name" value="ZIXI_QA" />
+		<parameter name="broadcaster_cluster_name" value="zenauthcl" />
+		<parameter name="testid" value="2885" />
+	   <classes>
+		    <class name="com.zixi.zen.test.ZenAddBroadcasterToClusterTest"/>
+		</classes>
+	</test> 
+	<test name="ZEN - Attach Broadcaster to Zen broadcaster entity"> 
+		<parameter name="bxUserName" value="admin" />
+		<parameter name="bxUserPass" value="1234" /> 
+		<parameter name="bxLogin_ip" value="10.7.0.63" />
+		<parameter name="bxUiport" value="4444" />
+		<parameter name="sshUserName" value="" />
+		<parameter name="sshHost" value="zixi.stagingio.devcloud.zixi.com" />
+		<parameter name="ssh_port" value="22" />
+		<parameter name="clusterName" value="zenauthcl" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zen_ssh_host" value="zixi.stagingio.devcloud.zixi.com" />
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="broadcaserName" value="zenauthclbx" />
+		<parameter name="testid" value="2885" />
+	   <classes>
+		    <class name="com.zixi.zen.test.ZenAttachBroadcasterToZenBroadcasterTest"/>
+		</classes>
+	</test> 
+</suite>
