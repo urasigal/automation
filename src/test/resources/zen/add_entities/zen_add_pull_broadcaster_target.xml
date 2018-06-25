@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLInk Suite "" -->
+<suite name="ZEN: Add pull broadcasgter target ot ZEN" verbose="5" data-provider-thread-count="1">
+	<test name="ZEN - Add pull broadcaster target to ZEN">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="targetName" value="pull_target" />
+		<parameter name="resource_tag_ids" value="infra" />
+		<parameter name="targetType" value="pull" />
+		<parameter name="channel_name" value="path_through_channel" />
+		<parameter name="password" value="1234" />
+		<parameter name="receiver_id" value="" />
+		<parameter name="broadcaster_id" value="zen_dest_clst@zen_dest_clst_bx" />
+		<parameter name="output_id" value="" />
+		<parameter name="receiver_name" value="" />
+		<parameter name="zixi_encryption_key" value="" />
+		<parameter name="output_name" value="" />
+		<parameter name="testid" value="2885" />
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddPullTargetTest"/>
+		</classes>
+	</test>
+</suite>
