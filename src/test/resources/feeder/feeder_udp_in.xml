@@ -116,7 +116,11 @@
 		<parameter name="ip" value="0.0.0.0" />
 		<parameter name="testid" value="8017" />  
 		<classes>
-		    <class name="com.zixi.testing.FeederInputStreamDeletionTest"/>
+		    <class name="com.zixi.testing.FeederInputStreamDeletionTest">
+		    <methods>
+        		<include name="feederUdpInputTest" />
+     		 </methods>
+     		 </class>
 		</classes>
 	</test>	
 </suite>
