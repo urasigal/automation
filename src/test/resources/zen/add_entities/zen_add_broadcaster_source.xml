@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLInk Suite "" -->
-<suite name="ZEN: Add feeder source entity to ZEN" verbose="5" data-provider-thread-count="1">
-	<test name="ZEN - Add feeder source">
+<suite name="ZEN: Add broadcaster source entity to ZEN" verbose="5" data-provider-thread-count="1">
+	<test name="ZEN - Add broadcaster source">
 		<parameter name="zenUser" value="admin@zixi.com" />
 		<parameter name="zenPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
 		<parameter name="zenUiPort" value="80" />
-		<parameter name="sourceName" value="feeder_output_source" />  
+		<parameter name="sourceName" value="broadcaster_output_source" />  
 		<parameter name="broadcaster_cluster_name" value="zenauthcl" />  
-		<parameter name="feeder_name" value="feeder_test" />  
-		<parameter name="broadcaster_id" value="" />  
-		<parameter name="input_id" value="feederoutputname" />  
+		<parameter name="feeder_name" value="" />  
+		<parameter name="broadcaster_id" value="zenauthcl@zenauthclbx" />  
+		<parameter name="input_id" value="test2" />  
 		<parameter name="max_bitrate" value="5000000" />  
-		<parameter name="latency" value="4000" />  
+		<parameter name="latency" value="500" />  
 		<parameter name="monitor_pids_change" value="1" />  
 		<parameter name="resource_tag_ids" value="infra" />  
 		<parameter name="password" value="1234" />  
