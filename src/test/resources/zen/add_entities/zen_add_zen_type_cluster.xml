@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="ZEN: Add cluster entity to ZEN AWS scaling" verbose="5" data-provider-thread-count="1">
-	<test name="ZEN - Add cluster">
+	<test name="ZEN - Add AWS cluster">
 		<parameter name="zenUserName" value="admin@zixi.com" />
 		<parameter name="zenUserPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
