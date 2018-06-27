@@ -2,6 +2,195 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLInk Suite "" -->
 <suite name="ZEN: Add pull broadcasgter target ot ZEN" verbose="5" data-provider-thread-count="1">
+<!-- 1. Add feeder to ZEN  -->
+	<test name="ZEN - Add feeder">
+		<parameter name="userName" value="admin@zixi.com" />
+		<parameter name="userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="80" />
+		<parameter name="feederName" value="source_feeder" />
+		<parameter name="feederUser" value="admin" />
+		<parameter name="feederPass" value="1234" />
+		<parameter name="shhKeyName" value="test" />
+		<parameter name="accessTagName" value="infra" />  
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederTest"/>
+		</classes>
+	</test>
+	
+	<test name="Feeder - upload private key">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="2885" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederPostKeyTest">
+		    <methods>
+        		<include name="uploadPrivateKeyFeeder" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>
+	<test name="Feeder - set ssh tunnel parameters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="zenHost" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="ssh_port" value="22" />
+		<parameter name="ssh_user" value="source_feeder-feeder" />
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="zenFeederName" value="source_feeder" />
+		<parameter name="testid" value="2885" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederSettingsTest">
+		    <methods>
+        		<include name="setFeederTunnelParameters" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test> 
+<!-- Add an ingest cluster (to be used in a feeder source as an ingest cluster) -->
+	<test name="ZEN - Add AWS ingest cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="clusterName" value="ingestcluster" />
+		<parameter name="resource_tag_name" value="infra" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="ingestcluster" />
+		<parameter name="is_auto_scaling" value="true" />
+		<parameter name="activation_key" value="demo-d0b6-fa1a-55b5" />
+		<parameter name="bx_version" value="1.11.0.27500" />
+		<parameter name="aws_account_name" value="zixi-zen" />
+		<parameter name="region" value="us-east-1" />
+		<parameter name="min_size" value="1" />
+		<parameter name="max_size" value="1" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
+		<parameter name="testid" value="" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test> 
+<!-- Add a feeder source -->
+	<test name="ZEN - Add feeder source">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="sourceName" value="feeder_output_source" />  
+		<parameter name="broadcaster_cluster_name" value="ingestcluster" />  
+		<parameter name="feeder_name" value="source_feeder" />  
+		<parameter name="broadcaster_id" value="" />  
+		<parameter name="input_id" value="feederoutputname" />  
+		<parameter name="max_bitrate" value="5000000" />  
+		<parameter name="latency" value="4000" />  
+		<parameter name="monitor_pids_change" value="1" />  
+		<parameter name="resource_tag_ids" value="infra" />  
+		<parameter name="password" value="1234" />  
+		<parameter name="encryption" value="auto" />  
+		<parameter name="encryption_key" value="" />  
+		<parameter name="allow_outputs" value="true" />  
+		<parameter name="outputs_password" value="1234" />  
+		<parameter name="monitor_only" value="false" />  
+		<parameter name="cleanup_outputs" value="true" />   
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederSourceTest"/>
+		</classes>
+	</test>
+<!-- Add process cluster (will be used a process cluster in a channel) -->
+<test name="ZEN - Add AWS process cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="clusterName" value="processcluster" />
+		<parameter name="resource_tag_name" value="infra" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="processcluster" />
+		<parameter name="is_auto_scaling" value="true" />
+		<parameter name="activation_key" value="demo-d0b6-fa1a-55b5" />
+		<parameter name="bx_version" value="1.11.0.27500" />
+		<parameter name="aws_account_name" value="zixi-zen" />
+		<parameter name="region" value="us-east-1" />
+		<parameter name="min_size" value="1" />
+		<parameter name="max_size" value="1" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
+		<parameter name="testid" value="" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test> 
+<!-- Add path through channel -->
+<	test name="ZEN - Add path trough channel">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+	    <parameter name="type" value="delivery" />
+	    <parameter name="name" value="path_through_channel" />
+	    <parameter name="resource_tag_ids" value="infra" />
+	    <parameter name="broadcaster_cluster_id" value="processcluster" />
+	    <parameter name="adaptive" value="false" />
+	    <parameter name="delivery" value="true" />
+	    <parameter name="is_transcoding" value="false" />
+	    <parameter name="is_source_included" value="false" />
+		<parameter name="inputs" value="feeder_output_source@" />
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddAdaptiveChannelTest"/>
+		</classes>
+	</test>
+	<!-- Add destination broadcaster (additional cluster will be added in this case) -->
+	<test name="ZEN - Add AWS destination cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="clusterName" value="destinationcluster" />
+		<parameter name="resource_tag_name" value="infra" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="destinationcluster" />
+		<parameter name="is_auto_scaling" value="true" />
+		<parameter name="activation_key" value="demo-d0b6-fa1a-55b5" />
+		<parameter name="bx_version" value="1.11.0.27500" />
+		<parameter name="aws_account_name" value="zixi-zen" />
+		<parameter name="region" value="us-east-1" />
+		<parameter name="min_size" value="1" />
+		<parameter name="max_size" value="1" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
+		<parameter name="testid" value="" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test> 
 	<test name="ZEN - Add pull broadcaster target to ZEN">
 		<parameter name="zenUser" value="admin@zixi.com" />
 		<parameter name="zenPass" value="mnk4DNK4" />
@@ -13,7 +202,7 @@
 		<parameter name="channel_name" value="path_through_channel" />
 		<parameter name="password" value="1234" />
 		<parameter name="receiver_id" value="" />
-		<parameter name="broadcaster_id" value="zen_dest_clst@zen_dest_clst_bx" />
+		<parameter name="broadcaster_id" value="destinationcluster@aws" />
 		<parameter name="output_id" value="" />
 		<parameter name="receiver_name" value="" />
 		<parameter name="zixi_encryption_key" value="" />
