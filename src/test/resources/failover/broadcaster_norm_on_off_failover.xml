@@ -27,76 +27,94 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - multiple pull input stream creation test 10% packet loss">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.74" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="id" value="test" />
-		<parameter name="source" value="test" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="pull_port" value="" />
-		<parameter name="latency" value="6000" />
-		<parameter name="fec_latency" value="300" />
-		<parameter name="fec_overhead" value="30" />
-		<parameter name="mcast_force" value="0" />
+	<test name="Broadcaster - Multiple  Push test creation (10% packet loss)" > 
+		<parameter name="userName_bx1" value="admin" />
+		<parameter name="userName_bx2" value="admin" />
+		<parameter name="userPass_bx1" value="1234" />
+		<parameter name="userPass_bx2" value="1234" />
+		<parameter name="login_ip_bx1" value="10.7.0.75" /> <!-- destination -->
+		<parameter name="login_ip_bx2" value="10.7.0.74" />
+		<parameter name="latency_bx1" value="-1" />
 		<parameter name="time_shift" value="0" />
-		<parameter name="nic" value="" />
-		<parameter name="max_outputs" value="-1" />
-		<parameter name="type" value="pull" />
-		<parameter name="password" value="" />
-		<parameter name="mcast_port" value="" />
-		<parameter name="complete" value="" />
-		<parameter name="mcast_ip" value="" />
-		<parameter name="fec_adaptive" value="1" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type_bx1" value="push" />
+		<parameter name="uiport_bx1" value="4444" />
+		<parameter name="analyze" value="" />
 		<parameter name="mcast_ttl" value="" />
-		<parameter name="on" value="1" />
-		<parameter name="func" value="load_live_inputs" />
-		<parameter name="fec_force" value="" />
+		<parameter name="id_bx1" value="test" />
 		<parameter name="mcast_out" value="" />
-		<parameter name="propertiesFile" value="stream.properties" />
-		<parameter name="dec_type" value="" />
-		<parameter name="dec_key" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="host" value="10.7.0.75" />
+		<parameter name="latency_bx2" value="6000" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="session" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="nic" value="" />
+		<parameter name="fec_block" value="300" />
+		<parameter name="type_bx2" value="push" />
+		<parameter name="snames" value="test" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="stream" value="test" />
+		<parameter name="port" value="2088" />
+		<parameter name="uiport_bx2" value="4444" />
+		<parameter name="alias" value="test" />
+		<parameter name="id_bx2" value="test" />
 		<parameter name="number_of_streams" value="2" />
-		<parameter name="testid" value="3930" />  
+		<parameter name="testid" value="8539" />
 		<classes>
-		    <class name="com.zixi.load.testing.BroadcasterMultipePullCreationTest"/>
+		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - multiple pull input stream creation test direct link">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="192.168.7.74" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="id" value="test5" />
-		<parameter name="source" value="test" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="pull_port" value="" />
-		<parameter name="latency" value="6000" />
-		<parameter name="fec_latency" value="300" />
-		<parameter name="fec_overhead" value="30" />
-		<parameter name="mcast_force" value="0" />
+	<test name="Broadcaster - Multiple  Push test creation (direct link)" > 
+		<parameter name="userName_bx1" value="admin" />
+		<parameter name="userName_bx2" value="admin" />
+		<parameter name="userPass_bx1" value="1234" />
+		<parameter name="userPass_bx2" value="1234" />
+		<parameter name="login_ip_bx1" value="10.7.0.75" /> <!-- destination -->
+		<parameter name="login_ip_bx2" value="10.7.0.74" />
+		<parameter name="latency_bx1" value="-1" />
 		<parameter name="time_shift" value="0" />
-		<parameter name="nic" value="" />
-		<parameter name="max_outputs" value="-1" />
-		<parameter name="type" value="pull" />
-		<parameter name="password" value="" />
-		<parameter name="mcast_port" value="" />
-		<parameter name="complete" value="" />
-		<parameter name="mcast_ip" value="" />
-		<parameter name="fec_adaptive" value="1" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type_bx1" value="push" />
+		<parameter name="uiport_bx1" value="4444" />
+		<parameter name="analyze" value="" />
 		<parameter name="mcast_ttl" value="" />
-		<parameter name="on" value="1" />
-		<parameter name="func" value="load_live_inputs" />
-		<parameter name="fec_force" value="" />
+		<parameter name="id_bx1" value="test5" />
 		<parameter name="mcast_out" value="" />
-		<parameter name="propertiesFile" value="stream.properties" />
-		<parameter name="dec_type" value="" />
-		<parameter name="dec_key" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="host" value="192.168.7.75" />
+		<parameter name="latency_bx2" value="6000" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="session" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="nic" value="" />
+		<parameter name="fec_block" value="300" />
+		<parameter name="type_bx2" value="push" />
+		<parameter name="snames" value="test5" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="stream" value="test" />
+		<parameter name="port" value="2088" />
+		<parameter name="uiport_bx2" value="4444" />
+		<parameter name="alias" value="test5" />
+		<parameter name="id_bx2" value="test5" />
 		<parameter name="number_of_streams" value="2" />
-		<parameter name="testid" value="3930" />  
+		<parameter name="testid" value="8541" />
 		<classes>
-		    <class name="com.zixi.load.testing.BroadcasterMultipePullCreationTest"/>
+		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Create failover group input">
@@ -156,21 +174,6 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8549" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -202,10 +205,24 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP output stream creation">
+	<test name="Broadcaster failover - pull inputs under normally distibuted stream swithcing">
+		<parameter name="remoteBX_login_ip" value="10.7.0.74" />		
+		<parameter name="remoteBXuserName" value="admin" />			
+		<parameter name="remoteBXuserPassword" value="1234" />
+		<parameter name="remoteBXuiport" value="4444" />
+		<parameter name="login_ip" value="10.7.0.75" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testElapsedTime" value="60000" /> 
+		<parameter name="streamSwitchInterval" value="3000" />
+		<parameter name="streamSwitchInterval" value="tg" />
+		<parameter name="testid" value="8553" />
+		<classes>
+		    <class name="com.zixi.analyze.testing.BroadcasterNrmlDistSwitchFailoverTest"/>
+		</classes>  
 	</test>
 	<!-- To do: Make a test that will in normal manner distributed stops/starts the output streams   -->
-	
 	<test name="FFMPEG test">
 		<parameter name="testid" value="8553" />  
 		<classes>
@@ -248,6 +265,16 @@
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster - delete all outputs stream" >
+			<parameter name="login_ip" value="10.7.0.74" />
+			<parameter name="userName" value="admin" />
+			<parameter name="userPassword" value="1234" />
+			<parameter name="uiport" value="4444" /> 
+			<parameter name="testid" value="8561" /> 
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
+		</classes>
+	</test>
 	<test name="Broadcaster - Remove Fiel input">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
@@ -259,5 +286,5 @@
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
-	</test>                       
+	</test>                          
 </suite>
