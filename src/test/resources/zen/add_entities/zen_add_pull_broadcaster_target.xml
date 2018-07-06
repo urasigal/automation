@@ -3,10 +3,12 @@
 <!-- TestLInk Suite "" -->
 <suite name="ZEN: Add pull broadcasgter target ot ZEN" verbose="5" data-provider-thread-count="1">
 <!-- The goal of the test suite is to add ZEN PULL broadcaster target.
-	 The target consists of a Channel and destination target.
-	 The channel, in turn, consists of a Source and process cluster.
+	 The target consists of a Channel and a destination target.
+	 The channel, in turn, consists of a "Source" and a "process cluster".
 	 The broadcaster target of the TARGET entity is belonging to a some cluster.
-	 The SOURCE entity consists of a FEEDER entity which encapsulates an actual feeder and the ingest cluster-->
+	 The "SOURCE" entity consists of a "FEEDER" entity which encapsulates an actual feeder and the "ingest cluster"
+	 For this particular test suite only AWS clusters will be used.
+-->
 <!-- 1. Add feeder to ZEN  -->
 	<test name="ZEN - Add feeder">
 		<parameter name="userName" value="admin@zixi.com" />
