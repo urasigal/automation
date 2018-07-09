@@ -14,7 +14,7 @@ public class FeederAddFailoverGroupTest extends BaseTestZixiMainComponents{
 		testDriver = new FeederInputStreamDeletionDriver();
 	}
 
-	@Parameters({"userName","userPass", "login_ip", "uiport", "group_member_streams", "group_name", "testid"})
+	@Parameters({"userName","userPass", "login_ip", "uiport", "group_member_streams", "group_name", "search_window", "max_bitrate", "testid"})
 	@Test
 	public void broadcasterPullInCreation(String userName,String userPass, String login_ip, String uiport,
 	String group_member_streams, String group_name, String search_window, String max_bitrate, String testid)
