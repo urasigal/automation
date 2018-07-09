@@ -220,8 +220,18 @@
 		<class name="com.zixi.testing.FeederInputUdpTest"/>
 	</classes>
 	</test>
-	
-	
+	<test name="Feeder - create failover group input stream">
+	<parameter name="userName" value="admin" />
+	<parameter name="userPass" value="1234" />
+	<parameter name="login_ip" value="10.7.0.65" />
+	<parameter name="uiport" value="4200" />
+	<parameter name="group_member_streams" value="inputudp_1@inputudp_2@inputudp_3@inputudp_4" />
+	<parameter name="group_name" value="tg" />
+	<parameter name="testid" value="8007" />
+	<classes>
+		<class name="com.zixi.testing.FeederAddFailoverGroupTest" />
+	</classes>
+	</test>
 	<test name="Broadcaster - delete all outputs stream" >
 			<parameter name="login_ip" value="10.7.0.74" />
 			<parameter name="userName" value="admin" />
