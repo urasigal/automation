@@ -233,14 +233,16 @@
 	</classes>
 	</test>
 	<test name="Broadcaster - delete all outputs stream" >
-			<parameter name="login_ip" value="10.7.0.74" />
-			<parameter name="userName" value="admin" />
-			<parameter name="userPassword" value="1234" />
-			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="8518" /> 
-		<classes>
-		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
-		</classes>
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="search_window" value="1000" />
+		<parameter name="max_bitrate" value="2000000" />
+		<parameter name="testid" value="8518" /> 
+	<classes>
+	    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
+	</classes>
 	</test>
 	<test name="Broadcaster - Remove Fiel input">
 		<parameter name="login_ip" value="10.7.0.74" />
