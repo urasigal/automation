@@ -249,6 +249,22 @@
 	    	</class>
 		</classes>
 	</test>
+	<test name="Feeder - compare CC errors to reference stream">
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="streams" value="inputudp_1@inputudp_2@inputudp_3@inputudp_4" />
+		<parameter name="ref_stream" value="tg" />
+		<parameter name="testid" value="8518" /> 
+		<classes>
+		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
+			    <methods>
+	        		<include name="feederCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
+	     		</methods>
+     		 </class>
+		</classes>
+	</test>
 	<test name="Broadcaster - delete all outputs stream" >
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
