@@ -265,10 +265,10 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Feeder - delete all inputs">
+	<test name="Feeder - delete all inputs">userName", "userPass", "login_ip", "uiport", "testid"
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="userPassword" value="10.7.0.65" />
+		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="8518" /> 
 		<classes>
