@@ -2,12 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLInk Suite "" -->
 <suite name="ZEN: Add pull broadcasgter target ot ZEN" verbose="5" data-provider-thread-count="1">
+<!-- The goal of the test suite is to add ZEN PULL broadcaster target.
+	 The target consists of a Channel and a destination target.
+	 The channel, in turn, consists of a "Source" and a "process cluster".
+	 The broadcaster target of the TARGET entity is belonging to a some cluster.
+	 The "SOURCE" entity consists of a "FEEDER" entity which encapsulates an actual feeder and the "ingest cluster"
+	 For this particular test suite only AWS clusters will be used.
+-->
 <!-- 1. Add feeder to ZEN  -->
 	<test name="ZEN - Add feeder">
 		<parameter name="userName" value="admin@zixi.com" />
 		<parameter name="userPass" value="mnk4DNK4" />
 		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
-		<parameter name="uiport" value="80" />
+		<parameter name="uiport" value="443" />
 		<parameter name="feederName" value="source_feeder" />
 		<parameter name="feederUser" value="admin" />
 		<parameter name="feederPass" value="1234" />
@@ -18,7 +25,6 @@
 		    <class name="com.zixi.zen.test.ZenAddFeederTest"/>
 		</classes>
 	</test>
-	
 	<test name="Feeder - upload private key">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
