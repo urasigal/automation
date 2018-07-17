@@ -5,10 +5,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.ZenAddClusterDriver;
+import com.zixi.testing.BaseTestZixiMainComponentsZen;
 
-import com.zixi.testing.BaseTestZixiMainComponents;
-
-public class ZenAddClusterTest extends BaseTestZixiMainComponents{
+public class ZenAddClusterTest extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new ZenAddClusterDriver(); }
@@ -19,7 +18,7 @@ public class ZenAddClusterTest extends BaseTestZixiMainComponents{
 	"allow_unmanaged_inputs", "allow_unmanaged_outputs", "dns_prefix", "is_auto_scaling", "activation_key",
 	"bx_version", "aws_account_name", "region", "min_size", "max_size", "api_user", "api_password", "testid"})
 	@Test
-	public void addFeederToZen(String zenUserName, String zenUserPass, String zenLogin_ip, String zenUiport, 
+	public void addClusterToZen(String zenUserName, String zenUserPass, String zenLogin_ip, String zenUiport, 
 	String clusterName, String resource_tag_name, String can_input, String can_output, String can_process, String http_streaming_port, String auth_mode,
 	String allow_unmanaged_inputs, String allow_unmanaged_outputs, String dns_prefix, String is_auto_scaling, String activation_key,
 	String bx_version, String aws_account_name, String region, String min_size, String max_size, String api_user, String api_password, String testid) throws Exception {
