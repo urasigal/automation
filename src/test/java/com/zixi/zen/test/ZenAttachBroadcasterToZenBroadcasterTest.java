@@ -40,13 +40,13 @@ public class ZenAttachBroadcasterToZenBroadcasterTest extends BaseTestZixiMainCo
 		JSONObject json = new JSONObject(); 
 		json.put("username", zenUserName).put("password", zenUserPass);
 		
-		String[] cokieValuesForLoggin = new ApiWorkir().zenLogginPost("http://" + zenLogin_ip + "/login" , zenUserName , zenUserPass, 
+		String[] cokieValuesForLoggin = new ApiWorkir().zenLogginPost("https://" + zenLogin_ip + "/login" , zenUserName , zenUserPass, 
 		zenUiport, zenLogin_ip, json.toString().getBytes());
 		
-		String broadcaster_cluster_id = new ApiWorkir().zenSendGet("http://" + zenLogin_ip + "/api/broadcaster_clusters", ZEN_CLUSTER_ID, 
+		String broadcaster_cluster_id = new ApiWorkir().zenSendGet("https://" + zenLogin_ip + "/api/broadcaster_clusters", ZEN_CLUSTER_ID, 
 		cokieValuesForLoggin, zenLogin_ip, zenUiport, clusterName);
 		
-		String rev_ssh_port = new ApiWorkir().zenSendGet("http://" + zenLogin_ip + "/api/broadcaster_clusters/" + broadcaster_cluster_id + 
+		String rev_ssh_port = new ApiWorkir().zenSendGet("https://" + zenLogin_ip + "/api/broadcaster_clusters/" + broadcaster_cluster_id + 
 		"/broadcasters", ZEN_GET_BX_REV_PORT,
 		cokieValuesForLoggin, zenLogin_ip, zenUiport, broadcaserName);
 		
