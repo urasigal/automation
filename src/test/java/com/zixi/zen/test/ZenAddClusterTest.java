@@ -13,7 +13,7 @@ public class ZenAddClusterTest extends BaseTestZixiMainComponents{
 	@BeforeClass
 	public void testInit() { testDriver = new ZenAddClusterDriver(); }
 
-	// Test parameters - these parameters will be provided through an appropriate suite's XML file.
+	// Test parameters - these parameters will be provided by appropriate suite's XML file.
 	@Parameters({ "zenUserName", "zenUserPass", "zenLogin_ip", "zenUiport", 
 	"clusterName", "resource_tag_name", "can_input", "can_output", "can_process", "http_streaming_port", "auth_mode",
 	"allow_unmanaged_inputs", "allow_unmanaged_outputs", "dns_prefix", "is_auto_scaling", "activation_key",
