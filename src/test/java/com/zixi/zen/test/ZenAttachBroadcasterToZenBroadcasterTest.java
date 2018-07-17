@@ -7,12 +7,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcasterSetSshParametersDriver;
-import com.zixi.drivers.tools.DriverReslut;
-import com.zixi.testing.BaseTestZixiMainComponents;
+import com.zixi.testing.BaseTestZixiMainComponentsZen;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class ZenAttachBroadcasterToZenBroadcasterTest extends BaseTestZixiMainComponents{
+public class ZenAttachBroadcasterToZenBroadcasterTest extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterSetSshParametersDriver(); }
