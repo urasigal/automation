@@ -207,7 +207,7 @@ public class BaseTestZixiMainComponentsZen {
 	protected int getBuildIdFromFile() throws IOException {
 		String line;
 		int buildId = -1;
-		try (InputStream fis = new FileInputStream("src/main/resources/build");
+		try (InputStream fis = new FileInputStream("src/main/resources/zenbuild");
 				InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 				BufferedReader br = new BufferedReader(isr);) {
 			while ((line = br.readLine()) != null) {
