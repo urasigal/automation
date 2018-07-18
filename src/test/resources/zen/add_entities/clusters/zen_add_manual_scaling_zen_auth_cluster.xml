@@ -67,5 +67,17 @@
 	   <classes>
 		    <class name="com.zixi.zen.test.ZenAttachBroadcasterToZenBroadcasterTest"/>
 		</classes>
-	</test> 
+	</test>
+	<test name="ZEN - Delete Cluster"> 
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="zenauthcl" />
+		<parameter name="testid" value="8779" />
+	   <classes>
+		    <class name="com.zixi.zen.test.ZenAttachBroadcasterToZenBroadcasterTest"/>
+		</classes>
+	</test>
 </suite>
