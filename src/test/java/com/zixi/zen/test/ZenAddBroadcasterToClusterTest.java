@@ -4,11 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.zixi.drivers.drivers.ZenAddBroadcasterDriver;
-import com.zixi.testing.BaseTestZixiMainComponents;
+import com.zixi.testing.BaseTestZixiMainComponentsZen;
 
-public class ZenAddBroadcasterToClusterTest extends BaseTestZixiMainComponents{
+public class ZenAddBroadcasterToClusterTest extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new ZenAddBroadcasterDriver(); }
