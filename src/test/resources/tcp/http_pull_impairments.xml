@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: HTTP pull streaming under nertwork impairments 10% packet loss" verbose="5" data-provider-thread-count="1">
-<test name="Broadcaster-Update settings - enable automatic HTTP push/pull">
-		 <parameter name="login_ip" value="10.7.0.63" />
+	<test name="Broadcaster-Update settings - enable automatic HTTP push/pull">
+		 <parameter name="login_ip" value="10.7.0.74" />
 		 <parameter name="userName" value="admin" />
 		 <parameter name="userPass" value="1234" /> 
 		 <parameter name="uiport" value="4444" />
@@ -36,8 +36,34 @@
 		    </class>
 		</classes>
 	</test>
+	<test name="Broadcaster - Create a file input steam">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="test" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="iphone.ts" />
+		<parameter name="testid" value="8729" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
 	<test name="Broadcaster-Add HTTP Pull input stream">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" /> 
 		<parameter name="uiport" value="4444" />
@@ -56,7 +82,7 @@
 		<parameter name="rec_duration" value="7200" />
 		<parameter name="rec_path" value="" />
 		<parameter name="rec_template" value="%25S_%25Y%25M%25D-%25T.ts" />
-		<parameter name="ts_http_url" value="http://10.7.0.63:7777/test.ts" />
+		<parameter name="ts_http_url" value="http://10.7.0.74:7777/test.ts" />
 		<parameter name="smoothing_latency" value="1000" />
 		<parameter name="testid" value="8526" />
 	<classes>
@@ -70,7 +96,7 @@
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="http_pull" />
 		<parameter name="streamname" value="http_pull" />
@@ -136,7 +162,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="http_pull" />
@@ -147,7 +173,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove HTTP pull input stream">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="http_pull" />
@@ -157,5 +183,17 @@
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
-	</test> 
+	</test>
+	<test name="Broadcaster - Remove File input">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="test" />
+		<parameter name="testid" value="8767" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>    
 </suite>
