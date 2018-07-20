@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="ZEN: Add cluster entity to ZEN" verbose="5" data-provider-thread-count="1">
-	<test name="ZEN - Add cluster">
+<suite name="ZEN: Add cluster entity to ZEN AWS scaling" verbose="5" data-provider-thread-count="1">
+	<test name="ZEN - Add AWS cluster">
 		<parameter name="zenUserName" value="admin@zixi.com" />
 		<parameter name="zenUserPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
@@ -17,7 +17,7 @@
 		<parameter name="allow_unmanaged_outputs" value="1" />
 		<parameter name="dns_prefix" value="testCluster" />
 		<parameter name="is_auto_scaling" value="true" />
-		<parameter name="activation_key" value="demo-f2a9-527f-ed98" />
+		<parameter name="activation_key" value="demo-d0b6-fa1a-55b5" />
 		<parameter name="bx_version" value="1.11.0.27500" />
 		<parameter name="aws_account_name" value="zixi-zen" />
 		<parameter name="region" value="us-east-1" />
