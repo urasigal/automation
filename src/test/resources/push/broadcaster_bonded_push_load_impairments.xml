@@ -98,8 +98,8 @@
 		<parameter name="matrix" value="1" />
 		<parameter name="alias" value="stream_id_" />
 		<parameter name="session" value="" />
-		<parameter name="link_a" value="10.7.0.72,2088,10.7.0.74,,0" />
-		<parameter name="link_b" value="192.168.7.72,2088,192.168.7.74,,0" />
+		<parameter name="link_a" value="10.7.0.75,2088,10.7.0.74,,0" />
+		<parameter name="link_b" value="192.168.7.75,2088,192.168.7.74,,0" />
 		<parameter name="bond_links" value="1" />
 		<parameter name="latency_src" value="500" />
 		<parameter name="fec_force" value="0" />
@@ -111,7 +111,7 @@
 		<parameter name="stats_hist" value="1" />
 		<parameter name="userName_dst" value="admin" />
 		<parameter name="userPass_dst" value="1234" />
-		<parameter name="login_ip_dst" value="10.7.0.72" />
+		<parameter name="login_ip_dst" value="10.7.0.75" />
 		<parameter name="latency_dst" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="" />
@@ -155,7 +155,7 @@
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="" />
 		<parameter name="streamname" value="test" />
@@ -184,7 +184,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - test random outputs with FFMPG analyzer">
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
@@ -195,7 +195,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream">
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -206,7 +206,7 @@
 		</classes>
 	</test>	
 	<test name="Broadcaster - delete all input streams">
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
@@ -355,8 +355,8 @@
 		<parameter name="matrix" value="1" />
 		<parameter name="alias" value="stream_id_" />
 		<parameter name="session" value="" />
-		<parameter name="link_a" value="10.7.0.72,2088,10.7.0.74,,0" />
-		<parameter name="link_b" value="192.168.7.72,2088,192.168.7.74,,0" />
+		<parameter name="link_a" value="10.7.0.75,2088,10.7.0.74,,0" />
+		<parameter name="link_b" value="192.168.7.75,2088,192.168.7.74,,0" />
 		<parameter name="bond_links" value="1" />
 		<parameter name="latency_src" value="6000" />
 		<parameter name="fec_force" value="0" />
@@ -368,7 +368,7 @@
 		<parameter name="stats_hist" value="1" />
 		<parameter name="userName_dst" value="admin" />
 		<parameter name="userPass_dst" value="1234" />
-		<parameter name="login_ip_dst" value="10.7.0.72" />
+		<parameter name="login_ip_dst" value="10.7.0.75" />
 		<parameter name="latency_dst" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="" />
@@ -412,7 +412,7 @@
 	<test name="Broadcaster - UDP output stream creation - Encryption AES 128">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="" />
 		<parameter name="streamname" value="test" />
@@ -441,7 +441,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - test random outputs with FFMPG analyzer - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
@@ -467,7 +467,7 @@
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove udp output stream - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
@@ -478,7 +478,7 @@
 		</classes>
 	</test>	
 	<test name="Broadcaster - delete all input streams - Encryption AES 128">
-		<parameter name="login_ip" value="10.7.0.72" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
