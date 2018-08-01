@@ -66,7 +66,7 @@
 		<parameter name="zenUserPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
 		<parameter name="zenUiport" value="80" />
-		<parameter name="receiverName" value="target_destination_receiver" />
+		<parameter name="receiverName" value="target_destination" />
 		<parameter name="receiverUser" value="admin" />
 		<parameter name="receiverPass" value="1234" />
 		<parameter name="shhKeyName" value="test" />
@@ -83,7 +83,7 @@
 		<parameter name="receiverUiport" value="4300" />
 		<parameter name="sshHost" value="zixi.stagingio.devcloud.zixi.com" />
 		<parameter name="ssh_port" value="22" />
-		<parameter name="ssh_user" value="target_destination_receiver" />
+		<parameter name="ssh_user" value="target_destination" />
 		<parameter name="zenUserName" value="admin@zixi.com" />
 		<parameter name="zenUserPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
@@ -210,7 +210,7 @@
 		<parameter name="targetType" value="pull" />
 		<parameter name="channel_name" value="path_through_channel" />
 		<parameter name="password" value="1234" />
-		<parameter name="receiver_id" value="target_destination_receiver" /> <!-- In this case the "receiver_id stands for ZEN receiver name" -->
+		<parameter name="receiver_id" value="target_destination" /> <!-- In this case the "receiver_id stands for ZEN receiver name" -->
 		<parameter name="broadcaster_id" value="" />
 		<parameter name="output_id" value="" />
 		<parameter name="receiver_name" value="" />
