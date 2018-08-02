@@ -20,7 +20,8 @@ public class ZenAddUserTest  extends BaseTestZixiMainComponentsZen{
 		buildTestParametersString(new String[] {"zen_userName", "zen_userPass", "login_ip", "uiport", "name", "password", "email", "is_admin", "testid"}, 
 		new String[] {"zen_userName", "zen_userPass", "login_ip", "uiport", "name", "password", "email", "is_admin", "testid"});
 		
-		driverReslut = ((ZenAddUserDriver) testDriver).addZenUser();
+		driverReslut = ((ZenAddUserDriver) testDriver).addZenUser(zen_userName, zen_userPass, login_ip, uiport,
+		name, password, email, is_admin);
 		Assert.assertEquals(driverReslut.getResult(), "true"); 
 	}
 	
