@@ -18,7 +18,7 @@ public class ZenAddUserTest  extends BaseTestZixiMainComponentsZen{
 		String name, String password, String email, String is_admin, String testid) throws Exception {
 		// Provide parameters to a TestLink.
 		buildTestParametersString(new String[] {"zen_userName", "zen_userPass", "login_ip", "uiport", "name", "password", "email", "is_admin", "testid"}, 
-		new String[] {"zen_userName", "zen_userPass", "login_ip", "uiport", "name", "password", "email", "is_admin", "testid"});
+		new String[] {zen_userName, zen_userPass, login_ip, uiport, name, password, email, is_admin, testid});
 		
 		driverReslut = ((ZenAddUserDriver) testDriver).addZenUser(zen_userName, zen_userPass, login_ip, uiport,
 		name, password, email, is_admin);
