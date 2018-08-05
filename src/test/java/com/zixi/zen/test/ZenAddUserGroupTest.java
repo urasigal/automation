@@ -15,7 +15,7 @@ public class ZenAddUserGroupTest  extends BaseTestZixiMainComponentsZen{
 
 	@Parameters({"zen_userName", "zen_userPass", "login_ip", "uiport", "group_name", "testid"})
 	@Test
-	public void addUserZen(String zen_userName, String zen_userPass, String login_ip, String uiport,
+	public void addUserGroupZen(String zen_userName, String zen_userPass, String login_ip, String uiport,
 		String group_name, String testid) throws Exception {
 		// Provide parameters to a TestLink.
 		buildTestParametersString(new String[] {"zen_userName", "zen_userPass", "login_ip", "uiport", "group_name", "testid"}, 
