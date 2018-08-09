@@ -20,7 +20,7 @@
 		<parameter name="feederPass" value="1234" />
 		<parameter name="shhKeyName" value="test" />
 		<parameter name="accessTagName" value="infra" />  
-		<parameter name="testid" value="2885" />  
+		<parameter name="testid" value="8864" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddFeederTest"/>
 		</classes>
@@ -30,9 +30,9 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.65" />
 		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="2885" />	
+		<parameter name="testid" value="8866" />	
 		<classes>
-		    <class name="com.zixi.testing.FeederPostKeyTest">
+		    <class name="com.zixi.testing.FeederPostKeyTestZen">
 		    <methods>
         		<include name="uploadPrivateKeyFeeder" />
      		 </methods>
@@ -51,9 +51,9 @@
 		<parameter name="zenPass" value="mnk4DNK4" />
 		<parameter name="zenUiPort" value="80" />
 		<parameter name="zenFeederName" value="source_feeder" />
-		<parameter name="testid" value="2885" />	
+		<parameter name="testid" value="8868" />	
 		<classes>
-		    <class name="com.zixi.testing.FeederSettingsTest">
+		    <class name="com.zixi.testing.FeederSettingsZenTest">
 		    <methods>
         		<include name="setFeederTunnelParameters" />
      		 </methods>
@@ -85,7 +85,7 @@
 		<parameter name="max_size" value="1" />
 		<parameter name="api_user" value="admin" />
 		<parameter name="api_password" value="1234" />
-		<parameter name="testid" value="" />  
+		<parameter name="testid" value="8870" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
 		</classes>
@@ -112,7 +112,7 @@
 		<parameter name="outputs_password" value="1234" />  
 		<parameter name="monitor_only" value="false" />  
 		<parameter name="cleanup_outputs" value="true" />   
-		<parameter name="testid" value="2885" />  
+		<parameter name="testid" value="8874" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddFeederSourceTest"/>
 		</classes>
@@ -142,7 +142,7 @@
 		<parameter name="max_size" value="1" />
 		<parameter name="api_user" value="admin" />
 		<parameter name="api_password" value="1234" />
-		<parameter name="testid" value="" />  
+		<parameter name="testid" value="8876" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
 		</classes>
@@ -162,7 +162,7 @@
 	    <parameter name="is_transcoding" value="false" />
 	    <parameter name="is_source_included" value="false" />
 		<parameter name="inputs" value="feeder_output_source@" />
-		<parameter name="testid" value="2885" />  
+		<parameter name="testid" value="8878" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddAdaptiveChannelTest"/>
 		</classes>
@@ -192,7 +192,7 @@
 		<parameter name="max_size" value="1" />
 		<parameter name="api_user" value="admin" />
 		<parameter name="api_password" value="1234" />
-		<parameter name="testid" value="" />  
+		<parameter name="testid" value="8880" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
 		</classes>
@@ -213,7 +213,7 @@
 		<parameter name="receiver_name" value="" />
 		<parameter name="zixi_encryption_key" value="" />
 		<parameter name="output_name" value="" />
-		<parameter name="testid" value="2885" />
+		<parameter name="testid" value="8882" />
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddPullTargetTest"/>
 		</classes>
