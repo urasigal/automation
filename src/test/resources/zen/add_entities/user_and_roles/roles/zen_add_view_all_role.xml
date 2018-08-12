@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLInk Suite "" -->
+<suite name="ZEN: Add user role view all" verbose="5" data-provider-thread-count="1">
+	<test name="ZEN - Add user role">
+		<parameter name="zen_userName" value="admin@zixi.com" />
+		<parameter name="zen_userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="443" />
+		<parameter name="name" value="view_all_role" />
+		<parameter name="clusters_edit" value="0" />
+		<parameter name="clusters_view" value="1" />
+		<parameter name="clusters_notify" value="0" />
+		<parameter name="source_edit" value="0" />
+		<parameter name="source_view" value="1" />
+		<parameter name="source_notify" value="0" />
+		<parameter name="adaptive_edit" value="0" />
+		<parameter name="adaptive_view" value="1" />
+		<parameter name="adaptive_notify" value="0" />
+		<parameter name="delivery_edit" value="0" />
+		<parameter name="delivery_view" value="1" />
+		<parameter name="delivery_notify" value="0" />
+		<parameter name="resource_tag_name" value="view_all_tag" />
+		<parameter name="testid" value="8882" />
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddUserRoleTest"/>
+		</classes>
+	</test>
+</suite>
