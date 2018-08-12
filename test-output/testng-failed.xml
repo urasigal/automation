@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="5" name="Failed suite [ZEN: Add user role all allow]" data-provider-thread-count="1">
@@ -53,3 +54,20 @@
     </classes>
   </test> <!-- ZEN - Add user role(failed) -->
 </suite> <!-- Failed suite [ZEN: Add user role all allow] -->
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.zixi.testing.ReceiverAddSourceToOutputTest">
+        <methods>
+          <include name="feederOutputToBxTest"/>
+          <include name="testInit"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.ReceiverAddSourceToOutputTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> c557b213ef68b8c4abc4f4bf51f244e1df3f96a9
