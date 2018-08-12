@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPD
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="urn:mpeg:dash:schema:mpd:2011"
+xmlns:scte35="urn:scte:scte35:2014:xml+bin"
+xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+type="dynamic"
+availabilityStartTime="2018-08-06T01:33:46.839320Z"
+publishTime="2018-08-06T01:33:46.839320Z"
+minimumUpdatePeriod="PT5.0S"
+timeShiftBufferDepth="PT50.0S"
+maxSegmentDuration="PT20S"
+minBufferTime="PT10S"
+suggestedPresentationDelay="PT15.0S"
+profiles="urn:mpeg:dash:profile:isoff-live:2011">
+<ProgramInformation>
+ <Title>
+ Zixi
+ </Title>
+</ProgramInformation>
+<Period id="1" start="PT0.0S">
+<AdaptationSet id="1" group="1" mimeType="video/mp4">
+<SegmentTemplate timescale="1000" media="$RepresentationID$/chunk-$Number$.m4v" initialization="$RepresentationID$/init.vmoov" startNumber="190">
+<SegmentTimeline>
+<S t="1903034" d="9880"/>
+<S d="10120"/>
+<S d="10160"/>
+<S d="10000"/>
+<S d="10040"/>
+</SegmentTimeline>
+</SegmentTemplate>
+<Representation id="adaptive/2000_SPLIT_1001" codecs="avc1.4d001e" width="720" height="480" frameRate="25" bandwidth="2000000" />
+<Representation id="adaptive/5000_SPLIT_1001" codecs="avc1.4d001e" width="720" height="480" frameRate="25" bandwidth="5000000" />
+</AdaptationSet>
+<AdaptationSet id="2" group="2" lang="" mimeType="audio/mp4">
+<SegmentTemplate timescale="1000" media="$RepresentationID$/chunk-$Number$.m4a" initialization="$RepresentationID$/init.amoov" startNumber="190">
+<SegmentTimeline>
+<S t="1903084" d="9899"/>
+<S d="10134"/>
+<S d="10176"/>
+<S d="10027"/>
+<S d="10048"/>
+</SegmentTimeline>
+</SegmentTemplate>
+<Representation id="adaptive/2000_SPLIT_1002" codecs="mp4a.40.2" audioSamplingRate="48000" bandwidth="63375" />
+<Representation id="adaptive/5000_SPLIT_1002" codecs="mp4a.40.2" audioSamplingRate="48000" bandwidth="73875" />
+</AdaptationSet>
+</Period>
+</MPD>
