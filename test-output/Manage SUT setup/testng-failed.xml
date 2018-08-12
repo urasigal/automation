@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="5" name="Failed suite [Manage SUT setup]" data-provider-thread-count="1">
+  <parameter name="bx_1" value="10.7.0.63 admin 1234 4444"/>
+  <parameter name="fx_3" value="10.7.0.65 admin 1234 4200"/>
+  <parameter name="bx_2" value="10.7.0.66 admin 1234 4444"/>
+  <parameter name="setUpFileLocation" value="src/main/resources/uptime"/>
+  <parameter name="rx_4" value="10.7.0.67 admin 1234 4300"/>
+  <test name="Continuous uptime growig test(failed)">
+    <classes>
+      <class name="com.zixi.setup.SetSutUpTimeTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="checkContinuousUptime"/>
+        </methods>
+      </class> <!-- com.zixi.setup.SetSutUpTimeTest -->
+    </classes>
+  </test> <!-- Continuous uptime growig test(failed) -->
+</suite> <!-- Failed suite [Manage SUT setup] -->

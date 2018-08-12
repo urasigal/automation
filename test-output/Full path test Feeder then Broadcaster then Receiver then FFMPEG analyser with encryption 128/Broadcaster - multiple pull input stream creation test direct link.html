@@ -1,0 +1,240 @@
+<html>
+<head>
+<title>TestNG:  Broadcaster - multiple pull input stream creation test direct link</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Broadcaster - multiple pull input stream creation test direct link</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon May 14 18:11:47 IDT 2018</td>
+</tr>
+<tr><td>Total time:</td><td>9 seconds (9249 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.zixi.load.testing.BroadcasterMultipePullCreationTest.broadcasterMultiplePullInCreation()'><b>broadcasterMultiplePullInCreation</b><br>Test class: com.zixi.load.testing.BroadcasterMultipePullCreationTest<br>Parameters: admin, 1234, 192.168.7.74, 10.7.0.75, test5, test, 4444, , 6000, 300, 30, 0, 0, , -1, pull, , , , , 1, , 1, load_live_inputs, , , stream.properties, , , 5, 3930<br/>
+<a href="#Output-125406355" onClick='toggleBox("Output-125406355", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-125406355" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-125406355">
+Test parameteres: <br/>
+userName: admin<br/>
+userPass: 1234<br/>
+Host: 192.168.7.74<br/>
+loin_ip: 10.7.0.75<br/>
+id: test50<br/>
+source: test<br/>
+uiport: 4444<br/>
+pull_port: -- not provided <br/>
+latency: 6000<br/>
+fec_latency: 300<br/>
+fec_overhead: 30<br/>
+mcast_force: 0<br/>
+time_shift: 0<br/>
+Test parameteres: <br/>
+nic: -- not provided <br/>
+max_outputs: -1<br/>
+userName: admin<br/>
+type: pull<br/>
+userPass: 1234<br/>
+password: -- not provided <br/>
+mcast_port: -- not provided <br/>
+Host: 192.168.7.74<br/>
+loin_ip: 10.7.0.75<br/>
+id: test51<br/>
+source: test<br/>
+uiport: 4444<br/>
+pull_port: -- not provided <br/>
+latency: 6000<br/>
+fec_latency: 300<br/>
+complete: -- not provided <br/>
+fec_overhead: 30<br/>
+Test parameteres: <br/>
+mcast_force: 0<br/>
+time_shift: 0<br/>
+userName: admin<br/>
+nic: -- not provided <br/>
+userPass: 1234<br/>
+max_outputs: -1<br/>
+Host: 192.168.7.74<br/>
+type: pull<br/>
+loin_ip: 10.7.0.75<br/>
+password: -- not provided <br/>
+mcast_port: -- not provided <br/>
+id: test52<br/>
+complete: -- not provided <br/>
+source: test<br/>
+mcast_ip: -- not provided <br/>
+uiport: 4444<br/>
+fec_adaptive: 1<br/>
+pull_port: -- not provided <br/>
+mcast_ttl: -- not provided <br/>
+latency: 6000<br/>
+on: 1<br/>
+fec_latency: 300<br/>
+func: load_live_inputs<br/>
+fec_overhead: 30<br/>
+fec_force: -- not provided <br/>
+mcast_force: 0<br/>
+mcast_out: -- not provided <br/>
+time_shift: 0<br/>
+propertiesFile: stream.properties<br/>
+dec_type: -- not provided <br/>
+nic: -- not provided <br/>
+dec_key: -- not provided <br/>
+max_outputs: -1<br/>
+type: pull<br/>
+password: -- not provided <br/>
+mcast_port: -- not provided <br/>
+complete: -- not provided <br/>
+mcast_ip: -- not provided <br/>
+mcast_ip: -- not provided <br/>
+fec_adaptive: 1<br/>
+fec_adaptive: 1<br/>
+mcast_ttl: -- not provided <br/>
+on: 1<br/>
+mcast_ttl: -- not provided <br/>
+func: load_live_inputs<br/>
+on: 1<br/>
+fec_force: -- not provided <br/>
+mcast_out: -- not provided <br/>
+func: load_live_inputs<br/>
+propertiesFile: stream.properties<br/>
+fec_force: -- not provided <br/>
+dec_type: -- not provided <br/>
+mcast_out: -- not provided <br/>
+dec_key: -- not provided <br/>
+propertiesFile: stream.properties<br/>
+dec_type: -- not provided <br/>
+dec_key: -- not provided <br/>
+Test parameteres: <br/>
+userName: admin<br/>
+userPass: 1234<br/>
+Host: 192.168.7.74<br/>
+loin_ip: 10.7.0.75<br/>
+id: test54<br/>
+source: test<br/>
+uiport: 4444<br/>
+pull_port: -- not provided <br/>
+latency: 6000<br/>
+fec_latency: 300<br/>
+fec_overhead: 30<br/>
+mcast_force: 0<br/>
+time_shift: 0<br/>
+nic: -- not provided <br/>
+max_outputs: -1<br/>
+type: pull<br/>
+password: -- not provided <br/>
+mcast_port: -- not provided <br/>
+complete: -- not provided <br/>
+mcast_ip: -- not provided <br/>
+Test parameteres: <br/>
+fec_adaptive: 1<br/>
+mcast_ttl: -- not provided <br/>
+on: 1<br/>
+userName: admin<br/>
+func: load_live_inputs<br/>
+fec_force: -- not provided <br/>
+userPass: 1234<br/>
+mcast_out: -- not provided <br/>
+Host: 192.168.7.74<br/>
+propertiesFile: stream.properties<br/>
+loin_ip: 10.7.0.75<br/>
+dec_type: -- not provided <br/>
+id: test53<br/>
+dec_key: -- not provided <br/>
+source: test<br/>
+uiport: 4444<br/>
+pull_port: -- not provided <br/>
+latency: 6000<br/>
+fec_latency: 300<br/>
+fec_overhead: 30<br/>
+mcast_force: 0<br/>
+time_shift: 0<br/>
+nic: -- not provided <br/>
+max_outputs: -1<br/>
+type: pull<br/>
+password: -- not provided <br/>
+mcast_port: -- not provided <br/>
+complete: -- not provided <br/>
+mcast_ip: -- not provided <br/>
+fec_adaptive: 1<br/>
+mcast_ttl: -- not provided <br/>
+on: 1<br/>
+func: load_live_inputs<br/>
+fec_force: -- not provided <br/>
+mcast_out: -- not provided <br/>
+propertiesFile: stream.properties<br/>
+dec_type: -- not provided <br/>
+dec_key: -- not provided <br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>com.zixi.load.testing.BroadcasterMultipePullCreationTest@3fee9989</td></tr>
+</table><p>
+</body>
+</html>

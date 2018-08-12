@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Broadcaster: DTLS Push load streaming suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster-Upload DTLS cetrificate to server">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8072" />    
+		<classes>
+		    <class name="com.zixi.testing.FeederPostKeyTest">
+			    <methods>
+		        	<include name="uploadSslCertificateToBroadcasterServer" />
+		     	</methods>
+		  	</class>
+		</classes>
+	</test>
+	<test name="Broadcaster-Upload DTLS private key to server">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8074" />    
+		<classes>
+		    <class name="com.zixi.testing.FeederPostKeyTest">
+			    <methods>
+		        	<include name="uploadPrivateKeyToBroadcasterServer" />
+		     	</methods>
+		    </class>
+		</classes>
+	</test>
+	<test name="Broadcaster-Update settings DTLS server">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="server_id" value="localhost.localdomain" />
+		<parameter name="gui_web_port" value="4444" />
+		<parameter name="uname" value="user" />
+		<parameter name="aname" value="admin" />
+		<parameter name="ft_max_quota" value="85" />
+		<parameter name="max_cpu" value="90" />
+		<parameter name="max_mem" value="90" />
+		<parameter name="max_in_bandwidth" value="0" />
+		<parameter name="max_out_bandwidth" value="0" />
+		<parameter name="admin_https" value="0" />
+		<parameter name="use_operator" value="0" />
+		<parameter name="use_user" value="1" />
+		<parameter name="use_observer" value="0" />
+		<parameter name="private_port" value="2089,,,1&amp;private_port=2088,,,0" />
+		<parameter name="public_port" value="2079,,,1&amp;public_port=2077,,,0" />
+		<parameter name="testid" value="8076" />   
+	<classes>
+		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+			    <methods>
+		        	<include name="broadcasterUpdateSettings" />
+		     	</methods>
+		    </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - Multiple  Push test creation (both direction)" > 
+		<parameter name="userName_bx1" value="admin" />
+		<parameter name="userName_bx2" value="admin" />
+		<parameter name="userPass_bx1" value="1234" />
+		<parameter name="userPass_bx2" value="1234" />
+		<parameter name="login_ip_bx1" value="10.7.0.74" />
+		<parameter name="login_ip_bx2" value="10.7.0.63" />
+		<parameter name="latency_bx1" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type_bx1" value="push" />
+		<parameter name="uiport_bx1" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id_bx1" value="pushtest" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="host" value="internal.zixi.com" />
+		<parameter name="latency_bx2" value="6000" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="session" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="nic" value="" />
+		<parameter name="fec_block" value="300" />
+		<parameter name="type_bx2" value="push" />
+		<parameter name="snames" value="pushtest" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="stream" value="test" />
+		<parameter name="port" value="2089" />
+		<parameter name="uiport_bx2" value="4444" />
+		<parameter name="alias" value="pushtest" />
+		<parameter name="id_bx2" value="pushtest" />
+<<<<<<< HEAD:src/test/resources/dtls/broadcaster_push/mixed_dtls_non_dtls.xml
+		<parameter name="number_of_streams" value="20" />
+=======
+		<parameter name="number_of_streams" value="50" />
+>>>>>>> d310f2ca3a977ef3535e42179b7539e59ea500dd:src/test/resources/dtls/broadcaster_push/mixed_dtls_non_dtls_push_load.xml
+		<parameter name="mixed" value="1" />
+		<parameter name="testid" value="8078" />
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - UDP output stream creation">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="port" value="5555" />
+		<parameter name="stream" value="" />
+		<parameter name="streamname" value="test" />
+		<parameter name="host" value="10.7.0.150" />
+		<parameter name="id" value="test" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="ttl" value="5" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="df" value="0" />
+		<parameter name="local_port" value="" />
+		<parameter name="dec_key" value="" />
+		<parameter name="type" value="TS" />
+		<parameter name="rows" value="10" />
+		<parameter name="remux_buff" value="1000" />
+		<parameter name="local_ip" value="0.0.0.0" />
+		<parameter name="remux_restampdts" value="0" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="remux_pcr" value="90" />
+		<parameter name="dec_type" value="" />
+		<parameter name="cols" value="10" />
+		<parameter name="testid" value="8080" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - test random outputs with FFMPG analyzer">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="test" />
+		<parameter name="testid" value="8082" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove udp output stream">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8084" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+	</test>	
+	<test name="Broadcaster - delete all input streams">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8086" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Load test Push out deletion" >
+			<parameter name="login_ip" value="10.7.0.63" />
+			<parameter name="userName" value="admin" />
+			<parameter name="userPassword" value="1234" />
+			<parameter name="uiport" value="4444" /> 
+			<parameter name="testid" value="8088" /> 
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Load test Push creation (both direction) low latency" > 
+		<parameter name="userName_bx1" value="admin" />
+		<parameter name="userName_bx2" value="admin" />
+		<parameter name="userPass_bx1" value="1234" />
+		<parameter name="userPass_bx2" value="1234" />
+		<parameter name="login_ip_bx1" value="10.7.0.74" />
+		<parameter name="login_ip_bx2" value="10.7.0.63" />
+		<parameter name="latency_bx1" value="-1" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="force_p2p" value="0" />
+		<parameter name="mcast_ip" value="0" />
+		<parameter name="mcast_force" value="" />
+		<parameter name="mcast_port" value="0" />
+		<parameter name="type_bx1" value="push" />
+		<parameter name="uiport_bx1" value="4444" />
+		<parameter name="analyze" value="" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="id_bx1" value="pushtest" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="max_outputs" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="password" value="" />
+		<parameter name="host" value="internal.zixi.com" />
+		<parameter name="latency_bx2" value="500" />
+		<parameter name="fec_force" value="0" />
+		<parameter name="session" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="nic" value="" />
+		<parameter name="fec_block" value="300" />
+		<parameter name="type_bx2" value="push" />
+		<parameter name="snames" value="pushtest" />
+		<parameter name="fec_aware" value="0" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="stream" value="test" />
+		<parameter name="port" value="2089" />
+		<parameter name="uiport_bx2" value="4444" />
+		<parameter name="alias" value="pushtest" />
+		<parameter name="id_bx2" value="pushtest" />
+<<<<<<< HEAD:src/test/resources/dtls/broadcaster_push/mixed_dtls_non_dtls.xml
+		<parameter name="number_of_streams" value="10" />
+		<parameter name="testid" value="8027" />
+=======
+		<parameter name="number_of_streams" value="50" />
+		<parameter name="mixed" value="1" />
+		<parameter name="testid" value="8093" />
+>>>>>>> d310f2ca3a977ef3535e42179b7539e59ea500dd:src/test/resources/dtls/broadcaster_push/mixed_dtls_non_dtls_push_load.xml
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - UDP output stream creation low latency">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="port" value="5555" />
+		<parameter name="stream" value="" />
+		<parameter name="streamname" value="test" />
+		<parameter name="host" value="10.7.0.150" />
+		<parameter name="id" value="test" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="ttl" value="5" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="df" value="0" />
+		<parameter name="local_port" value="" />
+		<parameter name="dec_key" value="" />
+		<parameter name="type" value="TS" />
+		<parameter name="rows" value="10" />
+		<parameter name="remux_buff" value="1000" />
+		<parameter name="local_ip" value="0.0.0.0" />
+		<parameter name="remux_restampdts" value="0" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="remux_pcr" value="90" />
+		<parameter name="dec_type" value="" />
+		<parameter name="cols" value="10" />
+		<parameter name="testid" value="8095" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - test random outputs with FFMPG analyzer low latency">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="test" />
+		<parameter name="testid" value="8097" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove udp output stream low latency">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8099" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+		</test>	
+	<test name="Broadcaster - delete all input streams low latency">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8101" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Load test Push out deletion low latency" >
+			<parameter name="login_ip" value="10.7.0.63" />
+			<parameter name="userName" value="admin" />
+			<parameter name="userPassword" value="1234" />
+			<parameter name="uiport" value="4444" /> 
+			<parameter name="testid" value="8103" /> 
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
+		</classes>
+	</test>                    
+</suite>

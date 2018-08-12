@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ZEN: Add admin user to ZEN" duration-ms="2478" started-at="2018-08-12T12:06:07Z" finished-at="2018-08-12T12:06:09Z">
+    <groups>
+    </groups>
+    <test name="ZEN - Add admin user" duration-ms="2478" started-at="2018-08-12T12:06:07Z" finished-at="2018-08-12T12:06:09Z">
+      <class name="com.zixi.zen.test.ZenAddUserTest">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:com.zixi.zen.test.ZenAddUserTest@29774679]" name="startTest" is-config="true" duration-ms="7" started-at="2018-08-12T15:06:07Z" finished-at="2018-08-12T15:06:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6b81ce95]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="testInit()[pri:0, instance:com.zixi.zen.test.ZenAddUserTest@29774679]" name="testInit" is-config="true" duration-ms="1" started-at="2018-08-12T15:06:07Z" finished-at="2018-08-12T15:06:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="beforeTes(java.lang.String)[pri:0, instance:com.zixi.zen.test.ZenAddUserTest@29774679]" name="beforeTes" is-config="true" duration-ms="12" started-at="2018-08-12T15:06:07Z" finished-at="2018-08-12T15:06:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8882]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTes -->
+        <test-method status="PASS" signature="addUserZen(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.zen.test.ZenAddUserTest@29774679]" name="addUserZen" duration-ms="2110" started-at="2018-08-12T15:06:07Z" finished-at="2018-08-12T15:06:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@zixi.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mnk4DNK4]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[zixi.staging.devcloud.zixi.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[443]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Sigal_Yuri]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[zenroot1234]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[urasigal@gmail.com]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[8882]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserZen -->
+        <test-method status="PASS" signature="afterTest(java.lang.reflect.Method, org.testng.ITestResult)[pri:0, instance:com.zixi.zen.test.ZenAddUserTest@29774679]" name="afterTest" is-config="true" duration-ms="330" started-at="2018-08-12T15:06:09Z" finished-at="2018-08-12T15:06:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.zixi.zen.test.ZenAddUserTest.addUserZen(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=addUserZen status=SUCCESS method=ZenAddUserTest.addUserZen(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zixi.zen.test.ZenAddUserTest@29774679] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.zixi.zen.test.ZenAddUserTest -->
+    </test> <!-- ZEN - Add admin user -->
+  </suite> <!-- ZEN: Add admin user to ZEN -->
+</testng-results>
