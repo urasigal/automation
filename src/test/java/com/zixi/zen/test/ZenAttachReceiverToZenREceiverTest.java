@@ -1,17 +1,16 @@
 package com.zixi.zen.test;
 
 import static com.zixi.globals.Macros.*;
-
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.ReceiverSshConnectionDriver;
-import com.zixi.testing.BaseTestZixiMainComponents;
+import com.zixi.testing.BaseTestZixiMainComponentsZen;
 import com.zixi.tools.ApiWorkir;
 
-public class ZenAttachReceiverToZenREceiverTest  extends BaseTestZixiMainComponents{
+public class ZenAttachReceiverToZenREceiverTest  extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new ReceiverSshConnectionDriver(); }
@@ -33,10 +32,10 @@ public class ZenAttachReceiverToZenREceiverTest  extends BaseTestZixiMainCompone
 		JSONObject json = new JSONObject(); 
 		json.put("username", zenUserName).put("password", zenUserPass);
 		
-		String[] cokieValuesForLoggin = new ApiWorkir().zenLogginPost("http://" + zenLogin_ip + "/login" , zenUserName , zenUserPass, 
+		String[] cokieValuesForLoggin = new ApiWorkir().zenLogginPost("https://" + zenLogin_ip + "/login" , zenUserName , zenUserPass, 
 				zenUiport, zenLogin_ip, json.toString().getBytes());
 		
-		String rev_ssh_port = new ApiWorkir().zenSendGet("http://" + zenLogin_ip + "/api/receivers", ZEN_GET_RECEIVER_REV_PORT,
+		String rev_ssh_port = new ApiWorkir().zenSendGet("https://" + zenLogin_ip + "/api/receivers", ZEN_GET_RECEIVER_REV_PORT,
 				cokieValuesForLoggin, zenLogin_ip, zenUiport, ssh_user);
 		driverReslut = ((ReceiverSshConnectionDriver) testDriver).setSshPortReceiver(receiverUserName, receiverUserPass, receiverLogin_ip, receiverUiport, rev_ssh_port); 
 		

@@ -6,8 +6,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.ZenAddTargetDriver;
 import com.zixi.testing.BaseTestZixiMainComponents;
+import com.zixi.testing.BaseTestZixiMainComponentsZen;
 
-public class ZenAddPullTargetTest extends BaseTestZixiMainComponents{
+public class ZenAddPullTargetTest extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new ZenAddTargetDriver(); }
