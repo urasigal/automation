@@ -72,32 +72,7 @@
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Create failover group input 0">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="type" value="Failover" />
-		<parameter name="id" value="tg0" />
-		<parameter name="matrix" value="1" />
-		<parameter name="max_outputs" value="-1" />
-		<parameter name="mcast_out" value="0" />
-		<parameter name="time_shift" value="0" />
-		<parameter name="old" value="0" />
-		<parameter name="fast_connect" value="0" />
-		<parameter name="kompression" value="1" />
-		<parameter name="enc_type" value="" />
-		<parameter name="enc_key" value="" />
-		<parameter name="latency" value="6000" />
-		<parameter name="max_bitrate" value="9999900" />
-		<parameter name="keep_rtp" value="1" />
-		<parameter name="group_components" value="test0&amp;priority=1,test1&amp;priority=1" />
-		<parameter name="testid" value="8543" />    
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterFailOverInputCreationTest">
-     		 </class>
-		</classes>
-	</test>
+	
 	<test name="Broadcaster - Create failover group input 0">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />

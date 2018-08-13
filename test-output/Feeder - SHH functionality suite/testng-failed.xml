@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="5" name="Failed suite [Feeder - SHH functionality suite]" data-provider-thread-count="1">
+  <parameter name="userPassword" value="1234"/>
+  <parameter name="mcast_force" value="0"/>
+  <parameter name="streamId" value="test"/>
+  <parameter name="latency" value="600"/>
+  <parameter name="nic" value="192.168.5.166"/>
+  <parameter name="public_port" value="2079,,,1"/>
+  <parameter name="source" value="test"/>
+  <parameter name="type" value="pull"/>
+  <parameter name="pull_port" value="2089"/>
+  <parameter name="max_out_bandwidth" value="0"/>
+  <parameter name="password" value=""/>
+  <parameter name="private_port" value="2089,10.7.5.177,,1"/>
+  <parameter name="max_cpu" value="90"/>
+  <parameter name="mcast_ttl" value=""/>
+  <parameter name="testid" value="8024"/>
+  <parameter name="id" value="test"/>
+  <parameter name="fec_latency" value="300"/>
+  <parameter name="testduration" value="120"/>
+  <parameter name="use_observer" value="0"/>
+  <parameter name="max_in_bandwidth" value="0"/>
+  <parameter name="max_outputs" value="-1"/>
+  <parameter name="on" value="1"/>
+  <parameter name="time_shift" value="0"/>
+  <parameter name="propertiesFile" value="stream2.properties"/>
+  <parameter name="fec_force" value="1"/>
+  <parameter name="use_user" value="1"/>
+  <parameter name="mcast_ip" value=""/>
+  <parameter name="uname" value="user"/>
+  <parameter name="aname" value="admin"/>
+  <parameter name="userPass" value="1234"/>
+  <parameter name="fec_adaptive" value="1"/>
+  <parameter name="mcast_port" value=""/>
+  <parameter name="use_operator" value="0"/>
+  <parameter name="Host" value="10.7.0.77"/>
+  <parameter name="admin_https" value="0"/>
+  <parameter name="userName" value="admin"/>
+  <parameter name="server_id" value="localhost.localdomain"/>
+  <parameter name="login_ip" value="10.7.0.66"/>
+  <parameter name="max_mem" value="90"/>
+  <parameter name="fec_overhead" value="30"/>
+  <parameter name="func" value="load_live_inputs"/>
+  <parameter name="uiport" value="4444"/>
+  <parameter name="ft_max_quota" value="85"/>
+  <parameter name="mcast_out" value=""/>
+  <parameter name="complete" value=""/>
+  <parameter name="gui_web_port" value="4444"/>
+  <test name="Broadcaster - Pull input stream creation test - default paremeters (failed)">
+    <parameter name="mcast_force" value="0"/>
+    <parameter name="latency" value="6000"/>
+    <parameter name="nic" value="192.168.5.166"/>
+    <parameter name="source" value="test"/>
+    <parameter name="type" value="pull"/>
+    <parameter name="pull_port" value="2089"/>
+    <parameter name="password" value=""/>
+    <parameter name="mcast_ttl" value=""/>
+    <parameter name="testid" value="7710"/>
+    <parameter name="id" value="test"/>
+    <parameter name="fec_latency" value="300"/>
+    <parameter name="max_outputs" value="-1"/>
+    <parameter name="on" value="1"/>
+    <parameter name="time_shift" value="0"/>
+    <parameter name="propertiesFile" value="stream.properties"/>
+    <parameter name="fec_force" value=""/>
+    <parameter name="mcast_ip" value=""/>
+    <parameter name="userPass" value="1234"/>
+    <parameter name="fec_adaptive" value="1"/>
+    <parameter name="mcast_port" value=""/>
+    <parameter name="Host" value="internal.zixi.com"/>
+    <parameter name="userName" value="admin"/>
+    <parameter name="login_ip" value="10.7.0.66"/>
+    <parameter name="fec_overhead" value="30"/>
+    <parameter name="func" value="load_live_inputs"/>
+    <parameter name="uiport" value="4444"/>
+    <parameter name="mcast_out" value=""/>
+    <parameter name="complete" value=""/>
+    <classes>
+      <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest">
+        <methods>
+          <include name="broadcasterPullInCreation" invocation-numbers="0"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterSinglePullInStreamCreationTest -->
+      <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterSingleInputStreamDeletionTest -->
+      <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterUpdateSettingsTest -->
+      <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterInputStatisticSingleStreamTest -->
+      <class name="com.zixi.testing.FeederPostKeyTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.testing.FeederPostKeyTest -->
+    </classes>
+  </test> <!-- Broadcaster - Pull input stream creation test - default paremeters (failed) -->
+</suite> <!-- Failed suite [Feeder - SHH functionality suite] -->

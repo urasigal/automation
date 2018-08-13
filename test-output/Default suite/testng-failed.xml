@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.zixi.zen.test.ZenAttachBroadcasterToZenBroadcasterTest">
+        <methods>
+          <include name="attachBroadcasterToZenBroadcaster"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.zen.test.ZenAttachBroadcasterToZenBroadcasterTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.zixi.testing.ReceiverAddSourceToOutputTest">
+        <methods>
+          <include name="feederOutputToBxTest"/>
+          <include name="testInit"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.ReceiverAddSourceToOutputTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> c557b213ef68b8c4abc4f4bf51f244e1df3f96a9

@@ -1,0 +1,153 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLInk Suite "" -->
+<suite name="ZEN: Add feeder entity to ZEN" verbose="5" data-provider-thread-count="1">
+	<test name="ZEN - Add feeder">
+		<parameter name="userName" value="admin@zixi.com" />
+		<parameter name="userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="80" />
+		<parameter name="feederName" value="feeder_test" />
+		<parameter name="feederUser" value="admin" />
+		<parameter name="feederPass" value="1234" />
+		<parameter name="shhKeyName" value="test" />
+		<parameter name="accessTagName" value="infra" />  
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederTest"/>
+		</classes>
+	</test>
+	
+	<test name="Feeder - upload private key">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="2885" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederPostKeyTest">
+		    <methods>
+        		<include name="uploadPrivateKeyFeeder" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>
+	<test name="Feeder - set ssh tunnel parameters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="zenHost" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="ssh_port" value="22" />
+		<parameter name="ssh_user" value="feeder_test-feeder" />
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="zenFeederName" value="feeder_test" />
+		<parameter name="testid" value="2885" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederSettingsTest">
+		    <methods>
+        		<include name="setFeederTunnelParameters" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>    	
+	<test name="ZEN - test inputs for feeder">
+		<parameter name="feederUserName" value="admin" />
+		<parameter name="feederUserPass" value="1234" />
+		<parameter name="feederLogin_ip" value="10.7.0.65" />
+		<parameter name="feederUiport" value="4200" />
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenHost" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="feederName" value="feeder_test" />
+		<parameter name="testid" value="2885" />	
+		<classes>
+		    <class name="com.zixi.zen.test.ZenFeederInputStreamTest">
+		    <methods>
+        		<include name="checkZenFeederInputStreams" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>    
+</suite>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLInk Suite "" -->
+<suite name="ZEN: Add feeder entity to ZEN" verbose="5" data-provider-thread-count="1">
+	<test name="ZEN - Add feeder">
+		<parameter name="userName" value="admin@zixi.com" />
+		<parameter name="userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="80" />
+		<parameter name="feederName" value="feeder_test" />
+		<parameter name="feederUser" value="admin" />
+		<parameter name="feederPass" value="1234" />
+		<parameter name="shhKeyName" value="test" />
+		<parameter name="accessTagName" value="infra" />  
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederTest"/>
+		</classes>
+	</test>
+	
+	<test name="Feeder - upload private key">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="2885" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederPostKeyTest">
+		    <methods>
+        		<include name="uploadPrivateKeyFeeder" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>
+	<test name="Feeder - set ssh tunnel parameters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="zenHost" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="ssh_port" value="22" />
+		<parameter name="ssh_user" value="feeder_test-feeder" />
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="zenFeederName" value="feeder_test" />
+		<parameter name="testid" value="2885" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederSettingsTest">
+		    <methods>
+        		<include name="setFeederTunnelParameters" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>    	
+	<test name="ZEN - test inputs for feeder">
+		<parameter name="feederUserName" value="admin" />
+		<parameter name="feederUserPass" value="1234" />
+		<parameter name="feederLogin_ip" value="10.7.0.65" />
+		<parameter name="feederUiport" value="4200" />
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenHost" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="feederName" value="feeder_test" />
+		<parameter name="testid" value="2885" />	
+		<classes>
+		    <class name="com.zixi.zen.test.ZenFeederInputStreamTest">
+		    <methods>
+        		<include name="checkZenFeederInputStreams" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>    
+</suite>
+>>>>>>> c557b213ef68b8c4abc4f4bf51f244e1df3f96a9

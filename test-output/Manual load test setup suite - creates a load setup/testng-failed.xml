@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="5" name="Failed suite [Manual load test setup suite - creates a load setup]" data-provider-thread-count="1">
+  <parameter name="remux_bitrate" value="0"/>
+  <parameter name="latency_bx2" value="500"/>
+  <parameter name="latency_bx1" value="-1"/>
+  <parameter name="df" value="0"/>
+  <parameter name="force_p2p" value="0"/>
+  <parameter name="mcast_force" value=""/>
+  <parameter name="fec" value="0"/>
+  <parameter name="nic" value="0.0.0.0"/>
+  <parameter name="public_port" value="2079,,,1"/>
+  <parameter name="type" value="File"/>
+  <parameter name="kompression" value="1"/>
+  <parameter name="path" value="trans_20180322-21.43.36.ts"/>
+  <parameter name="max_out_bandwidth" value="0"/>
+  <parameter name="password" value=""/>
+  <parameter name="private_port" value="2088"/>
+  <parameter name="max_cpu" value="90"/>
+  <parameter name="host" value="127.0.0.1"/>
+  <parameter name="mcast_ttl" value=""/>
+  <parameter name="testid" value="4011"/>
+  <parameter name="id" value="test"/>
+  <parameter name="smoothing" value="0"/>
+  <parameter name="remux_pcr" value="90"/>
+  <parameter name="use_observer" value="0"/>
+  <parameter name="max_in_bandwidth" value="0"/>
+  <parameter name="time_shift" value="0"/>
+  <parameter name="use_user" value="1"/>
+  <parameter name="id_bx2" value="test"/>
+  <parameter name="type_bx2" value="TS"/>
+  <parameter name="type_bx1" value="local-ts"/>
+  <parameter name="uname" value="user"/>
+  <parameter name="old" value="0"/>
+  <parameter name="userName_bx1" value="admin"/>
+  <parameter name="userName_bx2" value="admin"/>
+  <parameter name="fec_adaptive" value="1"/>
+  <parameter name="use_operator" value="0"/>
+  <parameter name="admin_https" value="0"/>
+  <parameter name="server_id" value="localhost.localdomain"/>
+  <parameter name="login_ip" value="127.0.0.1"/>
+  <parameter name="id_bx1" value="test"/>
+  <parameter name="max_bitrate" value="25000000"/>
+  <parameter name="fec_aware" value="0"/>
+  <parameter name="max_mem" value="90"/>
+  <parameter name="local_ip" value="0.0.0.0"/>
+  <parameter name="fast_connect" value="0"/>
+  <parameter name="port" value="9999"/>
+  <parameter name="uiport" value="4444"/>
+  <parameter name="analyze" value=""/>
+  <parameter name="ft_max_quota" value="85"/>
+  <parameter name="ts_port" value="9999"/>
+  <parameter name="gui_web_port" value="4444"/>
+  <parameter name="rtp_type" value="0"/>
+  <parameter name="session" value=""/>
+  <parameter name="range" value="200"/>
+  <parameter name="multi_src" value=""/>
+  <parameter name="dec_key" value=""/>
+  <parameter name="fec_block" value="50"/>
+  <parameter name="matrix" value="1"/>
+  <parameter name="snames" value="test"/>
+  <parameter name="enc_key" value=""/>
+  <parameter name="stream" value="test"/>
+  <parameter name="remux_restampdts" value="0"/>
+  <parameter name="alias" value="test"/>
+  <parameter name="enc_type" value=""/>
+  <parameter name="cols" value="10"/>
+  <parameter name="max_outputs" value="-1"/>
+  <parameter name="streamname" value="test"/>
+  <parameter name="on" value="1"/>
+  <parameter name="userPass_bx1" value="1234"/>
+  <parameter name="uiport_bx1" value="4444"/>
+  <parameter name="userPass_bx2" value="1234"/>
+  <parameter name="fec_force" value="0"/>
+  <parameter name="mcast_ip" value=""/>
+  <parameter name="uiport_bx2" value="4446"/>
+  <parameter name="aname" value="admin"/>
+  <parameter name="local_port" value=""/>
+  <parameter name="number_of_streams" value="200"/>
+  <parameter name="userPass" value="1234"/>
+  <parameter name="mcast_port" value=""/>
+  <parameter name="userName" value="admin"/>
+  <parameter name="rows" value="10"/>
+  <parameter name="ttl" value="5"/>
+  <parameter name="multicast" value=""/>
+  <parameter name="remux_buff" value="1000"/>
+  <parameter name="rtp" value="0"/>
+  <parameter name="fec_overhead" value="20"/>
+  <parameter name="login_ip_bx2" value="127.0.0.1"/>
+  <parameter name="login_ip_bx1" value="127.0.0.1"/>
+  <parameter name="mcast_out" value="0"/>
+  <parameter name="complete" value=""/>
+  <parameter name="dec_type" value=""/>
+  <test name="Broadcaster-Upload DTLS cetrificate to server(failed)">
+    <parameter name="uiport" value="4446"/>
+    <parameter name="userPass" value="1234"/>
+    <parameter name="testid" value="7861"/>
+    <parameter name="userName" value="admin"/>
+    <parameter name="login_ip" value="127.0.0.1"/>
+    <classes>
+      <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.load.testing.BroadcasterMultipleUdpTest -->
+      <class name="com.zixi.testing.BroadcasterFileInputTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterFileInputTest -->
+      <class name="com.zixi.load.testing.BroadcasterMultiplePushManualDiffPortsTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.load.testing.BroadcasterMultiplePushManualDiffPortsTest -->
+      <class name="com.zixi.testing.FeederPostKeyTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="uploadSslCertificateToBroadcasterServer" invocation-numbers="0"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.testing.FeederPostKeyTest -->
+      <class name="com.zixi.load.testing.BroadcasterMultipleUdpManualTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.load.testing.BroadcasterMultipleUdpManualTest -->
+      <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="beforeTes"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterUpdateSettingsTest -->
+    </classes>
+  </test> <!-- Broadcaster-Upload DTLS cetrificate to server(failed) -->
+  <test name="Broadcaster-Upload DTLS private key to server(failed)">
+    <parameter name="uiport" value="4446"/>
+    <parameter name="userPass" value="1234"/>
+    <parameter name="testid" value="7863"/>
+    <parameter name="userName" value="admin"/>
+    <parameter name="login_ip" value="127.0.0.1"/>
+    <classes>
+      <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.load.testing.BroadcasterMultipleUdpTest -->
+      <class name="com.zixi.testing.BroadcasterFileInputTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterFileInputTest -->
+      <class name="com.zixi.load.testing.BroadcasterMultiplePushManualDiffPortsTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.load.testing.BroadcasterMultiplePushManualDiffPortsTest -->
+      <class name="com.zixi.testing.FeederPostKeyTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="uploadPrivateKeyToBroadcasterServer" invocation-numbers="0"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.testing.FeederPostKeyTest -->
+      <class name="com.zixi.load.testing.BroadcasterMultipleUdpManualTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.load.testing.BroadcasterMultipleUdpManualTest -->
+      <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="beforeTes"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterUpdateSettingsTest -->
+    </classes>
+  </test> <!-- Broadcaster-Upload DTLS private key to server(failed) -->
+  <test name="Broadcaster - Multiple  Push test creation (both direction)(failed)">
+    <parameter name="latency_bx2" value="500"/>
+    <parameter name="latency_bx1" value="-1"/>
+    <parameter name="force_p2p" value="0"/>
+    <parameter name="mcast_force" value=""/>
+    <parameter name="session" value=""/>
+    <parameter name="nic" value=""/>
+    <parameter name="fec_block" value="50"/>
+    <parameter name="dec_key" value="8b16a360df560a4e8049847dab7f2d3ef1ef598dc914fc3becd1edef9bc4481e"/>
+    <parameter name="snames" value="test"/>
+    <parameter name="enc_key" value=""/>
+    <parameter name="password" value=""/>
+    <parameter name="stream" value="test"/>
+    <parameter name="host" value="internal.zixi.com"/>
+    <parameter name="mcast_ttl" value=""/>
+    <parameter name="alias" value="test"/>
+    <parameter name="enc_type" value=""/>
+    <parameter name="testid" value="3961"/>
+    <parameter name="max_outputs" value=""/>
+    <parameter name="on" value="1"/>
+    <parameter name="userPass_bx1" value="1234"/>
+    <parameter name="time_shift" value="0"/>
+    <parameter name="uiport_bx1" value="4446"/>
+    <parameter name="userPass_bx2" value="1234"/>
+    <parameter name="fec_force" value="0"/>
+    <parameter name="type_bx2" value="push"/>
+    <parameter name="id_bx2" value="test"/>
+    <parameter name="mcast_ip" value="0"/>
+    <parameter name="type_bx1" value="push"/>
+    <parameter name="uiport_bx2" value="4445"/>
+    <parameter name="userName_bx1" value="admin"/>
+    <parameter name="number_of_streams" value="200"/>
+    <parameter name="userName_bx2" value="admin"/>
+    <parameter name="fec_adaptive" value="1"/>
+    <parameter name="mcast_port" value="0"/>
+    <parameter name="id_bx1" value="test"/>
+    <parameter name="fec_aware" value="0"/>
+    <parameter name="fec_overhead" value="20"/>
+    <parameter name="login_ip_bx2" value="127.0.0.1"/>
+    <parameter name="port" value="2088"/>
+    <parameter name="login_ip_bx1" value="127.0.0.1"/>
+    <parameter name="analyze" value=""/>
+    <parameter name="mcast_out" value=""/>
+    <parameter name="complete" value=""/>
+    <parameter name="dec_type" value="aes256"/>
+    <classes>
+      <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.load.testing.BroadcasterMultipleUdpTest -->
+      <class name="com.zixi.testing.BroadcasterFileInputTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterFileInputTest -->
+      <class name="com.zixi.load.testing.BroadcasterMultiplePushManualDiffPortsTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="broadcasterMultiplePullInCreation" invocation-numbers="0"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.load.testing.BroadcasterMultiplePushManualDiffPortsTest -->
+      <class name="com.zixi.testing.FeederPostKeyTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="startTest"/>
+          <include name="testInit"/>
+          <include name="testInit"/>
+        </methods>
+      </class> <!-- com.zixi.testing.FeederPostKeyTest -->
+      <class name="com.zixi.load.testing.BroadcasterMultipleUdpManualTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="beforeTes"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.load.testing.BroadcasterMultipleUdpManualTest -->
+      <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+        <methods>
+          <include name="testInit"/>
+          <include name="afterTest"/>
+          <include name="startTest"/>
+          <include name="beforeTes"/>
+        </methods>
+      </class> <!-- com.zixi.testing.BroadcasterUpdateSettingsTest -->
+    </classes>
+  </test> <!-- Broadcaster - Multiple  Push test creation (both direction)(failed) -->
+</suite> <!-- Failed suite [Manual load test setup suite - creates a load setup] -->

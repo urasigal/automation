@@ -1,0 +1,73 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="5" name="Failed suite [ZEN: Add user role all allow]" data-provider-thread-count="1">
+  <parameter name="zen_userName" value="admin@zixi.com"/>
+  <parameter name="adaptive_edit" value="1"/>
+  <parameter name="clusters_notify" value="1"/>
+  <parameter name="source_edit" value="1"/>
+  <parameter name="clusters_view" value="1"/>
+  <parameter name="delivery_view" value="1"/>
+  <parameter name="delivery_notify" value="1"/>
+  <parameter name="zen_userPass" value="mnk4DNK4"/>
+  <parameter name="source_notify" value="1"/>
+  <parameter name="login_ip" value="zixi.staging.devcloud.zixi.com"/>
+  <parameter name="adaptive_notify" value="1"/>
+  <parameter name="resource_tag_name" value="allow_all_tag"/>
+  <parameter name="adaptive_view" value="1"/>
+  <parameter name="uiport" value="443"/>
+  <parameter name="clusters_edit" value="1"/>
+  <parameter name="name" value="allow_all_role"/>
+  <parameter name="delivery_edit" value="1"/>
+  <parameter name="testid" value="8882"/>
+  <parameter name="source_view" value="1"/>
+  <test name="ZEN - Add user role(failed)">
+    <parameter name="zen_userName" value="admin@zixi.com"/>
+    <parameter name="adaptive_edit" value="1"/>
+    <parameter name="clusters_notify" value="1"/>
+    <parameter name="source_edit" value="1"/>
+    <parameter name="clusters_view" value="1"/>
+    <parameter name="delivery_view" value="1"/>
+    <parameter name="delivery_notify" value="1"/>
+    <parameter name="zen_userPass" value="mnk4DNK4"/>
+    <parameter name="source_notify" value="1"/>
+    <parameter name="login_ip" value="zixi.staging.devcloud.zixi.com"/>
+    <parameter name="adaptive_notify" value="1"/>
+    <parameter name="resource_tag_name" value="allow_all_tag"/>
+    <parameter name="adaptive_view" value="1"/>
+    <parameter name="uiport" value="443"/>
+    <parameter name="clusters_edit" value="1"/>
+    <parameter name="name" value="allow_all_role"/>
+    <parameter name="delivery_edit" value="1"/>
+    <parameter name="testid" value="8882"/>
+    <parameter name="source_view" value="1"/>
+    <classes>
+      <class name="com.zixi.zen.test.ZenAddUserRoleTest">
+        <methods>
+          <include name="beforeTes"/>
+          <include name="testInit"/>
+          <include name="startTest"/>
+          <include name="afterTest"/>
+          <include name="addUserGroupZen" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.zixi.zen.test.ZenAddUserRoleTest -->
+    </classes>
+  </test> <!-- ZEN - Add user role(failed) -->
+</suite> <!-- Failed suite [ZEN: Add user role all allow] -->
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.zixi.testing.ReceiverAddSourceToOutputTest">
+        <methods>
+          <include name="feederOutputToBxTest"/>
+          <include name="testInit"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.zixi.testing.ReceiverAddSourceToOutputTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> c557b213ef68b8c4abc4f4bf51f244e1df3f96a9
