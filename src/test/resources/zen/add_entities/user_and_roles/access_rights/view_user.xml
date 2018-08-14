@@ -81,15 +81,64 @@
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
 		</classes>
 	</test>
-	<test name="ZEN - Delete Cluster">
+	<test name="ZEN - Try to delete a cluster">
 		<parameter name="zenUserName" value="urasigal@gmail.com" />
 		<parameter name="zenUserPass" value="zenroot1234" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
 		<parameter name="zenUiport" value="443" />
 		<parameter name="clusterName" value="testCluster" />
 		<parameter name="testid" value="8779" />
-	   <classes>
-		    <class name="com.zixi.zen.test.ZenDeleteClusterTest"/>
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="tryDeleteClusterFromZen" />
+     		 </methods>
+     	  </class>
 		</classes>
-	</test> 
+	</test>
+	<test name="ZEN - Delete a cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="testCluster" />
+		<parameter name="testid" value="8779" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="tryDeleteClusterFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete a user">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="userName" value="non_admin" />
+		<parameter name="testid" value="8779" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteUserTest">
+		    <methods>
+        		<include name="deleteUserFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete a role">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="roleName" value="non_admin" />
+		<parameter name="testid" value="8779" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteRoleTest">
+		    <methods>
+        		<include name="deleteRoleFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>    
 </suite>
