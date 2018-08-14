@@ -22,6 +22,6 @@ public class ZenDeleteUserTest extends BaseTestZixiMainComponentsZen {
 		new String[] {zenUserName, zenUserPass, zenLogin_ip, zenUiport, userName, testid});
 		
 		driverReslut = ((ZenDeleteClusterDriver) testDriver).deleteUser(zenUserName, zenUserPass, zenLogin_ip, zenUiport, userName);
-		Assert.assertEquals(driverReslut.getResult(), "true"); 
+		Assert.assertEquals(driverReslut.getResult(), "{\"success\":true}"); 
 	}
 }
