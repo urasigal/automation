@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- TestLInk Suite "" -->
-<suite name="ZEN: access rights - view resources user" verbose="5" data-provider-thread-count="1">
+<!-- A non admin user with a view access rights that can only observe the system resources.
+	The user gets his rights by be assigned to a role with only view permissions.
+	User shouldn't be able edit any system resources. 
+-->
+<suite name="ZEN: user access rights - view resources user" verbose="5" data-provider-thread-count="1">
 	<test name="ZEN - Add a view user role">
 		<parameter name="zen_userName" value="admin@zixi.com" />
 		<parameter name="zen_userPass" value="mnk4DNK4" />
@@ -52,7 +55,7 @@
 		    <class name="com.zixi.zen.test.ZenAssignUserToRoleTest"/>
 		</classes>
 	</test>
-	<test name="ZEN - Add AWS cluster">
+	<test name="ZEN - Add AWS cluster resource">
 		<parameter name="zenUserName" value="admin@zixi.com" />
 		<parameter name="zenUserPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
@@ -80,5 +83,65 @@
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
 		</classes>
-	</test> 
+	</test>
+	<test name="ZEN - Try to delete a cluster test the user access rights">
+		<parameter name="zenUserName" value="urasigal@gmail.com" />
+		<parameter name="zenUserPass" value="zenroot1234" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="testCluster" />
+		<parameter name="testid" value="8779" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="tryDeleteClusterFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete a cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="testCluster" />
+		<parameter name="testid" value="8779" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="deleteClusterFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete a user">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="userName" value="non_admin" />
+		<parameter name="testid" value="8779" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteUserTest">
+		    <methods>
+        		<include name="deleteUserFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete a role">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="roleName" value="view_all_role" />
+		<parameter name="testid" value="8779" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteRoleTest">
+		    <methods>
+        		<include name="deleteRoleFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>    
 </suite>
