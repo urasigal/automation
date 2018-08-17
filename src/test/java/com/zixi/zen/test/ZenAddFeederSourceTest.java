@@ -4,11 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.zixi.drivers.drivers.AddFeederSourceDriver;
-import com.zixi.testing.BaseTestZixiMainComponents;
+import com.zixi.testing.BaseTestZixiMainComponentsZen;
 
-public class ZenAddFeederSourceTest extends BaseTestZixiMainComponents{
+public class ZenAddFeederSourceTest extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new AddFeederSourceDriver(); }
@@ -31,6 +30,7 @@ public class ZenAddFeederSourceTest extends BaseTestZixiMainComponents{
 		driverReslut = ((AddFeederSourceDriver) testDriver).addFeederSource(zenUser, zenPass, zenLogin_ip, zenUiPort, sourceName,
 		broadcaster_cluster_name, feeder_name, broadcaster_id, input_id, max_bitrate, latency, monitor_pids_change,
 		resource_tag_ids, password, encryption, encryption_key, allow_outputs, outputs_password, monitor_only, cleanup_outputs, testid);
+		
 		Assert.assertEquals(driverReslut.getResult(), "true"); 
 	}
 	
