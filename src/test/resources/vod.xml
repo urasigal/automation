@@ -23,12 +23,14 @@
 		<parameter name="max_download_bitrate" value="100000" />
 		<parameter name="max_upload_bitrate" value="100000" />
 		<parameter name="ft_zixi_index" value="1" />
+		<parameter name="ft_scan_on_startup" value="1" />
+		<parameter name="ft_hls_index" value="1" />
+		<parameter name="ft_mpd_index" value="1" />
 		<parameter name="testid" value="1129" />  
 		<classes>
 		    <class name="com.zixi.testing.BxFileTransferAndVodSettingsTest"/>
 		</classes>
 	</test>
-	
 	<test name="Broadcaster - Pull input stream creation test - VOD WEB API">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
