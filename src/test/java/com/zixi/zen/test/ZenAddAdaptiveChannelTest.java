@@ -4,11 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.zixi.drivers.drivers.ZenAddAdaptiveChannelDriver;
-import com.zixi.testing.BaseTestZixiMainComponents;
+import com.zixi.testing.BaseTestZixiMainComponentsZen;
 
-public class ZenAddAdaptiveChannelTest  extends BaseTestZixiMainComponents{
+public class ZenAddAdaptiveChannelTest  extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new ZenAddAdaptiveChannelDriver(); }
