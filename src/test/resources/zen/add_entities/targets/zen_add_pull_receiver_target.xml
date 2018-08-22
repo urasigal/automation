@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLInk Suite "" -->
-<suite name="ZEN: Add pull broadcasgter target ot ZEN" verbose="5" data-provider-thread-count="1">
-<!-- The goal of the test suite is to add ZEN PULL broadcaster target.
+<suite name="ZEN: Add pull ZEN receiver target ot ZEN" verbose="5" data-provider-thread-count="1">
+<!-- The goal of the test suite is to add ZEN PULL ZEN receiver target.
 	 The target consists of a Channel and a destination target.
 	 The channel, in turn, consists of a "Source" and a "process cluster".
-	 The broadcaster target of the TARGET entity is belonging to a some cluster.
+	 The ZEN receiver target of the TARGET entity is previously defined.
 	 The "SOURCE" entity consists of a "FEEDER" entity which encapsulates an actual feeder and the "ingest cluster"
 	 For this particular test suite only AWS clusters will be used.
 -->
@@ -59,7 +59,40 @@
      		 </methods>
      		 </class>
 		</classes>  
-	</test> 
+	</test>
+	<!-- Add ZEN receiver entity -->
+	<test name="ZEN - Add receiver">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="receiverName" value="target_destination" />
+		<parameter name="receiverUser" value="admin" />
+		<parameter name="receiverPass" value="1234" />
+		<parameter name="shhKeyName" value="test" />
+		<parameter name="accessTagName" value="infra" />  
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddReceiverTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Attach receiver to ZEN entyty">
+		<parameter name="receiverUserName" value="admin" />
+		<parameter name="receiverUserPass" value="1234" />
+		<parameter name="receiverLogin_ip" value="10.7.0.67" />
+		<parameter name="receiverUiport" value="4300" />
+		<parameter name="sshHost" value="zixi.stagingio.devcloud.zixi.com" />
+		<parameter name="ssh_port" value="22" />
+		<parameter name="ssh_user" value="target_destination" />
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAttachReceiverToZenREceiverTest"/>
+		</classes>
+	</test>     
 <!-- Add an ingest cluster (to be used in a feeder source as an ingest cluster) -->
 	<test name="ZEN - Add AWS ingest cluster">
 		<parameter name="zenUserName" value="admin@zixi.com" />
@@ -78,7 +111,7 @@
 		<parameter name="dns_prefix" value="ingestcluster" />
 		<parameter name="is_auto_scaling" value="true" />
 		<parameter name="activation_key" value="demo-d0b6-fa1a-55b5" />
-		<parameter name="bx_version" value="1.11.0.27500" />
+		<parameter name="bx_version" value="12.1.30634" />
 		<parameter name="aws_account_name" value="zixi-zen" />
 		<parameter name="region" value="us-east-1" />
 		<parameter name="min_size" value="1" />
@@ -135,7 +168,7 @@
 		<parameter name="dns_prefix" value="processcluster" />
 		<parameter name="is_auto_scaling" value="true" />
 		<parameter name="activation_key" value="demo-d0b6-fa1a-55b5" />
-		<parameter name="bx_version" value="1.11.0.27500" />
+		<parameter name="bx_version" value="12.1.30634" />
 		<parameter name="aws_account_name" value="zixi-zen" />
 		<parameter name="region" value="us-east-1" />
 		<parameter name="min_size" value="1" />
@@ -167,37 +200,7 @@
 		    <class name="com.zixi.zen.test.ZenAddAdaptiveChannelTest"/>
 		</classes>
 	</test>
-	<!-- Add destination broadcaster (additional cluster will be added in this case) -->
-	<test name="ZEN - Add AWS destination cluster">
-		<parameter name="zenUserName" value="admin@zixi.com" />
-		<parameter name="zenUserPass" value="mnk4DNK4" />
-		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
-		<parameter name="zenUiport" value="80" />
-		<parameter name="clusterName" value="destinationcluster" />
-		<parameter name="resource_tag_name" value="infra" />
-		<parameter name="can_input" value="1" />
-		<parameter name="can_output" value="1" />
-		<parameter name="can_process" value="1" />
-		<parameter name="http_streaming_port" value="7777" />
-		<parameter name="auth_mode" value="zen" />
-		<parameter name="allow_unmanaged_inputs" value="1" />
-		<parameter name="allow_unmanaged_outputs" value="1" />
-		<parameter name="dns_prefix" value="destinationcluster" />
-		<parameter name="is_auto_scaling" value="true" />
-		<parameter name="activation_key" value="demo-d0b6-fa1a-55b5" />
-		<parameter name="bx_version" value="1.11.0.27500" />
-		<parameter name="aws_account_name" value="zixi-zen" />
-		<parameter name="region" value="us-east-1" />
-		<parameter name="min_size" value="1" />
-		<parameter name="max_size" value="1" />
-		<parameter name="api_user" value="admin" />
-		<parameter name="api_password" value="1234" />
-		<parameter name="testid" value="8880" />  
-		<classes>
-		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
-		</classes>
-	</test> 
-	<test name="ZEN - Add pull broadcaster target to ZEN">
+	<test name="ZEN - Add pull ZEN receiver target to ZEN">
 		<parameter name="zenUser" value="admin@zixi.com" />
 		<parameter name="zenPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
@@ -207,8 +210,8 @@
 		<parameter name="targetType" value="pull" />
 		<parameter name="channel_name" value="path_through_channel" />
 		<parameter name="password" value="1234" />
-		<parameter name="receiver_id" value="" />
-		<parameter name="broadcaster_id" value="destinationcluster@aws" />
+		<parameter name="receiver_id" value="target_destination" /> <!-- In this case the "receiver_id stands for ZEN receiver name" -->
+		<parameter name="broadcaster_id" value="" />
 		<parameter name="output_id" value="" />
 		<parameter name="receiver_name" value="" />
 		<parameter name="zixi_encryption_key" value="" />
