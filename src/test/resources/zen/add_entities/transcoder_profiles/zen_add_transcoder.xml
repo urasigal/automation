@@ -3,6 +3,10 @@
 <!-- TestLInk Suite "" -->
 <suite name="ZEN: Add transcoder profile entity to ZEN" verbose="5" data-provider-thread-count="1">
 <test name="ZEN - Attach receiver to ZEN entyty">
+	<parameter name="zenUser" value="admin@zixi.com" />
+	<parameter name="zenPass" value="mnk4DNK4" />
+	<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+	<parameter name="zenUiPort" value="80" />
 	<parameter name="audio_bitrate" value="80" />
 	<parameter name="audio_encoder_profile" value="low" />
 	<parameter name="bitrate_avg" value="5000" />
