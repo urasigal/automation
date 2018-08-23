@@ -116,6 +116,7 @@
 		<parameter name="region" value="us-east-1" />
 		<parameter name="key_pair" value="domainer-admin" /> <!-- the name of predefined key pair on AWS -->
 		<parameter name="security_group" value="offices" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
 		<parameter name="min_size" value="1" />
 		<parameter name="max_size" value="1" />
 		<parameter name="api_user" value="admin" />
@@ -175,6 +176,7 @@
 		<parameter name="region" value="us-east-1" />
 		<parameter name="key_pair" value="domainer-admin" /> <!-- the name of predefined key pair on AWS -->
 		<parameter name="security_group" value="offices" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
 		<parameter name="min_size" value="1" />
 		<parameter name="max_size" value="1" />
 		<parameter name="api_user" value="admin" />
@@ -216,6 +218,7 @@
 		<parameter name="password" value="1234" />
 		<parameter name="receiver_id" value="target_destination" /> <!-- In this case the "receiver_id stands for ZEN receiver name" -->
 		<parameter name="security_group" value="offices" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
 		<parameter name="broadcaster_id" value="" />
 		<parameter name="output_id" value="" />
 		<parameter name="receiver_name" value="" />
