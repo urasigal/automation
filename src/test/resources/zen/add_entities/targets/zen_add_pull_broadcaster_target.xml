@@ -168,6 +168,8 @@
 	    <parameter name="is_transcoding" value="false" />
 	    <parameter name="is_source_included" value="false" />
 		<parameter name="inputs" value="feeder_output_source@" />
+		<parameter name="log_scte" value="1" />
+		<parameter name="profile_names" value="1920x1080@31280x720" />
 		<parameter name="testid" value="8878" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddAdaptiveChannelTest"/>
