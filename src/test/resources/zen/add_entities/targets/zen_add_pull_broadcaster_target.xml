@@ -79,10 +79,10 @@
 		<parameter name="is_auto_scaling" value="true" />
 		<parameter name="activation_key" value="demo-c689-6565-9b93" />
 		<parameter name="bx_version" value="1.11.0.27500" />
-		<parameter name="aws_account_name" value="zixi-zen" />
+		<parameter name="aws_account_name" value="zixi-main" />
 		<parameter name="region" value="us-east-1" />
-		<parameter name="key_pair" value="domainer-admin" /> <!-- the name of predefined key pair on AWS -->
-		<parameter name="security_group" value="offices" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="key_pair" value="gsg-keyoair" /> <!-- the name of predefined key pair on AWS -->
+		<parameter name="security_group" value="QA" /> <!-- the name of predefined security group on AWS -->
 		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
 		<parameter name="min_size" value="1" />
 		<parameter name="max_size" value="1" />
