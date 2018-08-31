@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ZEN: Add transcoder channel" verbose="5" data-provider-thread-count="1">
+<test name="ZEN - Add transcoded channel">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+	    <parameter name="type" value="transcoded" />
+	    <parameter name="name" value="transcoded_channel" />
+	    <parameter name="resource_tag_ids" value="infra" />
+	    <parameter name="broadcaster_cluster_id" value="elastic_ip" />
+	    <parameter name="adaptive" value="true" />
+	    <parameter name="delivery" value="false" />
+	    <parameter name="is_transcoding" value="true" />
+	    <parameter name="is_source_included" value="false" />
+		<parameter name="inputs" value="internal" />
+		<parameter name="log_scte" value="1" />
+		<parameter name="profile_names" value="1920x1080@31280x720" />
+		<parameter name="testid" value="2885" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddAdaptiveChannelTest"/>
+		</classes>
+	</test> 
+</suite>
