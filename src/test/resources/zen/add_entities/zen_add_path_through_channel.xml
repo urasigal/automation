@@ -14,7 +14,7 @@
 		10. Attach an actual broadcaster to the sources cluster.
 		11. Add first feeder source entity to ZEN.
 		12. Add second feeder source entity to ZEN.
-		13. Add adaptive channel to ZEN.
+		13. Add path through channel to ZEN.
 	-->
 	<test name="ZEN - Add feeder entity">
 		<parameter name="userName" value="admin@zixi.com" />
@@ -105,6 +105,9 @@
 		<parameter name="bx_version" value="" />
 		<parameter name="aws_account_name" value="" />
 		<parameter name="region" value="" />
+		<parameter name="key_pair" value="domainer-admin" /> <!-- the name of predefined key pair on AWS -->
+		<parameter name="security_group" value="offices" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
 		<parameter name="min_size" value="" />
 		<parameter name="max_size" value="" />
 		<parameter name="api_user" value="" />
@@ -172,6 +175,9 @@
 		<parameter name="bx_version" value="" />
 		<parameter name="aws_account_name" value="" />
 		<parameter name="region" value="" />
+		<parameter name="key_pair" value="domainer-admin" /> <!-- the name of predefined key pair on AWS -->
+		<parameter name="security_group" value="offices" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
 		<parameter name="min_size" value="" />
 		<parameter name="max_size" value="" />
 		<parameter name="api_user" value="" />

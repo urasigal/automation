@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- A non admin user with a edit access rights that can observe and edit system resources.
+	The user gets its rights by to be assigned to a role with only view permissions.
+	User should be able view and edit any system resources. 
+-->
+<suite name="ZEN: user access rights - edit resources user" verbose="5" data-provider-thread-count="1">
+	<test name="ZEN - Add an edit user role">
+		<parameter name="zen_userName" value="admin@zixi.com" />
+		<parameter name="zen_userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="443" />
+		<parameter name="name" value="edit_all_role" />
+		<parameter name="clusters_edit" value="1" />
+		<parameter name="clusters_view" value="1" />
+		<parameter name="clusters_notify" value="1" />
+		<parameter name="source_edit" value="1" />
+		<parameter name="source_view" value="1" />
+		<parameter name="source_notify" value="0" />
+		<parameter name="adaptive_edit" value="1" />
+		<parameter name="adaptive_view" value="1" />
+		<parameter name="adaptive_notify" value="0" />
+		<parameter name="delivery_edit" value="1" />
+		<parameter name="delivery_view" value="1" />
+		<parameter name="delivery_notify" value="0" />
+		<parameter name="resource_tag_name" value="edit_all_tag" />
+		<parameter name="testid" value="8948" />
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddUserRoleTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Add non admin user">
+		<parameter name="zen_userName" value="admin@zixi.com" />
+		<parameter name="zen_userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="443" />
+		<parameter name="name" value="non_admin" />
+		<parameter name="password" value="zenroot1234" />
+		<parameter name="email" value="urasigal@gmail.com" />
+		<parameter name="is_admin" value="0" />
+		<parameter name="testid" value="8950" />
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddUserTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Assign user to role">
+		<parameter name="zen_userName" value="admin@zixi.com" />
+		<parameter name="zen_userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="443" />
+		<parameter name="role_name" value="edit_all_role" />
+		<parameter name="user_name" value="non_admin" />
+		<parameter name="testid" value="8952" />
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAssignUserToRoleTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Add AWS cluster resource">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="clusterName" value="testCluster" />
+		<parameter name="resource_tag_name" value="edit_all_tag" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="testCluster" />
+		<parameter name="is_auto_scaling" value="true" />
+		<parameter name="activation_key" value="demo-d0b6-fa1a-55b5" />
+		<parameter name="bx_version" value="12.1.30634" />
+		<parameter name="aws_account_name" value="zixi-zen" />
+		<parameter name="region" value="us-east-1" />
+		<parameter name="min_size" value="1" />
+		<parameter name="max_size" value="1" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="8954" />
+		<parameter name="testid" value="" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Delete a cluster">
+		<parameter name="zenUserName" value="urasigal@gmail.com" />
+		<parameter name="zenUserPass" value="zenroot1234" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="testCluster" />
+		<parameter name="testid" value="8958" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="deleteClusterFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete a user">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="userName" value="non_admin" />
+		<parameter name="testid" value="8960" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteUserTest">
+		    <methods>
+        		<include name="deleteUserFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete a role">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="roleName" value="edit_all_role" />
+		<parameter name="testid" value="8962" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteRoleTest">
+		    <methods>
+        		<include name="deleteRoleFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>    
+</suite>
