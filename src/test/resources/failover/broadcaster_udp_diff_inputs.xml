@@ -18,7 +18,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="iphone.ts" />
-		<parameter name="testid" value="8641" />    
+		<parameter name="testid" value="8987" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -44,7 +44,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="10M.ts" />
-		<parameter name="testid" value="8641" />    
+		<parameter name="testid" value="8989" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -104,7 +104,7 @@
 		<parameter name="dec_type" value="" />				
 		<parameter name="cols" value="10" />				
 		<parameter name="number_of_streams" value="2" />									
-		<parameter name="testid" value="8643" />				
+		<parameter name="testid" value="8991" />				
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest"/>
 		</classes>
@@ -160,7 +160,7 @@
 		<parameter name="dec_type" value="" />				
 		<parameter name="cols" value="10" />				
 		<parameter name="number_of_streams" value="2" />									
-		<parameter name="testid" value="8645" />				
+		<parameter name="testid" value="8993" />				
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest"/>
 		</classes>
@@ -185,7 +185,7 @@
 		<parameter name="max_bitrate" value="9999900" />
 		<parameter name="keep_rtp" value="1" />
 		<parameter name="group_components" value="test0&amp;priority=1,test1&amp;priority=1,test10&amp;priority=1,test11&amp;priority=1" />
-		<parameter name="testid" value="8647" />    
+		<parameter name="testid" value="8995" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFailOverInputCreationTest">
      		 </class>
@@ -197,7 +197,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
 		<parameter name="analyze" value="1" />			
-		<parameter name="testid" value="8578" />		
+		<parameter name="testid" value="8997" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
@@ -232,13 +232,13 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="8655" />  
+		<parameter name="testid" value="8999" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG test">
-		<parameter name="testid" value="8657" />  
+		<parameter name="testid" value="9001" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -249,13 +249,13 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test0" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8659" />  
+		<parameter name="testid" value="9003" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG test 0">
-		<parameter name="testid" value="8663" />  
+		<parameter name="testid" value="9005" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -266,13 +266,13 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test1" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8665" />  
+		<parameter name="testid" value="9007" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG test 1">
-		<parameter name="testid" value="8669" />  
+		<parameter name="testid" value="9009" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -283,13 +283,13 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test10" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8671" />  
+		<parameter name="testid" value="9011" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG test 5">
-		<parameter name="testid" value="8675" />  
+		<parameter name="testid" value="9013" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -300,7 +300,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="tg" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8679" />  
+		<parameter name="testid" value="9015" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -310,7 +310,7 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8681" />  
+		<parameter name="testid" value="9017" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
@@ -320,7 +320,7 @@
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="8683" /> 
+			<parameter name="testid" value="9019" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
@@ -332,7 +332,7 @@
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="8685" />  
+		<parameter name="testid" value="9021" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -344,7 +344,7 @@
 		<parameter name="streamId" value="test_10M" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="8685" />  
+		<parameter name="testid" value="9023" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
