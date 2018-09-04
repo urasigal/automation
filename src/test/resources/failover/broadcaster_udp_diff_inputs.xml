@@ -191,17 +191,17 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream">
+	<test name="Broadcaster - turn TR101 on all input streams">
 		<parameter name="login_ip" value="10.7.0.75" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8653" />		
+		<parameter name="analyze" value="1" />			
+		<parameter name="testid" value="8578" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
+	        		<include name="broadcasterTurnOnAnalyzerOnAllStreams" />
 	     		</methods>
      		 </class>
 		</classes>
