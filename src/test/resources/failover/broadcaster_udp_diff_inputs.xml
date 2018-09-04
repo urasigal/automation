@@ -191,36 +191,6 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - turn TR101 on all input streams">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="analyze" value="1" />			
-		<parameter name="testid" value="8651" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterTurnOnAnalyzerOnAllStreams" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8653" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -269,21 +239,6 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 0">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8661" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
 	<test name="FFMPEG test 0">
 		<parameter name="testid" value="8663" />  
 		<classes>
@@ -301,21 +256,6 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 1">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8667" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
-		</classes>
-	</test>
 	<test name="FFMPEG test 1">
 		<parameter name="testid" value="8669" />  
 		<classes>
@@ -331,21 +271,6 @@
 		<parameter name="testid" value="8671" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - compare continuity counter errors to reference stream 5">
-		<parameter name="login_ip" value="10.7.0.75" />		
-		<parameter name="userName" value="admin" />			
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />		
-		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8673" />		
-		<classes>
-		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-			    <methods>
-	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
-	     		</methods>
-     		 </class>
 		</classes>
 	</test>
 	<test name="FFMPEG test 5">
