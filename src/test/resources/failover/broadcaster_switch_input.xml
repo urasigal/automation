@@ -353,7 +353,7 @@
 		</classes>
 	</test>
 	
-	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
+	<test name="Broadcaster - Pull input stream from primary BX">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.75" />
@@ -386,7 +386,7 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
+	<test name="Broadcaster - Pull input stream from secondary BX">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.66" />
