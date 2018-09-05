@@ -422,7 +422,7 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.75" />
-		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="id" value="test0" />
 		<parameter name="source" value="tg" />
 		<parameter name="uiport" value="4444" />
@@ -455,7 +455,7 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.66" />
-		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="id" value="test1" />
 		<parameter name="source" value="tg" />
 		<parameter name="uiport" value="4444" />
@@ -539,7 +539,7 @@
 	<test name="Broadcaster - Failover group on destination BX">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Failover" />
 		<parameter name="id" value="tg" />
@@ -593,7 +593,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - turn TR101 destination BX">
-		<parameter name="login_ip" value="10.7.0.77" />		
+		<parameter name="login_ip" value="10.7.0.72" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
@@ -610,7 +610,7 @@
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="tg" />
 		<parameter name="streamname" value="tg" />
@@ -663,7 +663,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - compare continuity counter dest 1">
-		<parameter name="login_ip" value="10.7.0.77" />		
+		<parameter name="login_ip" value="10.7.0.72" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
@@ -696,7 +696,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - compare continuity counter dest 1_ back">
-		<parameter name="login_ip" value="10.7.0.77" />		
+		<parameter name="login_ip" value="10.7.0.72" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
@@ -729,7 +729,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - compare continuity counter dest 2">
-		<parameter name="login_ip" value="10.7.0.77" />		
+		<parameter name="login_ip" value="10.7.0.72" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
@@ -762,7 +762,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - compare continuity counter dest 2_ back">
-		<parameter name="login_ip" value="10.7.0.77" />		
+		<parameter name="login_ip" value="10.7.0.72" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
@@ -795,7 +795,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - compare continuity counter dest 3">
-		<parameter name="login_ip" value="10.7.0.77" />		
+		<parameter name="login_ip" value="10.7.0.72" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
@@ -828,7 +828,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - compare continuity counter dest 3_ back">
-		<parameter name="login_ip" value="10.7.0.77" />		
+		<parameter name="login_ip" value="10.7.0.72" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
@@ -861,7 +861,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - compare continuity counter dest 4">
-		<parameter name="login_ip" value="10.7.0.77" />		
+		<parameter name="login_ip" value="10.7.0.72" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
@@ -894,7 +894,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - compare continuity counter dest 4_ back">
-		<parameter name="login_ip" value="10.7.0.77" />		
+		<parameter name="login_ip" value="10.7.0.72" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
@@ -908,8 +908,28 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - delete all input streams">
+	<test name="Broadcaster - delete all input primary BX">
 		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="9017" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete outputs stream primery BX" >
+			<parameter name="login_ip" value="10.7.0.75" />
+			<parameter name="userName" value="admin" />
+			<parameter name="userPassword" value="1234" />
+			<parameter name="uiport" value="4444" /> 
+			<parameter name="testid" value="9019" /> 
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete input on source BX">
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
@@ -928,8 +948,18 @@
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - delete outputs stream primery BX" >
-			<parameter name="login_ip" value="10.7.0.75" />
+	<test name="Broadcaster - delete input on secondary BX">
+		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="9017" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - delete all outputs on secondary BX" >
+			<parameter name="login_ip" value="10.7.0.66" />
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
@@ -937,29 +967,24 @@
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
-	</test>
-	<test name="Broadcaster - Remove first Fiel input"> 
-		<parameter name="login_ip" value="10.7.0.74" />
+		<test name="Broadcaster - delete input on destination BX">
+		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test" />
-		<parameter name="testid" value="9021" />  
+		<parameter name="testid" value="9017" />  
 		<classes>
-		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove second Fiel input"> 
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="test_10M" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test" />
-		<parameter name="testid" value="9023" />  
+	<test name="Broadcaster - delete all outputs on destination BX" >
+			<parameter name="login_ip" value="10.7.0.72" />
+			<parameter name="userName" value="admin" />
+			<parameter name="userPassword" value="1234" />
+			<parameter name="uiport" value="4444" /> 
+			<parameter name="testid" value="9019" /> 
 		<classes>
-		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
-	</test>                         
+	</test>              
 </suite>
