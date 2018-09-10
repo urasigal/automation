@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Broadcaster - CQA detect all case" verbose="5" data-provider-thread-count="1">
+<!-- frozen stream detection feature H264 25FPS 640_480 -->
+	<test name="Broadcaster - Create a file input steam">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="H264_25fps_640_480" /> 
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="h264_640_480_25.ts" />
+		<parameter name="testid" value="8689" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - turn TR101 on all input streams">
+		<parameter name="login_ip" value="10.7.0.63" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />		
+		<parameter name="analyze" value="1" />			
+		<parameter name="testid" value="8691" />		
+		<classes>
+		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
+			    <methods>
+	        		<include name="broadcasterTurnOnAnalyzerOnAllStreams" />
+	     		</methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - detect all stream quality failures">
+		<parameter name="login_ip" value="10.7.0.63" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="streamName" value="H264_25fps_640_480" />		
+		<parameter name="frozenCounter" value="2" />
+		<parameter name="streamLenthSec" value="327" />			
+		<parameter name="testid" value="8693" />		
+		<classes>
+		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
+			    <methods>
+	        		<include name="broadcasterCqaAllOptions" />
+	     		</methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove File input">
+		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="H264_25fps_640_480" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="H264_25fps_640_480" />
+		<parameter name="testid" value="8695" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+</suite>
