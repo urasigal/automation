@@ -82,8 +82,7 @@ public class SetAnalyzerTest extends BaseTestZixiMainComponents
 		driverReslut = ((BroadcasterAnalyzerDriver) testDriver).feederCompareStatisticCcErrors( login_ip, userName, userPassword, uiport, streams, ref_stream);
 		
 		Assert.assertEquals(driverReslut.getResult(), "passed");
-		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_feeder"));
-				
+		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_feeder"));		
 	}
 	
 	
@@ -110,7 +109,7 @@ public class SetAnalyzerTest extends BaseTestZixiMainComponents
 		// Detect all CQA stream failures.
 		// This test will see at stream's statistics and search for all CQA failures.
 		// The test is designed to run the whole stream and then count the same numbers of all CQA failures,
-		// so the stream has to be designed in particular way - one appropriate failure for each quality event trigger.
+		// so the stream has to be designed in particular way - one appropriate failure for each quality event occasion.
 		
 		@Parameters({ "login_ip", "userName", "userPassword", "uiport", "streamName", "frozenCounter", "streamLenthSec", "testid" })
 		@Test
