@@ -40,7 +40,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 	
-	@Parameters({ "remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport",
+	@Parameters({ "remoteBX_login_ip", "remoteFXuserName", "remoteFXuserPassword", "remoteFXuiport",
 		"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "streams", "testid" })
 		@Test
 		public void feederSwitchInputsFaioverNormalDistibution(String remoteBX_login_ip, String remoteFXuserName, 
