@@ -21,6 +21,9 @@
 		<parameter name="bx_version" value="" />
 		<parameter name="aws_account_name" value="" />
 		<parameter name="region" value="" />
+		<parameter name="key_pair" value="" /> <!-- the name of predefined key pair on AWS -->
+		<parameter name="security_group" value="offices" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
 		<parameter name="min_size" value="" />
 		<parameter name="max_size" value="" />
 		<parameter name="api_user" value="" />
