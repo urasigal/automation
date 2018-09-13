@@ -215,11 +215,15 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testElapsedTime" value="600000" /> 
-		<parameter name="streamSwitchInterval" value="3000" />
+		<parameter name="streamSwitchInterval" value="15000" />
 		<parameter name="streamReferenceName" value="tg" />
 		<parameter name="testid" value="8714" />
 		<classes>
-		    <class name="com.zixi.analyze.testing.BroadcasterNrmlDistSwitchFailoverTest"/>
+		    <class name="com.zixi.analyze.testing.BroadcasterNrmlDistSwitchFailoverTest">
+		    <methods>
+        		<include name="broadcasterSwitchInputsFaioverNormalDistibutionTest" />
+     		 </methods>
+     		 </class>
 		</classes>  
 	</test>
 	<!-- To do: Make a test that will in normal manner distributed stops/starts the output streams   -->
