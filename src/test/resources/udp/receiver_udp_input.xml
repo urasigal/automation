@@ -28,7 +28,7 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="296" />  
+		<parameter name="testid" value="9141" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -42,7 +42,7 @@
         <parameter name="host" value="" />
         <parameter name="port" value="5577" />
         <parameter name="nic" value="" />
-		<parameter name="testid" value="974" />  
+		<parameter name="testid" value="9116" />  
 		<classes>
 		    <class name="com.zixi.testing.ReceiverAddUdpInputTest"/>
 		</classes>
@@ -64,13 +64,13 @@
 		<parameter name="cols" value="10" />
 		<parameter name="remux_bitrate" value="" />
 		<parameter name="input_stream" value="test1" />
-		<parameter name="testid" value="972" />
+		<parameter name="testid" value="9118" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
 		</classes>
 	</test>
 	<test name="FFMPEG test default parameters">
-		<parameter name="testid" value="974" />  
+		<parameter name="testid" value="9120" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -82,7 +82,7 @@
 		<parameter name="uiport" value="4300" />
 		<parameter name="stream_name" value="test1" />
 		<parameter name="destination" value="10.7.0.150:5555" />
-		<parameter name="testid" value="976" />
+		<parameter name="testid" value="9122" />
 		<classes>
 			<class name="com.zixi.testing.ReceiverOutputStreamDeletionTest" />
 		</classes>
@@ -93,7 +93,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="302" />  
+		<parameter name="testid" value="9124" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -104,7 +104,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4300" />
 		<parameter name="id" value="test1" />
-		<parameter name="testid" value="982" />  
+		<parameter name="testid" value="9126" />  
 		<classes>
 		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
 		</classes>
