@@ -90,7 +90,8 @@
 		<classes>
 		    <class name="com.zixi.testing.ReceiverAddUdpInputTest"/>
 		</classes>
-	</test><test name="Broadcaster - add UDP output stream"3>
+	</test>
+    <test name="Broadcaster - add UDP output stream"3>
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
@@ -134,7 +135,8 @@
 		<classes>
 		    <class name="com.zixi.testing.ReceiverAddUdpInputTest"/>
 		</classes>
-	</test><test name="Broadcaster - add UDP output stream4">
+	</test>
+    <test name="Broadcaster - add UDP output stream4">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
@@ -192,9 +194,7 @@
 		<classes>
 		    <class name="com.zixi.testing.ReceiverAddFaioverGroupTest"/>
 		</classes>
-	</test>
-
-
+	 </test>
      <test name="Receiver: UDP out creation ">
 		<parameter name="login_ip" value="10.7.0.67" />
 		<parameter name="userName" value="admin" />
@@ -323,6 +323,7 @@
 		    <class name="com.zixi.testing.ReceiverPullInputStreamDeletionTest"/>
 		</classes>
 	</test>
+</suite>
 
 
 
