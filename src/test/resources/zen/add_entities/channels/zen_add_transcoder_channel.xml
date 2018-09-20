@@ -170,7 +170,7 @@ In this case feeder will be defined.
 	    <parameter name="is_source_included" value="false" />
 		<parameter name="inputs" value="feeder_output_source@" /> <!-- Source(s) name -->
 		<parameter name="log_scte" value="1" />
-		<parameter name="profile_names" value="1920x1080@1280x720" /> <!-- Transcoder profiles names comma separated profiles names-->
+		<parameter name="profile_names" value="640x360@480x270" /> <!-- Transcoder profiles names comma separated profiles names-->
 		<parameter name="testid" value="2885" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddAdaptiveChannelTest"/>
