@@ -7,11 +7,13 @@ import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.ZenAddAdaptiveChannelDriver;
 import com.zixi.testing.BaseTestZixiMainComponentsZen;
 
+
 public class ZenAddAdaptiveChannelTest  extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new ZenAddAdaptiveChannelDriver(); }
 
+	// Add transcoded channel to the ZEN master.
 	@Parameters({"zenUser", "zenPass", "zenLogin_ip", "zenUiPort", "type", "name", "resource_tag_ids", "broadcaster_cluster_id", "adaptive",
 	    "delivery", "is_transcoding", "is_source_included", "inputs", "log_scte", "profile_names", "testid"})
 	@Test
