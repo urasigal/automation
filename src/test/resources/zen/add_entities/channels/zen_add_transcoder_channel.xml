@@ -177,15 +177,15 @@ In this case feeder will be defined.
 		</classes>
 	</test> 
 	<test name="ZEN - Detete channel">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="channel_type" value="adaptive" /> 
+		<parameter name="channel_name" value="transcoded_channel" /> 
+		<parameter name="testid" value="2885" />
 		<classes>
-			<class name="com.zixi.zen.test.ZenDeleteChannel">
-				<parameter name="zenUser" value="admin@zixi.com" /> 
-				<parameter name="zenPass" value="mnk4DNK4" />
-				<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
-				<parameter name="zenUiPort" value="80" /> 
-				<parameter name="channel_type" value="adaptive" /> 
-				<parameter name="channel_name" value="transcoded_channel" /> 
-				<parameter name="testid" value="2885" />
+			<class name="com.zixi.zen.test.ZenDeleteChannelTest">
 			</class>
 		</classes>
 	</test>
