@@ -58,39 +58,71 @@ In this case feeder will be defined.
      		 </class>
 		</classes>  
 	</test>
-	<!-- Add ZEN receiver entity -->
-	<test name="ZEN - Add receiver">
-		<parameter name="zenUserName" value="admin@zixi.com" />
-		<parameter name="zenUserPass" value="mnk4DNK4" />
+
+	<test name="ZEN - add transcoder profile1">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
-		<parameter name="zenUiport" value="80" />
-		<parameter name="receiverName" value="target_destination" />
-		<parameter name="receiverUser" value="admin" />
-		<parameter name="receiverPass" value="1234" />
-		<parameter name="shhKeyName" value="test" />
-		<parameter name="accessTagName" value="infra" />  
-		<parameter name="testid" value="2885" />  
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="audio_bitrate" value="" />
+		<parameter name="audio_encoder_profile" value="low" />
+		<parameter name="bitrate_avg" value="1000" />
+		<parameter name="bitrate_max" value="1500" />
+		<parameter name="b_frames" value="0" />
+		<parameter name="do_audio" value="true" />
+		<parameter name="do_video" value="true" />
+		<parameter name="encoding_profile" value="main" />
+		<parameter name="fps" value="0" />
+		<parameter name="gop" value="30" />
+		<parameter name="gop_closed" value="1" />
+		<parameter name="gop_fixed" value="1" />
+		<parameter name="hardware_accel" value="false" />
+		<parameter name="hdr_buff_length" value="2" />
+		<parameter name="height" value="480" />
+		<parameter name="interlaced" value="0" />
+		<parameter name="keep_audio" value="false" />
+		<parameter name="keep_video" value="false" />
+		<parameter name="performance" value="4" />
+		<parameter name="profile" value="test_transcoder_profile1" />
+		<parameter name="ref_frames" value="2" />
+		<parameter name="width" value="640" />
+		<parameter name="testid" value="8864" />
 		<classes>
-		    <class name="com.zixi.zen.test.ZenAddReceiverTest"/>
+			    <class name="com.zixi.zen.test.ZenAddTranscoderProfileTest"/>
 		</classes>
 	</test>
-	<test name="ZEN - Attach receiver to ZEN entyty">
-		<parameter name="receiverUserName" value="admin" />
-		<parameter name="receiverUserPass" value="1234" />
-		<parameter name="receiverLogin_ip" value="10.7.0.67" />
-		<parameter name="receiverUiport" value="4300" />
-		<parameter name="sshHost" value="zixi.stagingio.devcloud.zixi.com" />
-		<parameter name="ssh_port" value="22" />
-		<parameter name="ssh_user" value="target_destination" />
-		<parameter name="zenUserName" value="admin@zixi.com" />
-		<parameter name="zenUserPass" value="mnk4DNK4" />
+	<test name="ZEN - add transcoder profile2">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
-		<parameter name="zenUiport" value="80" />
-		<parameter name="testid" value="2885" />  
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="audio_bitrate" value="" />
+		<parameter name="audio_encoder_profile" value="low" />
+		<parameter name="bitrate_avg" value="1000" />
+		<parameter name="bitrate_max" value="1500" />
+		<parameter name="b_frames" value="0" />
+		<parameter name="do_audio" value="true" />
+		<parameter name="do_video" value="true" />
+		<parameter name="encoding_profile" value="main" />
+		<parameter name="fps" value="0" />
+		<parameter name="gop" value="30" />
+		<parameter name="gop_closed" value="1" />
+		<parameter name="gop_fixed" value="1" />
+		<parameter name="hardware_accel" value="false" />
+		<parameter name="hdr_buff_length" value="2" />
+		<parameter name="height" value="480" />
+		<parameter name="interlaced" value="0" />
+		<parameter name="keep_audio" value="false" />
+		<parameter name="keep_video" value="false" />
+		<parameter name="performance" value="4" />
+		<parameter name="profile" value="test_transcoder_profile2" />
+		<parameter name="ref_frames" value="2" />
+		<parameter name="width" value="640" />
+		<parameter name="testid" value="8864" />
 		<classes>
-		    <class name="com.zixi.zen.test.ZenAttachReceiverToZenREceiverTest"/>
-		</classes>
-	</test>     
+			    <class name="com.zixi.zen.test.ZenAddTranscoderProfileTest"/>
+			</classes>
+	</test>
 <!-- Add an ingest cluster (to be used in a feeder source as an ingest cluster) -->
 	<test name="ZEN - Add AWS ingest cluster">
 		<parameter name="zenUserName" value="admin@zixi.com" />
@@ -203,7 +235,7 @@ In this case feeder will be defined.
 	    <parameter name="is_source_included" value="false" />
 		<parameter name="inputs" value="feeder_output_source@" /> <!-- Source(s) name -->
 		<parameter name="log_scte" value="1" />
-		<parameter name="profile_names" value="640x360@480x270" /> <!-- Transcoder profiles names comma separated profiles names-->
+		<parameter name="profile_names" value="test_transcoder_profile1@test_transcoder_profile2" /> <!-- Transcoder profiles names comma separated profiles names-->
 		<parameter name="testid" value="2885" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddAdaptiveChannelTest"/>
