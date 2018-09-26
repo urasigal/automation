@@ -277,4 +277,16 @@ In this case feeder will be defined.
 			</class>
 		</classes>
 	</test>
+	<test name="ZEN - Detete trans profile">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="profile_name" value="test_transcoder_profile2" /> 
+		<parameter name="testid" value="2885" />
+		<classes>
+			<class name="com.zixi.zen.test.ZenDeleteTransProfileTest">
+			</class>
+		</classes>
+	</test>
 </suite>
