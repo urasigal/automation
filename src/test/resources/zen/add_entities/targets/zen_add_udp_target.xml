@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLInk Suite "" -->
+<suite name="ZEN: Add UDP target ot ZEN" verbose="5" data-provider-thread-count="1">
+<!-- The goal of the test suite is to add ZEN UDP target.
+	 The target consists of a Channel and a UDP destination output on the channlel's process cluster's broadcaster.
+	 The channel, in turn, consists of a "Source" and a "Process cluster".
+	 The "SOURCE" entity consists of a "FEEDER" entity which encapsulates an actual feeder and the "ingest cluster"
+	 For this particular test suite only AWS clusters will be used.
+-->
+<test name="ZEN - Add UDP target to ZEN">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="targetName" value="pull_target" />
+		<parameter name="resource_tag_ids" value="infra" />
+		<parameter name="targetType" value="udp_rtp" />
+		<parameter name="channel_name" value="path_through_channel" />
+		<parameter name="host" value="10.7.0.66" />
+		<parameter name="port" value="5555" />
+		<parameter name="bind_cidr" value="10.7.0.0/24" />
+		<parameter name="rtp" value="1" />
+		<parameter name="smpte_2022_fec" value="2" />
+		<parameter name="smpte_2022_fec_cols" value="10" />
+		<parameter name="smpte_2022_fec_rows" value="10" />
+		<parameter name="smoothing" value="1000" />
+		<parameter name="testid" value="8882" />
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddPullTargetTest"/>
+		</classes>
+	</test>
+</suite>
