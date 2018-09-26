@@ -270,11 +270,41 @@ In this case feeder will be defined.
 		<parameter name="zenPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
 		<parameter name="zenUiPort" value="80" /> 
-		<parameter name="feeder_name" value="feeder_name" /> 
+		<parameter name="feeder_name" value="source_feeder" /> 
 		<parameter name="testid" value="2885" />
 		<classes>
 			<class name="com.zixi.zen.test.ZenDeleteFeederTest">
 			</class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete ingest cluster">
+		<parameter name="zenUserName" value="urasigal@gmail.com" />
+		<parameter name="zenUserPass" value="zenroot1234" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="ingestcluster" />
+		<parameter name="testid" value="8958" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="deleteClusterFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete process cluster">
+		<parameter name="zenUserName" value="urasigal@gmail.com" />
+		<parameter name="zenUserPass" value="zenroot1234" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="processcluster" />
+		<parameter name="testid" value="8958" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="deleteClusterFromZen" />
+     		 </methods>
+     	  </class>
 		</classes>
 	</test>
 	<test name="ZEN - Detete trans profile">
