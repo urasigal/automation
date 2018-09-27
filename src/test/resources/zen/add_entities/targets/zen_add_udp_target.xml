@@ -13,10 +13,10 @@
 		<parameter name="zenPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
 		<parameter name="zenUiPort" value="80" />
-		<parameter name="targetName" value="pull_target" />
+		<parameter name="targetName" value="udp_target" />
 		<parameter name="resource_tag_ids" value="infra" />
 		<parameter name="targetType" value="udp_rtp" />
-		<parameter name="channel_name" value="path_through_channel" />
+		<parameter name="channel_name" value="kuturu" />
 		<parameter name="host" value="10.7.0.66" />
 		<parameter name="port" value="5555" />
 		<parameter name="bind_cidr" value="10.7.0.0/24" />
@@ -27,7 +27,7 @@
 		<parameter name="smoothing" value="1000" />
 		<parameter name="testid" value="8882" />
 		<classes>
-		    <class name="com.zixi.zen.test.ZenAddPullTargetTest"/>
+		    <class name="com.zixi.zen.test.ZenAddUdpTargetTest"/>
 		</classes>
 	</test>
 </suite>
