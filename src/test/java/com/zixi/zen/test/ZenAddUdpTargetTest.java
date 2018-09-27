@@ -25,7 +25,7 @@ public class ZenAddUdpTargetTest extends BaseTestZixiMainComponentsZen{
 		host, port, bind_cidr, rtp, smpte_2022_fec, smpte_2022_fec_cols, smpte_2022_fec_rows, smoothing, remux_kbps, testid});
 		
 		driverReslut = ((ZenAddTargetDriver) testDriver).addUdpRtpTarget( zenUser, zenPass, zenLogin_ip, zenUiPort, targetName, resource_tag_ids, targetType, channel_name,
-				host, port, bind_cidr, rtp, smpte_2022_fec, smpte_2022_fec_cols, smpte_2022_fec_rows, smoothing, remux_kbps);
+		host, port, bind_cidr, rtp, smpte_2022_fec, smpte_2022_fec_cols, smpte_2022_fec_rows, smoothing, remux_kbps);
 		Assert.assertEquals(driverReslut.getResult(), "true"); 
 	}
 	
