@@ -221,4 +221,71 @@
 			</class>
 		</classes>
 	</test>
+	<test name="ZEN - Detete channel">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="channel_type" value="delivery" /> 
+		<parameter name="channel_name" value="path_through_channel" /> 
+		<parameter name="testid" value="2885" />
+		<classes>
+			<class name="com.zixi.zen.test.ZenDeleteChannelTest">
+			</class>
+		</classes>
+	</test>
+	<test name="ZEN - Detete source">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="source_name" value="feeder_output_source" /> 
+		<parameter name="testid" value="2885" />
+		<classes>
+			<class name="com.zixi.zen.test.ZenDeleteSourceTest">
+			</class>
+		</classes>
+	</test>
+	<test name="ZEN - Detete feeder">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="feeder_name" value="source_feeder" /> 
+		<parameter name="testid" value="2885" />
+		<classes>
+			<class name="com.zixi.zen.test.ZenDeleteFeederTest">
+			</class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete ingest cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="ingestcluster" />
+		<parameter name="testid" value="8958" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="deleteClusterFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete process cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="processcluster" />
+		<parameter name="testid" value="8958" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="deleteClusterFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
 </suite>
