@@ -3,7 +3,7 @@
 <!-- TestLInk Suite "" -->
 <suite name="ZEN: Add UDP target ot ZEN" verbose="5" data-provider-thread-count="1">
 <!-- The goal of the test suite is to add ZEN UDP target.
-	 The target consists of a Channel and a UDP destination output on the channlel's process cluster's broadcaster.
+	 The UDP target consists of a Channel and a UDP destination output on the channel process cluster's broadcaster.
 	 The channel, in turn, consists of a "Source" and a "Process cluster".
 	 The "SOURCE" entity consists of a "FEEDER" entity which encapsulates an actual feeder and the "ingest cluster"
 	 For this particular test suite only AWS clusters will be used.
