@@ -301,10 +301,10 @@
 		<parameter name="zenUiport" value="80" />
 		<parameter name="name" value="hitless_failover" />
 		<parameter name="broadcaster_cluster_id" value="process" />
-		<parameter name="feeder_id" value="null" />
-		<parameter name="broadcaster_id" value="null" />
+		<parameter name="feeder_id" value="" />
+		<parameter name="broadcaster_id" value="" />
 		<parameter name="target_broadcaster_id" value="-1" />
-		<parameter name="input_id" value="null" />
+		<parameter name="input_id" value="" />
 		<parameter name="max_bitrate" value="5000000" />
 		<parameter name="hitless_failover_source_ids" value="feeder_output_source2@feeder_output_source2" />
 		<parameter name="latency" value="4000" />
