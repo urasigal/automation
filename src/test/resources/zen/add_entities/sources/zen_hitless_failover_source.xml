@@ -294,4 +294,31 @@
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
 		</classes>
 	</test>
+	<test name="ZEN - Add hitless failover source">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="name" value="hitless_failover" />
+		<parameter name="broadcaster_cluster_id" value="process" />
+		<parameter name="feeder_id" value="null" />
+		<parameter name="broadcaster_id" value="null" />
+		<parameter name="target_broadcaster_id" value="-1" />
+		<parameter name="input_id" value="null" />
+		<parameter name="max_bitrate" value="5000000" />
+		<parameter name="hitless_failover_source_ids" value="feeder_output_source2@feeder_output_source2" />
+		<parameter name="latency" value="4000" />
+		<parameter name="monitor_pids_change" value="0" />
+		<parameter name="resource_tag_ids" value="infra" />
+		<parameter name="password" value="" />
+		<parameter name="encryption" value="none" />
+		<parameter name="encryption_key" value="" />
+		<parameter name="allow_outputs" value="true" />
+		<parameter name="outputs_password" value="1234" />
+		<parameter name="monitor_only" value="false" />
+		<parameter name="testid" value="8870" />
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddHitlessSource"/>
+		</classes>
+	</test>
 </suite>
