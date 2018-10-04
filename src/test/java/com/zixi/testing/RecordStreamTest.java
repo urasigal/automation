@@ -25,6 +25,6 @@ public class RecordStreamTest extends BaseTestZixiMainComponentsZen{
 		buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "id", "on", "cpuFolder", "testid"}, 
 		new String[] {userName, userPass, login_ip, uiport, id, on, cpuFolder, testid});
 		
-		Assert.assertEquals(((BroadcasterFileRecordDriver) testDriver).inputRecord(userName, userPass, login_ip, uiport, id, on, cpuFolder), "added");
+		Assert.assertEquals(((BroadcasterFileRecordDriver) testDriver).inputRecord(userName, userPass, login_ip, uiport, id, on, cpuFolder), "good");
 	}
 }

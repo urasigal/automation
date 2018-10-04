@@ -23,7 +23,7 @@ public class BroadcasterTransoderGetStatsTest extends BaseTestZixiMainComponents
 		
 		driverReslut = ((BroadcasterTransoderGetStatsDriver) testDriver).getTranscoderStatistics(userName, userPass, login_ip, uiport, stream_name, testid);
 		
-		Assert.assertEquals( driverReslut.getResult(), "[0, 0, 0, 0, 0, 0, 0, 0, 0]");
+		Assert.assertEquals( driverReslut.getResult(), "[0,0,0,0,0,0,0,0,0]");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
