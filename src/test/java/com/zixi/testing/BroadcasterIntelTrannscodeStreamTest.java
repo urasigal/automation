@@ -32,7 +32,7 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTestZixiMainCompon
 
 		driverReslut = ((BroadcasterTrannscodeStreamDriver) testDriver) .testIMPL( userName,  userPass,  login_ip,  uiport,  type, id,
 	    matrix,  max_outputs,  mcast_out,  time_shift,  old, fast_connect,  kompression,  enc_type,  enc_key,  rec_history,  rec_duration,  src, ap,  ll,  all_pids,
-	    bit,  profile_name, mode);
+	    bit,  profile_name, mode, vp, smoothing, max_va_diff_ms);
 		
 		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 	}
