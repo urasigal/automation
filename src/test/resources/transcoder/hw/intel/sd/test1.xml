@@ -49,7 +49,7 @@
 		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.264" />
-		<parameter name="profile_name" value="qlty_assess" />
+		<parameter name="profile_name" value="720p" />
 		<parameter name="enc" value="4" />
 		<parameter name="bitrate" value="3000000" />
 		<parameter name="gop" value="30" />
@@ -81,13 +81,13 @@
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: transcode a stream - perf2">
+	<test name="Broadcaster: transcode a stream - 720p">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
-		<parameter name="id" value="trans_perf2" />
+		<parameter name="id" value="trans_stream1" />
 		<parameter name="matrix" value="1" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="mcast_out" value="0" />
@@ -105,7 +105,7 @@
 		<parameter name="ll" value="0" />
 		<parameter name="all_pids" value="1" />
 		<parameter name="bit" value="0" />
-		<parameter name="profile_name" value="qlty_assess" />
+		<parameter name="profile_name" value="720p" />
 		<parameter name="mode" value="h.264" />
 		<parameter name="vp" value="1" />
 		<parameter name="smoothing" value="1500" />
@@ -136,9 +136,9 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="trans_perf2" />
+		<parameter name="id" value="trans_stream1" />
 		<parameter name="on" value="1" />
-		<parameter name="cpuFolder" value="cpuvbrpathperf2" />
+		<parameter name="cpuFolder" value="720p" />
 		<parameter name="testid" value="1249" />    
 		<classes>
 		    <class name="com.zixi.testing.RecordStreamTest" />
@@ -149,7 +149,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="stream_name" value="trans_perf2" />
+		<parameter name="stream_name" value="trans_stream1" />
 		<parameter name="testid" value="1249" />    
 		<classes>
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
@@ -172,7 +172,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.72" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="profile_name" value="qlty_assess" />
+		<parameter name="profile_name" value="720p" />
 		<parameter name="testid" value="1382" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
