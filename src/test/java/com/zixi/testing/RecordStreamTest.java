@@ -20,11 +20,11 @@ public class RecordStreamTest extends BaseTestZixiMainComponentsZen{
 	@Test
 	public void broadcasterRecordInout(String userName, String userPass, String login_ip,
 	String uiport, String id, String on, String cpuFolder, String testid)
-	throws InterruptedException {
+	throws Exception {
 		
 		buildTestParametersString(new String[] {"userName", "userPass", "login_ip", "uiport", "id", "on", "cpuFolder", "testid"}, 
 		new String[] {userName, userPass, login_ip, uiport, id, on, cpuFolder, testid});
 		
-		Assert.assertEquals(((BroadcasterFileRecordDriver) testDriver).inputRecord(userName, userPass, login_ip, uiport, id, on, cpuFolder, testid), "added");
+		Assert.assertEquals(((BroadcasterFileRecordDriver) testDriver).inputRecord(userName, userPass, login_ip, uiport, id, on, cpuFolder), "added");
 	}
 }
