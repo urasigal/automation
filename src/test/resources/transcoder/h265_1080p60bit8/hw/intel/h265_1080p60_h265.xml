@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Transcoder - 1080p60 intel decode h264 encode h265" verbose="5" data-provider-thread-count="1">
+<!-- This test suite is covering h265 decoding and h265 encoding, both Intel HW -->
+<suite name="Transcoder - 1080p60 intel decode h265 encode h265" verbose="5" data-provider-thread-count="1">
 <test name="Broadcaster - Create a file input steam 1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
