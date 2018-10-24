@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Transcoder - encode to mpeg2 intel HW" verbose="5" data-provider-thread-count="1">
-<test name="Broadcaster - Create a file input steam 1">
+	<listeners>
+  	  <listener class-name="com.zixi.reports.SuiteListennerZapiReporter" >
+  	  <parameter name="testParam" value="privet" />
+  	  </listener>
+  	</listeners>
+  	<parameter name="projectId" value="10003" />
+  	<parameter name="issueId" value="10081" />
+  	<parameter name="cycleId" value="to do" />
+  	<parameter name="versionId" value="-1" />
+  	<parameter name="assigneeType" value="currentUser" />
+	<test name="Broadcaster - Create a file input steam 1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />

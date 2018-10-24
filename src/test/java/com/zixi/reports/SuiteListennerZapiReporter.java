@@ -5,6 +5,8 @@ import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 public class SuiteListennerZapiReporter implements ISuiteListener, ITestListener{
 
@@ -49,7 +51,7 @@ public class SuiteListennerZapiReporter implements ISuiteListener, ITestListener
 	@Override
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
-		System.out.println("Count is" + cnt);
+		
 	}
 
 	@Override
@@ -60,7 +62,9 @@ public class SuiteListennerZapiReporter implements ISuiteListener, ITestListener
 
 	@Override
 	public void onFinish(ISuite suite) {
+		
 		// TODO Auto-generated method stub
+		System.out.println("Count is" + cnt + " " + suite.getParameter("testParam"));
 		
 	}
 
