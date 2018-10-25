@@ -27,10 +27,6 @@
      		 </class>
 		</classes>
 	</test>
-	
-	
-	
-	
 	<test name="Broadcaster - UDP input stream creation ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -92,8 +88,6 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test> 
-	
-	
 	<test name="Broadcaster - multiple UDP stream creation">
 		<parameter name="userName_bx1" value="admin" />		
 		<parameter name="userName_bx2" value="admin" />		
@@ -278,6 +272,32 @@
      		 </class>
 		</classes>
 	</test>
+	
+	
+	
+	<test name="Broadcaster failover - push inputs under normally distributed stream switching">
+		<parameter name="remoteBX_login_ip" value="10.7.0.74" />		
+		<parameter name="remoteBXuserName" value="admin" />			
+		<parameter name="remoteBXuserPassword" value="1234" />
+		<parameter name="remoteBXuiport" value="4444" />
+		<parameter name="login_ip" value="10.7.0.75" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testElapsedTime" value="600000" /> 
+		<parameter name="streamSwitchInterval" value="15000" />
+		<parameter name="streamReferenceName" value="tg" />
+		<parameter name="testid" value="8714" />
+		<classes>
+		    <class name="com.zixi.analyze.testing.BroadcasterNrmlDistSwitchFailoverTest">
+		    <methods>
+        		<include name="broadcasterSwitchInputsFaioverNormalDistibutionTest" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>
+	
+	
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />

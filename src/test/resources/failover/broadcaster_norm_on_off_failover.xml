@@ -208,7 +208,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster failover - pull inputs under normally distributed stream switching">
+	<test name="Broadcaster failover - push inputs under normally distributed stream switching">
 		<parameter name="remoteBX_login_ip" value="10.7.0.74" />		
 		<parameter name="remoteBXuserName" value="admin" />			
 		<parameter name="remoteBXuserPassword" value="1234" />
@@ -224,7 +224,7 @@
 		<classes>
 		    <class name="com.zixi.analyze.testing.BroadcasterNrmlDistSwitchFailoverTest">
 		    <methods>
-        		<include name="broadcasterSwitchInputsFaioverNormalDistibutionTest" />
+        		<include name="broadcasterSwitchInputsFaioverNormalDistibutionExcludeStreamTest" />
      		 </methods>
      		 </class>
 		</classes>  
