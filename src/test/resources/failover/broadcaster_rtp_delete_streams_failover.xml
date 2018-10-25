@@ -437,7 +437,7 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>	
-	<test name="Broadcaster - delete all input streams">
+	<test name="Broadcaster - delete all input streams - local bx">
 		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -457,16 +457,14 @@
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Fiel input">
+	<test name="Broadcaster - delete all input streams remote bx">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test" />
-		<parameter name="testid" value="8685" />  
+		<parameter name="testid" value="8681" />  
 		<classes>
-		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
-	</test>                       
+	</test>                   
 </suite>
