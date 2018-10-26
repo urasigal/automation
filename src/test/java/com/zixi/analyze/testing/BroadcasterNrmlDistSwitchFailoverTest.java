@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import com.zixi.drivers.drivers.BroadcaserAllInputStreamDeletorDriver;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
-import com.zixi.drivers.drivers.BroadcasterSwitchInputsFaioverNormalDistibutionDriver;
+import com.zixi.drivers.drivers.BroadcasterSwitchInputsFaioverNormalDistributionDriver;
 import com.zixi.drivers.drivers.BroadcasterUdpOutputCreationDriver;
 import com.zixi.testing.BaseTestZixiMainComponents;
 
@@ -15,7 +15,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 {	
 	
 	@BeforeClass
-	public void testInit() { testDriver = new BroadcasterSwitchInputsFaioverNormalDistibutionDriver(); }
+	public void testInit() { testDriver = new BroadcasterSwitchInputsFaioverNormalDistributionDriver(); }
 	
 	
 	@Parameters({ "remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport",
@@ -33,7 +33,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		new String[] {remoteBX_login_ip, remoteBXuserName, remoteBXuserPassword, remoteBXuiport,
 		login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval,streamReferenceName,  testid});
 		
-		driverReslut = ((BroadcasterSwitchInputsFaioverNormalDistibutionDriver) testDriver).testNormalDistributioInputSwitching(remoteBX_login_ip, remoteBXuserName, remoteBXuserPassword,
+		driverReslut = ((BroadcasterSwitchInputsFaioverNormalDistributionDriver) testDriver).testNormalDistributioInputSwitching(remoteBX_login_ip, remoteBXuserName, remoteBXuserPassword,
 		remoteBXuiport, login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval, streamReferenceName);	
 		Assert.assertEquals(driverReslut.getResult(), "passed");
 		
@@ -57,7 +57,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		new String[] {remoteBX_login_ip, remoteBXuserName, remoteBXuserPassword, remoteBXuiport,
 		login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval,streamReferenceName, testid});
 		
-		driverReslut = ((BroadcasterSwitchInputsFaioverNormalDistibutionDriver) testDriver).testNormalDistributioInputSwitchingExclude(remoteBX_login_ip, remoteBXuserName, remoteBXuserPassword,
+		driverReslut = ((BroadcasterSwitchInputsFaioverNormalDistributionDriver) testDriver).testNormalDistributioInputSwitchingExclude(remoteBX_login_ip, remoteBXuserName, remoteBXuserPassword,
 		remoteBXuiport, login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval, streamReferenceName, streamExcludeName);	
 		Assert.assertEquals(driverReslut.getResult(), "passed");
 		
@@ -81,7 +81,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 			new String[] {remoteBX_login_ip, remoteFXuserName, remoteFXuserPassword, remoteFXuiport,
 			login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval,streamReferenceName, streams, testid});
 			
-			driverReslut = ((BroadcasterSwitchInputsFaioverNormalDistibutionDriver) testDriver).
+			driverReslut = ((BroadcasterSwitchInputsFaioverNormalDistributionDriver) testDriver).
 			feederNormalDistributioInputSwitching(remoteBX_login_ip, remoteFXuserName, remoteFXuserPassword,
 			remoteFXuiport, login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval, streamReferenceName, streams);	
 			
