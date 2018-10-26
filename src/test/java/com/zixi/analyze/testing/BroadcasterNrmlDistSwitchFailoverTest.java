@@ -43,10 +43,10 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 	
 	
 	@Parameters({ "remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport",
-	"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "testid" })
+	"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "streamExcludeName", "testid" })
 	@Test
 	public void broadcasterSwitchInputsFaioverNormalDistibutionExcludeStreamTest(String remoteBX_login_ip, String remoteBXuserName, String remoteBXuserPassword, String remoteBXuiport,
-    String login_ip, String userName, String userPassword, String uiport, String testElapsedTime, String streamSwitchInterval, String streamReferenceName, String testid) throws Exception {
+    String login_ip, String userName, String userPassword, String uiport, String testElapsedTime, String streamSwitchInterval, String streamReferenceName, String streamExcludeName, String testid) throws Exception {
 		
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
@@ -58,7 +58,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval,streamReferenceName, testid});
 		
 		driverReslut = ((BroadcasterSwitchInputsFaioverNormalDistibutionDriver) testDriver).testNormalDistributioInputSwitchingExclude(remoteBX_login_ip, remoteBXuserName, remoteBXuserPassword,
-		remoteBXuiport, login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval, streamReferenceName);	
+		remoteBXuiport, login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval, streamReferenceName, streamExcludeName);	
 		Assert.assertEquals(driverReslut.getResult(), "passed");
 		
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
