@@ -53,7 +53,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);	
 		buildTestParametersString(new String[] {"remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport",
-		"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "excludeStream", "testid"}, 
+		"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "testid"}, 
 		new String[] {remoteBX_login_ip, remoteBXuserName, remoteBXuserPassword, remoteBXuiport,
 		login_ip, userName, userPassword, uiport, testElapsedTime, streamSwitchInterval,streamReferenceName, testid});
 		
