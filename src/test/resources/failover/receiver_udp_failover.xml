@@ -243,6 +243,21 @@
 			<class name="com.zixi.testing.ReceiverUdpOutCreationTest" />
 		</classes>
 	</test>
+	<test name="Broadcaster failover - push inputs under normally distributed stream switching">
+		<parameter name="remoteBX_login_ip" value="10.7.0.74" />		
+		<parameter name="remoteBXuserName" value="admin" />			
+		<parameter name="remoteBXuserPassword" value="1234" />
+		<parameter name="remoteBXuiport" value="4444" />
+		<parameter name="testElapsedTime" value="600000" /> 
+		<parameter name="streamSwitchInterval" value="15000" />
+		<parameter name="testid" value="8714" />
+		<classes>
+		    <class name="com.zixi.analyze.testing.BroadcasterNrmlDistSwitchFailoverTest">
+		    <methods>
+        		<include name="receiverSwitchInputsFaioverNormalDistibutionTest" />
+     		 </methods>
+     		 </class>
+		</classes>  
 	<test name="FFMPEG test default parameters">
 		<parameter name="testid" value="9120" />  
 		<classes>

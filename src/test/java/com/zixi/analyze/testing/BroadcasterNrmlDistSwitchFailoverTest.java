@@ -40,7 +40,25 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 	
-	
+	@Parameters({ "remoteBX_login_ip",  "remoteBXuserName",  "remoteBXuserPassword",  "remoteBXuiport",
+	"testElapsedTime", "streamSwitchInterval", "testid" })
+	@Test
+	public void receiverSwitchInputsFaioverNormalDistibutionTest(String remoteBX_login_ip, String remoteBXuserName, String remoteBXuserPassword, String remoteBXuiport,
+     String testElapsedTime, String streamSwitchInterval, String testid) throws Exception {
+		
+		// Get broadcaster PID in the beginning of the test.
+		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  remoteBX_login_ip,  "22",  "pidof zixi_broadcaster");
+		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+		this.version = productAboutDriver.getBroadcasterVersion(remoteBX_login_ip, remoteBXuiport, remoteBXuserName, remoteBXuserPassword);	
+		buildTestParametersString(new String[] {"remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport", "testElapsedTime", "streamSwitchInterval", "testid"}, 
+		new String[] {remoteBX_login_ip,  remoteBXuserName, remoteBXuserPassword, remoteBXuiport, testElapsedTime, streamSwitchInterval, testid});
+		
+		driverReslut = ((BroadcasterSwitchInputsFaioverNormalDistributionDriver) testDriver).testNormalDistributioInputSwitchingReceiver(remoteBX_login_ip, remoteBXuserName, remoteBXuserPassword,
+		remoteBXuiport, testElapsedTime, streamSwitchInterval);	
+		Assert.assertEquals(driverReslut.getResult(), "passed");
+		
+		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  remoteBX_login_ip,  "22",  "pidof zixi_broadcaster"));
+	}
 	
 	@Parameters({ "remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport",
 	"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "streamExcludeName", "testid" })
