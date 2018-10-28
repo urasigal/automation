@@ -21,7 +21,7 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTestZixiMainCompon
 	String matrix, String max_outputs, String mcast_out, String time_shift, String old,
 	String fast_connect, String kompression, String enc_type, String enc_key,
 	String rec_history, String rec_duration, String src, String ap, String use_hw, String ll, String all_pids,
-	String bit, String profile_name, String mode,  @Optional("1") String vp, String smoothing, String max_va_diff_ms, String testid)
+	String bit, String profile_name, String mode,  @Optional("1") String vp, @Optional("1500") String smoothing, String max_va_diff_ms, String testid)
 	throws Exception {
 
 		productAboutDriver.getBroadcasterVersion(login_ip,uiport, userName, userPass);
