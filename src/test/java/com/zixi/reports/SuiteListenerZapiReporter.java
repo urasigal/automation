@@ -8,9 +8,9 @@ import org.testng.ITestResult;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class SuiteListennerZapiReporter implements ISuiteListener, ITestListener{
+public class SuiteListenerZapiReporter implements ISuiteListener, ITestListener{
 
-	private int cnt = 0;
+	protected boolean execStatus = true;
 	
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -21,13 +21,12 @@ public class SuiteListennerZapiReporter implements ISuiteListener, ITestListener
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		cnt++;
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		
+		execStatus = false;
 	}
 
 	@Override
@@ -62,9 +61,6 @@ public class SuiteListennerZapiReporter implements ISuiteListener, ITestListener
 
 	@Override
 	public void onFinish(ISuite suite) {
-		
-		// TODO Auto-generated method stub
-		System.out.println("Count is" + cnt + " " + suite.getParameter("testParam"));
 		
 	}
 
