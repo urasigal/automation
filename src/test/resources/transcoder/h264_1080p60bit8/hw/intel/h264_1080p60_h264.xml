@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Transcoder" verbose="5" data-provider-thread-count="1">
+<listeners>
+  	  <listener class-name="com.zixi.reports.SuiteListenerZapiReporterAdapter" >
+  	  	<parameter name="projectId" value="10003" />
+	  	<parameter name="issueId" value="10102" />
+	  	<parameter name="cycleId" value="90db3e73-3d05-4fd2-8025-8256f5491096" />
+	  	<parameter name="versionId" value="-1" />
+	  	<parameter name="assigneeType" value="currentUser" />
+	  	<parameter name="zapiAccesskey" value="xxx" />
+	  	<parameter name="zapiSecretkey" value="xxx" />
+	  	<parameter name="folderId" value="8b12fc2f-e34f-48f4-9932-f201d088f101" />
+	  	<parameter name="zapiUser" value="uri@zixi.com" />
+  	  </listener>
+  	</listeners>
 <test name="Broadcaster - Create a file input steam 1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
