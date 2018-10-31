@@ -15,13 +15,15 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		String assigneeType		= suite.getParameter("assigneeType");
 		String zapiAccesskey	= suite.getParameter("zapiAccesskey");
 		String zapiSecretkey	= suite.getParameter("zapiSecretkey");
+		String folderId			= suite.getParameter("folderId");
+		String zapiUser			= suite.getParameter("zapiUser");
 		
 		try {
 			if(execStatus == true)
 				status = "1"; // Passed.
 			else status = "2"; // Passed.
-			ZapiExecutionProps.createNewTestExecutionWithStatus(status, projectId, issueId, cycleId, versionId, 
-			assigneeType, zapiAccesskey, zapiSecretkey);
+			ZapiExecutionProps.createNewTestExecutionWithStatus_TestCycle_TestFolder(status, projectId, issueId, cycleId, folderId, 
+			versionId, assigneeType, zapiUser, zapiAccesskey, zapiSecretkey);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
