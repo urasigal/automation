@@ -13,27 +13,27 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
-		testFlowDescription.append( testStepCnt + ") Test step name: " + result.getTestContext().getName());
+		testFlowDescription.append( testStepCnt + ") Test step name: " + result.getTestContext().getName() + " ");
 		testStepCnt++;
 	}
 	
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		testFlowDescription.append(" - status passed\n");
+		testFlowDescription.append(" - status passed\\n");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		testFlowDescription.append(" - status failed\n");
+		testFlowDescription.append(" - status failed\\n");
 		execStatus = false;
 	}
 	
 	@Override
 	public void onStart(ISuite suite) {
 		// TODO Auto-generated method stub
-		testFlowDescription.append("Test case flow (scenario):\n");	
+		testFlowDescription.append("Test case flow (scenario):\\n");	
 	}
 	
 	@Override
