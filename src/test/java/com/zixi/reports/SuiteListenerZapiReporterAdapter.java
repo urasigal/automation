@@ -7,7 +7,7 @@ import com.zixi.zapi.ZapiExecutionProps;
 
 public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter {
 	private boolean execStatus = true;
-	private StringBuffer testFlowDescription = null;
+	private StringBuffer testFlowDescription = new StringBuffer();
 	private int testStepCnt = 1;
 	
 	@Override
