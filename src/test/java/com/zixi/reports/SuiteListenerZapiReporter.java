@@ -8,10 +8,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class SuiteListenerZapiReporter implements ISuiteListener, ITestListener{
-
-	protected boolean execStatus = true;
-	
+public class SuiteListenerZapiReporter implements ISuiteListener, ITestListener{	
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
@@ -26,7 +23,6 @@ public class SuiteListenerZapiReporter implements ISuiteListener, ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		execStatus = false;
 	}
 
 	@Override
