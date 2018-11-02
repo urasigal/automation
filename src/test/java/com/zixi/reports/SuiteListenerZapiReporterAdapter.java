@@ -25,7 +25,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		testFlowDescription.append("Test suite: " + result.getTestContext().getSuite().getName() + ", Step seq num: " + testStepCnt + " " +
-		result.getTestContext().getName() + " Status: Failed. " + result.getThrowable().getMessage().);
+		result.getTestContext().getName() + " Status: Failed. " + result.getThrowable().getMessage());
 		execStatus = false;
 	}
 	
