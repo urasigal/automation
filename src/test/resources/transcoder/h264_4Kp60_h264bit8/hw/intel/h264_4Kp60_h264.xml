@@ -87,7 +87,7 @@
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
-		<parameter name="id" value="trns_strm_intel_hw_4K_to_720p" />
+		<parameter name="id" value="trns_strm_intel_hw_4K_to_720p60" />
 		<parameter name="matrix" value="1" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="mcast_out" value="0" />
@@ -136,7 +136,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="trns_strm_intel_hw_4K_to_720p" />
+		<parameter name="id" value="trns_strm_intel_hw_4K_to_720p60" />
 		<parameter name="on" value="1" />
 		<parameter name="cpuFolder" value="720p" />
 		<parameter name="testid" value="1249" />    
@@ -149,7 +149,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="stream_name" value="trns_strm_intel_hw_4K_to_720p" />
+		<parameter name="stream_name" value="trns_strm_intel_hw_4K_to_720p60" />
 		<parameter name="testid" value="1249" />    
 		<classes>
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
@@ -221,7 +221,7 @@
      		 </class>
 		</classes>
 	</test> 
-	<test name="Broadcaster: add 720p 2">
+	<test name="Broadcaster: add 720p30 ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -259,7 +259,7 @@
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: transcode a stream - 720p 2">
+	<test name="Broadcaster: transcode a stream - 720p30 2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
