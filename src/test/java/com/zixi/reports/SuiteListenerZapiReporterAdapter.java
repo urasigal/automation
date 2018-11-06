@@ -58,6 +58,5 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 }
