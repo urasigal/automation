@@ -1,5 +1,12 @@
 package com.zixi.reports;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+
 import org.testng.ISuite;
 import org.testng.ITestResult;
 
@@ -47,7 +54,21 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		String zapiSecretkey	= suite.getParameter("zapiSecretkey");
 		String folderId			= suite.getParameter("folderId");
 		String zapiUser			= suite.getParameter("zapiUser");
-		
+	
+		if(cycleId.equals("")) {
+			String line;
+			try (InputStream fis = new FileInputStream("src/main/resources/cycleid");
+				InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+				BufferedReader br = new BufferedReader(isr);) {
+			while ((line = br.readLine()) != null) {
+				cycleId = line;
+				}
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				System.out.println("SuiteListenerZapiReporterAdapter.onFinish()");
+			}
+		}
+
 		try {
 			if(execStatus == true)
 				status = "1"; // Passed.
