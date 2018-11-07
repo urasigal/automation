@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Transcoder - vbr case" verbose="5" data-provider-thread-count="1">
+<suite name="Transcoder - Intel HW emc/dec 4K input 4K output" verbose="5" data-provider-thread-count="1">
+<listeners>
+  	  <listener class-name="com.zixi.reports.SuiteListenerZapiReporterAdapter" >
+  	  	<parameter name="projectId" value="10003" />
+	  	<parameter name="issueId" value="10133" />
+	  	<parameter name="cycleId" value="" />
+	  	<parameter name="versionId" value="-1" />
+	  	<parameter name="assigneeType" value="currentUser" />
+	  	<parameter name="zapiAccesskey" value="xxx" />
+	  	<parameter name="zapiSecretkey" value="xxx" />
+	  	<parameter name="folderId" value="Decode/Encode - Intel HW" />
+	  	<parameter name="zapiUser" value="uri@zixi.com" />
+  	  </listener>
+  	</listeners>
 <test name="Broadcaster: Create file input stream. step 1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -43,7 +56,7 @@
      		 </class>
 		</classes>
 	</test> 
-	<test name="Broadcaster: add 720p.step 3">
+	<test name="Broadcaster: add 4Kp60.step 3">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
