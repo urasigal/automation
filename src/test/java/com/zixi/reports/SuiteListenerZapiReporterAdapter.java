@@ -5,11 +5,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 
 import org.testng.ISuite;
 import org.testng.ITestResult;
 
+import com.zixi.zapi.ZapiCycleIntegrator;
 import com.zixi.zapi.ZapiExecutionProps;
 
 public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter {
@@ -68,7 +70,15 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 				System.out.println("SuiteListenerZapiReporterAdapter.onFinish()");
 			}
 		}
-
+		if(folderId.equals(""))
+		{
+		try {
+				folderId = ZapiCycleIntegrator.getFolderIdFromCycle(zapiUser, zapiUser, zapiUser, zapiUser, zapiUser, zapiUser, zapiUser);
+			} catch (URISyntaxException | IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
 		try {
 			if(execStatus == true)
 				status = "1"; // Passed.
