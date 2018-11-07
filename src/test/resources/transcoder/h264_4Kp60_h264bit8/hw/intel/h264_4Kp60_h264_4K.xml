@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Transcoder - vbr case" verbose="5" data-provider-thread-count="1">
+<suite name="Transcoder - Intel HW emc/dec 4K input 4K output" verbose="5" data-provider-thread-count="1">
 <listeners>
   	  <listener class-name="com.zixi.reports.SuiteListenerZapiReporterAdapter" >
   	  	<parameter name="projectId" value="10003" />
