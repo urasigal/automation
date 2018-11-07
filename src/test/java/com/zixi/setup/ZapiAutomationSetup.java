@@ -20,9 +20,7 @@ public class ZapiAutomationSetup extends BaseTestZixiMainComponents{
 		String zapiSecretkey) throws Exception 
 		{
 			ProductAboutDriver productAboutDriver = new ProductAboutDriver();
-	
 			String version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
-			
 			driverReslut = ((ZapiCycleIntegrator) testDriver).addTestCycleSetup(version, expand, clonedCycleId, cycleName, environment, 
 			description, startDate, endDate, projectId, versionId, zapiUser, zapiAccesskey, zapiSecretkey);
 			
