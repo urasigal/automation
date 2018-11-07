@@ -70,14 +70,13 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 				System.out.println("SuiteListenerZapiReporterAdapter.onFinish()");
 			}
 		}
-		if(folderId.equals(""))
-		{
+		
 		try {
-				folderId = ZapiCycleIntegrator.getFolderIdFromCycle(zapiUser, zapiUser, zapiUser, zapiUser, zapiUser, zapiUser, zapiUser);
-			} catch (URISyntaxException | IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+			folderId = ZapiCycleIntegrator.getFolderIdFromCycle( cycleId, versionId,  projectId,  folderId,  zapiUser, 
+					 zapiAccesskey,  zapiSecretkey);
+		} catch (URISyntaxException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 		try {
 			if(execStatus == true)
