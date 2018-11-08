@@ -565,7 +565,7 @@
 		</classes>
 	</test>
 	<!-- Release Maxwell-->
-	<test name="Configure maxwell simulator set interference">
+	<test name="Release Maxwell simulator">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
