@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: Push load streaming suite with net impairments" verbose="5" data-provider-thread-count="1">
 <!-- Configure maxwell and test perform a testing -->
-	<test name="Broadcaster: Push input stream creation test">
+	<test name="Broadcaster: Push input stream creation test. step1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -27,7 +27,7 @@
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: Push output stream creation test">
+	<test name="Broadcaster: Push output stream creation test. step2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
@@ -52,9 +52,8 @@
 		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
 		</classes>
 	</test>
-	
 	<!-- Configure maxwell -->
-	<test name="Configure maxwell simulator set interference">
+	<test name="Configure maxwell simulator set interference. step3">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
@@ -69,7 +68,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: Stop file input stream. step 2">
+	<test name="Broadcaster: Stop file input stream. step4">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -85,7 +84,7 @@
      		 </class>
 		</classes>
 	</test> 
-	<test name="Broadcaster: add 4Kp60.step 3">
+	<test name="Broadcaster: add 4Kp60. step 5">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -123,7 +122,7 @@
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: transcode stream step 4">
+	<test name="Broadcaster: transcode stream step 6">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -157,7 +156,7 @@
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster: Start file input stream. step5">
+	<test name="Broadcaster: Start file input stream. step7">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -173,7 +172,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: Record transcoded stream and wait. step6">
+	<test name="Broadcaster: Record transcoded stream and wait. step8">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -186,7 +185,7 @@
 		    <class name="com.zixi.testing.RecordStreamTest" />
 		</classes>
 	</test>
-	<test name="Broadcaster: Test transcoder statistic. step7">
+	<test name="Broadcaster: Test transcoder statistic. step9">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -197,7 +196,7 @@
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
 		</classes>
 	</test>
-	<test name="Broadcaster: Remove fiel input stream. step8">
+	<test name="Broadcaster: Remove fiel input stream. step10">
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -209,7 +208,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: Delete transcoder profile. step9">
+	<test name="Broadcaster: Delete transcoder profile. step11">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -221,7 +220,7 @@
 		</classes>
 	</test>
 	<!-- Frame rate conv 60 t0 30 -->
-	<test name="Broadcaster: Create file input stream. step10">
+	<test name="Broadcaster: Create file input stream. step12">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -247,7 +246,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: Stop file input stream. step11">
+	<test name="Broadcaster: Stop file input stream. step13">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -263,7 +262,7 @@
      		 </class>
 		</classes>
 	</test> 
-	<test name="Broadcaster: add 720p30. step12">
+	<test name="Broadcaster: add 720p30. step 14">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -301,7 +300,7 @@
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: transcode stream. step13">
+	<test name="Broadcaster: transcode stream. step 15">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -335,7 +334,7 @@
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster: Start file input stream. step14">
+	<test name="Broadcaster: Start file input stream. step 16">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -351,7 +350,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: Record transcoded stream and wait. step15">
+	<test name="Broadcaster: Record transcoded stream and wait. step 17">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -364,7 +363,7 @@
 		    <class name="com.zixi.testing.RecordStreamTest" />
 		</classes>
 	</test>
-	<test name="Broadcaster: Test transcoder statistic. step16">
+	<test name="Broadcaster: Test transcoder statistic. step 18">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -375,7 +374,7 @@
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
 		</classes>
 	</test>
-	<test name="Broadcaster: Remove fiel input stream. step17">
+	<test name="Broadcaster: Remove fiel input stream. step 19">
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -387,7 +386,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: delete transcoder profile. step18">
+	<test name="Broadcaster: delete transcoder profile. step 20">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -399,7 +398,7 @@
 		</classes>
 	</test>
 	<!-- Frame rate progressive to interlaced  -->
-	<test name="Broadcaster: Create file input stream. step19">
+	<test name="Broadcaster: Create file input stream. step 21">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -425,7 +424,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: Stop file input stream. step20">
+	<test name="Broadcaster: Stop file input stream. step 22">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -441,7 +440,7 @@
      		 </class>
 		</classes>
 	</test> 
-	<test name="Broadcaster: add 720i30. step21">
+	<test name="Broadcaster: add 720i30. step 23">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -479,7 +478,7 @@
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: transcode a stream. step22">
+	<test name="Broadcaster: transcode a stream. step 24">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -513,7 +512,7 @@
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster: Start file input stream. step23">
+	<test name="Broadcaster: Start file input stream. step 25">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -529,7 +528,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: Record transcoded strem and wait. step24">
+	<test name="Broadcaster: Record transcoded strem and wait. step 26">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -542,7 +541,7 @@
 		    <class name="com.zixi.testing.RecordStreamTest" />
 		</classes>
 	</test>
-	<test name="Broadcaster: Test transcoder statistic. step25">
+	<test name="Broadcaster: Test transcoder statistic. step 27">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -553,7 +552,7 @@
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
 		</classes>
 	</test>
-	<test name="Broadcaster: delete a transcoder profile. step27">
+	<test name="Broadcaster: delete a transcoder profile. step 28">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -565,7 +564,7 @@
 		</classes>
 	</test>
 	<!-- Release Maxwell-->
-	<test name="Release Maxwell simulator">
+	<test name="Release Maxwell simulator. step 29">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
@@ -580,7 +579,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: Remove Push input stream">
+	<test name="Broadcaster: Remove Push input stream. step 30">
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -592,7 +591,7 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-	<test name="Broadcaster: Remove Push output stream">
+	<test name="Broadcaster: Remove Push output stream. step 31">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
