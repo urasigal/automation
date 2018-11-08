@@ -30,7 +30,7 @@
 	<test name="Broadcaster: Push output stream creation test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="host" value="10.7.0.62" />
 		<parameter name="latency" value="6000" />
 		<parameter name="fec_force" value="0" />
@@ -593,7 +593,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster: Remove Push output stream">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="transcoded" />
