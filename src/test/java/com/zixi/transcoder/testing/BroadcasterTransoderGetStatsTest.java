@@ -50,14 +50,14 @@ public class BroadcasterTransoderGetStatsTest extends BaseTestZixiMainComponents
 			" src_cmp_frame_drops " + 0);
 			
 			// Checking if broadcaster has crashes while execution of the test.
-			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234", 
+			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", 
 			login_ip,  "22",  "pidof zixi_broadcaster"));
 		}else
 		{
-			Assert.assertEquals("muxer_resets " + resultJson.getString(0) + " decoder_resets " +  resultJson.getString(1) +
-			" encoder_resets " + resultJson.getString(2) + " muxer_drops " + resultJson.getString(3) +
-			" muxer_resets " + resultJson.getString(4) + " raw_frame_drops " + resultJson.getString(5) + " restarts " + resultJson.getString(6) + 
-			" smoother_drops " + resultJson.getString(7) + " src_cmp_frame_drops " + resultJson.getString(8), 
+			Assert.assertEquals("muxer_resets " + resultJson.getInt(0) + " decoder_resets " +  resultJson.getInt(1) +
+			" encoder_resets " + resultJson.getInt(2) + " muxer_drops " + resultJson.getInt(3) +
+			" muxer_resets " + resultJson.getInt(4) + " raw_frame_drops " + resultJson.getInt(5) + " restarts " + resultJson.getInt(6) + 
+			" smoother_drops " + resultJson.getInt(7) + " src_cmp_frame_drops " + resultJson.getInt(8), 
 		
 			"muxer_resets " + 0 + " decoder_resets " +  0 +
 			" encoder_resets " + 0 + " muxer_drops " + 0 +
