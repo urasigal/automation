@@ -48,7 +48,7 @@ public class BroadcasterTransoderGetStatsTest extends BaseTestZixiMainComponents
 			" muxer_resets " + 0 + " raw_frame_drops " + 0 + " restarts " + 0 + " src_cmp_frame_demux_drop " + 0, " src_cmp_frame_overflows " + 0);
 			
 			// Checking if broadcaster has crashes while execution of the test.
-			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip,  "22",  "pidof zixi_broadcaster"));
+			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22",  "pidof zixi_broadcaster"));
 		}else
 		{
 			Assert.assertEquals("muxer_resets " + resultJson.getInt(0) + " decoder_resets " +  resultJson.getInt(1) +
