@@ -22,7 +22,7 @@ public class ZapiAutomationSetup extends BaseTestZixiMainComponents{
 		String zapiSecretkey) throws Exception 
 		{
 			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
-			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
+			zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
 			ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 			String version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 			driverReslut = ((ZapiCycleIntegrator) testDriver).addTestCycleSetup(version, expand, clonedCycleId, cycleName, environment, 
