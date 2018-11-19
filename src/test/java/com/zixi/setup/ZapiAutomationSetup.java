@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.zixi.drivers.drivers.FeederPostKeyDriver;
 import com.zixi.drivers.drivers.ProductAboutDriver;
 import com.zixi.testing.BaseTestZixiMainComponents;
 import com.zixi.zapi.ZapiCycleIntegrator;
@@ -19,6 +21,8 @@ public class ZapiAutomationSetup extends BaseTestZixiMainComponents{
 		String description, String startDate, String endDate, String projectId, String versionId, String zapiUser, String zapiAccesskey,
 		String zapiSecretkey) throws Exception 
 		{
+			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
+			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
 			ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 			String version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 			driverReslut = ((ZapiCycleIntegrator) testDriver).addTestCycleSetup(version, expand, clonedCycleId, cycleName, environment, 

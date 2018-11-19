@@ -11,6 +11,7 @@ import java.nio.charset.Charset;
 import org.testng.ISuite;
 import org.testng.ITestResult;
 
+import com.zixi.drivers.drivers.FeederPostKeyDriver;
 import com.zixi.zapi.ZapiCycleIntegrator;
 import com.zixi.zapi.ZapiExecutionProps;
 
@@ -72,11 +73,16 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		}
 		
 		try {
+			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
+			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
 			folderId = ZapiCycleIntegrator.getFolderIdFromCycle( cycleId, versionId,  projectId,  folderId,  zapiUser, 
 					 zapiAccesskey,  zapiSecretkey);
 		} catch (URISyntaxException | IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		try {
 			if(execStatus == true)
