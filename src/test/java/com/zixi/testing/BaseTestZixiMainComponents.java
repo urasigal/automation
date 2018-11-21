@@ -184,6 +184,7 @@ public class BaseTestZixiMainComponents {
 	// Singleton manner of definition.
 	protected Logger getLoggerInstance() {
 		if (BaseTestZixiMainComponents.LOGGER == null) {
+			System.out.println("Create a LOGGER");
 			try {
 				PrintWriter pw = new PrintWriter("src/main/resources/log");
 				pw.close();

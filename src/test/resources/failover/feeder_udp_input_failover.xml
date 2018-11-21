@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster: Failover udp input test suite" verbose="5" data-provider-thread-count="1">
+<suite name="Feeder Failover udp input test suite" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -74,7 +74,6 @@
 		<class name="com.zixi.testing.FeederInputUdpTest"/>
 	</classes>
 	</test>
-	
 	<test name="Broadcaster - UDP output stream creation 2 ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -213,9 +212,9 @@
 		<parameter name="ssm" value="" />
 		<parameter name="rtp_type" value="0" />	 
 		<parameter name="testid" value="8745" />
-	<classes>
-		<class name="com.zixi.testing.FeederInputUdpTest"/>
-	</classes>
+		<classes>
+			<class name="com.zixi.testing.FeederInputUdpTest"/>
+		</classes>
 	</test>
 	<test name="Feeder - create failover group input stream">
 		<parameter name="userName" value="admin" />

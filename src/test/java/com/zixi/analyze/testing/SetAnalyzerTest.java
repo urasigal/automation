@@ -82,8 +82,7 @@ public class SetAnalyzerTest extends BaseTestZixiMainComponents
 		driverReslut = ((BroadcasterAnalyzerDriver) testDriver).feederCompareStatisticCcErrors( login_ip, userName, userPassword, uiport, streams, ref_stream);
 		
 		Assert.assertEquals(driverReslut.getResult(), "passed");
-		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_feeder"));
-				
+		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22", "pidof zixi_feeder"));		
 	}
 	
 	
@@ -106,4 +105,26 @@ public class SetAnalyzerTest extends BaseTestZixiMainComponents
 		Assert.assertEquals(driverReslut.getResult(), "passed");
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
+	
+		// Detect all CQA stream failures.
+		// This test will see at stream's statistics and search for all CQA failures.
+		// The test is designed to run the whole stream and then count the same numbers of all CQA failures,
+		// so the stream has to be designed in particular way - one appropriate failure for each quality event occasion.
+		
+		@Parameters({ "login_ip", "userName", "userPassword", "uiport", "streamName", "frozenCounter", "streamLenthSec", "testid" })
+		@Test
+		public void broadcasterCqaAllOptions(String login_ip, String userName, String userPassword, 
+		String uiport, String streamName, String frozenCounter, String streamLenthSec, String testid) throws Exception {
+			// Get broadcaster PID in the beginning of the test.
+			sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+			// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+			this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);	
+			buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "uiport", "streamName", "frozenCounter", "streamLenthSec", "testid"}, 
+			new String[] { login_ip, userName, userPassword, uiport, streamName, frozenCounter, streamLenthSec, testid});
+			
+			driverReslut = ((BroadcasterAnalyzerDriver) testDriver).boadcasterAllCqaDetection( userName,  userPassword,  login_ip,  uiport,  streamName, frozenCounter, streamLenthSec);
+				
+			Assert.assertEquals(driverReslut.getResult(), "passed");
+			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		}
 }
