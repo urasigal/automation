@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Zen - hitless failover channel" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Create a file input steam">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="test" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="iphone.ts" />
+		<parameter name="testid" value="8729" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - UDP output stream creation 1 ">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="port" value="4433" />
+		<parameter name="stream" value="test" />
+		<parameter name="streamname" value="test1" />
+		<parameter name="host" value="192.168.7.75" />
+		<parameter name="id" value="test1" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="ttl" value="5" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="df" value="0" />
+		<parameter name="local_port" value="" />
+		<parameter name="dec_key" value="" />
+		<parameter name="type" value="TS" />
+		<parameter name="rows" value="10" />
+		<parameter name="remux_buff" value="1000" />
+		<parameter name="local_ip" value="0.0.0.0" />
+		<parameter name="remux_restampdts" value="0" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="remux_pcr" value="90" />
+		<parameter name="dec_type" value="" />
+		<parameter name="cols" value="10" />
+		<parameter name="testid" value="8731" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
+		</classes>
+	</test> 
+	<test name="Feeder - UDP input stream creation 1">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="uiport" value="4200" /> 
+		<parameter name="mip" value="0.0.0.0" />
+		<parameter name="port" value="4433" />
+		<parameter name="ip" value="0.0.0.0" />
+		<parameter name="name" value="inputudp_1" />
+		<parameter name="ssm" value="" />
+		<parameter name="rtp_type" value="0" />	 
+		<parameter name="testid" value="8733" />
+	<classes>
+		<class name="com.zixi.testing.FeederInputUdpTest"/>
+	</classes>
+	</test>
+	<test name="Broadcaster - UDP output stream creation 2 ">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="port" value="4434" />
+		<parameter name="stream" value="test" />
+		<parameter name="streamname" value="test2" />
+		<parameter name="host" value="192.168.7.75" />
+		<parameter name="id" value="test2" />
+		<parameter name="rtp" value="0" />
+		<parameter name="fec" value="0" />
+		<parameter name="smoothing" value="0" />
+		<parameter name="ttl" value="5" />
+		<parameter name="remux_bitrate" value="0" />
+		<parameter name="df" value="0" />
+		<parameter name="local_port" value="" />
+		<parameter name="dec_key" value="" />
+		<parameter name="type" value="TS" />
+		<parameter name="rows" value="10" />
+		<parameter name="remux_buff" value="1000" />
+		<parameter name="local_ip" value="0.0.0.0" />
+		<parameter name="remux_restampdts" value="0" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="remux_pcr" value="90" />
+		<parameter name="dec_type" value="" />
+		<parameter name="cols" value="10" />
+		<parameter name="testid" value="8735" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
+		</classes>
+	</test> 
+	<test name="Feeder - UDP input stream creation 2">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="uiport" value="4200" /> 
+		<parameter name="mip" value="0.0.0.0" />
+		<parameter name="port" value="4434" />
+		<parameter name="ip" value="0.0.0.0" />
+		<parameter name="name" value="inputudp_2" />
+		<parameter name="ssm" value="" />
+		<parameter name="rtp_type" value="0" />	 
+		<parameter name="testid" value="8737" />
+	<classes>
+		<class name="com.zixi.testing.FeederInputUdpTest"/>
+	</classes>
+	</test>
+	<test name="ZEN - Add feeder">
+		<parameter name="userName" value="admin@zixi.com" />
+		<parameter name="userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="443" />
+		<parameter name="feederName" value="source_feeder" />
+		<parameter name="feederUser" value="admin" />
+		<parameter name="feederPass" value="1234" />
+		<parameter name="shhKeyName" value="test" />
+		<parameter name="accessTagName" value="infra" />  
+		<parameter name="testid" value="8864" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - upload private key">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="8866" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederPostKeyTestZen">
+		    <methods>
+        		<include name="uploadPrivateKeyFeeder" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>
+	<test name="Feeder - set ssh tunnel parameters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="zenHost" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="ssh_port" value="22" />
+		<parameter name="ssh_user" value="source_feeder-feeder" />
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="zenFeederName" value="source_feeder" />
+		<parameter name="testid" value="8868" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederSettingsZenTest">
+		    <methods>
+        		<include name="setFeederTunnelParameters" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test> 
+<!-- Add an ingest cluster (to be used in a feeder source as an ingest cluster) -->
+	<test name="ZEN - Add AWS ingest cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="clusterName" value="ingestcluster" />
+		<parameter name="resource_tag_name" value="infra" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="ingestcluster" />
+		<parameter name="is_auto_scaling" value="true" />
+		<parameter name="activation_key" value="demo-3515-59dc-7cc0" />
+		<parameter name="bx_version" value="12.1.30924" />
+		<parameter name="aws_account_name" value="zixi-main" />
+		<parameter name="region" value="us-east-1" />
+		<parameter name="key_pair" value="gsg-keypair" /> <!-- the name of predefined key pair on AWS -->
+		<parameter name="security_group" value="QA" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
+		<parameter name="min_size" value="1" />
+		<parameter name="max_size" value="1" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
+		<parameter name="vpc_name" value="Zixi (10.6.0.0/24)" />
+		<parameter name="vpc_subnet_name" value="Zixi (10.6.0.0/24)" />
+		<parameter name="testid" value="8870" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test> 
+	
+	<test name="ZEN - Add feeder source 1">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="sourceName" value="feeder_output_source1" />  
+		<parameter name="broadcaster_cluster_name" value="ingestcluster" />  
+		<parameter name="feeder_name" value="source_feeder" />  
+		<parameter name="broadcaster_id" value="" />  
+		<parameter name="input_id" value="inputudp_1" />  
+		<parameter name="max_bitrate" value="5000000" />  
+		<parameter name="latency" value="4000" />  
+		<parameter name="monitor_pids_change" value="1" />  
+		<parameter name="resource_tag_ids" value="infra" />  
+		<parameter name="password" value="1234" />  
+		<parameter name="encryption" value="auto" />  
+		<parameter name="encryption_key" value="" />  
+		<parameter name="allow_outputs" value="true" />  
+		<parameter name="outputs_password" value="1234" />  
+		<parameter name="monitor_only" value="false" />  
+		<parameter name="cleanup_outputs" value="true" />   
+		<parameter name="testid" value="8874" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederSourceTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Add feeder source 2">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="sourceName" value="feeder_output_source2" />  
+		<parameter name="broadcaster_cluster_name" value="ingestcluster" />  
+		<parameter name="feeder_name" value="source_feeder" />  
+		<parameter name="broadcaster_id" value="" />  
+		<parameter name="input_id" value="inputudp_2" />  
+		<parameter name="max_bitrate" value="5000000" />  
+		<parameter name="latency" value="4000" />  
+		<parameter name="monitor_pids_change" value="1" />  
+		<parameter name="resource_tag_ids" value="infra" />  
+		<parameter name="password" value="1234" />  
+		<parameter name="encryption" value="auto" />  
+		<parameter name="encryption_key" value="" />  
+		<parameter name="allow_outputs" value="true" />  
+		<parameter name="outputs_password" value="1234" />  
+		<parameter name="monitor_only" value="false" />  
+		<parameter name="cleanup_outputs" value="true" />   
+		<parameter name="testid" value="8874" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederSourceTest"/>
+		</classes>
+	</test>
+	<!-- Add an ingest cluster (to be used in a feeder source as an ingest cluster) -->
+	<test name="ZEN - Add AWS process cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="clusterName" value="process" />
+		<parameter name="resource_tag_name" value="infra" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="process" />
+		<parameter name="is_auto_scaling" value="true" />
+		<parameter name="activation_key" value="demo-3515-59dc-7cc0" />
+		<parameter name="bx_version" value="12.1.30924" />
+		<parameter name="aws_account_name" value="zixi-main" />
+		<parameter name="region" value="us-east-1" />
+		<parameter name="key_pair" value="gsg-keypair" /> <!-- the name of predefined key pair on AWS -->
+		<parameter name="security_group" value="QA" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
+		<parameter name="min_size" value="1" />
+		<parameter name="max_size" value="1" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
+		<parameter name="vpc_name" value="Zixi (10.6.0.0/24)" />
+		<parameter name="vpc_subnet_name" value="Zixi (10.6.0.0/24)" />
+		<parameter name="testid" value="8870" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - Add hitless failover source">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="name" value="hitless_failover" />
+		<parameter name="broadcaster_cluster_id" value="process" />
+		<parameter name="feeder_id" value="" />
+		<parameter name="broadcaster_id" value="" />
+		<parameter name="target_broadcaster_id" value="-1" />
+		<parameter name="input_id" value="" />
+		<parameter name="max_bitrate" value="5000000" />
+		<parameter name="hitless_failover_source_ids" value="feeder_output_source2@feeder_output_source1" />
+		<parameter name="latency" value="4000" />
+		<parameter name="monitor_pids_change" value="0" />
+		<parameter name="resource_tag_ids" value="infra" />
+		<parameter name="password" value="" />
+		<parameter name="encryption" value="none" />
+		<parameter name="encryption_key" value="" />
+		<parameter name="allow_outputs" value="true" />
+		<parameter name="outputs_password" value="1234" />
+		<parameter name="monitor_only" value="false" />
+		<parameter name="testid" value="8870" />
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddHitlessSource"/>
+		</classes>
+	</test>
+</suite>

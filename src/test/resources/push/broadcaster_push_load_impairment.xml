@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: Push load streaming suite with net impairments" verbose="5" data-provider-thread-count="1">
-<!-- Configure maxwell and test perform a testing -->
-	<test name="Configure maxwell simulator set interference">
+	<!-- Configure maxwell and test perform a testing -->
+	<test name="Configure maxwell simulator - set interference">
 		<parameter name="maxwell_address" value="10.7.0.70" />
 		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
 		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
@@ -17,7 +17,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Multiple  Push test creation (both direction)" > 
+	<test name="Broadcaster: Multiple push test creation (both direction)" > 
 		<parameter name="userName_bx1" value="admin" />
 		<parameter name="userName_bx2" value="admin" />
 		<parameter name="userPass_bx1" value="1234" />
@@ -62,7 +62,7 @@
 		    <class name="com.zixi.load.testing.BroadcasterMultiplePushTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP output stream creation">
+	<test name="Broadcaster: UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
@@ -93,7 +93,7 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - test random outputs with FFMPG analyzer">
+	<test name="Broadcaster: Test random outputs with FFMPG analyzer">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
