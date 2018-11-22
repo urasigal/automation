@@ -14,6 +14,7 @@ import org.testng.ITestResult;
 import com.zixi.drivers.drivers.FeederPostKeyDriver;
 import com.zixi.zapi.ZapiCycleIntegrator;
 import com.zixi.zapi.ZapiExecutionProps;
+import com.zixi.reports.*;
 
 public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter {
 	private boolean execStatus = true;
