@@ -68,7 +68,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 				}
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
-				System.out.println("SuiteListenerZapiReporterAdapter.onFinish()");
+				System.out.println("SuiteListenerZapiReporterAdapter.onFinish()" + e1.getMessage());
 			}
 		}
 		
