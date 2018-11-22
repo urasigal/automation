@@ -23,24 +23,7 @@ public class SuiteListenerZapiReporterAdapter implements ISuiteListener{
 	private StringBuffer testFlowDescription = new StringBuffer();
 	private int testStepCnt = 1;
 	
-	@Override
-	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
-		testStepCnt++;
-	}
 	
-	@Override
-	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void onTestFailure(ITestResult result) {
-		// TODO Auto-generated method stub
-		testFlowDescription.append("Test suite: " + result.getTestContext().getSuite().getName() + ", Step seq num: " + testStepCnt + " " +
-		result.getTestContext().getName() + " Status: Failed. " + result.getThrowable().getMessage().replaceAll("[^a-zA-Z0-9]", ""));
-		execStatus = false;
-	}
 	
 	@Override
 	public void onStart(ISuite suite) {
@@ -100,27 +83,5 @@ public class SuiteListenerZapiReporterAdapter implements ISuiteListener{
 		}
 	}
 
-	@Override
-	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }
