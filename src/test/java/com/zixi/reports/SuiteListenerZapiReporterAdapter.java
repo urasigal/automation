@@ -58,7 +58,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		String folderId			= suite.getParameter("folderId");
 		String zapiUser			= suite.getParameter("zapiUser");
 	
-		if(cycleId.equals("")) {
+		if((cycleId == null) || (cycleId.equals(""))) {
 			String line;
 			try (InputStream fis = new FileInputStream("src/main/resources/cycleid");
 				InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
