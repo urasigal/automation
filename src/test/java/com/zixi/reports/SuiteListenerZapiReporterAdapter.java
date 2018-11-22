@@ -61,34 +61,41 @@ public class SuiteListenerZapiReporterAdapter implements ISuiteListener, ITestLi
 		String folderId			= suite.getParameter("folderId");
 		String zapiUser			= suite.getParameter("zapiUser");
 		
-		if( (cycleId == null) || (cycleId.equals(""))) {
-			testStepCnt ++;
+		if((cycleId == null) || (cycleId.equals(""))) {
+			String line;
+			try (InputStream fis = new FileInputStream("src/main/resources/cycleid");
+				InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+				BufferedReader br = new BufferedReader(isr);) {
+			while ((line = br.readLine()) != null) {
+				cycleId = line;
+				}
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				System.out.println("SuiteListenerZapiReporterAdapter.onFinish()");
+			}
 		}
 		
-		
-	}
-
-	@Override
-	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
-		
+		try {
+			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
+			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
+			folderId = ZapiCycleIntegrator.getFolderIdFromCycle( cycleId, versionId,  projectId,  folderId,  zapiUser, 
+					 zapiAccesskey,  zapiSecretkey);
+		} catch (URISyntaxException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			if(execStatus == true)
+				status = "1"; // Passed.
+			else status = "2"; // Passed.
+			ZapiExecutionProps.createNewTestExecutionWithStatus_TestCycle_TestFolder(status, projectId, issueId, cycleId, folderId, 
+			versionId, assigneeType, zapiUser, zapiAccesskey, zapiSecretkey, testFlowDescription.toString());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
