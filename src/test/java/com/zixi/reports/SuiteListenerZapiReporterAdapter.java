@@ -18,7 +18,7 @@ import com.zixi.drivers.drivers.FeederPostKeyDriver;
 import com.zixi.zapi.ZapiCycleIntegrator;
 import com.zixi.zapi.ZapiExecutionProps;
 
-public class SuiteListenerZapiReporterAdapter implements ISuiteListener, ITestListener{
+public class SuiteListenerZapiReporterAdapter implements ISuiteListener{
 	private boolean execStatus = true;
 	private StringBuffer testFlowDescription = new StringBuffer();
 	private int testStepCnt = 1;
