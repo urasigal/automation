@@ -50,6 +50,16 @@ public class SuiteListenerZapiReporterAdapter implements ISuiteListener, ITestLi
 	
 	@Override
 	public void onFinish(ISuite suite) {
+		String status       	= "";
+		String projectId		= suite.getParameter("projectId");
+		String issueId			= suite.getParameter("issueId");
+		String cycleId			= suite.getParameter("cycleId");
+		String versionId		= suite.getParameter("versionId");
+		String assigneeType		= suite.getParameter("assigneeType");
+		String zapiAccesskey	= suite.getParameter("zapiAccesskey");
+		String zapiSecretkey	= suite.getParameter("zapiSecretkey");
+		String folderId			= suite.getParameter("folderId");
+		String zapiUser			= suite.getParameter("zapiUser");
 		
 	}
 
