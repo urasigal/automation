@@ -62,7 +62,7 @@ public class SuiteListenerZapiReporterAdapter implements ISuiteListener, ITestLi
 		String zapiUser			= suite.getParameter("zapiUser");
 		
 		if(cycleId.equals("")) {
-			
+			testStepCnt ++;
 		}
 		
 		
