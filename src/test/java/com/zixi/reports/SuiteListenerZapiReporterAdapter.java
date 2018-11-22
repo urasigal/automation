@@ -88,6 +88,8 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 			if(execStatus == true)
 				status = "1"; // Passed.
 			else status = "2"; // Passed.
+			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
+			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
 			ZapiExecutionProps.createNewTestExecutionWithStatus_TestCycle_TestFolder(status, projectId, issueId, cycleId, folderId, 
 			versionId, assigneeType, zapiUser, zapiAccesskey, zapiSecretkey, testFlowDescription.toString());
 		} catch (Exception e) {
