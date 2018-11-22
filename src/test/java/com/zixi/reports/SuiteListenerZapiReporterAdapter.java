@@ -62,7 +62,7 @@ public class SuiteListenerZapiReporterAdapter implements ISuiteListener, ITestLi
 		String zapiUser			= suite.getParameter("zapiUser");
 		
 		if(cycleId.equals("")) {
-			String line;
+			String line = "";
 			try (InputStream fis = new FileInputStream("src/main/resources/cycleid");
 				InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 				BufferedReader br = new BufferedReader(isr);) {
