@@ -29,7 +29,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.9.4</version>
+			<version>6.9.8</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -100,7 +100,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.8</version>
+				<version>3.0.0-M1</version>
 				<configuration>
 					<systemPropertyVariables>
             			<java.util.logging.config.file>src/main/resources/log_cfg</java.util.logging.config.file>
