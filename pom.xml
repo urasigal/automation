@@ -106,11 +106,11 @@
             			<java.util.logging.config.file>src/main/resources/log_cfg</java.util.logging.config.file>
 	                </systemPropertyVariables>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/zapi_apply_cycle.xml</suiteXmlFile>
 					    
-					    
-					    <suiteXmlFile>src/test/resources/h264.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/transcoder/h264_1080p30bit8/hw/intel/h264_1080p30_h264.xml</suiteXmlFile>
 					   
 						
 					</suiteXmlFiles>
