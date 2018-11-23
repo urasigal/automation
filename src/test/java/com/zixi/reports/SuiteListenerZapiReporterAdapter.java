@@ -75,9 +75,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		try {
 			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
 			zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
-			System.out.println("Keys are --------------------------------->>>>>" + zapiAccesskey + "------------" + );
-			folderId = ZapiCycleIntegrator.getFolderIdFromCycle( cycleId, versionId,  projectId,  folderId,  zapiUser, 
-					 zapiAccesskey,  zapiSecretkey);
+			folderId = ZapiCycleIntegrator.getFolderIdFromCycle( cycleId, versionId,  projectId,  folderId,  zapiUser, zapiAccesskey,  zapiSecretkey);
 		} catch (URISyntaxException | IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
