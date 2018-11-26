@@ -25,8 +25,8 @@ public class ZapiAutomationSetup extends BaseTestZixiMainComponents{
 			zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
 			ProductAboutDriver productAboutDriver = new ProductAboutDriver();
 			String version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
-			driverReslut = ((ZapiCycleIntegrator) testDriver).addTestCycleSetup(version, expand, clonedCycleId, cycleName, environment, 
-			description, startDate, endDate, projectId, versionId, zapiUser, zapiAccesskey, zapiSecretkey);
+			driverReslut = ((ZapiCycleIntegrator) testDriver).addTestCycleSetup(version, expand, clonedCycleId, cycleName + version, environment, 
+			description + version, startDate, endDate, projectId, versionId, zapiUser, zapiAccesskey, zapiSecretkey);
 			
 			Assert.assertEquals(driverReslut.getResult(), "success");
 		}
