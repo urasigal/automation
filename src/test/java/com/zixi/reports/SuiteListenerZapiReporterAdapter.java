@@ -75,8 +75,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		try {
 			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
 			zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
-			folderId = ZapiCycleIntegrator.getFolderIdFromCycle( cycleId, versionId,  projectId,  folderId,  zapiUser, 
-					 zapiAccesskey,  zapiSecretkey);
+			folderId = ZapiCycleIntegrator.getFolderIdFromCycle( cycleId, versionId,  projectId,  folderId,  zapiUser, zapiAccesskey,  zapiSecretkey);
 		} catch (URISyntaxException | IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -86,7 +85,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		}
 		try {
 			if(execStatus == true)
-				status = "1"; // Passed.
+				status = "1";  // Passed.
 			else status = "2"; // Passed.
 			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
 			zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
