@@ -42,7 +42,6 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 	@Override
 	public void onStart(ISuite suite) {
 		// TODO Auto-generated method stub
-		testFlowDescription.append("Test flow: ");	
 	}
 	
 	@Override
