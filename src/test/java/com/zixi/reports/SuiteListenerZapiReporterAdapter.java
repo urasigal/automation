@@ -16,6 +16,9 @@ import com.zixi.zapi.ZapiCycleIntegrator;
 import com.zixi.zapi.ZapiExecutionProps;
 
 public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter {
+	
+	private static final String PASSED = "1";
+	private static final String FAILED = "2";
 	private boolean execStatus = true;
 	private StringBuffer testFlowDescription = new StringBuffer();
 	private int testStepCnt = 1;
@@ -42,7 +45,6 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 	@Override
 	public void onStart(ISuite suite) {
 		// TODO Auto-generated method stub
-		testFlowDescription.append("Test flow: ");	
 	}
 	
 	@Override
@@ -58,8 +60,10 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		String folderId			= suite.getParameter("folderId");
 		String zapiUser			= suite.getParameter("zapiUser");
 	
-		if(cycleId.equals("")) {
+		// Check input parameter.
+		if((cycleId == null) || (cycleId.equals(""))) {
 			String line;
+			// Get stored cycleId.
 			try (InputStream fis = new FileInputStream("src/main/resources/cycleid");
 				InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 				BufferedReader br = new BufferedReader(isr);) {
@@ -73,10 +77,10 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		}
 		
 		try {
+			// Get secret keys.
 			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
-			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
-			folderId = ZapiCycleIntegrator.getFolderIdFromCycle( cycleId, versionId,  projectId,  folderId,  zapiUser, 
-					 zapiAccesskey,  zapiSecretkey);
+			zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
+			folderId = ZapiCycleIntegrator.getFolderIdFromCycle( cycleId, versionId,  projectId,  folderId,  zapiUser, zapiAccesskey,  zapiSecretkey);
 		} catch (URISyntaxException | IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -86,8 +90,10 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		}
 		try {
 			if(execStatus == true)
-				status = "1"; // Passed.
-			else status = "2"; // Passed.
+				status = PASSED;
+			else status = FAILED; 
+			zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
+			zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
 			ZapiExecutionProps.createNewTestExecutionWithStatus_TestCycle_TestFolder(status, projectId, issueId, cycleId, folderId, 
 			versionId, assigneeType, zapiUser, zapiAccesskey, zapiSecretkey, testFlowDescription.toString());
 		} catch (Exception e) {

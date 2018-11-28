@@ -14,7 +14,7 @@
 	  	<parameter name="zapiUser" value="uri@zixi.com" />
   	  </listener>
   	</listeners>
-	<test name="Broadcaster - Create a file input steam step#1">
+	<test name="Broadcaster - Create a file input stream step1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -40,7 +40,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Stop a file input stream step#2">
+	<test name="Broadcaster - Stop a file input stream step2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -56,7 +56,7 @@
      		 </class>
 		</classes>
 	</test> 
-	<test name="Broadcaster: add 720p step#3">
+	<test name="Broadcaster: add 720p step3">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -94,7 +94,7 @@
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: transcode stream - 720p step#4">
+	<test name="Broadcaster: transcode stream - 720p step4">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
