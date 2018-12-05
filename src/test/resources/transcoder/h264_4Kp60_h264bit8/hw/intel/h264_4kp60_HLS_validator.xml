@@ -272,7 +272,7 @@
 		<parameter name="compress_zixi" value="1" />
 		<parameter name="multicast" value="0" />
 		<parameter name="streams" value="str1,str2,str3" />
-		<parameter name="bitrates" value="700000,5000000,3000000" />
+		<parameter name="bitrates" value="7000000,50000000,30000000" />
 		<parameter name="max_time" value="0" />
 		<parameter name="remux" value="1" />
 		<parameter name="testid" value="686" />
@@ -324,7 +324,7 @@
 	<test name="Broadcaster: delete adaptive group test. step 13">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="hls_validator" />
 		<parameter name="testid" value="700" />
