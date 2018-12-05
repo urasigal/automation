@@ -39,13 +39,25 @@ public class BroadcasterTransoderGetStatsTest extends BaseTestZixiMainComponents
 		JSONArray resultJson = new JSONArray(driverReslut.getResult());
 		if(mode.equals("vbr"))
 		{
-			Assert.assertEquals("muxer_resets " + resultJson.getInt(0) + " decoder_resets " +  resultJson.getInt(1) +
-			" encoder_resets " + resultJson.getInt(2) + " muxer_drops " + resultJson.getInt(3) +
-			" muxer_resets " + resultJson.getInt(4) + " raw_frame_drops " + resultJson.getInt(5) + " restarts " + resultJson.getInt(6) + 
-			" src_cmp_frame_demux_drop " + resultJson.getInt(8) + " src_cmp_frame_overflows " + resultJson.getInt(9), 
+			Assert.assertEquals	(	"muxer_resets " + resultJson.getInt(0) +
+									" decoder_resets " +  resultJson.getInt(1) +
+									" encoder_resets " + resultJson.getInt(2) + 
+									" muxer_drops " + resultJson.getInt(3) +
+									" muxer_resets " + resultJson.getInt(4) + 
+									" raw_frame_drops " + resultJson.getInt(5) +
+									" restarts " + resultJson.getInt(6) + 
+									" src_cmp_frame_demux_drop " + resultJson.getInt(8) + 
+									" src_cmp_frame_overflows " + resultJson.getInt(9), 
 		
-			"muxer_resets " + 0 +  " decoder_resets " + 0 + " encoder_resets " + 0 + " muxer_drops " + 0 +
-			" muxer_resets " + 0 + " raw_frame_drops " + 0 + " restarts " + 0 + " src_cmp_frame_demux_drop " + 0, " src_cmp_frame_overflows " + 0);
+									"muxer_resets " + 0 + 
+									" decoder_resets " + 0 + 
+									" encoder_resets " + 0 + 
+									" muxer_drops " + 0 +
+									" muxer_resets " + 0 + 
+									" raw_frame_drops " + 0 + 
+									" restarts " + 0 + 
+									" src_cmp_frame_demux_drop " + 0,
+									" src_cmp_frame_overflows " + 0);
 			
 			// Checking if broadcaster has crashes while execution of the test.
 			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234", login_ip, "22",  "pidof zixi_broadcaster"));
