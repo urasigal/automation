@@ -17,8 +17,8 @@ import com.zixi.zapi.ZapiExecutionProps;
 
 public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter {
 	
-	private static final String PASSED = "1";
-	private static final String FAILED = "2";
+	private  final String PASSED = "1";
+	private  final String FAILED = "2";
 	private boolean execStatus = true;
 	private StringBuffer testFlowDescription = new StringBuffer();
 	private int testStepCnt = 1;
@@ -99,6 +99,9 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			status = PASSED;
+			testFlowDescription = new StringBuffer();
 		}
 	}
 }
