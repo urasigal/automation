@@ -100,7 +100,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
-			status = PASSED;
+			execStatus = true;
 			testFlowDescription = new StringBuffer();
 		}
 	}
