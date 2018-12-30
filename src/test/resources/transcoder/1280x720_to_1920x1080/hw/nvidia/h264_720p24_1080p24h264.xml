@@ -82,8 +82,8 @@
 		<parameter name="brightness" value="0" />
 		<parameter name="contrast" value="1" />
 		<parameter name="fps" value="0" />
-		<parameter name="width" value="1280" />
-		<parameter name="height" value="720" />
+		<parameter name="width" value="1920" />
+		<parameter name="height" value="1080" />
 		<parameter name="crf" value="23" />
 		<parameter name="tune" value="film" />
 		<parameter name="keep_ar" value="1" />
@@ -149,7 +149,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="trns_h264_1080p30_nvidia_to_h264_720p30_8bit" />
+		<parameter name="id" value="h264_720p24_nvidia_to_h264_1080p24" />
 		<parameter name="on" value="1" />
 		<parameter name="cpuFolder" value="720p" />
 		<parameter name="testid" value="9672" />    
@@ -162,7 +162,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="stream_name" value="trns_h264_1080p30_nvidia_to_h264_720p30_8bit" />
+		<parameter name="stream_name" value="h264_720p24_nvidia_to_h264_1080p24" />
 		<parameter name="testid" value="9674" />    
 		<classes>
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
