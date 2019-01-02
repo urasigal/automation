@@ -49,6 +49,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 	
 	@Override
 	public void onFinish(ISuite suite) {
+		try {
 		String status       	= null;
 		String projectId		= suite.getParameter("projectId");
 		String issueId			= suite.getParameter("issueId");
@@ -99,6 +100,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
 		}finally {
 			execStatus = true;
 			testFlowDescription = new StringBuffer();
