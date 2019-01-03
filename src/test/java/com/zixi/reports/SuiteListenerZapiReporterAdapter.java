@@ -20,7 +20,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 	private  final String PASSED = "1";
 	private  final String FAILED = "2";
 	private boolean execStatus = true;
-	private StringBuffer testFlowDescription = new StringBuffer();
+	private StringBuffer testFlowDescription = new StringBuffer("Automated execution. ");
 	private int testStepCnt = 0;
 	
 	@Override
@@ -44,7 +44,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 	
 	@Override
 	public void onStart(ISuite suite) {
-		// TODO Auto-generated method stub
+		execStatus = true;
 	}
 	
 	@Override
@@ -102,7 +102,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 			}
 		}finally {
 			execStatus = true;
-			testFlowDescription = new StringBuffer();
+			testFlowDescription = new StringBuffer("Automated execution. ");
 			testStepCnt = 0;
 		}
 	}
