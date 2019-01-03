@@ -1,3 +1,4 @@
+
 package com.zixi.transcoder.testing;
 
 import org.json.JSONArray;
@@ -87,3 +88,4 @@ public class BroadcasterTransoderGetStatsTest extends BaseTestZixiMainComponents
 		}
 	}
 }
+

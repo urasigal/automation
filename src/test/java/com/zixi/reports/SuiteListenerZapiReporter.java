@@ -5,8 +5,6 @@ import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 public class SuiteListenerZapiReporter implements ISuiteListener, ITestListener{	
 	@Override
