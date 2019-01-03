@@ -97,7 +97,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 			zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
 			ZapiExecutionProps.createNewTestExecutionWithStatus_TestCycle_TestFolder( status, projectId, issueId, cycleId, folderId, 
 				versionId, assigneeType, zapiUser, zapiAccesskey, zapiSecretkey, 
-				testFlowDescription.toString().substring( 0, ( testFlowDescription.toString().length() < 749 ? testFlowDescription.toString().length() -1 : 749 ) ) );
+				testFlowDescription.toString().substring( 0, ( testFlowDescription.toString().length() < 748 ? ( testFlowDescription.toString().length() - 1) : 740 ) ) );
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
