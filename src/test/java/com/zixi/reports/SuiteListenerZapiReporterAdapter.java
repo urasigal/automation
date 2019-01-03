@@ -65,8 +65,7 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 			if((cycleId == null) || (cycleId.equals(""))) {
 				String line;
 				// Get stored cycleId.
-				try (InputStream fis = new FileInputStream("src/main/resources/cycleid");
-					InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+				try (InputStream fis = new FileInputStream("src/main/resources/cycleid"); InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 					BufferedReader br = new BufferedReader(isr);) {
 				while ((line = br.readLine()) != null) {
 					cycleId = line;
@@ -90,14 +89,13 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 				e.printStackTrace();
 			}
 			try {
-				if(execStatus == true)
-					status = PASSED;
-				else status = FAILED; 
+				status = (execStatus == true) ? PASSED : FAILED ;
 				zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
 				zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
+				int len = ( testFlowDescription.toString().length() < 748 ? ( testFlowDescription.toString().length() - 1) : 740 );
 				ZapiExecutionProps.createNewTestExecutionWithStatus_TestCycle_TestFolder( status, projectId, issueId, cycleId, folderId, 
 					versionId, assigneeType, zapiUser, zapiAccesskey, zapiSecretkey, 
-					testFlowDescription.toString().substring( 0, ( testFlowDescription.toString().length() < 748 ? ( testFlowDescription.toString().length() - 1) : 740 ) ) );
+					testFlowDescription.toString().substring( 0, len ) );
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
