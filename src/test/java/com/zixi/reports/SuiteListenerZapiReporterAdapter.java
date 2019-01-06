@@ -92,10 +92,10 @@ public class SuiteListenerZapiReporterAdapter extends SuiteListenerZapiReporter 
 				status = (execStatus == true) ? PASSED : FAILED ;
 				zapiAccesskey = FeederPostKeyDriver.getStringFromUrl("zapiAccesskey");
 				zapiSecretkey = FeederPostKeyDriver.getStringFromUrl("zapiSecretkey");
-				int len = ( testFlowDescription.toString().length() < 748 ? ( testFlowDescription.toString().length() - 1) : 740 );
+				
+				// Update Jira execution. 
 				ZapiExecutionProps.createNewTestExecutionWithStatus_TestCycle_TestFolder( status, projectId, issueId, cycleId, folderId, 
-					versionId, assigneeType, zapiUser, zapiAccesskey, zapiSecretkey, 
-					testFlowDescription.toString().substring( 0, len ) );
+					versionId, assigneeType, zapiUser, zapiAccesskey, zapiSecretkey, testFlowDescription.toString());
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
