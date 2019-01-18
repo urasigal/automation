@@ -16,8 +16,8 @@ public class BroadcasterIntelTrannscodeStreamTest extends BaseTestZixiMainCompon
 	"fast_connect", "kompression", "enc_type", "enc_key", "rec_history", "rec_duration", "src", "ap", "use_hw", "ll", "all_pids",
 	"bit", "profile_name", "mode", "vp", "smoothing", "max_va_diff_ms", "testid"})
 	
-	@Test // This test is actually transcodes an input test.
-	public void broadcasterSingleInputStreamstatisticAnilyzer(String userName, String userPass, String login_ip, String uiport, String type,String id,
+	@Test 
+	public void broadcasterSingleInputStreamtatisticAnilyzer(String userName, String userPass, String login_ip, String uiport, String type,String id,
 	String matrix, String max_outputs, String mcast_out, String time_shift, String old,
 	String fast_connect, String kompression, String enc_type, String enc_key,
 	String rec_history, String rec_duration, String src, String ap, String use_hw, String ll, String all_pids,
