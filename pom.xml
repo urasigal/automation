@@ -106,14 +106,17 @@
             			<java.util.logging.config.file>src/main/resources/log_cfg</java.util.logging.config.file>
 	                </systemPropertyVariables>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
 					    
 					    <suiteXmlFile>src/test/resources/ott/hls_push_out.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/ott/hls_push_ott_splitted.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/ott/hls_push_out_ssl.xml</suiteXmlFile>
-					   	<suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_adaptive.xml</suiteXmlFile>
-					   	<suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_non_adaptive.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_adaptive.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_non_adaptive.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/ott/hls_push_audio_validator.xml</suiteXmlFile>
+						
+						
 					    <suiteXmlFile>src/test/resources/vod.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/zixiadaptive.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/maxwell/zixi_adaptive_up_case.xml</suiteXmlFile>
