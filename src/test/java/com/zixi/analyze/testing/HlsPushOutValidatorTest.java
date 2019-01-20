@@ -25,6 +25,7 @@ public class HlsPushOutValidatorTest extends BaseTestZixiMainComponents{
 		buildTestParametersString(new String[] { "analyzer_url", "hls_url", "testid" }, new String[] { analyzer_url, hls_url, testid });
 		
 		driverReslut = ((HlsAppleAnalyzerDriver) testDriver).testAnalyzer( analyzer_url,  hls_url);
+		Thread.sleep(3000);
 		jettyZixiRunnerThread.stopServers();
 		
 		Assert.assertEquals(driverReslut.getResult(), "No errors");
