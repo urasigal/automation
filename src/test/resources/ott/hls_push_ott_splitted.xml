@@ -224,6 +224,14 @@
 		    <class name="com.zixi.analyze.testing.FFMPEGImageStatisticHlsPushOutTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster: Test HLS with HLS validator. step 12">  <!-- Compound test: internal server and apple validator-->
+		<parameter name="analyzer_url" value="10.7.0.201" />
+		<parameter name="hls_url" value="http://10.7.0.90:4321/west/index.m3u8" />
+		<parameter name="testid" value="10030" />  
+		<classes>
+		    <class name="com.zixi.analyze.testing.HlsPushOutValidatorTest"/>
+		</classes>
+	</test>
 	<!-- delete a transcoded stream -->
 	<test name="Broadcaster - Remove an input stream test - 5Mbps">
 		<parameter name="login_ip" value="10.7.0.74" />
