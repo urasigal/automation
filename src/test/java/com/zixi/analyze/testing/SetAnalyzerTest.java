@@ -127,4 +127,24 @@ public class SetAnalyzerTest extends BaseTestZixiMainComponents
 			Assert.assertEquals(driverReslut.getResult(), "passed");
 			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 		}
+		
+		// Broadcaster - test failover group backup feature. Make sure that the backup stream is not chosen while there are active streams with higher 
+		// priority.
+		@Parameters({ "login_ip", "userName", "userPassword", "uiport", "failover_group_name", "backup_stream_name", "testid" })
+		@Test
+		public void failoverNoBackupSwitchTest(String login_ip, String userName, String userPassword,
+		String uiport, String failover_group_name, String backup_stream_name, String testid) throws Exception {
+			// Get broadcaster PID in the beginning of the test.
+			sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
+			
+			this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);	
+			buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "uiport", "failover_group_name", "backup_stream_name", "testid" }, 
+			new String[] { login_ip, userName, userPassword, uiport, failover_group_name, testid });
+			
+			driverReslut = ((BroadcasterAnalyzerDriver) testDriver).boadcasterBackupIsNotChosen(login_ip, userName, userPassword, uiport, failover_group_name, backup_stream_name);
+				
+			Assert.assertEquals(driverReslut.getResult(), "passed");
+			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
+		}
+		
 }
