@@ -139,7 +139,7 @@ public class SetAnalyzerTest extends BaseTestZixiMainComponents
 			
 			this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);	
 			buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "uiport", "failover_group_name", "backup_stream_name", "testid" }, 
-			new String[] { login_ip, userName, userPassword, uiport, failover_group_name, testid });
+			new String[] { login_ip, userName, userPassword, uiport, failover_group_name, backup_stream_name, testid });
 			
 			driverReslut = ((BroadcasterAnalyzerDriver) testDriver).boadcasterBackupIsNotChosen(login_ip, userName, userPassword, uiport, failover_group_name, backup_stream_name);
 				
