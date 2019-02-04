@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster: Failover udp input test suite" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster - Create a file input steam">
+<suite name="Broadcaster: Failover UDP primary/backup while live primary" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Create a file input stream">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
@@ -18,7 +18,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="4000.ts" />
-		<parameter name="testid" value="8494" />    
+		<parameter name="testid" value="10113" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -78,7 +78,7 @@
 		<parameter name="dec_type" value="" />				
 		<parameter name="cols" value="10" />				
 		<parameter name="number_of_streams" value="4" />									
-		<parameter name="testid" value="8496" />				
+		<parameter name="testid" value="10115" />				
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest"/>
 		</classes>
@@ -99,11 +99,11 @@
 		<parameter name="kompression" value="1" />
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
-		<parameter name="latency" value="6100" />
-		<parameter name="max_bitrate" value="9999900" />
+		<parameter name="latency" value="2000" />
+		<parameter name="max_bitrate" value="10000000" />
 		<parameter name="keep_rtp" value="1" />
 		<parameter name="group_components" value="test0&amp;priority=1,test1&amp;priority=1,test2&amp;priority=1,test3&amp;priority=0" />
-		<parameter name="testid" value="8500" />    
+		<parameter name="testid" value="10117" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFailOverInputCreationTest">
      		 </class>
@@ -115,7 +115,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
 		<parameter name="analyze" value="1" />			
-		<parameter name="testid" value="8504" />		
+		<parameter name="testid" value="10119" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
@@ -130,7 +130,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test0" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8659" />  
+		<parameter name="testid" value="10121" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -142,7 +142,7 @@
 		<parameter name="uiport" value="4444" />		
 		<parameter name="failover_group_name" value="tg" />			
 		<parameter name="backup_stream_name" value="test3" />
-		<parameter name="testid" value="8659" />		
+		<parameter name="testid" value="10123" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
@@ -157,7 +157,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test1" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8659" />  
+		<parameter name="testid" value="10125" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -169,7 +169,7 @@
 		<parameter name="uiport" value="4444" />		
 		<parameter name="failover_group_name" value="tg" />			
 		<parameter name="backup_stream_name" value="test3" />
-		<parameter name="testid" value="8659" />		
+		<parameter name="testid" value="10127" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
@@ -184,7 +184,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />		
 		<parameter name="refstream" value="tg" />			
-		<parameter name="testid" value="8506" />		
+		<parameter name="testid" value="10129" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
@@ -198,29 +198,29 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8516" />  
+		<parameter name="testid" value="10131" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - delete all outputs stream" >
+	<test name="Broadcaster - delete all outputs streams" >
 			<parameter name="login_ip" value="10.7.0.74" />
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="8518" /> 
+			<parameter name="testid" value="10133" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Fiel input">
+	<test name="Broadcaster - Remove file input">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="8520" />  
+		<parameter name="testid" value="10135" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
