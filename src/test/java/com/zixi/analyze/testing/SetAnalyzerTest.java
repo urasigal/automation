@@ -141,10 +141,11 @@ public class SetAnalyzerTest extends BaseTestZixiMainComponents
 			buildTestParametersString(new String[] {"login_ip", "userName", "userPassword", "uiport", "failover_group_name", "backup_stream_name", "testid" }, 
 			new String[] { login_ip, userName, userPassword, uiport, failover_group_name, backup_stream_name, testid });
 			
-			driverReslut = ((BroadcasterAnalyzerDriver) testDriver).boadcasterBackupIsNotChosen(login_ip, userName, userPassword, uiport, failover_group_name, backup_stream_name);
-				
-			Assert.assertEquals(driverReslut.getResult(), "passed");
+			driverReslut = ((BroadcasterAnalyzerDriver) testDriver).boadcasterBackupIsNotChosen(login_ip, userName, userPassword,
+			uiport, failover_group_name, backup_stream_name);
+			
+			// If the returned number is different from 0, so the backup stream has contributed to the failover stream.
+			Assert.assertEquals( Integer.parseInt(driverReslut.getResult()), 0);
 			Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 		}
-		
 }
