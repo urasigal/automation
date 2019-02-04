@@ -17,7 +17,7 @@
 		<parameter name="kompression" value="1" />
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
-		<parameter name="path" value="iphone.ts" />
+		<parameter name="path" value="4000.ts" />
 		<parameter name="testid" value="8494" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
@@ -135,7 +135,34 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - test active source">
+	<test name="Broadcaster - test active source 0">
+		<parameter name="login_ip" value="10.7.0.75" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />		
+		<parameter name="failover_group_name" value="tg" />			
+		<parameter name="backup_stream_name" value="test3" />
+		<parameter name="testid" value="8659" />		
+		<classes>
+		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
+			    <methods>
+	        		<include name="failoverNoBackupSwitchTest" />
+	     		</methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove UDP output stream 1">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="test1" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8659" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - test active source 1">
 		<parameter name="login_ip" value="10.7.0.75" />		
 		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
