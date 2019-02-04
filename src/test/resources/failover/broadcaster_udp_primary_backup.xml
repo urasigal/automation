@@ -102,7 +102,7 @@
 		<parameter name="latency" value="6100" />
 		<parameter name="max_bitrate" value="9999900" />
 		<parameter name="keep_rtp" value="1" />
-		<parameter name="group_components" value="test0&amp;priority=0,test1&amp;priority=1,test2&amp;priority=1,test3&amp;priority=1" />
+		<parameter name="group_components" value="test0&amp;priority=1,test1&amp;priority=1,test2&amp;priority=1,test3&amp;priority=0" />
 		<parameter name="testid" value="8500" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFailOverInputCreationTest">
@@ -120,6 +120,33 @@
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
 	        		<include name="broadcasterTurnOnAnalyzerOnAllStreams" />
+	     		</methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove UDP output stream 0">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="id" value="test0" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="8659" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - test active source">
+		<parameter name="login_ip" value="10.7.0.75" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />		
+		<parameter name="failover_group_name" value="tg" />			
+		<parameter name="backup_stream_name" value="test3" />
+		<parameter name="testid" value="8659" />		
+		<classes>
+		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
+			    <methods>
+	        		<include name="failoverNoBackupSwitchTest" />
 	     		</methods>
      		 </class>
 		</classes>
