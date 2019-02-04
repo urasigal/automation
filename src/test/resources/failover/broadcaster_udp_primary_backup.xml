@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster failover udp inputs - backup stream component is not chosen case " verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: Failover udp input test suite" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -18,7 +18,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="iphone.ts" />
-		<parameter name="testid" value="8729" />    
+		<parameter name="testid" value="8494" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -27,349 +27,146 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - UDP output stream creation 1 ">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="port" value="4433" />
-		<parameter name="stream" value="test" />
-		<parameter name="streamname" value="test1" />
-		<parameter name="host" value="192.168.7.75" />
-		<parameter name="id" value="test1" />
-		<parameter name="rtp" value="0" />
-		<parameter name="fec" value="0" />
-		<parameter name="smoothing" value="0" />
-		<parameter name="ttl" value="5" />
+	<test name="Broadcaster - multiple UDP stream creation">
+		<parameter name="userName_bx1" value="admin" />		
+		<parameter name="userName_bx2" value="admin" />		
+		<parameter name="userPass_bx1" value="1234" />		
+		<parameter name="userPass_bx2" value="1234" />		
+		<parameter name="login_ip_bx1" value="10.7.0.75" /> 
+		<parameter name="login_ip_bx2" value="10.7.0.74" /> 
+		<parameter name="ts_port" value="9999" /> 			
+		<parameter name="id_bx1" value="test" /> 			
+		<parameter name="rtp_type" value="0" />				
+		<parameter name="multi_src" value="" />				
+		<parameter name="max_bitrate" value="300000000" />	
+		<parameter name="time_shift" value="0" />			
+		<parameter name="mcast_ip" value="" />			
+		<parameter name="mcast_force" value="" />			
+		<parameter name="mcast_port" value="" />			
+		<parameter name="nic" value="0.0.0.0" />			
+		<parameter name="type_bx1" value="local-ts" />		
+		<parameter name="multicast" value="" />				
+		<parameter name="enc_key" value="" />				
+		<parameter name="kompression" value="1" />			
+		<parameter name="uiport_bx1" value="4444" /> 		
+		<parameter name="mcast_ttl" value="" />				
+		<parameter name="enc_type" value="" />				
+		<parameter name="mcast_out" value="0" />			
+		<parameter name="complete" value="" />				
+		<parameter name="max_outputs" value="-1" />			
+		<parameter name="on" value="1" />				
+		<parameter name="port" value="9999" />				
+		<parameter name="stream" value="test" />			
+		<parameter name="streamname" value="test" />		
+		<parameter name="host" value="10.7.0.75" />			
+		<parameter name="id_bx2" value="test" />			
+		<parameter name="rtp" value="0" />					
+		<parameter name="fec" value="0" />					
+		<parameter name="smoothing" value="0" />			
+		<parameter name="ttl" value="5" />					
 		<parameter name="remux_bitrate" value="0" />
-		<parameter name="df" value="0" />
-		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="" />
-		<parameter name="type" value="TS" />
-		<parameter name="rows" value="10" />
-		<parameter name="remux_buff" value="1000" />
-		<parameter name="local_ip" value="0.0.0.0" />
-		<parameter name="remux_restampdts" value="0" />
+		<parameter name="df" value="0" />					
+		<parameter name="local_port" value="" />			
+		<parameter name="dec_key" value="" />		
+		<parameter name="type_bx2" value="TS" />			
+		<parameter name="rows" value="10" />				
+		<parameter name="remux_buff" value="1000" />		
+		<parameter name="local_ip" value="0.0.0.0" />		
+		<parameter name="remux_restampdts" value="0" />		
+		<parameter name="uiport_bx2" value="4444" />		
+		<parameter name="remux_pcr" value="90" />			
+		<parameter name="dec_type" value="" />				
+		<parameter name="cols" value="10" />				
+		<parameter name="number_of_streams" value="4" />									
+		<parameter name="testid" value="8496" />				
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Create failover group input">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="remux_pcr" value="90" />
-		<parameter name="dec_type" value="" />
-		<parameter name="cols" value="10" />
-		<parameter name="testid" value="8731" />  
+		<parameter name="type" value="Failover" />
+		<parameter name="id" value="tg" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="latency" value="6100" />
+		<parameter name="max_bitrate" value="9999900" />
+		<parameter name="keep_rtp" value="1" />
+		<parameter name="group_components" value="test0&amp;priority=0,test1&amp;priority=1,test2&amp;priority=1,test3&amp;priority=1" />
+		<parameter name="testid" value="8500" />    
 		<classes>
-		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
-		</classes>
-	</test> 
-	<test name="Feeder - UDP input stream creation 1">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="uiport" value="4200" /> 
-		<parameter name="mip" value="0.0.0.0" />
-		<parameter name="port" value="4433" />
-		<parameter name="ip" value="0.0.0.0" />
-		<parameter name="name" value="inputudp_1" />
-		<parameter name="ssm" value="" />
-		<parameter name="rtp_type" value="0" />	 
-		<parameter name="testid" value="8733" />
-	<classes>
-		<class name="com.zixi.testing.FeederInputUdpTest"/>
-	</classes>
-	</test>
-	<test name="Broadcaster - UDP output stream creation 2 ">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="port" value="4434" />
-		<parameter name="stream" value="test" />
-		<parameter name="streamname" value="test2" />
-		<parameter name="host" value="192.168.7.75" />
-		<parameter name="id" value="test2" />
-		<parameter name="rtp" value="0" />
-		<parameter name="fec" value="0" />
-		<parameter name="smoothing" value="0" />
-		<parameter name="ttl" value="5" />
-		<parameter name="remux_bitrate" value="0" />
-		<parameter name="df" value="0" />
-		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="" />
-		<parameter name="type" value="TS" />
-		<parameter name="rows" value="10" />
-		<parameter name="remux_buff" value="1000" />
-		<parameter name="local_ip" value="0.0.0.0" />
-		<parameter name="remux_restampdts" value="0" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="remux_pcr" value="90" />
-		<parameter name="dec_type" value="" />
-		<parameter name="cols" value="10" />
-		<parameter name="testid" value="8735" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
-		</classes>
-	</test> 
-	<test name="Feeder - UDP input stream creation 2">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="uiport" value="4200" /> 
-		<parameter name="mip" value="0.0.0.0" />
-		<parameter name="port" value="4434" />
-		<parameter name="ip" value="0.0.0.0" />
-		<parameter name="name" value="inputudp_2" />
-		<parameter name="ssm" value="" />
-		<parameter name="rtp_type" value="0" />	 
-		<parameter name="testid" value="8737" />
-	<classes>
-		<class name="com.zixi.testing.FeederInputUdpTest"/>
-	</classes>
-	</test>
-	<test name="Broadcaster - UDP output stream creation 3 ">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="port" value="4435" />
-		<parameter name="stream" value="test" />
-		<parameter name="streamname" value="test3" />
-		<parameter name="host" value="192.168.7.75" />
-		<parameter name="id" value="test3" />
-		<parameter name="rtp" value="0" />
-		<parameter name="fec" value="0" />
-		<parameter name="smoothing" value="0" />
-		<parameter name="ttl" value="5" />
-		<parameter name="remux_bitrate" value="0" />
-		<parameter name="df" value="0" />
-		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="" />
-		<parameter name="type" value="TS" />
-		<parameter name="rows" value="10" />
-		<parameter name="remux_buff" value="1000" />
-		<parameter name="local_ip" value="0.0.0.0" />
-		<parameter name="remux_restampdts" value="0" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="remux_pcr" value="90" />
-		<parameter name="dec_type" value="" />
-		<parameter name="cols" value="10" />
-		<parameter name="testid" value="8739" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
-		</classes>
-	</test> 
-	<test name="Feeder - UDP input stream creation 3">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="uiport" value="4200" /> 
-		<parameter name="mip" value="0.0.0.0" />
-		<parameter name="port" value="4435" />
-		<parameter name="ip" value="0.0.0.0" />
-		<parameter name="name" value="inputudp_3" />
-		<parameter name="ssm" value="" />
-		<parameter name="rtp_type" value="0" />	 
-		<parameter name="testid" value="8741" />
-	<classes>
-		<class name="com.zixi.testing.FeederInputUdpTest"/>
-	</classes>
-	</test>
-	
-	<test name="Broadcaster - UDP output stream creation 4 ">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="port" value="4436" />
-		<parameter name="stream" value="test" />
-		<parameter name="streamname" value="test4" />
-		<parameter name="host" value="192.168.7.75" />
-		<parameter name="id" value="test4" />
-		<parameter name="rtp" value="0" />
-		<parameter name="fec" value="0" />
-		<parameter name="smoothing" value="0" />
-		<parameter name="ttl" value="5" />
-		<parameter name="remux_bitrate" value="0" />
-		<parameter name="df" value="0" />
-		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="" />
-		<parameter name="type" value="TS" />
-		<parameter name="rows" value="10" />
-		<parameter name="remux_buff" value="1000" />
-		<parameter name="local_ip" value="0.0.0.0" />
-		<parameter name="remux_restampdts" value="0" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="remux_pcr" value="90" />
-		<parameter name="dec_type" value="" />
-		<parameter name="cols" value="10" />
-		<parameter name="testid" value="8743" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
-		</classes>
-	</test> 
-	<test name="Feeder - UDP input stream creation 4">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="uiport" value="4200" /> 
-		<parameter name="mip" value="0.0.0.0" />
-		<parameter name="port" value="4436" />
-		<parameter name="ip" value="0.0.0.0" />
-		<parameter name="name" value="inputudp_4" />
-		<parameter name="ssm" value="" />
-		<parameter name="rtp_type" value="0" />	 
-		<parameter name="testid" value="8745" />
-		<classes>
-			<class name="com.zixi.testing.FeederInputUdpTest"/>
-		</classes>
-	</test>
-	<test name="Feeder - create failover group input stream">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="uiport" value="4200" />
-		<parameter name="group_components" value="inputudp_1&amp;priority=1,inputudp_2&amp;priority=1,inputudp_3&amp;priority=1,inputudp_4&amp;priority=1" />   
-		<parameter name="group_name" value="tg" />
-		<parameter name="search_window" value="1000" />
-		<parameter name="max_bitrate" value="2000000" />
-		<parameter name="testid" value="8747" />
-	<classes>
-		<class name="com.zixi.testing.FeederAddFailoverGroupTest" />
-	</classes>
-	</test>
-	<test name="Feeder - turn analyzer on all input streams">
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4200" />
-		<parameter name="analyze" value="1" />
-		<parameter name="testid" value="8749" /> 
-		<classes>
-		   <class name="com.zixi.analyze.testing.SetAnalyzerTest">
-		   	<methods>
-	       		<include name="feederTurnOnAnalyzerOnAllStreams" />
-	    	</methods>
-	    	</class>
-		</classes>
-	</test>
-	<!-- Configure maxwell and test perform a testing -->
-	<test name="Configure maxwell simulator set interference simple case">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0 drop 10" />
-		<parameter name="testid" value="8751" />  
-		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
-		    <methods>
-        		<include name="broadcasterSetGlobalInpairment" />
-     		 </methods>
+		    <class name="com.zixi.testing.BroadcasterFailOverInputCreationTest">
      		 </class>
 		</classes>
 	</test>
-	<test name="Feeder - UDP out to FFMPEG">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="uiport" value="4200" /> 
-		<parameter name="name" value="test" />
-		<parameter name="mip" value="tg" />
-		<parameter name="port" value="0" /> 
-		<parameter name="ip" value="failover" />
-		<parameter name="prog" value="-1" /> 
-		<parameter name="chan" value="-1" />
-		<parameter name="oh" value="10.7.0.150" />
-		<parameter name="op" value="5555" /> 
-		<parameter name="onic" value="0.0.0.0" />
-		<parameter name="ottl" value="5" /> 
-		<parameter name="osmooth" value="" /> 
-		<parameter name="testid" value="8753" />
-	<classes>
-		<class name="com.zixi.testing.FeederUdpOutToFfmpegTest"/>
-	</classes>
-	</test>
-	<test name="FFMPEG FFMPEG analyser test">
-		<parameter name="testid" value="8755" />  
-		<classes>
-		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
-		</classes>
-	</test>
-	<test name="Feeder - output stream deletion test">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="uiport" value="4200" />
-		<parameter name="id" value="test" />
-		<parameter name="mip" value="tg" />
-		<parameter name="port" value="0" />
-		<parameter name="ip" value="failover" />
-		<parameter name="prog" value="-1" />
-		<parameter name="chan" value="-1" />
-		<parameter name="type" value="1" />
-		<parameter name="host" value="10.7.0.150" />
-		<parameter name="udpport" value="5555" /> 
-		<parameter name="testid" value="8757" />  
-		<classes>
-		    <class name="com.zixi.testing.FeederUdpOutputDeletioinTest"/>
-		</classes>
-	</test>
-	<test name="Feeder - compare CC errors to reference stream">
-		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="userName" value="admin" />
+	<test name="Broadcaster - turn TR101 on all input streams">
+		<parameter name="login_ip" value="10.7.0.75" />		
+		<parameter name="userName" value="admin" />			
 		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4200" />
-		<parameter name="streams" value="inputudp_1@inputudp_2@inputudp_3@inputudp_4" />
-		<parameter name="ref_stream" value="tg" />
-		<parameter name="testid" value="8759" /> 
+		<parameter name="uiport" value="4444" />		
+		<parameter name="analyze" value="1" />			
+		<parameter name="testid" value="8504" />		
 		<classes>
 		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
 			    <methods>
-	        		<include name="feederCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
+	        		<include name="broadcasterTurnOnAnalyzerOnAllStreams" />
 	     		</methods>
      		 </class>
 		</classes>
 	</test>
-	<test name="Release maxwell impairments">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0" />
-		<parameter name="testid" value="8761" />  
+	<test name="Broadcaster - compare continuity counter errors to reference stream">
+		<parameter name="login_ip" value="10.7.0.75" />		
+		<parameter name="userName" value="admin" />			
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />		
+		<parameter name="refstream" value="tg" />			
+		<parameter name="testid" value="8506" />		
 		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
-		    <methods>
-        		<include name="broadcasterSetGlobalInpairment" />
-     		 </methods>
+		    <class name="com.zixi.analyze.testing.SetAnalyzerTest">
+			    <methods>
+	        		<include name="broadcasterCompareContinuityCounterOfReferenceStreamToRestStreamsTest" />
+	     		</methods>
      		 </class>
 		</classes>
 	</test>
-	<test name="Feeder - delete all inputs">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
+	<test name="Broadcaster - delete all input streams">
 		<parameter name="login_ip" value="10.7.0.75" />
-		<parameter name="uiport" value="4200" />
-		<parameter name="testid" value="8763" /> 
-		<classes>
-		   <class name="com.zixi.testing.FeederInputStreamDeletionTest">
-		   	<methods>
-	       		<include name="feederDeleteAllInputsTest" />
-	    	</methods>
-	    	</class>
-		</classes>
-	</test>
-	<test name="Broadcaster - delete all outputs stream" >
-		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8765" /> 
-	<classes>
-	    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
-	</classes>
+		<parameter name="testid" value="8516" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
 	</test>
-	<test name="Broadcaster - Remove File input">
+	<test name="Broadcaster - delete all outputs stream" >
+			<parameter name="login_ip" value="10.7.0.74" />
+			<parameter name="userName" value="admin" />
+			<parameter name="userPassword" value="1234" />
+			<parameter name="uiport" value="4444" /> 
+			<parameter name="testid" value="8518" /> 
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove Fiel input">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="8767" />  
+		<parameter name="testid" value="8520" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
