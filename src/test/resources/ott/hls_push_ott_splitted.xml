@@ -224,17 +224,6 @@
 		    <class name="com.zixi.analyze.testing.FFMPEGImageStatisticHlsPushOutTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Push output stream">
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="id" value="output_stream_name" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8637" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
-		</classes>
-	</test>
 	<test name="Broadcaster - Define splitted HLS push output hls validator">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
