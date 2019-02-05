@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink suite: "Streaming/ Streams/ Broadcaster UDP streaming/XXX" -->
-<suite name="Broadcaster: UDP streaming suite" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: Adaptive HLS - multiple UDP sources" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - multiple UDP stream creation">
 		<parameter name="userName_bx1" value="admin" />		
 		<parameter name="userName_bx2" value="admin" />		
@@ -53,7 +53,7 @@
 		<parameter name="dec_type" value="" />				
 		<parameter name="cols" value="10" />				
 		<parameter name="number_of_streams" value="10" />									
-		<parameter name="testid" value="4011" />				
+		<parameter name="testid" value="10204" />				
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipleUdpTest"/>
 		</classes>
@@ -82,15 +82,15 @@
 		<parameter name="ts_split" value="0" />
 		<parameter name="order_ascending" value="1" />
 		<parameter name="change_folder_chunks" value="0" />
-		<parameter name="testid" value="7649" />
+		<parameter name="testid" value="10206" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: Test HLS with HLS validator.">
+	<test name="Broadcaster: Test HLS with HLS validator">
 		<parameter name="analyzer_url" value="10.7.0.201" />
 		<parameter name="hls_url" value="http://10.7.0.66:7777/adaptive.m3u8" />
-		<parameter name="testid" value="10100" />  
+		<parameter name="testid" value="10208" />  
 		<classes>
 		    <class name="com.zixi.analyze.testing.HlsPushOutValidatorTest"/>
 		</classes>
@@ -101,7 +101,7 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="adaptive" />
-		<parameter name="testid" value="10102" />
+		<parameter name="testid" value="10210" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest"/>
 		</classes>
@@ -111,7 +111,7 @@
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="4019" />  
+		<parameter name="testid" value="10212" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
@@ -121,7 +121,7 @@
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
-			<parameter name="testid" value="4021" /> 
+			<parameter name="testid" value="10214" /> 
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
