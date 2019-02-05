@@ -61,7 +61,7 @@
 	<test name="Broadcaster: create an adaptive group">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="adaptive" />
 		<parameter name="record" value="false" />
@@ -89,7 +89,7 @@
 	</test>
 	<test name="Broadcaster: Test HLS with HLS validator.">
 		<parameter name="analyzer_url" value="10.7.0.201" />
-		<parameter name="hls_url" value="http://10.7.0.66:7777/adaptive/index.m3u8" />
+		<parameter name="hls_url" value="http://10.7.0.66:7777/adaptive.m3u8" />
 		<parameter name="testid" value="10100" />  
 		<classes>
 		    <class name="com.zixi.analyze.testing.HlsPushOutValidatorTest"/>
