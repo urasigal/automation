@@ -248,27 +248,27 @@
 		<parameter name="cleanup" value="0" />
 		<parameter name="encap" value="0" />
 		<parameter name="no_tls" value="0" />
-		<parameter name="testid" value="8621" />    
+		<parameter name="testid" value="10197" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterHlsPushOutputTest">
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: Test HLS with HLS validator. step 12">  <!-- Compound test: internal server and apple validator-->
+	<test name="Broadcaster: Test HLS with HLS validator.">  <!-- Compound test: internal server and apple validator-->
 		<parameter name="analyzer_url" value="10.7.0.201" />
 		<parameter name="hls_url" value="http://10.7.0.90:4321/west/index.m3u8" />
-		<parameter name="testid" value="10030" />  
+		<parameter name="testid" value="10199" />  
 		<classes>
 		    <class name="com.zixi.analyze.testing.HlsPushOutValidatorTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Push output stream validated">
+	<test name="Broadcaster - Remove validated push output stream">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="output_stream_name" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8637" />  
+		<parameter name="testid" value="10201" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
