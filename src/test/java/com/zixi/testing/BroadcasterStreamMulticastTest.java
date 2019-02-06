@@ -27,7 +27,7 @@ public class BroadcasterStreamMulticastTest  extends BaseTestZixiMainComponents{
 	String multicast, String multi_src, String nic, String device, String rtp_type, String enc_key, String testid) throws Exception {
 		
 		//Print this class name to the log file.
-		getLoggerInstance().info(getClass().getName());
+		//getLoggerInstance().info(getClass().getName());
 		
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		productAboutDriver.getBroadcasterVersion(bx1_login_ip, bx1_uiport, bx1_userName, bx1_bxuserPassword);

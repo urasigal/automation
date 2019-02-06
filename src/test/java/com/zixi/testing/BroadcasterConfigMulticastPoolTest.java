@@ -22,7 +22,7 @@ public class BroadcasterConfigMulticastPoolTest extends BasetTestZixiComponentRe
 	String multicast_pool_nic, String multicast_pool_tos, String  testid) throws Exception 
 	{
 		//Print this class name to the log file.
-		getLoggerInstance().info(getClass().getName());
+		//getLoggerInstance().info(getClass().getName());
 		
 		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);
