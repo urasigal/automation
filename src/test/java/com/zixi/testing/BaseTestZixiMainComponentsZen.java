@@ -67,7 +67,7 @@ public class BaseTestZixiMainComponentsZen {
 
 	// logging stuff - uses all test cases to write a test process execution log.
 	// This log is intended to be used by a test automation developers.
-	protected static Logger LOGGER = null;
+	//protected static Logger LOGGER = null;
 	protected static FileHandler FILEHANDLER = null;
 	protected static StreamHandler STREAMHANDLER = null;
 
@@ -87,17 +87,17 @@ public class BaseTestZixiMainComponentsZen {
 	public void beforeTes(String testid) throws TestLinkAPIException, IOException {
 		setSutUpTimeDriver = new SetSutUpTimeDriver();
 		testDuration = System.currentTimeMillis();
-		LOGGER = getLoggerInstance();
+		//LOGGER = getLoggerInstance();
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
-		testDriver.setLogger(LOGGER); // Provide logger instance
+		//testDriver.setLogger(LOGGER); // Provide logger instance
 	}
 
 	// Write test results to the TestLink, assess if there was a crash.
 	@AfterMethod
 	public void afterTest(Method test, ITestResult result) {
 		testDuration = System.currentTimeMillis() - testDuration;
-		LOGGER.entering(this.getClass().getName(), "afterTest");
+		//LOGGER.entering(this.getClass().getName(), "afterTest");
 		String crashStatus = "";
 
 		TestLinkIntegrationZen tl = new TestLinkIntegrationZen();
@@ -113,7 +113,7 @@ public class BaseTestZixiMainComponentsZen {
 
 			if (crashFlag) {
 				crashStatus = "There was a crash in the recent tests " + crashTestResults;
-				LOGGER.info("Test duration[ms]: " + testDuration);
+			//	LOGGER.info("Test duration[ms]: " + testDuration);
 
 				tl.setResult(testid, ExecutionStatus.FAILED,
 						this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"
@@ -132,7 +132,7 @@ public class BaseTestZixiMainComponentsZen {
 						subject, message);
 			} else {
 				if (result.isSuccess()) {
-					LOGGER.info("Test duration[ms]: " + testDuration);
+					//LOGGER.info("Test duration[ms]: " + testDuration);
 
 					tl.setResult(testid, ExecutionStatus.PASSED,
 							this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"
@@ -142,7 +142,7 @@ public class BaseTestZixiMainComponentsZen {
 									+ driverReslut.touchResutlDescription(" ") + "\n" + crashStatus,
 							getBuildIdFromFile()); // pass data to a testLink notes in test execution.
 				} else {
-					LOGGER.info("Test duration[ms]: " + testDuration);
+					//LOGGER.info("Test duration[ms]: " + testDuration);
 
 					tl.setResult(testid, ExecutionStatus.FAILED,
 							this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"
@@ -168,7 +168,7 @@ public class BaseTestZixiMainComponentsZen {
 		} catch (Exception e) {
 			System.out.println("The error is " + e.getMessage());
 		}
-		LOGGER.exiting(getClass().getName(), "afterTest");
+		//LOGGER.exiting(getClass().getName(), "afterTest");
 	}
 
 	protected String buildTestParametersString(String parametersNmes[], String[] paramertersValues) {
@@ -182,26 +182,26 @@ public class BaseTestZixiMainComponentsZen {
 	}
 
 	// Singleton manner of definition.
-	protected Logger getLoggerInstance() {
-		if (BaseTestZixiMainComponentsZen.LOGGER == null) {
-			try {
-				PrintWriter pw = new PrintWriter("src/main/resources/log");
-				pw.close();
-				BaseTestZixiMainComponentsZen.FILEHANDLER = new FileHandler("src/main/resources/log", true);
-				BaseTestZixiMainComponentsZen.STREAMHANDLER = new StreamHandler(System.out, new SimpleFormatter());
-				BaseTestZixiMainComponentsZen.LOGGER = Logger.getLogger("com");
-				BaseTestZixiMainComponentsZen.FILEHANDLER.setFormatter(new SimpleFormatter());
-				BaseTestZixiMainComponentsZen.LOGGER.addHandler(BaseTestZixiMainComponentsZen.FILEHANDLER);
-				BaseTestZixiMainComponentsZen.LOGGER.addHandler(BaseTestZixiMainComponentsZen.STREAMHANDLER);
-			} catch (SecurityException e) {
-				System.out.println(" ------------------------------------------- Cant to open a file");
-			} catch (IOException e) {
-				System.out.println(" -------------------------------------------- Cant to open a file");
-			}
-			return BaseTestZixiMainComponentsZen.LOGGER;
-		}
-		return BaseTestZixiMainComponentsZen.LOGGER;
-	}
+//	protected Logger getLoggerInstance() {
+//		if (BaseTestZixiMainComponentsZen.LOGGER == null) {
+//			try {
+//				PrintWriter pw = new PrintWriter("src/main/resources/log");
+//				pw.close();
+//				BaseTestZixiMainComponentsZen.FILEHANDLER = new FileHandler("src/main/resources/log", true);
+//				BaseTestZixiMainComponentsZen.STREAMHANDLER = new StreamHandler(System.out, new SimpleFormatter());
+//				BaseTestZixiMainComponentsZen.LOGGER = Logger.getLogger("com");
+//				BaseTestZixiMainComponentsZen.FILEHANDLER.setFormatter(new SimpleFormatter());
+//				BaseTestZixiMainComponentsZen.LOGGER.addHandler(BaseTestZixiMainComponentsZen.FILEHANDLER);
+//				BaseTestZixiMainComponentsZen.LOGGER.addHandler(BaseTestZixiMainComponentsZen.STREAMHANDLER);
+//			} catch (SecurityException e) {
+//				System.out.println(" ------------------------------------------- Cant to open a file");
+//			} catch (IOException e) {
+//				System.out.println(" -------------------------------------------- Cant to open a file");
+//			}
+//			return BaseTestZixiMainComponentsZen.LOGGER;
+//		}
+//		return BaseTestZixiMainComponentsZen.LOGGER;
+//	}
 
 	// Get TestLink test plan ID.
 	protected int getBuildIdFromFile() throws IOException {
