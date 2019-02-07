@@ -17,7 +17,6 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterSwitchInputsFaioverNormalDistributionDriver(); }
 	
-	
 	@Parameters({ "remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport",
 	"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "testid" })
 	@Test
@@ -26,7 +25,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
-		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+		// Retrieve the product version.
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);	
 		buildTestParametersString(new String[] {"remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport",
 		"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "testid"}, 
@@ -48,7 +47,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  remoteBX_login_ip,  "22",  "pidof zixi_broadcaster");
-		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+		// Retrieve the product version.
 		this.version = productAboutDriver.getBroadcasterVersion(remoteBX_login_ip, remoteBXuiport, remoteBXuserName, remoteBXuserPassword);	
 		buildTestParametersString(new String[] {"remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport", "testElapsedTime", "streamSwitchInterval", "testid"}, 
 		new String[] {remoteBX_login_ip,  remoteBXuserName, remoteBXuserPassword, remoteBXuiport, testElapsedTime, streamSwitchInterval, testid});
@@ -68,7 +67,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		
 		// Get broadcaster PID in the beginning of the test.
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
-		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+		// Retrieve the product version.
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);	
 		buildTestParametersString(new String[] {"remoteBX_login_ip", "remoteBXuserName", "remoteBXuserPassword", "remoteBXuiport",
 		"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "testid"}, 
@@ -82,7 +81,6 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
 	}
 	
-	
 	@Parameters({ "remoteBX_login_ip", "remoteFXuserName", "remoteFXuserPassword", "remoteFXuiport",
 		"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "streams", "testid" })
 		@Test
@@ -92,7 +90,7 @@ public class BroadcasterNrmlDistSwitchFailoverTest extends BaseTestZixiMainCompo
 			
 			// Get broadcaster PID in the beginning of the test.
 			sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");
-			// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+			// Retrieve the product version.
 			this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPassword);	
 			buildTestParametersString(new String[] {"remoteBX_login_ip", "remoteFXuserName", "remoteFXuserPassword", "remoteFXuiport",
 			"login_ip", "userName", "userPassword", "uiport", "testElapsedTime", "streamSwitchInterval", "streamReferenceName", "streams", "testid"}, 
