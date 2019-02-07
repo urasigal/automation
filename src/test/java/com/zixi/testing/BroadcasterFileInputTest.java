@@ -4,8 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.zixi.drivers.*;
 import com.zixi.drivers.drivers.BroadcasterFileInputDriver;
 
 public class BroadcasterFileInputTest extends BaseTestZixiMainComponents{
@@ -48,8 +46,6 @@ public class BroadcasterFileInputTest extends BaseTestZixiMainComponents{
 		Assert.assertEquals(((BroadcasterFileInputDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, id, on),
 				"Applied new configuration to " + id);
 	}
-	
-	
 	
 	@Parameters({ "userName", "userPass", "login_ip", "uiport", "type", "id", "matrix", "max_outputs", "mcast_out", "time_shift", "old",
 		"fast_connect", "kompression", "enc_type", "enc_key", "path","testid" })
