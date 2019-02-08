@@ -20,14 +20,14 @@ public class FeederPIDSFilteringTest extends BaseTestZixiMainComponents {
 	@BeforeClass
 	public void testInit() { testDriver = new FeederPIDSFilteringDriver(); }
 
-	@Parameters({"userPass", "userName", "login_ip", "uiport", "streamname", "pids", "testid"})
+	@Parameters({"userPass", "userName", "login_ip", "uiport", "streamname", "mip", "pids", "testid"})
 	@Test
 	public void getSptsPids(String userPass, String userName, String login_ip,
-	String uiport, String streamname, String pids, String testid) throws Exception {
+	String uiport, String streamname, String mip, String pids, String testid) throws Exception {
 	productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root", "zixiroot1234",  login_ip,  "22",  "pidof zixi_feeder");
-		driverReslut = ((FeederPIDSFilteringDriver) testDriver).getElementryPidsFromFeeder(userPass, userName, login_ip, uiport, streamname, pids);
+		driverReslut = ((FeederPIDSFilteringDriver) testDriver).getElementryPidsFromFeeder(userPass, userName, login_ip, uiport, streamname, mip, pids);
 		
 		
 		//Assert.assertEquals( driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
