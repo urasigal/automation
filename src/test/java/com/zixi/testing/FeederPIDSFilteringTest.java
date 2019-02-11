@@ -20,7 +20,7 @@ public class FeederPIDSFilteringTest extends BaseTestZixiMainComponents {
 	@BeforeClass
 	public void testInit() { testDriver = new FeederPIDSFilteringDriver(); }
 
-	@Parameters({"userPass", "userName", "login_ip", "uiport", "streamname", "mip", "pids", "testid"})
+	@Parameters({"userPass", "userName", "login_ip", "uiport", "streamname", "mip", "udp_ip", "pids", "testid"})
 	@Test
 	public void getSptsPids(String userPass, String userName, String login_ip,
 	String uiport, String streamname, String mip, String udp_ip, String pids, String testid) throws Exception {
