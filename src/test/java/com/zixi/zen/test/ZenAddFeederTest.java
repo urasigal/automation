@@ -5,11 +5,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.ZenAddFeederDriver;
-import com.zixi.drivers.tools.DriverReslut;
-import com.zixi.testing.BaseTestZixiMainComponents;
+import com.zixi.testing.BaseTestZixiMainComponentsZen;
 
 // The goal of the test is to verify an ability of a feeder server to accept a private key file through an UI API request.
-public class ZenAddFeederTest extends BaseTestZixiMainComponents{
+public class ZenAddFeederTest extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new ZenAddFeederDriver(); }

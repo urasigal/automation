@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLInk Suite "" -->
+<suite name="ZEN: Add transcoder profile entity to ZEN" verbose="5" data-provider-thread-count="1">
+<test name="ZEN - add transcoder profile">
+	<parameter name="zenUser" value="admin@zixi.com" />
+	<parameter name="zenPass" value="mnk4DNK4" />
+	<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+	<parameter name="zenUiPort" value="80" />
+	<parameter name="audio_bitrate" value="" />
+	<parameter name="audio_encoder_profile" value="low" />
+	<parameter name="bitrate_avg" value="5000" />
+	<parameter name="bitrate_max" value="6000" />
+	<parameter name="b_frames" value="0" />
+	<parameter name="do_audio" value="true" />
+	<parameter name="do_video" value="true" />
+	<parameter name="encoding_profile" value="main" />
+	<parameter name="fps" value="0" />
+	<parameter name="gop" value="30" />
+	<parameter name="gop_closed" value="1" />
+	<parameter name="gop_fixed" value="1" />
+	<parameter name="hardware_accel" value="false" />
+	<parameter name="hdr_buff_length" value="2" />
+	<parameter name="height" value="720" />
+	<parameter name="interlaced" value="0" />
+	<parameter name="keep_audio" value="false" />
+	<parameter name="keep_video" value="false" />
+	<parameter name="performance" value="4" />
+	<parameter name="profile" value="test_transcoder_profile" />
+	<parameter name="ref_frames" value="2" />
+	<parameter name="width" value="1080" />
+	<parameter name="testid" value="8864" />
+	<classes>
+		    <class name="com.zixi.zen.test.ZenAddTranscoderProfileTest"/>
+		</classes>
+	</test>  
+</suite>

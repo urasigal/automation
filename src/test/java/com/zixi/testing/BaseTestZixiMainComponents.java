@@ -7,18 +7,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.lang.reflect.Method;
 import java.nio.charset.Charset;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
-import java.util.logging.StreamHandler;
-
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-//import org.json.JSONObject;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -34,13 +27,9 @@ import com.zixi.email.drivers.GoogleMailDriver;
 import com.zixi.tools.TestlinkIntegration;
 import java.sql.*;
 
-/*
- * This is a most high hierarchy test class. All test case classes have to inherit from this class.
- */
-
 public class BaseTestZixiMainComponents {
 
-	// It is an interface, all test drivers have to implement this interface.
+	// Interface class. All test drivers have to implement this interface.
 	protected TestDriver testDriver; // Reference to test driver interface. `
 	protected DriverReslut driverReslut = new DriverReslut();
 	protected GoogleMailDriver mail;
@@ -64,13 +53,6 @@ public class BaseTestZixiMainComponents {
 
 	// Writes test results to the TestLink.
 	protected String testLinkTestParameters = "";
-
-	// logging stuff - uses all test cases to write a test process execution log.
-	// This log is intended to be used by a test automation developers.
-	protected static Logger LOGGER = null;
-	protected static FileHandler FILEHANDLER = null;
-	protected static StreamHandler STREAMHANDLER = null;
-
 	protected String manulDescription = "";
 	protected String memOnStart = "";
 	protected String memOnEnd = "";
@@ -87,17 +69,14 @@ public class BaseTestZixiMainComponents {
 	public void beforeTes(String testid) throws TestLinkAPIException, IOException {
 		setSutUpTimeDriver = new SetSutUpTimeDriver();
 		testDuration = System.currentTimeMillis();
-		LOGGER = getLoggerInstance();
 		this.testid = testid;
 		System.out.println(this.getClass().getName());
-		testDriver.setLogger(LOGGER); // Provide logger instance
 	}
 
 	// Write test results to the TestLink, assess if there was a crash.
 	@AfterMethod
 	public void afterTest(Method test, ITestResult result) {
 		testDuration = System.currentTimeMillis() - testDuration;
-		LOGGER.entering(this.getClass().getName(), "afterTest");
 		String crashStatus = "";
 
 		TestlinkIntegration tl = new TestlinkIntegration();
@@ -113,8 +92,6 @@ public class BaseTestZixiMainComponents {
 
 			if (crashFlag) {
 				crashStatus = "There was a crash in the recent tests " + crashTestResults;
-				LOGGER.info("Test duration[ms]: " + testDuration);
-
 				tl.setResult(testid, ExecutionStatus.FAILED,
 						this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"
 								+ automationTestIdentifiers + "\nTest Parameters: " + testLinkTestParameters
@@ -132,8 +109,6 @@ public class BaseTestZixiMainComponents {
 						subject, message);
 			} else {
 				if (result.isSuccess()) {
-					LOGGER.info("Test duration[ms]: " + testDuration);
-
 					tl.setResult(testid, ExecutionStatus.PASSED,
 							this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"
 									+ automationTestIdentifiers + "\nTest Parameters: " + testLinkTestParameters
@@ -142,8 +117,6 @@ public class BaseTestZixiMainComponents {
 									+ driverReslut.touchResutlDescription(" ") + "\n" + crashStatus,
 							getBuildIdFromFile()); // pass data to a testLink notes in test execution.
 				} else {
-					LOGGER.info("Test duration[ms]: " + testDuration);
-
 					tl.setResult(testid, ExecutionStatus.FAILED,
 							this.getClass().getCanonicalName() + "\n" + productAboutDriver.version + "\n"
 									+ automationTestIdentifiers + "\nTest Parameters: " + testLinkTestParameters
@@ -168,7 +141,6 @@ public class BaseTestZixiMainComponents {
 		} catch (Exception e) {
 			System.out.println("The error is " + e.getMessage());
 		}
-		LOGGER.exiting(getClass().getName(), "afterTest");
 	}
 
 	protected String buildTestParametersString(String parametersNmes[], String[] paramertersValues) {
@@ -179,28 +151,6 @@ public class BaseTestZixiMainComponents {
 		}
 		testLinkTestParameters = sb.toString();
 		return testLinkTestParameters;
-	}
-
-	// Singleton manner of definition.
-	protected Logger getLoggerInstance() {
-		if (BaseTestZixiMainComponents.LOGGER == null) {
-			try {
-				PrintWriter pw = new PrintWriter("src/main/resources/log");
-				pw.close();
-				BaseTestZixiMainComponents.FILEHANDLER = new FileHandler("src/main/resources/log", true);
-				BaseTestZixiMainComponents.STREAMHANDLER = new StreamHandler(System.out, new SimpleFormatter());
-				BaseTestZixiMainComponents.LOGGER = Logger.getLogger("com");
-				BaseTestZixiMainComponents.FILEHANDLER.setFormatter(new SimpleFormatter());
-				BaseTestZixiMainComponents.LOGGER.addHandler(BaseTestZixiMainComponents.FILEHANDLER);
-				BaseTestZixiMainComponents.LOGGER.addHandler(BaseTestZixiMainComponents.STREAMHANDLER);
-			} catch (SecurityException e) {
-				System.out.println(" ------------------------------------------- Cant to open a file");
-			} catch (IOException e) {
-				System.out.println(" -------------------------------------------- Cant to open a file");
-			}
-			return BaseTestZixiMainComponents.LOGGER;
-		}
-		return BaseTestZixiMainComponents.LOGGER;
 	}
 
 	// Get TestLink test plan ID.
@@ -215,10 +165,6 @@ public class BaseTestZixiMainComponents {
 			}
 		}
 		return buildId;
-	}
-
-	public static void main(String[] args) {
-		// BaseTestZixiMainComponents.connecttoDb();
 	}
 
 	public void connecttoDb(String sutHost, int startMemory, int stopMemory, long timeStemp)

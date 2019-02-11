@@ -12,6 +12,11 @@
 			<version>1.9.6-1</version>
 		</dependency>
 		<dependency>
+	    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <version>2.6</version>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.0</version>
@@ -101,14 +106,18 @@
             			<java.util.logging.config.file>src/main/resources/log_cfg</java.util.logging.config.file>
 	                </systemPropertyVariables>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
 					    
 					    <suiteXmlFile>src/test/resources/ott/hls_push_out.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/ott/hls_push_ott_splitted.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/ott/hls_push_out_ssl.xml</suiteXmlFile>
-					   	<suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_adaptive.xml</suiteXmlFile>
-					   	<suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_non_adaptive.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_adaptive.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_non_adaptive.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/ott/hls_push_audio_validator.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/ott/hls_stream_multiple_udp_sources.xml</suiteXmlFile>
+						
+						
 					    <suiteXmlFile>src/test/resources/vod.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/zixiadaptive.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/maxwell/zixi_adaptive_up_case.xml</suiteXmlFile>
@@ -116,7 +125,7 @@
 					    
 						<suiteXmlFile>src/test/resources/broadcasterhlstoffmpeg.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/broadcasterflvtoffmpeg.xml</suiteXmlFile>
-					    
+					 
 						<suiteXmlFile>src/test/resources/pull/ffmpeg_pull_input.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/pull/record_pull_input_stream.xml</suiteXmlFile>
 						
@@ -140,8 +149,15 @@
 						<suiteXmlFile>src/test/resources/failover/broadcaster_push_input_failover.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/failover/broadcaster_push_udp_failover.xml</suiteXmlFile>
 						<suiteXmlFile>src/test/resources/failover/broadcaster_udp_input_failover.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/failover/broadcaster_norm_on_off_failover.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/failover/feeder_udp_input_failover.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/failover/feeder_udp_failover_to_bx.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/failover/feeder_udp_failover_switch.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/failover/broadcaster_impaired_filover_output.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/failover/broadcaster_udp_primary_backup.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/tcp/http_pull.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/tcp/tcp_push.xml</suiteXmlFile>
 						
-						<suiteXmlFile>src/test/resources/tr101/stream_quality_detection_features/frozen_stream_H264_640_480_25.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<properties>
 						<property>

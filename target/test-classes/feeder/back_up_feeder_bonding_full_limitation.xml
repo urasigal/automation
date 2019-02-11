@@ -116,10 +116,11 @@
 	<test name="FFMPEG test default parameters - FFMPEG analyser">
 		<parameter name="testid" value="4340" />  
 		<classes>
-		    <class name="com.zixi.testing.FFMPEGBondingBackupTest"/>
+		    <class name="com.zixi.testing.FFMPEGBondingBackupTest">
 		    <methods>
         		<include name="ffmpegBondingTestBackUpScenarioFullLimitation" />
      		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Feeder - bonded output stream deletion test - default paremeters">

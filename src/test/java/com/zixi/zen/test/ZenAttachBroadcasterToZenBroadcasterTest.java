@@ -7,12 +7,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcasterSetSshParametersDriver;
-import com.zixi.drivers.tools.DriverReslut;
-import com.zixi.testing.BaseTestZixiMainComponents;
+import com.zixi.testing.BaseTestZixiMainComponentsZen;
 import com.zixi.tools.ApiWorkir;
-import com.zixi.tools.BroadcasterLoggableApiWorker;
 
-public class ZenAttachBroadcasterToZenBroadcasterTest extends BaseTestZixiMainComponents{
+public class ZenAttachBroadcasterToZenBroadcasterTest extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
 	public void testInit() { testDriver = new BroadcasterSetSshParametersDriver(); }
@@ -39,17 +37,23 @@ public class ZenAttachBroadcasterToZenBroadcasterTest extends BaseTestZixiMainCo
 		
 		JSONObject json = new JSONObject(); 
 		json.put("username", zenUserName).put("password", zenUserPass);
-		String[] cokieValuesForLoggin = new ApiWorkir().zenLogginPost("http://" + zenLogin_ip + "/login" , zenUserName , zenUserPass, 
+		
+		String[] cokieValuesForLoggin = new ApiWorkir().zenLogginPost("https://" + zenLogin_ip + "/login" , zenUserName , zenUserPass, 
 		zenUiport, zenLogin_ip, json.toString().getBytes());
-		String broadcaster_cluster_id = new ApiWorkir().zenSendGet("http://" + zenLogin_ip + "/api/broadcaster_clusters", ZEN_CLUSTER_ID, 
+		
+		String broadcaster_cluster_id = new ApiWorkir().zenSendGet("https://" + zenLogin_ip + "/api/broadcaster_clusters", ZEN_CLUSTER_ID, 
 		cokieValuesForLoggin, zenLogin_ip, zenUiport, clusterName);
-		String rev_ssh_port = new ApiWorkir().zenSendGet("http://" + zenLogin_ip + "/api/broadcaster_clusters/" + broadcaster_cluster_id + 
+		
+		String rev_ssh_port = new ApiWorkir().zenSendGet("https://" + zenLogin_ip + "/api/broadcaster_clusters/" + broadcaster_cluster_id + 
 		"/broadcasters", ZEN_GET_BX_REV_PORT,
 		cokieValuesForLoggin, zenLogin_ip, zenUiport, broadcaserName);
+		
 		String addSshUserResult = ((BroadcasterSetSshParametersDriver) testDriver).setSshUserNameBroadcaster(bxUserName, bxUserPass, bxLogin_ip, 
 		bxUiport, broadcaserName + "-" + clusterName, zen_ssh_host).getResult();  
+		
 		String setSshPort = ((BroadcasterSetSshParametersDriver) testDriver).setSshPortBroadcaster(bxUserName, bxUserPass, bxLogin_ip, bxUiport,
 		rev_ssh_port, zen_ssh_host).getResult();
+		
 		Assert.assertEquals(setSshPort, "Tunnel added." ); 
 	}
 }
