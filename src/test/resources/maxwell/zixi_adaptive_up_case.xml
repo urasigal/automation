@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
-<suite name="Broadcaster: adaptive group maxvell test switch to higher bitrate stream" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: adaptive group test switch to higher bitrate stream" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -192,7 +192,7 @@
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
 		</classes>
 	</test>
-	<!-- Define an Pull input stream on the receiver side-->
+	<!-- Define pull input stream on the receiver server -->
 	<test name="Receiver - pull input stream creation - adaptive group test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -265,7 +265,18 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove File input">
+	<test name="Broadcaster: delete an adaptive group test">
+		<parameter name="userName" value="admin" /> 
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="adaptive" />
+		<parameter name="testid" value="8417" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest"/>
+		</classes>
+	</test>	
+	<test name="Broadcaster - Remove file input">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
