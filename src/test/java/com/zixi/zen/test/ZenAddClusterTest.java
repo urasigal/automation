@@ -22,7 +22,8 @@ public class ZenAddClusterTest extends BaseTestZixiMainComponentsZen{
 	String clusterName, String resource_tag_name, String can_input, String can_output, String can_process, String http_streaming_port, String auth_mode,
 	String allow_unmanaged_inputs, String allow_unmanaged_outputs, String dns_prefix, String is_auto_scaling, String activation_key,
 	String bx_version, String aws_account_name, String region, String key_pair, String security_group,
-	String eips, String min_size, String max_size, String api_user, String api_password, String vpc_name, String vpc_subnet_name, String testid) throws Exception {
+	String eips, String min_size, String max_size, String api_user, String api_password,
+	String vpc_name, String vpc_subnet_name, String testid) throws Exception { 
 		// Provide parameters to a TestLink.
 		buildTestParametersString(new String[] {"zenUserName", "zenUserPass", "zenLogin_ip", "zenUiport", 
 		"clusterName", "resource_tag_name", "can_input", "can_output", "can_process", "http_streaming_port", "auth_mode",
