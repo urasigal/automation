@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- TestLInk Suite "" -->
+<suite name="Feeder: SPTS PID filtering" verbose="5" data-provider-thread-count="1">
+<test name="Feeder - Retrive program PIDS">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65"/>
+		<parameter name="uiport" value="4200" />
+		<parameter name="streamname" value="bond" />
+		<parameter name="mip" value="4000.ts" />
+		<parameter name="udp_ip" value="file" />
+		<parameter name="pids" value="1_1001@1002" /> <!-- Predefined set of PIDS  -->
+		<parameter name="testid" value="10283" />  
+		<classes>
+			<class name="com.zixi.testing.FeederPIDSFilteringTest">
+			    <methods>
+	        		<include name="compareSptsPidsToGivenParameters" />
+	     		</methods>
+     		</class>
+		</classes>
+	</test> 
+</suite>

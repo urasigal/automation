@@ -21,10 +21,7 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 	String aname,String ft_max_quota,String max_cpu,String max_mem,String max_in_bandwidth,String max_out_bandwidth,String admin_https,String use_operator,
 	String use_user,String use_observer,String private_port,String public_port, String  testid) throws Exception 
 	{
-		//Print this class name to the log file.
-		getLoggerInstance().info(getClass().getName());
-		
-		// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+		// Retrieve the product version.
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
 		buildTestParametersString(new String[] { "userName","userPass","login_ip","uiport","server_id","gui_web_port","uname","aname","ft_max_quota","max_cpu","max_mem","max_in_bandwidth","max_out_bandwidth",
@@ -36,7 +33,6 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 		ft_max_quota,max_cpu,max_mem,max_in_bandwidth,max_out_bandwidth,admin_https,use_operator, use_user,use_observer,private_port,public_port); 
 		
 		Assert.assertEquals(driverReslut.getResult(), "GOOD");
-		// Checking if broadcaster has crashes while execution of the test.
 	}
 	
 		// Test parameters.
@@ -47,10 +43,7 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 		String aname,String ft_max_quota,String max_cpu,String max_mem,String max_in_bandwidth,String max_out_bandwidth,String admin_https,String use_operator,
 		String use_user,String use_observer,String private_port,String public_port, String range, String testid) throws Exception 
 		{
-			//Print this class name to the log file.
-			getLoggerInstance().info(getClass().getName());
-			
-			// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+			// Retrieve the product version.
 			productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 			
 			buildTestParametersString(new String[] { "userName","userPass","login_ip","uiport","server_id","gui_web_port","uname","aname","ft_max_quota","max_cpu","max_mem","max_in_bandwidth","max_out_bandwidth",
@@ -70,7 +63,6 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 			ft_max_quota, max_cpu, max_mem, max_in_bandwidth, max_out_bandwidth, admin_https, use_operator, use_user, use_observer, privatePorts.toString(), public_port); 
 			
 			Assert.assertEquals(driverReslut.getResult(), "GOOD");
-			// Checking if broadcaster has crashes while execution of the test.
 		}
 		// Test parameters.
 		@Parameters({"userName","userPass","login_ip","uiport","server_id","gui_web_port","uname","aname","ft_max_quota","max_cpu","max_mem","max_in_bandwidth","max_out_bandwidth",
@@ -80,10 +72,7 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 		String aname,String ft_max_quota,String max_cpu,String max_mem,String max_in_bandwidth,String max_out_bandwidth,String admin_https,String use_operator,
 		String use_user,String use_observer,String private_port,String public_port, String range, String testid) throws Exception 
 		{
-			//Print this class name to the log file.
-			getLoggerInstance().info(getClass().getName());
-			
-			// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+			// Retrieve the product version.
 			productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 			
 			buildTestParametersString(new String[] { "userName","userPass","login_ip","uiport","server_id","gui_web_port","uname","aname","ft_max_quota","max_cpu","max_mem","max_in_bandwidth","max_out_bandwidth",
@@ -103,11 +92,8 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 			ft_max_quota, max_cpu, max_mem, max_in_bandwidth, max_out_bandwidth, admin_https, use_operator, use_user, use_observer, privatePorts.toString(), public_port); 
 			
 			Assert.assertEquals(driverReslut.getResult(), "GOOD");
-			// Checking if broadcaster has crashes while execution of the test.
 		}
 		
-	
-		// Test parameters.
 		@Parameters({"userName","userPass","login_ip","uiport","server_id","gui_web_port","uname","aname","ft_max_quota","max_cpu","max_mem","max_in_bandwidth","max_out_bandwidth",
 		"admin_https","use_operator","use_user","use_observer","private_port","public_port", "testid"})
 		@Test
@@ -115,8 +101,6 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 		String aname,String ft_max_quota,String max_cpu,String max_mem,String max_in_bandwidth,String max_out_bandwidth,String admin_https,String use_operator,
 		String use_user,String use_observer,String private_port,String public_port, String  testid) throws Exception 
 		{
-			//Print this class name to the log file.
-			getLoggerInstance().info(getClass().getName());
 			
 			// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
 			productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
@@ -130,7 +114,6 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 			ft_max_quota,max_cpu,max_mem,max_in_bandwidth,max_out_bandwidth,admin_https,use_operator, use_user,use_observer,private_port,public_port); 
 			
 			Assert.assertEquals(driverReslut.getResult(), "GOOD");
-			// Checking if broadcaster has crashes while execution of the test.
 		}
 		
 		// Enable HTTP automatic push/pull.
@@ -146,7 +129,7 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 		String http_ts_auto_out, String http_ts_buffer_size, String http_ts_smoothing_latency, String tcp_congestion_algo, String testid) 
 		throws Exception 
 		{	
-			// Retrieve the product version. Parameters: 1 - host, 2 - user interface port, 3 - product login name, 4 - product login password.
+			// Retrieve the product version.
 			productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 			
 			buildTestParametersString(new String[] { "login_ip", "userName", "userPass", "uiport", "flv_on", "hls_on", "mpd_on", "pls_on", "http_out_ip", "http_out_port",
@@ -163,7 +146,6 @@ public class BroadcasterUpdateSettingsTest extends BasetTestZixiComponentRestart
 			http_ts_auto_out, http_ts_buffer_size, http_ts_smoothing_latency, tcp_congestion_algo); 
 			
 			Assert.assertEquals(driverReslut.getResult(), "GOOD");
-			// Checking if broadcaster has crashes while execution of the test.
 		}
 }
  
