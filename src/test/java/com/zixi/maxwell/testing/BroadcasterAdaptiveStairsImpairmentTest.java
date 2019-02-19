@@ -49,6 +49,26 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 		Assert.assertEquals(driverReslut.getResult(), "GOOD");
 	}
 	
+	// Test parameters.
+		@Parameters({ "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
+		"impairment_control_setimpair", "testid"})
+		@Test
+		public void broadcasterSetGlobalInpairmentAndWait(String maxwell_address, String standart_impairment_server_api_port,
+		String flow_match_control_setmatch, String impairment_control_setimpair, String wait_time, String testid) throws Exception {
+			
+			buildTestParametersString(new String[] { "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
+			"impairment_control_setimpair", "testid"}, 
+			new String[] { maxwell_address, standart_impairment_server_api_port, flow_match_control_setmatch, 
+			impairment_control_setimpair, testid});
+			
+			driverReslut = ((BroadcasterAdaptiveStairsImpairmentDriver) testDriver).testIMPL( maxwell_address,  standart_impairment_server_api_port, 
+			flow_match_control_setmatch, impairment_control_setimpair); 
+			
+			Thread.sleep(Integer.parseInt(wait_time));
+			
+			Assert.assertEquals(driverReslut.getResult(), "GOOD");
+		}
+	
 	@Parameters({"maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
 	"impairment_control_setimpair1", "impairment_control_setimpair2", "g_1050TestCaseNumber", "setlogging", "testid"})
 	@Test
