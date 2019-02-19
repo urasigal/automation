@@ -27,7 +27,7 @@
 		 <parameter name="http_ts_buffer_size" value="0" />
 		 <parameter name="http_ts_smoothing_latency" value="1000" />
 		 <parameter name="tcp_congestion_algo" value="cubic%20reno" />
-		 <parameter name="testid" value="10324" />
+		 <parameter name="testid" value="10337" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
 			    <methods>
@@ -53,7 +53,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="TearsOfSteel_720p_h265.ts" />
-		<parameter name="testid" value="8230" />    
+		<parameter name="testid" value="10339" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -70,7 +70,7 @@
 		<parameter name="http_url" value="http://10.7.0.74:7777/test.ts" />
 		<parameter name="latency" value="3000" />
 		<parameter name="stream_name" value="http_input" />
-		<parameter name="testid" value="10326" />
+		<parameter name="testid" value="10341" />
 		<classes>
 			<class name="com.zixi.testing.FeederAddHTTPPullInputTest"/>
 		</classes>
@@ -91,51 +91,54 @@
 		<parameter name="onic" value="0.0.0.0" />
 		<parameter name="ottl" value="5" /> 
 		<parameter name="osmooth" value="" /> 
-		<parameter name="testid" value="10328" />
+		<parameter name="testid" value="10343" />
 		<classes>
 			<class name="com.zixi.testing.FeederUdpOutToFfmpegTest"/>
 		</classes>
 	</test>
 	<test name="FFMPEG analyzer test">
-		<parameter name="testid" value="10330" />  
+		<parameter name="testid" value="10345" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
-	<!-- Configure Maxwell set impairments -->
-	<test name="Configure maxwell simulator set interference simple case">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0 drop 100" />
-		<parameter name="wait_time" value="15000" />
-		<parameter name="testid" value="7944" />  
+	<test name="Broadcaster - reenable automatic HTTP push/pull">
+		 <parameter name="login_ip" value="10.7.0.74" />
+		 <parameter name="userName" value="admin" />
+		 <parameter name="userPass" value="1234" /> 
+		 <parameter name="uiport" value="4444" />
+		 <parameter name="flv_on" value="1" /> 
+		 <parameter name="hls_on" value="1" />
+		 <parameter name="mpd_on" value="1" /> 
+		 <parameter name="pls_on" value="1" />
+		 <parameter name="http_out_ip" value="" /> 
+		 <parameter name="http_out_port" value="7777" />
+		 <parameter name="hls_chunk_time" value="10" /> 
+		 <parameter name="hls_chunks" value="5" />
+		 <parameter name="http_auth_cahce_timeout" value="60" />
+		 <parameter name="http_on" value="1" />
+		 <parameter name="https_on" value="0" />
+		 <parameter name="https_out_port" value="443" /> 
+		 <parameter name="hls_dvr_duration_s" value="86400" />
+		 <parameter name="hls_no_mem_chunks" value="0" />
+		 <parameter name="hls_no_dvr" value="0" />
+		 <parameter name="hls_vod_abs_path_on" value="1" />
+		 <parameter name="http_ts_auto_in" value="1" />
+		 <parameter name="http_ts_auto_out" value="1" />
+		 <parameter name="http_ts_buffer_size" value="0" />
+		 <parameter name="http_ts_smoothing_latency" value="1000" />
+		 <parameter name="tcp_congestion_algo" value="cubic%20reno" />
+		 <parameter name="testid" value="10347" />
 		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
-		    <methods>
-        		<include name="broadcasterSetGlobalInpairmentAndWait" />
-     		 </methods>
-     		 </class>
+		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+			    <methods>
+		        	<include name="broadcasterEnableAutomaticPushPullSettings" />
+		     	</methods>
+		    </class>
 		</classes>
 	</test>
-	<test name="Configure maxwell simulator release interference simple case">
-		<parameter name="maxwell_address" value="10.7.0.70" />
-		<parameter name="standart_impairment_server_api_port" value="7021" />               <!--The standard impairment server API is listening to this TCP port -->
-		<parameter name="flow_match_control_setmatch" value="setmatch 0 0 zerostats all" /> <!-- define packet match criteria  -->
-		                                                                                    <!-- rate XmitRate MinPayload MaxPayload Overhead QLength ActualRate ActualDuration  it is a rate definition example -->
-		<parameter name="impairment_control_setimpair" value="setimpair 0 0" />
-		<parameter name="testid" value="7946" />  
-		<classes>
-		    <class name="com.zixi.maxwell.testing.BroadcasterAdaptiveStairsImpairmentTest">
-		    <methods>
-        		<include name="broadcasterSetGlobalInpairment" />
-     		 </methods>
-     		 </class>
-		</classes>
-	</test>
-	<test name="FFMPEG FFMPEG analyzer test">
-		<parameter name="testid" value="1063" />  
+	<test name="FFMPEG analyzer retest">
+		<parameter name="testid" value="10349" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
@@ -154,7 +157,7 @@
 		<parameter name="type" value="1" />
 		<parameter name="host" value="10.7.0.150" />
 		<parameter name="udpport" value="5555" /> 
-		<parameter name="testid" value="10332" />  
+		<parameter name="testid" value="10351" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederUdpOutputDeletioinTest"/>
 		</classes>
@@ -167,7 +170,7 @@
 		<parameter name="mip" value="http://10.7.0.74:7777/test.ts" />
 		<parameter name="port" value="0" />
 		<parameter name="ip" value="tcp" />
-		<parameter name="testid" value="10334" />  
+		<parameter name="testid" value="10353" />  
 		<classes>
 		    <class name="com.zixi.testing.FeederInputStreamDeletionTest">
 		    <methods>
@@ -182,8 +185,8 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test" />
-		<parameter name="testid" value="8258" />  
+		<parameter name="id" value="transcoder" />
+		<parameter name="testid" value="10355" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
