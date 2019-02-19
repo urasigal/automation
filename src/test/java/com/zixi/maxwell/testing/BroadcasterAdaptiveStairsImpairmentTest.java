@@ -51,7 +51,7 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 	
 	// Test parameters.
 		@Parameters({ "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
-		"impairment_control_setimpair", "testid"})
+		"impairment_control_setimpair", "wait_time", "testid"})
 		@Test
 		public void broadcasterSetGlobalInpairmentAndWait(String maxwell_address, String standart_impairment_server_api_port,
 		String flow_match_control_setmatch, String impairment_control_setimpair, String wait_time, String testid) throws Exception {
