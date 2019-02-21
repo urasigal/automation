@@ -331,10 +331,11 @@ The streams are created in the same time  -->
 		<parameter name="uiport" value="4200" />
 		<parameter name="testid" value="7922" />   
 		<classes>
-		    <class name="com.zixi.testing.FeederOutputPushToBxTest"/>
-		    <methods>
-        		<include name="feederOutputToBxTest" />
-     		 </methods>
+		    <class name="com.zixi.testing.FeederOutputPushToBxTest">
+			    <methods>
+	        		<include name="feederOutputToBxTest" />
+	     		 </methods>
+     		 </class>
 		</classes>
 	</test>
 	<test name="Broadcaster - Push input stream creation test - Encryption AES 128">
@@ -535,7 +536,7 @@ The streams are created in the same time  -->
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove Fiel input">
+	<test name="Broadcaster - Remove file input">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />

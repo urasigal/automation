@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Feeder: HTTP pull input stop start remote source suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - enable automatic HTTP push/pull">
+		 <parameter name="login_ip" value="10.7.0.74" />
+		 <parameter name="userName" value="admin" />
+		 <parameter name="userPass" value="1234" /> 
+		 <parameter name="uiport" value="4444" />
+		 <parameter name="flv_on" value="1" /> 
+		 <parameter name="hls_on" value="1" />
+		 <parameter name="mpd_on" value="1" /> 
+		 <parameter name="pls_on" value="1" />
+		 <parameter name="http_out_ip" value="" /> 
+		 <parameter name="http_out_port" value="7777" />
+		 <parameter name="hls_chunk_time" value="10" /> 
+		 <parameter name="hls_chunks" value="5" />
+		 <parameter name="http_auth_cahce_timeout" value="60" />
+		 <parameter name="http_on" value="1" />
+		 <parameter name="https_on" value="0" />
+		 <parameter name="https_out_port" value="443" /> 
+		 <parameter name="hls_dvr_duration_s" value="86400" />
+		 <parameter name="hls_no_mem_chunks" value="0" />
+		 <parameter name="hls_no_dvr" value="0" />
+		 <parameter name="hls_vod_abs_path_on" value="1" />
+		 <parameter name="http_ts_auto_in" value="1" />
+		 <parameter name="http_ts_auto_out" value="1" />
+		 <parameter name="http_ts_buffer_size" value="0" />
+		 <parameter name="http_ts_smoothing_latency" value="1000" />
+		 <parameter name="tcp_congestion_algo" value="cubic%20reno" />
+		 <parameter name="testid" value="10337" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+			    <methods>
+		        	<include name="broadcasterEnableAutomaticPushPullSettings" />
+		     	</methods>
+		    </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - Create a file input stream">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="test" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="TearsOfSteel_720p_h265.ts" />
+		<parameter name="testid" value="10339" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Feeder - add http pull input stream">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" /> 
+		<parameter name="http_url" value="http://10.7.0.74:7777/test.ts" />
+		<parameter name="latency" value="3000" />
+		<parameter name="stream_name" value="http_input" />
+		<parameter name="testid" value="10341" />
+		<classes>
+			<class name="com.zixi.testing.FeederAddHTTPPullInputTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - UDP out to FFMPEG">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" /> 
+		<parameter name="name" value="test" />
+		<parameter name="mip" value="http://10.7.0.74:7777/test.ts" />
+		<parameter name="port" value="0" /> 
+		<parameter name="ip" value="tcp" />
+		<parameter name="prog" value="-1" /> 
+		<parameter name="chan" value="-1" />
+		<parameter name="oh" value="10.7.0.150" />
+		<parameter name="op" value="5555" /> 
+		<parameter name="onic" value="0.0.0.0" />
+		<parameter name="ottl" value="5" /> 
+		<parameter name="osmooth" value="" /> 
+		<parameter name="testid" value="10343" />
+		<classes>
+			<class name="com.zixi.testing.FeederUdpOutToFfmpegTest"/>
+		</classes>
+	</test>
+	<test name="FFMPEG analyzer test">
+		<parameter name="testid" value="10345" />  
+		<classes>
+		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - reenable automatic HTTP push/pull">
+		 <parameter name="login_ip" value="10.7.0.74" />
+		 <parameter name="userName" value="admin" />
+		 <parameter name="userPass" value="1234" /> 
+		 <parameter name="uiport" value="4444" />
+		 <parameter name="flv_on" value="1" /> 
+		 <parameter name="hls_on" value="1" />
+		 <parameter name="mpd_on" value="1" /> 
+		 <parameter name="pls_on" value="1" />
+		 <parameter name="http_out_ip" value="" /> 
+		 <parameter name="http_out_port" value="7777" />
+		 <parameter name="hls_chunk_time" value="10" /> 
+		 <parameter name="hls_chunks" value="5" />
+		 <parameter name="http_auth_cahce_timeout" value="60" />
+		 <parameter name="http_on" value="1" />
+		 <parameter name="https_on" value="0" />
+		 <parameter name="https_out_port" value="443" /> 
+		 <parameter name="hls_dvr_duration_s" value="86400" />
+		 <parameter name="hls_no_mem_chunks" value="0" />
+		 <parameter name="hls_no_dvr" value="0" />
+		 <parameter name="hls_vod_abs_path_on" value="1" />
+		 <parameter name="http_ts_auto_in" value="1" />
+		 <parameter name="http_ts_auto_out" value="1" />
+		 <parameter name="http_ts_buffer_size" value="0" />
+		 <parameter name="http_ts_smoothing_latency" value="1000" />
+		 <parameter name="tcp_congestion_algo" value="cubic%20reno" />
+		 <parameter name="testid" value="10347" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+			    <methods>
+		        	<include name="broadcasterEnableAutomaticPushPullSettings" />
+		     	</methods>
+		    </class>
+		</classes>
+	</test>
+	<test name="FFMPEG analyzer retest">
+		<parameter name="testid" value="10349" />  
+		<classes>
+		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
+		</classes>
+	</test>   
+	<test name="Feeder - output stream deletion test">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="id" value="test" />
+		<parameter name="mip" value="http://10.7.0.74:7777/test.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="tcp" />
+		<parameter name="prog" value="-1" />
+		<parameter name="chan" value="-1" />
+		<parameter name="type" value="1" />
+		<parameter name="host" value="10.7.0.150" />
+		<parameter name="udpport" value="5555" /> 
+		<parameter name="testid" value="10351" />  
+		<classes>
+		    <class name="com.zixi.testing.FeederUdpOutputDeletioinTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - Remove udp input stream">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="mip" value="http://10.7.0.74:7777/test.ts" />
+		<parameter name="port" value="0" />
+		<parameter name="ip" value="tcp" />
+		<parameter name="testid" value="10353" />  
+		<classes>
+		    <class name="com.zixi.testing.FeederInputStreamDeletionTest">
+		    <methods>
+        		<include name="feederUdpInputTest" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove file input">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="transcoder" />
+		<parameter name="testid" value="10355" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>	 
+</suite>

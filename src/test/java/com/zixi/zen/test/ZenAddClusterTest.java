@@ -40,12 +40,12 @@ public class ZenAddClusterTest extends BaseTestZixiMainComponentsZen{
 		bx_version, aws_account_name, root_device_size, region, key_pair, security_group, eips, min_size, max_size, api_user, api_password, 
 		vpc_name, vpc_subnet_name, testid});
 		
-		driverReslut = ((ZenAddClusterDriver) testDriver).addCluster(zenUserName, zenUserPass, zenLogin_ip, zenUiport, 
-		clusterName, resource_tag_name, can_input, can_output, can_process, http_streaming_port, auth_mode,
-		allow_unmanaged_inputs, allow_unmanaged_outputs, whitelist, dtls, allow_ignore_dtls_cert, load_balance,
-		bx_input_bw_limit, bx_output_bw_limit, dns_prefix, is_auto_scaling, activation_key,
-		bx_version, aws_account_name, root_device_size, region, key_pair, security_group, eips, min_size, max_size, 
-		api_user, api_password, vpc_name, vpc_subnet_name);
-		Assert.assertEquals(driverReslut.getResult(), "true"); 
+//		driverReslut = ((ZenAddClusterDriver) testDriver).addCluster(zenUserName, zenUserPass, zenLogin_ip, zenUiport, 
+//		clusterName, resource_tag_name, can_input, can_output, can_process, http_streaming_port, auth_mode,
+//		allow_unmanaged_inputs, allow_unmanaged_outputs, whitelist, dtls, allow_ignore_dtls_cert, load_balance,
+//		bx_input_bw_limit, bx_output_bw_limit, dns_prefix, is_auto_scaling, activation_key,
+//		bx_version, aws_account_name, root_device_size, region, key_pair, security_group, eips, min_size, max_size, 
+//		api_user, api_password, vpc_name, vpc_subnet_name);
+//		Assert.assertEquals(driverReslut.getResult(), "true"); 
 	}
 }
