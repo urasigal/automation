@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- Test link suite: "HLS multi bitrate non adaptive streaming" -->
 <suite name="Broadcaster: HLS pull input non adaptive streaming - get all streams" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster - Create a file input steam">
+	<test name="Broadcaster - Create a file input stream">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.77" />
