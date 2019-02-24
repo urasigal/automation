@@ -36,7 +36,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.264" />
 		<parameter name="profile_name" value="480p_1000" />
-		<parameter name="enc" value="1" />
+		<parameter name="enc" value="4" />
 		<parameter name="bitrate" value="1000000" />
 		<parameter name="gop" value="30" />
 		<parameter name="fixed_gop" value="1" />
@@ -98,7 +98,7 @@
 		<parameter name="crf" value="23" />
 		<parameter name="tune" value="zerolatency" />
 		<parameter name="use_hw" value="1" />
-		<parameter name="max_bitrate" value="2500000" />  
+		<parameter name="max_bitrate" value="5000000" />  
 		<parameter name="testid" value="8267" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
