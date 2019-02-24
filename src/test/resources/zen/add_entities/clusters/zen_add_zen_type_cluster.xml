@@ -6,29 +6,38 @@
 		<parameter name="zenUserPass" value="mnk4DNK4" />
 		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
 		<parameter name="zenUiport" value="80" />
-		<parameter name="clusterName" value="testCluster" />
+		<parameter name="clusterName" value="ingestcluster" />
 		<parameter name="resource_tag_name" value="infra" />
-		<parameter name="can_input" value="1" />
+		<parameter name="can_input" value="1" /> <!--  -->
 		<parameter name="can_output" value="1" />
 		<parameter name="can_process" value="1" />
 		<parameter name="http_streaming_port" value="7777" />
 		<parameter name="auth_mode" value="zen" />
 		<parameter name="allow_unmanaged_inputs" value="1" />
 		<parameter name="allow_unmanaged_outputs" value="1" />
-		<parameter name="dns_prefix" value="testCluster" />
+		<parameter name="whitelist" value="0" />
+		<parameter name="dtls" value="1" />
+		<parameter name="allow_ignore_dtls_cert" value="1" />
+		<parameter name="load_balance" value="0" />
+		<parameter name="bx_input_bw_limit" value="10" />
+		<parameter name="bx_output_bw_limit" value="10" />
+		<parameter name="dns_prefix" value="ingestcluster" />
 		<parameter name="is_auto_scaling" value="true" />
-		<parameter name="activation_key" value="demo-d0b6-fa1a-55b5" />
-		<parameter name="bx_version" value="1.11.0.27500" />
-		<parameter name="aws_account_name" value="zixi-zen" />
+		<parameter name="activation_key" value="demo-c745-dc0d-6a13" />
+		<parameter name="bx_version" value="12.3.33087" />
+		<parameter name="aws_account_name" value="zixi-main" />
+		<parameter name="root_device_size" value="32" />
 		<parameter name="region" value="us-east-1" />
-		<parameter name="key_pair" value="domainer-admin" /> <!-- the name of predefined key pair on AWS -->
-		<parameter name="security_group" value="offices" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="key_pair" value="gsg-keypair" /> <!-- the name of predefined key pair on AWS -->
+		<parameter name="security_group" value="QA" /> <!-- the name of predefined security group on AWS -->
 		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
 		<parameter name="min_size" value="1" />
 		<parameter name="max_size" value="1" />
 		<parameter name="api_user" value="admin" />
 		<parameter name="api_password" value="1234" />
-		<parameter name="testid" value="" />  
+		<parameter name="vpc_name" value="Zixi (10.6.0.0/24)" />
+		<parameter name="vpc_subnet_name" value="Zixi (10.6.0.0/24)" />
+		<parameter name="testid" value="8870" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
 		</classes>
