@@ -11,7 +11,6 @@ import com.zixi.drivers.drivers.BroadcasterFileRecordDriver;
 public class RecordStreamTest extends BaseTestZixiMainComponentsZen{
 	
 	@BeforeClass
-	
 	public void testInit() {
 		testDriver = new BroadcasterFileRecordDriver();
 	}
