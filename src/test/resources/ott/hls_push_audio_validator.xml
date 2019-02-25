@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
-<suite name="Broadcaster: HLS PUSH out + embeded server test + apple validator including audio only streams" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: HLS PUSH out + embeded server test + apple validator including audio only stream" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -215,7 +214,7 @@
 		<parameter name="compress_zixi" value="1" />
 		<parameter name="multicast" value="0" />
 		<parameter name="streams" value="5000,2000,audio" />
-		<parameter name="bitrates" value="5000000,2000000,130000" />
+		<parameter name="bitrates" value="5000000,2000000,190000" />
 		<parameter name="max_time" value="-1" />
 		<parameter name="remux" value="0" />
 		<parameter name="iframes" value="1" />
