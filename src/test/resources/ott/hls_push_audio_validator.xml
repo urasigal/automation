@@ -5,7 +5,7 @@
 	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="File" />
 		<parameter name="id" value="transcoder" />
@@ -18,7 +18,7 @@
 		<parameter name="kompression" value="1" />
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
-		<parameter name="path" value="iphone.ts" />
+		<parameter name="path" value="10M.ts" />
 		<parameter name="testid" value="10084" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
@@ -32,11 +32,11 @@
 	<test name="Broadcaster: add profile h.264 - 720*480 1Mbps">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.264" />
 		<parameter name="profile_name" value="480p_1000" />
-		<parameter name="enc" value="1" />
+		<parameter name="enc" value="4" />
 		<parameter name="bitrate" value="1000000" />
 		<parameter name="gop" value="30" />
 		<parameter name="fixed_gop" value="1" />
@@ -70,11 +70,11 @@
 	<test name="Broadcaster: add profile h.264 - 720*480 4Mbps">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.264" />
 		<parameter name="profile_name" value="480p_4000" />
-		<parameter name="enc" value="1" />
+		<parameter name="enc" value="4" />
 		<parameter name="bitrate" value="4000000" />
 		<parameter name="gop" value="30" />
 		<parameter name="fixed_gop" value="1" />
@@ -107,7 +107,7 @@
 	<test name="Broadcaster: transcode a stream - 720*480 to 2Mbps">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
 		<parameter name="id" value="2000" />
@@ -138,7 +138,7 @@
 	<test name="Broadcaster: transcode a stream audio only profile">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
 		<parameter name="id" value="audio" />
@@ -171,7 +171,7 @@
 	<test name="Broadcaster: transcode a stream - 720*480 to 5Mbps">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
 		<parameter name="id" value="5000" />
@@ -203,7 +203,7 @@
 	<test name="Broadcaster: create an adaptive group">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="adaptive" />
 		<parameter name="record" value="false" />
@@ -232,7 +232,7 @@
 	  <test name="Broadcaster - Define HLS push output steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="output_stream_name" />
 		<parameter name="matrix" value="0" />
@@ -259,7 +259,7 @@
 	<test name="Broadcaster: delete adaptive group">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="adaptive" />
 		<parameter name="testid" value="10102" />
@@ -268,7 +268,7 @@
 		</classes>
 	</test>	
 	<test name="Broadcaster - Remove file input">
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="transcoder" />
@@ -283,7 +283,7 @@
 	<test name="Broadcaster: delete profile - 720*480 1Mbps">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="480p_1000" />
 		<parameter name="testid" value="10106" />
@@ -295,7 +295,7 @@
 	<test name="Broadcaster: delete profile - 720*480 4Mbps">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="480p_4000" />
 		<parameter name="testid" value="10108" />
@@ -304,7 +304,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Delete HLS push output stream">
-		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="output_stream_name" />
