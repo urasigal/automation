@@ -87,12 +87,12 @@
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: Test HLS with HLS validator">
+	<test name="Broadcaster: Test HLS with HLS validator. step9">
 		<parameter name="analyzer_url" value="10.7.0.201" />
 		<parameter name="hls_url" value="http://10.7.0.66:7777/adaptive.m3u8" />
 		<parameter name="testid" value="10208" />  
 		<classes>
-		    <class name="com.zixi.analyze.testing.HlsPushOutValidatorTest"/>
+		    <class name="com.zixi.testing.HlsAppleAnalyzerTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster: delete adaptive group">
