@@ -19,7 +19,7 @@ public class FFMPEGImageStatisticHlsPushOutTest extends BaseTestZixiMainComponen
 	@Test
 	public void broadcasterSingleInputStreamStatisticAnilyzer(String mode, String testid) throws Exception {
 		
-		// Start locally HTTP server.
+		// Start locally HTTP server (the server is the part of the test).
 		JettyZixiRunnerThread jettyZixiRunnerThread = new JettyZixiRunnerThread();
 		jettyZixiRunnerThread.startServers("src/main/resources");
 		Thread.sleep(60_000);

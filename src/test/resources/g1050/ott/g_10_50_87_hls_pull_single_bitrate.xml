@@ -153,7 +153,7 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>			
-	<test name="Broadcaster - Remove Fiel input">
+	<test name="Broadcaster - Remove file input">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
@@ -177,6 +177,17 @@
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test>
+	<test name="Broadcaster: delete an adaptive group test">
+		<parameter name="userName" value="admin" /> 
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="adaptive" />
+		<parameter name="testid" value="8206" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest"/>
+		</classes>
+	</test>	
 	<test name="Restart lab maxwell simulator without plugins">  
 		<classes>
 		    <class name="com.zixi.g1050test.BroadcasterPushG1050ConfigurationTest">
