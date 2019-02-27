@@ -4,7 +4,7 @@
 	<listeners>
   	  <listener class-name="com.zixi.reports.SuiteListenerZapiReporterAdapter" >
   	  	<parameter name="projectId" value="10003" />
-	  	<parameter name="issueId" value="10362" /> <!-- BROAD-302, issueId 10362 "projectId":10003,"cycleId":"09e30667-0591-4aff-b844-28ffaf320432"-->
+	  	<parameter name="issueId" value="10505" /> <!-- BROAD-430, issueId 10505 "projectId":10003-->
 	  	<parameter name="cycleId" value="" /> <!-- Nvidia transcoding: to be cloned -->
 	  	<parameter name="versionId" value="-1" />
 	  	<parameter name="assigneeType" value="currentUser" />
@@ -31,7 +31,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="H264-4k-60-8bit-420.ts" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10415" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -47,7 +47,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
 		<parameter name="on" value="0" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10417" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -89,7 +89,7 @@
 		<parameter name="keep_ar" value="1" />
 		<parameter name="max_bitrate" value="6000000" />
 		<parameter name="x264_two_pass" value="0" />   
-		<parameter name="testid" value="2062" />
+		<parameter name="testid" value="10419" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
@@ -123,7 +123,7 @@
 		<parameter name="vp" value="1" />
 		<parameter name="smoothing" value="1500" />
 		<parameter name="max_va_diff_ms" value="1500" />
-		<parameter name="testid" value="1382" />
+		<parameter name="testid" value="10421" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
@@ -135,7 +135,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
 		<parameter name="on" value="1" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10423" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -152,7 +152,7 @@
 		<parameter name="id" value="trns_h264_4Kp60_nvidia_to_h264_4Kp60_8bit" />
 		<parameter name="on" value="1" />
 		<parameter name="cpuFolder" value="720p" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10425" />    
 		<classes>
 		    <class name="com.zixi.testing.RecordStreamTest" />
 		</classes>
@@ -163,7 +163,7 @@
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="stream_name" value="trns_h264_4Kp60_nvidia_to_h264_4Kp60_8bit" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10427" />    
 		<classes>
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
 		</classes>
@@ -175,7 +175,7 @@
 		<parameter name="streamId" value="transcoded" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
-		<parameter name="testid" value="1249" />  
+		<parameter name="testid" value="10429" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -186,7 +186,7 @@
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="720p" />
-		<parameter name="testid" value="1382" />
+		<parameter name="testid" value="10431" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
 		</classes>
@@ -209,7 +209,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="H264-4k-60-8bit-420.ts" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10434" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -225,7 +225,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
 		<parameter name="on" value="0" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10436" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -267,7 +267,7 @@
 		<parameter name="keep_ar" value="1" />
 		<parameter name="max_bitrate" value="6000000" />
 		<parameter name="x264_two_pass" value="0" />   
-		<parameter name="testid" value="2062" />
+		<parameter name="testid" value="10438" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
@@ -301,7 +301,7 @@
 		<parameter name="vp" value="1" />
 		<parameter name="smoothing" value="1500" />
 		<parameter name="max_va_diff_ms" value="1500" />
-		<parameter name="testid" value="1382" />
+		<parameter name="testid" value="10440" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
@@ -313,7 +313,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
 		<parameter name="on" value="1" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10442" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -330,7 +330,7 @@
 		<parameter name="id" value="trns_h264_4Kp60_nvidia_to_h264_4Kp30_8bit" />
 		<parameter name="on" value="1" />
 		<parameter name="cpuFolder" value="720p" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10444" />    
 		<classes>
 		    <class name="com.zixi.testing.RecordStreamTest" />
 		</classes>
@@ -341,7 +341,7 @@
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="stream_name" value="trns_h264_4Kp60_nvidia_to_h264_4Kp30_8bit" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10446" />    
 		<classes>
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
 		</classes>
@@ -353,7 +353,7 @@
 		<parameter name="streamId" value="transcoded" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
-		<parameter name="testid" value="1249" />  
+		<parameter name="testid" value="10448" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -364,7 +364,7 @@
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="720p" />
-		<parameter name="testid" value="1382" />
+		<parameter name="testid" value="10450" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
 		</classes>
@@ -387,7 +387,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="H264-4k-60-8bit-420.ts" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10453" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -403,7 +403,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
 		<parameter name="on" value="0" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10455" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -445,7 +445,7 @@
 		<parameter name="keep_ar" value="1" />
 		<parameter name="max_bitrate" value="6000000" />
 		<parameter name="x264_two_pass" value="0" />   
-		<parameter name="testid" value="2062" />
+		<parameter name="testid" value="10457" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
@@ -479,7 +479,7 @@
 		<parameter name="vp" value="1" />
 		<parameter name="smoothing" value="1500" />
 		<parameter name="max_va_diff_ms" value="1500" />
-		<parameter name="testid" value="1382" />
+		<parameter name="testid" value="10459" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterIntelTrannscodeStreamTest"/>
 		</classes>
@@ -491,7 +491,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
 		<parameter name="on" value="1" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10461" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -508,7 +508,7 @@
 		<parameter name="id" value="trns_h264_4Kp60_nvidia_to_h264_4Ki30_8bit" />
 		<parameter name="on" value="1" />
 		<parameter name="cpuFolder" value="720p" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10463" />    
 		<classes>
 		    <class name="com.zixi.testing.RecordStreamTest" />
 		</classes>
@@ -519,7 +519,7 @@
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="stream_name" value="trns_h264_4Kp60_nvidia_to_h264_4Ki30_8bit" />
-		<parameter name="testid" value="1249" />    
+		<parameter name="testid" value="10465" />    
 		<classes>
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
 		</classes>
@@ -531,7 +531,7 @@
 		<parameter name="streamId" value="transcoded" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
-		<parameter name="testid" value="1249" />  
+		<parameter name="testid" value="10467" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -542,7 +542,7 @@
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="720i" />
-		<parameter name="testid" value="1382" />
+		<parameter name="testid" value="10469" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
 		</classes>
