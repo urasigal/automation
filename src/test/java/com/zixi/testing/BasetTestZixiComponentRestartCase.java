@@ -121,7 +121,7 @@ public class BasetTestZixiComponentRestartCase {
 	            String subject = "Test failed \n";
 	            GoogleMailDriver.sendToList(SetSutUpTimeDriver.getEmailAddressesFromSystemFolder("src/main/resources/email_addresses"), subject, message);
 	    }
-        //setSutUpTimeDriver.uptimeSet("src/main/resources/uptime", "src/main/resources/current_uptime");
+        setSutUpTimeDriver.uptimeSet("src/main/resources/uptime", "src/main/resources/current_uptime");
      }
      catch(Exception e)
      {
