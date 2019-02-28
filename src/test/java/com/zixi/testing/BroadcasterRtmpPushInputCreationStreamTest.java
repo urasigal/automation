@@ -45,6 +45,6 @@ public class BroadcasterRtmpPushInputCreationStreamTest extends BaseTestZixiMain
 		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 		// Checking if broadcaster has crashes while execution of the test.
 		Assert.assertEquals(sutProcessId, BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster"));
-		LOGGER.exiting(getClass().getName(), "broadcasterRtmpPushTest");
+		//LOGGER.exiting(getClass().getName(), "broadcasterRtmpPushTest");
 	}
 }
