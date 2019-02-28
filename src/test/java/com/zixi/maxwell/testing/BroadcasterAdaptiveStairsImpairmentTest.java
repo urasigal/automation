@@ -21,9 +21,6 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 	public void configureMaxwellSimulator(String maxwell_address, String standart_impairment_server_api_port, String flow_match_control_setmatch,
 	String impairment_control_setimpair, String userName, String userPassword, String login_ip, String uiport, String id, String testid) throws Exception {
 		
-		//Print this class's name to the log file.
-		getLoggerInstance().info(getClass().getName());
-		
 		buildTestParametersString(new String[] { "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
 		"impairment_control_setimpair", "testid" }, 
 		new String[] { maxwell_address, standart_impairment_server_api_port, flow_match_control_setmatch, impairment_control_setimpair, testid });
@@ -32,7 +29,6 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 		flow_match_control_setmatch, impairment_control_setimpair,  userName,  userPassword,  login_ip,  uiport, id); 
 		
 		Assert.assertEquals(driverReslut.getResult(), "GOOD");
-		// Checking if broadcaster has crashes while execution of the test.
 	}
 	
     // Test parameters.
@@ -41,9 +37,6 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 	@Test
 	public void broadcasterSetGlobalInpairment(String maxwell_address, String standart_impairment_server_api_port,
 	String flow_match_control_setmatch, String impairment_control_setimpair, String testid) throws Exception {
-		
-		//Print this class's name to the log file.
-		getLoggerInstance().info(getClass().getName());
 		
 		buildTestParametersString(new String[] { "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
 		"impairment_control_setimpair", "testid"}, 
@@ -54,19 +47,33 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 		flow_match_control_setmatch, impairment_control_setimpair); 
 		
 		Assert.assertEquals(driverReslut.getResult(), "GOOD");
-		// Checking if broadcaster has crashes while execution of the test.
 	}
 	
 	// Test parameters.
+		@Parameters({ "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
+		"impairment_control_setimpair", "wait_time", "testid"})
+		@Test
+		public void broadcasterSetGlobalInpairmentAndWait(String maxwell_address, String standart_impairment_server_api_port,
+		String flow_match_control_setmatch, String impairment_control_setimpair, String wait_time, String testid) throws Exception {
+			
+			buildTestParametersString(new String[] { "maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
+			"impairment_control_setimpair", "testid"}, 
+			new String[] { maxwell_address, standart_impairment_server_api_port, flow_match_control_setmatch, 
+			impairment_control_setimpair, testid});
+			
+			driverReslut = ((BroadcasterAdaptiveStairsImpairmentDriver) testDriver).testIMPL( maxwell_address,  standart_impairment_server_api_port, 
+			flow_match_control_setmatch, impairment_control_setimpair); 
+			
+			Thread.sleep(Integer.parseInt(wait_time));
+			
+			Assert.assertEquals(driverReslut.getResult(), "GOOD");
+		}
+	
 	@Parameters({"maxwell_address", "standart_impairment_server_api_port", "flow_match_control_setmatch", 
 	"impairment_control_setimpair1", "impairment_control_setimpair2", "g_1050TestCaseNumber", "setlogging", "testid"})
 	@Test
 	public void g_1050SetTestCaseNumber(String maxwell_address, String standart_impairment_server_api_port, String flow_match_control_setmatch,
 	String impairment_control_setimpair1, String impairment_control_setimpair2, String g_1050TestCaseNumber, String setlogging, String testid) throws Exception {
-		
-		//Print this class's name to the log file.
-		getLoggerInstance().info(getClass().getName());
-		
 		buildTestParametersString(new String[] {"maxwell_address", "standart_impairment_server_api_port",
 		"flow_match_control_setmatch", "impairment_control_setimpair1", "impairment_control_setimpair2", "g_1050TestCaseNumber", "setlogging", "testid"}, 
 		new String[] {maxwell_address, standart_impairment_server_api_port, flow_match_control_setmatch, impairment_control_setimpair1, 
@@ -76,6 +83,5 @@ public class BroadcasterAdaptiveStairsImpairmentTest extends BaseTestZixiMainCom
 		impairment_control_setimpair2, g_1050TestCaseNumber, setlogging); 
 		
 		Assert.assertEquals(driverReslut.getResult(), "GOOD");
-		// Checking if broadcaster has crashes while execution of the test.
 	}
 }
