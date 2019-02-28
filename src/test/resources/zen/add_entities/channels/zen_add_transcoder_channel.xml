@@ -1,6 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="ZEN: Add transcoder channel" verbose="5" data-provider-thread-count="1">
+<suite name="ZEN: Add transcoded channel" verbose="5" data-provider-thread-count="1">
+<!-- 
+The goal of the test suite is to define transcoded channel on ZEN master.
+The first thing is the sourse should be defined.
+In order to define a source the one of the input acutual ingest point should be defined.
+In this case feeder will be defined.
+-->
+<!-- 1. Add feeder to ZEN  -->
+	<test name="ZEN - Add feeder">
+		<parameter name="userName" value="admin@zixi.com" />
+		<parameter name="userPass" value="mnk4DNK4" />
+		<parameter name="login_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="uiport" value="443" />
+		<parameter name="feederName" value="source_feeder" />
+		<parameter name="feederUser" value="admin" />
+		<parameter name="feederPass" value="1234" />
+		<parameter name="shhKeyName" value="test" />
+		<parameter name="accessTagName" value="infra" />  
+		<parameter name="testid" value="8864" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederTest"/>
+		</classes>
+	</test>
+	<test name="Feeder - upload private key">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="testid" value="8866" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederPostKeyTestZen">
+		    <methods>
+        		<include name="uploadPrivateKeyFeeder" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>
+	<test name="Feeder - set ssh tunnel parameters">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.65" />
+		<parameter name="uiport" value="4200" />
+		<parameter name="zenHost" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="ssh_port" value="22" />
+		<parameter name="ssh_user" value="source_feeder-feeder" />
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="zenFeederName" value="source_feeder" />
+		<parameter name="testid" value="8868" />	
+		<classes>
+		    <class name="com.zixi.testing.FeederSettingsZenTest">
+		    <methods>
+        		<include name="setFeederTunnelParameters" />
+     		 </methods>
+     		 </class>
+		</classes>  
+	</test>
+	<test name="ZEN - add transcoder profile1">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="audio_bitrate" value="100" />
+		<parameter name="audio_encoder_profile" value="low" />
+		<parameter name="bitrate_avg" value="1000" />
+		<parameter name="bitrate_max" value="1500" />
+		<parameter name="b_frames" value="0" />
+		<parameter name="do_audio" value="false" />
+		<parameter name="do_video" value="true" />
+		<parameter name="encoding_profile" value="main" />
+		<parameter name="fps" value="0" />
+		<parameter name="gop" value="30" />
+		<parameter name="gop_closed" value="1" />
+		<parameter name="gop_fixed" value="1" />
+		<parameter name="hardware_accel" value="false" />
+		<parameter name="hdr_buff_length" value="2" />
+		<parameter name="height" value="480" />
+		<parameter name="interlaced" value="0" />
+		<parameter name="keep_audio" value="false" />
+		<parameter name="keep_video" value="false" />
+		<parameter name="performance" value="4" />
+		<parameter name="profile" value="test_transcoder_profile1" />
+		<parameter name="ref_frames" value="2" />
+		<parameter name="width" value="640" />
+		<parameter name="testid" value="8864" />
+		<classes>
+			    <class name="com.zixi.zen.test.ZenAddTranscoderProfileTest"/>
+		</classes>
+	</test>
+	<test name="ZEN - add transcoder profile2">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="audio_bitrate" value="100" />
+		<parameter name="audio_encoder_profile" value="low" />
+		<parameter name="bitrate_avg" value="1000" />
+		<parameter name="bitrate_max" value="1500" />
+		<parameter name="b_frames" value="0" />
+		<parameter name="do_audio" value="false" />
+		<parameter name="do_video" value="true" />
+		<parameter name="encoding_profile" value="main" />
+		<parameter name="fps" value="0" />
+		<parameter name="gop" value="30" />
+		<parameter name="gop_closed" value="1" />
+		<parameter name="gop_fixed" value="1" />
+		<parameter name="hardware_accel" value="false" />
+		<parameter name="hdr_buff_length" value="2" />
+		<parameter name="height" value="480" />
+		<parameter name="interlaced" value="0" />
+		<parameter name="keep_audio" value="false" />
+		<parameter name="keep_video" value="false" />
+		<parameter name="performance" value="4" />
+		<parameter name="profile" value="test_transcoder_profile2" />
+		<parameter name="ref_frames" value="2" />
+		<parameter name="width" value="640" />
+		<parameter name="testid" value="8864" />
+		<classes>
+			    <class name="com.zixi.zen.test.ZenAddTranscoderProfileTest"/>
+			</classes>
+	</test>
+<!-- Add an ingest cluster (to be used in a feeder source as an ingest cluster) -->
+	<test name="ZEN - Add AWS ingest cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="clusterName" value="ingestcluster" />
+		<parameter name="resource_tag_name" value="infra" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="ingestcluster" />
+		<parameter name="is_auto_scaling" value="true" />
+		<parameter name="activation_key" value="demo-c689-6565-9b93" />
+		<parameter name="bx_version" value="12.1.30924" />
+		<parameter name="aws_account_name" value="zixi-main" />
+		<parameter name="region" value="us-east-2" />
+		<parameter name="key_pair" value="ohio-zen-staging" /> <!-- the name of predefined key pair on AWS -->
+		<parameter name="security_group" value="default" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
+		<parameter name="min_size" value="1" />
+		<parameter name="max_size" value="1" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
+		<parameter name="vpc_name" value="vpc-5e35dc37 (172.31.0.0/16)" />
+		<parameter name="vpc_subnet_name" value="subnet-1ec6e854 (172.31.32.0/20)" />
+		<parameter name="testid" value="8870" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test> 
+<!-- Add a feeder source -->
+	<test name="ZEN - Add feeder source">
+		<parameter name="zenUser" value="admin@zixi.com" />
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiPort" value="80" />
+		<parameter name="sourceName" value="feeder_output_source" />  
+		<parameter name="broadcaster_cluster_name" value="ingestcluster" />  
+		<parameter name="feeder_name" value="source_feeder" />  
+		<parameter name="broadcaster_id" value="" />  
+		<parameter name="input_id" value="feederoutputname" />  
+		<parameter name="max_bitrate" value="5000000" />  
+		<parameter name="latency" value="4000" />  
+		<parameter name="monitor_pids_change" value="1" />  
+		<parameter name="resource_tag_ids" value="infra" />  
+		<parameter name="password" value="1234" />  
+		<parameter name="encryption" value="auto" />  
+		<parameter name="encryption_key" value="" />  
+		<parameter name="allow_outputs" value="true" />  
+		<parameter name="outputs_password" value="1234" />  
+		<parameter name="monitor_only" value="false" />  
+		<parameter name="cleanup_outputs" value="true" />   
+		<parameter name="testid" value="8874" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddFeederSourceTest"/>
+		</classes>
+	</test>
+<!-- Add process cluster (will be used a process cluster in a channel) -->
+<test name="ZEN - Add AWS process cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="80" />
+		<parameter name="clusterName" value="processcluster" />
+		<parameter name="resource_tag_name" value="infra" />
+		<parameter name="can_input" value="1" />
+		<parameter name="can_output" value="1" />
+		<parameter name="can_process" value="1" />
+		<parameter name="http_streaming_port" value="7777" />
+		<parameter name="auth_mode" value="zen" />
+		<parameter name="allow_unmanaged_inputs" value="1" />
+		<parameter name="allow_unmanaged_outputs" value="1" />
+		<parameter name="dns_prefix" value="processcluster" />
+		<parameter name="is_auto_scaling" value="true" />
+		<parameter name="activation_key" value="demo-c689-6565-9b93" />
+		<parameter name="bx_version" value="12.1.30924" />
+		<parameter name="aws_account_name" value="zixi-main" />
+		<parameter name="region" value="us-east-2" />
+		<parameter name="key_pair" value="ohio-zen-staging" /> <!-- the name of predefined key pair on AWS -->
+		<parameter name="security_group" value="default" /> <!-- the name of predefined security group on AWS -->
+		<parameter name="eips" value="eipalloc-08fe264b85196aa9f" /> <!-- the location of predefined elastic IP on AWS -->
+		<parameter name="min_size" value="1" />
+		<parameter name="max_size" value="1" />
+		<parameter name="api_user" value="admin" />
+		<parameter name="api_password" value="1234" />
+		<parameter name="vpc_name" value="vpc-5e35dc37 (172.31.0.0/16)" />
+		<parameter name="vpc_subnet_name" value="subnet-1ec6e854 (172.31.32.0/20)" />
+		<parameter name="testid" value="8876" />  
+		<classes>
+		    <class name="com.zixi.zen.test.ZenAddClusterTest"/>
+		</classes>
+	</test> 
 <test name="ZEN - Add transcoded channel">
 		<parameter name="zenUser" value="admin@zixi.com" />
 		<parameter name="zenPass" value="mnk4DNK4" />
@@ -14,12 +232,103 @@
 	    <parameter name="delivery" value="false" />
 	    <parameter name="is_transcoding" value="true" />
 	    <parameter name="is_source_included" value="false" />
-		<parameter name="inputs" value="internal" /> <!-- Source(s) name -->
+		<parameter name="inputs" value="feeder_output_source@" /> <!-- Source(s) name -->
 		<parameter name="log_scte" value="1" />
-		<parameter name="profile_names" value="1920x1080@31280x720" /> <!-- Transcoder profiles names comma separated profiles names-->
+		<parameter name="profile_names" value="test_transcoder_profile1@test_transcoder_profile2" /> <!-- Transcoder profiles names comma separated profiles names-->
 		<parameter name="testid" value="2885" />  
 		<classes>
 		    <class name="com.zixi.zen.test.ZenAddAdaptiveChannelTest"/>
 		</classes>
 	</test> 
+	<test name="ZEN - Detete channel">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="channel_type" value="adaptive" /> 
+		<parameter name="channel_name" value="transcoded_channel" /> 
+		<parameter name="testid" value="2885" />
+		<classes>
+			<class name="com.zixi.zen.test.ZenDeleteChannelTest">
+			</class>
+		</classes>
+	</test>
+	<test name="ZEN - Detete source">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="source_name" value="feeder_output_source" /> 
+		<parameter name="testid" value="2885" />
+		<classes>
+			<class name="com.zixi.zen.test.ZenDeleteSourceTest">
+			</class>
+		</classes>
+	</test>
+	<test name="ZEN - Detete feeder">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="feeder_name" value="source_feeder" /> 
+		<parameter name="testid" value="2885" />
+		<classes>
+			<class name="com.zixi.zen.test.ZenDeleteFeederTest">
+			</class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete ingest cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="ingestcluster" />
+		<parameter name="testid" value="8958" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="deleteClusterFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete process cluster">
+		<parameter name="zenUserName" value="admin@zixi.com" />
+		<parameter name="zenUserPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" />
+		<parameter name="zenUiport" value="443" />
+		<parameter name="clusterName" value="processcluster" />
+		<parameter name="testid" value="8958" />
+		<classes>
+		   <class name="com.zixi.zen.test.ZenDeleteClusterTest">
+		    <methods>
+        		<include name="deleteClusterFromZen" />
+     		 </methods>
+     	  </class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete trans profile 1">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="profile_name" value="test_transcoder_profile1" /> 
+		<parameter name="testid" value="2885" />
+		<classes>
+			<class name="com.zixi.zen.test.ZenDeleteTransProfileTest">
+			</class>
+		</classes>
+	</test>
+	<test name="ZEN - Delete trans profile 2">
+		<parameter name="zenUser" value="admin@zixi.com" /> 
+		<parameter name="zenPass" value="mnk4DNK4" />
+		<parameter name="zenLogin_ip" value="zixi.staging.devcloud.zixi.com" /> 
+		<parameter name="zenUiPort" value="80" /> 
+		<parameter name="profile_name" value="test_transcoder_profile2" /> 
+		<parameter name="testid" value="2885" />
+		<classes>
+			<class name="com.zixi.zen.test.ZenDeleteTransProfileTest">
+			</class>
+		</classes>
+	</test>
 </suite>
