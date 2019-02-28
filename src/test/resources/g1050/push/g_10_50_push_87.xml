@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: Push streaming g1050 OTT1_1080p severity 1 maxwell table's code 87" verbose="5" data-provider-thread-count="1">
-	<listeners>
-		<listener class-name="com.zixi.reports.TestListenerLogger" />
-	</listeners>
 	<!-- Sonfigure Maxwell network emulator to use g1050 plugin 03.2011  -->
 	<test name="Configure G_1050 on lab maxwell simulator">  
 		<classes>
