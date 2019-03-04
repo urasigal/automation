@@ -6,9 +6,9 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="rtmp_nulls" value="" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
-		<parameter name="rtmp_name" west />
+		<parameter name="rtmp_name" value="west" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="mcast_ip" value="" />
 		<parameter name="mcast_force" value="" />
@@ -35,7 +35,7 @@
 		<parameter name="Host" value="10.7.0.63" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="testduration" value="120" />
 		<parameter name="testid" value="493" />  
 		<classes>
@@ -46,9 +46,9 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" west />
+		<parameter name="streamId" value="west" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="testid" value="495" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
@@ -62,9 +62,9 @@
 		<parameter name="enc_key" value="3103478f03ef8c090bf8f2ea09b684d8" />
 		<parameter name="disconnect_low_br" value="0" />
 		<parameter name="rtmp_nulls" value="" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
-		<parameter name="rtmp_name" west />
+		<parameter name="rtmp_name" value="west" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="mcast_ip" value="" />
 		<parameter name="mcast_force" value="" />
@@ -90,10 +90,10 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="port" value="5555" />
-		<parameter name="stream" west />
-		<parameter name="streamname" west />
+		<parameter name="stream" value="west" />
+		<parameter name="streamname" value="west" />
 		<parameter name="host" value="10.7.0.150" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
 		<parameter name="smoothing" value="0" />
@@ -126,7 +126,7 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="2859" />  
 		<classes>
@@ -137,9 +137,9 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" west />
+		<parameter name="streamId" value="west" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="testid" value="2861" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
@@ -153,9 +153,9 @@
 		<parameter name="enc_key" value="6de65743a033c5536c5a30fece11c160494c3fddf0c1e6bb" />
 		<parameter name="disconnect_low_br" value="0" />
 		<parameter name="rtmp_nulls" value="" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
-		<parameter name="rtmp_name" west />
+		<parameter name="rtmp_name" value="west" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="mcast_ip" value="" />
 		<parameter name="mcast_force" value="" />
@@ -181,10 +181,10 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="port" value="5555" />
-		<parameter name="stream" west />
-		<parameter name="streamname" west />
+		<parameter name="stream" value="west" />
+		<parameter name="streamname" value="west" />
 		<parameter name="host" value="10.7.0.150" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
 		<parameter name="smoothing" value="0" />
@@ -217,7 +217,7 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="2870" />  
 		<classes>
@@ -228,9 +228,9 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" west />
+		<parameter name="streamId" value="west" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="testid" value="2872" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
@@ -244,9 +244,9 @@
 		<parameter name="enc_key" value="8f052cfce08c4655f4b4dbc5319075b07ded546ded943a84f9e2c742d7217230" />
 		<parameter name="disconnect_low_br" value="0" />
 		<parameter name="rtmp_nulls" value="" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="rtmp_url" value="rtmp://10.7.0.63/live" />
-		<parameter name="rtmp_name" west />
+		<parameter name="rtmp_name" value="west" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="mcast_ip" value="" />
 		<parameter name="mcast_force" value="" />
@@ -272,10 +272,10 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="port" value="5555" />
-		<parameter name="stream" west />
-		<parameter name="streamname" west />
+		<parameter name="stream" value="west" />
+		<parameter name="streamname" value="west" />
 		<parameter name="host" value="10.7.0.150" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
 		<parameter name="smoothing" value="0" />
@@ -308,7 +308,7 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="testid" value="4031" />  
 		<classes>
@@ -319,9 +319,9 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" west />
+		<parameter name="streamId" value="west" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" west />
+		<parameter name="id" value="west" />
 		<parameter name="testid" value="4033" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
