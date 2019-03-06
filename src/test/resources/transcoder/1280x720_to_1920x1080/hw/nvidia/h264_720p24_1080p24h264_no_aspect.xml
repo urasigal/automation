@@ -17,7 +17,7 @@
 	<test name="Broadcaster - Create a file input. step1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.45" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="File" />
 		<parameter name="id" value="transcoded" />
@@ -43,7 +43,7 @@
 	<test name="Broadcaster - Stop file input stream. step2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.45" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
 		<parameter name="on" value="0" />
@@ -59,7 +59,7 @@
 	<test name="Broadcaster: add nvidia_1080p_h264. step3">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.45" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.264" />
 		<parameter name="profile_name" value="1080p" />
@@ -97,7 +97,7 @@
 	<test name="Broadcaster: transcode a stream. step4">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.45" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
 		<parameter name="id" value="h264_720p24_nvidia_to_h264_1080p24" />
@@ -131,7 +131,7 @@
 	<test name="Broadcaster - Start file input stream. step5">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.45" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="transcoded" />
 		<parameter name="on" value="1" />
@@ -147,7 +147,7 @@
 	<test name="Broadcaster - Record transcoded stream and wait. step6">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.45" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="h264_720p24_nvidia_to_h264_1080p24" />
 		<parameter name="on" value="1" />
@@ -160,7 +160,7 @@
 	<test name="Broadcaster - Test transcoder statistic. step7">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.45" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="stream_name" value="h264_720p24_nvidia_to_h264_1080p24" />
 		<parameter name="testid" value="9754" />    
@@ -169,7 +169,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove file input stream. step8">
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.45" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="transcoded" />
@@ -183,7 +183,7 @@
 	<test name="Broadcaster: delete transcoder profile. step9">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.45" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="1080p" />
 		<parameter name="testid" value="9758" />
