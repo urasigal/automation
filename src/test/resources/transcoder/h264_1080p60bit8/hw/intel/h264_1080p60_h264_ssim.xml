@@ -20,7 +20,7 @@
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="File" />
-		<parameter name="id" value="transcoded" />
+		<parameter name="id" value="origin_source" />
 		<parameter name="matrix" value="1" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="mcast_out" value="0" />
@@ -30,7 +30,7 @@
 		<parameter name="kompression" value="1" />
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
-		<parameter name="path" value="H264-1080p-60-8bit-420.ts" />
+		<parameter name="path" value="output.ts" />
 		<parameter name="testid" value="9187" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
@@ -56,13 +56,13 @@
      		 </class>
 		</classes>
 	</test> 
-	<test name="Broadcaster: add 720p original fps. step3">
+	<test name="Broadcaster: add 1080p original fps. step3">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.264" />
-		<parameter name="profile_name" value="720p" />
+		<parameter name="profile_name" value="1080p" />
 		<parameter name="enc" value="1" />
 		<parameter name="bitrate" value="3000000" />
 		<parameter name="gop" value="30" />
@@ -82,8 +82,8 @@
 		<parameter name="brightness" value="0" />
 		<parameter name="contrast" value="1" />
 		<parameter name="fps" value="0" />
-		<parameter name="width" value="1280" />
-		<parameter name="height" value="720" />
+		<parameter name="width" value="1920" />
+		<parameter name="height" value="1080" />
 		<parameter name="crf" value="23" />
 		<parameter name="tune" value="film" />
 		<parameter name="keep_ar" value="1" />
@@ -94,13 +94,13 @@
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: transcode a stream - 720p. step4">
+	<test name="Broadcaster: transcode a stream - 1080.  step4">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
-		<parameter name="id" value="trans_stream_1080p_to_720p" />
+		<parameter name="id" value="trans_stream_1080p_to_1080p" />
 		<parameter name="matrix" value="1" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="mcast_out" value="0" />
@@ -112,7 +112,7 @@
 		<parameter name="enc_key" value="" />
 		<parameter name="rec_history" value="0" />
 		<parameter name="rec_duration" value="7200" />
-		<parameter name="src" value="transcoded" />
+		<parameter name="src" value="origin_source" />
 		<parameter name="ap" value="-1" />
 		<parameter name="use_hw" value="1" />
 		<parameter name="ll" value="0" />
@@ -133,7 +133,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="transcoded" />
+		<parameter name="id" value="origin_source" />
 		<parameter name="on" value="1" />
 		<parameter name="testid" value="9195" />    
 		<classes>
@@ -144,40 +144,16 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: Record transcoded stream and wait. step6">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.62" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="trans_stream_1080p_to_720p" />
-		<parameter name="on" value="1" />
-		<parameter name="cpuFolder" value="720p" />
-		<parameter name="testid" value="9197" />    
-		<classes>
-		    <class name="com.zixi.testing.RecordStreamTest" />
-		</classes>
-	</test>
-	<test name="Broadcaster: Test transcoder statistic. step7">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.62" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="stream_name" value="trans_stream_1080p_to_720p" />
-		<parameter name="testid" value="9199" />    
-		<classes>
-		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
-		</classes>
-	 </test>
-	 
+	
 	 <test name="Broadcaster - UDP output stream src">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="5577" />
-		<parameter name="stream" value="transcoded" />
+		<parameter name="stream" value="origin_source" />
 		<parameter name="streamname" value="src_str" />
-		<parameter name="host" value="10.7.0.150" />
-		<parameter name="id" value="test" />
+		<parameter name="host" value="10.7.0.68" />
+		<parameter name="id" value="src_str" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
 		<parameter name="smoothing" value="0" />
@@ -205,10 +181,10 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="8899" />
-		<parameter name="stream" value="trans_stream_1080p_to_720p" />
+		<parameter name="stream" value="trans_stream_1080p_to_1080p" />
 		<parameter name="streamname" value="trns_str" />
-		<parameter name="host" value="10.7.0.150" />
-		<parameter name="id" value="test" />
+		<parameter name="host" value="10.7.0.68" />
+		<parameter name="id" value="trns_str" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
 		<parameter name="smoothing" value="0" />
@@ -236,6 +212,8 @@
 		<parameter name="sourceStreamUdpPort" value="5577" />  <!-- UDP port - tells to where the source steam is streamed -->
 		<parameter name="testedStreamUdpPort" value="8899" /> <!-- UDP port - tells to where the tested steam is streamed -->
 		<parameter name="fileRecordInterval" value="40000" /> 		<!-- The time interval in seconds - tells how long to write the files -->
+		<parameter name="cropHight" value="1040" /> 		<!-- The time interval in seconds - tells how long to write the files -->
+		<parameter name="cropWidth" value="1888" /> 		<!-- The time interval in seconds - tells how long to write the files -->
 		<parameter name="testid" value="9199" />    
 		<classes>
 		    <class name="com.zixi.testing.SSIMVideoAssessmentTest" />
@@ -263,23 +241,13 @@
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>		
-	 <test name="Broadcaster: transcoder SSIM test. step8">	
-		<parameter name="sourceStreamUdpPort" value="5577" /> 
-		<parameter name="testedStreamUdpPort" value="8899" /> 
-		<parameter name="fileRecordInterval" value="40000" /> 
-		<parameter name="testid" value="9199" />    
-		<classes>
-		    <class name="com.zixi.testing.SSIMVideoAssessmentTest" />
-		</classes>
-	</test>
-	
 	<test name="Broadcaster: Remove file input stream. step9">
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="transcoded" />
+		<parameter name="streamId" value="origin_source" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="transcoded" />
+		<parameter name="id" value="origin_source" />
 		<parameter name="testid" value="9201" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
@@ -290,7 +258,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="profile_name" value="720p" />
+		<parameter name="profile_name" value="1080p" />
 		<parameter name="testid" value="1382" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>

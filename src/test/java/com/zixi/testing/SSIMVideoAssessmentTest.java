@@ -23,15 +23,15 @@ public class SSIMVideoAssessmentTest  extends BaseTestZixiMainComponents {
 		buildTestParametersString(new String[] {"sourceStreamUdpPort", "testedStreamUdpPort", "fileRecordInterval", "cropHight",  "cropWidth", "testid"}, 
 		new String[] {sourceStreamUdpPort, testedStreamUdpPort, fileRecordInterval,  cropHight,  cropWidth, testid}); 
 		
-		testDriver = new SSIMVideoAssessmentDriver();
+		//testDriver = new SSIMVideoAssessmentDriver();
 		double result =  ( (SSIMVideoAssessmentDriver) testDriver ) .
 		ssim_evaluation( Integer.parseInt( sourceStreamUdpPort ), Integer.parseInt( testedStreamUdpPort ), Integer.parseInt( fileRecordInterval ), Integer.parseInt(  cropHight), Integer.parseInt( cropWidth ));
 		System.out.println("Reslult is >>>> " + result);
 		Assert.assertTrue(result >= 0.9);
 	}
 	
-	public static void main(String[] args) throws Exception {
-		SSIMVideoAssessmentTest sSIMVideoAssessmentTest = new SSIMVideoAssessmentTest();
-		sSIMVideoAssessmentTest.broadcasterSingleInputStreamstatisticAnilyzer( "5577", "8899", "40000", "1070", "1900",  "555");
-	}
+//	public static void main(String[] args) throws Exception {
+//		SSIMVideoAssessmentTest sSIMVideoAssessmentTest = new SSIMVideoAssessmentTest();
+//		sSIMVideoAssessmentTest.broadcasterSingleInputStreamstatisticAnilyzer( "5577", "8899", "40000", "1040", "1888",  "555");
+//	}
 }
