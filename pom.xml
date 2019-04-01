@@ -109,57 +109,7 @@
 					    <suiteXmlFile>src/test/resources/setup/system_setup.xml</suiteXmlFile>
 					    <suiteXmlFile>src/test/resources/testlinker.xml</suiteXmlFile>
 					    
-					    <suiteXmlFile>src/test/resources/ott/hls_push_out.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/ott/hls_push_ott_splitted.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/ott/hls_push_out_ssl.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_adaptive.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/ott/hls_pull_multi_bitrate_non_adaptive.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/ott/hls_push_audio_validator.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/ott/hls_stream_multiple_udp_sources.xml</suiteXmlFile>
-						
-						
-					    <suiteXmlFile>src/test/resources/vod.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/zixiadaptive.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/maxwell/zixi_adaptive_up_case.xml</suiteXmlFile>
-					    <suiteXmlFile>src/test/resources/maxwell/zizix_adaptive_simple_maxwell_simulator.xml</suiteXmlFile>
-					    
-						<suiteXmlFile>src/test/resources/broadcasterhlstoffmpeg.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/broadcasterflvtoffmpeg.xml</suiteXmlFile>
-					 
-						<suiteXmlFile>src/test/resources/pull/ffmpeg_pull_input.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/pull/record_pull_input_stream.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/push/ffmpegpush.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/ffmpegfullpath.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/encryption/ffmpeg_full_path_encrypt.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/encryption/ffmpeg_full_encryption_with_fec.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/udp/broadcaster_udp_encryption_reciver_decryption.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/encryption/ffmpeg_semi_path_encrypt.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/feeder/feederredundency.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/feeder/feeder_to_broadcaser_remote_rtmp_output.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/feeder/feeder_http_input.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/redundancy/broadcaster_alternative_host_delete_scn.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/redundancy/broadcaster_alternative_host_stop_scn.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/redundancy/receiverFallback.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/udp/broadcaster_udp_multicast.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/failover/broadcaster_push_input_failover.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/failover/broadcaster_push_udp_failover.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/failover/broadcaster_udp_input_failover.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/failover/broadcaster_norm_on_off_failover.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/failover/feeder_udp_input_failover.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/failover/feeder_udp_failover_to_bx.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/failover/feeder_udp_failover_switch.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/failover/broadcaster_impaired_filover_output.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/failover/broadcaster_udp_primary_backup.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/failover/broadcaster_udp_primary_backup_primary.xml</suiteXmlFile>
-						
-						<suiteXmlFile>src/test/resources/tcp/http_pull.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/tcp/tcp_push.xml</suiteXmlFile>
+					    <suiteXmlFile>src/test/resources/transcoder/h264_1080p60bit8/hw/intel/h264_1080p60_h264_ssim.xml</suiteXmlFile>
 						
 					</suiteXmlFiles>
 					<properties>
