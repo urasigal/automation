@@ -12,7 +12,7 @@ public class AddAudioProfileTest extends BaseTestZixiMainComponents{
 	public void testInit() {
 		testDriver = new AddAudioProfileDriver();
 	}
-
+   // http://10.7.0.47:4444/zixi/add_aac_profile.json?profile_name=audio_profile_name&enc=1&bitrate=6000&profile=0 
 	@Parameters({  "userName", "userPass",  "login_ip", "uiport", "profile_name", "enc", "bitrate", "profile",
 	"testid"})
 	@Test
