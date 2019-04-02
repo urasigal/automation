@@ -207,13 +207,12 @@
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
 	</test>
-	<!-- Tests SSIM evaluation between two streams -->
-	<test name="Broadcaster: transcoder SSIM test. step8">	
-		<parameter name="sourceStreamUdpPort" value="5577" />  <!-- UDP port - tells to where the source steam is streamed -->
-		<parameter name="testedStreamUdpPort" value="8899" /> <!-- UDP port - tells to where the tested steam is streamed -->
-		<parameter name="fileRecordInterval" value="40000" /> 		<!-- The time interval in seconds - tells how long to write the files -->
-		<parameter name="cropHight" value="1040" /> 		<!-- The time interval in seconds - tells how long to write the files -->
-		<parameter name="cropWidth" value="1888" /> 		<!-- The time interval in seconds - tells how long to write the files -->
+	<test name="Broadcaster: transcoder SSIM test  step8">	
+		<parameter name="sourceStreamUdpPort" value="5577" />  
+		<parameter name="testedStreamUdpPort" value="8899" /> 
+		<parameter name="fileRecordInterval" value="40000" /> 		
+		<parameter name="cropHight" value="1040" /> 		
+		<parameter name="cropWidth" value="1888" /> 
 		<parameter name="testid" value="534" />    
 		<classes>
 		    <class name="com.zixi.testing.SSIMVideoAssessmentTest" />
