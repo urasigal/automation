@@ -4,7 +4,7 @@
 	<test name="Broadcaster - Create file input" > 
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.150" />
+		<parameter name="login_ip" value="10.7.0.68" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="File" />
 		<parameter name="id" value="test" />
@@ -33,7 +33,7 @@
 		<parameter name="userPass_bx1" value="1234" />
 		<parameter name="userPass_bx2" value="1234" />
 		<parameter name="login_ip_bx1" value="10.7.0.62" />
-		<parameter name="login_ip_bx2" value="10.7.0.150" />
+		<parameter name="login_ip_bx2" value="10.7.0.68" />
 		<parameter name="latency_bx1" value="-1" />
 		<parameter name="time_shift" value="0" />
 		<parameter name="force_p2p" value="0" />
@@ -77,7 +77,7 @@
 		<parameter name="userName_bx2" value="admin" />		
 		<parameter name="userPass_bx1" value="1234" />		
 		<parameter name="userPass_bx2" value="1234" />		
-		<parameter name="login_ip_bx1" value="10.7.0.150" /> <!-- Destination -->
+		<parameter name="login_ip_bx1" value="10.7.0.68" /> <!-- Destination -->
 		<parameter name="login_ip_bx2" value="10.7.0.62" /> <!-- Source -->
 		<parameter name="ts_port" value="9999" /> 			
 		<parameter name="id_bx1" value="pushtest" />  <!-- Destination prefix name -->	
