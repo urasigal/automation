@@ -29,7 +29,7 @@ public class FFMPEGImageStatisticWithMaxwellLogTest extends BaseTestZixiMainComp
 		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).testStatistic().getResultObj();
 		Assert.assertEquals(driverReslut.getResult(), "good");
 		
-		// Transfer a log file from Maxwell to 10.7.0.150
+		// Transfer a log file from Maxwell to 10.7.0.68
 		BroadcasterPushG1050ConfigurationDriver.transferLogFile();
 		
 		driverReslut.touchResutlDescription(((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(1).getResultObj().getResult());		

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- The goal of the suite is to verify the pull input streaming while jumbo are used - the packets with MTU more than 1500 bytes -->
+<suite name="Feeder - pull input jumbo packets" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster-Update settings">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="server_id" value="localhost.localdomain" />
+		<parameter name="gui_web_port" value="4444" />
+		<parameter name="uname" value="user" />
+		<parameter name="aname" value="admin" />
+		<parameter name="ft_max_quota" value="85" />
+		<parameter name="max_cpu" value="90" />
+		<parameter name="max_mem" value="90" />
+		<parameter name="max_in_bandwidth" value="0" />
+		<parameter name="max_out_bandwidth" value="0" />
+		<parameter name="admin_https" value="0" />
+		<parameter name="use_operator" value="0" />
+		<parameter name="use_user" value="1" />
+		<parameter name="use_observer" value="0" />
+		<parameter name="private_port" value="2088,,,0,0,3000" />													
+		<parameter name="public_port" value=" 2077,,,0,0,3000" />
+		<parameter name="testid" value="7707" />   
+	<classes>
+		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+			    <methods>
+		        	<include name="broadcasterUpdateSettings" />
+		     	</methods>
+		    </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - Pull input stream creation test">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="192.168.7.74" />
+		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="id" value="test" />
+		<parameter name="source" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="pull_port" value="2088" />
+		<parameter name="latency" value="6000" />
+		<parameter name="fec_latency" value="300" />
+		<parameter name="fec_overhead" value="30" />
+		<parameter name="mcast_force" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="nic" value="0.0.0.0" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="type" value="pull" />
+		<parameter name="password" value="" />
+		<parameter name="mcast_port" value="" />
+		<parameter name="complete" value="" />
+		<parameter name="mcast_ip" value="" />
+		<parameter name="fec_adaptive" value="1" />
+		<parameter name="mcast_ttl" value="" />
+		<parameter name="on" value="1" />
+		<parameter name="func" value="load_live_inputs" />
+		<parameter name="fec_force" value="" />
+		<parameter name="mcast_out" value="" />
+		<parameter name="propertiesFile" value="stream.properties" />
+		<parameter name="mtu" value="3000" />
+		<parameter name="testid" value="124" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Stream statistics test">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="10.7.0.77" />
+		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="test" />
+		<parameter name="testduration" value="120" />
+		<parameter name="testid" value="7712" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster - Remove an input stream test - default paremeters">
+		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="test" />
+		<parameter name="testid" value="7714" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	               <test name="Broadcaster-Update settings src">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="server_id" value="localhost.localdomain" />
+		<parameter name="gui_web_port" value="4444" />
+		<parameter name="uname" value="user" />
+		<parameter name="aname" value="admin" />
+		<parameter name="ft_max_quota" value="85" />
+		<parameter name="max_cpu" value="90" />
+		<parameter name="max_mem" value="90" />
+		<parameter name="max_in_bandwidth" value="0" />
+		<parameter name="max_out_bandwidth" value="0" />
+		<parameter name="admin_https" value="0" />
+		<parameter name="use_operator" value="0" />
+		<parameter name="use_user" value="1" />
+		<parameter name="use_observer" value="0" />
+		<parameter name="private_port" value="2088,,,0,0,4000" />													
+		<parameter name="public_port" value=" 2077,,,0,0,4000" />
+		<parameter name="testid" value="7707" />   
+	<classes>
+		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+			    <methods>
+		        	<include name="broadcasterUpdateSettings" />
+		     	</methods>
+		    </class>
+		</classes>
+	</test>       
+</suite>
