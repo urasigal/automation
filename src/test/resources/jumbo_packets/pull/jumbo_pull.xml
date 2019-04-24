@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- The goal of the suite is to verify the pull input streaming while jumbo are used - the packets with MTU more than 1500 bytes -->
-<suite name="Feeder - pull input jumbo packets" verbose="5" data-provider-thread-count="1">
+<!-- The goal of the suite is to verify the pull input streaming connectivity while the "Jumbo"
+		packets are used - a packets with MTU more than 1500 bytes -->
+<suite name="Broadcaster - pull input jumbo packets" verbose="5" data-provider-thread-count="1">
+<!-- Configure system wide settings  - set MTU size per port -->
 	<test name="Broadcaster-Update settings">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
