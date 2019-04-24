@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Broadcaster: Failover zixi pull input test suite" verbose="5" data-provider-thread-count="1">
-	<listeners>
-  	  <listener class-name="com.zixi.reports.SuiteListennerZapiReporter" />
-  	</listeners>
 	<test name="Broadcaster - Create a file input stream">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -184,7 +181,7 @@
 		<parameter name="port" value="5555" />
 		<parameter name="stream" value="tg" />
 		<parameter name="streamname" value="tg" />
-		<parameter name="host" value="10.7.0.150" />
+		<parameter name="host" value="10.7.0.68" />
 		<parameter name="id" value="tg" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />

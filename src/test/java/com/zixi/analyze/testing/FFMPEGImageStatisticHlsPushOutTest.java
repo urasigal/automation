@@ -20,10 +20,10 @@ public class FFMPEGImageStatisticHlsPushOutTest extends BaseTestZixiMainComponen
 	public void broadcasterSingleInputStreamStatisticAnilyzer(String mode, String testid) throws Exception {
 		
 		// Start locally HTTP server (the server is the part of the test).
-		JettyZixiRunnerThread jettyZixiRunnerThread = new JettyZixiRunnerThread();
+		JettyZixiRunnerThread jettyZixiRunnerThread = new JettyZixiRunnerThread(); 
 		jettyZixiRunnerThread.startServers("src/main/resources");
 		Thread.sleep(60_000);
-		
+		 
 		buildTestParametersString(new String[] { "mode", "testid" }, new String[] { mode, testid});
 		
 		driverReslut = ((FFMPEGImageStatisticTestDriver) testDriver).testStatistic(mode);

@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink suite: "Streaming/ Streams/ Broadcaster Pull input" -->
-<suite name="Broadcaster: Pull input suite" verbose="5" data-provider-thread-count="1">
-	<listeners>
-		<listener class-name="com.zixi.reports.CustomReporter" />
-	</listeners>
-	<test name="Broadcaster - Pull input stream creation test - default paremeters ">
+<suite name="Broadcaster: Basic pull input connectivity testing" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Pull input stream creation test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
 		<parameter name="login_ip" value="10.7.0.66" />
-		<parameter name="id" value="test" />
-		<parameter name="source" value="test" />
+		<parameter name="id" value="west" />
+		<parameter name="source" value="west" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="pull_port" value="2088" />
 		<parameter name="latency" value="6000" />
@@ -38,26 +35,26 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Stream statistics test - default paremeters">
+	<test name="Broadcaster - Stream statistics test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test" />
+		<parameter name="id" value="west" />
 		<parameter name="testduration" value="120" />
 		<parameter name="testid" value="265" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove input stream test - default paremeters">
+	<test name="Broadcaster - Remove input stream test">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="test" />
+		<parameter name="streamId" value="west" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test" />
+		<parameter name="id" value="west" />
 		<parameter name="testid" value="267" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
@@ -68,8 +65,8 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
 		<parameter name="login_ip" value="10.7.0.66" />
-		<parameter name="id" value="test2" />
-		<parameter name="source" value="test2" />
+		<parameter name="id" value="west" />
+		<parameter name="source" value="west" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="pull_port" value="" />
 		<parameter name="latency" value="0" />
@@ -102,7 +99,7 @@
 		<parameter name="Host" value="10.7.0.63" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test2" />
+		<parameter name="id" value="west" />
 		<parameter name="testduration" value="120" />
 		<parameter name="testid" value="273" />  
 		<classes>
@@ -113,9 +110,9 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="test2" />
+		<parameter name="streamId" value="west" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test2" />
+		<parameter name="id" value="west" />
 		<parameter name="testid" value="275" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
@@ -126,8 +123,8 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
 		<parameter name="login_ip" value="10.7.0.66" />
-		<parameter name="id" value="test2" />
-		<parameter name="source" value="test2" />
+		<parameter name="id" value="west" />
+		<parameter name="source" value="west" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="pull_port" value="" />
 		<parameter name="latency" value="300" />
@@ -160,7 +157,7 @@
 		<parameter name="Host" value="10.7.0.63" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test2" />
+		<parameter name="id" value="west" />
 		<parameter name="testduration" value="120" />
 		<parameter name="testid" value="280" />  
 		<classes>
@@ -171,9 +168,9 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="test2" />
+		<parameter name="streamId" value="west" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test2" />
+		<parameter name="id" value="west" />
 		<parameter name="testid" value="282" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
@@ -184,8 +181,8 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
 		<parameter name="login_ip" value="10.7.0.66" />
-		<parameter name="id" value="test2" />
-		<parameter name="source" value="test2" />
+		<parameter name="id" value="west" />
+		<parameter name="source" value="west" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="pull_port" value="" />
 		<parameter name="latency" value="600" />
@@ -218,7 +215,7 @@
 		<parameter name="Host" value="10.7.0.63" />
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test2" />
+		<parameter name="id" value="west" />
 		<parameter name="testduration" value="120" />
 		<parameter name="testid" value="289" />  
 		<classes>
@@ -229,9 +226,9 @@
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="test2" />
+		<parameter name="streamId" value="west" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test2" />
+		<parameter name="id" value="west" />
 		<parameter name="testid" value="291" /> 
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
