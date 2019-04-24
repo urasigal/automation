@@ -3,7 +3,7 @@
 <!-- The goal of the suite is to verify the pull input streaming connectivity while the "Jumbo"
 		packets are used - a packets with MTU more than 1500 bytes -->
 <suite name="Broadcaster - pull input jumbo packets" verbose="5" data-provider-thread-count="1">
-<!-- Configure system wide settings  - set MTU size per port -->
+	<!-- Configure system wide settings  - set MTU size per port -->
 	<test name="Broadcaster-Update settings">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -91,33 +91,34 @@
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
-	               <test name="Broadcaster-Update settings src">
-		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="server_id" value="localhost.localdomain" />
-		<parameter name="gui_web_port" value="4444" />
-		<parameter name="uname" value="user" />
-		<parameter name="aname" value="admin" />
-		<parameter name="ft_max_quota" value="85" />
-		<parameter name="max_cpu" value="90" />
-		<parameter name="max_mem" value="90" />
-		<parameter name="max_in_bandwidth" value="0" />
-		<parameter name="max_out_bandwidth" value="0" />
-		<parameter name="admin_https" value="0" />
-		<parameter name="use_operator" value="0" />
-		<parameter name="use_user" value="1" />
-		<parameter name="use_observer" value="0" />
-		<parameter name="private_port" value="2088,,,0,0,4000" />													
-		<parameter name="public_port" value=" 2077,,,0,0,4000" />
-		<parameter name="testid" value="7707" />   
-	<classes>
-		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
-			    <methods>
-		        	<include name="broadcasterUpdateSettings" />
-		     	</methods>
-		    </class>
-		</classes>
+		</test>
+	    <test name="Broadcaster-Update settings src">
+			<parameter name="userName" value="admin" />
+			<parameter name="userPass" value="1234" />
+			<parameter name="login_ip" value="10.7.0.74" />
+			<parameter name="uiport" value="4444" />
+			<parameter name="server_id" value="localhost.localdomain" />
+			<parameter name="gui_web_port" value="4444" />
+			<parameter name="uname" value="user" />
+			<parameter name="aname" value="admin" />
+			<parameter name="ft_max_quota" value="85" />
+			<parameter name="max_cpu" value="90" />
+			<parameter name="max_mem" value="90" />
+			<parameter name="max_in_bandwidth" value="0" />
+			<parameter name="max_out_bandwidth" value="0" />
+			<parameter name="admin_https" value="0" />
+			<parameter name="use_operator" value="0" />
+			<parameter name="use_user" value="1" />
+			<parameter name="use_observer" value="0" />
+			<parameter name="private_port" value="2088,,,0,0,4000" />													
+			<parameter name="public_port" value=" 2077,,,0,0,4000" />
+			<parameter name="testid" value="7707" />   
+		<classes>
+			    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
+				    <methods>
+			        	<include name="broadcasterUpdateSettings" />
+			     	</methods>
+			    </class>
+			</classes>
 	</test>       
 </suite>
