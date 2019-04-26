@@ -60,6 +60,7 @@ The streams are created in the same time  -->
 		<parameter name="dec_type" value="" />
 		<parameter name="dec_key" value="" />
 		<parameter name="number_of_streams" value="70" />
+		<parameter name="mtu" value="3000" />
 		<parameter name="testid" value="7900" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipePullCreationTest"/>
