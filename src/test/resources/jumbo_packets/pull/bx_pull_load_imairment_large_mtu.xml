@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster: Password Pull input suite  with password" verbose="5" data-provider-thread-count="1">
-<test name="Broadcaster - Pull input stream creation test with password FFMPEG">
+<!-- Create multiple pull input streams from BX to BX.
+The streams are created in the same time  -->
+<suite name="Broadcaster: Pull load suite with random stream FFMPEG analyser " verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Create a file input steam">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="test" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="iphone.ts" />
+		<parameter name="testid" value="8003" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
+	<test name="Broadcaster - multiple pull input stream creation test">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="Host" value="192.168.7.74" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="id" value="test" />
 		<parameter name="source" value="test" />
 		<parameter name="uiport" value="4444" />
@@ -18,7 +46,7 @@
 		<parameter name="nic" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="type" value="pull" />
-		<parameter name="password" value="1qaz!QAZ" />
+		<parameter name="password" value="" />
 		<parameter name="mcast_port" value="" />
 		<parameter name="complete" value="" />
 		<parameter name="mcast_ip" value="" />
@@ -29,17 +57,21 @@
 		<parameter name="fec_force" value="" />
 		<parameter name="mcast_out" value="" />
 		<parameter name="propertiesFile" value="stream.properties" />
-		<parameter name="testid" value="7620" />  
+		<parameter name="dec_type" value="" />
+		<parameter name="dec_key" value="" />
+		<parameter name="number_of_streams" value="250" />
+		<parameter name="mtu" value="3000" />
+		<parameter name="testid" value="7900" />  
 		<classes>
-		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
+		    <class name="com.zixi.load.testing.BroadcasterMultipePullCreationTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="port" value="5555" />
-		<parameter name="stream" value="test" />
+		<parameter name="stream" value="" />
 		<parameter name="streamname" value="test" />
 		<parameter name="host" value="10.7.0.68" />
 		<parameter name="id" value="test" />
@@ -60,49 +92,51 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="7622" />  
+		<parameter name="testid" value="7902" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
-	</test> 
-	<test name="Broadcaster - Stream statistics test test with password FFMPEG">
+	</test>
+	<test name="Broadcaster - test random outputs with FFMPG analyzer">
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
-		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test" />
-		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="7624" />  
+		<parameter name="name" value="test" />
+		<parameter name="testid" value="7904" />  
 		<classes>
-		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
+		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
 	</test>
-	<test name="FFMPEG test test with password">
-		<parameter name="testid" value="7626" />  
-		<classes>
-		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
-		</classes>
-	</test>
-	<test name="Broadcaster - Remove udp output stream">
-		<parameter name="login_ip" value="10.7.0.66" />
+	<test name="Broadcaster - Remove udp output stream default parameters Pull input FFMPEG analyser">
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7628" />  
+		<parameter name="testid" value="7906" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
+	</test>	
+	<test name="Broadcaster - delete all input streams">
+		<parameter name="login_ip" value="10.7.0.75" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="testid" value="7908" />  
+		<classes>
+		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		</classes>
 	</test>
-	<test name="Broadcaster - Remove input stream">
-		<parameter name="login_ip" value="10.7.0.66" />
+	<test name="Broadcaster - Remove file input">
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="7630" />  
+		<parameter name="testid" value="8005" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
