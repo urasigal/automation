@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Transcoder Intel HW H264-1080p-60-8bit-420 including SSIM testing" verbose="5" data-provider-thread-count="1">
+<suite name="Transcoder Intel HW H264-1080p-60-8bit-420 SSIM testing" verbose="5" data-provider-thread-count="1">
 	<listeners>
   	  <listener class-name="com.zixi.reports.SuiteListenerZapiReporterAdapter" >
   	  	<parameter name="projectId" value="10003" /> <!-- BROAD-580 -->
