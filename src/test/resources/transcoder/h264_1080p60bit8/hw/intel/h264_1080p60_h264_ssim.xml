@@ -14,7 +14,7 @@
 	  	<parameter name="zapiUser" value="uri@zixi.com" />
   	  </listener>
   	</listeners>
-	<test name="Broadcaster - Create a file input stream step1">
+	<test name="Broadcaster - Create a file input stream. step1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -30,7 +30,7 @@
 		<parameter name="kompression" value="1" />
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
-		<parameter name="path" value="output.ts" />
+		<parameter name="path" value="H264-1080p-60-8bit-420_marked.ts" /> <!-- Special marked stream source -->
 		<parameter name="testid" value="9187" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
@@ -40,7 +40,7 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster - Stop a file input stream step2">
+	<test name="Broadcaster - Stop a file input stream. step2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.62" />
@@ -144,6 +144,7 @@
      		 </class>
 		</classes>
 	</test>
+	<!-- Stream the source (reference) stream to SSIM estimation server -->
 	 <test name="Broadcaster - UDP output stream src">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -174,7 +175,8 @@
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
-	</test> 
+	</test>
+	<!-- Stream the transcoded stream to SSIM estimation server --> 
 	<test name="Broadcaster - UDP output stream trans">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
