@@ -19,7 +19,6 @@ public class SSIMVideoAssessmentTest  extends BaseTestZixiMainComponents {
 	@Parameters({"sourceStreamUdpPort", 
 						"testedStreamUdpPort", 
 						"fileRecordInterval", 
-						"fileRecordInterval",  
 						"cropHight", 
 						"cropWidth", 
 						"testid" }) 
