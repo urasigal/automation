@@ -15,10 +15,20 @@ public class SSIMVideoAssessmentTest  extends BaseTestZixiMainComponents {
 	public void testInit() { 
 		testDriver = new SSIMVideoAssessmentDriver();
 	}
-
-	@Parameters({"sourceStreamUdpPort", "testedStreamUdpPort",  "fileRecordInterval",  "cropHight",  "cropWidth", "testid" }) 
+	
+	@Parameters({"sourceStreamUdpPort", 
+						"testedStreamUdpPort", 
+						"fileRecordInterval", 
+						"cropHight", 
+						"cropWidth", 
+						"testid" }) 
 	@Test
-	public void broadcasterSingleInputStreamstatisticAnilyzer(String sourceStreamUdpPort, String testedStreamUdpPort, String fileRecordInterval, String cropHight, String cropWidth, String testid) throws Exception {
+	public void broadcasterSsimTest(String sourceStreamUdpPort, 
+														 String testedStreamUdpPort, 
+														 String fileRecordInterval, 
+														 String cropHight, 
+														 String cropWidth, 
+														 String testid) throws Exception {
 				
 		buildTestParametersString(new String[] {"sourceStreamUdpPort", "testedStreamUdpPort", "fileRecordInterval", "cropHight",  "cropWidth", "testid"}, 
 		new String[] {sourceStreamUdpPort, testedStreamUdpPort, fileRecordInterval,  cropHight,  cropWidth, testid}); 
