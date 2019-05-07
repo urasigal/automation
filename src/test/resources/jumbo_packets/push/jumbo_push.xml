@@ -22,7 +22,7 @@
 		<parameter name="use_observer" value="0" />
 		<parameter name="private_port" value="2088,,,0,0,3000" />													
 		<parameter name="public_port" value="2077,,,0,0,3000" />
-		<parameter name="testid" value="10534" />   
+		<parameter name="testid" value="10618" />   
 	<classes>
 		    <class name="com.zixi.testing.BroadcasterUpdateSettingsTest">
 			    <methods>
@@ -51,7 +51,7 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="351" />    
+		<parameter name="testid" value="10620" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
@@ -77,7 +77,7 @@
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="353" />  
+		<parameter name="testid" value="10622" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
 		</classes>
@@ -90,7 +90,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="355" />  
+		<parameter name="testid" value="10624" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -102,7 +102,7 @@
 		<parameter name="streamId" value="pushtest" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="357" />  
+		<parameter name="testid" value="10626" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -113,12 +113,12 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="359" />  
+		<parameter name="testid" value="10628" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation low latency">
+	<test name="Broadcaster - Push input stream creation - low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -138,12 +138,12 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="362" />    
+		<parameter name="testid" value="10630" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push output stream creation low latency">
+	<test name="Broadcaster - Push output stream creation - low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
@@ -164,12 +164,12 @@
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="364" />  
+		<parameter name="testid" value="10632" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
 		</classes>
 </test>
-<test name="Broadcaster - Push input stream statistics test low latency">
+<test name="Broadcaster - Push input stream statistics test - low latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -177,35 +177,35 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="366" />  
+		<parameter name="testid" value="10634" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>      
-<test name="Broadcaster - Remove Push input stream low latency">
+<test name="Broadcaster - Remove Push input stream - low latency">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="368" />  
+		<parameter name="testid" value="10636" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-<test name="Broadcaster - Remove Push output stream low latency">
+<test name="Broadcaster - Remove Push output stream - low latency">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="370" />  
+		<parameter name="testid" value="10638" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation with password">
+	<test name="Broadcaster - Push input stream creation - with password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -225,12 +225,12 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="1qaz!QAZ" />
-		<parameter name="testid" value="373" />    
+		<parameter name="testid" value="10640" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push output stream creation with password">
+	<test name="Broadcaster - Push output stream creation - with password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
@@ -251,12 +251,12 @@
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="375" />  
+		<parameter name="testid" value="10642" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
 		</classes>
 </test>
-<test name="Broadcaster - Push input stream statistics test with password">
+<test name="Broadcaster - Push input stream statistics test - with password">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -264,35 +264,35 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="377" />  
+		<parameter name="testid" value="10644" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>      
-<test name="Broadcaster - Remove Push input stream with password">
+<test name="Broadcaster - Remove Push input stream  - with password">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="379" />  
+		<parameter name="testid" value="10646" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-<test name="Broadcaster - Remove Push output stream with password">
+<test name="Broadcaster - Remove Push output stream - with password">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="381" />  
+		<parameter name="testid" value="10648" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation force FEC">
+	<test name="Broadcaster - Push input stream creation - force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -312,12 +312,12 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="384" />    
+		<parameter name="testid" value="10650" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push output stream creation force FEC">
+	<test name="Broadcaster - Push output stream creation - force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
@@ -338,12 +338,12 @@
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="386" />  
+		<parameter name="testid" value="10652" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
 		</classes>
 </test>
-<test name="Broadcaster - Push input stream statistics test force FEC">
+<test name="Broadcaster - Push input stream statistics test - force FEC">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -351,35 +351,35 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="388" />  
+		<parameter name="testid" value="10654" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>      
-<test name="Broadcaster - Remove Push input stream force FEC">
+<test name="Broadcaster - Remove Push input stream - force FEC">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="390" />  
+		<parameter name="testid" value="10656" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-<test name="Broadcaster - Remove Push output stream force FEC">
+<test name="Broadcaster - Remove Push output stream - force FEC">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="392" />  
+		<parameter name="testid" value="10658" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation FEC block 50">
+	<test name="Broadcaster - Push input stream creation - FEC block 50">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -399,12 +399,12 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="395" />    
+		<parameter name="testid" value="10660" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push output stream creation FEC block 50">
+	<test name="Broadcaster - Push output stream creation - FEC block 50">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
@@ -425,12 +425,12 @@
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="397" />  
+		<parameter name="testid" value="10662" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
 		</classes>
 </test>
-<test name="Broadcaster - Push input stream statistics test FEC block 50">
+<test name="Broadcaster - Push input stream statistics test - FEC block 50">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -438,35 +438,35 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="399" />  
+		<parameter name="testid" value="10664" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>      
-<test name="Broadcaster - Remove Push input stream FEC block 50">
+<test name="Broadcaster - Remove Push input stream - FEC block 50">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="401" />  
+		<parameter name="testid" value="10666" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-<test name="Broadcaster - Remove Push output stream FEC block 50">
+<test name="Broadcaster - Remove Push output stream - FEC block 50">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="403" />  
+		<parameter name="testid" value="10668" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push input stream creation test zero latency">
+	<test name="Broadcaster - Push input stream creation test - zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.66" />
@@ -486,12 +486,12 @@
 		<parameter name="max_outputs" value="" />
 		<parameter name="on" value="1" />
 		<parameter name="password" value="" />
-		<parameter name="testid" value="406" />    
+		<parameter name="testid" value="10670" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Push output stream creation test zero latency">
+	<test name="Broadcaster - Push output stream creation test - zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.63" />
@@ -512,12 +512,12 @@
 		<parameter name="alias" value="pushtest" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="408" />  
+		<parameter name="testid" value="10672" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterPushOutStreamCreationTest"/>
 		</classes>
 </test>
-<test name="Broadcaster - Push input stream statistics test zero latency">
+<test name="Broadcaster - Push input stream statistics test - zero latency">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="Host" value="10.7.0.63" />
@@ -525,30 +525,30 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="410" />
+		<parameter name="testid" value="10674" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>      
-<test name="Broadcaster - Remove Push input stream test zero latency">
+<test name="Broadcaster - Remove Push input stream test - zero latency">
 		<parameter name="login_ip" value="10.7.0.66" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="pushtest" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="pushtest" />
-		<parameter name="testid" value="412" />  
+		<parameter name="testid" value="10676" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
-<test name="Broadcaster - Broadcaster - Remove Push output stream test zero latency">
+<test name="Broadcaster - Remove Push output stream test - zero latency">
 		<parameter name="login_ip" value="10.7.0.63" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="pushtest" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="414" />
+		<parameter name="testid" value="10678" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
