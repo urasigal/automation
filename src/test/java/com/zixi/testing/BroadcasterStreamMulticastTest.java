@@ -40,9 +40,10 @@ public class BroadcasterStreamMulticastTest  extends BaseTestZixiMainComponents{
 		
 		String multiastIp = ((BroadcasterStreamMulticastDriver) testDriver).testIMPL(bx1_login_ip, bx1_userName, bx1_bxuserPassword, bx1_uiport, id);
 		
-		driverReslut = new BroadcasterSingleUdpInCreationDriver().testIMPL(bx2_userName, bx2_bxuserPassword, bx2_login_ip, ts_port, id, rtp_type,
+		driverReslut = new BroadcasterSingleUdpInCreationDriver().testIMPL(
+		bx2_userName, bx2_bxuserPassword, bx2_login_ip, ts_port, id, rtp_type,
 		multi_src, max_bitrate, time_shift, "", "", ts_port, nic, type, multiastIp, enc_key,
-		kompression, bx2_uiport, "", enc_type, mcast_out, "", max_outputs, "1");
+		kompression, bx2_uiport, "", enc_type, mcast_out, "", max_outputs, "1", "0");
 		
 		Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");	
 	}
