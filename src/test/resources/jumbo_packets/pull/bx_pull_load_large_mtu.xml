@@ -20,7 +20,7 @@ The streams are created in the same time  -->
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="iphone.ts" />
-		<parameter name="testid" value="8003" />    
+		<parameter name="testid" value="10574" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -61,7 +61,7 @@ The streams are created in the same time  -->
 		<parameter name="dec_key" value="" />
 		<parameter name="number_of_streams" value="250" />
 		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="7900" />  
+		<parameter name="testid" value="10576" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterMultipePullCreationTest"/>
 		</classes>
@@ -92,7 +92,7 @@ The streams are created in the same time  -->
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="7902" />  
+		<parameter name="testid" value="10578" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -103,18 +103,18 @@ The streams are created in the same time  -->
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="test" />
-		<parameter name="testid" value="7904" />  
+		<parameter name="testid" value="10580" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcasterRundomInputStreamTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - Remove udp output stream default parameters Pull input FFMPEG analyser">
+	<test name="Broadcaster - Remove udp output stream">
 		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7906" />  
+		<parameter name="testid" value="10582" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -124,7 +124,7 @@ The streams are created in the same time  -->
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7908" />  
+		<parameter name="testid" value="10584" />  
 		<classes>
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
@@ -136,7 +136,7 @@ The streams are created in the same time  -->
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="8005" />  
+		<parameter name="testid" value="10586" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
