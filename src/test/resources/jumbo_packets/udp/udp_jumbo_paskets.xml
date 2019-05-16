@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink suite: "Streaming/ Streams/ Broadcaster UDP streaming/XXX" -->
-<suite name="Broadcaster: UDP streaming suite" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: UDP streaming suite jambo packets" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - UDP input stream creation ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="ts_port" value="9999" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="0" />
@@ -59,6 +59,8 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
 		<parameter name="testid" value="296" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
@@ -157,6 +159,8 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
 		<parameter name="testid" value="307" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
@@ -255,6 +259,8 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
 		<parameter name="testid" value="318" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
@@ -353,6 +359,8 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
 		<parameter name="testid" value="329" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
@@ -397,6 +405,8 @@
 	<parameter name="remux_pcr" value="90" />
 	<parameter name="dec_type" value="" />
 	<parameter name="cols" value="10" />
+	<parameter name="max_payload" value="5000" />
+	<parameter name="mtu_time" value="1000" />
 	<parameter name="testid" value="708" />  
 	<classes>
 		<class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
@@ -499,6 +509,8 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
 		<parameter name="testid" value="342" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
