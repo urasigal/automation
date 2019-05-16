@@ -17,7 +17,7 @@
 	<test name="Broadcaster - Create a file input stream. step1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="File" />
 		<parameter name="id" value="origin_source" />
@@ -43,7 +43,7 @@
 	<test name="Broadcaster - Stop a file input stream. step2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="origin_source" />
 		<parameter name="on" value="0" />
@@ -59,7 +59,7 @@
 	<test name="Broadcaster: add 1080p original fps. step3">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="mode" value="h.264" />
 		<parameter name="profile_name" value="1080p" />
@@ -97,7 +97,7 @@
 	<test name="Broadcaster: transcode a stream - 1080.  step4">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
 		<parameter name="id" value="trans_stream_1080p_to_1080p" />
@@ -131,7 +131,7 @@
 	<test name="Broadcaster: Start file input stream. step5">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="origin_source" />
 		<parameter name="on" value="1" />
@@ -148,7 +148,7 @@
 	 <test name="Broadcaster - UDP output stream src. step6">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="5577" />
 		<parameter name="stream" value="origin_source" />
 		<parameter name="streamname" value="src_str" />
@@ -180,7 +180,7 @@
 	<test name="Broadcaster - UDP output stream trans. step7">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="port" value="8899" />
 		<parameter name="stream" value="trans_stream_1080p_to_1080p" />
 		<parameter name="streamname" value="trns_str" />
@@ -221,7 +221,7 @@
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream src. step9">
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="src_str" />
@@ -232,7 +232,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream trns. step10">
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="trns_str" />
@@ -243,7 +243,7 @@
 		</classes>
 	</test>		
 	<test name="Broadcaster: Remove file input stream. step11">
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="origin_source" />
@@ -257,7 +257,7 @@
 	<test name="Broadcaster: delete transcoder profile. step12">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.47" />
+		<parameter name="login_ip" value="10.7.0.62" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="profile_name" value="1080p" />
 		<parameter name="testid" value="10571" />
