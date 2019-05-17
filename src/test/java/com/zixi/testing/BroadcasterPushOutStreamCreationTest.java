@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
@@ -18,11 +19,11 @@ public class BroadcasterPushOutStreamCreationTest extends BaseTestZixiMainCompon
 	}
 
 	@Parameters({ "userName", "userPass", "login_ip", "host", "latency", "fec_force", "session", "fec_adaptive", "nic", "fec_block", "type",
-	"snames", "fec_aware", "fec_overhead", "stream", "port", "uiport", "alias", "id" ,"testid"})
+	"snames", "fec_aware", "fec_overhead", "stream", "port", "uiport", "alias", "id", "mtu", "testid"})
 	@Test
 	public void broadcasterPullInCreation(String userName, String userPass, String login_ip, String host, String latency, String fec_force,
 	String session, String fec_adaptive, String nic, String fec_block, String type, String snames, String fec_aware, String fec_overhead,
-	String stream, String port, String uiport, String alias, String id, String testid) throws Exception {
+	String stream, String port, String uiport, String alias, String id, @Optional("0") String mtu, String testid) throws Exception {
 		
 		productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
@@ -30,13 +31,14 @@ public class BroadcasterPushOutStreamCreationTest extends BaseTestZixiMainCompon
 		memOnStart = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "host", "latency",
-		"fec_force", "session", "fec_adaptive", "nic", "fec_block", "type", "snames", "fec_aware", "fec_overhead", "stream", "port", "uiport", "alias", "id" ,"testid"}, 
+		"fec_force", "session", "fec_adaptive", "nic", "fec_block", "type", "snames", "fec_aware", "fec_overhead", "stream", "port", "uiport", "alias", "id", "mtu", "testid"}, 
 		
 		new String[] { userName, userPass, login_ip, host, latency, fec_force, session, fec_adaptive, nic, fec_block, type,
-		snames, fec_aware, fec_overhead, stream, port, uiport, alias, id, testid });
+		snames, fec_aware, fec_overhead, stream, port, uiport, alias, id, mtu, testid });
 		
-		driverReslut = ((BroadcasterPushOutStreamCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, host, latency, fec_force,
-		session, fec_adaptive, nic, fec_block, type, snames, fec_aware, fec_overhead, stream, port, uiport, alias, id);		
+		driverReslut = ((BroadcasterPushOutStreamCreationDriver) testDriver).testIMPLLargeMtu(userName, userPass, login_ip, host, latency, fec_force,
+		session, fec_adaptive, nic, fec_block, type, snames, fec_aware, fec_overhead, stream, port, uiport, alias, id, mtu);		
+		
 		memOnEnd = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "ps v `pidof zixi_broadcaster` | tail -n 1 |  awk '{print $8}'");
 		Timestamp 	timestamp = new Timestamp(System.currentTimeMillis());
 		long 		timeStemp = timestamp.getTime() ;
