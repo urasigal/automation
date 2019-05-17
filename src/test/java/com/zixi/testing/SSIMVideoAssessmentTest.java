@@ -15,12 +15,12 @@ public class SSIMVideoAssessmentTest  extends BaseTestZixiMainComponents {
 	public void testInit() { 
 		testDriver = new SSIMVideoAssessmentDriver();
 	}
-	
-	@Parameters({"sourceStreamUdpPort", 
-						"testedStreamUdpPort", 
-						"fileRecordInterval", 
-						"cropHight", 
-						"cropWidth", 
+
+	@Parameters({"sourceStreamUdpPort",  // UDP port for reference stream.
+						"testedStreamUdpPort", 	  // UDP port for reference stream.
+						"fileRecordInterval",          // Time to record a streams.
+						"cropHight", 					// Image frame age.
+						"cropWidth", 					// Image frame age.
 						"testid" }) 
 	@Test
 	public void broadcasterSsimTest(String sourceStreamUdpPort, 
@@ -33,9 +33,9 @@ public class SSIMVideoAssessmentTest  extends BaseTestZixiMainComponents {
 		buildTestParametersString(new String[] {"sourceStreamUdpPort", "testedStreamUdpPort", "fileRecordInterval", "cropHight",  "cropWidth", "testid"}, 
 		new String[] {sourceStreamUdpPort, testedStreamUdpPort, fileRecordInterval,  cropHight,  cropWidth, testid}); 
 		
-		//testDriver = new SSIMVideoAssessmentDriver();
 		double result =  ( (SSIMVideoAssessmentDriver) testDriver ) .
-		ssim_evaluation( Integer.parseInt( sourceStreamUdpPort ), Integer.parseInt( testedStreamUdpPort ), Integer.parseInt( fileRecordInterval ), Integer.parseInt(  cropHight), Integer.parseInt( cropWidth ));
+		ssim_evaluation( Integer.parseInt( sourceStreamUdpPort ), Integer.parseInt( testedStreamUdpPort ),
+		Integer.parseInt( fileRecordInterval ), Integer.parseInt(  cropHight), Integer.parseInt( cropWidth ));
 		System.out.println("Reslult is >>>> " + result);
 		Assert.assertTrue(result >= 0.9);
 	}
