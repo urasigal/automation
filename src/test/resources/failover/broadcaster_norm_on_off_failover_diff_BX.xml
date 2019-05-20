@@ -383,14 +383,14 @@
 		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - delete all input streams  source bx">
-		<parameter name="login_ip" value="10.7.0.63" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="8722" />  
+	<test name="Broadcaster - delete all outputs stream source" >
+			<parameter name="login_ip" value="10.7.0.63" />
+			<parameter name="userName" value="admin" />
+			<parameter name="userPassword" value="1234" />
+			<parameter name="uiport" value="4444" /> 
+			<parameter name="testid" value="8724" /> 
 		<classes>
-		    <class name="com.zixi.load.testing.BroadcaserAllInputStreamDeletorTest"/>
+		    <class name="com.zixi.load.testing.BroadcaserAllOututStreamDeletorTest"/>
 		</classes>
 	</test>
 </suite>
