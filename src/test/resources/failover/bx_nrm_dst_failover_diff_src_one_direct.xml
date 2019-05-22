@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Broadcaster: Failover zixi pull input test suite" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: Failover zixi pull input test suite two links" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - UDP input stream creation bx1">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -65,7 +65,7 @@
 	<test name="Broadcaster - UDP input stream creation bx2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="ts_port" value="9999" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="0" />
@@ -99,7 +99,7 @@
 		<parameter name="port" value="9999" />
 		<parameter name="stream" value="west" />
 		<parameter name="streamname" value="out2" />
-		<parameter name="host" value="10.7.0.77" />
+		<parameter name="host" value="10.7.0.75" />
 		<parameter name="id" value="out2" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
@@ -157,11 +157,10 @@
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
 	</test>
-	
 	<test name="Broadcaster - Pull input stream creation test bx2">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.77" />
+		<parameter name="Host" value="192.168.7.75" />
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="id" value="in2" />
 		<parameter name="source" value="test" />
@@ -354,7 +353,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - delete all outputs stream bx2" >
-			<parameter name="login_ip" value="10.7.0.77" />
+			<parameter name="login_ip" value="10.7.0.75" />
 			<parameter name="userName" value="admin" />
 			<parameter name="userPassword" value="1234" />
 			<parameter name="uiport" value="4444" /> 
@@ -374,7 +373,7 @@
 		</classes>
 	</test>
 	<test name="Broadcaster - delete all input streams  bx2">
-		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="uiport" value="4444" />
