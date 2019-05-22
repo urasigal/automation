@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- TestLink suite: "Streaming/ Streams/ Broadcaster UDP streaming/XXX" -->
-<suite name="Broadcaster: UDP streaming suite" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: UDP streaming suite jambo packets" verbose="5" data-provider-thread-count="1">
+<test name="Broadcaster - Create a file input stream">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="test" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="10M.ts" />
+		<parameter name="testid" value="10681" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
 	<test name="Broadcaster - UDP input stream creation ">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="ts_port" value="9999" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="0" />
@@ -27,8 +53,8 @@
 		<parameter name="complete" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="on" value="1" />
-		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="294" />  
+		<parameter name="mtu" value="5000" />
+		<parameter name="testid" value="10683" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
@@ -36,11 +62,11 @@
 	<test name="Broadcaster - UDP output stream creation">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="port" value="9999" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="192.168.7.75" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
@@ -49,7 +75,7 @@
 		<parameter name="remux_bitrate" value="0" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.66" />
+		<parameter name="dec_key" value="" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -59,7 +85,9 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="296" />  
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
+		<parameter name="testid" value="10685" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -67,35 +95,35 @@
 	<test name="Broadcaster - UDP input stream statistics test">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="298" />  
+		<parameter name="testid" value="10687" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove udp input stream">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="300" />  
+		<parameter name="testid" value="10689" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="302" />  
+		<parameter name="testid" value="10691" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -103,7 +131,7 @@
 	<test name="Broadcaster - UDP input stream creation test smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="ts_port" value="14000" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="0" />
@@ -125,8 +153,8 @@
 		<parameter name="complete" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="on" value="1" />
-		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="305" />  
+		<parameter name="mtu" value="5000" />
+		<parameter name="testid" value="10693" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
@@ -134,11 +162,11 @@
 	<test name="Broadcaster - UDP output stream creation test smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="port" value="14000" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="192.168.7.75" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
@@ -147,7 +175,7 @@
 		<parameter name="remux_bitrate" value="0" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.66" />
+		<parameter name="dec_key" value="10.7.0.75" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -157,7 +185,9 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="307" />  
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
+		<parameter name="testid" value="10695" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -165,35 +195,35 @@
 	<test name="Broadcaster - UDP input stream statistics test smoothing 1000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="309" />  
+		<parameter name="testid" value="10697" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove udp input stream test smoothing 1000">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="311" />  
+		<parameter name="testid" value="10699" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream test smoothing 1000">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="313" />  
+		<parameter name="testid" value="10701" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -201,7 +231,7 @@
 	<test name="Broadcaster - UDP input stream creation test remux to 8000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="ts_port" value="14000" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="0" />
@@ -223,8 +253,8 @@
 		<parameter name="complete" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="on" value="1" />
-		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="316" />  
+		<parameter name="mtu" value="5000" />
+		<parameter name="testid" value="10703" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
@@ -232,11 +262,11 @@
 	<test name="Broadcaster - UDP output stream creation test remux to 8000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="port" value="14000" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="192.168.7.75" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="0" />
 		<parameter name="fec" value="0" />
@@ -245,7 +275,7 @@
 		<parameter name="remux_bitrate" value="8000000" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.66" />
+		<parameter name="dec_key" value="10.7.0.75" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -255,7 +285,9 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="318" />  
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
+		<parameter name="testid" value="10705" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -263,35 +295,35 @@
 	<test name="Broadcaster - UDP input stream statistics test remux to 8000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="320" />  
+		<parameter name="testid" value="10707" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove udp input stream test remux to 8000">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="322" />  
+		<parameter name="testid" value="10709" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream test remux to 8000">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="324" />  
+		<parameter name="testid" value="10711" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -299,7 +331,7 @@
 	<test name="Broadcaster - UDP input stream creation test PRO MPEG FEC 2D">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="ts_port" value="14000" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="2" />
@@ -321,8 +353,8 @@
 		<parameter name="complete" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="on" value="1" />
-		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="327" />  
+		<parameter name="mtu" value="5000" />
+		<parameter name="testid" value="10713" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
@@ -330,11 +362,11 @@
 	<test name="Broadcaster - UDP output stream creation test pro MPEG FEC 2D">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="port" value="14000" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="192.168.7.75" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="1" />
 		<parameter name="fec" value="2" />
@@ -343,7 +375,7 @@
 		<parameter name="remux_bitrate" value="" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
-		<parameter name="dec_key" value="10.7.0.66" />
+		<parameter name="dec_key" value="10.7.0.75" />
 		<parameter name="type" value="TS" />
 		<parameter name="rows" value="10" />
 		<parameter name="remux_buff" value="1000" />
@@ -353,7 +385,9 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="329" />  
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
+		<parameter name="testid" value="10715" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -361,12 +395,12 @@
 	<test name="Broadcaster - UDP input stream statistics test pro MPEG FEC 2D">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="331" />  
+		<parameter name="testid" value="10717" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
@@ -374,7 +408,7 @@
 <test name="Broadcaster - UDP output stream creation  pro MPEG FEC 2D">
 	<parameter name="userName" value="admin" />
 	<parameter name="userPass" value="1234" />
-	<parameter name="login_ip" value="10.7.0.66" />
+	<parameter name="login_ip" value="10.7.0.75" />
 	<parameter name="port" value="5555" />
 	<parameter name="stream" value="test" />
 	<parameter name="streamname" value="test" />
@@ -397,47 +431,49 @@
 	<parameter name="remux_pcr" value="90" />
 	<parameter name="dec_type" value="" />
 	<parameter name="cols" value="10" />
-	<parameter name="testid" value="708" />  
+	<parameter name="max_payload" value="5000" />
+	<parameter name="mtu_time" value="1000" />
+	<parameter name="testid" value="10719" />  
 	<classes>
 		<class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 	</classes>
 </test>
 <test name="FFMPEG test default parameters PRO MPEG FEC 2D">
-		<parameter name="testid" value="710" />  
+		<parameter name="testid" value="10721" />  
 		<classes>
 		    <class name="com.zixi.testing.FFMPEGImageStatisticTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster - Remove udp output stream PRO MPEG FEC 2D">
-	<parameter name="login_ip" value="10.7.0.66" />
+	<parameter name="login_ip" value="10.7.0.75" />
 	<parameter name="userName" value="admin" />
 	<parameter name="userPassword" value="1234" />
 	<parameter name="id" value="test" />
 	<parameter name="uiport" value="4444" />
-	<parameter name="testid" value="712" />  
+	<parameter name="testid" value="10723" />  
 	<classes>
 		<class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 	</classes>
 </test>      
 	<test name="Broadcaster - Remove udp input stream test pro MPEG FEC 2D">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="333" />  
+		<parameter name="testid" value="10725" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream test pro MPEG FEC 2D">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="335" />  
+		<parameter name="testid" value="10727" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
@@ -445,7 +481,7 @@
 	<test name="Broadcaster - UDP input stream creation test specific IP">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="ts_port" value="14000" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp_type" value="2" />
@@ -455,7 +491,7 @@
 		<parameter name="mcast_ip" value="" />
 		<parameter name="mcast_force" value="" />
 		<parameter name="mcast_port" value="" />
-		<parameter name="nic" value="10.7.0.66" />
+		<parameter name="nic" value="192.168.7.75" />
 		<parameter name="type" value="local-ts" />
 		<parameter name="multicast" value="" />
 		<parameter name="enc_key" value="" />
@@ -467,8 +503,8 @@
 		<parameter name="complete" value="" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="on" value="1" />
-		<parameter name="mtu" value="3000" />
-		<parameter name="testid" value="340" />  
+		<parameter name="mtu" value="5000" />
+		<parameter name="testid" value="10729" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
@@ -476,11 +512,11 @@
 	<test name="Broadcaster - UDP output stream creation test specific IP">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="port" value="14000" />
 		<parameter name="stream" value="test" />
 		<parameter name="streamname" value="test" />
-		<parameter name="host" value="10.7.0.66" />
+		<parameter name="host" value="192.168.7.75" />
 		<parameter name="id" value="test" />
 		<parameter name="rtp" value="1" />
 		<parameter name="fec" value="2" />
@@ -499,7 +535,9 @@
 		<parameter name="remux_pcr" value="90" />
 		<parameter name="dec_type" value="" />
 		<parameter name="cols" value="10" />
-		<parameter name="testid" value="342" />  
+		<parameter name="max_payload" value="5000" />
+		<parameter name="mtu_time" value="1000" />
+		<parameter name="testid" value="10731" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterUDPOutputStreamCreationTest"/>
 		</classes>
@@ -507,37 +545,49 @@
 	<test name="Broadcaster - UDP input stream statistics test specific IP">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
-		<parameter name="Host" value="10.7.0.63" />
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="Host" value="10.7.0.74" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="testduration" value="120" />
-		<parameter name="testid" value="344" />  
+		<parameter name="testid" value="10733" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStatisticSingleStreamTest"/>
 		</classes>
 	</test>     
 	<test name="Broadcaster - Remove udp input stream test specific IP">
-		<parameter name="login_ip" value="10.7.0.66" />
+		<parameter name="login_ip" value="10.7.0.75" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
-		<parameter name="testid" value="346" />  
+		<parameter name="testid" value="10735" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
 	</test> 
 	<test name="Broadcaster - Remove udp output stream test specific IP">
-		<parameter name="login_ip" value="10.7.0.63" />
+		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="test" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="348" />
+		<parameter name="testid" value="10737" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>
-	</test>                        
+	</test>
+	<test name="Broadcaster - Remove file input">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="test" />
+		<parameter name="testid" value="10739" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>                              
 </suite>
