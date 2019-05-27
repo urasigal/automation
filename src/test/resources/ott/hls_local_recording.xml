@@ -8,7 +8,7 @@
 		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="File" />
-		<parameter name="id" value="test" />
+		<parameter name="id" value="recorded" />
 		<parameter name="matrix" value="1" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="mcast_out" value="0" />
@@ -43,7 +43,7 @@
 		<parameter name="mmt" value="0" />
 		<parameter name="compress_zixi" value="1" />
 		<parameter name="multicast" value="0" />
-		<parameter name="streams" value="10000" />
+		<parameter name="streams" value="recorded" />
 		<parameter name="bitrates" value="10000000" />
 		<parameter name="max_time" value="-1" />
 		<parameter name="remux" value="0" />
@@ -73,7 +73,7 @@
 	</test>
 	<test name="Broadcaster: Test HLS with HLS validator">
 		<parameter name="analyzer_url" value="10.7.0.201" />
-		<parameter name="hls_url" value="http://10.7.0.77/adaptive/test.m3u8" />
+		<parameter name="hls_url" value="http://10.7.0.77/adaptive/recorded.m3u8" />
 		<parameter name="testid" value="10789" />  
 		<classes>
 		    <class name="com.zixi.analyze.testing.HlsPushOutValidatorTest"/>
@@ -94,9 +94,9 @@
 		<parameter name="login_ip" value="10.7.0.77" />
 		<parameter name="userName" value="admin" />
 		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="test" />
+		<parameter name="streamId" value="recorded" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="test" />
+		<parameter name="id" value="recorded" />
 		<parameter name="testid" value="10793" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
