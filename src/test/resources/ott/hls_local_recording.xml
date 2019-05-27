@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- This test suites assumes pre - installed WEB server serves static content (server's root folder must point to appropriate location) -->
+<suite name="Broadcaster: HLS local recording - Apple validator" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Create a file input steam">
+		<parameter name="userName" value="admin" />
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="type" value="File" />
+		<parameter name="id" value="test" />
+		<parameter name="matrix" value="1" />
+		<parameter name="max_outputs" value="-1" />
+		<parameter name="mcast_out" value="0" />
+		<parameter name="time_shift" value="0" />
+		<parameter name="old" value="0" />
+		<parameter name="fast_connect" value="0" />
+		<parameter name="kompression" value="1" />
+		<parameter name="enc_type" value="" />
+		<parameter name="enc_key" value="" />
+		<parameter name="path" value="10M.ts" />
+		<parameter name="testid" value="10783" />    
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterFileInputTest">
+		    <methods>
+        		<include name="broadcasterCreateFileInout" />
+     		 </methods>
+     		 </class>
+		</classes>
+	</test>
+	<!-- Add an adaptive group - consists of transcoded streams -->
+	<test name="Broadcaster: create adaptive group">
+		<parameter name="userName" value="admin" /> 
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="adaptive" />
+		<parameter name="record" value="false" />
+		<parameter name="zixi" value="1" />
+		<parameter name="hls" value="1" />
+		<parameter name="hds" value="0" /> 
+		<parameter name="mpd" value="0" /> 
+		<parameter name="mmt" value="0" />
+		<parameter name="compress_zixi" value="1" />
+		<parameter name="multicast" value="0" />
+		<parameter name="streams" value="10000" />
+		<parameter name="bitrates" value="10000000" />
+		<parameter name="max_time" value="-1" />
+		<parameter name="remux" value="0" />
+		<parameter name="iframes" value="1" />
+		<parameter name="file" value="%25N" />
+		<parameter name="scte35" value="1" />
+		<parameter name="ts_split" value="0" />
+		<parameter name="order_ascending" value="1" />
+		<parameter name="change_folder_chunks" value="0" />
+		<parameter name="testid" value="10785" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
+		</classes>
+	</test>
+	<!-- Start HLS recording on adaptive group -->
+	<test name="Broadcaster: adaptive group - record HLS">
+		<parameter name="userName" value="admin" /> 
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="group_name" value="adaptive" />
+		<parameter name="record" value="false" />
+		<parameter name="testid" value="10787" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterRecordAdaptiveGroupTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster: Test HLS with HLS validator">
+		<parameter name="analyzer_url" value="10.7.0.201" />
+		<parameter name="hls_url" value="http://10.7.0.77/adaptive/test.m3u8" />
+		<parameter name="testid" value="10789" />  
+		<classes>
+		    <class name="com.zixi.analyze.testing.HlsPushOutValidatorTest"/>
+		</classes>
+	</test>
+	<test name="Broadcaster: delete adaptive group">
+		<parameter name="userName" value="admin" /> 
+		<parameter name="userPass" value="1234" />
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="name" value="adaptive" />
+		<parameter name="testid" value="10791" />
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest"/>
+		</classes>
+	</test>	
+	<test name="Broadcaster - Remove file input">
+		<parameter name="login_ip" value="10.7.0.77" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="test" />
+		<parameter name="testid" value="10793" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
+</suite>
