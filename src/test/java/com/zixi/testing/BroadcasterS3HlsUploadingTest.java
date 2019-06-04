@@ -33,6 +33,6 @@ public class BroadcasterS3HlsUploadingTest extends BaseTestZixiMainComponents{
 		driverReslut = ((AwsConnectorDriver) testDriver).uploadHlsToS3( userName, userPass, login_ip, uiport,
 		output_name, matrix, stream, type, url, cleanup, region, encap, no_tls, upload_type);
 		
-		Assert.assertEquals(driverReslut.getResult(), "good");
+		Assert.assertEquals(driverReslut.getResult(), "Output " + output_name  + " added.");
 	}
 }
