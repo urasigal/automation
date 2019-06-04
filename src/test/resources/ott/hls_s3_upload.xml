@@ -79,11 +79,12 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="FFMPEG test">
-		<parameter name="mode" value="https://zixi.s3.amazonaws.com/test/hls_upload/index.m3u8" /> 
-		<parameter name="testid" value="7653" />  
+	<test name="Broadcaster: HLS validator test">
+		<parameter name="analyzer_url" value="10.7.0.201" />
+		<parameter name="hls_url" value="https://zixi.s3.amazonaws.com/test/hls_upload/index.m3u8" />
+		<parameter name="testid" value="10100" />  
 		<classes>
-		    <class name="com.zixi.analyze.testing.FFMPEGImageStatisticHlsPushOutTest"/>
+		    <class name="com.zixi.analyze.testing.HlsPushOutValidatorTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster: delete an adaptive group">
