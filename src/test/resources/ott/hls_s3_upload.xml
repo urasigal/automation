@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- TestLink: "Streaming/ FFMPEG-testing/ VOD" -->
-<suite name="Broadcaster: HLS S3 uploading test, using FFMPEG as actual test analyzer " verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster - Create a file input steam">
+<!-- This test is intended to test adaptive HLS recording to AWS s3 bucket -->
+<suite name="Broadcaster: HLS S3 uploading test suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Create a file input stream">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
