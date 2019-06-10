@@ -275,7 +275,7 @@
 		    <class name="com.zixi.testing.BroadcasterUdpInStreamCreationTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster - RTP RIST output stream remux to 8000">
+	<test name="Broadcaster - RTP RIST output stream remux to 15000">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
@@ -288,7 +288,7 @@
 		<parameter name="fec" value="0" />
 		<parameter name="smoothing" value="1000" />
 		<parameter name="ttl" value="5" />
-		<parameter name="remux_bitrate" value="8000000" />
+		<parameter name="remux_bitrate" value="15000000" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
 		<parameter name="dec_key" value="10.7.0.75" />
@@ -537,7 +537,7 @@
 		<parameter name="fec" value="2" />
 		<parameter name="smoothing" value="1000" />
 		<parameter name="ttl" value="5" />
-		<parameter name="remux_bitrate" value="8000000" />
+		<parameter name="remux_bitrate" value="15000000" />
 		<parameter name="df" value="0" />
 		<parameter name="local_port" value="" />
 		<parameter name="dec_key" value="" />
