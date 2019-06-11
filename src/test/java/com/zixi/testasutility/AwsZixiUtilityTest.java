@@ -20,7 +20,7 @@ public class AwsZixiUtilityTest extends BaseTestZixiMainComponents{
 	@Parameters( { 
 		"operation_type", 		
 		"bucketName",			
-		"key", 			
+		"prefix", 			
 		"testid"					// Internal test id
 		})
 	@Test
