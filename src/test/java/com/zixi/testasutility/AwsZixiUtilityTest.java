@@ -1,5 +1,7 @@
 package com.zixi.testasutility;
 
+import java.util.HashMap;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -27,15 +29,11 @@ public class AwsZixiUtilityTest extends BaseTestZixiMainComponents{
 	public void AwsDeleteFromS3(String operation_type,  String bucketName,  String prefix,  String testid) throws Exception {
 		buildTestParametersString(new String[] {"operation_type",  "bucketName", "prefix", "testid" }, 
 		new String[] {operation_type,  bucketName, prefix, testid });
-		
+		HashMap<String, String> params = new HashMap();
+		params.put("bucketName", bucketName);
+		params.put("prefix", bucketName);
 		driverReslut = ((AwsConnectorDriver) testDriver).performOperationOnAwsS3(Opereation.valueOf(operation_type), 
-				new AwsConnectorDriver.OperationContainer (){
-				 public void putParam(String bucketName, String prefix)
-				 {
-					 addToParams("bucketName", bucketName);
-					 addToParams("prefix", prefix);
-				 }
-		} );
+				new AwsConnectorDriver.OperationContainer (params));
 		Assert.assertEquals(driverReslut.getResult(), "Output " + " added.");
 	}
 }
