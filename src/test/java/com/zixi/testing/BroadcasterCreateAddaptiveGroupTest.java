@@ -1,7 +1,6 @@
 package com.zixi.testing;
 
 import java.sql.Timestamp;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;

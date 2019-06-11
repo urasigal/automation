@@ -2,6 +2,7 @@ package com.zixi.testing;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zixi.drivers.drivers.BroadcaserSingleOutputStreamDeletionDriver;
@@ -18,12 +19,12 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTestZixiMainComponen
 	
 	@Parameters({ "userName", "userPass", "login_ip", "ts_port", "id", "rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
 	"mcast_force", "mcast_port", "nic", "type", "multicast", "enc_key", "kompression", "uiport", "mcast_ttl", "enc_type", "mcast_out",
-	"complete", "max_outputs", "on" ,"testid"})
+	"complete", "max_outputs", "on" , "mtu", "rist",  "rist_latency", "testid"})
 	@Test
 	public void broadcasterUdpInCreation(String userName, String userPass, String login_ip, String ts_port, String id, String rtp_type,
 	String multi_src, String max_bitrate, String time_shift, String mcast_ip, String mcast_force, String mcast_port, String nic,
 	String type, String multicast, String enc_key, String kompression, String uiport, String mcast_ttl, String enc_type, String mcast_out,
-	String complete, String max_outputs, String on,String testid) throws Exception { 
+	String complete, String max_outputs, String on, @Optional("0") String mtu,  @Optional("0") String rist, @Optional("0") String rist_latency,  String testid) throws Exception { 
 		
 		sutProcessId = BroadcaserSingleOutputStreamDeletionDriver.getPid("root",  "zixiroot1234",  login_ip,  "22",  "pidof zixi_broadcaster");
 		
@@ -31,14 +32,15 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTestZixiMainComponen
 		this.version = productAboutDriver.getBroadcasterVersion(login_ip, uiport, userName, userPass);
 		
 		String[] params = new String[] { userName, userPass, login_ip, ts_port, id, rtp_type, multi_src, max_bitrate, time_shift, mcast_ip,
-		mcast_force, mcast_port, nic, type, multicast,  enc_key, kompression, uiport, mcast_ttl, enc_type,  mcast_out, complete, max_outputs, on ,testid };
+		mcast_force, mcast_port, nic, type, multicast,  enc_key, kompression, uiport, mcast_ttl, enc_type,  mcast_out, complete, max_outputs, on, mtu, rist, rist_latency, testid };
 		
 		buildTestParametersString(new String[] { "userName", "userPass", "login_ip", "ts_port", "id", "rtp_type", "multi_src", "max_bitrate", "time_shift", "mcast_ip",
 		"mcast_force", "mcast_port", "nic", "type", "multicast", "enc_key", "kompression", "uiport", "mcast_ttl", "enc_type", "mcast_out",
-		"complete", "max_outputs", "on" ,"testid" }, params);
+		"complete", "max_outputs", "on", "mtu", "rist",  "rist_latency", "testid" }, params);
 		
 		
-		 prerequisitor  = (param) -> {BroadcasterSingleInputStreamDeletionDriver testDriver = new BroadcasterSingleInputStreamDeletionDriver();
+		 prerequisitor  = ( param) -> {
+			 						BroadcasterSingleInputStreamDeletionDriver testDriver = new BroadcasterSingleInputStreamDeletionDriver();
 		 							 try {
 										testDriver.removeInput( param[2], param[0], param[1], param[4], param[17]);
 									} catch (Exception e) {
@@ -49,7 +51,7 @@ public class BroadcasterUdpInStreamCreationTest extends BaseTestZixiMainComponen
 		
 		 driverReslut = ((BroadcasterSingleUdpInCreationDriver) testDriver).testIMPL(userName, userPass, login_ip, ts_port, id, rtp_type,
 		 multi_src, max_bitrate, time_shift, mcast_ip, mcast_force, mcast_port, nic, type, multicast, enc_key,
-		 kompression, uiport, mcast_ttl, enc_type, mcast_out, complete, max_outputs, on);
+		 kompression, uiport, mcast_ttl, enc_type, mcast_out, complete, max_outputs, on, mtu, rist, rist_latency);
 		 
 		 Assert.assertEquals(driverReslut.getResult(), "Stream " + "'" + id + "'" + " added.");
 		
