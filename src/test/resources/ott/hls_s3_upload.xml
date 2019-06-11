@@ -79,12 +79,12 @@
      		 </class>
 		</classes>
 	</test>
-	<test name="Broadcaster: HLS validator test">
+	<test name="Broadcaster: Test HLS with HLS validator">
 		<parameter name="analyzer_url" value="10.7.0.201" />
 		<parameter name="hls_url" value="https://zixi.s3.amazonaws.com/test/hls_upload/index.m3u8" />
-		<parameter name="testid" value="10100" />  
+		<parameter name="testid" value="1249" />  
 		<classes>
-		    <class name="com.zixi.analyze.testing.HlsPushOutValidatorTest"/>
+		    <class name="com.zixi.testing.HlsAppleAnalyzerTest"/>
 		</classes>
 	</test>
 	<test name="Broadcaster: delete an adaptive group">
