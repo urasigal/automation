@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!-- This test is intended to test adaptive HLS recording to AWS s3 bucket -->
-<suite name="Broadcaster: HLS S3 uploading test suite" verbose="5" data-provider-thread-count="1">
-	<test name="Broadcaster - Create a file input stream">
+<!-- This test is intended to test adaptive HLS uploading to AWS s3 bucket -->
+<suite name="Broadcaster: adaptive HLS S3 uploading test suite" verbose="5" data-provider-thread-count="1">
+	<test name="Broadcaster - Create file input stream">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
@@ -96,6 +96,15 @@
 		<parameter name="testid" value="7663" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest"/>
+		</classes>
+	</test>
+	<test name="Utility AWS test - delete from s3">
+	<parameter name="operation_type" value="DELETE_FROM_S3" />
+	<parameter name="bucketName" value="test" />
+	<parameter name="prefix" value="test/hls_upload" />
+	<parameter name="testid" value="7663" />
+		<classes>
+			    <class name="com.zixi.testasutility.AwsZixiUtilityTest"/>
 		</classes>
 	</test>	
 	<test name="Broadcaster - remove file input">

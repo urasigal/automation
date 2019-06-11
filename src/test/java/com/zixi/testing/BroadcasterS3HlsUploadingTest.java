@@ -18,8 +18,23 @@ public class BroadcasterS3HlsUploadingTest extends BaseTestZixiMainComponents{
 	}
 
 	// This test case defines HLS output stream to AWS s3 bucket.
-	@Parameters( { "userName", "userPass", "login_ip", "uiport",
-		"output_name", "matrix", "stream", "type", "url", "cleanup", "region", "encap", "no_tls", "upload_type", "testid"})
+	@Parameters( { 
+		"userName", 		// broadcaster user name
+		"userPass",			//broadcaster user pass
+		"login_ip", 			//broadcaster user IP
+		"uiport", 				// broadcaster UI port
+		"output_name",	// ouptut stream name
+		"matrix", 				// matrix flag on/off
+		"stream",				 // name of source stream
+		"type", 					// stream type
+		"url",						// URL on AWS s3 to upload HLS files
+		"cleanup",				// if delete outdated HLS files from AWS s3.
+		"region",				// AWS region
+		"encap",				// encapsulation tupe HLS/DASH
+		"no_tls",				// ?
+		"upload_type",		// ?
+		"testid"					// Internal test id
+		})
 	@Test
 	public void broadcasterUploadHlsToS3(String userName, String userPass, String login_ip, String uiport,
 	String output_name, String matrix, String stream, String type, String url, String cleanup, String region,
