@@ -31,7 +31,7 @@ public class AwsZixiUtilityTest extends BaseTestZixiMainComponents{
 		new String[] {operation_type,  bucketName, prefix, testid });
 		HashMap<String, String> params = new HashMap();
 		params.put("bucketName", bucketName);
-		params.put("prefix", bucketName);
+		params.put("prefix", prefix);
 		driverReslut = ((AwsConnectorDriver) testDriver).performOperationOnAwsS3(Opereation.valueOf(operation_type), 
 				new AwsConnectorDriver.OperationContainer (params));
 		Assert.assertEquals(driverReslut.getResult(), "Output " + " added.");
