@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- This test is intended to test adaptive HLS uploading to AWS s3 bucket -->
-<suite name="Broadcaster: adaptive HLS S3 uploading test suite" verbose="5" data-provider-thread-count="1">
+<suite name="Broadcaster: adaptive HLS AWS S3 uploading test suite" verbose="5" data-provider-thread-count="1">
 	<test name="Broadcaster - Create file input stream">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
@@ -19,7 +19,7 @@
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
 		<parameter name="path" value="iphone.ts" />
-		<parameter name="testid" value="7639" />    
+		<parameter name="testid" value="10862" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
 		    <methods>
@@ -53,7 +53,7 @@
 		<parameter name="ts_split" value="0" />
 		<parameter name="order_ascending" value="1" />
 		<parameter name="change_folder_chunks" value="0" />
-		<parameter name="testid" value="7649" />
+		<parameter name="testid" value="10864" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterCreateAddaptiveGroupTest"/>
 		</classes>
@@ -73,7 +73,7 @@
 		<parameter name="encap" value="0" />
 		<parameter name="no_tls" value="0" />
 		<parameter name="upload_type" value="0" />
-		<parameter name="testid" value="7651" />    
+		<parameter name="testid" value="10866" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterS3HlsUploadingTest">
      		 </class>
@@ -82,27 +82,27 @@
 	<test name="Broadcaster: Test HLS with HLS validator">
 		<parameter name="analyzer_url" value="10.7.0.201" />
 		<parameter name="hls_url" value="https://zixi.s3.amazonaws.com/test/hls_upload/index.m3u8" />
-		<parameter name="testid" value="1249" />  
+		<parameter name="testid" value="10868" />  
 		<classes>
 		    <class name="com.zixi.testing.HlsAppleAnalyzerTest"/>
 		</classes>
 	</test>
-	<test name="Broadcaster: delete an adaptive group">
+	<test name="Broadcaster: delete adaptive group">
 		<parameter name="userName" value="admin" /> 
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="name" value="adaptive" />
-		<parameter name="testid" value="7663" />
+		<parameter name="testid" value="10870" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAdaptiveGroupDeletionTest"/>
 		</classes>
 	</test>
 	<test name="Utility AWS test - delete from s3">
-	<parameter name="operation_type" value="DELETE_FROM_S3" />
+	<parameter name="operation_type" value="DELETE_FOLDER_FROM_S3" />
 	<parameter name="bucketName" value="zixi" />
 	<parameter name="prefix" value="test/hls_upload" />
-	<parameter name="testid" value="7663" />
+	<parameter name="testid" value="10872" />
 		<classes>
 			    <class name="com.zixi.testasutility.AwsZixiUtilityTest"/>
 		</classes>
@@ -114,7 +114,7 @@
 		<parameter name="streamId" value="input_file_src" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="input_file_src" />
-		<parameter name="testid" value="7665" />  
+		<parameter name="testid" value="10874" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -125,7 +125,7 @@
 		<parameter name="userPassword" value="1234" />
 		<parameter name="id" value="s3_hls_upload" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="testid" value="7667" />  
+		<parameter name="testid" value="10876" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcaserSingleOutputStreamDeletionTest"/>
 		</classes>

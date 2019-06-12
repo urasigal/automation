@@ -20,10 +20,10 @@ public class AwsZixiUtilityTest extends BaseTestZixiMainComponents{
 
 	// This test case defines HLS output stream to AWS s3 bucket.
 	@Parameters( { 
-		"operation_type", 		
-		"bucketName",			
-		"prefix", 			
-		"testid"					// Internal test id
+		"operation_type", 	// What action to perform on AWS S3.	
+		"bucketName",			// Bucket name.
+		"prefix", 					// Path to folder within a Bucket.
+		"testid"						// Internal test id
 		})
 	@Test
 	public void AwsDeleteFromS3(String operation_type,  String bucketName,  String prefix,  String testid) throws Exception {
@@ -33,7 +33,7 @@ public class AwsZixiUtilityTest extends BaseTestZixiMainComponents{
 		params.put("bucketName", bucketName);
 		params.put("prefix", prefix);
 		driverReslut = ((AwsConnectorDriver) testDriver).performOperationOnAwsS3(Opereation.valueOf(operation_type), 
-				new AwsConnectorDriver.OperationContainer (params));
-		Assert.assertEquals(driverReslut.getResult(), "Output " + " added.");
+								new AwsConnectorDriver.OperationContainer (params));
+		Assert.assertEquals(driverReslut.getResult(), "The object assumed to be deleted from AWS s3 bucket");
 	}
 }
