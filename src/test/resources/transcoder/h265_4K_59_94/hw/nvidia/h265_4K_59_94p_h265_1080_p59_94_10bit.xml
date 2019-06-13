@@ -30,7 +30,7 @@
 		<parameter name="kompression" value="1" />
 		<parameter name="enc_type" value="" />
 		<parameter name="enc_key" value="" />
-		<parameter name="path" value="4K_closed_cap.ts" />
+		<parameter name="path" value="output3.ts" />
 		<parameter name="testid" value="10512" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterFileInputTest">
@@ -56,7 +56,7 @@
      		 </class>
 		</classes>
 	</test> 
-	<test name="Broadcaster: add h265_4kp59.94_nvidia_h264_1080p59.94 profile. step3">
+	<test name="Broadcaster: add h265_4kp59.94_nvidia_h265_1080p59.94_10bit profile. step3">
 		<parameter name="userName" value="admin" />
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.47" />
@@ -102,7 +102,7 @@
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="type" value="Transcoded" />
-		<parameter name="id" value="trns_h265_4kp59.94_nvidia_to_h264_1080p59.94" />
+		<parameter name="id" value="h265_4kp59.94_10bit_nvidia_h265_1080p59.94_10bit" />
 		<parameter name="matrix" value="1" />
 		<parameter name="max_outputs" value="-1" />
 		<parameter name="mcast_out" value="0" />
@@ -120,7 +120,7 @@
 		<parameter name="ll" value="0" />
 		<parameter name="all_pids" value="1" />
 		<parameter name="bit" value="0" />
-		<parameter name="profile_name" value="720p" />
+		<parameter name="profile_name" value="1080p" />
 		<parameter name="mode" value="h.264" />
 		<parameter name="vp" value="1" />
 		<parameter name="smoothing" value="1500" />
@@ -151,7 +151,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="trns_h265_4kp59.94_nvidia_to_h264_1080p59.94" />
+		<parameter name="id" value="h265_4kp59.94_10bit_nvidia_h265_1080p59.94_10bit" />
 		<parameter name="on" value="1" />
 		<parameter name="cpuFolder" value="720p" />
 		<parameter name="testid" value="10522" />    
@@ -164,7 +164,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="stream_name" value="trns_h265_4kp59.94_nvidia_to_h264_1080p59.94" />
+		<parameter name="stream_name" value="h265_4kp59.94_10bit_nvidia_h265_1080p59.94_10bit" />
 		<parameter name="testid" value="10524" />    
 		<classes>
 		    <class name="com.zixi.transcoder.testing.BroadcasterTransoderGetStatsTest" />
@@ -187,7 +187,7 @@
 		<parameter name="userPass" value="1234" />
 		<parameter name="login_ip" value="10.7.0.47" />
 		<parameter name="uiport" value="4444" />
-		<parameter name="profile_name" value="720p" />
+		<parameter name="profile_name" value="1080p" />
 		<parameter name="testid" value="10528" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterTranscoderDeletProfileTest"/>
