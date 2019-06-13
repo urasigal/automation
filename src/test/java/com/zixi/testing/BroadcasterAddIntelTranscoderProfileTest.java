@@ -17,7 +17,7 @@ public class BroadcasterAddIntelTranscoderProfileTest extends BaseTestZixiMainCo
 
 	@Parameters({"userName", "userPass", "login_ip", "uiport", "mode", "profile_name", "enc", "bitrate", "gop", "fixed_gop", "closed_gop", "copy_gop",  
 	"performance", "b_frames", "frame_type", "profile", "level", "bitrate_mode",
-	"ref_frames", "hrd", "idr_int", "cavlc", "brightness", "contrast", "fps", "width", "height","crf", "tune", "keep_ar", "max_bitrate", "x264_two_pass", "testid" })
+	"ref_frames", "hrd", "idr_int", "cavlc", "brightness", "contrast", "fps", "width", "height","crf", "tune", "keep_ar", "max_bitrate", "x264_two_pass", "max_qp",  "bpp", "testid" })
 	@Test
 	public void broadcasterSingleInputStreamstatisticAnilyzer(String userName, String userPass, String login_ip, String uiport,String mode, String profile_name,
 	String enc, String bitrate, String gop, String fixed_gop, String closed_gop, String copy_gop, String performance,
