@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Transcoder HEVC 4K 59p 10bit to FHD HEVC 10 bit" verbose="5" data-provider-thread-count="1">
+<suite name="Transcoder HEVC 4K 59p 10bit to FHD HEVC 8 bit" verbose="5" data-provider-thread-count="1">
 <listeners>
   	  <listener class-name="com.zixi.reports.SuiteListenerZapiReporterAdapter" >
   	  	<parameter name="projectId" value="10003" />
@@ -90,7 +90,7 @@
 		<parameter name="max_bitrate" value="3600000" />
 		<parameter name="x264_two_pass" value="0" />
 		<parameter name="max_qp" value="0" />
-		<parameter name="bpp" value="0" />		
+		<parameter name="bpp" value="1" />		
 		<parameter name="testid" value="10516" />
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterAddIntelTranscoderProfileTest"/>
