@@ -40,7 +40,7 @@ public class BroadcasterAddIntelTranscoderProfileTest extends BaseTestZixiMainCo
 		
 		driverReslut = ((BroadcasterAddTranscoderProfileDriver) testDriver).testIMPL(userName, userPass, login_ip, uiport, mode, profile_name,
 		enc, bitrate, gop, fixed_gop, closed_gop, copy_gop, performance, b_frames, frame_type, profile, level, bitrate_mode,
-		ref_frames, hrd, idr_int, cavlc, brightness, contrast, fps, width, height,crf, tune, keep_ar, max_bitrate, x264_two_pass, max_qp,  bpp);
+		ref_frames, hrd, idr_int, cavlc, brightness, contrast, fps, width, height,crf, tune, keep_ar, max_bitrate, x264_two_pass, max_qp, bpp);
 		
 		Assert.assertEquals(driverReslut.getResult(), "Profile added, existing transcoded streams may be restarted.");
 	}
