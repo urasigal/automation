@@ -58,7 +58,7 @@ public class AwsZixiUtilityTest extends BaseTestZixiMainComponents{
 			
 			driverReslut = ((AwsConnectorDriver) testDriver).performOperationOnAwsS3(Opereation.valueOf(operation_type), 
 									new AwsConnectorDriver.OperationContainer (params));
-			Assert.assertEquals(driverReslut.getResult(), "The object assumed to be deleted from AWS s3 bucket");
+			Assert.assertEquals(driverReslut.getResult(), "The correct number of uploaded files was found");
 		}
 	
 	
