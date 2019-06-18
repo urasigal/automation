@@ -48,8 +48,8 @@ public class AwsZixiUtilityTest extends BaseTestZixiMainComponents{
 			})
 		@Test
 		public void AwsCheckUploadingToS3(String operation_type,  String bucketName,  String prefix, String test_duration, String file_duration, String testid) throws Exception {
-			buildTestParametersString(new String[] {"operation_type",  "bucketName", "prefix",  "test_duration", "file_duration", "testid" }, 
-			new String[] {operation_type,  bucketName, prefix, testid });
+			buildTestParametersString(new String[] {"operation_type",  "bucketName", "prefix", "test_duration", "file_duration", "testid" }, 
+			new String[] {operation_type,  bucketName, prefix, test_duration, file_duration, testid });
 			HashMap<String, String> params = new HashMap();
 			params.put("bucketName", bucketName);
 			params.put("prefix", prefix);
