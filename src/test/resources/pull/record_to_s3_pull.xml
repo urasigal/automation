@@ -57,7 +57,7 @@
 	</test>
 	<test name="Utility AWS test - count recorded files to s3">
 	<parameter name="operation_type" value="LIST_S3_FOLDER" />
-	<parameter name="bucketName" value="zixi" />
+	<parameter name="bucketName" value="zixi-qa" />
 	<parameter name="prefix" value="test" />
 	<parameter name="test_duration" value="360" />
 	<parameter name="file_duration" value="120" />
