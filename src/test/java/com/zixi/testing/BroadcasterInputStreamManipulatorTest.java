@@ -45,7 +45,7 @@ public class BroadcasterInputStreamManipulatorTest extends BaseTestZixiMainCompo
 		buildTestParametersString(new String[] { "userName", "userPass","login_ip", "uiport", "id", "duration_ms", "testid" }, 
 		new String[] { userName, userPass, login_ip, uiport, id, duration_ms, testid });
 		
-		driverReslut 	= ((BroadcasterInputStreamManipulatorDriver) testDriver).testIMPL( userName, userPass, login_ip, uiport, id, duration_ms );
+		driverReslut 	= ((BroadcasterInputStreamManipulatorDriver) testDriver).startRecording( userName, userPass, login_ip, uiport, id );
 		
 		Assert.assertEquals(driverReslut.getResult(), "stream was successfully recorded");
 		
