@@ -55,6 +55,21 @@
 		  	</class>
 		</classes>
 	</test>
+	<test name="Utility AWS test - count recorded files to s3">
+	<parameter name="operation_type" value="LIST_S3_FOLDER" />
+	<parameter name="bucketName" value="zixi" />
+	<parameter name="prefix" value="test" />
+	<parameter name="test_duration" value="360" />
+	<parameter name="file_duration" value="120" />
+	<parameter name="testid" value="10872" />
+		<classes>
+		<class name="com.zixi.testasutility.AwsZixiUtilityTest">
+				<methods>
+	        		<include name="AwsCheckUploadingToS3" />
+	     		 </methods>
+     		 </class>
+		</classes>
+	</test>	
 	<test name="Broadcaster - remove input stream test">
 		<parameter name="login_ip" value="10.7.0.74" />
 		<parameter name="userName" value="admin" />

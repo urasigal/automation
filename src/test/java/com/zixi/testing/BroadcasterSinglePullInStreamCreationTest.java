@@ -41,7 +41,7 @@ public class BroadcasterSinglePullInStreamCreationTest extends BaseTestZixiMainC
 		password, mcast_port, complete, mcast_ip, fec_adaptive, mcast_ttl, on, func, fec_force, 
 		mcast_out, propertiesFile, rec_duration, rec_template, s3, s3_url, s3_no_tls, testid });
 		
-		driverReslut = ((BroadcasterSinglePullInStreamCreationDriver) testDriver).addPullWithS3Params(userName, userPass, Host, login_ip, id, source, uiport, pull_port, latency, fec_latency,
+		driverReslut = ((BroadcasterSinglePullInStreamCreationDriver) testDriver).addPull(userName, userPass, Host, login_ip, id, source, uiport, pull_port, latency, fec_latency,
 		fec_overhead, mcast_force, time_shift, nic, max_outputs, type, password, mcast_port, complete, mcast_ip, fec_adaptive, mcast_ttl, on, func, fec_force, mcast_out,
 		propertiesFile, mtu, rec_duration, rec_template, s3, s3_url, s3_no_tls);
 		

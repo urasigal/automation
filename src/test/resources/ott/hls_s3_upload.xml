@@ -104,7 +104,11 @@
 	<parameter name="prefix" value="test/hls_upload" />
 	<parameter name="testid" value="10872" />
 		<classes>
-			    <class name="com.zixi.testasutility.AwsZixiUtilityTest"/>
+		<class name="com.zixi.testasutility.AwsZixiUtilityTest">
+				<methods>
+	        		<include name="AwsDeleteFromS3" />
+	     		 </methods>
+     		 </class>
 		</classes>
 	</test>	
 	<test name="Broadcaster - remove file input">
