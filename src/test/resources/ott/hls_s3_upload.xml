@@ -99,10 +99,10 @@
 		</classes>
 	</test>
 	<test name="Utility AWS test - delete from s3">
-	<parameter name="operation_type" value="DELETE_FOLDER_FROM_S3" />
-	<parameter name="bucketName" value="zixi" />
-	<parameter name="prefix" value="test/hls_upload" />
-	<parameter name="testid" value="10872" />
+		<parameter name="operation_type" value="DELETE_FOLDER_FROM_S3" />
+		<parameter name="bucketName" value="zixi" />
+		<parameter name="prefix" value="test/hls_upload" />
+		<parameter name="testid" value="10872" />
 		<classes>
 		<class name="com.zixi.testasutility.AwsZixiUtilityTest">
 				<methods>
