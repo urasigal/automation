@@ -34,7 +34,7 @@
 		<parameter name="s3" value="1" />
 		<parameter name="s3_url" value="https%3A%2F%2Fzixi-qa.s3.us-east-2.amazonaws.com%2Ftest" />
 		<parameter name="s3_no_tls" value="0" />
-		<parameter name="testid" value="7879" />  
+		<parameter name="testid" value="10880" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSinglePullInStreamCreationTest"/>
 		</classes>
@@ -46,7 +46,7 @@
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="test" />
 		<parameter name="duration_ms" value="0" />
-		<parameter name="testid" value="7881" />    
+		<parameter name="testid" value="10882" />    
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterInputStreamManipulatorTest">
 			    <methods>
@@ -61,7 +61,7 @@
 		<parameter name="prefix" value="test" />
 		<parameter name="test_duration" value="360" />
 		<parameter name="file_duration" value="120" />
-		<parameter name="testid" value="10872" />
+		<parameter name="testid" value="10884" />
 			<classes>
 			<class name="com.zixi.testasutility.AwsZixiUtilityTest">
 					<methods>
@@ -77,7 +77,7 @@
 		<parameter name="streamId" value="test" />
 		<parameter name="uiport" value="4444" />
 		<parameter name="id" value="west" />
-		<parameter name="testid" value="7891" />  
+		<parameter name="testid" value="10886" />  
 		<classes>
 		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
 		</classes>
@@ -86,7 +86,7 @@
 		<parameter name="operation_type" value="DELETE_FOLDER_FROM_S3" />
 		<parameter name="bucketName" value="zixi-qa" />
 		<parameter name="prefix" value="test" />
-		<parameter name="testid" value="10872" />
+		<parameter name="testid" value="10888" />
 		<classes>
 		<class name="com.zixi.testasutility.AwsZixiUtilityTest">
 				<methods>
