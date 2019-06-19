@@ -70,6 +70,18 @@
 	     		 </class>
 			</classes>
 	</test>
+	<test name="Broadcaster - remove input stream test">
+		<parameter name="login_ip" value="10.7.0.74" />
+		<parameter name="userName" value="admin" />
+		<parameter name="userPassword" value="1234" />
+		<parameter name="streamId" value="test" />
+		<parameter name="uiport" value="4444" />
+		<parameter name="id" value="west" />
+		<parameter name="testid" value="7891" />  
+		<classes>
+		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
+		</classes>
+	</test>
 	<test name="Utility AWS test - delete from s3">
 		<parameter name="operation_type" value="DELETE_FOLDER_FROM_S3" />
 		<parameter name="bucketName" value="zixi-qa" />
@@ -83,16 +95,4 @@
      		 </class>
 		</classes>
 	</test>		
-	<test name="Broadcaster - remove input stream test">
-		<parameter name="login_ip" value="10.7.0.74" />
-		<parameter name="userName" value="admin" />
-		<parameter name="userPassword" value="1234" />
-		<parameter name="streamId" value="test" />
-		<parameter name="uiport" value="4444" />
-		<parameter name="id" value="west" />
-		<parameter name="testid" value="7891" />  
-		<classes>
-		    <class name="com.zixi.testing.BroadcasterSingleInputStreamDeletionTest"/>
-		</classes>
-	</test>
 </suite>
